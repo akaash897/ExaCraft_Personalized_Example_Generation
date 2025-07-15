@@ -1,0 +1,32 @@
+{
+  "user_id": "Akaash",
+  "name": "Akaash Chatterjee",
+  "location": {
+    "country": "India",
+    "city": "Kolkata",
+    "region": ""
+  },
+  "education": {
+    "level": "graduate",
+    "field": "Computer Science",
+    "background": ""
+  },
+  "culture": {
+    "language": "English",
+    "cultural_background": "Bengali",
+    "religion": "",
+    "traditions": []
+  },
+  "demographics": {
+    "age_range": "",
+    "profession": "Student",
+    "interests": []
+  },
+  "preferences": {
+    "example_complexity": "Advanced",
+    "preferred_domains": [],
+    "learning_style": "Practical"
+  },
+  "created_at": "2025-07-15T15:23:20.646217",
+  "updated_at": "2025-07-15T15:23:59.692546"
+}
