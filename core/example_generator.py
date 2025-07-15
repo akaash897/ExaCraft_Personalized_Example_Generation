@@ -189,39 +189,31 @@ class ExampleGenerator:
         self.llm = ChatGoogleGenerativeAI(
             model="gemini-1.5-flash",
             google_api_key=api_key,
-            temperature=0.7
+            temperature=0.1
         )
         
         # Create a personalized prompt template
         self.prompt_template = PromptTemplate(
-            input_variables=["topic", "user_profile"],
-            template="""
-            You are an expert example generator who creates personalized, culturally-aware examples.
-            
-            User Profile:
-            {user_profile}
-            
-            Topic: {topic}
-            
-            Based on the user's background, location, education level, and cultural context, provide:
-            1. A brief explanation of the topic (1-2 sentences) - adjusted for their education level
-            2. A concrete, practical example that relates to their cultural background, location, or profession
-            3. Key points or takeaways that are relevant to their context
-            
-            Guidelines:
-            - Use references, analogies, and examples that would be familiar to someone from their background
-            - Consider their education level when explaining concepts
-            - Include cultural context when relevant (local customs, businesses, landmarks, etc.)
-            - If they have a profession, try to relate examples to their field when possible
-            - Match the complexity to their preferred level
-            - Keep the response concise and focused (under 300 words for API usage)
-            
-            Make the example personally relevant and engaging for this specific user.
-            
-            Personalized Example:
-            """
-        )
+        input_variables=["topic", "user_profile"],
+        template="""
+        You are an expert example generator. Generate only a single, concrete, practical example that explains the given topic.
         
+        User Profile:
+        {user_profile}
+        
+        Topic: {topic}
+        
+        Create a personalized example that:
+        - Uses references familiar to someone from their background/location
+        - Matches their education level for complexity
+        - Relates to their profession/culture when possible
+        - Is engaging and easy to understand
+        
+        Important: Respond with ONLY the example. No explanations, no introductions, no bullet points, no additional text. Just the example itself as a short paragraph or scenario.
+        
+        Example:
+        """
+    )
         # Create the chain using modern syntax
         self.chain = self.prompt_template | self.llm
     
