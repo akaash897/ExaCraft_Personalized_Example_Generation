@@ -4,3 +4,6 @@ langchain-google-genai
 
 # Environment variable management
 python-dotenv
+
+flask
+flask-cors

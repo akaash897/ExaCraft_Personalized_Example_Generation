@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI Example Generator",
+  "version": "1.0",
+  "description": "Generate personalized examples for highlighted text using AI",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Example Generator"
+  }
+}
