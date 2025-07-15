@@ -1,0 +1,6 @@
+# Core LangChain dependencies
+langchain
+langchain-google-genai
+
+# Environment variable management
+python-dotenv
