@@ -5,7 +5,9 @@ let popupElement = null;
 
 // Listen for messages from background script
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log("Content script received message:", request);
   if (request.action === "showExamplePopup") {
+    console.log("Showing example popup for topic:", request.topic);
     showExamplePopup(request.topic);
     sendResponse({ success: true });
   }
@@ -52,6 +54,7 @@ function isSelectionVisible() {
 
 // Create and show popup with example
 function showExamplePopup(topic) {
+  console.log("showExamplePopup called with topic:", topic);
   // Store current selection info
   storeSelectionInfo();
   
@@ -61,6 +64,7 @@ function showExamplePopup(topic) {
   // Create popup container
   const popup = document.createElement('div');
   popup.id = 'ai-example-popup';
+  console.log("Created popup element:", popup);
   popup.innerHTML = `
     <div class="popup-header">
       <h3>🤖 AI Example</h3>
@@ -79,7 +83,6 @@ function showExamplePopup(topic) {
       </div>
       <div class="popup-actions">
         <button class="action-btn regenerate-btn">🔄 Regenerate</button>
-        <button class="action-btn settings-btn">⚙️ Settings</button>
       </div>
     </div>
   `;
@@ -91,8 +94,10 @@ function showExamplePopup(topic) {
   positionPopup(popup);
   
   // Add to page
+  console.log("Adding popup to document body");
   document.body.appendChild(popup);
   popupElement = popup;
+  console.log("Popup added to page, element:", popupElement);
   
   // Attach event listeners (Fix for CSP restrictions)
   popup.querySelector('.close-btn').addEventListener('click', () => {
@@ -101,10 +106,6 @@ function showExamplePopup(topic) {
   
   popup.querySelector('.regenerate-btn').addEventListener('click', () => {
     regenerateExample(topic);
-  });
-  
-  popup.querySelector('.settings-btn').addEventListener('click', () => {
-    chrome.runtime.openOptionsPage();
   });
   
   // Set up scroll and resize listeners
@@ -392,7 +393,7 @@ function generateExampleForPopup(topic) {
   );
 }
 
-// Updated regenerate function to work with event listeners
+// Updated regenerate function to work with event listeners and track struggle
 function regenerateExample(topic) {
   const content = document.querySelector('.example-content');
   const loading = document.querySelector('.loading');
@@ -400,6 +401,14 @@ function regenerateExample(topic) {
   if (content && loading) {
     content.style.display = 'none';
     loading.style.display = 'flex';
+    
+    // Notify background script about regeneration (indicates struggle)
+    chrome.runtime.sendMessage({ 
+      action: "recordStruggleSignal", 
+      topic: topic,
+      signal_type: "regeneration_requested"
+    });
+    
     generateExampleForPopup(topic);
   }
 }

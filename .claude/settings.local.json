@@ -4,7 +4,10 @@
       "Bash(find:*)",
       "Bash(dir:*)",
       "WebSearch",
-      "WebFetch(domain:ikdd.acm.org)"
+      "WebFetch(domain:ikdd.acm.org)",
+      "Bash(curl:*)",
+      "WebFetch(domain:cods-comad.in)",
+      "WebFetch(domain:dl.acm.org)"
     ],
     "deny": []
   }

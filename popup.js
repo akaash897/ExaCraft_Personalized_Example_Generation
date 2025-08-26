@@ -2,9 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   loadUserProfile();
+  loadSessionState();
   
   // Save profile button
   document.getElementById('saveProfile').addEventListener('click', saveUserProfile);
+  
+  // Learning session buttons
+  document.getElementById('beginSession').addEventListener('click', beginLearningSession);
+  document.getElementById('endSession').addEventListener('click', endLearningSession);
   
   // Test API connection button
   document.getElementById('testConnection').addEventListener('click', testApiConnection);
@@ -43,6 +48,9 @@ function saveUserProfile() {
       if (response.success) {
         statusDiv.textContent = '✅ Profile saved successfully!';
         statusDiv.className = 'status success';
+        
+        // Also sync to file system for CLI access
+        syncProfileToFileSystem(profile, statusDiv);
       } else {
         statusDiv.textContent = '❌ Failed to save profile';
         statusDiv.className = 'status error';
@@ -54,6 +62,84 @@ function saveUserProfile() {
       }, 3000);
     }
   );
+}
+
+function syncProfileToFileSystem(profile, statusDiv) {
+  // Call the sync API endpoint
+  fetch('http://localhost:8000/sync-profile', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ profile: profile })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      statusDiv.textContent = '✅ Profile saved & synced to CLI!';
+      statusDiv.className = 'status success';
+    } else {
+      console.warn('Sync failed:', data.error);
+      statusDiv.textContent = '⚠️ Profile saved, sync failed';
+      statusDiv.className = 'status error';
+    }
+  })
+  .catch(error => {
+    console.warn('Sync API unavailable:', error);
+    // Don't change the success message - sync failure shouldn't affect main save
+  });
+}
+
+function loadSessionState() {
+  chrome.storage.local.get("learningSessionActive", (result) => {
+    const isActive = result.learningSessionActive || false;
+    updateSessionUI(isActive);
+  });
+}
+
+function beginLearningSession() {
+  chrome.storage.local.set({ learningSessionActive: true }, () => {
+    updateSessionUI(true);
+    showSessionStatus('Learning session started! Examples will now adapt to your progress.', 'success');
+    
+    // Notify background script with API call
+    chrome.runtime.sendMessage({ action: "beginLearningSession" });
+  });
+}
+
+function endLearningSession() {
+  chrome.storage.local.set({ learningSessionActive: false }, () => {
+    updateSessionUI(false);
+    showSessionStatus('Learning session ended.', 'success');
+    
+    // Notify background script with API call
+    chrome.runtime.sendMessage({ action: "endLearningSession" });
+  });
+}
+
+function updateSessionUI(isActive) {
+  const beginBtn = document.getElementById('beginSession');
+  const endBtn = document.getElementById('endSession');
+  
+  if (isActive) {
+    beginBtn.style.display = 'none';
+    endBtn.style.display = 'block';
+    endBtn.textContent = '🛑 End Session';
+  } else {
+    beginBtn.style.display = 'block';
+    endBtn.style.display = 'none';
+  }
+}
+
+function showSessionStatus(message, type) {
+  const statusDiv = document.getElementById('sessionStatus');
+  statusDiv.style.display = 'block';
+  statusDiv.textContent = message;
+  statusDiv.className = `status ${type}`;
+  
+  setTimeout(() => {
+    statusDiv.style.display = 'none';
+  }, 3000);
 }
 
 function testApiConnection() {

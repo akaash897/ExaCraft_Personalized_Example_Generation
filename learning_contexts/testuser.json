@@ -1,0 +1,65 @@
+{
+  "user_id": "testuser",
+  "recent_topics": [
+    {
+      "topic": "machine learning",
+      "timestamp": "2025-08-26T12:32:56.277627",
+      "success_signals": {}
+    },
+    {
+      "topic": "machine learning",
+      "timestamp": "2025-08-26T12:33:16.128184",
+      "success_signals": {}
+    },
+    {
+      "topic": "machine learning",
+      "timestamp": "2025-08-26T12:33:33.578765",
+      "success_signals": {}
+    },
+    {
+      "topic": "blockchain technology",
+      "timestamp": "2025-08-26T12:33:53.284561",
+      "success_signals": {}
+    },
+    {
+      "topic": "artificial intelligence",
+      "timestamp": "2025-08-26T12:34:29.079911",
+      "success_signals": {}
+    },
+    {
+      "topic": "quantum computing",
+      "timestamp": "2025-08-26T12:34:41.361835",
+      "success_signals": {}
+    },
+    {
+      "topic": "machine learning",
+      "timestamp": "2025-08-26T12:40:53.149957",
+      "success_signals": {}
+    },
+    {
+      "topic": "test topic",
+      "timestamp": "2025-08-26T12:46:42.053075",
+      "success_signals": {}
+    }
+  ],
+  "struggle_indicators": {
+    "machine learning": {
+      "repeat_count": 4,
+      "last_seen": "2025-08-26T12:40:53.149957"
+    }
+  },
+  "mastery_indicators": {
+    "quick_progression": {
+      "recent_topics": [
+        "blockchain technology",
+        "artificial intelligence",
+        "quantum computing",
+        "machine learning",
+        "test topic"
+      ],
+      "timestamp": "2025-08-26T12:46:42.053075"
+    }
+  },
+  "session_history": [],
+  "last_updated": "2025-08-26T12:46:42.053075"
+}
