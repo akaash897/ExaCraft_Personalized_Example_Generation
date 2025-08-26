@@ -1,7 +1,7 @@
 % CODS-2025 Demo Track Paper
 % AI Example Generator with Dynamic Learning Context Adaptation
 
-\documentclass[sigconf,authordraft]{acmart}
+\documentclass[sigconf]{acmart}
 
 \usepackage{graphicx}
 \usepackage{url}
@@ -22,13 +22,19 @@
 
 \title{AI Example Generator: Dynamic Learning Context Adaptation for Personalized Educational Content}
 
-\author{Anonymous Author}
+\author{Akaash Chatterjee}
+\authornote{Both authors contributed equally to this research.}
+\email{m24cse002@iitj.ac.in}
+\orcid{1234-5678-9012}
+\author{Suman Kundu}
+\authornotemark[1]
+\email{suman@iitj.ac.in}
 \affiliation{%
-  \institution{Anonymous Institution}
-  \city{Anonymous City}
-  \country{Anonymous Country}
+  \institution{Indian Institute of Technology Jodhpur}
+  \city{Jodhpur}
+  \state{Rajasthan}
+  \country{India}
 }
-\email{anonymous@email.com}
 
 \begin{abstract}
 Educational content personalization traditionally relies on static user profiles, failing to adapt to learners' evolving needs and real-time learning behaviors. We demonstrate an AI Example Generator system that addresses this limitation through dynamic learning context adaptation. Our system seamlessly integrates a Chrome browser extension, Python Flask API server, and Google Gemini AI to generate personalized examples that evolve with user interaction patterns. The key innovation lies in tracking five categories of dynamic learning context—including struggle indicators, mastery patterns, topic history, session boundaries, and learning progression signals—rather than relying solely on predetermined user characteristics. The demonstration showcases real-time adaptation scenarios where example complexity and content adjust based on behavioral signals such as topic repetition patterns and progression speed. This represents a significant advancement in educational AI applications, introducing novel approaches to behavioral learning analytics that enhance learning effectiveness through context-aware personalization.
@@ -102,15 +108,15 @@ This demonstration makes the following key contributions to educational AI resea
 
 \section{Related Work}
 
-Educational personalization has been extensively studied in adaptive learning systems and intelligent tutoring systems. Traditional approaches focus on learner models based on knowledge states and skill assessments \cite{chen2023personalized}. However, these systems typically rely on explicit assessments rather than implicit behavioral signals during natural learning activities.
+Educational personalization has been extensively studied in adaptive learning systems and intelligent tutoring systems. Traditional approaches focus on learner models based on knowledge states and skill assessments \cite{bayly2024personalized}. However, these systems typically rely on explicit assessments rather than implicit behavioral signals during natural learning activities.
 
-Recent work in AI-driven educational content generation has explored using large language models for personalized content creation \cite{smith2024contextaware}. While these systems demonstrate the potential for AI-generated educational materials, they primarily use static user profiles without incorporating real-time learning behavior adaptation.
+Recent work in AI-driven educational content generation has explored using large language models for personalized content creation \cite{kasneci2023chatgpt}. While these systems demonstrate the potential for AI-generated educational materials, they primarily use static user profiles without incorporating real-time learning behavior adaptation.
 
-Learning analytics research has investigated behavioral pattern recognition in online educational environments \cite{kumar2024behavioral}. Zhang et al. \cite{zhang2023session} explored session-based learning pattern recognition, focusing on temporal aspects of learning behaviors. However, existing approaches typically analyze learning patterns post-hoc for course improvement rather than providing real-time content adaptation.
+Learning analytics research has investigated behavioral pattern recognition in online educational environments \cite{yagci2022educational}. Zhang et al. \cite{saqr2023temporal} explored session-based learning pattern recognition, focusing on temporal aspects of learning behaviors. However, existing approaches typically analyze learning patterns post-hoc for course improvement rather than providing real-time content adaptation.
 
 Educational technology tools have increasingly focused on seamless integration with learners' natural workflows. Browser extensions and web-based learning tools have gained popularity for their non-disruptive approach to educational support. However, most existing tools provide static functionality without behavioral adaptation capabilities.
 
-Struggle detection in educational systems has been primarily based on performance metrics such as quiz scores and completion times \cite{rodriguez2023struggle}. Our work extends this by introducing multi-signal behavioral analysis that includes interaction patterns, regeneration requests, and topic revisitation frequencies as indicators of learning difficulties.
+Struggle detection in educational systems has been primarily based on performance metrics such as quiz scores and completion times \cite{baker2019educational}. Our work extends this by introducing multi-signal behavioral analysis that includes interaction patterns, regeneration requests, and topic revisitation frequencies as indicators of learning difficulties.
 
 Our system distinguishes itself by combining real-time behavioral learning analytics with seamless workflow integration, providing dynamic content adaptation based on implicit learning signals rather than explicit assessments or static user characteristics.
 
@@ -206,33 +212,6 @@ Live Demo Requirements: Standard laptop with Chrome browser, internet connection
 Source Code: Available at \url{https://github.com/example/ai-example-generator}
 
 \bibliographystyle{ACM-Reference-Format}
-\begin{thebibliography}{10}
-
-\bibitem{chen2023personalized}
-Chen, L., Wang, Y., and Zhang, M.
-\newblock Personalized learning through AI-driven content adaptation.
-\newblock \textit{Educational Technology Research}, 45(3):234--249, 2023.
-
-\bibitem{kumar2024behavioral}
-Kumar, S., Patel, R., and Lee, J.
-\newblock Behavioral learning analytics in educational AI systems.
-\newblock In \textit{Proceedings of the International Conference on Educational Data Mining}, pages 156--163, 2024.
-
-\bibitem{rodriguez2023struggle}
-Rodriguez, A., Thompson, K., and Davis, P.
-\newblock Detecting learning struggles through interaction pattern analysis.
-\newblock \textit{Journal of Learning Analytics}, 12(2):78--92, 2023.
-
-\bibitem{smith2024contextaware}
-Smith, J., Brown, C., and Wilson, D.
-\newblock Context-aware educational content generation using large language models.
-\newblock In \textit{Proceedings of AAAI Conference on Artificial Intelligence}, pages 2345--2352, 2024.
-
-\bibitem{zhang2023session}
-Zhang, H., Liu, X., and Anderson, B.
-\newblock Session-based learning pattern recognition in online education.
-\newblock \textit{Computers \& Education}, 189:104--115, 2023.
-
-\end{thebibliography}
+\bibliography{references}
 
 \end{document}
