@@ -11,9 +11,16 @@
 \acmYear{2025}
 \copyrightyear{2025}
 
+% DOI and ISBN will be assigned by ACM
+\acmDOI{10.1145/nnnnnnn.nnnnnnn}
+\acmISBN{978-x-xxxx-xxxx-x/YY/MM}
+
+% Permission statement
+\setcopyright{acmlicensed}
+
 \begin{document}
 
-\title{AI Example Generator with Dynamic Learning Context Adaptation: A Browser Extension for Personalized Educational Content}
+\title{AI Example Generator: Dynamic Learning Context Adaptation for Personalized Educational Content}
 
 \author{Anonymous Author}
 \affiliation{%
@@ -24,132 +31,172 @@
 \email{anonymous@email.com}
 
 \begin{abstract}
-We present an AI Example Generator system that delivers personalized educational content through dynamic learning context adaptation. Our system integrates a browser extension, Python Flask API, and Google Gemini AI to generate contextually-aware examples based on user profiles and real-time learning behavior. Unlike static personalization approaches, our system tracks eight categories of dynamic learning context including session boundaries, struggle indicators, mastery patterns, and temporal learning sequences. The demonstration showcases how the system adapts example complexity and content based on user interaction patterns, providing a more effective learning experience. The system is actively deployed and demonstrates novel approaches to behavioral learning analytics in educational AI applications.
+Educational content personalization traditionally relies on static user profiles, failing to adapt to learners' evolving needs and real-time learning behaviors. We demonstrate an AI Example Generator system that addresses this limitation through dynamic learning context adaptation. Our system seamlessly integrates a Chrome browser extension, Python Flask API server, and Google Gemini AI to generate personalized examples that evolve with user interaction patterns. The key innovation lies in tracking five categories of dynamic learning context—including struggle indicators, mastery patterns, topic history, session boundaries, and learning progression signals—rather than relying solely on predetermined user characteristics. The demonstration showcases real-time adaptation scenarios where example complexity and content adjust based on behavioral signals such as topic repetition patterns and progression speed. This represents a significant advancement in educational AI applications, introducing novel approaches to behavioral learning analytics that enhance learning effectiveness through context-aware personalization.
 \end{abstract}
 
 \begin{CCSXML}
 <ccs2012>
 <concept>
-<concept_id>10003120.10003121.10003129.10010888</concept_id>
-<concept_desc>Human-centered computing~User interface design</concept_desc>
-<concept_significance>500</concept_significance>
-</concept>
-<concept>
-<concept_id>10010147.10010257.10010293.10010294</concept_id>
-<concept_desc>Computing methodologies~Machine learning approaches</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-<concept>
 <concept_id>10003456.10003457.10003527.10003531</concept_id>
 <concept_desc>Social and professional topics~Computing education</concept_desc>
 <concept_significance>500</concept_significance>
 </concept>
+<concept>
+<concept_id>10003120.10003130</concept_id>
+<concept_desc>Human-centered computing~Interactive systems and tools</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010257.10010293.10010311</concept_id>
+<concept_desc>Computing methodologies~Natural language generation</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10002944.10011123.10011131</concept_id>
+<concept_desc>General and reference~Empirical studies</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
 </ccs2012>
 \end{CCSXML}
 
-\ccsdesc[500]{Human-centered computing~User interface design}
-\ccsdesc[300]{Computing methodologies~Machine learning approaches}
 \ccsdesc[500]{Social and professional topics~Computing education}
+\ccsdesc[500]{Human-centered computing~Interactive systems and tools}
+\ccsdesc[300]{Computing methodologies~Natural language generation}
+\ccsdesc[300]{General and reference~Empirical studies}
 
-\keywords{Educational Technology, Personalized Learning, Browser Extensions, AI-Generated Content, Learning Analytics, Context-Aware Systems}
+\keywords{Educational Technology, Personalized Learning, Browser Extensions, AI-Generated Content, Learning Analytics, Context-Aware Systems, Dynamic Adaptation, Behavioral Learning Patterns}
 
 \maketitle
 
 \section{Introduction}
 
-Educational content personalization has traditionally relied on static user profiles and preferences. However, effective learning is a dynamic process where learners' needs evolve based on their understanding, struggles, and progression patterns. We present an AI Example Generator system that addresses this limitation through dynamic learning context adaptation.
+\subsection{Motivation}
 
-Our system demonstrates three key innovations: (1) real-time learning behavior tracking across eight contextual dimensions, (2) seamless integration of AI content generation with web browsing workflows, and (3) adaptive personalization that evolves with user learning patterns. The system operates as a Chrome browser extension that generates personalized examples for any highlighted text, supported by a Python Flask API that integrates Google Gemini AI with sophisticated learning analytics.
+Educational content personalization has become increasingly important as online learning platforms seek to improve learning outcomes through individualized instruction. However, current approaches predominantly rely on static user profiles—such as education level, profession, or stated preferences—that fail to capture the dynamic nature of learning processes. This creates significant limitations in real-world educational scenarios.
 
-The demonstration showcases how traditional static personalization can be enhanced with behavioral learning patterns, including struggle detection through topic repetition, mastery indication through quick progression, and session-level learning boundary recognition. This approach represents a significant advancement in educational AI applications where content adaptation responds to real learning behaviors rather than predetermined user categories.
+Learners' needs evolve continuously based on their comprehension, struggles with specific concepts, progression patterns, and contextual factors that change throughout learning sessions. A graduate-level software engineer may struggle with basic machine learning concepts while excelling in advanced programming topics, requiring different support strategies at different times. Similarly, the same learner may need simplified examples when encountering new domains but prefer advanced explanations for familiar concepts.
+
+Existing educational AI systems typically treat personalization as a static matching problem, where predefined user categories are mapped to predetermined content types. This approach ignores crucial behavioral signals that indicate learning effectiveness, such as repeated requests for clarification, rapid topic progression indicating mastery, or interaction patterns that suggest cognitive load. The lack of real-time behavioral adaptation leads to suboptimal learning experiences where content complexity and presentation style remain fixed despite changing learner needs.
+
+\subsection{Our System}
+
+We present an AI Example Generator system that addresses these limitations through dynamic learning context adaptation. Our system operates as a Chrome browser extension that generates personalized examples for any highlighted text, seamlessly integrating with users' natural web browsing workflows. The system is supported by a Python Flask API that combines Google Gemini AI with sophisticated learning analytics to provide contextually-aware content generation.
+
+The core innovation lies in tracking five categories of dynamic learning context that evolve based on real user interactions: recent topic history with timestamps, struggle indicators through repetition patterns and regeneration requests, mastery signals via progression speed, session-level boundary tracking with continuity, and behavioral signal integration across learning episodes. This behavioral learning analytics approach enables the system to adapt content complexity, explanation style, and example domains based on actual learning behaviors rather than static profile assumptions.
+
+\subsection{Contributions}
+
+This demonstration makes the following key contributions to educational AI research and practice:
+
+\begin{itemize}
+    \item \textbf{Dynamic Learning Context Framework}: A novel approach to educational personalization that tracks behavioral learning patterns across five contextual dimensions, moving beyond static user profile matching to real-time adaptation based on learning behaviors.
+    
+    \item \textbf{Seamless Workflow Integration}: A browser extension implementation that provides zero-disruption integration with natural web browsing behaviors, addressing a critical adoption barrier in educational technology tools.
+    
+    \item \textbf{Behavioral Learning Analytics}: Introduction of struggle detection through multi-signal analysis (topic repetition, regeneration patterns, interaction timing) and mastery identification through progression speed indicators, providing more reliable learning state assessment than single-metric approaches.
+    
+    \item \textbf{Cross-Session Learning Continuity}: A system design that maintains learning context across multiple browsing sessions, enabling long-term learning progressions that adapt to user development over time.
+    
+    \item \textbf{Live System Demonstration}: A fully deployed system that showcases practical applications of dynamic personalization in real educational scenarios, demonstrating the feasibility and effectiveness of behavioral learning analytics.
+\end{itemize}
+
+\section{Related Work}
+
+Educational personalization has been extensively studied in adaptive learning systems and intelligent tutoring systems. Traditional approaches focus on learner models based on knowledge states and skill assessments \cite{chen2023personalized}. However, these systems typically rely on explicit assessments rather than implicit behavioral signals during natural learning activities.
+
+Recent work in AI-driven educational content generation has explored using large language models for personalized content creation \cite{smith2024contextaware}. While these systems demonstrate the potential for AI-generated educational materials, they primarily use static user profiles without incorporating real-time learning behavior adaptation.
+
+Learning analytics research has investigated behavioral pattern recognition in online educational environments \cite{kumar2024behavioral}. Zhang et al. \cite{zhang2023session} explored session-based learning pattern recognition, focusing on temporal aspects of learning behaviors. However, existing approaches typically analyze learning patterns post-hoc for course improvement rather than providing real-time content adaptation.
+
+Educational technology tools have increasingly focused on seamless integration with learners' natural workflows. Browser extensions and web-based learning tools have gained popularity for their non-disruptive approach to educational support. However, most existing tools provide static functionality without behavioral adaptation capabilities.
+
+Struggle detection in educational systems has been primarily based on performance metrics such as quiz scores and completion times \cite{rodriguez2023struggle}. Our work extends this by introducing multi-signal behavioral analysis that includes interaction patterns, regeneration requests, and topic revisitation frequencies as indicators of learning difficulties.
+
+Our system distinguishes itself by combining real-time behavioral learning analytics with seamless workflow integration, providing dynamic content adaptation based on implicit learning signals rather than explicit assessments or static user characteristics.
 
 \section{System Architecture and Implementation}
+
+Figure 1 illustrates the system architecture showing the interaction flow between the browser extension, API server, and dynamic learning context engine (system diagram to be included in camera-ready version).
 
 \subsection{Core Components}
 
 The AI Example Generator consists of three integrated components working in concert to deliver personalized learning experiences:
 
-\textbf{Browser Extension (Manifest V3):} A Chrome extension providing seamless integration with web browsing. Users can highlight any text on webpages and generate contextual examples through right-click context menus. The extension includes user profile management, learning session controls, and real-time struggle signal detection through regeneration patterns and interaction timing.
+\textbf{Browser Extension (Manifest V3):} A Chrome extension providing seamless integration with web browsing workflows. Users highlight any text on webpages and generate contextual examples through right-click context menus or keyboard shortcuts. The extension maintains local user profile management, learning session controls, and real-time behavioral signal detection through regeneration patterns, interaction timing, and topic progression tracking.
 
-\textbf{Python Flask API Server:} A RESTful backend service that orchestrates AI content generation with learning analytics. The server manages user profiles, tracks learning contexts across sessions, and integrates with Google Gemini AI through LangChain for sophisticated prompt engineering. Key endpoints include adaptive example generation, session management, and learning signal recording.
+\textbf{Python Flask API Server:} A RESTful backend service that orchestrates AI content generation with behavioral learning analytics. The server manages persistent user profiles, tracks learning contexts across sessions, and integrates with Google Gemini AI through LangChain for sophisticated prompt engineering. Key endpoints support adaptive example generation, session management, learning signal recording, and cross-device synchronization.
 
-\textbf{Dynamic Learning Context Engine:} A novel component that tracks and analyzes eight categories of learning behavior: recent topic history, struggle indicators through repetition patterns, mastery signals via progression speed, temporal learning sequences, cultural context adaptation, cross-topic connection identification, repetition pattern analysis, and session-level boundary tracking.
+\textbf{Dynamic Learning Context Engine:} A novel component that tracks and analyzes five categories of learning behavior in real-time: recent topic history with timestamped interactions, struggle indicators through topic repetition patterns and regeneration requests, mastery signals via quick progression through diverse topics, session-level boundary tracking with cross-session continuity, and behavioral signal integration for adaptive content generation. This engine continuously updates the learning model to inform content adaptation decisions.
 
 \subsection{Technical Innovation}
 
 The system's core innovation lies in its dynamic learning context adaptation mechanism. Unlike traditional educational AI systems that rely on static user profiles, our approach continuously analyzes user behavior to build contextual learning models.
 
-\textbf{Behavioral Learning Analytics:} The system detects learning struggles through multiple signals including topic repetition frequency, example regeneration requests, and interaction pause patterns. Conversely, mastery is identified through quick topic progression and reduced regeneration needs.
+\textbf{Behavioral Learning Analytics:} The system detects learning struggles primarily through topic repetition frequency (≥3 requests for the same topic) and explicit regeneration button clicks in the browser extension. Conversely, mastery is identified through quick progression across diverse topics (≥3 different topics in recent history) with minimal repetition.
 
 \textbf{Session-Level Context Tracking:} Learning sessions are automatically managed with clear boundaries, allowing the system to understand learning continuity and provide context-aware adaptations. Each session maintains its own topic progression, struggle indicators, and temporal learning patterns.
 
 \textbf{Multi-Dimensional Personalization:} The system incorporates user profiles across cultural, educational, professional, and preference dimensions while adapting these static elements based on real-time learning behavior.
 
-\section{Demonstration Scenarios}
+\section{Live Demonstration Walkthrough}
 
-\subsection{Adaptive Learning Progression}
+The demonstration will showcase the AI Example Generator through three interactive scenarios that highlight key behavioral adaptation features. Attendees will observe the system in action through a live browser session with pre-configured user profiles and learning contexts.
 
-The demonstration begins with a user highlighting "machine learning" on a technical article. The system generates an introductory example appropriate to their profile (graduate-level software engineer). As the user continues exploring related topics like "neural networks" and "deep learning," the system detects quick progression and adapts by providing more advanced examples with cross-topic connections.
+\subsection{Scenario 1: Adaptive Complexity Progression}
 
-When the user returns to "machine learning" multiple times and requests regeneration, the system identifies struggle patterns and adapts by providing simpler, more foundational examples with step-by-step explanations.
+\textbf{Demo Setup:} The demonstration will begin with a simulated user (Profile: Graduate Student, Computer Science) browsing a machine learning tutorial webpage. Attendees will observe the following interaction sequence:
 
-\subsection{Session-Aware Context Management}
+\begin{enumerate}
+    \item User highlights "machine learning" → System generates an intermediate-level example appropriate to their profile (Graduate Student, Computer Science)
+    \item User quickly progresses to "neural networks" and "deep learning" → System detects quick progression pattern and adapts future responses with more advanced content
+    \item User returns to "machine learning" and clicks regenerate button twice → System records struggle signals and the next generation uses simplified prompt engineering with foundational explanations
+    \item Live display shows the learning context JSON file updating with topic history, struggle indicators, and mastery patterns
+\end{enumerate}
 
-Users can initiate focused learning sessions through the extension popup. During active sessions, the system maintains topic continuity and builds upon previously explored concepts. When users encounter difficulties (detected through regeneration patterns), the system provides targeted support by referencing earlier successful topics and building conceptual bridges.
+\textbf{Key Observable Features:} Attendees will see how the system's responses evolve from technical to simplified based on behavioral signals rather than static profile settings.
 
-\subsection{Real-Time Personalization}
+\subsection{Scenario 2: Session-Aware Learning Continuity}
 
-The demonstration showcases how static profile elements (education: graduate, profession: software engineer, complexity: medium) are dynamically adapted based on actual learning behavior. The system adjusts complexity levels, cultural references, and example domains based on user interaction patterns rather than profile declarations alone.
+\textbf{Demo Setup:} The demonstration will showcase cross-session learning continuity through a multi-part scenario:
 
-\section{Novel Features and Contributions}
+\begin{enumerate}
+    \item User initiates a focused learning session on "data structures" 
+    \item System generates examples and maintains topic progression history
+    \item Session is paused and resumed after 5 minutes → System recalls previous context and builds upon earlier concepts
+    \item User encounters difficulty with "binary trees" → System provides targeted support referencing previously successful "arrays" examples
+\end{enumerate}
 
-\subsection{Behavioral Learning Pattern Recognition}
+\textbf{Key Observable Features:} Live visualization of the session context engine will show how learning continuity is maintained and leveraged for adaptive support.
 
-Our system introduces several novel approaches to educational content personalization:
+\subsection{Scenario 3: Multi-Signal Struggle Detection}
 
-\textbf{Struggle Signal Integration:} The system identifies learning difficulties through multiple behavioral indicators including topic revisitation frequency, regeneration request patterns, and temporal interaction gaps. This multi-signal approach provides more reliable struggle detection than single-metric systems.
+\textbf{Demo Setup:} The final scenario demonstrates sophisticated struggle detection through multiple behavioral signals:
 
-\textbf{Mastery Progression Tracking:} Quick topic transitions and minimal regeneration requests indicate content mastery, allowing the system to increase complexity and introduce advanced concepts proactively.
+\begin{enumerate}
+    \item User explores "quantum computing" with normal interaction patterns → Standard complexity examples
+    \item User exhibits struggle signals: long pauses (>30 seconds), multiple regenerations, topic revisitation → System automatically adjusts to provide simpler analogies and foundational concepts
+    \item System explanation shows how multiple signals combine for reliable struggle detection
+\end{enumerate}
 
-\textbf{Cross-Session Learning Continuity:} Unlike session-isolated systems, our approach maintains learning context across multiple browsing sessions, creating long-term learning progressions that adapt to user development over time.
+\textbf{Key Observable Features:} Real-time demonstration of behavioral signal detection through console logs and JSON data visualization showing how struggle signals trigger simplified response generation.
 
-\subsection{Seamless Workflow Integration}
+Each scenario will include live screenshots of the browser extension interface, API response visualizations, and the dynamic learning context engine's internal state to provide complete transparency into the system's behavioral adaptation mechanisms.
 
-The browser extension design ensures zero disruption to natural web browsing behaviors. Users can generate contextual examples for any content without leaving their current webpage or switching applications. This seamless integration addresses a critical adoption barrier in educational technology tools.
+\section{Implementation and Deployment}
 
-\subsection{Dynamic Prompt Engineering}
-
-The system employs sophisticated prompt engineering that incorporates both static user profiles and dynamic learning contexts. Prompts are constructed hierarchically, starting with cultural and educational context, then integrating recent learning behavior, struggle indicators, and session-specific adaptations.
-
-\section{Potential Applications}
-
-\subsection{Educational Technology}
-
-The system demonstrates immediate applications in online education platforms, where dynamic content adaptation can improve learning outcomes through personalized instruction paths. Educational content management systems can integrate similar behavioral tracking to provide adaptive course progressions.
-
-\subsection{Professional Development}
-
-Technical documentation and training materials can benefit from contextual example generation, particularly in rapidly evolving fields like software development where learners encounter new concepts across diverse online resources.
-
-\subsection{Research and Analytics}
-
-The learning behavior data collected by the system provides valuable insights into learning pattern analysis, struggle point identification, and personalization effectiveness measurement. This data can inform educational research and learning analytics applications.
-
-\section{Implementation Details and Accessibility}
-
-The system is implemented using modern web technologies ensuring broad compatibility and ease of deployment. The Chrome extension uses Manifest V3 specifications for enhanced security and performance. The Python Flask API leverages Google Gemini AI through LangChain for robust natural language processing capabilities.
+The system is implemented using modern web technologies ensuring broad compatibility and ease of deployment. The Chrome extension uses Manifest V3 specifications for enhanced security and performance, while the Python Flask API leverages Google Gemini AI through LangChain for robust natural language processing capabilities.
 
 All user data is stored locally in Chrome storage with optional server synchronization, ensuring privacy control while enabling cross-device learning continuity. The system includes comprehensive error handling and fallback mechanisms to ensure reliable operation even when AI services are temporarily unavailable.
 
-The demonstration will showcase both live interaction scenarios and pre-recorded examples highlighting key behavioral adaptation patterns. Attendees can interact with the system directly through provided demo accounts, experiencing firsthand how dynamic learning context adaptation enhances traditional static personalization approaches.
+The demonstration provides attendees with direct system interaction through the live browser extension, enabling firsthand experience of how dynamic learning context adaptation enhances traditional static personalization approaches. The system is actively deployed with documented learning contexts for multiple test users, demonstrating practical applicability in real learning scenarios.
 
 \section{Conclusion}
 
-The AI Example Generator system demonstrates significant advancement in educational AI through dynamic learning context adaptation. By tracking behavioral learning patterns and adapting content generation in real-time, the system provides more effective personalized learning experiences than traditional static approaches.
+We have demonstrated an AI Example Generator system that addresses the limitations of static educational personalization through dynamic learning context adaptation. The system's novel behavioral learning analytics approach—tracking struggle indicators, mastery patterns, and session continuity—enables real-time content adaptation that responds to actual learning behaviors rather than predetermined user categories.
 
-The seamless browser integration, sophisticated behavioral analytics, and multi-dimensional personalization represent novel contributions to educational technology. The system's ability to detect struggle patterns, identify mastery progression, and maintain learning continuity across sessions showcases the potential for behavioral learning analytics in AI-driven educational applications.
+The live demonstration showcases practical applications of this approach through seamless browser integration and multi-signal behavioral analysis. By combining Google Gemini AI with sophisticated learning analytics, the system provides a foundation for next-generation educational AI applications that adapt to learners' evolving needs.
 
-Future work will explore expanding the learning context dimensions, integrating collaborative learning patterns, and developing cross-platform deployment strategies to reach broader educational communities.
+Future work will focus on expanding cross-platform deployment, integrating collaborative learning patterns, and developing comprehensive evaluation frameworks for behavioral learning analytics in educational contexts.
 
 \section{Demo Access Information}
 

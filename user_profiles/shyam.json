@@ -1,0 +1,29 @@
+{
+  "user_id": "shyam",
+  "name": "Shyam",
+  "location": "Bhilai",
+  "education": {
+    "level": "graduate",
+    "field": "",
+    "background": ""
+  },
+  "culture": {
+    "language": "English",
+    "cultural_background": "",
+    "religion": "",
+    "traditions": []
+  },
+  "demographics": {
+    "age_range": "",
+    "profession": "Student",
+    "interests": []
+  },
+  "preferences": {
+    "example_complexity": "medium",
+    "preferred_domains": [],
+    "learning_style": "practical"
+  },
+  "created_at": "2025-08-26T15:34:28.689422",
+  "updated_at": "2025-08-26T15:34:28.689422",
+  "synced_from_extension": true
+}

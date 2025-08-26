@@ -1,0 +1,63 @@
+{
+  "user_id": "shyam",
+  "recent_topics": [
+    {
+      "topic": "machine learning",
+      "timestamp": "2025-08-26T15:35:19.264465",
+      "success_signals": {},
+      "session_id": "no_session"
+    },
+    {
+      "topic": "supervised learning (SL)",
+      "timestamp": "2025-08-26T15:38:01.324276",
+      "success_signals": {},
+      "session_id": "session_20250826_153654"
+    },
+    {
+      "topic": "classification",
+      "timestamp": "2025-08-26T15:38:33.193654",
+      "success_signals": {},
+      "session_id": "session_20250826_153654"
+    }
+  ],
+  "struggle_indicators": {
+    "machine learning": {
+      "repeat_count": 1,
+      "last_seen": "2025-08-26T15:35:44.710027",
+      "signals": [
+        {
+          "type": "regeneration_requested",
+          "timestamp": "2025-08-26T15:35:44.710027"
+        }
+      ]
+    }
+  },
+  "mastery_indicators": {
+    "quick_progression": {
+      "recent_topics": [
+        "machine learning",
+        "supervised learning (SL)",
+        "classification"
+      ],
+      "timestamp": "2025-08-26T15:38:33.193654"
+    }
+  },
+  "session_history": [],
+  "last_updated": "2025-08-26T15:38:33.193654",
+  "current_session": {
+    "session_id": "session_20250826_153654",
+    "start_time": "2025-08-26T15:36:54.941539",
+    "topics_in_session": [
+      {
+        "topic": "supervised learning (SL)",
+        "timestamp": "2025-08-26T15:38:01.324276"
+      },
+      {
+        "topic": "classification",
+        "timestamp": "2025-08-26T15:38:33.193654"
+      }
+    ],
+    "struggle_signals": [],
+    "session_active": true
+  }
+}
