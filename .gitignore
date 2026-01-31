@@ -1,2 +1,7 @@
 mtp
 .env
+CLAUDE.md
+DOCS
+user_profiles
+learning_contexts
+__pycache__

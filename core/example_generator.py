@@ -105,53 +105,101 @@ class LearningContext:
     
     def update_learning_indicators(self, topic: str, signals: Dict):
         """Update struggle and mastery indicators"""
-        
+
+        # PRIORITY 1 FIX: Check regeneration signals from current session
+        regeneration_count = 0
+        if "current_session" in self.context_data:
+            session = self.context_data["current_session"]
+            regeneration_count = sum(1 for s in session.get("struggle_signals", [])
+                                   if s.get("signal_type") == "regeneration_requested"
+                                   and s.get("topic") == topic)
+
         # Count topic repetitions (struggle indicator)
-        topic_count = sum(1 for t in self.context_data.get("recent_topics", []) 
+        topic_count = sum(1 for t in self.context_data.get("recent_topics", [])
                          if t.get("topic") == topic)
-        
-        if topic_count >= 3:  # Repeated requests indicate struggle
+
+        # PRIORITY 1 FIX: Detect struggle from EITHER topic repetition OR regeneration requests
+        # Threshold: 3+ repetitions OR 2+ regenerations = struggle
+        is_struggling = (topic_count >= 3) or (regeneration_count >= 2)
+
+        if is_struggling:
             if "struggle_indicators" not in self.context_data:
                 self.context_data["struggle_indicators"] = {}
             self.context_data["struggle_indicators"][topic] = {
                 "repeat_count": topic_count,
-                "last_seen": datetime.now().isoformat()
+                "regeneration_count": regeneration_count,
+                "last_seen": datetime.now().isoformat(),
+                "signal_type": "regeneration" if regeneration_count >= 2 else "repetition"
             }
-        
+
         # Quick successive different topics (mastery indicator)
+        # PRIORITY 2 FIX: Track multiple mastery moments with unique identifiers
         recent_topics = self.context_data.get("recent_topics", [])[-5:]
         if len(recent_topics) >= 3:
             unique_topics = len(set(t.get("topic") for t in recent_topics))
             if unique_topics >= 3:  # Quick progression through different topics
                 if "mastery_indicators" not in self.context_data:
                     self.context_data["mastery_indicators"] = {}
-                self.context_data["mastery_indicators"]["quick_progression"] = {
-                    "recent_topics": [t.get("topic") for t in recent_topics],
+
+                # Create unique mastery ID using timestamp with microseconds + counter
+                # to ensure uniqueness even for rapid successive detections
+                base_id = f"mastery_{int(datetime.now().timestamp())}"
+                counter = 0
+                mastery_id = base_id
+                while mastery_id in self.context_data["mastery_indicators"]:
+                    counter += 1
+                    mastery_id = f"{base_id}_{counter}"
+
+                topic_list = [t.get("topic") for t in recent_topics]
+
+                self.context_data["mastery_indicators"][mastery_id] = {
+                    "type": "quick_progression",
+                    "topics": topic_list,
+                    "unique_topic_count": unique_topics,
                     "timestamp": datetime.now().isoformat()
                 }
+
+                # Keep only last 5 mastery detections to prevent unbounded growth
+                mastery_keys = sorted(self.context_data["mastery_indicators"].keys())
+                if len(mastery_keys) > 5:
+                    for old_key in mastery_keys[:-5]:
+                        del self.context_data["mastery_indicators"][old_key]
     
     def get_learning_state_summary(self) -> str:
         """Generate summary of current learning state for prompt"""
         recent_topics = self.context_data.get("recent_topics", [])[-5:]
         struggles = self.context_data.get("struggle_indicators", {})
         mastery = self.context_data.get("mastery_indicators", {})
-        
+
         summary_parts = []
-        
+
         if recent_topics:
             topics_list = [t.get("topic") for t in recent_topics]
             summary_parts.append(f"Recent topics explored: {', '.join(topics_list)}")
-        
+
         if struggles:
             struggling_topics = list(struggles.keys())
             summary_parts.append(f"Currently struggling with: {', '.join(struggling_topics)}")
-        
-        if mastery.get("quick_progression"):
-            summary_parts.append("Showing good learning momentum with quick progression")
-        
+
+        # PRIORITY 2 FIX: Handle multiple mastery detections
+        # PRIORITY 3 FIX: Enhanced summary with specific topic progression
+        if mastery:
+            # Get most recent mastery detection
+            mastery_keys = sorted(mastery.keys(), reverse=True)
+            if mastery_keys:
+                latest_mastery = mastery[mastery_keys[0]]
+                topics = latest_mastery.get("topics", [])
+                if topics:
+                    summary_parts.append(
+                        f"Demonstrated mastery progression through {len(topics)} topics: "
+                        f"{' -> '.join(topics)}. Ready for increased complexity."
+                    )
+                else:
+                    summary_parts.append("Showing good learning momentum with quick progression")
+
         if not summary_parts:
             summary_parts.append("First time learning session")
-        
+
         return "; ".join(summary_parts)
     
     def get_current_session_id(self) -> str:
