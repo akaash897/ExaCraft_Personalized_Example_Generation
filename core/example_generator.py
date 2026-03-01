@@ -6,531 +6,69 @@ Contains the main business logic for generating personalized examples.
 import os
 import json
 from datetime import datetime, timedelta
-from typing import Dict, Optional, List
+from typing import Dict, Optional, List, Tuple
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+from core.llm_provider import LLMProviderFactory
+
+# Import from new module locations
+from core.user_profile import UserProfile
+from core.learning_context import LearningContext
+from core.user_similarity import UserSimilarity
+from core.example_history import ExampleHistory
 
 # Load environment variables
 load_dotenv()
 
 
-class LearningContext:
-    """Tracks dynamic learning context and behavior signals"""
-    
-    def __init__(self, user_id: str = None):
-        self.user_id = user_id
-        self.context_file = f"learning_contexts/{user_id}.json" if user_id else None
-        self.context_data = self.load_context() if user_id else {}
-    
-    def load_context(self) -> Dict:
-        """Load learning context from JSON file"""
-        if not self.context_file:
-            return self.create_default_context()
-            
-        try:
-            os.makedirs("learning_contexts", exist_ok=True)
-            
-            if os.path.exists(self.context_file):
-                with open(self.context_file, 'r') as f:
-                    context = json.load(f)
-                    # Clean old entries (older than 7 days)
-                    context = self.clean_old_entries(context)
-                    return context
-            else:
-                return self.create_default_context()
-        except Exception as e:
-            print(f"Error loading learning context: {e}")
-            return self.create_default_context()
-    
-    def create_default_context(self) -> Dict:
-        """Create default learning context structure"""
-        return {
-            "user_id": self.user_id or "default",
-            "recent_topics": [],
-            "struggle_indicators": {},
-            "mastery_indicators": {},
-            "session_history": [],
-            "last_updated": datetime.now().isoformat()
-        }
-    
-    def clean_old_entries(self, context: Dict) -> Dict:
-        """Remove entries older than 7 days"""
-        cutoff_date = datetime.now() - timedelta(days=7)
-        
-        # Clean session history
-        if "session_history" in context:
-            context["session_history"] = [
-                session for session in context["session_history"]
-                if datetime.fromisoformat(session.get("timestamp", "2000-01-01")) > cutoff_date
-            ]
-        
-        # Clean recent topics
-        if "recent_topics" in context:
-            context["recent_topics"] = [
-                topic for topic in context["recent_topics"]
-                if datetime.fromisoformat(topic.get("timestamp", "2000-01-01")) > cutoff_date
-            ]
-        
-        return context
-    
-    def add_topic_interaction(self, topic: str, success_indicators: Dict = None):
-        """Record interaction with a topic"""
-        timestamp = datetime.now().isoformat()
-        
-        # Add to recent topics
-        topic_entry = {
-            "topic": topic,
-            "timestamp": timestamp,
-            "success_signals": success_indicators or {},
-            "session_id": self.get_current_session_id()
-        }
-        
-        if "recent_topics" not in self.context_data:
-            self.context_data["recent_topics"] = []
-        
-        self.context_data["recent_topics"].append(topic_entry)
-        
-        # Keep only last 20 topics
-        self.context_data["recent_topics"] = self.context_data["recent_topics"][-20:]
-        
-        # Update current session
-        self.update_current_session(topic, timestamp)
-        
-        # Update struggle/mastery indicators
-        self.update_learning_indicators(topic, success_indicators or {})
-        
-        self.context_data["last_updated"] = timestamp
-        self.save_context()
-    
-    def update_learning_indicators(self, topic: str, signals: Dict):
-        """Update struggle and mastery indicators"""
+# LearningContext and UserProfile have been moved to separate modules
+# Kept here as comment for reference - they are now imported from:
+# - core.learning_context.LearningContext
+# - core.user_profile.UserProfile
 
-        # PRIORITY 1 FIX: Check regeneration signals from current session
-        regeneration_count = 0
-        if "current_session" in self.context_data:
-            session = self.context_data["current_session"]
-            regeneration_count = sum(1 for s in session.get("struggle_signals", [])
-                                   if s.get("signal_type") == "regeneration_requested"
-                                   and s.get("topic") == topic)
-
-        # Count topic repetitions (struggle indicator)
-        topic_count = sum(1 for t in self.context_data.get("recent_topics", [])
-                         if t.get("topic") == topic)
-
-        # PRIORITY 1 FIX: Detect struggle from EITHER topic repetition OR regeneration requests
-        # Threshold: 3+ repetitions OR 2+ regenerations = struggle
-        is_struggling = (topic_count >= 3) or (regeneration_count >= 2)
-
-        if is_struggling:
-            if "struggle_indicators" not in self.context_data:
-                self.context_data["struggle_indicators"] = {}
-            self.context_data["struggle_indicators"][topic] = {
-                "repeat_count": topic_count,
-                "regeneration_count": regeneration_count,
-                "last_seen": datetime.now().isoformat(),
-                "signal_type": "regeneration" if regeneration_count >= 2 else "repetition"
-            }
-
-        # Quick successive different topics (mastery indicator)
-        # PRIORITY 2 FIX: Track multiple mastery moments with unique identifiers
-        recent_topics = self.context_data.get("recent_topics", [])[-5:]
-        if len(recent_topics) >= 3:
-            unique_topics = len(set(t.get("topic") for t in recent_topics))
-            if unique_topics >= 3:  # Quick progression through different topics
-                if "mastery_indicators" not in self.context_data:
-                    self.context_data["mastery_indicators"] = {}
-
-                # Create unique mastery ID using timestamp with microseconds + counter
-                # to ensure uniqueness even for rapid successive detections
-                base_id = f"mastery_{int(datetime.now().timestamp())}"
-                counter = 0
-                mastery_id = base_id
-                while mastery_id in self.context_data["mastery_indicators"]:
-                    counter += 1
-                    mastery_id = f"{base_id}_{counter}"
-
-                topic_list = [t.get("topic") for t in recent_topics]
-
-                self.context_data["mastery_indicators"][mastery_id] = {
-                    "type": "quick_progression",
-                    "topics": topic_list,
-                    "unique_topic_count": unique_topics,
-                    "timestamp": datetime.now().isoformat()
-                }
-
-                # Keep only last 5 mastery detections to prevent unbounded growth
-                mastery_keys = sorted(self.context_data["mastery_indicators"].keys())
-                if len(mastery_keys) > 5:
-                    for old_key in mastery_keys[:-5]:
-                        del self.context_data["mastery_indicators"][old_key]
-    
-    def get_learning_state_summary(self) -> str:
-        """Generate summary of current learning state for prompt"""
-        recent_topics = self.context_data.get("recent_topics", [])[-5:]
-        struggles = self.context_data.get("struggle_indicators", {})
-        mastery = self.context_data.get("mastery_indicators", {})
-
-        summary_parts = []
-
-        if recent_topics:
-            topics_list = [t.get("topic") for t in recent_topics]
-            summary_parts.append(f"Recent topics explored: {', '.join(topics_list)}")
-
-        if struggles:
-            struggling_topics = list(struggles.keys())
-            summary_parts.append(f"Currently struggling with: {', '.join(struggling_topics)}")
-
-        # PRIORITY 2 FIX: Handle multiple mastery detections
-        # PRIORITY 3 FIX: Enhanced summary with specific topic progression
-        if mastery:
-            # Get most recent mastery detection
-            mastery_keys = sorted(mastery.keys(), reverse=True)
-            if mastery_keys:
-                latest_mastery = mastery[mastery_keys[0]]
-                topics = latest_mastery.get("topics", [])
-                if topics:
-                    summary_parts.append(
-                        f"Demonstrated mastery progression through {len(topics)} topics: "
-                        f"{' -> '.join(topics)}. Ready for increased complexity."
-                    )
-                else:
-                    summary_parts.append("Showing good learning momentum with quick progression")
-
-        if not summary_parts:
-            summary_parts.append("First time learning session")
-
-        return "; ".join(summary_parts)
-    
-    def get_current_session_id(self) -> str:
-        """Get or create current session ID"""
-        if "current_session" not in self.context_data:
-            # No active session
-            return "no_session"
-        return self.context_data["current_session"]["session_id"]
-    
-    def start_learning_session(self) -> str:
-        """Start a new learning session"""
-        session_id = f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-        timestamp = datetime.now().isoformat()
-        
-        # End previous session if exists
-        if "current_session" in self.context_data:
-            self.end_learning_session()
-        
-        # Start new session
-        self.context_data["current_session"] = {
-            "session_id": session_id,
-            "start_time": timestamp,
-            "topics_in_session": [],
-            "struggle_signals": [],
-            "session_active": True
-        }
-        
-        self.context_data["last_updated"] = timestamp
-        self.save_context()
-        return session_id
-    
-    def end_learning_session(self):
-        """End the current learning session"""
-        if "current_session" not in self.context_data:
-            return False
-        
-        timestamp = datetime.now().isoformat()
-        current_session = self.context_data["current_session"]
-        
-        # Create session summary
-        session_summary = {
-            "session_id": current_session["session_id"],
-            "start_time": current_session["start_time"],
-            "end_time": timestamp,
-            "duration_minutes": self.calculate_session_duration(current_session["start_time"], timestamp),
-            "topics_explored": current_session.get("topics_in_session", []),
-            "struggle_signals": current_session.get("struggle_signals", []),
-            "total_topics": len(current_session.get("topics_in_session", [])),
-            "session_active": False
-        }
-        
-        # Add to session history
-        if "session_history" not in self.context_data:
-            self.context_data["session_history"] = []
-        
-        self.context_data["session_history"].append(session_summary)
-        
-        # Keep only last 10 sessions
-        self.context_data["session_history"] = self.context_data["session_history"][-10:]
-        
-        # Remove current session
-        del self.context_data["current_session"]
-        
-        self.context_data["last_updated"] = timestamp
-        self.save_context()
-        return True
-    
-    def update_current_session(self, topic: str, timestamp: str):
-        """Update current session with topic interaction"""
-        if "current_session" not in self.context_data:
-            return
-        
-        current_session = self.context_data["current_session"]
-        
-        # Add topic to session
-        if "topics_in_session" not in current_session:
-            current_session["topics_in_session"] = []
-        
-        current_session["topics_in_session"].append({
-            "topic": topic,
-            "timestamp": timestamp
-        })
-    
-    def record_session_struggle_signal(self, topic: str, signal_type: str):
-        """Record struggle signal within current session"""
-        if "current_session" not in self.context_data:
-            return
-        
-        timestamp = datetime.now().isoformat()
-        current_session = self.context_data["current_session"]
-        
-        if "struggle_signals" not in current_session:
-            current_session["struggle_signals"] = []
-        
-        current_session["struggle_signals"].append({
-            "topic": topic,
-            "signal_type": signal_type,
-            "timestamp": timestamp
-        })
-        
-        self.save_context()
-    
-    def calculate_session_duration(self, start_time: str, end_time: str) -> int:
-        """Calculate session duration in minutes"""
-        try:
-            start = datetime.fromisoformat(start_time)
-            end = datetime.fromisoformat(end_time)
-            duration = end - start
-            return int(duration.total_seconds() / 60)
-        except:
-            return 0
-    
-    def get_session_duration_minutes(self) -> int:
-        """Get current session duration in minutes"""
-        if "current_session" not in self.context_data:
-            return 0
-        
-        current_session = self.context_data["current_session"]
-        start_time = current_session.get("start_time")
-        if not start_time:
-            return 0
-        
-        return self.calculate_session_duration(start_time, datetime.now().isoformat())
-    
-    def get_session_summary(self) -> str:
-        """Get current session summary for prompt"""
-        if "current_session" not in self.context_data:
-            return "No active learning session"
-        
-        current_session = self.context_data["current_session"]
-        topics_count = len(current_session.get("topics_in_session", []))
-        signals_count = len(current_session.get("struggle_signals", []))
-        
-        summary_parts = []
-        summary_parts.append(f"Active learning session with {topics_count} topics explored")
-        
-        if signals_count > 0:
-            summary_parts.append(f"{signals_count} struggle signals recorded")
-        
-        return "; ".join(summary_parts)
-    
-    def save_context(self):
-        """Save learning context to file"""
-        if not self.context_file:
-            return False
-            
-        try:
-            with open(self.context_file, 'w') as f:
-                json.dump(self.context_data, f, indent=2)
-            return True
-        except Exception as e:
-            print(f"Error saving learning context: {e}")
-            return False
-
-
-class UserProfile:
-    """User profile management class"""
-    
-    def __init__(self, user_id: str = None, profile_data: Dict = None):
-        self.user_id = user_id
-        if profile_data:
-            # Initialize from provided data (API mode)
-            self.profile_data = profile_data
-            self.profile_file = None
-        else:
-            # Initialize from file (CLI mode)
-            self.profile_file = f"user_profiles/{user_id}.json" if user_id else None
-            self.profile_data = self.load_profile() if user_id else {}
-    
-    def load_profile(self) -> Dict:
-        """Load user profile from JSON file"""
-        if not self.profile_file:
-            return self.create_default_profile()
-            
-        try:
-            # Create directory if it doesn't exist
-            os.makedirs("user_profiles", exist_ok=True)
-            
-            if os.path.exists(self.profile_file):
-                with open(self.profile_file, 'r') as f:
-                    return json.load(f)
-            else:
-                return self.create_default_profile()
-        except Exception as e:
-            print(f"Error loading profile: {e}")
-            return self.create_default_profile()
-    
-    def create_default_profile(self) -> Dict:
-        """Create a default profile structure"""
-        return {
-            "user_id": self.user_id or "default",
-            "name": "",
-            "location": {
-                "country": "",
-                "city": "",
-                "region": ""
-            },
-            "education": {
-                "level": "",  # high_school, undergraduate, graduate, professional
-                "field": "",
-                "background": ""
-            },
-            "culture": {
-                "language": "English",
-                "cultural_background": "",
-                "religion": "",
-                "traditions": []
-            },
-            "demographics": {
-                "age_range": "",  # 18-25, 26-35, 36-50, 50+
-                "profession": "",
-                "interests": []
-            },
-            "preferences": {
-                "example_complexity": "medium",  # simple, medium, advanced
-                "preferred_domains": [],  # tech, business, science, arts, etc.
-                "learning_style": "practical"  # theoretical, practical, visual
-            },
-            "created_at": datetime.now().isoformat(),
-            "updated_at": datetime.now().isoformat()
-        }
-    
-    def save_profile(self):
-        """Save profile to JSON file"""
-        if not self.profile_file:
-            return False
-            
-        try:
-            self.profile_data["updated_at"] = datetime.now().isoformat()
-            with open(self.profile_file, 'w') as f:
-                json.dump(self.profile_data, f, indent=2)
-            return True
-        except Exception as e:
-            print(f"Error saving profile: {e}")
-            return False
-    
-    def update_profile(self, updates: Dict):
-        """Update profile with new information"""
-        def deep_update(original, updates):
-            for key, value in updates.items():
-                if isinstance(value, dict) and key in original:
-                    deep_update(original[key], value)
-                else:
-                    original[key] = value
-        
-        deep_update(self.profile_data, updates)
-        if self.profile_file:
-            self.save_profile()
-    
-    def get_profile_summary(self) -> str:
-        """Get a formatted summary of user profile for prompt"""
-        profile = self.profile_data
-        
-        summary_parts = []
-        
-        if profile.get("name"):
-            summary_parts.append(f"Name: {profile['name']}")
-        
-        # Location context (handle both dict and string formats)
-        location = profile.get("location", {})
-        if isinstance(location, dict):
-            if location.get("country") or location.get("city"):
-                loc_str = f"{location.get('city', '')}, {location.get('country', '')}".strip(", ")
-                if loc_str:
-                    summary_parts.append(f"Location: {loc_str}")
-        elif isinstance(location, str) and location:
-            summary_parts.append(f"Location: {location}")
-        
-        # Education context (handle both dict and string formats)
-        education = profile.get("education", {})
-        if isinstance(education, dict):
-            if education.get("level") or education.get("field"):
-                edu_str = f"{education.get('level', '')} in {education.get('field', '')}".strip(" in ")
-                if edu_str:
-                    summary_parts.append(f"Education: {edu_str}")
-        elif isinstance(education, str) and education:
-            summary_parts.append(f"Education: {education}")
-        
-        # Cultural context (handle both dict and string formats)
-        culture = profile.get("culture", {})
-        if isinstance(culture, dict):
-            if culture.get("cultural_background"):
-                summary_parts.append(f"Cultural Background: {culture['cultural_background']}")
-        
-        # Professional context (handle both dict and string formats)
-        demographics = profile.get("demographics", {})
-        profession = None
-        if isinstance(demographics, dict):
-            profession = demographics.get("profession")
-        elif profile.get("profession"):  # Direct profession field
-            profession = profile.get("profession")
-        
-        if profession:
-            summary_parts.append(f"Profession: {profession}")
-        
-        # Preferences (handle both dict and string formats)
-        preferences = profile.get("preferences", {})
-        complexity = None
-        learning_style = None
-        
-        if isinstance(preferences, dict):
-            complexity = preferences.get("example_complexity")
-            learning_style = preferences.get("learning_style")
-        elif profile.get("complexity"):  # Direct complexity field
-            complexity = profile.get("complexity")
-        
-        if complexity:
-            summary_parts.append(f"Preferred Complexity: {complexity}")
-        
-        if learning_style:
-            summary_parts.append(f"Learning Style: {learning_style}")
-        
-        return "\n".join(summary_parts) if summary_parts else "No specific profile information available"
-
-
+# Skip to ExampleGenerator class (LearningContext and UserProfile now in separate files)
 class ExampleGenerator:
     """Core example generation logic"""
     
-    def __init__(self, api_key: str = None):
-        """Initialize the Example Generator with Gemini API key"""
+    def __init__(self, api_key: str = None, provider: str = None, model: str = None):
+        """
+        Initialize the Example Generator with LLM provider support
+
+        Args:
+            api_key: API key for the provider (auto-detected if None)
+            provider: "gemini" or "openai" (default from config)
+            model: Model name (uses provider default if None)
+        """
+        from config.settings import DEFAULT_LLM_PROVIDER, LLM_API_KEYS, LLM_TEMPERATURE
+
+        # Set provider (request > config default > fallback to gemini)
+        self.provider = provider or DEFAULT_LLM_PROVIDER
+
+        # Get API key (parameter > env > config)
         if not api_key:
-            api_key = os.getenv("GEMINI_API_KEY")
-        
+            api_key = LLM_API_KEYS.get(self.provider)
+
         if not api_key:
-            raise ValueError("GEMINI_API_KEY not found. Please set it in environment variables or pass it directly.")
-        
-        self.llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            google_api_key=api_key,
-            temperature=0.3
+            raise ValueError(
+                f"{self.provider.upper()}_API_KEY not found. "
+                f"Please set it in .env or pass it directly."
+            )
+
+        # Create LLM instance using factory
+        self.llm = LLMProviderFactory.create_llm(
+            provider=self.provider,
+            api_key=api_key,
+            model=model,
+            temperature=LLM_TEMPERATURE
         )
+
+        # Store configuration for debugging
+        self.model_config = {
+            "provider": self.provider,
+            "model": model or LLMProviderFactory.get_default_model(self.provider),
+            "temperature": LLM_TEMPERATURE
+        }
         
         # Create a personalized prompt template with dynamic learning context
         self.prompt_template = PromptTemplate(
@@ -634,6 +172,218 @@ class ExampleGenerator:
         learning_context = LearningContext(user_id=user_id) if user_id else None
         return self.generate_example(topic, user_profile, learning_context)
 
+    def generate_collaborative_example(self, topic: str, profile_data: Dict = None, user_id: str = None,
+                                      use_collaborative_filtering: bool = True,
+                                      record_history: bool = True) -> Dict:
+        """
+        Generate example with collaborative filtering from similar users
+
+        Args:
+            topic: The topic to generate an example for
+            profile_data: Dictionary containing user profile information
+            user_id: User identifier for learning context tracking
+            use_collaborative_filtering: Whether to use similar users' examples
+            record_history: Whether to record this example in history
+
+        Returns:
+            Dictionary with:
+                - example: Generated example text
+                - similar_users: List of similar users used (if collaborative filtering enabled)
+                - source_examples: Examples from similar users that influenced generation
+                - example_id: ID for tracking feedback
+                - metadata: Additional generation metadata
+        """
+        user_profile = UserProfile(profile_data=profile_data or {})
+        learning_context = LearningContext(user_id=user_id) if user_id else None
+
+        similar_users = []
+        source_examples = []
+        collaborative_context = ""
+
+        # Step 1: Find similar users if collaborative filtering is enabled
+        if use_collaborative_filtering and user_id:
+            similarity_engine = UserSimilarity()
+            all_profiles = similarity_engine.get_all_user_profiles()
+
+            # Find top 5 similar users with minimum 30% similarity
+            similar_users = similarity_engine.find_similar_users(
+                target_user_id=user_id,
+                target_profile=profile_data or {},
+                all_profiles=all_profiles,
+                top_k=5,
+                min_similarity=0.3
+            )
+
+            # Step 2: Get effective examples from similar users for this topic
+            if similar_users:
+                source_examples = ExampleHistory.get_similar_users_effective_examples(
+                    similar_users=similar_users,
+                    topic=topic,
+                    min_score=0.5,  # Only examples with 50%+ effectiveness
+                    limit=3
+                )
+
+                # Step 3: Build collaborative context for prompt
+                if source_examples:
+                    collaborative_context = self._build_collaborative_context(source_examples, similar_users)
+
+        # Step 4: Generate example with collaborative context
+        example_text = self._generate_with_collaborative_context(
+            topic=topic,
+            user_profile=user_profile,
+            learning_context=learning_context,
+            collaborative_context=collaborative_context
+        )
+
+        # Step 5: Record in history if enabled
+        example_id = None
+        if record_history and user_id:
+            history = ExampleHistory(user_id=user_id)
+            example_id = history.record_example(
+                topic=topic,
+                example_text=example_text,
+                profile_snapshot=profile_data,
+                learning_context_snapshot=learning_context.context_data if learning_context else {},
+                similar_users=similar_users
+            )
+
+        return {
+            "example": example_text,
+            "example_id": example_id,
+            "similar_users": [{"user_id": uid, "similarity": score} for uid, score in similar_users],
+            "source_examples": [
+                {
+                    "text": ex.get("example_text"),
+                    "effectiveness": ex.get("effectiveness_score"),
+                    "source_user": ex.get("source_user_id")
+                }
+                for ex in source_examples
+            ],
+            "metadata": {
+                "collaborative_filtering_used": len(source_examples) > 0,
+                "num_similar_users": len(similar_users),
+                "num_source_examples": len(source_examples)
+            }
+        }
+
+    def _build_collaborative_context(self, source_examples: List[Dict],
+                                    similar_users: List[Tuple[str, float]]) -> str:
+        """Build collaborative filtering context for the prompt"""
+        if not source_examples:
+            return ""
+
+        context_parts = [
+            "\nCOLLABORATIVE INSIGHTS FROM SIMILAR USERS:",
+            f"Found {len(source_examples)} successful examples from {len(similar_users)} similar users.\n"
+        ]
+
+        for i, ex in enumerate(source_examples, 1):
+            effectiveness = ex.get("effectiveness_score", 0)
+            similarity = ex.get("source_user_similarity", 0)
+            example_text = ex.get("example_text", "")
+
+            context_parts.append(
+                f"Example {i} (User similarity: {similarity:.2f}, "
+                f"Effectiveness: {effectiveness:.2f}):\n{example_text}\n"
+            )
+
+        context_parts.append(
+            "\nUSE THESE EXAMPLES AS INSPIRATION:"
+            "\n- Identify patterns in what made these examples effective"
+            "\n- Adapt the successful elements to fit the current user's profile"
+            "\n- Maintain similar structure/style while personalizing content"
+            "\n- DO NOT copy verbatim - create a fresh example inspired by these patterns\n"
+        )
+
+        return "\n".join(context_parts)
+
+    def _generate_with_collaborative_context(self, topic: str, user_profile: UserProfile,
+                                            learning_context: LearningContext = None,
+                                            collaborative_context: str = "") -> str:
+        """Generate example with collaborative filtering context"""
+        try:
+            profile_summary = user_profile.get_profile_summary()
+
+            # Get learning context summary
+            if learning_context:
+                context_summary = learning_context.get_learning_state_summary()
+                # Record this topic interaction
+                learning_context.add_topic_interaction(topic)
+            else:
+                context_summary = "First time learning session - no previous learning context available"
+
+            # Create enhanced prompt template with collaborative context
+            if collaborative_context:
+                enhanced_template = PromptTemplate(
+                    input_variables=["topic", "user_profile", "learning_context", "collaborative_context"],
+                    template="""
+                    You are an adaptive AI tutor that personalizes examples based on static user profile,
+                    dynamic learning context, AND successful examples from similar learners.
+
+                    STATIC USER PROFILE:
+                    {user_profile}
+
+                    DYNAMIC LEARNING CONTEXT:
+                    {learning_context}
+
+                    {collaborative_context}
+
+                    TARGET TOPIC: {topic}
+
+                    DYNAMIC ADAPTATION RULES:
+
+                    If learning context shows STRUGGLE INDICATORS (repeated requests, stuck on topics):
+                    - Simplify complexity regardless of profile education level
+                    - Use more concrete, visual analogies
+                    - Build confidence with encouraging tone
+                    - Connect to topics they've already mastered
+                    - Break down complex concepts into smaller steps
+
+                    If learning context shows MASTERY INDICATORS (quick progression, diverse topics):
+                    - Increase complexity and introduce nuanced concepts
+                    - Make connections between multiple topics
+                    - Use their learning momentum to explore advanced applications
+                    - Challenge them appropriately with sophisticated examples
+
+                    COLLABORATIVE FILTERING RULES:
+                    - Draw inspiration from successful patterns in similar users' examples
+                    - Adapt the effective elements to THIS user's specific profile
+                    - Maintain proven structures while personalizing the content
+                    - Create a FRESH example - do not copy verbatim
+
+                    PERSONALIZATION HIERARCHY:
+                    1. First adapt for learning context (struggle/mastery/connections)
+                    2. Then leverage collaborative insights from similar users
+                    3. Then apply cultural personalization (location, background)
+                    4. Finally adjust for professional relevance
+
+                    EXAMPLE GENERATION:
+                    Generate a contextually adaptive example as a vivid scenario in 2-4 sentences.
+                    Use specific characters, locations, and situations that match their profile and learning state.
+
+                    Output ONLY the example scenario - no explanations or analysis.
+                    """
+                )
+
+                enhanced_chain = enhanced_template | self.llm
+                result = enhanced_chain.invoke({
+                    "topic": topic,
+                    "user_profile": profile_summary,
+                    "learning_context": context_summary,
+                    "collaborative_context": collaborative_context
+                })
+            else:
+                # No collaborative context, use standard generation
+                result = self.chain.invoke({
+                    "topic": topic,
+                    "user_profile": profile_summary,
+                    "learning_context": context_summary
+                })
+
+            return result.content
+        except Exception as e:
+            return f"Error generating example: {str(e)}"
+
 
 class ExampleGeneratorConfig:
     """Configuration settings for the example generator"""
@@ -667,9 +417,19 @@ class ExampleGeneratorConfig:
 
 
 # Utility functions
-def create_example_generator(api_key: str = None) -> ExampleGenerator:
-    """Factory function to create an ExampleGenerator instance"""
-    return ExampleGenerator(api_key)
+def create_example_generator(api_key: str = None, provider: str = None, model: str = None) -> ExampleGenerator:
+    """
+    Factory function to create an ExampleGenerator instance
+
+    Args:
+        api_key: API key for the provider
+        provider: "gemini" or "openai"
+        model: Model name (optional)
+
+    Returns:
+        ExampleGenerator instance
+    """
+    return ExampleGenerator(api_key=api_key, provider=provider, model=model)
 
 
 def validate_profile_data(profile_data: Dict) -> bool:

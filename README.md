@@ -27,6 +27,7 @@
 - [Usage](#usage)
 - [API Reference](#api-reference)
 - [Dynamic Learning Context](#dynamic-learning-context)
+- [Evaluation Framework](#evaluation-framework)
 - [Project Structure](#project-structure)
 - [Research Contributions](#research-contributions)
 - [Publication](#publication)
@@ -50,6 +51,15 @@ The system seamlessly integrates into web browsing workflows via a Chrome extens
 
 ### 🎓 Hybrid Personalization Framework
 Combines user-configured static profiles with dynamic behavioral adaptation for truly personalized learning experiences.
+
+### 🤝 Collaborative Filtering (NEW!)
+Leverages user similarity to recommend examples:
+- **User Similarity Matching**: Finds similar learners based on education, profession, interests, and learning style
+- **Example Effectiveness Tracking**: Records which examples work well for which users
+- **Pattern Reuse**: Adapts successful examples from similar users to new learners
+- **Cold Start Mitigation**: New users benefit immediately from existing user data
+- **LangGraph Integration**: Seamlessly integrated into workflow for automatic CF
+- See [Collaborative Filtering Documentation](COLLABORATIVE_FILTERING.md) and [Workflow Integration](docs/workflow_collaborative_integration.md) for details
 
 ### 📊 Real-time Learning Analytics
 Continuously monitors interaction patterns to detect:
@@ -81,7 +91,7 @@ Seamless Chrome extension integration with right-click context menus and profile
 
 ## 🏗️ System Architecture
 
-ExaCraft consists of three integrated components:
+ExaCraft consists of two integrated components:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -125,8 +135,6 @@ ExaCraft consists of three integrated components:
    - Google Gemini AI integration via LangChain
    - Behavioral analytics processing
    - Session and context management
-
-3. **🧠 Learning Context Engine**
    - Dynamic behavior tracking
    - Struggle/mastery pattern detection
    - Cross-session continuity
@@ -163,6 +171,15 @@ ExaCraft consists of three integrated components:
    python api_server.py
    ```
    Server will start on `http://localhost:8000`
+
+4. **Test Collaborative Filtering (Optional)**
+   ```bash
+   # Run the collaborative filtering demo
+   python test_collaborative_filtering.py
+   ```
+   This will create sample users and demonstrate how similar users' examples influence new generations.
+
+   See [Collaborative Filtering Documentation](COLLABORATIVE_FILTERING.md) for detailed usage.
 
 ---
 
@@ -238,38 +255,7 @@ python api_server.py
 ✅ Example Generator initialized successfully
 ```
 
-The server must be running for both the extension and CLI to function.
-
-### 🔧 CLI Application
-
-Run the interactive command-line interface:
-
-```bash
-python cli_app.py
-```
-
-**Features:**
-- Interactive profile setup wizard
-- Topic-based example generation
-- Profile persistence across sessions
-- Commands: `profile`, `help`, `quit`
-
-**Example session:**
-```
-=== User Profile Setup ===
-Enter your name or user ID: john_doe
-Country: USA
-City: San Francisco
-Education level: graduate
-Profession: Software Engineer
-Preferred example complexity: advanced
-
-📝 Enter topic: machine learning
-🤖 Generating personalized example for: machine learning
-============================================================
-[Personalized example appears here...]
-============================================================
-```
+The server must be running for the extension to function.
 
 ### 🌐 Browser Extension
 
@@ -406,7 +392,7 @@ Content-Type: application/json
   "profile": { ... }
 }
 ```
-Syncs extension profile to file system for CLI access.
+Syncs extension profile to file system.
 
 ### Response Format
 
@@ -506,6 +492,74 @@ This ensures behavioral adaptation takes precedence over static preferences.
 
 ---
 
+## 🧪 Evaluation Framework
+
+ExaCraft includes a comprehensive **LLM-as-a-Judge** evaluation framework for assessing the quality and effectiveness of generated examples.
+
+### Multi-Model Evaluation
+
+The framework uses **multiple LLM judges** (GPT-4, Claude, Gemini) to evaluate examples across 5 key dimensions:
+
+1. **Pedagogical Quality** - Clarity, correctness, teaching effectiveness
+2. **Personalization Fit** - Alignment with user profile (culture, profession)
+3. **Complexity Appropriateness** - Difficulty matches learner state
+4. **Topic Relevance** - How well the example addresses the concept
+5. **Engagement Potential** - Interestingness and relatability
+
+### Quick Start
+
+```bash
+# Install evaluation dependencies
+pip install openai anthropic
+
+# Configure API keys in .env
+echo "OPENAI_API_KEY=your_key" >> .env
+echo "ANTHROPIC_API_KEY=your_key" >> .env
+
+# Run setup check
+python tests/evaluation/setup_check.py
+
+# Run full evaluation
+python tests/evaluation/run_evaluation.py
+
+# Analyze results
+python tests/evaluation/analyze_results.py tests/evaluation/results/<file>.json
+```
+
+### Features
+
+- **7 Test Scenarios** - Covering beginners, advanced learners, edge cases
+- **Multi-Judge Scoring** - Reduces model-specific bias
+- **Adaptive vs Static Comparison** - Validates learning context benefits
+- **Judge Agreement Metrics** - Measures evaluation consistency
+- **Automated Analysis** - Generates insights and recommendations
+
+### Example Usage
+
+```python
+from tests.evaluation import LLMJudge
+
+judge = LLMJudge(
+    openai_api_key="...",
+    anthropic_api_key="...",
+    gemini_api_key="..."
+)
+
+evaluation = judge.evaluate_example(
+    example="Your generated example...",
+    topic="recursion",
+    profile_summary=profile_summary,
+    context_summary=context_summary,
+    judges=["gpt4", "claude", "gemini"]
+)
+
+print(f"Overall score: {evaluation.overall_average():.2f}/5.0")
+```
+
+**See full documentation**: [`tests/evaluation/README.md`](tests/evaluation/README.md)
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -517,6 +571,16 @@ ExaCraft/
 │       ├── UserProfile            # Profile management
 │       └── LearningContext        # Behavior tracking
 │
+├── 📂 tests/evaluation/           # LLM-as-Judge evaluation framework
+│   ├── llm_judge.py               # Multi-model evaluation engine
+│   ├── test_scenarios.py          # Test case definitions
+│   ├── run_evaluation.py          # Evaluation orchestrator
+│   ├── analyze_results.py         # Results analysis tools
+│   ├── example_usage.py           # Usage examples
+│   ├── setup_check.py             # Setup verification
+│   ├── README.md                  # Evaluation docs
+│   └── results/                   # Evaluation outputs
+│
 ├── 📂 learning_contexts/          # Dynamic behavior storage
 │   └── {user_id}.json             # Per-user context files
 │
@@ -526,7 +590,6 @@ ExaCraft/
 ├── 📂 DOCS/                       # Documentation files
 │
 ├── 🐍 api_server.py               # Flask REST API
-├── 🐍 cli_app.py                  # Command-line interface
 ├── 🐍 setup.py                    # Package setup
 │
 ├── 🔧 manifest.json               # Chrome extension manifest
@@ -548,7 +611,6 @@ ExaCraft/
 |------|---------|
 | `core/example_generator.py` | Main business logic with ExampleGenerator, UserProfile, and LearningContext classes |
 | `api_server.py` | Flask REST API with 11 endpoints for generation and tracking |
-| `cli_app.py` | Interactive CLI with profile setup wizard |
 | `background.js` | Extension service worker handling context menu and API calls |
 | `content.js` | Content script for displaying results on webpages |
 | `popup.html/js` | Extension popup for profile configuration |
@@ -632,7 +694,6 @@ Found a bug or have a feature request? Please open an issue on GitHub:
 4. **Test your changes**
    ```bash
    python api_server.py  # Test API server
-   python cli_app.py     # Test CLI
    # Test extension manually in Chrome
    ```
 

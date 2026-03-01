@@ -1,0 +1,57 @@
+{
+  "user_id": "akaash",
+  "examples": [
+    {
+      "example_id": "ex_b26ff77b11544e8a",
+      "topic": "Machine learning (ML)",
+      "example_text": "In the bustling streets of Benares, Akaash, a high school student, finds himself intrigued by how local farmers use machine learning to predict crop yields. He visits a nearby agricultural research center where a friendly scientist explains how they collect data from the fields and use algorithms to analyze weather patterns, soil quality, and historical harvests. Inspired, Akaash imagines creating a simple program that could help his family optimize their own small vegetable garden, ensuring they plant the right crops at the right time for the best harvest.",
+      "timestamp": "2026-03-01T22:24:57.975599",
+      "profile_snapshot": {
+        "user_id": "akaash",
+        "name": "Akaash",
+        "location": "Benares",
+        "education": {
+          "level": "high_school",
+          "field": "",
+          "background": ""
+        },
+        "culture": {
+          "language": "English",
+          "cultural_background": "",
+          "religion": "",
+          "traditions": []
+        },
+        "demographics": {
+          "age_range": "",
+          "profession": "Student",
+          "interests": []
+        },
+        "preferences": {
+          "example_complexity": "medium",
+          "preferred_domains": [],
+          "learning_style": "practical"
+        },
+        "created_at": "2026-02-03T12:35:31.831789",
+        "updated_at": "2026-02-03T12:35:31.831789",
+        "synced_from_extension": true
+      },
+      "learning_context_snapshot": {},
+      "similar_users_used": [],
+      "feedback": {
+        "accepted": false,
+        "regeneration_requested": false,
+        "time_to_action_seconds": 0
+      },
+      "effectiveness_score": 0.0
+    }
+  ],
+  "topic_examples": {
+    "Machine learning (ML)": [
+      "ex_b26ff77b11544e8a"
+    ]
+  },
+  "effectiveness_scores": {
+    "ex_b26ff77b11544e8a": 0.0
+  },
+  "last_updated": "2026-03-01T22:24:57.975599"
+}

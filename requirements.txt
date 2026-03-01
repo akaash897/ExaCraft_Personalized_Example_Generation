@@ -1,5 +1,9 @@
 langchain
 langchain-google-genai
+langchain-openai
+langgraph
+langsmith
 python-dotenv
 flask
 flask-cors
+openai

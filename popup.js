@@ -3,16 +3,24 @@
 document.addEventListener('DOMContentLoaded', function() {
   loadUserProfile();
   loadSessionState();
-  
+  loadFeatureFlags();
+  loadProviderSettings();
+
   // Save profile button
   document.getElementById('saveProfile').addEventListener('click', saveUserProfile);
-  
+
   // Learning session buttons
   document.getElementById('beginSession').addEventListener('click', beginLearningSession);
   document.getElementById('endSession').addEventListener('click', endLearningSession);
-  
+
   // Test API connection button
   document.getElementById('testConnection').addEventListener('click', testApiConnection);
+
+  // Feedback workflow toggle
+  document.getElementById('feedbackWorkflowEnabled').addEventListener('change', toggleFeedbackWorkflow);
+
+  // LLM Provider selector
+  document.getElementById('llmProvider').addEventListener('change', saveProviderSelection);
 });
 
 function loadUserProfile() {
@@ -142,16 +150,64 @@ function showSessionStatus(message, type) {
   }, 3000);
 }
 
+function loadFeatureFlags() {
+  chrome.storage.local.get("feedbackWorkflowEnabled", (result) => {
+    const isEnabled = result.feedbackWorkflowEnabled || false;
+    document.getElementById('feedbackWorkflowEnabled').checked = isEnabled;
+  });
+}
+
+function toggleFeedbackWorkflow() {
+  const isEnabled = document.getElementById('feedbackWorkflowEnabled').checked;
+  const statusDiv = document.getElementById('featureStatus');
+
+  chrome.storage.local.set({ feedbackWorkflowEnabled: isEnabled }, () => {
+    statusDiv.style.display = 'block';
+    statusDiv.textContent = isEnabled ?
+      '✅ Feedback workflow enabled! You\'ll be asked to rate examples.' :
+      '⚠️ Feedback workflow disabled. Using standard mode.';
+    statusDiv.className = `status ${isEnabled ? 'success' : 'info'}`;
+
+    setTimeout(() => {
+      statusDiv.style.display = 'none';
+    }, 3000);
+  });
+}
+
+function loadProviderSettings() {
+  chrome.storage.local.get("llmProvider", (result) => {
+    const provider = result.llmProvider || 'gemini';
+    document.getElementById('llmProvider').value = provider;
+  });
+}
+
+function saveProviderSelection() {
+  const provider = document.getElementById('llmProvider').value;
+  const statusDiv = document.getElementById('providerStatus');
+
+  chrome.storage.local.set({ llmProvider: provider }, () => {
+    statusDiv.style.display = 'block';
+    statusDiv.textContent = provider === 'openai' ?
+      '✅ Using OpenAI (GPT-4o Mini)' :
+      '✅ Using Google Gemini (Default)';
+    statusDiv.className = 'status success';
+
+    setTimeout(() => {
+      statusDiv.style.display = 'none';
+    }, 3000);
+  });
+}
+
 function testApiConnection() {
   const button = document.getElementById('testConnection');
   const statusDiv = document.getElementById('apiStatus');
-  
+
   button.disabled = true;
   button.textContent = '🔄 Testing...';
   statusDiv.style.display = 'block';
   statusDiv.textContent = 'Connecting to API...';
   statusDiv.className = 'status';
-  
+
   // Test the API with a simple request
   fetch('http://localhost:8000/health', {
     method: 'GET',
@@ -174,7 +230,7 @@ function testApiConnection() {
   .finally(() => {
     button.disabled = false;
     button.textContent = '🔌 Test API Connection';
-    
+
     // Hide status after 5 seconds
     setTimeout(() => {
       statusDiv.style.display = 'none';

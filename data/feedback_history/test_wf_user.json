@@ -1,0 +1,29 @@
+{
+  "user_id": "test_wf_user",
+  "feedback_entries": [
+    {
+      "example_id": "ex_8ea441fd5e35",
+      "topic": "binary search",
+      "difficulty_rating": 3,
+      "clarity_rating": 4,
+      "usefulness_rating": 5,
+      "example_text": "Arjun is at a bustling book fair in Mumbai, searching for a specific Python programming textbook among hundreds of titles neatly arranged alphabetically on a long shelf. Instead of checking each book one by one, he intuitively grabs a book from the middle of the shelf. Seeing his target book's title comes *before* the one he picked, he confidently discards the entire second half of the shelf, knowing his book must be in the first half.",
+      "timestamp": "2026-03-01T22:12:56.637097"
+    },
+    {
+      "example_id": "ex_872b844775da",
+      "topic": "sorting algorithms",
+      "difficulty_rating": 2,
+      "clarity_rating": 5,
+      "usefulness_rating": 4,
+      "example_text": "Imagine Arjun is at the bustling Crawford Market in Mumbai, trying to find a specific type of spice for his mother's recipe among hundreds of unsorted packets. He realizes it would take ages to check each one individually. If only the shopkeeper had arranged all the spices alphabetically, he could quickly narrow down his search and find it in no time.",
+      "timestamp": "2026-03-01T22:13:45.895207"
+    }
+  ],
+  "adaptive_thresholds": {
+    "struggle_threshold": 3,
+    "mastery_threshold": 3,
+    "last_calculated": "2026-03-01T22:12:56.637097"
+  },
+  "created_at": "2026-03-01T22:12:56.637097"
+}

@@ -449,6 +449,35 @@
     </div>
 
     <div class="section">
+      <h3 data-icon="🔬">Adaptive Features (Beta)</h3>
+      <div class="input-group">
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+          <input type="checkbox" id="feedbackWorkflowEnabled" style="width: auto; cursor: pointer;">
+          <span>Enable Feedback-Based Learning</span>
+        </label>
+        <div style="font-size: 11px; color: #636E72; margin-top: 5px; padding-left: 28px;">
+          Collect feedback after each example to personalize your learning experience
+        </div>
+      </div>
+      <div id="featureStatus" class="status" style="display: none;"></div>
+    </div>
+
+    <div class="section">
+      <h3 data-icon="🤖">AI Provider</h3>
+      <div class="input-group">
+        <label for="llmProvider">Select AI Model Provider</label>
+        <select id="llmProvider">
+          <option value="gemini">Google Gemini (Default)</option>
+          <option value="openai">OpenAI (GPT-4o Mini)</option>
+        </select>
+      </div>
+      <div style="font-size: 11px; color: #636E72; margin-top: 5px;">
+        Choose which AI provider to use for generating examples. Make sure the corresponding API key is configured in your server's .env file.
+      </div>
+      <div id="providerStatus" class="status" style="display: none;"></div>
+    </div>
+
+    <div class="section">
       <h3 data-icon="🔧">Connection Test</h3>
       <button class="btn btn-secondary" id="testConnection" data-tooltip="Check if API is running">
         🔌 Test API Connection

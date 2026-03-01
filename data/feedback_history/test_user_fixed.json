@@ -1,0 +1,20 @@
+{
+  "user_id": "test_user_fixed",
+  "feedback_entries": [
+    {
+      "example_id": "ex_4625e63628d9",
+      "topic": "binary search",
+      "difficulty_rating": 4,
+      "clarity_rating": 3,
+      "usefulness_rating": 5,
+      "example_text": "You're a chef, Alex, in a bustling kitchen, needing to find the rare 'za'atar' spice from a massive, perfectly alphabetized rack of 500 jars. Instead of checking each one, you grab the jar exactly in the middle, see 'Mace', and instantly know your target is in the second half. You then repeat this precise halving, quickly zeroing in on the correct jar without wasting a second.",
+      "timestamp": "2026-02-01T17:02:03.422245"
+    }
+  ],
+  "adaptive_thresholds": {
+    "struggle_threshold": 3,
+    "mastery_threshold": 3,
+    "last_calculated": "2026-02-01T17:02:03.422245"
+  },
+  "created_at": "2026-02-01T17:02:03.422245"
+}

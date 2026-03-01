@@ -1,0 +1,38 @@
+{
+  "user_id": "akaash",
+  "feedback_entries": [
+    {
+      "example_id": "ex_616d7220503e",
+      "topic": "Agriculture",
+      "difficulty_rating": 4,
+      "clarity_rating": 4,
+      "usefulness_rating": 4,
+      "example_text": "Akaash, having recently understood basic crop rotation, now walks through a vibrant field near Benares. He observes a local farmer using a specialized smartphone app that analyzes images from a small drone flying overhead. This app, powered by a deep learning algorithm, precisely identifies early signs of pest infestation and nutrient deficiencies in specific plant sections, allowing for targeted, efficient intervention rather than broad, wasteful spraying.",
+      "timestamp": "2026-02-03T10:44:48.710893"
+    },
+    {
+      "example_id": "ex_8fbb3ab1d4a0",
+      "topic": "Agriculture",
+      "difficulty_rating": 4,
+      "clarity_rating": 3,
+      "usefulness_rating": 4,
+      "example_text": "Akaash, after attending his classes in Benares, often visits his family's small plot of land where he observes his grandfather carefully tending to the mustard fields. He watches as his grandfather checks the soil, decides the perfect time to water, and explains how different crops need different care to grow strong and healthy. This hands-on work, from preparing the soil to harvesting, shows Akaash the practical science behind feeding their community.",
+      "timestamp": "2026-02-03T11:03:18.111731"
+    },
+    {
+      "example_id": "ex_a97dd416ee90",
+      "topic": "Machine learning (ML)",
+      "difficulty_rating": 2,
+      "clarity_rating": 4,
+      "usefulness_rating": 2,
+      "example_text": "In the bustling streets of Benares, Akaash, a high school student, finds himself intrigued by how local farmers use machine learning to predict crop yields. He visits a nearby agricultural research center where a friendly scientist explains how they collect data from the fields and use algorithms to analyze weather patterns, soil quality, and historical harvests. Inspired, Akaash imagines creating a simple program that could help his family optimize their own small vegetable garden, ensuring they plant the right crops at the right time for the best harvest.",
+      "timestamp": "2026-03-01T22:24:57.972412"
+    }
+  ],
+  "adaptive_thresholds": {
+    "struggle_threshold": 3,
+    "mastery_threshold": 3,
+    "last_calculated": "2026-02-03T10:44:48.710893"
+  },
+  "created_at": "2026-02-03T10:44:48.710893"
+}
