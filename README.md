@@ -5,752 +5,472 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.1.1-green.svg)
 ![LangChain](https://img.shields.io/badge/LangChain-Latest-orange.svg)
+![LangGraph](https://img.shields.io/badge/LangGraph-Latest-purple.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-yellow.svg)
 ![License](https://img.shields.io/badge/License-MIT-red.svg)
 
 **An AI-powered educational system that generates culturally relevant, personalized examples by adapting to learners' dynamic context in real-time.**
 
-[🎥 Video Demo](https://youtu.be/w1P3n8qEOdg) • [📄 Research Paper](https://github.com/yourusername/ExaCraft) • [🚀 Quick Start](#quick-start) • [📚 Documentation](#documentation)
+[🎥 Video Demo](https://youtu.be/w1P3n8qEOdg) • [🚀 Quick Start](#quick-start)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
-- [Key Features](#key-features)
-- [Demo](#demo)
 - [System Architecture](#system-architecture)
+- [Personalization Layers](#personalization-layers)
+- [LangGraph Workflow](#langgraph-workflow)
 - [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Configuration](#configuration)
 - [API Reference](#api-reference)
-- [Dynamic Learning Context](#dynamic-learning-context)
-- [Evaluation Framework](#evaluation-framework)
 - [Project Structure](#project-structure)
-- [Research Contributions](#research-contributions)
 - [Publication](#publication)
-- [Contributing](#contributing)
 - [License](#license)
 - [Citation](#citation)
 - [Authors](#authors)
 
 ---
 
-## 🎯 Overview
+## Overview
 
-ExaCraft is an innovative educational AI system that revolutionizes how learners receive personalized examples. Unlike traditional static personalization, ExaCraft implements a **hybrid personalization framework** that combines:
+ExaCraft is an educational AI system that generates personalized examples by combining three personalization layers:
 
-- **Static Profiles**: User-configured preferences (location, education, profession, complexity)
-- **Dynamic Behavioral Adaptation**: Real-time analysis of learning patterns, struggle indicators, and mastery signals
+1. **Static User Profile** — location, education, profession, cultural background, learning style, complexity preference
+2. **Dynamic Learning Context** — real-time behavioral signals (struggle, mastery, recent topics) tracked per-session
+3. **Collaborative Filtering** — effective examples from similar users inform generation for new requests
 
-The system seamlessly integrates into web browsing workflows via a Chrome extension, providing zero-disruption example generation while continuously adapting to learning behavior across multiple sessions.
-
-## ✨ Key Features
-
-### 🎓 Hybrid Personalization Framework
-Combines user-configured static profiles with dynamic behavioral adaptation for truly personalized learning experiences.
-
-### 🤝 Collaborative Filtering (NEW!)
-Leverages user similarity to recommend examples:
-- **User Similarity Matching**: Finds similar learners based on education, profession, interests, and learning style
-- **Example Effectiveness Tracking**: Records which examples work well for which users
-- **Pattern Reuse**: Adapts successful examples from similar users to new learners
-- **Cold Start Mitigation**: New users benefit immediately from existing user data
-- **LangGraph Integration**: Seamlessly integrated into workflow for automatic CF
-- See [Collaborative Filtering Documentation](COLLABORATIVE_FILTERING.md) and [Workflow Integration](docs/workflow_collaborative_integration.md) for details
-
-### 📊 Real-time Learning Analytics
-Continuously monitors interaction patterns to detect:
-- **Struggle Indicators**: Topic repetition patterns (≥3x), regeneration requests
-- **Mastery Signals**: Quick progression through diverse topics
-- **Learning Velocity**: Cross-session progression tracking
-
-### 🌍 Cultural & Professional Relevance
-Generates examples tailored to user's:
-- Geographical location and cultural background
-- Educational background and complexity preferences
-- Professional context and domain expertise
-
-### 🔄 Cross-session Continuity
-Maintains personalization patterns across multiple browsing sessions for long-term learning progressions with 7-day context retention.
-
-### ⚡ Zero-disruption Workflow
-Seamless Chrome extension integration with right-click context menus and profile management.
+The system runs as a **Flask REST API** backend and integrates with a **Chrome Extension** (Manifest V3) that lets users highlight text on any webpage and instantly receive a personalized example.
 
 ---
 
-## 🎥 Demo
-
-[![ExaCraft Demo](https://img.youtube.com/vi/w1P3n8qEOdg/maxresdefault.jpg)](https://youtu.be/w1P3n8qEOdg)
-
-**Watch the full demo**: [https://youtu.be/w1P3n8qEOdg](https://youtu.be/w1P3n8qEOdg)
-
----
-
-## 🏗️ System Architecture
-
-ExaCraft consists of two integrated components:
+## System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     EXACRAFT SYSTEM                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  ┌──────────────────┐      ┌──────────────────┐           │
-│  │  Chrome Browser  │◄────►│  Flask API       │           │
-│  │  Extension       │      │  Server          │           │
-│  │  (Manifest V3)   │      │  (Port 8000)     │           │
-│  └──────────────────┘      └────────┬─────────┘           │
-│         │                           │                      │
-│         │                           ▼                      │
-│         │                  ┌──────────────────┐           │
-│         │                  │  Google Gemini   │           │
-│         │                  │  AI (LangChain)  │           │
-│         │                  └──────────────────┘           │
-│         │                           │                      │
-│         └──────────┬────────────────┘                      │
-│                    ▼                                       │
-│         ┌─────────────────────┐                           │
-│         │  Learning Context   │                           │
-│         │  Engine             │                           │
-│         │  • User Profiles    │                           │
-│         │  • Behavior Signals │                           │
-│         │  • Session Tracking │                           │
-│         └─────────────────────┘                           │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
-### Components
-
-1. **🌐 Browser Extension** (Chrome/Manifest V3)
-   - Context menu integration for text selection
-   - Profile configuration popup interface
-   - Real-time example display overlay
-
-2. **🔧 Flask API Server** (Python)
-   - RESTful backend service
-   - Google Gemini AI integration via LangChain
-   - Behavioral analytics processing
-   - Session and context management
-   - Dynamic behavior tracking
-   - Struggle/mastery pattern detection
-   - Cross-session continuity
-   - Adaptive complexity adjustment
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Python 3.8 or higher
-- Google Chrome browser
-- Google Gemini API key ([Get one here](https://ai.google.dev/))
-
-### Installation in 3 Steps
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/ExaCraft.git
-   cd ExaCraft
-   ```
-
-2. **Install dependencies & configure**
-   ```bash
-   pip install -r requirements.txt
-
-   # Create .env file with your API key
-   echo "GEMINI_API_KEY=your_api_key_here" > .env
-   ```
-
-3. **Start the server**
-   ```bash
-   python api_server.py
-   ```
-   Server will start on `http://localhost:8000`
-
-4. **Test Collaborative Filtering (Optional)**
-   ```bash
-   # Run the collaborative filtering demo
-   python test_collaborative_filtering.py
-   ```
-   This will create sample users and demonstrate how similar users' examples influence new generations.
-
-   See [Collaborative Filtering Documentation](COLLABORATIVE_FILTERING.md) for detailed usage.
-
----
-
-## 📦 Installation
-
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/ExaCraft.git
-cd ExaCraft
-```
-
-### Step 2: Install Python Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-**Dependencies:**
-- `langchain` - LLM framework
-- `langchain-google-genai` - Google Gemini integration
-- `python-dotenv` - Environment variable management
-- `flask` - Web framework
-- `flask-cors` - CORS support for extension
-
-### Step 3: Configure Environment Variables
-
-Create a `.env` file in the root directory:
-
-```bash
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-**Getting your API key:**
-1. Visit [Google AI Studio](https://ai.google.dev/)
-2. Sign in with your Google account
-3. Generate an API key
-4. Copy and paste into `.env` file
-
-### Step 4: Install Chrome Extension
-
-1. Start the API server:
-   ```bash
-   python api_server.py
-   ```
-
-2. Open Chrome and navigate to `chrome://extensions/`
-
-3. Enable **Developer mode** (toggle in top-right corner)
-
-4. Click **"Load unpacked"**
-
-5. Select the ExaCraft repository directory
-
-6. The extension icon should appear in your Chrome toolbar
-
----
-
-## 💻 Usage
-
-### 🖥️ API Server
-
-Start the Flask backend server:
-
-```bash
-python api_server.py
-```
-
-**Output:**
-```
-🚀 Starting AI Example Generator API Server...
-📡 Server will run on http://localhost:8000
-✅ Example Generator initialized successfully
-```
-
-The server must be running for the extension to function.
-
-### 🌐 Browser Extension
-
-1. **Configure Your Profile**
-   - Click the ExaCraft extension icon
-   - Fill in your profile information:
-     - Name
-     - Location
-     - Education level
-     - Profession
-     - Preferred complexity
-   - Click "Save Profile"
-
-2. **Generate Examples**
-   - Highlight any text on a webpage
-   - Right-click → Select "Generate Example with AI"
-   - A personalized example appears in an overlay
-   - Click "Regenerate" for alternative examples
-   - Examples adapt based on your interaction patterns
-
-3. **Track Learning Progress**
-   - The system automatically tracks:
-     - Topics you explore
-     - Areas where you struggle (repeated requests)
-     - Topics you master quickly
-   - Complexity adjusts automatically based on behavior
-
----
-
-## 📡 API Reference
-
-### Base URL
-```
-http://localhost:8000
-```
-
-### Endpoints
-
-#### Health Check
-```http
-GET /health
-```
-Returns service status and available endpoints.
-
-#### Generate Example (Static)
-```http
-POST /generate-example
-Content-Type: application/json
-
-{
-  "topic": "blockchain",
-  "user_profile": {
-    "name": "John Doe",
-    "location": "San Francisco, USA",
-    "education": "graduate",
-    "profession": "Software Engineer",
-    "complexity": "advanced"
-  }
-}
-```
-
-#### Generate Example (Adaptive)
-```http
-POST /generate-adaptive-example
-Content-Type: application/json
-
-{
-  "topic": "neural networks",
-  "user_id": "john_doe",
-  "user_profile": { ... }
-}
-```
-Uses dynamic learning context for behavioral adaptation.
-
-#### Get Learning Context
-```http
-GET /get-learning-context?user_id=john_doe
-```
-Retrieves complete learning history and behavioral patterns.
-
-#### Record Struggle Signal
-```http
-POST /record-struggle-signal
-Content-Type: application/json
-
-{
-  "user_id": "john_doe",
-  "topic": "quantum computing",
-  "signal_type": "regeneration_request"
-}
-```
-
-#### Start Learning Session
-```http
-POST /start-learning-session
-Content-Type: application/json
-
-{
-  "user_id": "john_doe"
-}
-```
-
-#### End Learning Session
-```http
-POST /end-learning-session
-Content-Type: application/json
-
-{
-  "user_id": "john_doe"
-}
-```
-
-#### Get Session Status
-```http
-GET /get-session-status?user_id=john_doe
-```
-
-#### Validate Profile
-```http
-POST /validate-profile
-Content-Type: application/json
-
-{
-  "profile": { ... }
-}
-```
-
-#### Sync Profile
-```http
-POST /sync-profile
-Content-Type: application/json
-
-{
-  "profile": { ... }
-}
-```
-Syncs extension profile to file system.
-
-### Response Format
-
-All endpoints return JSON with standard structure:
-
-```json
-{
-  "success": true,
-  "timestamp": "2025-01-20T12:34:56.789Z",
-  "data": { ... }
-}
-```
-
-Error responses:
-```json
-{
-  "success": false,
-  "error": "Error message",
-  "timestamp": "2025-01-20T12:34:56.789Z"
-}
+┌─────────────────────────────────────────────────────────────────┐
+│                        EXACRAFT SYSTEM                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌───────────────────┐        ┌──────────────────────────┐     │
+│  │  Chrome Extension │◄──────►│  Flask API Server        │     │
+│  │  (Manifest V3)    │        │  (localhost:8000)         │     │
+│  │                   │        └────────────┬─────────────┘     │
+│  │  • Text selection │                     │                    │
+│  │  • Profile config │                     ▼                    │
+│  │  • Result overlay │        ┌──────────────────────────┐     │
+│  └───────────────────┘        │  LangGraph Workflow       │     │
+│                               │                          │     │
+│                               │  find_similar_users      │     │
+│                               │       ↓                  │     │
+│                               │  generate_example (LLM)  │     │
+│                               │       ↓                  │     │
+│                               │  prepare_display         │     │
+│                               │       ↓                  │     │
+│                               │  ⏸ interrupt             │     │
+│                               │       ↓ (feedback)       │     │
+│                               │  record_feedback         │     │
+│                               │       ↓                  │     │
+│                               │  record_history          │     │
+│                               │       ↓                  │     │
+│                               │  update_indicators       │     │
+│                               │       ↓                  │     │
+│                               │  calc_thresholds → END   │     │
+│                               └────────────┬─────────────┘     │
+│                                            │                    │
+│                               ┌────────────▼─────────────┐     │
+│                               │  Gemini 2.5 Flash (LLM)  │     │
+│                               │  via LangChain LCEL       │     │
+│                               └──────────────────────────┘     │
+│                                                                 │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │                   Persistent Storage                      │  │
+│  │  user_profiles/     learning_contexts/    data/           │  │
+│  │  {user_id}.json     {user_id}.json        feedback/       │  │
+│  │                                           example_history/ │  │
+│  └──────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🧠 Dynamic Learning Context
+## Personalization Layers
 
-ExaCraft's core innovation lies in its ability to adapt to five key aspects of learning context:
+### 1. Static User Profile
 
-### 1. 📉 Indicators of Struggle
+Configured once via the extension popup and synced to `user_profiles/{user_id}.json`.
 
-**Detection:**
-- Topic repetition patterns (≥3 requests for same topic)
-- "Regenerate" button clicks
-- Prolonged session on single concept
+| Field | Values |
+|---|---|
+| Name, Location | Free text |
+| Education level | `high_school` / `undergraduate` / `graduate` / `professional` |
+| Cultural background | Free text |
+| Profession | Free text |
+| Age range | `18-25` / `26-35` / `36-50` / `50+` |
+| Interests | List |
+| Complexity preference | `simple` / `medium` / `advanced` |
+| Learning style | `theoretical` / `practical` / `visual` |
 
-**Adaptation:**
-- Reduces example complexity
-- Uses more concrete, visual analogies
-- Builds confidence with encouraging tone
-- Connects to previously mastered topics
-- Breaks concepts into smaller steps
+### 2. Dynamic Learning Context
 
-### 2. 📈 Mastery Patterns
+Tracked in `learning_contexts/{user_id}.json`. Updates automatically on every interaction.
 
-**Detection:**
-- Quick progression through diverse topics (≥3 different topics in 5 interactions)
-- Short session duration per topic
-- Minimal regeneration requests
+**Struggle detection** (simplifies output):
+- Same topic requested ≥ 3 times, OR
+- ≥ 2 regeneration requests on the same topic within a session
 
-**Adaptation:**
-- Increases complexity and sophistication
-- Introduces nuanced, advanced concepts
-- Makes connections between multiple topics
-- Challenges appropriately with edge cases
+**Mastery detection** (increases complexity):
+- ≥ 3 unique topics in the last 5 interactions
 
-### 3. 📚 Topic Progression History
+**Data retention**: last 20 topics, last 10 sessions, entries older than 7 days are auto-purged.
 
-**Tracking:**
-- Timestamped interaction sequences
-- Learning velocity analysis
-- Cross-topic connections
+### 3. Collaborative Filtering
 
-**Usage:**
-- Builds directly on recent topics
-- Makes explicit connections to prior learning
-- Uses learning journey as foundation
+On each generation request, the system:
+1. Finds up to 5 similar users (minimum 30% similarity) using a weighted profile comparison across 8 dimensions:
 
-### 4. ⏱️ Session Boundaries
+   | Dimension | Weight |
+   |---|---|
+   | Education level | 20% |
+   | Profession | 15% |
+   | Complexity preference | 15% |
+   | Learning style | 15% |
+   | Cultural background | 10% |
+   | Location | 10% |
+   | Age range | 10% |
+   | Interests | 5% |
 
-**Management:**
-- Tracks session start/end times
-- Maintains session-specific metrics
-- Calculates duration and topic count
-- Persists across sessions (7-day retention)
+2. Retrieves up to 3 effective examples (≥ 50% effectiveness score) those users received for the same topic
+3. Injects them into the LLM prompt as inspiration — patterns are adapted, not copied
 
-### 5. 🎯 Learning Progression Signals
-
-**Multi-signal Analysis:**
-- Combines struggle + mastery indicators
-- Analyzes session patterns
-- Adjusts in real-time
-- Preserves cultural relevance throughout
+Effectiveness scores are computed from user feedback collected via the LangGraph workflow interrupt.
 
 ### Personalization Hierarchy
 
-The system enforces this adaptation order:
+The LLM applies factors in this strict order:
 
 ```
-1. Dynamic Learning Context (struggle/mastery/connections)
-         ↓
-2. Cultural Personalization (location, background)
-         ↓
-3. Professional Relevance (domain, expertise)
+1. Dynamic learning context  (struggle / mastery / recent topics)
+2. Collaborative insights     (effective patterns from similar users)
+3. Cultural personalization   (location, background)
+4. Professional relevance
 ```
-
-This ensures behavioral adaptation takes precedence over static preferences.
 
 ---
 
-## 🧪 Evaluation Framework
+## LangGraph Workflow
 
-ExaCraft includes a comprehensive **LLM-as-a-Judge** evaluation framework for assessing the quality and effectiveness of generated examples.
+The full feedback-loop pipeline runs as a **stateful LangGraph graph** with an interrupt for human-in-the-loop feedback collection.
 
-### Multi-Model Evaluation
+```
+START
+  │
+  ▼
+node_00_find_similar_users       Find top-5 similar users; fetch their effective
+  │                              examples for the topic (collaborative filtering)
+  ▼
+node_01_generate_example         LLM call with profile + learning context +
+  │                              CF examples (if any). Tracks feedback_influence.
+  ▼
+node_02_prepare_display          Format example and build display metadata
+  │
+  ▼
+node_03_interrupt_for_feedback   ⏸ PAUSE — returns example to caller with
+  │                              thread_id. Awaits difficulty/clarity/usefulness
+  │                              ratings (1–5) via /workflows/<thread_id>/resume
+  ▼  (resumed with ratings)
+node_04_record_feedback          Write ratings to FeedbackManager
+  │
+  ▼
+node_04b_record_example_history  Save example + effectiveness to ExampleHistory
+  │                              (feeds future collaborative filtering)
+  ▼
+node_05_update_indicators        If difficulty ≥ 4, record struggle signal on
+  │                              LearningContext
+  ▼
+node_06_calc_thresholds          Recalculate adaptive struggle/mastery thresholds
+  │                              from full feedback history
+  ▼
+node_07_store_thresholds         Mark workflow complete
+  │
+ END
+```
 
-The framework uses **multiple LLM judges** (GPT-4, Claude, Gemini) to evaluate examples across 5 key dimensions:
+**Thread management**: each workflow run gets a unique `thread_id`. State is checkpointed via `MemorySaver` by default (configurable to Postgres or SQLite via `CHECKPOINT_TYPE` env var).
 
-1. **Pedagogical Quality** - Clarity, correctness, teaching effectiveness
-2. **Personalization Fit** - Alignment with user profile (culture, profession)
-3. **Complexity Appropriateness** - Difficulty matches learner state
-4. **Topic Relevance** - How well the example addresses the concept
-5. **Engagement Potential** - Interestingness and relatability
+---
 
-### Quick Start
+## Quick Start
+
+### Prerequisites
+
+- Python 3.8+
+- Google Chrome
+- Gemini API key — [Get one here](https://ai.google.dev/)
+
+### Setup
 
 ```bash
-# Install evaluation dependencies
-pip install openai anthropic
+# 1. Clone
+git clone https://github.com/yourusername/ExaCraft.git
+cd ExaCraft
 
-# Configure API keys in .env
-echo "OPENAI_API_KEY=your_key" >> .env
-echo "ANTHROPIC_API_KEY=your_key" >> .env
+# 2. Install dependencies
+pip install -r requirements.txt
 
-# Run setup check
-python tests/evaluation/setup_check.py
+# 3. Configure API key
+echo "GEMINI_API_KEY=your_key_here" > .env
 
-# Run full evaluation
-python tests/evaluation/run_evaluation.py
-
-# Analyze results
-python tests/evaluation/analyze_results.py tests/evaluation/results/<file>.json
+# 4. Start the server
+python api_server.py
+# → http://localhost:8000
 ```
 
-### Features
+### Load the Chrome Extension
 
-- **7 Test Scenarios** - Covering beginners, advanced learners, edge cases
-- **Multi-Judge Scoring** - Reduces model-specific bias
-- **Adaptive vs Static Comparison** - Validates learning context benefits
-- **Judge Agreement Metrics** - Measures evaluation consistency
-- **Automated Analysis** - Generates insights and recommendations
+1. Go to `chrome://extensions/`
+2. Enable **Developer mode**
+3. Click **Load unpacked**
+4. Select the `D:\MTP` repository root directory
 
-### Example Usage
-
-```python
-from tests.evaluation import LLMJudge
-
-judge = LLMJudge(
-    openai_api_key="...",
-    anthropic_api_key="...",
-    gemini_api_key="..."
-)
-
-evaluation = judge.evaluate_example(
-    example="Your generated example...",
-    topic="recursion",
-    profile_summary=profile_summary,
-    context_summary=context_summary,
-    judges=["gpt4", "claude", "gemini"]
-)
-
-print(f"Overall score: {evaluation.overall_average():.2f}/5.0")
-```
-
-**See full documentation**: [`tests/evaluation/README.md`](tests/evaluation/README.md)
+> **Note**: The extension files (`manifest.json`, `background.js`, `content.js`, `popup.html`, `popup.js`) must be in the directory you load. Do not load a subdirectory.
 
 ---
 
-## 📁 Project Structure
+## Configuration
+
+All settings are in `config/settings.py` and overridable via environment variables.
+
+| Env Variable | Default | Description |
+|---|---|---|
+| `GEMINI_API_KEY` | — | Required. Gemini API key |
+| `OPENAI_API_KEY` | — | Optional. Enables OpenAI provider |
+| `DEFAULT_LLM_PROVIDER` | `gemini` | `gemini` or `openai` |
+| `GEMINI_MODEL` | `gemini-2.5-flash` | Gemini model name |
+| `OPENAI_MODEL` | `gpt-4o-mini` | OpenAI model name |
+| `LLM_TEMPERATURE` | `0.3` | Generation temperature |
+| `LLM_MAX_TOKENS` | `2048` | Max output tokens |
+| `API_PORT` | `8000` | Flask server port |
+| `CHECKPOINT_TYPE` | `memory` | `memory`, `postgres`, or `sqlite` |
+| `DATABASE_URL` | — | Required only for `postgres` checkpoint type |
+
+---
+
+## API Reference
+
+**Base URL**: `http://localhost:8000`
+
+All endpoints return JSON. Success: `{"success": true, ...}`. Error: `{"success": false, "error": "..."}`.
+
+### Generation
+
+#### `POST /generate-adaptive-example`
+Generate with dynamic learning context (static personalization + behavior signals).
+```json
+{
+  "topic": "recursion",
+  "user_id": "john_doe",
+  "user_profile": { "name": "...", "location": "...", "education": "...", "profession": "...", "complexity": "medium" }
+}
+```
+
+#### `POST /generate-example`
+Generate with static profile only (no learning context).
+```json
+{
+  "topic": "recursion",
+  "user_profile": { ... }
+}
+```
+
+#### `POST /generate-collaborative-example`
+Full generation with collaborative filtering + learning context.
+```json
+{
+  "topic": "recursion",
+  "user_id": "john_doe",
+  "user_profile": { ... },
+  "use_collaborative_filtering": true
+}
+```
+
+---
+
+### LangGraph Workflow (Feedback Loop)
+
+#### `POST /workflows/feedback/start`
+Start the full feedback-loop workflow. Returns example + `thread_id`.
+```json
+{
+  "user_id": "john_doe",
+  "topic": "recursion",
+  "mode": "adaptive",
+  "use_collaborative_filtering": true
+}
+```
+Response includes `thread_id`, `generated_example`, `feedback_influence`, `similar_users`, `collaborative_metadata`.
+
+#### `POST /workflows/<thread_id>/resume`
+Resume a paused workflow with user feedback ratings.
+```json
+{
+  "difficulty_rating": 3,
+  "clarity_rating": 4,
+  "usefulness_rating": 5
+}
+```
+
+#### `GET /workflows/<thread_id>/state`
+Get current state of a workflow thread.
+
+#### `DELETE /workflows/<thread_id>`
+Delete/cancel a workflow thread.
+
+#### `GET /workflows`
+List all active workflow threads.
+
+---
+
+### Learning Context
+
+#### `GET /get-learning-context?user_id=john_doe`
+Get full learning context (recent topics, struggle/mastery indicators, session history).
+
+#### `POST /start-learning-session`
+```json
+{ "user_id": "john_doe" }
+```
+
+#### `POST /end-learning-session`
+```json
+{ "user_id": "john_doe" }
+```
+
+#### `GET /get-session-status?user_id=john_doe`
+
+#### `POST /record-struggle-signal`
+```json
+{ "user_id": "john_doe", "topic": "recursion", "signal_type": "regeneration_requested" }
+```
+
+---
+
+### Collaborative Filtering
+
+#### `POST /find-similar-users`
+```json
+{ "user_id": "john_doe", "top_k": 5, "min_similarity": 0.3 }
+```
+
+#### `GET /example-history/effective-examples?user_id=john_doe&topic=recursion`
+
+#### `POST /example-history/record-feedback`
+```json
+{ "user_id": "john_doe", "example_id": "ex_abc123", "accepted": true, "regeneration_requested": false }
+```
+
+#### `GET /example-history/statistics?user_id=john_doe`
+
+---
+
+### Profile & Utilities
+
+#### `POST /sync-profile`
+Sync extension profile (flat format) to server filesystem.
+```json
+{ "profile": { "name": "...", "user_id": "...", ... } }
+```
+
+#### `POST /validate-profile`
+```json
+{ "profile": { ... } }
+```
+
+#### `GET /health`
+Server health check and endpoint listing.
+
+#### `GET /api-info`
+Provider info, model config, enabled phases.
+
+#### `GET /test-example`
+Quick test generation (GET, no body required).
+
+---
+
+## Project Structure
 
 ```
 ExaCraft/
-├── 📂 core/
-│   ├── __init__.py
-│   └── example_generator.py      # Core business logic
-│       ├── ExampleGenerator       # AI generation class
-│       ├── UserProfile            # Profile management
-│       └── LearningContext        # Behavior tracking
 │
-├── 📂 tests/evaluation/           # LLM-as-Judge evaluation framework
-│   ├── llm_judge.py               # Multi-model evaluation engine
-│   ├── test_scenarios.py          # Test case definitions
-│   ├── run_evaluation.py          # Evaluation orchestrator
-│   ├── analyze_results.py         # Results analysis tools
-│   ├── example_usage.py           # Usage examples
-│   ├── setup_check.py             # Setup verification
-│   ├── README.md                  # Evaluation docs
-│   └── results/                   # Evaluation outputs
+├── api_server.py                  # Flask REST API — all endpoints
+├── manifest.json                  # Chrome extension manifest (V3)
+├── background.js                  # Extension service worker
+├── content.js                     # Extension content script (result overlay)
+├── popup.html / popup.js          # Extension popup (profile configuration)
 │
-├── 📂 learning_contexts/          # Dynamic behavior storage
-│   └── {user_id}.json             # Per-user context files
+├── core/
+│   ├── example_generator.py       # ExampleGenerator — LLM chain + all generation methods
+│   ├── user_profile.py            # UserProfile — static profile load/save/summary
+│   ├── learning_context.py        # LearningContext — session tracking, struggle/mastery detection
+│   ├── feedback_manager.py        # FeedbackManager — ratings storage + adaptive thresholds
+│   ├── user_similarity.py         # UserSimilarity — weighted profile similarity for CF
+│   ├── example_history.py         # ExampleHistory — example records + effectiveness scoring
+│   ├── llm_provider.py            # LLMProviderFactory — Gemini / OpenAI abstraction
+│   ├── workflow_graphs.py         # LangGraph graph builders
+│   ├── workflow_nodes.py          # LangGraph node implementations
+│   ├── workflow_manager.py        # WorkflowManager — thread lifecycle, start/resume
+│   ├── workflow_state.py          # TypedDict state schemas
+│   ├── phase2/                    # Reserved for Phase 2 features
+│   ├── phase3/                    # Reserved for Phase 3 features
+│   └── utils/
+│       └── validators.py          # Request validation helpers
 │
-├── 📂 user_profiles/              # Static profile storage
-│   └── {user_id}.json             # Per-user profile files
+├── config/
+│   └── settings.py                # All configuration + env variable loading
 │
-├── 📂 DOCS/                       # Documentation files
+├── data/
+│   ├── feedback/                  # Per-user feedback history
+│   ├── example_history/           # Per-user generated example records
+│   └── similarity_cache.json      # Cached similarity scores
 │
-├── 🐍 api_server.py               # Flask REST API
-├── 🐍 setup.py                    # Package setup
+├── user_profiles/                 # Per-user static profile JSON files
+├── learning_contexts/             # Per-user dynamic learning context JSON files
+├── logs/                          # Server logs
 │
-├── 🔧 manifest.json               # Chrome extension manifest
-├── 📜 background.js               # Extension service worker
-├── 📜 content.js                  # Extension content script
-├── 🎨 popup.html                  # Extension popup UI
-├── 📜 popup.js                    # Popup logic
-│
-├── 📋 requirements.txt            # Python dependencies
-├── 🔒 .env                        # Environment variables (gitignored)
-├── 📖 README.md                   # This file
-├── 📖 CLAUDE.md                   # Claude Code guidance
-└── 📄 LICENSE                     # MIT License
+├── requirements.txt               # Python dependencies
+├── .env                           # API keys (gitignored)
+├── CLAUDE.md                      # Codebase guidance for Claude Code
+└── README.md                      # This file
 ```
 
-### Key Files
-
-| File | Purpose |
-|------|---------|
-| `core/example_generator.py` | Main business logic with ExampleGenerator, UserProfile, and LearningContext classes |
-| `api_server.py` | Flask REST API with 11 endpoints for generation and tracking |
-| `background.js` | Extension service worker handling context menu and API calls |
-| `content.js` | Content script for displaying results on webpages |
-| `popup.html/js` | Extension popup for profile configuration |
-
 ---
 
-## 🔬 Research Contributions
+## Publication
 
-ExaCraft makes the following key contributions to educational AI research and practice:
-
-### 1. Hybrid Personalization Framework
-First system to combine user-configured static profiles with dynamic behavioral adaptation in a unified framework, demonstrating superior personalization over static-only approaches.
-
-### 2. Seamless Workflow Integration
-Novel browser extension architecture providing zero-disruption example generation integrated directly into natural web browsing workflows with cross-session context persistence.
-
-### 3. Cross-session Personalization Continuity
-Maintains both static preferences and dynamic adaptation patterns across multiple browsing sessions with 7-day context retention and automatic data expiration.
-
-### 4. Behavioral Analytics Model
-Multi-signal analysis system detecting struggle and mastery patterns, dynamically adjusting example complexity while preserving cultural and professional relevance through hierarchical personalization.
-
-### Research Impact
-
-- **Domain**: Educational AI, Personalized Learning, Human-Computer Interaction
-- **Novel Approach**: Real-time behavioral adaptation combined with static personalization
-- **Practical Application**: Production-ready Chrome extension with API backend
-- **Evaluation**: Demonstrated at CODS-2025 Demo Track
-
----
-
-## 📄 Publication
-
-### Conference Presentation
-
-**Title**: "ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples"
+**Title**: ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples
 
 **Authors**: Akaash Chatterjee, Suman Kundu
 
 **Affiliation**: Indian Institute of Technology Jodhpur
 
-**Conference**: ACM India Joint International Conference on Data Science and Management of Data (CODS-COMAD 2025) - Demo Track
+**Conference**: ACM India Joint International Conference on Data Science and Management of Data (CODS-COMAD 2025) — Demo Track
 
 **Video Demo**: [https://youtu.be/w1P3n8qEOdg](https://youtu.be/w1P3n8qEOdg)
 
 ### Abstract
 
-ExaCraft presents a novel approach to generating personalized educational examples through hybrid personalization that combines static user profiles with dynamic learning context adaptation. The system implements a three-component architecture consisting of a Chrome browser extension, Flask API server, and learning context engine. Real-time behavioral analytics detect struggle indicators and mastery patterns, automatically adjusting example complexity while maintaining cultural and professional relevance. Cross-session continuity enables long-term learning progression tracking with persistent context retention. The system demonstrates zero-disruption integration into natural web browsing workflows, making personalized learning accessible without workflow interruption.
+ExaCraft presents a novel approach to generating personalized educational examples through a hybrid personalization framework combining static user profiles with dynamic learning context adaptation and collaborative filtering. The system implements a three-component architecture consisting of a Chrome browser extension, Flask API server, and a stateful LangGraph workflow with human-in-the-loop feedback collection. Real-time behavioral analytics detect struggle indicators and mastery patterns, automatically adjusting example complexity while maintaining cultural and professional relevance. Collaborative filtering leverages example effectiveness data from similar users to further improve generation quality. Cross-session continuity enables long-term learning progression tracking with persistent context retention.
 
 ---
 
-## 🤝 Contributing
+## License
 
-We welcome contributions to ExaCraft! Here's how you can help:
-
-### Reporting Issues
-
-Found a bug or have a feature request? Please open an issue on GitHub:
-- Use the issue templates provided
-- Include detailed reproduction steps for bugs
-- Provide context for feature requests
-
-### Development Workflow
-
-1. **Fork the repository**
-   ```bash
-   git clone https://github.com/yourusername/ExaCraft.git
-   cd ExaCraft
-   ```
-
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-3. **Make your changes**
-   - Follow existing code style
-   - Add tests if applicable
-   - Update documentation
-
-4. **Test your changes**
-   ```bash
-   python api_server.py  # Test API server
-   # Test extension manually in Chrome
-   ```
-
-5. **Commit and push**
-   ```bash
-   git add .
-   git commit -m "Add: your feature description"
-   git push origin feature/your-feature-name
-   ```
-
-6. **Open a Pull Request**
-   - Provide clear description of changes
-   - Reference any related issues
-   - Wait for review
-
-### Areas for Contribution
-
-- 🌐 **Browser Support**: Firefox, Safari extension ports
-- 🧪 **Testing**: Unit tests, integration tests
-- 📚 **Documentation**: Tutorials, API docs, use cases
-- 🎨 **UI/UX**: Extension popup improvements, overlay design
-- 🤖 **AI Models**: Support for additional LLM providers
-- 🌍 **Internationalization**: Multi-language support
-- 🔒 **Security**: Authentication, API key management
-- 📊 **Analytics**: Advanced learning metrics, visualizations
+MIT License — Copyright (c) 2025 Akaash Chatterjee, Suman Kundu
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 Akaash Chatterjee, Suman Kundu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-```
-
----
-
-## 📖 Citation
-
-If you use ExaCraft in your research, please cite:
+## Citation
 
 ```bibtex
 @inproceedings{chatterjee2025exacraft,
@@ -765,55 +485,15 @@ If you use ExaCraft in your research, please cite:
 
 ---
 
-## 👥 Authors
+## Authors
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/yourusername">
-        <img src="https://github.com/yourusername.png" width="100px;" alt="Akaash Chatterjee"/><br />
-        <sub><b>Akaash Chatterjee</b></sub>
-      </a><br />
-      <sub>Indian Institute of Technology Jodhpur</sub>
-    </td>
-    <td align="center">
-      <a href="https://github.com/collaborator">
-        <img src="https://github.com/collaborator.png" width="100px;" alt="Suman Kundu"/><br />
-        <sub><b>Suman Kundu</b></sub>
-      </a><br />
-      <sub>Indian Institute of Technology Jodhpur</sub>
-    </td>
-  </tr>
-</table>
+**Akaash Chatterjee** — Indian Institute of Technology Jodhpur
 
----
-
-## 🙏 Acknowledgments
-
-- **Google Gemini AI**: For providing the powerful language model API
-- **LangChain**: For the excellent LLM framework
-- **CODS-COMAD 2025**: For accepting our demo submission
-- **IIT Jodhpur**: For institutional support
-
----
-
-## 📞 Contact
-
-- **Email**: akaash.chatterjee@example.com
-- **GitHub Issues**: [Report a bug or request a feature](https://github.com/yourusername/ExaCraft/issues)
-- **Research Lab**: [IIT Jodhpur CS Department](https://www.iitj.ac.in)
-
----
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/ExaCraft&type=Date)](https://star-history.com/#yourusername/ExaCraft&Date)
+**Suman Kundu** — Indian Institute of Technology Jodhpur
 
 ---
 
 <div align="center">
-
-**Made with ❤️ for personalized learning**
 
 [⬆ Back to Top](#exacraft-dynamic-learning-context-adaptation-for-personalized-educational-examples)
 
