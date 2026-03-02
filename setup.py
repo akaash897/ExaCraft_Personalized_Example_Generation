@@ -7,10 +7,10 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
-    name="dynamic-learning-context-adapter",
+    name="exacraft",
     version="1.0.0",
     author="Research Team",
-    description="Dynamic Learning Context Adaptation for Personalized Example Generation",
+    description="Personalized educational example generation via hybrid personalization (static profile + dynamic learning context + collaborative filtering)",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
@@ -21,18 +21,23 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Topic :: Education",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=requirements,
+    extras_require={
+        "openai": ["openai", "langchain-openai"],
+        "postgres": ["langgraph[postgres]"],
+        "sqlite": ["langgraph[sqlite]"],
+    },
     entry_points={
         "console_scripts": [
-            "example-generator=cli_app:main",
+            "exacraft=api_server:app",
         ],
     },
 )

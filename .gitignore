@@ -6,3 +6,6 @@ user_profiles
 learning_contexts
 __pycache__
 .claude
+learning_contexts
+data
+CHANGES.md

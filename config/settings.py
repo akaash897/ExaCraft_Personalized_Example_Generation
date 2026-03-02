@@ -28,14 +28,6 @@ DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://user:pass@localhost/exacr
 CHECKPOINT_TTL_HOURS = int(os.getenv('CHECKPOINT_TTL_HOURS', '24'))
 CHECKPOINT_CLEANUP_INTERVAL_HOURS = 6
 
-# Workflow Configuration
-ENABLED_PHASES = {
-    'phase1_feedback': True,
-    'phase2_hallucination': os.getenv('ENABLE_PHASE2', 'false').lower() == 'true',
-    'phase3_creativity': os.getenv('ENABLE_PHASE3', 'false').lower() == 'true',
-    'phase3_pedagogy': os.getenv('ENABLE_PHASE3', 'false').lower() == 'true',
-}
-
 # Max concurrent workflows per user
 MAX_WORKFLOWS_PER_USER = 5
 

@@ -27,6 +27,15 @@
       "usefulness_rating": 2,
       "example_text": "In the bustling streets of Benares, Akaash, a high school student, finds himself intrigued by how local farmers use machine learning to predict crop yields. He visits a nearby agricultural research center where a friendly scientist explains how they collect data from the fields and use algorithms to analyze weather patterns, soil quality, and historical harvests. Inspired, Akaash imagines creating a simple program that could help his family optimize their own small vegetable garden, ensuring they plant the right crops at the right time for the best harvest.",
       "timestamp": "2026-03-01T22:24:57.972412"
+    },
+    {
+      "example_id": "ex_2d8c63ab4e4e",
+      "topic": "monocultures",
+      "difficulty_rating": 2,
+      "clarity_rating": 4,
+      "usefulness_rating": 2,
+      "example_text": "In the lush fields surrounding Benares, a farmer named Ramesh decided to plant only one type of crop, wheat, across his entire land, believing it would maximize his yield. However, as the season progressed, he noticed that pests began to thrive, and the soil quality deteriorated, leading to a significant drop in his harvest. This scenario illustrates the challenges of monocultures, where relying on a single crop can create vulnerabilities in agriculture, much like how a machine learning model trained on limited data can struggle to generalize effectively.",
+      "timestamp": "2026-03-01T22:36:01.972382"
     }
   ],
   "adaptive_thresholds": {
