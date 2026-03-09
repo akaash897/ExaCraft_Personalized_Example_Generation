@@ -6,7 +6,7 @@ Contains the main business logic for generating personalized examples.
 import os
 import json
 from datetime import datetime, timedelta
-from typing import Dict, Optional, List, Tuple
+from typing import Dict, Optional, List
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
@@ -15,8 +15,6 @@ from core.llm_provider import LLMProviderFactory
 # Import from new module locations
 from core.user_profile import UserProfile
 from core.learning_context import LearningContext
-from core.user_similarity import UserSimilarity
-from core.example_history import ExampleHistory
 
 # Load environment variables
 load_dotenv()
@@ -172,219 +170,6 @@ class ExampleGenerator:
         learning_context = LearningContext(user_id=user_id) if user_id else None
         return self.generate_example(topic, user_profile, learning_context)
 
-    def generate_collaborative_example(self, topic: str, profile_data: Dict = None, user_id: str = None,
-                                      use_collaborative_filtering: bool = True,
-                                      record_history: bool = True) -> Dict:
-        """
-        Generate example with collaborative filtering from similar users
-
-        Args:
-            topic: The topic to generate an example for
-            profile_data: Dictionary containing user profile information
-            user_id: User identifier for learning context tracking
-            use_collaborative_filtering: Whether to use similar users' examples
-            record_history: Whether to record this example in history
-
-        Returns:
-            Dictionary with:
-                - example: Generated example text
-                - similar_users: List of similar users used (if collaborative filtering enabled)
-                - source_examples: Examples from similar users that influenced generation
-                - example_id: ID for tracking feedback
-                - metadata: Additional generation metadata
-        """
-        user_profile = UserProfile(profile_data=profile_data or {})
-        learning_context = LearningContext(user_id=user_id) if user_id else None
-
-        similar_users = []
-        source_examples = []
-        collaborative_context = ""
-
-        # Step 1: Find similar users if collaborative filtering is enabled
-        if use_collaborative_filtering and user_id:
-            similarity_engine = UserSimilarity()
-            all_profiles = similarity_engine.get_all_user_profiles()
-
-            # Find top 5 similar users with minimum 30% similarity
-            similar_users = similarity_engine.find_similar_users(
-                target_user_id=user_id,
-                target_profile=profile_data or {},
-                all_profiles=all_profiles,
-                top_k=5,
-                min_similarity=0.3
-            )
-
-            # Step 2: Get effective examples from similar users for this topic
-            if similar_users:
-                source_examples = ExampleHistory.get_similar_users_effective_examples(
-                    similar_users=similar_users,
-                    topic=topic,
-                    min_score=0.5,  # Only examples with 50%+ effectiveness
-                    limit=3
-                )
-
-                # Step 3: Build collaborative context for prompt
-                if source_examples:
-                    collaborative_context = self._build_collaborative_context(source_examples, similar_users)
-
-        # Step 4: Generate example with collaborative context
-        example_text = self._generate_with_collaborative_context(
-            topic=topic,
-            user_profile=user_profile,
-            learning_context=learning_context,
-            collaborative_context=collaborative_context
-        )
-
-        # Step 5: Record in history if enabled
-        example_id = None
-        if record_history and user_id:
-            history = ExampleHistory(user_id=user_id)
-            example_id = history.record_example(
-                topic=topic,
-                example_text=example_text,
-                profile_snapshot=profile_data,
-                learning_context_snapshot=learning_context.context_data if learning_context else {},
-                similar_users=similar_users
-            )
-
-        return {
-            "example": example_text,
-            "example_id": example_id,
-            "similar_users": [{"user_id": uid, "similarity": score} for uid, score in similar_users],
-            "source_examples": [
-                {
-                    "text": ex.get("example_text"),
-                    "effectiveness": ex.get("effectiveness_score"),
-                    "source_user": ex.get("source_user_id")
-                }
-                for ex in source_examples
-            ],
-            "metadata": {
-                "collaborative_filtering_used": len(source_examples) > 0,
-                "num_similar_users": len(similar_users),
-                "num_source_examples": len(source_examples)
-            }
-        }
-
-    def _build_collaborative_context(self, source_examples: List[Dict],
-                                    similar_users: List[Tuple[str, float]]) -> str:
-        """Build collaborative filtering context for the prompt"""
-        if not source_examples:
-            return ""
-
-        context_parts = [
-            "\nCOLLABORATIVE INSIGHTS FROM SIMILAR USERS:",
-            f"Found {len(source_examples)} successful examples from {len(similar_users)} similar users.\n"
-        ]
-
-        for i, ex in enumerate(source_examples, 1):
-            effectiveness = ex.get("effectiveness_score", 0)
-            similarity = ex.get("source_user_similarity", 0)
-            example_text = ex.get("example_text", "")
-
-            context_parts.append(
-                f"Example {i} (User similarity: {similarity:.2f}, "
-                f"Effectiveness: {effectiveness:.2f}):\n{example_text}\n"
-            )
-
-        context_parts.append(
-            "\nUSE THESE EXAMPLES AS INSPIRATION:"
-            "\n- Identify patterns in what made these examples effective"
-            "\n- Adapt the successful elements to fit the current user's profile"
-            "\n- Maintain similar structure/style while personalizing content"
-            "\n- DO NOT copy verbatim - create a fresh example inspired by these patterns\n"
-        )
-
-        return "\n".join(context_parts)
-
-    def _generate_with_collaborative_context(self, topic: str, user_profile: UserProfile,
-                                            learning_context: LearningContext = None,
-                                            collaborative_context: str = "") -> str:
-        """Generate example with collaborative filtering context"""
-        try:
-            profile_summary = user_profile.get_profile_summary()
-
-            # Get learning context summary
-            if learning_context:
-                context_summary = learning_context.get_learning_state_summary()
-                # Record this topic interaction
-                learning_context.add_topic_interaction(topic)
-            else:
-                context_summary = "First time learning session - no previous learning context available"
-
-            # Create enhanced prompt template with collaborative context
-            if collaborative_context:
-                enhanced_template = PromptTemplate(
-                    input_variables=["topic", "user_profile", "learning_context", "collaborative_context"],
-                    template="""
-                    You are an adaptive AI tutor that personalizes examples based on static user profile,
-                    dynamic learning context, AND successful examples from similar learners.
-
-                    STATIC USER PROFILE:
-                    {user_profile}
-
-                    DYNAMIC LEARNING CONTEXT:
-                    {learning_context}
-
-                    {collaborative_context}
-
-                    TARGET TOPIC: {topic}
-
-                    DYNAMIC ADAPTATION RULES:
-
-                    If learning context shows STRUGGLE INDICATORS (repeated requests, stuck on topics):
-                    - Simplify complexity regardless of profile education level
-                    - Use more concrete, visual analogies
-                    - Build confidence with encouraging tone
-                    - Connect to topics they've already mastered
-                    - Break down complex concepts into smaller steps
-
-                    If learning context shows MASTERY INDICATORS (quick progression, diverse topics):
-                    - Increase complexity and introduce nuanced concepts
-                    - Make connections between multiple topics
-                    - Use their learning momentum to explore advanced applications
-                    - Challenge them appropriately with sophisticated examples
-
-                    COLLABORATIVE FILTERING RULES:
-                    - Draw inspiration from successful patterns in similar users' examples
-                    - Adapt the effective elements to THIS user's specific profile
-                    - Maintain proven structures while personalizing the content
-                    - Create a FRESH example - do not copy verbatim
-
-                    PERSONALIZATION HIERARCHY:
-                    1. First adapt for learning context (struggle/mastery/connections)
-                    2. Then leverage collaborative insights from similar users
-                    3. Then apply cultural personalization (location, background)
-                    4. Finally adjust for professional relevance
-
-                    EXAMPLE GENERATION:
-                    Generate a contextually adaptive example as a vivid scenario in 2-4 sentences.
-                    Use specific characters, locations, and situations that match their profile and learning state.
-
-                    Output ONLY the example scenario - no explanations or analysis.
-                    """
-                )
-
-                enhanced_chain = enhanced_template | self.llm
-                result = enhanced_chain.invoke({
-                    "topic": topic,
-                    "user_profile": profile_summary,
-                    "learning_context": context_summary,
-                    "collaborative_context": collaborative_context
-                })
-            else:
-                # No collaborative context, use standard generation
-                result = self.chain.invoke({
-                    "topic": topic,
-                    "user_profile": profile_summary,
-                    "learning_context": context_summary
-                })
-
-            return result.content
-        except Exception as e:
-            return f"Error generating example: {str(e)}"
-
-
 class ExampleGeneratorConfig:
     """Configuration settings for the example generator"""
     
@@ -457,5 +242,3 @@ def validate_profile_data(profile_data: Dict) -> bool:
         return False
 
 
-# For backward compatibility
-PersonalizedExampleGenerator = ExampleGenerator

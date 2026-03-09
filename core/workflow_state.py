@@ -3,87 +3,74 @@ Workflow State Schemas
 TypedDict definitions for LangGraph workflow states.
 """
 
-from typing import TypedDict, Optional, Dict, List
+from typing import TypedDict, Optional, List, Dict, Any
 
 
-class FeedbackGenerationState(TypedDict, total=False):
-    """State for feedback generation workflow"""
+class PersonalizedGenerationState(TypedDict, total=False):
+    """State for the Primary Agent: Adaptive Example Generation"""
 
-    # Identifiers
+    # Input
     user_id: str
+    topic: str
     thread_id: str
-    example_id: str
+    provider: Optional[str]           # "gemini" | "openai" — flows through all LLM calls
 
-    # Request parameters
-    topic: str
-    mode: str  # "simple" or "adaptive"
-    provider: Optional[str]  # LLM provider ("gemini" or "openai")
-    use_collaborative_filtering: bool  # Enable collaborative filtering
+    # Profile
+    user_profile: Optional[Dict[str, Any]]
+    profile_summary: Optional[str]
 
-    # Generation phase outputs
-    user_profile_summary: Optional[str]
-    learning_context_summary: Optional[str]
+    # Context (from node_build_context — synthesized from patterns + insights)
+    context_instruction: Optional[str]
+
+    # Generation
     generated_example: Optional[str]
-    confidence_score: Optional[float]
+    example_metadata: Optional[Dict[str, Any]]
 
-    # Collaborative filtering outputs
-    user_profile_data: Optional[Dict]  # Full profile for similarity matching
-    similar_users: Optional[List[Dict]]  # [{user_id, similarity_score}]
-    source_examples: Optional[List[Dict]]  # Examples from similar users
-    collaborative_metadata: Optional[Dict]  # CF metadata
+    # Save
+    example_id: Optional[str]
+    example_record: Optional[Dict[str, Any]]
 
-    # Display phase outputs
-    formatted_example: Optional[str]
-    display_metadata: Optional[Dict]
+    # Display
+    formatted_example: Optional[Dict[str, Any]]
+    display_metadata: Optional[Dict[str, Any]]
 
-    # Feedback phase inputs (from interrupt resume)
-    difficulty_rating: Optional[int]  # 1-5
-    clarity_rating: Optional[int]      # 1-5
-    usefulness_rating: Optional[int]   # 1-5
+    # User feedback (post-interrupt) — natural language only
+    user_feedback_text: Optional[str]
 
-    # Processing phase outputs
-    feedback_recorded: bool
-    example_history_recorded: bool  # Track if added to collaborative history
-    indicators_updated: bool
-    thresholds_adjusted: bool
-    adaptive_thresholds: Optional[Dict]  # Calculated thresholds from node_06
+    # Adaptive Response Agent decisions
+    regeneration_requested: Optional[bool]
+    regeneration_instruction: Optional[str]   # cleared after use in node_generate
 
-    # Feedback influence data
-    feedback_influence: Optional[Dict]  # Detailed influence tracking
+    # Loop guard — max 3 regeneration cycles per thread
+    loop_count: Optional[int]
 
-    # Metadata
-    workflow_started_at: str
+    # Processing
+    feedback_processed: bool
+
+    # Error tracking
+    error_occurred: bool
+    error_message: Optional[str]
+
+    # Timestamps
+    workflow_started_at: Optional[str]
     workflow_completed_at: Optional[str]
-    error_occurred: bool
-    error_message: Optional[str]
-
-    # Tracking
-    node_execution_times: Dict[str, float]  # {node_name: duration_ms}
-    checkpoints_created: List[str]   # [checkpoint_ids]
 
 
-class SimpleGenerationState(TypedDict, total=False):
-    """Minimal state for backward compatible simple generation"""
-    
+class FeedbackProcessingState(TypedDict, total=False):
+    """State for Adaptive Response Agent (formerly Subagent B)"""
+
     user_id: str
+    example_id: str
     topic: str
-    generated_example: Optional[str]
-    error_occurred: bool
-    error_message: Optional[str]
+    example_text: str
+    user_feedback_text: str
+    user_profile: Optional[Dict[str, Any]]
+    pattern_history: Optional[Dict[str, Any]]
 
-
-class ExtendedGenerationState(FeedbackGenerationState, total=False):
-    """Extended state for Phase 2+ features (future)"""
-    
-    # Phase 2 fields
-    hallucination_detected: Optional[bool]
-    hallucination_confidence: Optional[float]
-    hallucination_details: Optional[Dict]
-    
-    # Phase 3 fields
-    creativity_score: Optional[float]
-    learning_stage: Optional[str]  # "novice", "developing", "proficient", "mastery"
-    pedagogical_template_used: Optional[str]
-    
-    # Additional
-    processing_trace: List[Dict]  # {node, status, output}
+    # Agent outputs
+    regeneration_requested: bool
+    regeneration_instruction: str
+    agent_decisions: Optional[List[str]]       # log of which tools were called
+    subject_tag: Optional[str]
+    feedback_recorded: bool
+    indexes_updated: bool

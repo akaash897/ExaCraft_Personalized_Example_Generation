@@ -1,25 +1,11 @@
-// Popup script for AI Example Generator Extension
+// Popup script for ExaCraft AI Example Generator Extension
 
 document.addEventListener('DOMContentLoaded', function() {
   loadUserProfile();
-  loadSessionState();
-  loadFeatureFlags();
   loadProviderSettings();
 
-  // Save profile button
   document.getElementById('saveProfile').addEventListener('click', saveUserProfile);
-
-  // Learning session buttons
-  document.getElementById('beginSession').addEventListener('click', beginLearningSession);
-  document.getElementById('endSession').addEventListener('click', endLearningSession);
-
-  // Test API connection button
   document.getElementById('testConnection').addEventListener('click', testApiConnection);
-
-  // Feedback workflow toggle
-  document.getElementById('feedbackWorkflowEnabled').addEventListener('change', toggleFeedbackWorkflow);
-
-  // LLM Provider selector
   document.getElementById('llmProvider').addEventListener('change', saveProviderSelection);
 });
 
@@ -27,7 +13,6 @@ function loadUserProfile() {
   chrome.runtime.sendMessage({ action: "getUserProfile" }, (response) => {
     if (response.profile) {
       const profile = response.profile;
-      
       document.getElementById('name').value = profile.name || '';
       document.getElementById('location').value = profile.location || '';
       document.getElementById('education').value = profile.education || '';
@@ -46,45 +31,37 @@ function saveUserProfile() {
     complexity: document.getElementById('complexity').value,
     updated_at: new Date().toISOString()
   };
-  
+
   chrome.runtime.sendMessage(
     { action: "saveUserProfile", profile: profile },
     (response) => {
       const statusDiv = document.getElementById('status');
       statusDiv.style.display = 'block';
-      
+
       if (response.success) {
         statusDiv.textContent = '✅ Profile saved successfully!';
         statusDiv.className = 'status success';
-        
-        // Also sync to file system for CLI access
         syncProfileToFileSystem(profile, statusDiv);
       } else {
         statusDiv.textContent = '❌ Failed to save profile';
         statusDiv.className = 'status error';
       }
-      
-      // Hide status after 3 seconds
-      setTimeout(() => {
-        statusDiv.style.display = 'none';
-      }, 3000);
+
+      setTimeout(() => { statusDiv.style.display = 'none'; }, 3000);
     }
   );
 }
 
 function syncProfileToFileSystem(profile, statusDiv) {
-  // Call the sync API endpoint
   fetch('http://localhost:8000/sync-profile', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ profile: profile })
   })
   .then(response => response.json())
   .then(data => {
     if (data.success) {
-      statusDiv.textContent = '✅ Profile saved & synced to CLI!';
+      statusDiv.textContent = '✅ Profile saved & synced!';
       statusDiv.className = 'status success';
     } else {
       console.warn('Sync failed:', data.error);
@@ -94,83 +71,6 @@ function syncProfileToFileSystem(profile, statusDiv) {
   })
   .catch(error => {
     console.warn('Sync API unavailable:', error);
-    // Don't change the success message - sync failure shouldn't affect main save
-  });
-}
-
-function loadSessionState() {
-  chrome.storage.local.get("learningSessionActive", (result) => {
-    const isActive = result.learningSessionActive || false;
-    updateSessionUI(isActive);
-  });
-}
-
-function beginLearningSession() {
-  chrome.storage.local.set({ learningSessionActive: true }, () => {
-    updateSessionUI(true);
-    showSessionStatus('Learning session started! Examples will now adapt to your progress.', 'success');
-    
-    // Notify background script with API call
-    chrome.runtime.sendMessage({ action: "beginLearningSession" });
-  });
-}
-
-function endLearningSession() {
-  chrome.storage.local.set({ learningSessionActive: false }, () => {
-    updateSessionUI(false);
-    showSessionStatus('Learning session ended.', 'success');
-    
-    // Notify background script with API call
-    chrome.runtime.sendMessage({ action: "endLearningSession" });
-  });
-}
-
-function updateSessionUI(isActive) {
-  const beginBtn = document.getElementById('beginSession');
-  const endBtn = document.getElementById('endSession');
-  
-  if (isActive) {
-    beginBtn.style.display = 'none';
-    endBtn.style.display = 'block';
-    endBtn.textContent = '🛑 End Session';
-  } else {
-    beginBtn.style.display = 'block';
-    endBtn.style.display = 'none';
-  }
-}
-
-function showSessionStatus(message, type) {
-  const statusDiv = document.getElementById('sessionStatus');
-  statusDiv.style.display = 'block';
-  statusDiv.textContent = message;
-  statusDiv.className = `status ${type}`;
-  
-  setTimeout(() => {
-    statusDiv.style.display = 'none';
-  }, 3000);
-}
-
-function loadFeatureFlags() {
-  chrome.storage.local.get("feedbackWorkflowEnabled", (result) => {
-    const isEnabled = result.feedbackWorkflowEnabled || false;
-    document.getElementById('feedbackWorkflowEnabled').checked = isEnabled;
-  });
-}
-
-function toggleFeedbackWorkflow() {
-  const isEnabled = document.getElementById('feedbackWorkflowEnabled').checked;
-  const statusDiv = document.getElementById('featureStatus');
-
-  chrome.storage.local.set({ feedbackWorkflowEnabled: isEnabled }, () => {
-    statusDiv.style.display = 'block';
-    statusDiv.textContent = isEnabled ?
-      '✅ Feedback workflow enabled! You\'ll be asked to rate examples.' :
-      '⚠️ Feedback workflow disabled. Using standard mode.';
-    statusDiv.className = `status ${isEnabled ? 'success' : 'info'}`;
-
-    setTimeout(() => {
-      statusDiv.style.display = 'none';
-    }, 3000);
   });
 }
 
@@ -187,14 +87,11 @@ function saveProviderSelection() {
 
   chrome.storage.local.set({ llmProvider: provider }, () => {
     statusDiv.style.display = 'block';
-    statusDiv.textContent = provider === 'openai' ?
-      '✅ Using OpenAI (GPT-4o Mini)' :
-      '✅ Using Google Gemini (Default)';
+    statusDiv.textContent = provider === 'openai'
+      ? '✅ Using OpenAI (GPT-4o Mini)'
+      : '✅ Using Google Gemini (Default)';
     statusDiv.className = 'status success';
-
-    setTimeout(() => {
-      statusDiv.style.display = 'none';
-    }, 3000);
+    setTimeout(() => { statusDiv.style.display = 'none'; }, 3000);
   });
 }
 
@@ -208,12 +105,9 @@ function testApiConnection() {
   statusDiv.textContent = 'Connecting to API...';
   statusDiv.className = 'status';
 
-  // Test the API with a simple request
   fetch('http://localhost:8000/health', {
     method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    }
+    headers: { 'Content-Type': 'application/json' }
   })
   .then(response => {
     if (response.ok) {
@@ -223,17 +117,13 @@ function testApiConnection() {
       throw new Error(`HTTP ${response.status}`);
     }
   })
-  .catch(error => {
+  .catch(() => {
     statusDiv.textContent = '❌ API connection failed. Make sure your Python server is running on localhost:8000';
     statusDiv.className = 'status error';
   })
   .finally(() => {
     button.disabled = false;
     button.textContent = '🔌 Test API Connection';
-
-    // Hide status after 5 seconds
-    setTimeout(() => {
-      statusDiv.style.display = 'none';
-    }, 5000);
+    setTimeout(() => { statusDiv.style.display = 'none'; }, 5000);
   });
 }

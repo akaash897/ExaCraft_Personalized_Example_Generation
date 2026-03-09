@@ -7,7 +7,7 @@ import os
 import json
 import uuid
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 
 
 class ExampleHistory:
@@ -73,7 +73,7 @@ class ExampleHistory:
         return history
 
     def record_example(self, topic: str, example_text: str, profile_snapshot: Dict = None,
-                      learning_context_snapshot: Dict = None, similar_users: List[Tuple[str, float]] = None) -> str:
+                      learning_context_snapshot: Dict = None, similar_users: List = None) -> str:
         """
         Record a generated example
 
@@ -261,49 +261,6 @@ class ExampleHistory:
         except Exception as e:
             print(f"Error saving example history: {e}")
             return False
-
-    @staticmethod
-    def get_similar_users_effective_examples(similar_users: List[Tuple[str, float]],
-                                             topic: str,
-                                             min_score: float = 0.5,
-                                             limit: int = 3) -> List[Dict]:
-        """
-        Get effective examples from similar users for a topic
-
-        Args:
-            similar_users: List of (user_id, similarity_score) tuples
-            topic: The topic to search for
-            min_score: Minimum effectiveness score
-            limit: Maximum number of examples to return
-
-        Returns:
-            List of examples with similarity context
-        """
-        all_examples = []
-
-        for user_id, similarity_score in similar_users:
-            user_history = ExampleHistory(user_id=user_id)
-            effective_examples = user_history.get_effective_examples_for_topic(
-                topic, min_score=min_score, limit=limit
-            )
-
-            # Add similarity context to each example
-            for ex in effective_examples:
-                ex["source_user_id"] = user_id
-                ex["source_user_similarity"] = similarity_score
-                all_examples.append(ex)
-
-        # Sort by effectiveness score and similarity
-        # Combined score: effectiveness * (0.7) + similarity * (0.3)
-        all_examples.sort(
-            key=lambda x: (
-                x.get("effectiveness_score", 0) * 0.7 +
-                x.get("source_user_similarity", 0) * 0.3
-            ),
-            reverse=True
-        )
-
-        return all_examples[:limit]
 
     def get_statistics(self) -> Dict:
         """Get statistics about example history"""

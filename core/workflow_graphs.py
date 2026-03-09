@@ -1,104 +1,82 @@
 """
 Workflow Graph Definitions
-Graph building logic for LangGraph workflows.
+Graph building logic for the Primary Agent (Adaptive Example Generation).
+
+Flow:
+  load_profile → build_context → generate → format_and_save
+  → user_review (⏸ interrupt) → process_feedback
+  → [conditional] regenerate? → generate (loop, max 3)
+                  done?       → END
 """
 
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 
-from core.workflow_state import FeedbackGenerationState, SimpleGenerationState
+from core.workflow_state import PersonalizedGenerationState
 from core.workflow_nodes import (
-    node_00_find_similar_users,
-    node_01_generate_example,
-    node_02_prepare_display,
-    node_03_interrupt_for_feedback,
-    node_04_record_feedback,
-    node_04b_record_example_history,
-    node_05_update_learning_indicators,
-    node_06_calculate_adaptive_thresholds,
-    node_07_store_thresholds,
-    node_simple_generate
+    node_load_profile,
+    node_build_context,
+    node_generate,
+    node_format_and_save,
+    node_user_review,
+    node_process_feedback,
 )
 
+MAX_REGENERATION_LOOPS = 3
 
+
+def _route_after_feedback(state: PersonalizedGenerationState) -> str:
+    """
+    Conditional edge after node_process_feedback.
+    Loops back to node_generate if the Adaptive Response Agent requested regeneration,
+    subject to a max-loop guard to prevent infinite cycles.
+    """
+    if (state.get("regeneration_requested") and
+            state.get("loop_count", 0) < MAX_REGENERATION_LOOPS):
+        return "regenerate"
+    return "end"
+
+
+def build_primary_agent_graph(checkpointer=None):
+    """
+    Build the Primary Agent graph: Adaptive Example Generation with
+    natural-language feedback loop.
+
+    A checkpointer is required for the interrupt in node_user_review.
+    """
+    graph = StateGraph(PersonalizedGenerationState)
+
+    graph.add_node("node_load_profile",     node_load_profile)
+    graph.add_node("node_build_context",    node_build_context)
+    graph.add_node("node_generate",         node_generate)
+    graph.add_node("node_format_and_save",  node_format_and_save)
+    graph.add_node("node_user_review",      node_user_review)
+    graph.add_node("node_process_feedback", node_process_feedback)
+
+    graph.set_entry_point("node_load_profile")
+
+    graph.add_edge("node_load_profile",     "node_build_context")
+    graph.add_edge("node_build_context",    "node_generate")
+    graph.add_edge("node_generate",         "node_format_and_save")
+    graph.add_edge("node_format_and_save",  "node_user_review")
+    graph.add_edge("node_user_review",      "node_process_feedback")
+
+    # Conditional: loop back to generate OR end
+    graph.add_conditional_edges(
+        "node_process_feedback",
+        _route_after_feedback,
+        {
+            "regenerate": "node_generate",   # loop — skips build_context intentionally
+            "end": END
+        }
+    )
+
+    if checkpointer is None:
+        checkpointer = MemorySaver()
+
+    return graph.compile(checkpointer=checkpointer)
+
+
+# Backward-compatibility alias
 def build_feedback_generation_graph(checkpointer=None):
-    """
-    Build the feedback generation workflow graph with collaborative filtering
-
-    Workflow: find_similar → generate → prepare → interrupt → record_feedback →
-              record_history → update → calculate → store
-    """
-
-    # Create graph builder
-    builder = StateGraph(FeedbackGenerationState)
-
-    # Add all nodes
-    builder.add_node("node_00_find_similar_users", node_00_find_similar_users)
-    builder.add_node("node_01_generate_example", node_01_generate_example)
-    builder.add_node("node_02_prepare_display", node_02_prepare_display)
-    builder.add_node("node_03_interrupt_for_feedback", node_03_interrupt_for_feedback)
-    builder.add_node("node_04_record_feedback", node_04_record_feedback)
-    builder.add_node("node_04b_record_example_history", node_04b_record_example_history)
-    builder.add_node("node_05_update_indicators", node_05_update_learning_indicators)
-    builder.add_node("node_06_calc_thresholds", node_06_calculate_adaptive_thresholds)
-    builder.add_node("node_07_store_thresholds", node_07_store_thresholds)
-
-    # Set entry point (start with collaborative filtering)
-    builder.set_entry_point("node_00_find_similar_users")
-
-    # Add edges (linear workflow with collaborative filtering)
-    builder.add_edge("node_00_find_similar_users", "node_01_generate_example")
-    builder.add_edge("node_01_generate_example", "node_02_prepare_display")
-    builder.add_edge("node_02_prepare_display", "node_03_interrupt_for_feedback")
-    builder.add_edge("node_03_interrupt_for_feedback", "node_04_record_feedback")
-    builder.add_edge("node_04_record_feedback", "node_04b_record_example_history")
-    builder.add_edge("node_04b_record_example_history", "node_05_update_indicators")
-    builder.add_edge("node_05_update_indicators", "node_06_calc_thresholds")
-    builder.add_edge("node_06_calc_thresholds", "node_07_store_thresholds")
-    builder.add_edge("node_07_store_thresholds", END)
-
-    # Compile with checkpointer
-    if checkpointer is None:
-        checkpointer = MemorySaver()
-
-    return builder.compile(checkpointer=checkpointer)
-
-
-def build_simple_generation_graph(checkpointer=None):
-    """
-    Build the simple generation workflow graph (no feedback loop)
-
-    Workflow: generate → END
-    """
-
-    # Create graph builder
-    builder = StateGraph(SimpleGenerationState)
-
-    # Add node
-    builder.add_node("node_simple_generate", node_simple_generate)
-
-    # Set entry point
-    builder.set_entry_point("node_simple_generate")
-
-    # Add edge to END
-    builder.add_edge("node_simple_generate", END)
-
-    # Compile with checkpointer (optional for simple workflow)
-    if checkpointer is None:
-        checkpointer = MemorySaver()
-
-    return builder.compile(checkpointer=checkpointer)
-
-
-def build_extended_generation_graph(phases_enabled: dict, checkpointer=None):
-    """
-    Build extended workflow graph with Phase 2-4 features (future)
-
-    Args:
-        phases_enabled: Dict with keys like 'hallucination_detection', 'learning_stages', etc.
-        checkpointer: Optional checkpointer
-    """
-
-    # This is a placeholder for Phase 2-4 implementation
-    # For now, return the feedback generation graph
-    return build_feedback_generation_graph(checkpointer)
+    return build_primary_agent_graph(checkpointer=checkpointer)

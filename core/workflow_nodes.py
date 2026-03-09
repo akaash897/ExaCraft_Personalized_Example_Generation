@@ -1,572 +1,336 @@
 """
 Workflow Node Implementations
-Individual node functions for LangGraph workflows.
+Primary Agent nodes for Adaptive Example Generation (6 nodes).
+
+node_load_profile          → load user profile from storage
+node_build_context         → synthesize learning patterns + insights into context_instruction
+node_generate              → call LLM with profile + context + optional regeneration_instruction
+node_format_and_save       → save example to history, set example_id
+node_user_review           → ⏸ interrupt for natural-language user feedback
+node_process_feedback      → invoke Adaptive Response Agent, set regeneration flags
 """
 
-import time
 import uuid
-import os
 from datetime import datetime
-from typing import Dict
+from typing import Dict, Any
+
+from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.prompts import ChatPromptTemplate
 from langgraph.types import interrupt
 
 from core.user_profile import UserProfile
 from core.learning_context import LearningContext
-from core.feedback_manager import FeedbackManager
-from core.workflow_state import FeedbackGenerationState
-from core.user_similarity import UserSimilarity
+from core.workflow_state import PersonalizedGenerationState
+from core.adaptive_response_agent import invoke_adaptive_response_agent
 from core.example_history import ExampleHistory
+from core.feedback_store import load_learning_patterns, load_accept_insights
+from core.llm_provider import LLMProviderFactory
+from config.settings import DEFAULT_LLM_PROVIDER, LLM_API_KEYS
 
 
-def node_00_find_similar_users(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 0: Find similar users and retrieve effective examples (Collaborative Filtering)"""
-    start_time = time.time()
+def _get_provider_and_key(state: PersonalizedGenerationState):
+    provider = state.get("provider") or DEFAULT_LLM_PROVIDER
+    api_key = LLM_API_KEYS.get(provider, "")
+    return provider, api_key
+
+
+# ─── Node 1: Load Profile ─────────────────────────────────────────────────────
+
+def node_load_profile(state: PersonalizedGenerationState) -> PersonalizedGenerationState:
+    """Load user profile via UserProfile class."""
+    user_id = state["user_id"]
+    try:
+        profile = UserProfile(user_id=user_id)
+        state["user_profile"] = profile.profile_data
+        state["profile_summary"] = profile.get_profile_summary()
+        state["error_occurred"] = False
+    except Exception as e:
+        state["user_profile"] = {}
+        state["profile_summary"] = "Profile unavailable."
+        state["error_occurred"] = True
+        state["error_message"] = f"node_load_profile error: {e}"
+    return state
+
+
+# ─── Node 2: Build Context ────────────────────────────────────────────────────
+
+def node_build_context(state: PersonalizedGenerationState) -> PersonalizedGenerationState:
+    """
+    Synthesize the user's accumulated learning patterns and accept insights
+    into a single context_instruction string for the generator.
+
+    Reads:
+        data/learning_patterns/{user_id}.json
+        data/accept_insights/{user_id}.json
+
+    Writes:
+        state["context_instruction"]  — empty string on cold start (no LLM call)
+    """
+    user_id = state["user_id"]
+    topic = state["topic"]
+    provider, api_key = _get_provider_and_key(state)
 
     try:
-        # Check if collaborative filtering is enabled
-        use_cf = state.get("use_collaborative_filtering", False)
+        patterns_data = load_learning_patterns(user_id)
+        insights_data = load_accept_insights(user_id)
 
-        if not use_cf:
-            # Skip collaborative filtering
-            state["similar_users"] = []
-            state["source_examples"] = []
-            state["collaborative_metadata"] = {
-                "enabled": False,
-                "reason": "Collaborative filtering not requested"
-            }
-        else:
-            user_id = state["user_id"]
-            topic = state["topic"]
+        patterns = patterns_data.get("patterns", [])
+        insights = insights_data.get("insights", [])
 
-            # Load user profile
-            profile = UserProfile(user_id)
-            profile_data = profile.profile_data
-            state["user_profile_data"] = profile_data
+        # Cold start — nothing to synthesize
+        if not patterns and not insights:
+            state["context_instruction"] = ""
+            return state
 
-            # Find similar users
-            similarity_engine = UserSimilarity()
-            all_profiles = similarity_engine.get_all_user_profiles()
+        # Build summary strings for LLM
+        pattern_lines = "\n".join(
+            f"- [{p['pattern_type']}] {p['observation']}"
+            for p in patterns[-8:]  # last 8 patterns
+        )
+        insight_lines = "\n".join(
+            f"- {i['insight']}"
+            for i in insights[-8:]  # last 8 insights
+        )
 
-            similar_users = similarity_engine.find_similar_users(
-                target_user_id=user_id,
-                target_profile=profile_data,
-                all_profiles=all_profiles,
-                top_k=5,
-                min_similarity=0.3
-            )
+        llm = LLMProviderFactory.create_llm(provider, api_key, temperature=0.2)
+        prompt_text = (
+            "You are summarizing a student's learning history for an AI tutor.\n\n"
+            f"Persistent learning patterns flagged over time:\n{pattern_lines or 'None'}\n\n"
+            f"Recent positive feedback insights (what has worked):\n{insight_lines or 'None'}\n\n"
+            f"Target topic for next example: {topic}\n\n"
+            "In 2-3 sentences, write a specific and actionable instruction for the AI tutor "
+            "about how to tailor the next example for this student. "
+            "Be concrete. Output ONLY the instruction text — no labels, no preamble."
+        )
 
-            # Get effective examples from similar users
-            source_examples = []
-            if similar_users:
-                source_examples = ExampleHistory.get_similar_users_effective_examples(
-                    similar_users=similar_users,
-                    topic=topic,
-                    min_score=0.5,
-                    limit=3
-                )
-
-            # Store in state
-            state["similar_users"] = [
-                {"user_id": uid, "similarity": score}
-                for uid, score in similar_users
-            ]
-            state["source_examples"] = source_examples
-            state["collaborative_metadata"] = {
-                "enabled": True,
-                "num_similar_users": len(similar_users),
-                "num_source_examples": len(source_examples),
-                "total_users_analyzed": len(all_profiles)
-            }
+        result = llm.invoke([HumanMessage(prompt_text)])
+        state["context_instruction"] = result.content.strip()
 
     except Exception as e:
-        # Don't fail workflow if CF fails - fall back to standard generation
-        state["similar_users"] = []
-        state["source_examples"] = []
-        state["collaborative_metadata"] = {
-            "enabled": False,
-            "error": str(e),
-            "reason": "Collaborative filtering failed, using standard generation"
-        }
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_00_find_similar_users"] = duration_ms
+        state["context_instruction"] = ""
+        state["error_message"] = f"node_build_context warning: {e}"
 
     return state
 
 
-def node_01_generate_example(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 1: Generate personalized example"""
-    start_time = time.time()
+# ─── Node 3: Generate ─────────────────────────────────────────────────────────
+
+def node_generate(state: PersonalizedGenerationState) -> PersonalizedGenerationState:
+    """
+    Generate a personalized example using the LLM.
+
+    Reads from state:
+        profile_summary          — who the user is
+        context_instruction      — synthesized from learning history (node_build_context)
+        regeneration_instruction — specific fix requested by Adaptive Response Agent (if looping)
+
+    Clears regeneration_instruction after use so it doesn't leak into further loops.
+    """
+    user_id = state["user_id"]
+    topic = state["topic"]
+    profile_summary = state.get("profile_summary", "No profile available.")
+    context_instruction = state.get("context_instruction", "")
+    regeneration_instruction = state.get("regeneration_instruction", "")
+    provider, api_key = _get_provider_and_key(state)
 
     try:
-        from core.example_generator import ExampleGenerator
-        from config.settings import DEFAULT_LLM_PROVIDER, LLM_API_KEYS
-
-        # Get provider from state or use default
-        provider = state.get("provider") or DEFAULT_LLM_PROVIDER
-        api_key = LLM_API_KEYS.get(provider)
-
         if not api_key:
             raise ValueError(f"API key not configured for provider: {provider}")
 
-        # Initialize generator with provider
-        generator = ExampleGenerator(api_key=api_key, provider=provider)
+        # Build learning context base
+        learning_context = LearningContext(user_id=user_id)
+        base_context = learning_context.get_learning_state_summary()
 
-        # Load user profile
-        user_id = state["user_id"]
-        topic = state["topic"]
-        mode = state.get("mode", "adaptive")
-
-        # Get profile and context summaries
-        profile = UserProfile(user_id)
-        profile_summary = profile.get_profile_summary()
-
-        learning_context = LearningContext(user_id)
-        context_summary = learning_context.get_learning_state_summary()
-
-        # Get feedback history for influence tracking
-        feedback_mgr = FeedbackManager(user_id)
-        recent_feedback = feedback_mgr.get_feedback_patterns(topic=topic, limit=5)
-        all_recent_feedback = feedback_mgr.get_feedback_patterns(limit=10)
-        current_thresholds = feedback_mgr.get_current_thresholds()
-
-        # Build feedback influence data
-        feedback_influence = _build_feedback_influence(
-            learning_context=learning_context,
-            feedback_mgr=feedback_mgr,
-            topic=topic,
-            recent_feedback=recent_feedback,
-            all_recent_feedback=all_recent_feedback,
-            current_thresholds=current_thresholds
-        )
-
-        # Check if collaborative filtering data is available
-        source_examples = state.get("source_examples", [])
-        has_cf_context = len(source_examples) > 0
-
-        # Generate example
-        if has_cf_context:
-            # Use collaborative filtering generation
-            similar_users = state.get("similar_users", [])
-            collaborative_context = generator._build_collaborative_context(
-                source_examples=source_examples,
-                similar_users=[(u["user_id"], u["similarity"]) for u in similar_users]
+        # Compose enriched context
+        enriched_context = base_context
+        if context_instruction:
+            enriched_context += f"\n\nPERSONALIZATION INSTRUCTION (from learning history):\n{context_instruction}"
+        if regeneration_instruction:
+            enriched_context += (
+                f"\n\nREGENERATION REQUEST (apply this change):\n{regeneration_instruction}"
             )
 
-            example = generator._generate_with_collaborative_context(
-                topic=topic,
-                user_profile=profile,
-                learning_context=learning_context if mode == "adaptive" else None,
-                collaborative_context=collaborative_context
-            )
-        elif mode == "adaptive":
-            # Use the core generate_example method with UserProfile and LearningContext objects
-            example = generator.generate_example(
-                topic=topic,
-                user_profile=profile,
-                learning_context=learning_context
-            )
-        else:
-            # Simple mode - use generate_example without learning context
-            example = generator.generate_example(topic=topic, user_profile=profile)
+        # Clear regeneration instruction after consuming it
+        state["regeneration_instruction"] = ""
 
-        # Check for errors
-        if example.startswith("Error generating example:"):
+        llm = LLMProviderFactory.create_llm(provider, api_key, temperature=0.3)
+
+        prompt = ChatPromptTemplate.from_messages([
+            ("system",
+             "You are an adaptive AI tutor that personalizes examples based on the student's "
+             "profile and learning history.\n\n"
+             "STUDENT PROFILE:\n{user_profile}\n\n"
+             "LEARNING CONTEXT:\n{learning_context}\n\n"
+             "Generate a contextually adaptive example as a vivid scenario in 2-4 sentences. "
+             "Use specific characters, locations, and situations that match the student's profile "
+             "and learning history instructions. "
+             "Output ONLY the example scenario — no explanations, no labels."),
+            ("human", "Generate an example for the topic: {topic}")
+        ])
+
+        chain = prompt | llm
+        result = chain.invoke({
+            "user_profile": profile_summary,
+            "learning_context": enriched_context,
+            "topic": topic
+        })
+
+        example_text = result.content.strip()
+
+        if example_text.startswith("Error generating example:"):
             state["error_occurred"] = True
-            state["error_message"] = example
+            state["error_message"] = example_text
             state["generated_example"] = None
         else:
-            state["generated_example"] = example
-            state["user_profile_summary"] = profile_summary
-            state["learning_context_summary"] = context_summary
-            state["example_id"] = f"ex_{uuid.uuid4().hex[:12]}"
-            state["confidence_score"] = 0.8
+            state["generated_example"] = example_text
+            state["example_metadata"] = {
+                "topic": topic,
+                "provider": provider,
+                "had_context_instruction": bool(context_instruction),
+                "was_regeneration": bool(regeneration_instruction),
+                "generation_timestamp": datetime.now().isoformat()
+            }
             state["error_occurred"] = False
-            state["feedback_influence"] = feedback_influence
 
-        # Record interaction in learning context
+        # Record topic interaction in learning context
         learning_context.add_topic_interaction(topic)
 
     except Exception as e:
         state["error_occurred"] = True
-        state["error_message"] = f"Error in generate_example node: {str(e)}"
+        state["error_message"] = f"node_generate error: {e}"
         state["generated_example"] = None
 
-    # Track execution time
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_01_generate_example"] = duration_ms
-
     return state
 
 
-def _build_feedback_influence(
-    learning_context: LearningContext,
-    feedback_mgr: FeedbackManager,
-    topic: str,
-    recent_feedback: list,
-    all_recent_feedback: list,
-    current_thresholds: dict
-) -> dict:
-    """Build detailed feedback influence information"""
+# ─── Node 4: Format and Save ──────────────────────────────────────────────────
 
-    influence = {
-        "has_previous_feedback": len(all_recent_feedback) > 0,
-        "topic_specific_feedback_count": len(recent_feedback),
-        "total_feedback_count": len(all_recent_feedback),
-        "adaptations_applied": [],
-        "struggle_indicators": {},
-        "mastery_indicators": {},
-        "threshold_info": {},
-        "recent_ratings_summary": {}
-    }
-
-    # Get struggle and mastery indicators from learning context
-    struggles = learning_context.context_data.get("struggle_indicators", {})
-    mastery = learning_context.context_data.get("mastery_indicators", {})
-
-    # Check if current topic has struggle indicators
-    if topic in struggles:
-        struggle_info = struggles[topic]
-        influence["struggle_indicators"] = {
-            "is_struggling": True,
-            "repeat_count": struggle_info.get("repeat_count", 0),
-            "regeneration_count": struggle_info.get("regeneration_count", 0),
-            "signal_type": struggle_info.get("signal_type", "unknown")
-        }
-        influence["adaptations_applied"].append({
-            "type": "complexity_reduction",
-            "reason": f"Detected struggle with '{topic}' ({struggle_info.get('repeat_count', 0)} repetitions, {struggle_info.get('regeneration_count', 0)} regenerations)",
-            "action": "Simplified explanation, using more concrete examples"
-        })
-
-    # Check for mastery indicators
-    if mastery:
-        # Get the most recent mastery detection
-        mastery_keys = sorted(mastery.keys(), reverse=True)
-        if mastery_keys:
-            latest_mastery = mastery[mastery_keys[0]]
-            influence["mastery_indicators"] = {
-                "showing_mastery": True,
-                "progression_type": latest_mastery.get("type", "unknown"),
-                "recent_topics": latest_mastery.get("topics", []),
-                "unique_topic_count": latest_mastery.get("unique_topic_count", 0)
-            }
-            influence["adaptations_applied"].append({
-                "type": "complexity_increase",
-                "reason": f"Demonstrated mastery through {latest_mastery.get('unique_topic_count', 0)} diverse topics",
-                "action": "Increased complexity, introducing advanced concepts"
-            })
-
-    # Summarize recent ratings
-    if all_recent_feedback:
-        avg_difficulty = sum(f.get("difficulty_rating", 3) for f in all_recent_feedback) / len(all_recent_feedback)
-        avg_clarity = sum(f.get("clarity_rating", 3) for f in all_recent_feedback) / len(all_recent_feedback)
-        avg_usefulness = sum(f.get("usefulness_rating", 3) for f in all_recent_feedback) / len(all_recent_feedback)
-
-        influence["recent_ratings_summary"] = {
-            "average_difficulty": round(avg_difficulty, 1),
-            "average_clarity": round(avg_clarity, 1),
-            "average_usefulness": round(avg_usefulness, 1),
-            "sample_size": len(all_recent_feedback)
-        }
-
-        # Add adaptations based on ratings
-        if avg_difficulty >= 4.0:
-            influence["adaptations_applied"].append({
-                "type": "difficulty_adjustment",
-                "reason": f"Recent examples rated too difficult (avg: {avg_difficulty:.1f}/5)",
-                "action": "Lowered complexity to match comfort level"
-            })
-        elif avg_difficulty <= 2.0:
-            influence["adaptations_applied"].append({
-                "type": "difficulty_adjustment",
-                "reason": f"Recent examples rated too easy (avg: {avg_difficulty:.1f}/5)",
-                "action": "Increased complexity for better challenge"
-            })
-
-        if avg_clarity < 3.0:
-            influence["adaptations_applied"].append({
-                "type": "clarity_improvement",
-                "reason": f"Recent examples lacked clarity (avg: {avg_clarity:.1f}/5)",
-                "action": "Using clearer explanations and simpler language"
-            })
-
-    # Include threshold information
-    influence["threshold_info"] = {
-        "struggle_threshold": current_thresholds.get("struggle_threshold", 3),
-        "mastery_threshold": current_thresholds.get("mastery_threshold", 3),
-        "last_calculated": current_thresholds.get("last_calculated", "Never")
-    }
-
-    # Add topic-specific feedback history
-    if recent_feedback:
-        influence["topic_feedback_history"] = [
-            {
-                "timestamp": f.get("timestamp", "unknown"),
-                "difficulty": f.get("difficulty_rating"),
-                "clarity": f.get("clarity_rating"),
-                "usefulness": f.get("usefulness_rating")
-            }
-            for f in recent_feedback[:3]  # Last 3 feedback entries for this topic
-        ]
-
-    return influence
-
-
-def node_02_prepare_display(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 2: Prepare example for display"""
-    start_time = time.time()
+def node_format_and_save(state: PersonalizedGenerationState) -> PersonalizedGenerationState:
+    """Save example to ExampleHistory and populate display fields."""
+    user_id = state["user_id"]
+    topic = state["topic"]
+    generated_example = state.get("generated_example", "")
+    example_metadata = state.get("example_metadata", {})
+    profile_data = state.get("user_profile", {})
 
     try:
-        example = state.get("generated_example", "")
-        formatted = example
+        history = ExampleHistory(user_id=user_id)
+        example_id = history.record_example(
+            topic=topic,
+            example_text=generated_example,
+            profile_snapshot=profile_data,
+            learning_context_snapshot=example_metadata,
+            similar_users=[]
+        )
 
-        metadata = {
-            "topic": state["topic"],
-            "example_id": state.get("example_id", "unknown"),
-            "generated_at": datetime.now().isoformat(),
-            "mode": state.get("mode", "adaptive"),
-            "profile_used": bool(state.get("user_profile_summary")),
-            "context_used": bool(state.get("learning_context_summary"))
+        state["example_id"] = example_id
+        state["example_record"] = {
+            "example_id": example_id,
+            "topic": topic,
+            "example_text": generated_example,
+            "metadata": example_metadata,
+            "timestamp": datetime.now().isoformat()
         }
-
-        state["formatted_example"] = formatted
-        state["display_metadata"] = metadata
+        state["formatted_example"] = {
+            "example_id": example_id,
+            "topic": topic,
+            "text": generated_example
+        }
+        state["display_metadata"] = {
+            "topic": topic,
+            "example_id": example_id,
+            "generated_at": datetime.now().isoformat(),
+            "provider": example_metadata.get("provider", "unknown"),
+            "loop_count": state.get("loop_count", 0)
+        }
 
     except Exception as e:
-        state["error_occurred"] = True
-        state["error_message"] = f"Error in prepare_display node: {str(e)}"
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_02_prepare_display"] = duration_ms
-
-    return state
-
-
-def node_03_interrupt_for_feedback(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 3: Interrupt workflow to collect user feedback"""
-    start_time = time.time()
-
-    # Check if feedback has already been provided (resume case)
-    if state.get("difficulty_rating") is None:
-        # Request feedback - this will pause the workflow
-        interrupt({
-            "message": "Please provide feedback",
-            "example_id": state.get("example_id"),
-            "formatted_example": state.get("formatted_example"),
-            "awaiting": ["difficulty_rating", "clarity_rating", "usefulness_rating"]
-        })
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_03_interrupt_for_feedback"] = duration_ms
+        fallback_id = f"ex_{uuid.uuid4().hex[:12]}"
+        state["example_id"] = fallback_id
+        state["formatted_example"] = {
+            "example_id": fallback_id,
+            "topic": topic,
+            "text": generated_example
+        }
+        state["display_metadata"] = {
+            "topic": topic,
+            "example_id": fallback_id,
+            "generated_at": datetime.now().isoformat()
+        }
+        state["error_message"] = f"node_format_and_save warning: {e}"
 
     return state
 
 
-def node_04_record_feedback(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 4: Record user feedback"""
-    start_time = time.time()
+# ─── Node 5: User Review (Interrupt) ─────────────────────────────────────────
+
+def node_user_review(state: PersonalizedGenerationState) -> PersonalizedGenerationState:
+    """
+    Interrupt workflow to collect natural-language user feedback.
+    LangGraph pauses here and returns thread_id + example to the caller.
+    Resumes when POST /workflows/{thread_id}/resume is called with user_feedback_text.
+    """
+    feedback = interrupt({
+        "example": state.get("formatted_example"),
+        "metadata": state.get("display_metadata"),
+        "prompt": "What did you think of this example?"
+    })
+
+    return {
+        "user_feedback_text": feedback.get("user_feedback_text", ""),
+    }
+
+
+# ─── Node 6: Process Feedback ─────────────────────────────────────────────────
+
+def node_process_feedback(state: PersonalizedGenerationState) -> PersonalizedGenerationState:
+    """
+    Invoke the Adaptive Response Agent with the user's natural-language feedback.
+    The agent autonomously decides to call regenerate / accept / flag_pattern.
+    Writes regeneration_requested + regeneration_instruction back into state.
+    """
+    user_id = state["user_id"]
+    example_id = state.get("example_id", "")
+    topic = state["topic"]
+    generated_example = state.get("generated_example") or ""
+    user_feedback_text = state.get("user_feedback_text") or ""
+    provider, api_key = _get_provider_and_key(state)
+
+    # If generation failed upstream, skip feedback processing
+    if state.get("error_occurred") and not generated_example:
+        state["regeneration_requested"] = False
+        state["regeneration_instruction"] = ""
+        state["feedback_processed"] = False
+        state["workflow_completed_at"] = datetime.now().isoformat()
+        return state
 
     try:
-        user_id = state["user_id"]
-        example_id = state.get("example_id", "unknown")
-        topic = state["topic"]
+        patterns = load_learning_patterns(user_id)
 
-        difficulty = state.get("difficulty_rating")
-        clarity = state.get("clarity_rating")
-        usefulness = state.get("usefulness_rating")
-
-        feedback_mgr = FeedbackManager(user_id)
-
-        success = feedback_mgr.add_feedback(
+        result = invoke_adaptive_response_agent(
+            user_id=user_id,
             example_id=example_id,
             topic=topic,
-            difficulty_rating=difficulty,
-            clarity_rating=clarity,
-            usefulness_rating=usefulness,
-            example_text=state.get("generated_example")
+            example_text=generated_example,
+            user_feedback_text=user_feedback_text,
+            user_profile=state.get("user_profile", {}),
+            pattern_history=patterns,
+            provider=provider,
+            api_key=api_key
         )
 
-        state["feedback_recorded"] = success
+        state["regeneration_requested"] = result.get("regeneration_requested", False)
+        state["regeneration_instruction"] = result.get("regeneration_instruction", "")
+        state["feedback_processed"] = result.get("feedback_recorded", False)
+        state["loop_count"] = state.get("loop_count", 0) + 1
+        state["workflow_completed_at"] = datetime.now().isoformat()
 
     except Exception as e:
+        state["regeneration_requested"] = False
+        state["regeneration_instruction"] = ""
+        state["feedback_processed"] = False
         state["error_occurred"] = True
-        state["error_message"] = f"Error in record_feedback node: {str(e)}"
-        state["feedback_recorded"] = False
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_04_record_feedback"] = duration_ms
-
-    return state
-
-
-def node_04b_record_example_history(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 4b: Record example in collaborative history"""
-    start_time = time.time()
-
-    try:
-        user_id = state["user_id"]
-        topic = state["topic"]
-        example_text = state.get("generated_example")
-        example_id = state.get("example_id")
-
-        # Get ratings for effectiveness calculation
-        difficulty = state.get("difficulty_rating")
-        clarity = state.get("clarity_rating")
-        usefulness = state.get("usefulness_rating")
-
-        # Record in example history
-        history = ExampleHistory(user_id=user_id)
-
-        # Record the example with metadata
-        history_example_id = history.record_example(
-            topic=topic,
-            example_text=example_text,
-            profile_snapshot=state.get("user_profile_data"),
-            learning_context_snapshot={},  # Could be added later
-            similar_users=[(u["user_id"], u["similarity"]) for u in state.get("similar_users", [])]
-        )
-
-        # Determine if example was accepted based on ratings
-        # Consider it accepted if all ratings are >= 3
-        accepted = (
-            difficulty is not None and
-            clarity is not None and
-            usefulness is not None and
-            difficulty >= 3 and
-            clarity >= 3 and
-            usefulness >= 3
-        )
-
-        # Record feedback on the example
-        if history_example_id:
-            history.record_feedback(
-                example_id=history_example_id,
-                accepted=accepted,
-                regeneration_requested=False  # Workflow doesn't track regenerations yet
-            )
-
-        state["example_history_recorded"] = True
-
-    except Exception as e:
-        # Don't fail workflow if history recording fails
-        state["example_history_recorded"] = False
-        print(f"Warning: Failed to record example history: {str(e)}")
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_04b_record_example_history"] = duration_ms
-
-    return state
-
-
-def node_05_update_learning_indicators(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 5: Update learning indicators based on feedback"""
-    start_time = time.time()
-
-    try:
-        user_id = state["user_id"]
-        topic = state["topic"]
-
-        learning_context = LearningContext(user_id)
-
-        # If difficulty was high (4-5), record struggle signal
-        difficulty = state.get("difficulty_rating", 3)
-        if difficulty >= 4:
-            learning_context.record_session_struggle_signal(
-                topic=topic,
-                signal_type="difficulty_feedback"
-            )
-
-        state["indicators_updated"] = True
-
-    except Exception as e:
-        state["error_occurred"] = True
-        state["error_message"] = f"Error in update_indicators node: {str(e)}"
-        state["indicators_updated"] = False
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_05_update_learning_indicators"] = duration_ms
-
-    return state
-
-
-def node_06_calculate_adaptive_thresholds(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 6: Calculate new adaptive thresholds based on feedback history"""
-    start_time = time.time()
-
-    try:
-        user_id = state["user_id"]
-        feedback_mgr = FeedbackManager(user_id)
-        new_thresholds = feedback_mgr.calculate_adaptive_thresholds()
-        state["adaptive_thresholds"] = new_thresholds
-
-    except Exception as e:
-        state["error_occurred"] = True
-        state["error_message"] = f"Error in calculate_thresholds node: {str(e)}"
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_06_calculate_adaptive_thresholds"] = duration_ms
-
-    return state
-
-
-def node_07_store_thresholds(state: FeedbackGenerationState) -> FeedbackGenerationState:
-    """Node 7: Store adaptive thresholds (finalize workflow)"""
-    start_time = time.time()
-
-    # Thresholds already stored by FeedbackManager in node 6
-    # This node marks the workflow as complete
-    state["thresholds_adjusted"] = True
-    state["workflow_completed_at"] = datetime.now().isoformat()
-
-    duration_ms = (time.time() - start_time) * 1000
-    if "node_execution_times" not in state:
-        state["node_execution_times"] = {}
-    state["node_execution_times"]["node_07_store_thresholds"] = duration_ms
-
-    return state
-
-
-def node_simple_generate(state: Dict) -> Dict:
-    """Simple generation without feedback loop (backward compatibility)"""
-    try:
-        from core.example_generator import ExampleGenerator
-
-        generator = ExampleGenerator(api_key=os.getenv("GEMINI_API_KEY"))
-        profile = UserProfile(state["user_id"])
-
-        example = generator.generate_example_simple(
-            topic=state["topic"],
-            user_profile=profile
-        )
-
-        if example.startswith("Error generating example:"):
-            state["error_occurred"] = True
-            state["error_message"] = example
-            state["generated_example"] = None
-        else:
-            state["generated_example"] = example
-            state["error_occurred"] = False
-
-    except Exception as e:
-        state["error_occurred"] = True
-        state["error_message"] = f"Error in simple_generate node: {str(e)}"
-        state["generated_example"] = None
+        state["error_message"] = f"node_process_feedback error: {e}"
+        state["workflow_completed_at"] = datetime.now().isoformat()
 
     return state

@@ -1,38 +1,29 @@
 """
 Workflow Manager
-Orchestrates graph execution, thread management, and resumption.
+Orchestrates Primary Agent graph execution, thread management, and resumption.
 """
 
 import uuid
 from datetime import datetime
 from typing import Dict, Optional, Any
-from langgraph.checkpoint.memory import MemorySaver
 
-from core.workflow_graphs import (
-    build_feedback_generation_graph,
-    build_simple_generation_graph
-)
-from core.workflow_state import FeedbackGenerationState, SimpleGenerationState
+from langgraph.checkpoint.memory import MemorySaver
+from langgraph.types import Command
+
+from core.workflow_graphs import build_primary_agent_graph
+from core.workflow_state import PersonalizedGenerationState
+from config.settings import DEFAULT_LLM_PROVIDER
 
 
 class WorkflowManager:
-    """Manages workflow execution and thread lifecycle"""
+    """Manages workflow execution and thread lifecycle."""
 
     def __init__(self, checkpointer=None):
-        """
-        Initialize workflow manager
-
-        Args:
-            checkpointer: LangGraph checkpointer (MemorySaver, PostgresSaver, etc.)
-        """
         self.checkpointer = checkpointer or MemorySaver()
+        self.primary_graph = build_primary_agent_graph(self.checkpointer)
+        self.active_threads: Dict[str, Dict] = {}
 
-        # Build graphs
-        self.feedback_graph = build_feedback_generation_graph(self.checkpointer)
-        self.simple_graph = build_simple_generation_graph(self.checkpointer)
-
-        # Active threads tracking
-        self.active_threads = {}
+    # ── Start ──────────────────────────────────────────────────────────────────
 
     def start_feedback_workflow(
         self,
@@ -40,58 +31,35 @@ class WorkflowManager:
         topic: str,
         mode: str = "adaptive",
         provider: str = None,
-        use_collaborative_filtering: bool = True
     ) -> Dict[str, Any]:
         """
-        Start a new feedback generation workflow with collaborative filtering
+        Start a new feedback generation workflow.
 
-        Args:
-            user_id: User identifier
-            topic: Topic for example generation
-            mode: "simple" or "adaptive"
-            provider: LLM provider ("gemini" or "openai")
-            use_collaborative_filtering: Enable collaborative filtering (default: True)
-
-        Returns:
-            Dict with thread_id, generated_example, example_id, status, CF metadata
+        Runs until the interrupt in node_user_review, then returns the generated
+        example and thread_id so the caller can collect feedback and resume.
         """
-
-        # Generate thread ID
         thread_id = f"thread_{uuid.uuid4().hex[:16]}"
 
-        # Initialize state
-        initial_state: FeedbackGenerationState = {
+        initial_state: PersonalizedGenerationState = {
             "user_id": user_id,
-            "thread_id": thread_id,
             "topic": topic,
-            "mode": mode,
-            "provider": provider,  # Include provider in workflow state
-            "use_collaborative_filtering": use_collaborative_filtering,
-            "workflow_started_at": datetime.now().isoformat(),
+            "thread_id": thread_id,
+            "provider": provider or DEFAULT_LLM_PROVIDER,
+            "loop_count": 0,
+            "feedback_processed": False,
             "error_occurred": False,
-            "feedback_recorded": False,
-            "example_history_recorded": False,
-            "indicators_updated": False,
-            "thresholds_adjusted": False,
-            "node_execution_times": {},
-            "checkpoints_created": []
+            "workflow_started_at": datetime.now().isoformat()
         }
 
-        # Configuration for this thread
         config = {"configurable": {"thread_id": thread_id}}
 
-        # Invoke workflow (will run until interrupt)
         try:
-            # Stream events until interrupt
-            final_state = None
-            for event in self.feedback_graph.stream(initial_state, config):
-                final_state = event
+            for _ in self.primary_graph.stream(initial_state, config):
+                pass  # stream pauses automatically at interrupt
 
-            # Get current state after interrupt
-            snapshot = self.feedback_graph.get_state(config)
+            snapshot = self.primary_graph.get_state(config)
             current_state = snapshot.values
 
-            # Track active thread
             self.active_threads[thread_id] = {
                 "user_id": user_id,
                 "topic": topic,
@@ -99,19 +67,16 @@ class WorkflowManager:
                 "created_at": datetime.now().isoformat()
             }
 
+            error_occurred = current_state.get("error_occurred", False)
             return {
-                "success": True,
+                "success": not error_occurred,
                 "thread_id": thread_id,
                 "generated_example": current_state.get("generated_example"),
                 "example_id": current_state.get("example_id"),
                 "formatted_example": current_state.get("formatted_example"),
                 "display_metadata": current_state.get("display_metadata"),
-                "feedback_influence": current_state.get("feedback_influence"),
-                "similar_users": current_state.get("similar_users", []),
-                "source_examples": current_state.get("source_examples", []),
-                "collaborative_metadata": current_state.get("collaborative_metadata", {}),
                 "status": "awaiting_feedback",
-                "error_occurred": current_state.get("error_occurred", False),
+                "error_occurred": error_occurred,
                 "error_message": current_state.get("error_message"),
                 "timestamp": datetime.now().isoformat()
             }
@@ -123,62 +88,68 @@ class WorkflowManager:
                 "timestamp": datetime.now().isoformat()
             }
 
+    # ── Resume ─────────────────────────────────────────────────────────────────
+
     def resume_feedback_workflow(
         self,
         thread_id: str,
-        difficulty_rating: int,
-        clarity_rating: int,
-        usefulness_rating: int
+        user_feedback_text: str = ""
     ) -> Dict[str, Any]:
         """
-        Resume interrupted feedback workflow with user feedback
+        Resume an interrupted workflow with the user's natural-language feedback.
 
-        Args:
-            thread_id: Thread identifier
-            difficulty_rating: 1-5 rating
-            clarity_rating: 1-5 rating
-            usefulness_rating: 1-5 rating
-
-        Returns:
-            Dict with status, new_thresholds, completion info
+        If the Adaptive Response Agent decides to regenerate, the graph loops back
+        to node_generate and pauses again at node_user_review with the new example.
+        In that case the response includes status: "awaiting_feedback" and the
+        new example so the extension can display it and ask for feedback again.
         """
-
         config = {"configurable": {"thread_id": thread_id}}
+        feedback_data = {"user_feedback_text": user_feedback_text}
 
         try:
-            # Get current state
-            snapshot = self.feedback_graph.get_state(config)
-            current_state = snapshot.values
+            for _ in self.primary_graph.stream(Command(resume=feedback_data), config):
+                pass
 
-            # Update state with feedback
-            current_state["difficulty_rating"] = difficulty_rating
-            current_state["clarity_rating"] = clarity_rating
-            current_state["usefulness_rating"] = usefulness_rating
-
-            # Resume workflow from interrupt with updated state
-            final_state = None
-            for event in self.feedback_graph.stream(current_state, config):
-                final_state = event
-
-            # Get final state
-            snapshot = self.feedback_graph.get_state(config)
+            snapshot = self.primary_graph.get_state(config)
             completed_state = snapshot.values
 
-            # Update thread tracking
-            if thread_id in self.active_threads:
-                self.active_threads[thread_id]["status"] = "completed"
+            # Check if still interrupted (regeneration loop caused a new interrupt)
+            still_interrupted = bool(snapshot.next)
 
-            return {
-                "success": True,
-                "status": "completed",
-                "new_thresholds": completed_state.get("adaptive_thresholds"),
-                "feedback_recorded": completed_state.get("feedback_recorded", False),
-                "indicators_updated": completed_state.get("indicators_updated", False),
-                "thresholds_adjusted": completed_state.get("thresholds_adjusted", False),
-                "node_execution_times": completed_state.get("node_execution_times", {}),
-                "message": "Feedback processed successfully",
-                "timestamp": datetime.now().isoformat()
-            }
+            if still_interrupted:
+                # Adaptive Response Agent triggered regeneration — new example ready
+                if thread_id in self.active_threads:
+                    self.active_threads[thread_id]["status"] = "awaiting_feedback"
+
+                return {
+                    "success": True,
+                    "status": "awaiting_feedback",
+                    "regeneration_requested": True,
+                    "generated_example": completed_state.get("generated_example"),
+                    "example_id": completed_state.get("example_id"),
+                    "formatted_example": completed_state.get("formatted_example"),
+                    "display_metadata": completed_state.get("display_metadata"),
+                    "loop_count": completed_state.get("loop_count", 0),
+                    "thread_id": thread_id,
+                    "message": "Example regenerated based on your feedback.",
+                    "timestamp": datetime.now().isoformat()
+                }
+            else:
+                # Workflow completed normally
+                if thread_id in self.active_threads:
+                    self.active_threads[thread_id]["status"] = "completed"
+
+                error_occurred = completed_state.get("error_occurred", False)
+                return {
+                    "success": not error_occurred,
+                    "status": "completed",
+                    "feedback_processed": completed_state.get("feedback_processed", False),
+                    "workflow_completed_at": completed_state.get("workflow_completed_at"),
+                    "error_occurred": error_occurred,
+                    "error_message": completed_state.get("error_message"),
+                    "message": "Feedback recorded. Thanks!",
+                    "timestamp": datetime.now().isoformat()
+                }
 
         except Exception as e:
             return {
@@ -187,30 +158,19 @@ class WorkflowManager:
                 "timestamp": datetime.now().isoformat()
             }
 
+    # ── Utilities ──────────────────────────────────────────────────────────────
+
     def get_workflow_state(self, thread_id: str) -> Dict[str, Any]:
-        """
-        Get current state of a workflow
-
-        Args:
-            thread_id: Thread identifier
-
-        Returns:
-            Dict with state, current_node, is_interrupted
-        """
-
         config = {"configurable": {"thread_id": thread_id}}
-
         try:
-            snapshot = self.feedback_graph.get_state(config)
-
+            snapshot = self.primary_graph.get_state(config)
             return {
                 "success": True,
                 "state": snapshot.values,
-                "next": snapshot.next,
-                "is_interrupted": len(snapshot.next) == 0,
+                "next": list(snapshot.next) if snapshot.next else [],
+                "is_interrupted": bool(snapshot.next),
                 "timestamp": datetime.now().isoformat()
             }
-
         except Exception as e:
             return {
                 "success": False,
@@ -218,62 +178,11 @@ class WorkflowManager:
                 "timestamp": datetime.now().isoformat()
             }
 
-    def invoke_simple_workflow(self, user_id: str, topic: str) -> Dict[str, Any]:
-        """
-        Invoke simple generation workflow (no feedback, no interrupt)
-
-        Args:
-            user_id: User identifier
-            topic: Topic for example generation
-
-        Returns:
-            Dict with generated_example
-        """
-
-        initial_state: SimpleGenerationState = {
-            "user_id": user_id,
-            "topic": topic,
-            "error_occurred": False
-        }
-
-        try:
-            # Invoke graph (runs to completion)
-            result = self.simple_graph.invoke(initial_state)
-
-            return {
-                "success": True,
-                "generated_example": result.get("generated_example"),
-                "error_occurred": result.get("error_occurred", False),
-                "error_message": result.get("error_message"),
-                "timestamp": datetime.now().isoformat()
-            }
-
-        except Exception as e:
-            return {
-                "success": False,
-                "error": f"Simple workflow failed: {str(e)}",
-                "timestamp": datetime.now().isoformat()
-            }
-
     def get_active_threads(self, user_id: Optional[str] = None) -> Dict[str, Any]:
-        """
-        Get list of active threads, optionally filtered by user_id
-
-        Args:
-            user_id: Optional user filter
-
-        Returns:
-            Dict with list of active threads
-        """
-
         threads = self.active_threads
-
         if user_id:
-            threads = {
-                tid: info for tid, info in threads.items()
-                if info.get("user_id") == user_id
-            }
-
+            threads = {tid: info for tid, info in threads.items()
+                       if info.get("user_id") == user_id}
         return {
             "success": True,
             "active_threads": threads,
@@ -282,31 +191,13 @@ class WorkflowManager:
         }
 
     def delete_workflow(self, thread_id: str) -> Dict[str, Any]:
-        """
-        Delete/cancel a workflow
-
-        Args:
-            thread_id: Thread identifier
-
-        Returns:
-            Dict with success status
-        """
-
         try:
-            # Remove from active threads
-            if thread_id in self.active_threads:
-                del self.active_threads[thread_id]
-
-            # Note: Checkpointer cleanup would happen here
-            # For MemorySaver, garbage collection handles it
-            # For PostgresSaver, you'd delete from DB
-
+            self.active_threads.pop(thread_id, None)
             return {
                 "success": True,
                 "message": f"Workflow {thread_id} deleted",
                 "timestamp": datetime.now().isoformat()
             }
-
         except Exception as e:
             return {
                 "success": False,

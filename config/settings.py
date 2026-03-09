@@ -69,12 +69,11 @@ LLM_API_KEYS = {
 USER_PROFILES_DIR = Path('user_profiles')
 LEARNING_CONTEXTS_DIR = Path('learning_contexts')
 FEEDBACK_HISTORY_DIR = DATA_DIR / 'feedback_history'
-RECENT_EXAMPLES_DIR = DATA_DIR / 'recent_example_library'
 CHECKPOINTS_DIR = DATA_DIR / 'checkpoints'
 
 # Create directories if not exist
 for directory in [USER_PROFILES_DIR, LEARNING_CONTEXTS_DIR, FEEDBACK_HISTORY_DIR,
-                  RECENT_EXAMPLES_DIR, CHECKPOINTS_DIR, LOGS_DIR]:
+                  CHECKPOINTS_DIR, LOGS_DIR]:
     directory.mkdir(parents=True, exist_ok=True)
 
 

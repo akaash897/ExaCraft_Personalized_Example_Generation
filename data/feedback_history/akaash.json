@@ -43,5 +43,99 @@
     "mastery_threshold": 3,
     "last_calculated": "2026-02-03T10:44:48.710893"
   },
-  "created_at": "2026-02-03T10:44:48.710893"
+  "created_at": "2026-02-03T10:44:48.710893",
+  "entries": [
+    {
+      "entry_id": "fb_02fbaabdbd65",
+      "example_id": "ex_e02d2371d864478e",
+      "topic": "Agriculture",
+      "subject_tag": "economics_microeconomics",
+      "difficulty_rating": 2,
+      "clarity_rating": 2,
+      "usefulness_rating": 2,
+      "effectiveness_score": 0.4,
+      "user_notes": "",
+      "timestamp": "2026-03-09T19:14:33.159580"
+    },
+    {
+      "entry_id": "fb_e2be737e9d76",
+      "example_id": "ex_721e19c3a40c485d",
+      "topic": "neural networks backpropagation",
+      "subject_tag": "machine_learning",
+      "user_feedback_text": "Too abstract, please use a software engineering / coding example instead",
+      "agent_decision": "regenerate",
+      "agent_decisions_log": [
+        {
+          "tool": "regenerate",
+          "instruction": "Please provide a software engineering or coding example to explain backpropagation, as the previous example was too abstract."
+        },
+        {
+          "tool": "flag_pattern",
+          "pattern_type": "domain_preference",
+          "observation": "Akaash prefers software engineering and coding examples. The previous example was too abstract for him."
+        }
+      ],
+      "regeneration_requested": true,
+      "regeneration_instruction": "Please provide a software engineering or coding example to explain backpropagation, as the previous example was too abstract.",
+      "timestamp": "2026-03-09T22:29:54.245946"
+    },
+    {
+      "entry_id": "fb_e356ce848430",
+      "example_id": "ex_7f99e1af4d1648ee",
+      "topic": "neural networks backpropagation",
+      "subject_tag": "machine_learning",
+      "user_feedback_text": "Perfect, this is much better!",
+      "agent_decision": "accept",
+      "agent_decisions_log": [
+        {
+          "tool": "accept",
+          "insight": "The student found the example much better, indicating it was well-received and aligned with their preferences."
+        }
+      ],
+      "regeneration_requested": false,
+      "regeneration_instruction": "",
+      "timestamp": "2026-03-09T22:30:23.905736"
+    },
+    {
+      "entry_id": "fb_68e96cfc6652",
+      "example_id": "ex_aeb76ed694154de3",
+      "topic": "overfitting in machine learning",
+      "subject_tag": "machine_learning",
+      "user_feedback_text": "",
+      "agent_decision": "skipped",
+      "regeneration_requested": false,
+      "regeneration_instruction": "",
+      "timestamp": "2026-03-09T22:31:36.253032"
+    }
+  ],
+  "subject_tag_index": {
+    "economics_microeconomics": [
+      "ex_e02d2371d864478e"
+    ],
+    "machine_learning": [
+      "ex_721e19c3a40c485d",
+      "ex_7f99e1af4d1648ee",
+      "ex_aeb76ed694154de3"
+    ]
+  },
+  "feedback_by_recency": [
+    "ex_aeb76ed694154de3",
+    "ex_7f99e1af4d1648ee",
+    "ex_721e19c3a40c485d",
+    "ex_e02d2371d864478e"
+  ],
+  "subject_tag_statistics": {
+    "economics_microeconomics": {
+      "count": 1,
+      "avg_difficulty": 2.0,
+      "avg_clarity": 2.0,
+      "avg_usefulness": 2.0,
+      "avg_effectiveness": 0.4
+    },
+    "machine_learning": {
+      "count": 3,
+      "avg_effectiveness": 0.5333,
+      "last_updated": "2026-03-09T22:31:36.295237"
+    }
+  }
 }
