@@ -46,32 +46,10 @@ class UserProfile:
         return {
             "user_id": self.user_id or "default",
             "name": "",
-            "location": {
-                "country": "",
-                "city": "",
-                "region": ""
-            },
-            "education": {
-                "level": "",  # high_school, undergraduate, graduate, professional
-                "field": "",
-                "background": ""
-            },
-            "culture": {
-                "language": "English",
-                "cultural_background": "",
-                "religion": "",
-                "traditions": []
-            },
-            "demographics": {
-                "age_range": "",  # 18-25, 26-35, 36-50, 50+
-                "profession": "",
-                "interests": []
-            },
-            "preferences": {
-                "example_complexity": "medium",  # simple, medium, advanced
-                "preferred_domains": [],  # tech, business, science, arts, etc.
-                "learning_style": "practical"  # theoretical, practical, visual
-            },
+            "location": "",
+            "education": "",   # high_school, undergraduate, graduate, professional
+            "profession": "",
+            "complexity": "medium",  # simple, medium, advanced
             "created_at": datetime.now().isoformat(),
             "updated_at": datetime.now().isoformat()
         }
@@ -106,74 +84,17 @@ class UserProfile:
     def get_profile_summary(self) -> str:
         """Get a formatted summary of user profile for prompt"""
         profile = self.profile_data
-        
-        summary_parts = []
-        
-        if profile.get("name"):
-            summary_parts.append(f"Name: {profile['name']}")
-        
-        # Location context (handle both dict and string formats)
-        location = profile.get("location", {})
-        if isinstance(location, dict):
-            if location.get("country") or location.get("city"):
-                loc_str = f"{location.get('city', '')}, {location.get('country', '')}".strip(", ")
-                if loc_str:
-                    summary_parts.append(f"Location: {loc_str}")
-        elif isinstance(location, str) and location:
-            summary_parts.append(f"Location: {location}")
-        
-        # Education context (handle both dict and string formats)
-        education = profile.get("education", {})
-        if isinstance(education, dict):
-            if education.get("level") or education.get("field"):
-                edu_str = f"{education.get('level', '')} in {education.get('field', '')}".strip(" in ")
-                if edu_str:
-                    summary_parts.append(f"Education: {edu_str}")
-        elif isinstance(education, str) and education:
-            summary_parts.append(f"Education: {education}")
-        
-        # Cultural context (handle both dict and string formats)
-        culture = profile.get("culture", {})
-        cultural_background = None
-        if isinstance(culture, dict):
-            cultural_background = culture.get("cultural_background")
-        if not cultural_background:
-            cultural_background = profile.get("cultural_background")  # Flat field fallback
-        if cultural_background:
-            summary_parts.append(f"Cultural Background: {cultural_background}")
-        
-        # Professional context (handle both dict and string formats)
-        demographics = profile.get("demographics", {})
-        profession = None
-        if isinstance(demographics, dict):
-            profession = demographics.get("profession")
-        elif profile.get("profession"):  # Direct profession field
-            profession = profile.get("profession")
-        
-        if profession:
-            summary_parts.append(f"Profession: {profession}")
-        
-        # Preferences (handle both dict and string formats)
-        preferences = profile.get("preferences", {})
-        complexity = None
-        learning_style = None
-        
-        if isinstance(preferences, dict):
-            complexity = preferences.get("example_complexity")
-            learning_style = preferences.get("learning_style")
-        elif profile.get("complexity"):  # Direct complexity field
-            complexity = profile.get("complexity")
+        parts = []
 
-        # Flat field fallbacks (extension format)
-        if not complexity and profile.get("complexity"):
-            complexity = profile.get("complexity")
-        if not learning_style and profile.get("learning_style"):
-            learning_style = profile.get("learning_style")
-        
-        if complexity:
-            summary_parts.append(f"Preferred Complexity: {complexity}")
-        
-        if learning_style:
-            summary_parts.append(f"Learning Style: {learning_style}")
-        
-        return "\n".join(summary_parts) if summary_parts else "No specific profile information available"
+        if profile.get("name"):
+            parts.append(f"Name: {profile['name']}")
+        if profile.get("location"):
+            parts.append(f"Location: {profile['location']}")
+        if profile.get("education"):
+            parts.append(f"Education: {profile['education']}")
+        if profile.get("profession"):
+            parts.append(f"Profession: {profile['profession']}")
+        if profile.get("complexity"):
+            parts.append(f"Preferred Complexity: {profile['complexity']}")
+
+        return "\n".join(parts) if parts else "No specific profile information available"

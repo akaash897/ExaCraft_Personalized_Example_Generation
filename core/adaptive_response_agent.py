@@ -59,7 +59,7 @@ def _make_tools(user_id: str, example_id: str, topic: str, decisions: list):
         Also call this if the user skipped feedback with no text.
         insight: one sentence capturing what worked or was appreciated.
         """
-        append_accept_insight(user_id, insight)
+        append_accept_insight(user_id, insight, example_id)
         decisions.append({"tool": "accept", "insight": insight})
         return json.dumps({"action": "accept", "insight": insight})
 
@@ -74,7 +74,7 @@ def _make_tools(user_id: str, example_id: str, topic: str, decisions: list):
                       mastery_signal, complexity_preference.
         observation: specific evidence from the feedback, 1-2 sentences.
         """
-        append_learning_pattern(user_id, pattern_type, observation)
+        append_learning_pattern(user_id, pattern_type, observation, example_id)
         decisions.append({"tool": "flag_pattern", "pattern_type": pattern_type,
                           "observation": observation})
         return json.dumps({"action": "flag_pattern", "pattern_type": pattern_type})
@@ -245,7 +245,7 @@ DECISION GUIDE:
 
         # If LLM made no tool calls, default to accept
         if not decisions:
-            append_accept_insight(user_id, "No clear signal from feedback — logged as neutral.")
+            append_accept_insight(user_id, "No clear signal from feedback — logged as neutral.", example_id)
             decisions.append({"tool": "accept", "insight": "Neutral feedback, no action taken."})
 
     except Exception as e:

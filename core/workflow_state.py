@@ -3,7 +3,7 @@ Workflow State Schemas
 TypedDict definitions for LangGraph workflow states.
 """
 
-from typing import TypedDict, Optional, Dict, Any
+from typing import TypedDict, Optional, Dict, Any, List
 
 
 class PersonalizedGenerationState(TypedDict, total=False):
@@ -19,8 +19,9 @@ class PersonalizedGenerationState(TypedDict, total=False):
     user_profile: Optional[Dict[str, Any]]
     profile_summary: Optional[str]
 
-    # Context (from node_build_context — synthesized from patterns + insights)
+    # Context (from node_build_context — ContextManager Agent output)
     context_instruction: Optional[str]
+    topic_tags: Optional[List[str]]
 
     # Generation
     generated_example: Optional[str]

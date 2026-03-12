@@ -190,7 +190,7 @@ def load_learning_patterns(user_id: str) -> dict:
     return {"user_id": user_id, "patterns": []}
 
 
-def append_learning_pattern(user_id: str, pattern_type: str, observation: str) -> bool:
+def append_learning_pattern(user_id: str, pattern_type: str, observation: str, example_id: str = "") -> bool:
     """Append a new persistent learning trait."""
     try:
         data = load_learning_patterns(user_id)
@@ -198,6 +198,7 @@ def append_learning_pattern(user_id: str, pattern_type: str, observation: str) -
             "pattern_id": f"pat_{uuid.uuid4().hex[:10]}",
             "pattern_type": pattern_type,
             "observation": observation,
+            "example_id": example_id,
             "timestamp": datetime.now().isoformat()
         })
         path = _patterns_path(user_id)
@@ -227,13 +228,14 @@ def load_accept_insights(user_id: str) -> dict:
     return {"user_id": user_id, "insights": []}
 
 
-def append_accept_insight(user_id: str, insight: str) -> bool:
+def append_accept_insight(user_id: str, insight: str, example_id: str = "") -> bool:
     """Append a new positive/neutral feedback insight."""
     try:
         data = load_accept_insights(user_id)
         data["insights"].append({
             "insight_id": f"ins_{uuid.uuid4().hex[:10]}",
             "insight": insight,
+            "example_id": example_id,
             "timestamp": datetime.now().isoformat()
         })
         # Keep last 50 insights

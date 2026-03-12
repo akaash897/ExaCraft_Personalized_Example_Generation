@@ -73,7 +73,8 @@ class ExampleHistory:
         return history
 
     def record_example(self, topic: str, example_text: str, profile_snapshot: Dict = None,
-                      learning_context_snapshot: Dict = None, similar_users: List = None) -> str:
+                      learning_context_snapshot: Dict = None, similar_users: List = None,
+                      tags: List = None) -> str:
         """
         Record a generated example
 
@@ -98,6 +99,7 @@ class ExampleHistory:
             "profile_snapshot": profile_snapshot or {},
             "learning_context_snapshot": learning_context_snapshot or {},
             "similar_users_used": similar_users or [],
+            "tags": tags or [],
             "feedback": {
                 "accepted": None,  # True if kept, False if regenerated
                 "regeneration_requested": False,
@@ -127,6 +129,13 @@ class ExampleHistory:
         self.save_history()
 
         return example_id
+
+    def get_examples_by_tag(self, tag: str) -> List[Dict]:
+        """Return all example entries whose tags list contains the given tag."""
+        return [
+            ex for ex in self.history_data.get("examples", [])
+            if tag in ex.get("tags", [])
+        ]
 
     def save_history(self):
         """Save history to file"""

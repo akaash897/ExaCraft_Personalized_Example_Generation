@@ -165,27 +165,9 @@ def sync_profile():
             "user_id": user_id,
             "name": profile_data.get('name', ''),
             "location": profile_data.get('location', ''),
-            "education": {
-                "level": profile_data.get('education', ''),
-                "field": "",
-                "background": ""
-            },
-            "culture": {
-                "language": "English",
-                "cultural_background": profile_data.get('cultural_background', ''),
-                "religion": "",
-                "traditions": []
-            },
-            "demographics": {
-                "age_range": "",
-                "profession": profile_data.get('profession', ''),
-                "interests": []
-            },
-            "preferences": {
-                "example_complexity": profile_data.get('complexity', 'medium'),
-                "preferred_domains": [],
-                "learning_style": "practical"
-            },
+            "education": profile_data.get('education', ''),
+            "profession": profile_data.get('profession', ''),
+            "complexity": profile_data.get('complexity', 'medium'),
             "created_at": datetime.now().isoformat(),
             "updated_at": datetime.now().isoformat(),
             "synced_from_extension": True
