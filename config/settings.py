@@ -5,6 +5,9 @@ Centralized Configuration and Settings
 import os
 from pathlib import Path
 from enum import Enum
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Environment(Enum):
@@ -55,7 +58,6 @@ GEMINI_DEFAULT_MODEL = os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')
 OPENAI_DEFAULT_MODEL = os.getenv('OPENAI_MODEL', 'gpt-4o-mini')
 
 # Shared LLM Settings
-LLM_MODEL = os.getenv('LLM_MODEL', 'gemini-2.5-flash')  # Kept for backward compatibility
 LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', '0.3'))
 LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS', '2048'))
 

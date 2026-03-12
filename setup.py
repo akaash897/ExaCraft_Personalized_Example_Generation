@@ -8,9 +8,9 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="exacraft",
-    version="1.0.0",
-    author="Research Team",
-    description="Personalized educational example generation via hybrid personalization (static profile + dynamic learning context + collaborative filtering)",
+    version="5.0.0",
+    author="Akaash Chatterjee",
+    description="Personalized educational example generation via agentic LangGraph workflow with natural-language feedback loop and Adaptive Response Agent",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),

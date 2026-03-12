@@ -115,8 +115,8 @@ class LLMProviderFactory:
         provider = provider.lower()
 
         defaults = {
-            LLMProvider.GEMINI.value: "gemini-2.5-flash",
-            LLMProvider.OPENAI.value: "gpt-4o-mini"
+            LLMProvider.GEMINI.value: "gemini-3.1-flash-lite-preview",
+            LLMProvider.OPENAI.value: "gpt-5-mini"
         }
 
         if provider not in defaults:

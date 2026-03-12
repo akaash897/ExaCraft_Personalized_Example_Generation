@@ -3,7 +3,7 @@ Workflow State Schemas
 TypedDict definitions for LangGraph workflow states.
 """
 
-from typing import TypedDict, Optional, List, Dict, Any
+from typing import TypedDict, Optional, Dict, Any
 
 
 class PersonalizedGenerationState(TypedDict, total=False):
@@ -55,22 +55,3 @@ class PersonalizedGenerationState(TypedDict, total=False):
     workflow_started_at: Optional[str]
     workflow_completed_at: Optional[str]
 
-
-class FeedbackProcessingState(TypedDict, total=False):
-    """State for Adaptive Response Agent (formerly Subagent B)"""
-
-    user_id: str
-    example_id: str
-    topic: str
-    example_text: str
-    user_feedback_text: str
-    user_profile: Optional[Dict[str, Any]]
-    pattern_history: Optional[Dict[str, Any]]
-
-    # Agent outputs
-    regeneration_requested: bool
-    regeneration_instruction: str
-    agent_decisions: Optional[List[str]]       # log of which tools were called
-    subject_tag: Optional[str]
-    feedback_recorded: bool
-    indexes_updated: bool

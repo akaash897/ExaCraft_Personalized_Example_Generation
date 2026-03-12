@@ -7,7 +7,7 @@ import os
 import json
 import uuid
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 
 class ExampleHistory:
@@ -128,127 +128,6 @@ class ExampleHistory:
 
         return example_id
 
-    def record_feedback(self, example_id: str, accepted: bool, regeneration_requested: bool = False):
-        """
-        Record user feedback on an example
-
-        Args:
-            example_id: ID of the example
-            accepted: Whether the user accepted the example
-            regeneration_requested: Whether user requested a regeneration
-        """
-        example = self._find_example_by_id(example_id)
-        if not example:
-            return False
-
-        example["feedback"]["accepted"] = accepted
-        example["feedback"]["regeneration_requested"] = regeneration_requested
-
-        # Calculate timestamp difference
-        if "timestamp" in example:
-            try:
-                gen_time = datetime.fromisoformat(example["timestamp"])
-                action_time = datetime.now()
-                delta = (action_time - gen_time).total_seconds()
-                example["feedback"]["time_to_action_seconds"] = int(delta)
-            except:
-                pass
-
-        # Calculate effectiveness score
-        score = self._calculate_effectiveness_score(example)
-        example["effectiveness_score"] = score
-
-        if "effectiveness_scores" not in self.history_data:
-            self.history_data["effectiveness_scores"] = {}
-
-        self.history_data["effectiveness_scores"][example_id] = score
-
-        self.save_history()
-        return True
-
-    def _find_example_by_id(self, example_id: str) -> Optional[Dict]:
-        """Find example by ID"""
-        for ex in self.history_data.get("examples", []):
-            if ex.get("example_id") == example_id:
-                return ex
-        return None
-
-    def _calculate_effectiveness_score(self, example: Dict) -> float:
-        """
-        Calculate effectiveness score for an example (0-1 scale)
-
-        Scoring:
-        - Accepted without regeneration: 1.0
-        - Accepted after regeneration: 0.5
-        - Regenerated (not accepted): 0.0
-        - Quick acceptance (<10s): +0.1 bonus
-        """
-        feedback = example.get("feedback", {})
-        accepted = feedback.get("accepted")
-        regenerated = feedback.get("regeneration_requested", False)
-        time_to_action = feedback.get("time_to_action_seconds", float('inf'))
-
-        if accepted is None:
-            return None  # No feedback yet
-
-        base_score = 0.0
-
-        if accepted and not regenerated:
-            base_score = 1.0
-        elif accepted and regenerated:
-            base_score = 0.5
-        else:
-            base_score = 0.0
-
-        # Bonus for quick acceptance
-        if accepted and time_to_action < 10:
-            base_score = min(1.0, base_score + 0.1)
-
-        return base_score
-
-    def get_effective_examples_for_topic(self, topic: str, min_score: float = 0.5,
-                                         limit: int = 5) -> List[Dict]:
-        """
-        Get most effective examples for a topic
-
-        Args:
-            topic: The topic to search for
-            min_score: Minimum effectiveness score
-            limit: Maximum number of examples to return
-
-        Returns:
-            List of example dictionaries, sorted by effectiveness score
-        """
-        example_ids = self.history_data.get("topic_examples", {}).get(topic, [])
-        effective_examples = []
-
-        for ex_id in example_ids:
-            example = self._find_example_by_id(ex_id)
-            if example:
-                score = example.get("effectiveness_score")
-                if score is not None and score >= min_score:
-                    effective_examples.append(example)
-
-        # Sort by effectiveness score descending
-        effective_examples.sort(key=lambda x: x.get("effectiveness_score", 0), reverse=True)
-
-        return effective_examples[:limit]
-
-    def get_user_most_effective_examples(self, limit: int = 10) -> List[Dict]:
-        """Get user's most effective examples across all topics"""
-        all_examples = self.history_data.get("examples", [])
-
-        # Filter examples with effectiveness scores
-        scored_examples = [
-            ex for ex in all_examples
-            if ex.get("effectiveness_score") is not None
-        ]
-
-        # Sort by score descending
-        scored_examples.sort(key=lambda x: x.get("effectiveness_score", 0), reverse=True)
-
-        return scored_examples[:limit]
-
     def save_history(self):
         """Save history to file"""
         if not self.history_file:
@@ -262,22 +141,3 @@ class ExampleHistory:
             print(f"Error saving example history: {e}")
             return False
 
-    def get_statistics(self) -> Dict:
-        """Get statistics about example history"""
-        examples = self.history_data.get("examples", [])
-
-        total_examples = len(examples)
-        scored_examples = [ex for ex in examples if ex.get("effectiveness_score") is not None]
-        avg_score = sum(ex.get("effectiveness_score", 0) for ex in scored_examples) / len(scored_examples) if scored_examples else 0
-
-        regeneration_count = sum(1 for ex in examples if ex.get("feedback", {}).get("regeneration_requested", False))
-        acceptance_count = sum(1 for ex in examples if ex.get("feedback", {}).get("accepted", False))
-
-        return {
-            "total_examples": total_examples,
-            "scored_examples": len(scored_examples),
-            "average_effectiveness": round(avg_score, 3),
-            "regeneration_rate": round(regeneration_count / total_examples, 3) if total_examples > 0 else 0,
-            "acceptance_rate": round(acceptance_count / total_examples, 3) if total_examples > 0 else 0,
-            "unique_topics": len(self.history_data.get("topic_examples", {}))
-        }
