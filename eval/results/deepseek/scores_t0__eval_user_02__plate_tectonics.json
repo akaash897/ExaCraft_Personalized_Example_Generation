@@ -1,0 +1,80 @@
+{
+  "key": "t0__eval_user_02__plate_tectonics",
+  "tier": "t0",
+  "user_id": "eval_user_02",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_bbeadfe3eb0b43b7",
+    "initial_example": "**Concept:** Plate Tectonics\n\n**Example:**\nImagine the Earth's surface is like a giant, cracked eggshell floating on a pot of thick, simmering soup. The cracked pieces are the tectonic plates. They don't stay still; they slowly drift, bump, and grind against each other over millions of years.\n\n**What Moves the Plates?**\nThe hot, soft rock in the Earth's mantle (the \"soup\") churns in slow currents due to heat from the planet's core. This movement drags the overlying plates along.\n\n**What Happens at the Edges?**\nThe way plates interact at their boundaries creates most of the world's major geological features.\n*   **Divergent Boundary:** Two plates move **apart**. Magma rises from below to fill the gap, creating new crust. This is how mid-ocean ridges and rift valleys form.\n*   **Convergent Boundary:** Two plates move **together**.\n    *   If an oceanic plate meets a continental plate, the denser oceanic plate dives beneath it in a process called subduction. This creates deep ocean trenches and volcanic mountain ranges (like the Andes).\n    *   If two continental plates collide, they crumple upward, forming massive mountain ranges (like the Himalayas).\n*   **Transform Boundary:** Two plates slide **past each other** horizontally. The friction builds up and eventually releases as earthquakes, like along the San Andreas Fault.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains the location of earthquakes, volcanoes, and mountain ranges. The Earth's surface is a dynamic mosaic of moving pieces, and their interactions are the engine that constantly reshapes our planet.",
+    "final_example": "**Concept:** Plate Tectonics\n\n**Example:**\nImagine the Earth's surface is like a giant, cracked eggshell floating on a pot of thick, simmering soup. The cracked pieces are the tectonic plates. They don't stay still; they slowly drift, bump, and grind against each other over millions of years.\n\n**What Moves the Plates?**\nThe hot, soft rock in the Earth's mantle (the \"soup\") churns in slow currents due to heat from the planet's core. This movement drags the overlying plates along.\n\n**What Happens at the Edges?**\nThe way plates interact at their boundaries creates most of the world's major geological features.\n*   **Divergent Boundary:** Two plates move **apart**. Magma rises from below to fill the gap, creating new crust. This is how mid-ocean ridges and rift valleys form.\n*   **Convergent Boundary:** Two plates move **together**.\n    *   If an oceanic plate meets a continental plate, the denser oceanic plate dives beneath it in a process called subduction. This creates deep ocean trenches and volcanic mountain ranges (like the Andes).\n    *   If two continental plates collide, they crumple upward, forming massive mountain ranges (like the Himalayas).\n*   **Transform Boundary:** Two plates slide **past each other** horizontally. The friction builds up and eventually releases as earthquakes, like along the San Andreas Fault.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains the location of earthquakes, volcanoes, and mountain ranges. The Earth's surface is a dynamic mosaic of moving pieces, and their interactions are the engine that constantly reshapes our planet.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Plate Tectonics\n\n**Example:**\nImagine the Earth's surface is like a giant, cracked eggshell floating on a pot of thick, simmering soup. The cracked pieces are the tectonic plates. They don't stay still; they slowly drift, bump, and grind against each other over millions of years.\n\n**What Moves the Plates?**\nThe hot, soft rock in the Earth's mantle (the \"soup\") churns in slow currents due to heat from the planet's core. This movement drags the overlying plates along.\n\n**What Happens at the Edges?**\nThe way plates interact at their boundaries creates most of the world's major geological features.\n*   **Divergent Boundary:** Two plates move **apart**. Magma rises from below to fill the gap, creating new crust. This is how mid-ocean ridges and rift valleys form.\n*   **Convergent Boundary:** Two plates move **together**.\n    *   If an oceanic plate meets a continental plate, the denser oceanic plate dives beneath it in a process called subduction. This creates deep ocean trenches and volcanic mountain ranges (like the Andes).\n    *   If two continental plates collide, they crumple upward, forming massive mountain ranges (like the Himalayas).\n*   **Transform Boundary:** Two plates slide **past each other** horizontally. The friction builds up and eventually releases as earthquakes, like along the San Andreas Fault.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains the location of earthquakes, volcanoes, and mountain ranges. The Earth's surface is a dynamic mosaic of moving pieces, and their interactions are the engine that constantly reshapes our planet.",
+        "example_id": "ex_29725464664b445c",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.75,
+      "CC": 4.28,
+      "CA": 4.81,
+      "PC": 4.83,
+      "DA": 4.44
+    },
+    "composite": 4.259,
+    "reasoning": "The example effectively uses a relatable analogy (cracked eggshell and simmering soup) that aligns with the user's example-based learning style, though it doesn't explicitly incorporate the user's profession or location. The depth of explanation covers fundamental concepts of plate tectonics suitable for a medium complexity level, with accurate scientific details. The structure is clear, with logical progression from the analogy to specific boundary types and their features, facilitating understanding. The analogies and framing are appropriate for the geological topic, avoiding domain mismatches.\n\n[PF] PERSONALIZATION FIDELITY — The example does not incorporate the user's profession, location, or cultural background explicitly, but it uses a general analogy suitable for a learner with a scientific interest. It somewhat aligns with the learning style but lacks specific personalization.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION — The explanation strikes a good balance, providing enough detail to be medium complexity without becoming overly technical, matching the user's stated complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — All scientific facts about plate tectonics, boundary types, and processes are correct and well explained.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from analogy to specific boundary types and key insights, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are perfectly suited for a geology topic, using familiar concepts like eggshells and soup to illustrate complex processes.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 4,
+        "CA": 5,
+        "PC": 4,
+        "DA": 4
+      },
+      "composite": 4.1,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example provided does not reflect the user's actual profile in a meaningful way, as it does not incorporate the user's name, location, profession, or cultural background into the explanation of plate tectonics. The learning style preference for example-based learning is somewhat met, but the example itself is generic and could be applied to any user.\n\nPF_SCORE: 2\n\nFor the axis of Complexity Calibration (CC), the depth of the explanation matches the user's stated complexity level of \"medium\" fairly well, as it provides a clear and detailed overview of plate tectonics without delving into overly complex or technical aspects that might be beyond a medium level. However, some terms and concepts might still be slightly challenging for a non-expise user.\n\nCC_SCORE: 4\n\nFor the axis of Conceptual Accuracy (CA), the factual and scientific content of the example is correct, accurately describing the basics of plate tectonics, including the movement of tectonic plates, the processes at their boundaries, and the resulting geological features. The explanation is straightforward and does not contain any significant errors or inaccuracies.\n\nCA_SCORE: 5\n\nFor the axis of Pedagogical Clarity (PC), the example is well-structured and easy to follow, with a clear introduction to the concept of plate tectonics, followed by explanations of the key processes and their outcomes. The use of analogies, such as the Earth's surface being like a cracked eggshell, helps to make the concept more accessible and memorable.\n\nPC_SCORE: 5\n\nFor the axis of Domain Appropriateness (DA), the example is perfectly appropriate for the topic of plate tectonics, using relevant analogies and vocabulary that are specific to the field of geology. The explanation does not include any elements that are off-domain or inappropriate for the topic.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:07:09.197675"
+}

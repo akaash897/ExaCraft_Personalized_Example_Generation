@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_04__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_2504d3ac35f14608",
+    "initial_example": "Concept: Natural Selection\n\nExample:\n\nKenji, as a software engineer in Tokyo, you're familiar with iterative improvement\u2014like refining code through multiple versions. Natural selection works similarly, but on biological traits over generations.\n\nConsider a population of beetles in a Tokyo park:\n- Most beetles are green, blending with leaves.\n- A few are brown due to a random genetic mutation.\n- A new bird species arrives that preys on beetles.\n\nProcess:\n1. **Variation:** The brown beetles exist (genetic difference).\n2. **Selection Pressure:** Birds spot green beetles more easily on leaves.\n3. **Differential Survival:** Brown beetles survive and reproduce more often.\n4. **Heredity:** Brown beetles pass the \"brown\" trait to offspring.\n5. **Outcome:** Over generations, the beetle population becomes mostly brown.\n\nNumerical Snapshot:\n- Generation 1: 95% green, 5% brown beetles.\n- After 10 generations (with birds hunting): 20% green, 80% brown.\n\nKey Insight:\nNatural selection isn't random\u2014it's the non-random survival of random variations. Traits that improve survival and reproduction in a specific environment become more common over time, shaping species without any \"goal\" or \"plan.\"",
+    "final_example": "Concept: Natural Selection\n\nExample:\n\nKenji, as a software engineer in Tokyo, you're familiar with iterative improvement\u2014like refining code through multiple versions. Natural selection works similarly, but on biological traits over generations.\n\nConsider a population of beetles in a Tokyo park:\n- Most beetles are green, blending with leaves.\n- A few are brown due to a random genetic mutation.\n- A new bird species arrives that preys on beetles.\n\nProcess:\n1. **Variation:** The brown beetles exist (genetic difference).\n2. **Selection Pressure:** Birds spot green beetles more easily on leaves.\n3. **Differential Survival:** Brown beetles survive and reproduce more often.\n4. **Heredity:** Brown beetles pass the \"brown\" trait to offspring.\n5. **Outcome:** Over generations, the beetle population becomes mostly brown.\n\nNumerical Snapshot:\n- Generation 1: 95% green, 5% brown beetles.\n- After 10 generations (with birds hunting): 20% green, 80% brown.\n\nKey Insight:\nNatural selection isn't random\u2014it's the non-random survival of random variations. Traits that improve survival and reproduction in a specific environment become more common over time, shaping species without any \"goal\" or \"plan.\"",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\n\nKenji, as a software engineer in Tokyo, you're familiar with iterative improvement\u2014like refining code through multiple versions. Natural selection works similarly, but on biological traits over generations.\n\nConsider a population of beetles in a Tokyo park:\n- Most beetles are green, blending with leaves.\n- A few are brown due to a random genetic mutation.\n- A new bird species arrives that preys on beetles.\n\nProcess:\n1. **Variation:** The brown beetles exist (genetic difference).\n2. **Selection Pressure:** Birds spot green beetles more easily on leaves.\n3. **Differential Survival:** Brown beetles survive and reproduce more often.\n4. **Heredity:** Brown beetles pass the \"brown\" trait to offspring.\n5. **Outcome:** Over generations, the beetle population becomes mostly brown.\n\nNumerical Snapshot:\n- Generation 1: 95% green, 5% brown beetles.\n- After 10 generations (with birds hunting): 20% green, 80% brown.\n\nKey Insight:\nNatural selection isn't random\u2014it's the non-random survival of random variations. Traits that improve survival and reproduction in a specific environment become more common over time, shaping species without any \"goal\" or \"plan.\"",
+        "example_id": "ex_76b459aad72843c2",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.73,
+      "CC": 4.27,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.99
+    },
+    "composite": 4.799,
+    "reasoning": "The example effectively personalizes the content by referencing Kenji's profession, location, and learning style, making the analogy more relatable. The depth of explanation aligns well with a medium complexity level, providing sufficient detail without being overly technical. The scientific accuracy of the description of natural selection is sound, with correct steps and terminology. The structure is clear, with a logical flow from analogy to process to key insight, facilitating understanding. The analogy of iterative code improvement is appropriate for a software engineer and fits well within the biological domain, maintaining domain relevance.\n\nPF: The example directly references Kenji's profession and location, using a tailored analogy that resonates with his background, fulfilling personalization well.  \nAXIS_SCORE: 5\n\nCC: The explanation covers the core steps of natural selection at a medium complexity level, including genetic variation, selection pressure, and outcome, matching the user's specified complexity.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing the process of natural selection with appropriate terminology and sequence, with no factual errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, starting with an analogy, then detailing the process step-by-step, and concluding with a key insight, making it pedagogically effective.  \nAXIS_SCORE: 5\n\nDA: The analogy of code refinement and iterative improvement is appropriate for a software engineer, and the framing within biology is consistent with the topic, making it domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:25:45.352388"
+}

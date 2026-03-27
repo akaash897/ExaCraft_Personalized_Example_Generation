@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_06__compound_interest",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Compound Interest",
+    "thread_id": "thread_9f072243b0fd4eee",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nThink of savings like a snowball rolling downhill. Your initial money (the principal) gathers more money as time passes because the interest it earns also starts earning interest.\n\nContext:\n- Amara, a nurse in Lagos, Nigeria, wants her savings to grow in a bank account that pays compound interest—where interest is added to the balance so future interest is earned on both the original money and past interest.\n\nKey terms (defined inline):\n- Principal (P): the starting amount you deposit\n- Rate (r): annual interest rate (as a decimal)\n- Compounding frequency (n): how many times per year interest is added\n- Time (t): how many years you keep the money in the account\n- Amount (A): total value after t years\n\nFormula:\nA = P × (1 + r/n)^(n × t)\n\nNumeric example:\nP = 50,000 Naira\nr = 6% = 0.06 per year\nn = 12 (monthly)\nt = 2 years\n\nA = 50,000 × (1 + 0.06/12)^(12×2)\n  = 50,000 × (1.005)^24\n  ≈ 50,000 × 1.12798\n  ≈ 56,400 Naira\n\nInterpretation:\nThe balance grows because each month’s interest is added to the principal, so future interest is earned on a larger amount.\n\nKey Insight:\nCompound interest speeds up growth by paying interest on interest. More frequent compounding or longer time yields a bigger final amount.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nThink of savings like a snowball rolling downhill. Your initial money (the principal) gathers more money as time passes because the interest it earns also starts earning interest.\n\nContext:\n- Amara, a nurse in Lagos, Nigeria, wants her savings to grow in a bank account that pays compound interest—where interest is added to the balance so future interest is earned on both the original money and past interest.\n\nKey terms (defined inline):\n- Principal (P): the starting amount you deposit\n- Rate (r): annual interest rate (as a decimal)\n- Compounding frequency (n): how many times per year interest is added\n- Time (t): how many years you keep the money in the account\n- Amount (A): total value after t years\n\nFormula:\nA = P × (1 + r/n)^(n × t)\n\nNumeric example:\nP = 50,000 Naira\nr = 6% = 0.06 per year\nn = 12 (monthly)\nt = 2 years\n\nA = 50,000 × (1 + 0.06/12)^(12×2)\n  = 50,000 × (1.005)^24\n  ≈ 50,000 × 1.12798\n  ≈ 56,400 Naira\n\nInterpretation:\nThe balance grows because each month’s interest is added to the principal, so future interest is earned on a larger amount.\n\nKey Insight:\nCompound interest speeds up growth by paying interest on interest. More frequent compounding or longer time yields a bigger final amount.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nThink of savings like a snowball rolling downhill. Your initial money (the principal) gathers more money as time passes because the interest it earns also starts earning interest.\n\nContext:\n- Amara, a nurse in Lagos, Nigeria, wants her savings to grow in a bank account that pays compound interest—where interest is added to the balance so future interest is earned on both the original money and past interest.\n\nKey terms (defined inline):\n- Principal (P): the starting amount you deposit\n- Rate (r): annual interest rate (as a decimal)\n- Compounding frequency (n): how many times per year interest is added\n- Time (t): how many years you keep the money in the account\n- Amount (A): total value after t years\n\nFormula:\nA = P × (1 + r/n)^(n × t)\n\nNumeric example:\nP = 50,000 Naira\nr = 6% = 0.06 per year\nn = 12 (monthly)\nt = 2 years\n\nA = 50,000 × (1 + 0.06/12)^(12×2)\n  = 50,000 × (1.005)^24\n  ≈ 50,000 × 1.12798\n  ≈ 56,400 Naira\n\nInterpretation:\nThe balance grows because each month’s interest is added to the principal, so future interest is earned on a larger amount.\n\nKey Insight:\nCompound interest speeds up growth by paying interest on interest. More frequent compounding or longer time yields a bigger final amount.",
+        "example_id": "ex_7d2d91f5df584d47",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 4,
+      "CA": 4,
+      "PC": 5,
+      "DA": 4
+    },
+    "composite": 4.2,
+    "reasoning": "The example is highly tailored to the user's profile, incorporating their name, location, and profession, and uses an analogy (snowball) that is accessible and relevant to a general audience, which aligns with their learning style. The complexity level appears appropriate, with clear explanations and a straightforward numeric example suitable for a medium complexity learner. The factual content about compound interest, formulas, and calculations is accurate and standard. The structure is logical, with definitions, formulas, and interpretation clearly separated, facilitating learning. The analogy used is appropriate for the domain of finance and savings, making the framing domain-appropriate.\n\nPF: The example explicitly mentions the user's name, profession, and location, and uses an analogy that is simple and relatable, matching the example-based learning style.  \nAXIS_SCORE: 5\n\nCC: The explanation includes the correct formula for compound interest, a realistic numeric example, and a clear interpretation, matching the medium complexity level.  \nAXIS_SCORE: 5\n\nCA: The content is factually accurate, with correct formulas, definitions, and calculations, and no errors are present.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from concept to formula to numeric example and interpretation, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\nDA: The analogy of a snowball rolling downhill is a common, domain-appropriate metaphor for compound interest, effectively framing the concept within the financial domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 4, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:05:49.135984"
+}

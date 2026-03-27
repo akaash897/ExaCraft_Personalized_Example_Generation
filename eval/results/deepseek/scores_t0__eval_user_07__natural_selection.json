@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_07__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_07",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_07",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "S\u00e3o Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_07",
+    "topic": "Natural Selection",
+    "thread_id": "thread_44e7d23965ce4dd2",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nConsider a population of rabbits living in a snowy forest.\nMost rabbits have brown fur, but a few have white fur.\n\nWhat happens over generations:\n  - Brown rabbits are easier for predators to spot against the snow.\n  - White rabbits blend in better and survive longer.\n  - Surviving white rabbits have more offspring, which also tend to have white fur.\n  - Over many generations, the proportion of white rabbits in the forest increases.\n\nKey Insight:\n  Traits that help an organism survive and reproduce in its specific environment become more common over time. This is not a plan; it's a result of who lives and who doesn't.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nConsider a population of rabbits living in a snowy forest.\nMost rabbits have brown fur, but a few have white fur.\n\nWhat happens over generations:\n  - Brown rabbits are easier for predators to spot against the snow.\n  - White rabbits blend in better and survive longer.\n  - Surviving white rabbits have more offspring, which also tend to have white fur.\n  - Over many generations, the proportion of white rabbits in the forest increases.\n\nKey Insight:\n  Traits that help an organism survive and reproduce in its specific environment become more common over time. This is not a plan; it's a result of who lives and who doesn't.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nConsider a population of rabbits living in a snowy forest.\nMost rabbits have brown fur, but a few have white fur.\n\nWhat happens over generations:\n  - Brown rabbits are easier for predators to spot against the snow.\n  - White rabbits blend in better and survive longer.\n  - Surviving white rabbits have more offspring, which also tend to have white fur.\n  - Over many generations, the proportion of white rabbits in the forest increases.\n\nKey Insight:\n  Traits that help an organism survive and reproduce in its specific environment become more common over time. This is not a plan; it's a result of who lives and who doesn't.",
+        "example_id": "ex_c4fa831248d0492b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.52,
+      "CC": 4.19,
+      "CA": 4.92,
+      "PC": 4.88,
+      "DA": 4.32
+    },
+    "composite": 4.226,
+    "reasoning": "The example uses a straightforward scenario involving rabbits in a snowy environment, which is a common illustration of natural selection. It does not incorporate the user's profile details such as their background in humanities or their location, nor does it use domain-specific analogies or language tailored to a humanities researcher. The complexity level appears appropriate for a general understanding but may lack depth for a PhD-level learner. The factual content about natural selection is accurate, and the structure is clear, with a logical flow from scenario to insight. The framing is appropriate for the biological topic, though it could be more tailored to a humanities perspective.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example does not reflect the user's profile; it is generic and does not incorporate any personal or cultural elements.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION \u2014 The explanation is simple and accessible, fitting a medium complexity level, but it does not delve into deeper evolutionary mechanisms or mathematical models that a PhD might expect.  \nAXIS_SCORE: 3\n\n[CA] CONCEPTUAL ACCURACY \u2014 The core facts about natural selection are correct, with no inaccuracies or misleading statements.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a clear scenario and a key insight that ties the example to the concept, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogy of rabbits in a snowy environment is appropriate for biology, but it is a common example and not specifically tailored to a humanities perspective or a Latin American context.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 2, \"CC\": 3, \"CA\": 5, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:15:16.370927"
+}

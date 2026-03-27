@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_01__plate_tectonics",
+  "tier": "t0",
+  "user_id": "eval_user_01",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_b2b81f5c1c2e4738",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nThink of Earthâ€™s crust as a thin, cracked shell floating on warm syrup. The cracks are tectonic plates. In a simple scene, the North American Plate and the Eurasian Plate are slowly pulling apart along a boundary in the Atlantic. As they separate, magma from underneath pushes upward, cools, and becomes new ocean floor. Over long ages, this makes the ocean slowly wider and can trigger small earthquakes along the separating edge.\n\nKey Insight:\nPlate tectonics explains how the crust moves and reshapes Earth's surface over timeâ€”driving sea-floor spreading, mountain formation, and earthquakes.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nThink of Earthâ€™s crust as a thin, cracked shell floating on warm syrup. The cracks are tectonic plates. In a simple scene, the North American Plate and the Eurasian Plate are slowly pulling apart along a boundary in the Atlantic. As they separate, magma from underneath pushes upward, cools, and becomes new ocean floor. Over long ages, this makes the ocean slowly wider and can trigger small earthquakes along the separating edge.\n\nKey Insight:\nPlate tectonics explains how the crust moves and reshapes Earth's surface over timeâ€”driving sea-floor spreading, mountain formation, and earthquakes.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nThink of Earthâ€™s crust as a thin, cracked shell floating on warm syrup. The cracks are tectonic plates. In a simple scene, the North American Plate and the Eurasian Plate are slowly pulling apart along a boundary in the Atlantic. As they separate, magma from underneath pushes upward, cools, and becomes new ocean floor. Over long ages, this makes the ocean slowly wider and can trigger small earthquakes along the separating edge.\n\nKey Insight:\nPlate tectonics explains how the crust moves and reshapes Earth's surface over timeâ€”driving sea-floor spreading, mountain formation, and earthquakes.",
+        "example_id": "ex_c7173a2928124d73",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 4,
+      "CA": 4,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 3.6,
+    "reasoning": "The example uses a simplified analogy of Earth's crust as a shell on syrup, which is accessible and engaging for a high school student, aligning with the medium complexity level. It correctly describes key processes like sea-floor spreading and earthquakes, indicating factual accuracy. The structure is clear, with a straightforward explanation and a key insight that summarizes the core concept, making it pedagogically effective. However, the analogy, while domain-relevant, is somewhat generic and could be more tailored to the user's profile, such as incorporating European geography or more specific tectonic features. Overall, it is appropriate but could be slightly more personalized.\n\n[PF] PERSONALIZATION FIDELITY â€” The example does not incorporate specific profile details like Lena's location in Berlin or her European background, nor does it explicitly match her learning style beyond being example-based. It remains quite generic in personalization.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION â€” The explanation covers fundamental processes of plate tectonics at a medium level, suitable for a high school student, with appropriate terminology and depth. It does not oversimplify or overcomplicate.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The scientific content is accurate, correctly describing sea-floor spreading, magma movement, and earthquakes, with no errors or misconceptions.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear analogy leading into the key insight, making the core concept memorable and accessible. It effectively bridges the analogy to the scientific process.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS â€” The analogy of Earth's crust on syrup and the description of tectonic plates are appropriate for geology and Earth science, fitting the domain well.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 4, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:41:43.236660"
+}

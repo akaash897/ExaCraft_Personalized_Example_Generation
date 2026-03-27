@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_01__plate_tectonics",
+  "tier": "t1",
+  "user_id": "eval_user_01",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_5f576ef9e4804e22",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nLena sits in a university seminar in Berlin, imagining Earth as a cracked shell of large tiles floating on a warm, soft layer. The outer crust (the lithosphere) is divided into several plates that slowly move because the hotter mantle underneath them churns like a simmering pot.\n\nKey ideas to recognize:\n- Lithosphere: the rigid outer layer (crust plus the uppermost mantle) that forms the plates.\n- Mantle convection: slow currents in the mantle that push and pull the plates above them.\n- Plate boundaries: lines where plates meet and interact; three main types are divergent, convergent, and transform.\n\n- Divergent boundary (pulling apart):\n  - Plates move away from each other.\n  - New crust forms as magma rises to fill the gap.\n  - Example: Mid-Atlantic Ridge, where the Atlantic Ocean widens a little every year.\n  - Imagery: two tiles slowly separating and a new strip of tile appearing between them.\n\n- Convergent boundary (colliding):\n  - Plates collide; one may dive beneath the other (subduction) or they crumple upward.\n  - This builds mountains or causes deep earthquakes.\n  - Example: The Alps, formed by the collision of the African plate with the Eurasian plate.\n  - Imagery: two tiles grinding together and buckling into a tall ridge.\n\n- Transform boundary (sliding past):\n  - Plates slide horizontally past each other.\n  - This often causes earthquakes along faults.\n  - Example: San Andreas Fault in California.\n  - Imagery: two tiles sliding side by side with a jagged edge.\n\nNumeric sense (a simple pace of movement):\n- If two plates drift apart at about 2 centimeters per year at a divergent boundary, after 1,000,000 years they would be about 200 kilometers wider.\n- This tiny, steady motion over millions of years explains why continents and oceans look so different today.\n\nKey Insight:\nPlate tectonics explains how the crust is organized into moving pieces; their interactions at boundaries shape mountains, oceans, and earthquakes. Small, slow movements accumulate into big, long-term changes.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nLena sits in a university seminar in Berlin, imagining Earth as a cracked shell of large tiles floating on a warm, soft layer. The outer crust (the lithosphere) is divided into several plates that slowly move because the hotter mantle underneath them churns like a simmering pot.\n\nKey ideas to recognize:\n- Lithosphere: the rigid outer layer (crust plus the uppermost mantle) that forms the plates.\n- Mantle convection: slow currents in the mantle that push and pull the plates above them.\n- Plate boundaries: lines where plates meet and interact; three main types are divergent, convergent, and transform.\n\n- Divergent boundary (pulling apart):\n  - Plates move away from each other.\n  - New crust forms as magma rises to fill the gap.\n  - Example: Mid-Atlantic Ridge, where the Atlantic Ocean widens a little every year.\n  - Imagery: two tiles slowly separating and a new strip of tile appearing between them.\n\n- Convergent boundary (colliding):\n  - Plates collide; one may dive beneath the other (subduction) or they crumple upward.\n  - This builds mountains or causes deep earthquakes.\n  - Example: The Alps, formed by the collision of the African plate with the Eurasian plate.\n  - Imagery: two tiles grinding together and buckling into a tall ridge.\n\n- Transform boundary (sliding past):\n  - Plates slide horizontally past each other.\n  - This often causes earthquakes along faults.\n  - Example: San Andreas Fault in California.\n  - Imagery: two tiles sliding side by side with a jagged edge.\n\nNumeric sense (a simple pace of movement):\n- If two plates drift apart at about 2 centimeters per year at a divergent boundary, after 1,000,000 years they would be about 200 kilometers wider.\n- This tiny, steady motion over millions of years explains why continents and oceans look so different today.\n\nKey Insight:\nPlate tectonics explains how the crust is organized into moving pieces; their interactions at boundaries shape mountains, oceans, and earthquakes. Small, slow movements accumulate into big, long-term changes.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nLena sits in a university seminar in Berlin, imagining Earth as a cracked shell of large tiles floating on a warm, soft layer. The outer crust (the lithosphere) is divided into several plates that slowly move because the hotter mantle underneath them churns like a simmering pot.\n\nKey ideas to recognize:\n- Lithosphere: the rigid outer layer (crust plus the uppermost mantle) that forms the plates.\n- Mantle convection: slow currents in the mantle that push and pull the plates above them.\n- Plate boundaries: lines where plates meet and interact; three main types are divergent, convergent, and transform.\n\n- Divergent boundary (pulling apart):\n  - Plates move away from each other.\n  - New crust forms as magma rises to fill the gap.\n  - Example: Mid-Atlantic Ridge, where the Atlantic Ocean widens a little every year.\n  - Imagery: two tiles slowly separating and a new strip of tile appearing between them.\n\n- Convergent boundary (colliding):\n  - Plates collide; one may dive beneath the other (subduction) or they crumple upward.\n  - This builds mountains or causes deep earthquakes.\n  - Example: The Alps, formed by the collision of the African plate with the Eurasian plate.\n  - Imagery: two tiles grinding together and buckling into a tall ridge.\n\n- Transform boundary (sliding past):\n  - Plates slide horizontally past each other.\n  - This often causes earthquakes along faults.\n  - Example: San Andreas Fault in California.\n  - Imagery: two tiles sliding side by side with a jagged edge.\n\nNumeric sense (a simple pace of movement):\n- If two plates drift apart at about 2 centimeters per year at a divergent boundary, after 1,000,000 years they would be about 200 kilometers wider.\n- This tiny, steady motion over millions of years explains why continents and oceans look so different today.\n\nKey Insight:\nPlate tectonics explains how the crust is organized into moving pieces; their interactions at boundaries shape mountains, oceans, and earthquakes. Small, slow movements accumulate into big, long-term changes.",
+        "example_id": "ex_d7c2afb03623400c",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.1,
+    "reasoning": "The example effectively personalizes the content by mentioning Lena's location in Berlin and her role as a student, and it uses relatable imagery like tiles to explain plate movements, aligning with her example-based learning style. The depth of explanation covers key concepts with appropriate detail for a high school level, including specific examples and imagery, indicating good calibration of complexity. The scientific accuracy appears solid, with correct descriptions of plate boundaries, mantle convection, and examples like the Mid-Atlantic Ridge and San Andreas Fault, demonstrating strong factual correctness. The structure is clear, with a logical flow from basic concepts to specific boundary types and a numeric example, making it pedagogically effective. The analogies, such as tiles and a simmering pot, are appropriate for the domain of geology and help clarify the concepts without straying into unrelated fields.\n\n[PF] PERSONALIZATION FIDELITY — The example mentions Lena's name, location, and learning style, and uses domain-specific analogies, making it well tailored to her profile.\nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical detail with accessible language, suitable for a high school student with medium complexity needs.\nAXIS_SCORE: 3\n\n[CA] CONCEPTUAL ACCURACY — All scientific facts about plate tectonics, boundaries, and processes are correct and well-explained.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with clear sections, and the analogies serve as effective bridges to understanding.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies (tiles, magma, faults) are perfectly aligned with geology, making the framing highly appropriate.\nAXIS_SCORE: 4\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:55:45.955120"
+}

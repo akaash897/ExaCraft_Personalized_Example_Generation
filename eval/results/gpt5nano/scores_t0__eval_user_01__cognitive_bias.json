@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_01__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_21663d847aa14078",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts that help us think quickly but can lead to errors in judgment. A common one is availability bias: we judge how likely something is based on how easily examples come to mind.\n\nScenario:\nAfter reading several headlines about shark sightings near beaches, you start to feel that beachgoing is dangerously risky. You decide not to swim this weekend because those vivid stories are fresh in your memory, even though most data show shark incidents are very rare.\n\nWhat happened:\nMemorable, recent stories crowded your view of risk, so you overestimate the danger.\n\nKey Insight:\nAvailability bias shows that what we can recall easily can disproportionately shape our judgments, even if it isnâ€™t representative of reality.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts that help us think quickly but can lead to errors in judgment. A common one is availability bias: we judge how likely something is based on how easily examples come to mind.\n\nScenario:\nAfter reading several headlines about shark sightings near beaches, you start to feel that beachgoing is dangerously risky. You decide not to swim this weekend because those vivid stories are fresh in your memory, even though most data show shark incidents are very rare.\n\nWhat happened:\nMemorable, recent stories crowded your view of risk, so you overestimate the danger.\n\nKey Insight:\nAvailability bias shows that what we can recall easily can disproportionately shape our judgments, even if it isnâ€™t representative of reality.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts that help us think quickly but can lead to errors in judgment. A common one is availability bias: we judge how likely something is based on how easily examples come to mind.\n\nScenario:\nAfter reading several headlines about shark sightings near beaches, you start to feel that beachgoing is dangerously risky. You decide not to swim this weekend because those vivid stories are fresh in your memory, even though most data show shark incidents are very rare.\n\nWhat happened:\nMemorable, recent stories crowded your view of risk, so you overestimate the danger.\n\nKey Insight:\nAvailability bias shows that what we can recall easily can disproportionately shape our judgments, even if it isnâ€™t representative of reality.",
+        "example_id": "ex_cbcd91d8a79141bb",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 1,
+      "CC": 3,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 3.5,
+    "reasoning": "The example effectively introduces the concept of cognitive bias with a clear, relatable scenario involving shark sightings, which aligns well with a high school student's learning style. It correctly explains availability bias and provides a memorable insight, but it does not incorporate specific personal details from Lena's profile, such as her location or background, which limits personalization. The complexity level appears appropriate for a high school student, with straightforward language and a simple scenario. The content is factually accurate, with no evident errors. The structure is logical and easy to follow, with a clear flow from concept to example to insight. The analogy used (shark sightings) is appropriate for the domain of cognitive biases, especially in a media context, and does not stray into unrelated fields.\n\n[PF] PERSONALIZATION FIDELITY â€” The example does not incorporate Lena's personal details like her location (Berlin) or her European background, nor does it tailor the analogy to her specific context. It is generic in that sense but matches her learning style.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION â€” The language and explanation are suitable for a high school student, with no advanced jargon or complex formulas, fitting the medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The explanation of availability bias and the scenario are factually correct, with no inaccuracies or misleading information.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear progression from concept to scenario to insight, making it easy to understand and memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS â€” The analogy involving shark sightings and media reports is appropriate for illustrating cognitive biases, fitting well within the domain of psychology and decision-making.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 1, \"CC\": 3, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:41:00.866348"
+}

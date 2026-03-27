@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_05__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_4efc3789fd064165",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nLena, a student in Berlin, is researching how city policies affect air quality. She believes that reducing car traffic is the best solution. While gathering sources, she notices she tends to favor information that supports this belief and overlook or downplay information that doesn’t.\n\nSources she considers:\n- Article A: “Reducing car traffic lowers emissions by 20% in the city center.”\n- Article B: “Bike lanes improve safety and can be implemented without major disruption.”\n- Article C: “A similar car-reduction policy caused economic challenges in another city.”\n- Article D: “Car-reduction policies are essential to meet climate targets.”\n\nLena ends up citing A, B, and D to back her view, and she gives less attention to C. This is confirmation bias: the tendency to seek and emphasize evidence that confirms what you already think, while ignoring conflicting information.\n\nKey Insight:\nCognitive bias can make you feel confident by cherry-picking evidence; counter it by actively seeking opposing viewpoints and weighing all data fairly.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nLena, a student in Berlin, is researching how city policies affect air quality. She believes that reducing car traffic is the best solution. While gathering sources, she notices she tends to favor information that supports this belief and overlook or downplay information that doesn’t.\n\nSources she considers:\n- Article A: “Reducing car traffic lowers emissions by 20% in the city center.”\n- Article B: “Bike lanes improve safety and can be implemented without major disruption.”\n- Article C: “A similar car-reduction policy caused economic challenges in another city.”\n- Article D: “Car-reduction policies are essential to meet climate targets.”\n\nLena ends up citing A, B, and D to back her view, and she gives less attention to C. This is confirmation bias: the tendency to seek and emphasize evidence that confirms what you already think, while ignoring conflicting information.\n\nKey Insight:\nCognitive bias can make you feel confident by cherry-picking evidence; counter it by actively seeking opposing viewpoints and weighing all data fairly.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nLena, a student in Berlin, is researching how city policies affect air quality. She believes that reducing car traffic is the best solution. While gathering sources, she notices she tends to favor information that supports this belief and overlook or downplay information that doesn’t.\n\nSources she considers:\n- Article A: “Reducing car traffic lowers emissions by 20% in the city center.”\n- Article B: “Bike lanes improve safety and can be implemented without major disruption.”\n- Article C: “A similar car-reduction policy caused economic challenges in another city.”\n- Article D: “Car-reduction policies are essential to meet climate targets.”\n\nLena ends up citing A, B, and D to back her view, and she gives less attention to C. This is confirmation bias: the tendency to seek and emphasize evidence that confirms what you already think, while ignoring conflicting information.\n\nKey Insight:\nCognitive bias can make you feel confident by cherry-picking evidence; counter it by actively seeking opposing viewpoints and weighing all data fairly.",
+        "example_id": "ex_9cf65ab3189943ae",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example is tailored to Lena by mentioning her name, location, and profession, and it uses her scenario as a student researching city policies, which aligns with her learning style of example-based. The complexity level appears appropriate for a high school student, focusing on a clear, real-world example without overly technical language. The factual content about confirmation bias is accurate and well-explained, with a straightforward depiction of the bias and a practical key insight. The structure is logical, starting with the scenario, illustrating the bias, and concluding with a memorable takeaway, which supports pedagogical clarity. The analogy and framing are appropriate for the topic of cognitive bias, using a social/political context that is familiar and relevant, especially for a European high school student.\n\n[PF] PERSONALIZATION FIDELITY — The example directly involves Lena, her location, and her research context, which makes it highly personalized. It also matches her learning style by providing a concrete, relatable scenario.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The content is sufficiently detailed but not overly technical, suitable for a high school student. The explanation of confirmation bias is accessible and appropriately nuanced.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of confirmation bias is accurate, and the example correctly illustrates the concept without factual errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation, and key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The framing uses social and political examples relevant to cognitive bias, which is appropriate for the topic. The analogy is suitable and within the domain of social psychology and decision-making.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:01:51.512852"
+}

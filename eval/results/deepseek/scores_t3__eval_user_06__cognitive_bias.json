@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_06__cognitive_bias",
+  "tier": "t3",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_71deae8afa4940d1",
+    "initial_example": "**Concept:** Cognitive Bias\n\n**Example:**\nAmara, a nurse in a busy Lagos hospital, is assessing a patient who presents with a high fever and body aches. The patient is a young adult. During the recent rainy season, Amara and her colleagues treated a significant outbreak of malaria. This recent experience makes the symptoms of malaria highly \"available\" in her mind.\n\n**Step-by-Step Breakdown:**\n\n1.  **The Trigger:** The patient's symptoms (fever, aches) are common to many illnesses, including malaria, typhoid, and viral infections like influenza or dengue.\n\n2.  **The Bias in Action (Availability Heuristic):** The availability heuristic is a mental shortcut where we judge the likelihood of an event based on how easily examples come to mind. Because Amara has recently seen and treated many cases of malaria, it feels like the most probable diagnosis. Her initial assessment is disproportionately weighted toward malaria.\n\n3.  **Potential Clinical Pathway:** If Amara acts solely on this initial, biased judgment, she might:\n    *   Order a malaria test immediately (correct).\n    *   **But also,** potentially delay or forgo asking key questions about other symptoms (like a distinctive rash, severe headache behind the eyes, or recent travel) that could point to dengue or typhoid.\n    *   Consider prescribing antimalarial medication prematurely, before confirming the test result.\n\n4.  **Connecting to Outcomes:** This bias can lead to two main issues:\n    *   **Diagnostic Error:** The patient could have dengue fever. A delay in diagnosing dengue can be dangerous, as it requires specific monitoring for complications like bleeding or shock.\n    *   **Inefficient Care:** Unnecessary medication (if prescribed) wastes resources and could cause side effects. It also delays the correct treatment, potentially prolonging the patient's illness.\n\n5.  **The Mitigation (Critical Thinking):** To counter this bias, Amara consciously employs a systematic approach. She uses a standard triage protocol that requires her to:\n    *   Take a full history, not just the most obvious symptoms.\n    *   Perform a thorough physical examination.\n    *   Consider a differential diagnosis—a list of *all* possible causes—before settling on the most likely one. She forces herself to actively recall the symptoms and prevalence of other common febrile illnesses in Lagos.\n\n**Key Insight:**\nCognitive biases like the availability heuristic are subconscious shortcuts that can streamline thinking but also lead to systematic errors in judgment. In nursing, recognizing these biases is crucial for ensuring diagnoses are based on complete evidence and protocol, not just on what feels familiar or recent, thereby directly impacting patient safety and care quality.",
+    "final_example": "Concept: Confirmation Bias\n\nExample:\nAmara, a nurse in Lagos, is using a portable ECG machine to monitor a patient presenting with chest pain. Her initial, quick assessment leads her to suspect a cardiac issue. As she watches the monitor, she notices a few readings that show slight ST-segment elevation, which can indicate heart muscle strain. She focuses intently on these moments, mentally cataloging them as evidence for her cardiac hypothesis.\n\nMeanwhile, the monitor also displays several periods where the rhythm is completely normal and other readings, like a consistently normal pulse oximetry of 98%, suggest good oxygenation. Amara unconsciously dismisses these normal readings as \"the patient calming down\" or \"the machine settling,\" failing to integrate them into her assessment. She might even reposition the leads slightly, expecting to get a \"clearer\" (i.e., more confirmatory) reading.\n\nThe bias is in selectively gathering and interpreting data: she treats the ambiguous or slightly abnormal ECG tracings as proof, while explaining away the numerous normal readings that contradict her initial suspicion. This could lead her to escalate care for a cardiac event prematurely, potentially overlooking other causes of chest pain, such as anxiety or musculoskeletal issues, which are also common.\n\nKey Insight:\nConfirmation bias in a clinical setting is like a diagnostic machine that only highlights readings matching your first guess. It causes you to overvalue supporting evidence and undervalue or ignore contradictory data, which can narrow your focus and lead to diagnostic errors.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Cognitive Bias\n\n**Example:**\nAmara, a nurse in a busy Lagos hospital, is assessing a patient who presents with a high fever and body aches. The patient is a young adult. During the recent rainy season, Amara and her colleagues treated a significant outbreak of malaria. This recent experience makes the symptoms of malaria highly \"available\" in her mind.\n\n**Step-by-Step Breakdown:**\n\n1.  **The Trigger:** The patient's symptoms (fever, aches) are common to many illnesses, including malaria, typhoid, and viral infections like influenza or dengue.\n\n2.  **The Bias in Action (Availability Heuristic):** The availability heuristic is a mental shortcut where we judge the likelihood of an event based on how easily examples come to mind. Because Amara has recently seen and treated many cases of malaria, it feels like the most probable diagnosis. Her initial assessment is disproportionately weighted toward malaria.\n\n3.  **Potential Clinical Pathway:** If Amara acts solely on this initial, biased judgment, she might:\n    *   Order a malaria test immediately (correct).\n    *   **But also,** potentially delay or forgo asking key questions about other symptoms (like a distinctive rash, severe headache behind the eyes, or recent travel) that could point to dengue or typhoid.\n    *   Consider prescribing antimalarial medication prematurely, before confirming the test result.\n\n4.  **Connecting to Outcomes:** This bias can lead to two main issues:\n    *   **Diagnostic Error:** The patient could have dengue fever. A delay in diagnosing dengue can be dangerous, as it requires specific monitoring for complications like bleeding or shock.\n    *   **Inefficient Care:** Unnecessary medication (if prescribed) wastes resources and could cause side effects. It also delays the correct treatment, potentially prolonging the patient's illness.\n\n5.  **The Mitigation (Critical Thinking):** To counter this bias, Amara consciously employs a systematic approach. She uses a standard triage protocol that requires her to:\n    *   Take a full history, not just the most obvious symptoms.\n    *   Perform a thorough physical examination.\n    *   Consider a differential diagnosis—a list of *all* possible causes—before settling on the most likely one. She forces herself to actively recall the symptoms and prevalence of other common febrile illnesses in Lagos.\n\n**Key Insight:**\nCognitive biases like the availability heuristic are subconscious shortcuts that can streamline thinking but also lead to systematic errors in judgment. In nursing, recognizing these biases is crucial for ensuring diagnoses are based on complete evidence and protocol, not just on what feels familiar or recent, thereby directly impacting patient safety and care quality.",
+        "example_id": "ex_03c7658d90884f9e",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Availability Heuristic\n\nExample:\nAmara, a nurse in Lagos, is working a busy shift at her hospital. She has to quickly decide which patients might need urgent attention. Her mind automatically relies on the most recent and vivid memories she has.\n\nStep-by-Step Breakdown:\n1. **Recent Memory:** Yesterday, Amara treated a patient with severe chest pain who turned out to have a heart attack. This case is fresh and vivid in her mind.\n2. **Current Situation:** Today, a patient arrives complaining of chest pain and shortness of breath.\n3. **Automatic Thought:** Because the heart attack case is so \"available\" in her memory, Amara's initial instinct is to assume this new patient is also having a heart attack and prioritize them for immediate cardiac tests.\n4. **Potential Oversight:** The patient's symptoms could also be caused by a severe asthma attack or a panic disorder, which are also common. But these possibilities aren't as mentally \"available\" because Amara hasn't seen a dramatic case of them recently.\n5. **Practical Implication:** If Amara acts only on her available memory, she might order the wrong tests first (like an ECG) and delay treatment for the actual cause (like administering a bronchodilator for asthma). This could waste time and resources, and potentially worsen the patient's outcome.\n\nHow the Bias Works Psychologically:\nThe availability heuristic is a mental shortcut. The brain estimates the likelihood of an event based on how easily examples of it come to mind. Easily recalled memories (because they are recent, dramatic, or emotionally charged) feel more common and probable, even if they are statistically rare. This bypasses slower, more rational analysis of all the actual possibilities.\n\nKey Insight:\nIn nursing, the availability heuristic can make recent dramatic cases seem more common than they are, leading to quick decisions that might miss other important diagnoses. To counter it, Amara can consciously pause and systematically review all possible causes for a patient's symptoms, not just the one that feels most familiar.",
+        "example_id": "ex_5139ba97c3fc4c24"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Confirmation Bias\n\nExample:\nAmara, a nurse in Lagos, is using a portable ECG machine to monitor a patient presenting with chest pain. Her initial, quick assessment leads her to suspect a cardiac issue. As she watches the monitor, she notices a few readings that show slight ST-segment elevation, which can indicate heart muscle strain. She focuses intently on these moments, mentally cataloging them as evidence for her cardiac hypothesis.\n\nMeanwhile, the monitor also displays several periods where the rhythm is completely normal and other readings, like a consistently normal pulse oximetry of 98%, suggest good oxygenation. Amara unconsciously dismisses these normal readings as \"the patient calming down\" or \"the machine settling,\" failing to integrate them into her assessment. She might even reposition the leads slightly, expecting to get a \"clearer\" (i.e., more confirmatory) reading.\n\nThe bias is in selectively gathering and interpreting data: she treats the ambiguous or slightly abnormal ECG tracings as proof, while explaining away the numerous normal readings that contradict her initial suspicion. This could lead her to escalate care for a cardiac event prematurely, potentially overlooking other causes of chest pain, such as anxiety or musculoskeletal issues, which are also common.\n\nKey Insight:\nConfirmation bias in a clinical setting is like a diagnostic machine that only highlights readings matching your first guess. It causes you to overvalue supporting evidence and undervalue or ignore contradictory data, which can narrow your focus and lead to diagnostic errors.",
+        "example_id": "ex_0995c9d490254cc1"
+      }
+    ],
+    "context_instruction": "Create a medium-complexity example about Cognitive Bias grounded in Amara's nursing practice in Lagos, Nigeria. Use a step-by-step breakdown showing how a specific bias (like confirmation bias or availability heuristic) affects clinical decision-making. Connect the bias to tangible healthcare outcomes, making the concept relevant to real-world nursing scenarios while maintaining appropriate complexity for the topic.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.34,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.868,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and uses a healthcare context relevant to a nurse in Lagos, Nigeria. The complexity level appears appropriate, with a detailed explanation of the cognitive bias and its clinical implications, matching a medium difficulty. The factual content about the availability heuristic and its impact on diagnosis is accurate and well-explained. The structure is clear, with a logical step-by-step breakdown that facilitates understanding and learning. The analogies and framing are appropriate for the medical domain, using clinical reasoning and diagnostic processes familiar to healthcare professionals.\n\nPF: The example is well-tailored, integrating the user's profile details and domain-specific context, making it highly relevant.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation, including the detailed breakdown of the bias and clinical reasoning, aligns well with a medium complexity level suitable for a professional learner.  \nAXIS_SCORE: 5\n\nCA: The scientific and clinical content is accurate, correctly describing the availability heuristic and its influence on diagnosis without errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from scenario to bias explanation, to clinical implications, and mitigation strategies, making it pedagogically effective.  \nAXIS_SCORE: 5\n\nDA: The framing and analogies are entirely appropriate for a healthcare and clinical diagnosis context, matching the topic of cognitive bias in medicine.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 5.0,
+      "CC": 4.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and uses a clinical context relevant to a nurse, aligning well with her background. The complexity level appears appropriate, discussing diagnostic reasoning and cognitive bias in a clinical setting, which matches a medium complexity level. The factual content about confirmation bias and ECG interpretation is accurate and well-explained, with no evident errors. The structure is clear, with a logical flow from scenario to key insight, making it pedagogically effective. The analogy of a diagnostic machine highlighting only supporting readings is domain-appropriate, reinforcing the concept within a medical context.\n\nPF: The example is highly personalized, integrating multiple profile elements and domain-specific details.  \nAXIS_SCORE: 5\n\nCC: The content depth and language are suitable for a professional nurse with medium complexity understanding, providing enough detail without being overly technical.  \nAXIS_SCORE: 4\n\nCA: The scientific explanation of confirmation bias and ECG interpretation is accurate and aligns with current understanding, with no inaccuracies detected.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear scenario leading to a memorable key insight, facilitating learning.  \nAXIS_SCORE: 5\n\nDA: The analogy of a diagnostic machine is perfectly suited to a medical context, making the framing highly domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "Despite the vague feedback, the regenerated example makes reasonable improvements by simplifying language and adding a clearer narrative structure.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The new example incorporates the requested change by shifting to a step-by-step format that is easier to follow, improving pedagogical clarity.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Create a medium-complexity example about Cognitive Bias grounded in Amara's nursing practice in Lagos, Nigeria. Use a step-by-step breakdown showing how a specific bias (like confirmation bias or availability heuristic) affects clinical decision-making. Connect the bias to tangible healthcare outcomes, making the concept relevant to real-world nursing scenarios while maintaining appropriate complexity for the topic.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.6,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 1,
+    "total": 2,
+    "accuracy": 0.5,
+    "details": [
+      {
+        "round": 1,
+        "expected": null,
+        "actual": "regenerate",
+        "excluded": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T22:21:30.185532"
+}

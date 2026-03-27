@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_01",
+  "topic": "Compound Interest",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.6,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "**Concept:** Compound Interest\n\n**Example:**\nLena, imagine you're saving for a new laptop in Berlin. You put \u20ac100 into a savings account that earns 5% interest per year. With compound interest, you earn interest not just on your original money, but also on the interest you've already earned.\n\n**Year-by-Year Breakdown:**\n\n*   **Year 0 (Start):** \u20ac100.00\n*   **Year 1:** Your \u20ac100 earns 5% interest (\u20ac5.00). Your new total is \u20ac105.00.\n*   **Year 2:** You now earn 5% interest on the full \u20ac105.00, which is \u20ac5.25. Your new total is \u20ac110.25.\n*   **Year 3:** You earn 5% on \u20ac110.25, which is \u20ac5.51. Your total grows to \u20ac115.76.\n\n**The Formula (for reference):**\nThe total amount (A) can be calculated with:\n`A = P (1 + r)^t`\nWhere:\n*   **P** = Principal (initial amount, \u20ac100)\n*   **r** = Interest rate (5%, or 0.05)\n*   **t** = Time in years (3)\n\nPlugging in the numbers: \u20ac100 * (1 + 0.05)^3 = \u20ac115.76\n\n**Key Insight:**\nCompound interest creates a snowball effect. Your money grows faster over time because each year's \"interest\" starts earning its own \"interest.\" The longer you leave it, the steeper the growth curve becomes.",
+      "example_id": "ex_711fc62141ad4aa7",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Compound Interest\n\nExample:\nLena, imagine you put \u20ac10 into a savings account in Berlin that earns 10% interest each year. The special thing about compound interest is that you earn interest on your interest, not just on your original money.\n\nYear 1:\n- You start with: \u20ac10\n- Interest earned: 10% of \u20ac10 = \u20ac1\n- Total at year end: \u20ac10 + \u20ac1 = \u20ac11\n\nYear 2:\n- You start with: \u20ac11 (last year's total)\n- Interest earned: 10% of \u20ac11 = \u20ac1.10\n- Total at year end: \u20ac11 + \u20ac1.10 = \u20ac12.10\n\nSee what happened? In Year 2, you earned \u20ac1.10 in interest. That extra 10 cents came from the \u20ac1 interest you earned in Year 1. Your money grew a little bit more because the interest itself started earning interest.\n\nKey Insight:\nCompound interest means your money grows faster over time because each year you earn interest on all the money already in the account, including past interest.",
+      "example_id": "ex_612ee0cb3c17403c"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-15T21:12:59.926401"
+}

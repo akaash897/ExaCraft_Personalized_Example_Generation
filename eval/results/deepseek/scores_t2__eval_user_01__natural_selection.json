@@ -1,0 +1,80 @@
+{
+  "key": "t2__eval_user_01__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_20ee6e36e58c4e10",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine Lena is observing the sparrows in Berlin's parks. Over several winters, she notices that sparrows with slightly thicker feathers tend to survive the cold better than those with thinner feathers.\n\nScenario:\n- A population of sparrows has variation in feather thickness.\n- A harsh winter occurs, creating an environmental pressure (cold).\n- Sparrows with thicker feathers are more likely to survive and reproduce.\n- Sparrows with thinner feathers are more likely to die before reproducing.\n\nResult Over Generations:\nThe surviving sparrows pass on the genes for thicker feathers to their offspring. Each subsequent generation in that area has a higher proportion of sparrows with thicker feathers. The trait that was advantageous for the specific environment becomes more common in the population.\n\nKey Terms:\n- Variation: Differences in traits (like feather thickness) among individuals.\n- Selection Pressure: An environmental factor (like cold) that affects survival.\n- Adaptation: The process where a beneficial trait becomes more common.\n\nKey Insight:\nNatural selection is not random; it filters existing variation. The environment \"selects\" which traits help individuals survive and reproduce, causing those traits to accumulate over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine Lena is observing the sparrows in Berlin's parks. Over several winters, she notices that sparrows with slightly thicker feathers tend to survive the cold better than those with thinner feathers.\n\nScenario:\n- A population of sparrows has variation in feather thickness.\n- A harsh winter occurs, creating an environmental pressure (cold).\n- Sparrows with thicker feathers are more likely to survive and reproduce.\n- Sparrows with thinner feathers are more likely to die before reproducing.\n\nResult Over Generations:\nThe surviving sparrows pass on the genes for thicker feathers to their offspring. Each subsequent generation in that area has a higher proportion of sparrows with thicker feathers. The trait that was advantageous for the specific environment becomes more common in the population.\n\nKey Terms:\n- Variation: Differences in traits (like feather thickness) among individuals.\n- Selection Pressure: An environmental factor (like cold) that affects survival.\n- Adaptation: The process where a beneficial trait becomes more common.\n\nKey Insight:\nNatural selection is not random; it filters existing variation. The environment \"selects\" which traits help individuals survive and reproduce, causing those traits to accumulate over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine Lena is observing the sparrows in Berlin's parks. Over several winters, she notices that sparrows with slightly thicker feathers tend to survive the cold better than those with thinner feathers.\n\nScenario:\n- A population of sparrows has variation in feather thickness.\n- A harsh winter occurs, creating an environmental pressure (cold).\n- Sparrows with thicker feathers are more likely to survive and reproduce.\n- Sparrows with thinner feathers are more likely to die before reproducing.\n\nResult Over Generations:\nThe surviving sparrows pass on the genes for thicker feathers to their offspring. Each subsequent generation in that area has a higher proportion of sparrows with thicker feathers. The trait that was advantageous for the specific environment becomes more common in the population.\n\nKey Terms:\n- Variation: Differences in traits (like feather thickness) among individuals.\n- Selection Pressure: An environmental factor (like cold) that affects survival.\n- Adaptation: The process where a beneficial trait becomes more common.\n\nKey Insight:\nNatural selection is not random; it filters existing variation. The environment \"selects\" which traits help individuals survive and reproduce, causing those traits to accumulate over time.",
+        "example_id": "ex_ccaaceab52704f73",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.43,
+      "CA": 5.0,
+      "PC": 4.99,
+      "DA": 5.0
+    },
+    "composite": 4.884,
+    "reasoning": "The example effectively personalizes the scenario by involving Lena as an observer in Berlin, which aligns with her profile. It uses a concrete, real-world setting (Berlin's parks) and a familiar environmental challenge (winter cold), matching her European location and high school level. The language is accessible and appropriate for medium complexity, with clear explanations of key concepts. The analogy of sparrows and feathers is domain-appropriate, illustrating natural selection in a straightforward manner. The structure is logical, with a clear flow from scenario to key terms and insight, facilitating learning. Overall, it balances personalization, accuracy, clarity, and domain relevance well.\n\nPF_SCORE: 4\n\nThe content covers the core principles of natural selection accurately, with no significant errors or misconceptions. The explanation of how traits become more common over generations aligns with scientific consensus, and the key terms are correctly defined. There is a slight room for more depth, but for a high school level, the accuracy is appropriate and solid.\n\nCC_SCORE: 4\n\nThe complexity matches the high school level, with accessible language and straightforward explanations. It introduces key concepts without oversimplification but avoids overly technical details, fitting the medium complexity requirement. It could include a bit more detail for deeper understanding, but overall, it is well-calibrated.\n\nCA_SCORE: 5\n\nThe scientific content is accurate, correctly describing variation, selection pressure, and adaptation. The example aligns with established biological principles, and no inaccuracies are present. The key terms are correctly defined, supporting factual correctness.\n\nPC_SCORE: 4\n\nThe example is well-structured, with a logical progression from scenario to key terms and insight. The flow is smooth, and the concept-to-example bridge is clear, making it easy for learners to follow. It could include a more explicit summary or reflection to enhance memorability, but it is pedagogically sound.\n\nDA_SCORE: 5\n\nThe framing and analogies are entirely appropriate for the biology topic. Using sparrows and feathers is a classic, domain-specific analogy that effectively illustrates natural selection. The vocabulary and scenario are consistent with the biological domain, making the analogy fitting and effective.\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 4,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.8,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example demonstrates a clear attempt to personalize the content by incorporating the user's name, \"Lena,\" and location, \"Berlin,\" into the scenario, making it more relatable and engaging for the learner. However, it does not explicitly address other aspects of the user's profile, such as their profession or cultural background, which could further enhance personalization.\n\nPF_SCORE: 4\n\nRegarding Complexity Calibration (CC), the example seems to match the medium complexity level requested by the user, as it provides a straightforward and understandable explanation of natural selection without delving into overly complex scientific jargon or formulas. The language and depth of the explanation are suitable for a high school student, aligning with the user's education level.\n\nCC_SCORE: 5\n\nFor Conceptual Accuracy (CA), the example accurately describes the process of natural selection, including variation, selection pressure, and adaptation, providing a clear and scientifically correct explanation of how traits become more common in a population over generations. The key terms and insight provided are also accurate and relevant to the concept of natural selection.\n\nCA_SCORE: 5\n\nIn terms of Pedagogical Clarity (PC), the example is well-structured, starting with a relatable scenario, followed by a clear explanation of the process, and ending with key terms and a key insight that summarizes the main point of natural selection. The flow is smooth, and the concept-to-example bridge is explicit, making it easy for the learner to understand and remember the concept.\n\nPC_SCORE: 5\n\nRegarding Domain Appropriateness (DA), the example is perfectly appropriate for the topic of natural selection, using analogies and framing that are directly relevant to the field of biology and evolutionary science. The use of sparrows and feather thickness as an example is a common and effective way to illustrate the concept of natural selection, making the example highly domain-appropriate.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:37:52.235723"
+}

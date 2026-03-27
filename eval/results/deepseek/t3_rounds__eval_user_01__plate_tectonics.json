@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_01",
+  "topic": "Plate Tectonics",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 4,
+      "composite": 4.6,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.6,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's surface is like a giant, cracked eggshell floating on a warm, soft yolk. These cracked pieces are called tectonic plates, and they are constantly, slowly moving. Berlin sits on the Eurasian Plate, which is slowly drifting a few centimeters each year\u2014about as fast as your fingernails grow.\n\nThe main types of plate movement are:\n1.  **Divergent Boundaries:** Plates pull apart. Think of two friends slowly moving apart on a crowded school bench, creating a gap between them. On Earth, this creates mid-ocean ridges or rift valleys, like the one in Iceland.\n2.  **Convergent Boundaries:** Plates push together. This is like two students bumping their desks together\u2014one might be forced to slide under the other. This creates mountains (like the Alps, far to the south of Berlin) or deep ocean trenches.\n3.  **Transform Boundaries:** Plates slide past each other. This is like rubbing your hands together side-to-side. This movement causes earthquakes along faults, like the famous San Andreas Fault in California.\n\nKey Insight:\nThe slow movement of these plates is the engine behind most of Earth's major geological features\u2014from the mountains you might see on a trip to the Alps, to the volcanoes and earthquakes that make the news.",
+      "example_id": "ex_5b09f136d8b1476b",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Plate Tectonics\n\nExample:\nImagine Earth\u2019s outer shell is like a giant, cracked eggshell floating on a soft, gooey yolk. These cracked pieces are called tectonic plates. They fit together like a jigsaw puzzle, but they are always moving very, very slowly.\n\nThink of a frozen pond in Berlin\u2019s Tiergarten park. The ice cracks into big slabs. On a warm day, those slabs can drift apart, bump together, or slide past each other. That\u2019s what Earth\u2019s plates do, but over millions of years.\n\nWhat happens when they move:\n- **Drift Apart:** When two plates slowly pull away from each other, hot rock from deep below rises up to fill the gap. This can create new land, like the volcanic island of Iceland.\n- **Bump Together:** When two plates push together, one plate can be forced under the other or they can crumple up. This is how huge mountain ranges, like the Alps, are formed.\n- **Slide Past:** When two plates grind past each other, they can get stuck and then suddenly jerk free. This sudden movement is what causes earthquakes.\n\nKey Insight:\nEarth\u2019s surface is made of moving puzzle pieces. Their slow, constant motion is the powerful force that builds mountains, causes earthquakes, and creates new ocean floor.",
+      "example_id": "ex_5bfa006fc5574eb5"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Plate Tectonics\n\nExample:\nImagine your school classroom is the Earth's surface. Each student sitting at a desk represents a tectonic plate. The desks are rigid, but they can move slowly over the floor.\n\n**Divergent Boundary (Moving Apart):**\nThink of two students who start a group project but decide to work separately. They push their desks apart to create space between them. New material\u2014like a fresh sheet of paper\u2014appears in the gap as they separate. In the Earth, this is like two plates moving apart at a mid-ocean ridge, where new crust forms from magma rising up.\n\n**Convergent Boundary (Moving Together):**\nNow imagine two students rushing to hand in the same exam paper to the teacher at the front. They converge, and one student (the heavier, or more dense one) slides underneath the other's desk. The desk on top gets crumpled and pushed upward, forming a pile of papers (mountains). On Earth, this is a subduction zone or a continental collision, creating mountain ranges like the Himalayas.\n\n**Transform Boundary (Sliding Past):**\nPicture two students in a busy hallway between classes, sliding past each other sideways without giving way. Their shoulders might bump and stick, building up pressure until they suddenly jerk past one another, causing a spill of books (an earthquake). On Earth, this is like the San Andreas Fault, where plates grind past each other horizontally.\n\n**Key Insight:**\nThe slow, constant movement of these \"student plates\" \u2014 pulling apart, pushing together, or sliding past \u2014 explains why our planet's surface is constantly changing, creating mountains, volcanoes, and earthquakes over millions of years.",
+      "example_id": "ex_b7bde9e71d424609"
+    }
+  ],
+  "timestamp": "2026-03-15T21:16:42.543004"
+}

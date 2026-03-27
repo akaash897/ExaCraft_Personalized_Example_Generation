@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_03__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_03",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_03",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_03",
+    "topic": "Natural Selection",
+    "thread_id": "thread_97fd31dad3fc488d",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nSetting:\n  In a rainforest near São Paulo, Brazil, a population of ground-dwelling beetles shows two color morphs: brown and green. This variation is heritable, so offspring tend to resemble their parents.\n\nWhat changes:\n  The environment (camouflage against leaf litter) makes some colors harder for predators to spot. Beetles with better camouflage survive longer and reproduce more.\n\nNumeric scenario:\n  Initial numbers: brown 60, green 40 (total 100)\n  Survival rates under pressure: brown 70% survive, green 40% survive\n  Survivors: brown 42, green 16 (total 58)\n  New phenotype frequencies: brown ≈ 0.724, green ≈ 0.276\n\nInterpretation:\n  Because brown beetles were better camouflaged, they left more offspring, shifting the population toward brown over one generation.\n\nNotes:\n  For this shift to persist, the color trait must be heritable; if color were not passed to offspring, the change would be temporary.\n\nKey Insight:\n  Natural selection changes which traits are common by favoring those that help individuals survive and reproduce in a given environment; over generations, the population becomes better adapted to that environment.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nSetting:\n  In a rainforest near São Paulo, Brazil, a population of ground-dwelling beetles shows two color morphs: brown and green. This variation is heritable, so offspring tend to resemble their parents.\n\nWhat changes:\n  The environment (camouflage against leaf litter) makes some colors harder for predators to spot. Beetles with better camouflage survive longer and reproduce more.\n\nNumeric scenario:\n  Initial numbers: brown 60, green 40 (total 100)\n  Survival rates under pressure: brown 70% survive, green 40% survive\n  Survivors: brown 42, green 16 (total 58)\n  New phenotype frequencies: brown ≈ 0.724, green ≈ 0.276\n\nInterpretation:\n  Because brown beetles were better camouflaged, they left more offspring, shifting the population toward brown over one generation.\n\nNotes:\n  For this shift to persist, the color trait must be heritable; if color were not passed to offspring, the change would be temporary.\n\nKey Insight:\n  Natural selection changes which traits are common by favoring those that help individuals survive and reproduce in a given environment; over generations, the population becomes better adapted to that environment.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nSetting:\n  In a rainforest near São Paulo, Brazil, a population of ground-dwelling beetles shows two color morphs: brown and green. This variation is heritable, so offspring tend to resemble their parents.\n\nWhat changes:\n  The environment (camouflage against leaf litter) makes some colors harder for predators to spot. Beetles with better camouflage survive longer and reproduce more.\n\nNumeric scenario:\n  Initial numbers: brown 60, green 40 (total 100)\n  Survival rates under pressure: brown 70% survive, green 40% survive\n  Survivors: brown 42, green 16 (total 58)\n  New phenotype frequencies: brown ≈ 0.724, green ≈ 0.276\n\nInterpretation:\n  Because brown beetles were better camouflaged, they left more offspring, shifting the population toward brown over one generation.\n\nNotes:\n  For this shift to persist, the color trait must be heritable; if color were not passed to offspring, the change would be temporary.\n\nKey Insight:\n  Natural selection changes which traits are common by favoring those that help individuals survive and reproduce in a given environment; over generations, the population becomes better adapted to that environment.",
+        "example_id": "ex_fc10dbe7045d4bc7",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively incorporates the user's location (São Paulo, Brazil) and profession (humanities researcher) by setting the scenario in a rainforest near São Paulo, which adds contextual relevance. It also uses an example-based learning style with a clear, step-by-step explanation, suitable for a medium complexity level. The content is scientifically accurate, correctly describing the process of natural selection with appropriate terminology and calculations. The structure is logical, starting from setting, through the numeric scenario, to interpretation and key insight, which supports pedagogical clarity. The analogy of camouflage and predator-prey dynamics is appropriate for the biological domain, making the framing domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example personalizes the setting with São Paulo and Brazil, and the scenario involves a biological context that aligns with natural selection, but it doesn't deeply incorporate the user's background as a humanities researcher or their learning style beyond example-based. It is mostly tailored but could be more explicit in connecting to humanities perspectives.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes quantitative data, basic genetics, and evolutionary concepts, which seem appropriate for a medium complexity level. It avoids overly technical language or advanced formulas, fitting the user's specified complexity.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content is accurate, correctly describing heritability, survival, and population change, with no evident errors. The interpretation aligns with established evolutionary theory.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from setting to numeric scenario to interpretation, making it easy to follow. The key insight is explicitly stated, aiding memorability.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing uses biological concepts and terminology appropriate for natural selection, and the analogy of camouflage is fitting and domain-specific. The vocabulary and framing are consistent with the biology domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:57:49.971448"
+}

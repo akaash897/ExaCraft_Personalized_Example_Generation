@@ -1,0 +1,85 @@
+{
+  "key": "t2__eval_user_06__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_3d5838fd1de040d2",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nContext:\nAmara, a nurse in Lagos, Nigeria, oversees a ward where patients carry gut bacteria. Under antibiotic treatment, bacteria with resistance alleles have higher survival, illustrating natural selection in a real clinical setting.\n\nInputs:\n- Population focus: gut bacteria within the patient cohort under antibiotic exposure\n- Alleles: S (susceptible) and R (resistant)\n- Initial allele frequencies: p = 0.95 (S), q = 0.05 (R)\n- Fitness under antibiotic pressure: w_S = 0.2, w_R = 1.0\n- Generations to model: 3\n- Time per generation: ~1 day (for context)\n\nOutputs:\n- Gen 1: p' ≈ 0.792, q' ≈ 0.208\n- Gen 2: p'' ≈ 0.432, q'' ≈ 0.568\n- Gen 3: p''' ≈ 0.132, q''' ≈ 0.868\n\nStep-by-step breakdown\n1) Baseline setup\n   - Before selection, S and R have frequencies p and q with p + q = 1.\n   - Relative survival under antibiotic: S survives poorly (0.2), R survives well (1.0).\n\n2) Prediction prompt for Amara (your turn)\n   - Based on these numbers, predict how the resistant allele frequency q would change after 1, 2, and 3 generations under this antibiotic pressure. Write your predicted q values before the calculations are shown.\n\n3) Calculation for Gen 1\n   - Compute mean fitness: w_bar = p*w_S + q*w_R\n     w_bar = 0.95*0.2 + 0.05*1 = 0.24\n   - Update allele frequencies after selection:\n     p' = p*w_S / w_bar = 0.95*0.2 / 0.24 ≈ 0.792\n     q' = q*w_R / w_bar = 0.05*1 / 0.24 ≈ 0.208\n\n4) Calculation for Gen 2\n   - Use p = 0.792, q = 0.208\n   - w_bar = 0.792*0.2 + 0.208*1 ≈ 0.3664\n   - p'' = 0.792*0.2 / 0.3664 ≈ 0.432\n   - q'' = 0.208 / 0.3664 ≈ 0.568\n\n5) Calculation for Gen 3\n   - Use p = 0.432, q = 0.568\n   - w_bar = 0.432*0.2 + 0.568*1 ≈ 0.6544\n   - p''' = 0.432*0.2 / 0.6544 ≈ 0.132\n   - q''' = 0.568 / 0.6544 ≈ 0.868\n\nExplanation (after prediction)\n- With antibiotic pressure, the resistant allele R has much higher fitness than S, so its frequency rises quickly from 0.05 to about 0.208 in generation 1, to 0.568 in generation 2, and to about 0.868 by generation 3. This demonstrates how strong selection can rapidly shift allele frequencies toward resistance in a clinical setting.\n\nKey Insight:\nUnder strong antibiotic pressure, even a small pool of resistant alleles can become common across a few generations, underscoring the importance of antibiotic stewardship and resistance monitoring in patient care.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nContext:\nAmara, a nurse in Lagos, Nigeria, oversees a ward where patients carry gut bacteria. Under antibiotic treatment, bacteria with resistance alleles have higher survival, illustrating natural selection in a real clinical setting.\n\nInputs:\n- Population focus: gut bacteria within the patient cohort under antibiotic exposure\n- Alleles: S (susceptible) and R (resistant)\n- Initial allele frequencies: p = 0.95 (S), q = 0.05 (R)\n- Fitness under antibiotic pressure: w_S = 0.2, w_R = 1.0\n- Generations to model: 3\n- Time per generation: ~1 day (for context)\n\nOutputs:\n- Gen 1: p' ≈ 0.792, q' ≈ 0.208\n- Gen 2: p'' ≈ 0.432, q'' ≈ 0.568\n- Gen 3: p''' ≈ 0.132, q''' ≈ 0.868\n\nStep-by-step breakdown\n1) Baseline setup\n   - Before selection, S and R have frequencies p and q with p + q = 1.\n   - Relative survival under antibiotic: S survives poorly (0.2), R survives well (1.0).\n\n2) Prediction prompt for Amara (your turn)\n   - Based on these numbers, predict how the resistant allele frequency q would change after 1, 2, and 3 generations under this antibiotic pressure. Write your predicted q values before the calculations are shown.\n\n3) Calculation for Gen 1\n   - Compute mean fitness: w_bar = p*w_S + q*w_R\n     w_bar = 0.95*0.2 + 0.05*1 = 0.24\n   - Update allele frequencies after selection:\n     p' = p*w_S / w_bar = 0.95*0.2 / 0.24 ≈ 0.792\n     q' = q*w_R / w_bar = 0.05*1 / 0.24 ≈ 0.208\n\n4) Calculation for Gen 2\n   - Use p = 0.792, q = 0.208\n   - w_bar = 0.792*0.2 + 0.208*1 ≈ 0.3664\n   - p'' = 0.792*0.2 / 0.3664 ≈ 0.432\n   - q'' = 0.208 / 0.3664 ≈ 0.568\n\n5) Calculation for Gen 3\n   - Use p = 0.432, q = 0.568\n   - w_bar = 0.432*0.2 + 0.568*1 ≈ 0.6544\n   - p''' = 0.432*0.2 / 0.6544 ≈ 0.132\n   - q''' = 0.568 / 0.6544 ≈ 0.868\n\nExplanation (after prediction)\n- With antibiotic pressure, the resistant allele R has much higher fitness than S, so its frequency rises quickly from 0.05 to about 0.208 in generation 1, to 0.568 in generation 2, and to about 0.868 by generation 3. This demonstrates how strong selection can rapidly shift allele frequencies toward resistance in a clinical setting.\n\nKey Insight:\nUnder strong antibiotic pressure, even a small pool of resistant alleles can become common across a few generations, underscoring the importance of antibiotic stewardship and resistance monitoring in patient care.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nContext:\nAmara, a nurse in Lagos, Nigeria, oversees a ward where patients carry gut bacteria. Under antibiotic treatment, bacteria with resistance alleles have higher survival, illustrating natural selection in a real clinical setting.\n\nInputs:\n- Population focus: gut bacteria within the patient cohort under antibiotic exposure\n- Alleles: S (susceptible) and R (resistant)\n- Initial allele frequencies: p = 0.95 (S), q = 0.05 (R)\n- Fitness under antibiotic pressure: w_S = 0.2, w_R = 1.0\n- Generations to model: 3\n- Time per generation: ~1 day (for context)\n\nOutputs:\n- Gen 1: p' ≈ 0.792, q' ≈ 0.208\n- Gen 2: p'' ≈ 0.432, q'' ≈ 0.568\n- Gen 3: p''' ≈ 0.132, q''' ≈ 0.868\n\nStep-by-step breakdown\n1) Baseline setup\n   - Before selection, S and R have frequencies p and q with p + q = 1.\n   - Relative survival under antibiotic: S survives poorly (0.2), R survives well (1.0).\n\n2) Prediction prompt for Amara (your turn)\n   - Based on these numbers, predict how the resistant allele frequency q would change after 1, 2, and 3 generations under this antibiotic pressure. Write your predicted q values before the calculations are shown.\n\n3) Calculation for Gen 1\n   - Compute mean fitness: w_bar = p*w_S + q*w_R\n     w_bar = 0.95*0.2 + 0.05*1 = 0.24\n   - Update allele frequencies after selection:\n     p' = p*w_S / w_bar = 0.95*0.2 / 0.24 ≈ 0.792\n     q' = q*w_R / w_bar = 0.05*1 / 0.24 ≈ 0.208\n\n4) Calculation for Gen 2\n   - Use p = 0.792, q = 0.208\n   - w_bar = 0.792*0.2 + 0.208*1 ≈ 0.3664\n   - p'' = 0.792*0.2 / 0.3664 ≈ 0.432\n   - q'' = 0.208 / 0.3664 ≈ 0.568\n\n5) Calculation for Gen 3\n   - Use p = 0.432, q = 0.568\n   - w_bar = 0.432*0.2 + 0.568*1 ≈ 0.6544\n   - p''' = 0.432*0.2 / 0.6544 ≈ 0.132\n   - q''' = 0.568 / 0.6544 ≈ 0.868\n\nExplanation (after prediction)\n- With antibiotic pressure, the resistant allele R has much higher fitness than S, so its frequency rises quickly from 0.05 to about 0.208 in generation 1, to 0.568 in generation 2, and to about 0.868 by generation 3. This demonstrates how strong selection can rapidly shift allele frequencies toward resistance in a clinical setting.\n\nKey Insight:\nUnder strong antibiotic pressure, even a small pool of resistant alleles can become common across a few generations, underscoring the importance of antibiotic stewardship and resistance monitoring in patient care.",
+        "example_id": "ex_51e2b46b46734b1b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Design a medium-complexity Natural Selection example grounded in a Lagos, Nigeria nursing context featuring Amara as the focal nurse. Provide a step-by-step breakdown with clearly labeled inputs and outputs, modeling antibiotic resistance in a patient cohort under antibiotic pressure, and prompt the learner to predict how allele frequencies would shift over generations before giving the explanation.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the context by involving Amara, a nurse in Lagos, Nigeria, and relates the concept of natural selection to a clinical setting involving gut bacteria and antibiotic resistance, which aligns with her profession and location. The complexity level is medium, with detailed calculations and explanations appropriate for someone with a professional background but not necessarily specialized in genetics, which seems suitable. The scientific content appears accurate, with correct calculations and a clear demonstration of how selection affects allele frequencies, indicating good conceptual accuracy. The structure is logical, with step-by-step calculations and a key insight that reinforces learning, making it pedagogically clear. The analogy of bacteria in a clinical setting is domain-appropriate, using medical and microbiological vocabulary relevant to her profession, thus fitting well within the biological and medical domain.\n\nPF_SCORE: 4\nCC_SCORE: 5\nCA_SCORE: 5\nPC_SCORE: 5\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 4,
+        "CC": 5,
+        "CA": 4,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.5,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Design a medium-complexity Natural Selection example grounded in a Lagos, Nigeria nursing context featuring Amara as the focal nurse. Provide a step-by-step breakdown with clearly labeled inputs and outputs, modeling antibiotic resistance in a patient cohort under antibiotic pressure, and prompt the learner to predict how allele frequencies would shift over generations before giving the explanation.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction explicitly incorporates the user's domain preference for nursing and real-world Lagos scenarios, as well as the preferred medium complexity and example-based learning style, by requesting a step-by-step, grounded example involving antibiotic resistance in a Lagos-based patient cohort. This demonstrates a clear synthesis of the stored patterns and insights into a concrete, actionable directive. \n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:22:16.935758"
+}

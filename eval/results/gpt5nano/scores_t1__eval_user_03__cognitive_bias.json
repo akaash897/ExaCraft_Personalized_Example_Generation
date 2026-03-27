@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_03__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_03",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_03",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_03",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_aee2aef60833465b",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nContext:\nCarlos, a humanities researcher in São Paulo, studies the origins of a social movement.\n\nScenario:\nWhile researching archival material, he notices he focuses on sources that confirm his hypothesis about the movement's leadership.\n\nQuantitative snapshot:\n- Total sources reviewed: 12\n- Sources aligning with his hypothesis: 9 (75%)\n- Contradictory or complicating sources: 3 (25%)\n\nInterpretation:\n- This pattern signals confirmation bias (favoring evidence that confirms preconceptions) and features of availability bias (relying on easily accessible sources).\n\nImpact:\n- He might overestimate certainty due to biased sampling.\n\nMitigation:\n- Actively search for counter-evidence and document the strength of each source; aim for a balanced set of sources.\n\nKey Insight:\nCognitive bias can tilt conclusions by giving more weight to evidence that agrees with what you expect; counteract by seeking disconfirming sources and assessing evidence fairly.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nContext:\nCarlos, a humanities researcher in São Paulo, studies the origins of a social movement.\n\nScenario:\nWhile researching archival material, he notices he focuses on sources that confirm his hypothesis about the movement's leadership.\n\nQuantitative snapshot:\n- Total sources reviewed: 12\n- Sources aligning with his hypothesis: 9 (75%)\n- Contradictory or complicating sources: 3 (25%)\n\nInterpretation:\n- This pattern signals confirmation bias (favoring evidence that confirms preconceptions) and features of availability bias (relying on easily accessible sources).\n\nImpact:\n- He might overestimate certainty due to biased sampling.\n\nMitigation:\n- Actively search for counter-evidence and document the strength of each source; aim for a balanced set of sources.\n\nKey Insight:\nCognitive bias can tilt conclusions by giving more weight to evidence that agrees with what you expect; counteract by seeking disconfirming sources and assessing evidence fairly.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nContext:\nCarlos, a humanities researcher in São Paulo, studies the origins of a social movement.\n\nScenario:\nWhile researching archival material, he notices he focuses on sources that confirm his hypothesis about the movement's leadership.\n\nQuantitative snapshot:\n- Total sources reviewed: 12\n- Sources aligning with his hypothesis: 9 (75%)\n- Contradictory or complicating sources: 3 (25%)\n\nInterpretation:\n- This pattern signals confirmation bias (favoring evidence that confirms preconceptions) and features of availability bias (relying on easily accessible sources).\n\nImpact:\n- He might overestimate certainty due to biased sampling.\n\nMitigation:\n- Actively search for counter-evidence and document the strength of each source; aim for a balanced set of sources.\n\nKey Insight:\nCognitive bias can tilt conclusions by giving more weight to evidence that agrees with what you expect; counteract by seeking disconfirming sources and assessing evidence fairly.",
+        "example_id": "ex_70fa72f64006451f",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.4,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Carlos, a humanities researcher in São Paulo, aligning with his profile. The content is at a medium complexity level, discussing cognitive biases with appropriate terminology and depth for a PhD-level researcher. The factual content about confirmation and availability biases appears accurate and well-explained, with no evident errors. The structure is clear, with a logical flow from context to interpretation, impact, mitigation, and key insight, facilitating learning. The analogies and framing are appropriate for a cognitive bias topic, avoiding domain mismatches and maintaining relevance to social science research.\n\n[PF] The example directly incorporates Carlos's profile, including his location, profession, and learning style, and uses a scenario relevant to humanities research, making it highly personalized.  \nAXIS_SCORE: 4\n\n[CC] The complexity level matches the user's PhD background, with nuanced discussion of biases and their implications, suitable for a researcher with medium complexity needs.  \nAXIS_SCORE: 4\n\n[CA] The content accurately describes confirmation bias and availability bias, with correct definitions and implications, and no factual inaccuracies are evident.  \nAXIS_SCORE: 5\n\n[PC] The example is well-structured, with a clear progression from context to insight, making it pedagogically effective and memorable.  \nAXIS_SCORE: 4\n\n[DA] The framing and analogies are appropriate for a social science research context, using research and archival analysis as relatable examples for cognitive biases.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:58:18.616552"
+}

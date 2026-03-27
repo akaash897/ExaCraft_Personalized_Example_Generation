@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_03__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_03",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_03",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_03",
+    "topic": "Natural Selection",
+    "thread_id": "thread_3e27519fc8d046df",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, studies how natural selection shapes a simple trait—color—in beetles living on a tree trunk in a local forest. Variation exists: some beetles are brown, others green. The dark brown bark provides camouflage for brown beetles, while green beetles stand out and are more likely to be eaten.\n\nSetup:\n- Population size: 100 beetles\n- Trait: color morphs (Brown B, Green G)\n- Initial counts: B0 = 60, G0 = 40\n- Fitness (survival probability) under predation:\n  - Brown: wB = 0.80\n  - Green: wG = 0.30\n\nCalculation:\n- After one generation:\n  - Brown survivors: B1 = 60 × 0.80 = 48\n  - Green survivors: G1 = 40 × 0.30 = 12\n  - Total survivors: 60\n  - New frequencies: fB1 = 48/60 = 0.80, fG1 = 12/60 = 0.20\n- Formula version:\n  - p' = (p × wB) / (p × wB + q × wG), with p = 0.60, q = 0.40\n  - p' = (0.60×0.80) / (0.60×0.80 + 0.40×0.30) = 0.80\n\nResult:\n- Brown color becomes more common among survivors (from 60% to 80%), illustrating how differential survival shifts trait frequencies.\n\nKey Insight:\n- Natural selection favors traits that boost survival in a given environment, so advantageous variations become more common across generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, studies how natural selection shapes a simple trait—color—in beetles living on a tree trunk in a local forest. Variation exists: some beetles are brown, others green. The dark brown bark provides camouflage for brown beetles, while green beetles stand out and are more likely to be eaten.\n\nSetup:\n- Population size: 100 beetles\n- Trait: color morphs (Brown B, Green G)\n- Initial counts: B0 = 60, G0 = 40\n- Fitness (survival probability) under predation:\n  - Brown: wB = 0.80\n  - Green: wG = 0.30\n\nCalculation:\n- After one generation:\n  - Brown survivors: B1 = 60 × 0.80 = 48\n  - Green survivors: G1 = 40 × 0.30 = 12\n  - Total survivors: 60\n  - New frequencies: fB1 = 48/60 = 0.80, fG1 = 12/60 = 0.20\n- Formula version:\n  - p' = (p × wB) / (p × wB + q × wG), with p = 0.60, q = 0.40\n  - p' = (0.60×0.80) / (0.60×0.80 + 0.40×0.30) = 0.80\n\nResult:\n- Brown color becomes more common among survivors (from 60% to 80%), illustrating how differential survival shifts trait frequencies.\n\nKey Insight:\n- Natural selection favors traits that boost survival in a given environment, so advantageous variations become more common across generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, studies how natural selection shapes a simple trait—color—in beetles living on a tree trunk in a local forest. Variation exists: some beetles are brown, others green. The dark brown bark provides camouflage for brown beetles, while green beetles stand out and are more likely to be eaten.\n\nSetup:\n- Population size: 100 beetles\n- Trait: color morphs (Brown B, Green G)\n- Initial counts: B0 = 60, G0 = 40\n- Fitness (survival probability) under predation:\n  - Brown: wB = 0.80\n  - Green: wG = 0.30\n\nCalculation:\n- After one generation:\n  - Brown survivors: B1 = 60 × 0.80 = 48\n  - Green survivors: G1 = 40 × 0.30 = 12\n  - Total survivors: 60\n  - New frequencies: fB1 = 48/60 = 0.80, fG1 = 12/60 = 0.20\n- Formula version:\n  - p' = (p × wB) / (p × wB + q × wG), with p = 0.60, q = 0.40\n  - p' = (0.60×0.80) / (0.60×0.80 + 0.40×0.30) = 0.80\n\nResult:\n- Brown color becomes more common among survivors (from 60% to 80%), illustrating how differential survival shifts trait frequencies.\n\nKey Insight:\n- Natural selection favors traits that boost survival in a given environment, so advantageous variations become more common across generations.",
+        "example_id": "ex_c38a499736944419",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and it uses an example involving natural selection, which is appropriate for a scientific topic. The depth of the explanation includes specific calculations and formulas, aligning well with a medium complexity level suitable for a PhD-level humanities researcher interested in examples. The factual content about natural selection and trait frequency shifts appears accurate, with correct use of survival probabilities and formulas. The structure is clear, with a logical flow from scenario setup to calculation and insight, making it pedagogically effective. The framing and vocabulary are appropriate for the biological topic, though it could be slightly more tailored to a humanities perspective, but overall, the analogy and framing are domain-appropriate.\n\nPF: The example directly mentions the user's name, location, and profession, and uses a biological scenario that matches the topic, demonstrating strong personalization.  \nAXIS_SCORE: 5\n\nCC: The complexity matches a medium level, with detailed calculations, formulas, and explanations suitable for a PhD-level learner, without being overly technical or simplified.  \nAXIS_SCORE: 5\n\nCA: The scientific content about natural selection, trait variation, and survival probabilities is accurate and correctly presented, with proper use of formulas and concepts.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear setup, calculation, and key insight, making it easy to follow and understand the core concept of natural selection.  \nAXIS_SCORE: 5\n\nDA: The framing is appropriate for biology, but it uses a straightforward ecological example rather than a more humanities-oriented analogy, which is acceptable but slightly less domain-specific. Overall, it remains within the biological domain.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:15:05.401114"
+}

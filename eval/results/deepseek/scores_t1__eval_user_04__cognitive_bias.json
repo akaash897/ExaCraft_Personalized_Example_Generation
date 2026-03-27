@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_04__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_396944f2c85247ac",
+    "initial_example": "**Concept:** Cognitive Bias\n\n**Example:**\nKenji, as a software engineer in Tokyo, you're reviewing a new feature's performance metrics. The initial data shows a promising 10% improvement in user engagement. You immediately feel confident the feature is a success\u2014this is the **Confirmation Bias** at work.\n\nYou are focusing on the positive 10% and interpreting it as proof your design was correct. You might be overlooking other data, like a 15% increase in user-reported bugs or a drop in session duration for a key user segment. Your brain is naturally drawn to information that confirms your pre-existing belief that the feature is good.\n\n**Key Insight:**\nA cognitive bias is a systematic error in thinking that affects our judgments and decisions. Confirmation bias, a common type, makes us seek, interpret, and remember information in a way that confirms what we already believe, potentially leading to flawed conclusions.",
+    "final_example": "**Concept:** Cognitive Bias\n\n**Example:**\nKenji, as a software engineer in Tokyo, you're reviewing a new feature's performance metrics. The initial data shows a promising 10% improvement in user engagement. You immediately feel confident the feature is a success\u2014this is the **Confirmation Bias** at work.\n\nYou are focusing on the positive 10% and interpreting it as proof your design was correct. You might be overlooking other data, like a 15% increase in user-reported bugs or a drop in session duration for a key user segment. Your brain is naturally drawn to information that confirms your pre-existing belief that the feature is good.\n\n**Key Insight:**\nA cognitive bias is a systematic error in thinking that affects our judgments and decisions. Confirmation bias, a common type, makes us seek, interpret, and remember information in a way that confirms what we already believe, potentially leading to flawed conclusions.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Cognitive Bias\n\n**Example:**\nKenji, as a software engineer in Tokyo, you're reviewing a new feature's performance metrics. The initial data shows a promising 10% improvement in user engagement. You immediately feel confident the feature is a success\u2014this is the **Confirmation Bias** at work.\n\nYou are focusing on the positive 10% and interpreting it as proof your design was correct. You might be overlooking other data, like a 15% increase in user-reported bugs or a drop in session duration for a key user segment. Your brain is naturally drawn to information that confirms your pre-existing belief that the feature is good.\n\n**Key Insight:**\nA cognitive bias is a systematic error in thinking that affects our judgments and decisions. Confirmation bias, a common type, makes us seek, interpret, and remember information in a way that confirms what we already believe, potentially leading to flawed conclusions.",
+        "example_id": "ex_c2a04a12a53546fe",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.41,
+      "CA": 4.96,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.87,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Kenji's profession, location, and learning style, which aligns well with the user's profile. The complexity level appears appropriate for an undergraduate engineer, focusing on a clear, real-world example without overly technical language. The factual content about confirmation bias is accurate and well-explained, with no errors. The structure is logical, starting with a scenario, illustrating the bias, and concluding with a key insight, making it pedagogically sound. The analogy of reviewing performance metrics is domain-appropriate for a software engineer, using familiar concepts like data interpretation and decision-making.\n\nPF: The example directly incorporates Kenji's profile details, including profession, location, and learning style, and uses a domain-specific scenario relevant to software engineering, demonstrating strong personalization.  \nAXIS_SCORE: 5\n\nCC: The complexity matches the user's undergraduate level, using accessible language and a practical example without delving into overly technical or advanced concepts.  \nAXIS_SCORE: 4\n\nCA: The explanation of confirmation bias is factually correct, accurately describing the cognitive process and its implications without errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear scenario, explanation of the bias, and a memorable key insight, facilitating learning.  \nAXIS_SCORE: 5\n\nDA: The framing and analogy are appropriate for the domain of software engineering, using familiar concepts like feature performance and data interpretation, making it highly relevant.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:25:58.511688"
+}

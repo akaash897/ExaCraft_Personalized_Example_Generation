@@ -1,0 +1,81 @@
+{
+  "key": "t0__eval_user_02__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_02",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_940a2aa66c254a63",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nImagine youâ€™re choosing a movie to watch. Youâ€™ve already liked a director in the past, so when you read a few glowing reviews of a new film from that director, you focus on those positive points and ignore the mixed or negative feedback. You end up thinking the movie is fantastic, even if many viewers didnâ€™t enjoy it. This is confirmation bias: favoring information that supports what you already believe and downplaying evidence that doesnâ€™t.\n\nKey Insight:\nCognitive biases are mental shortcuts that help quick judgments but can mislead us by weighting favorable or familiar information more than the full evidence.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nImagine youâ€™re choosing a movie to watch. Youâ€™ve already liked a director in the past, so when you read a few glowing reviews of a new film from that director, you focus on those positive points and ignore the mixed or negative feedback. You end up thinking the movie is fantastic, even if many viewers didnâ€™t enjoy it. This is confirmation bias: favoring information that supports what you already believe and downplaying evidence that doesnâ€™t.\n\nKey Insight:\nCognitive biases are mental shortcuts that help quick judgments but can mislead us by weighting favorable or familiar information more than the full evidence.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nImagine youâ€™re choosing a movie to watch. Youâ€™ve already liked a director in the past, so when you read a few glowing reviews of a new film from that director, you focus on those positive points and ignore the mixed or negative feedback. You end up thinking the movie is fantastic, even if many viewers didnâ€™t enjoy it. This is confirmation bias: favoring information that supports what you already believe and downplaying evidence that doesnâ€™t.\n\nKey Insight:\nCognitive biases are mental shortcuts that help quick judgments but can mislead us by weighting favorable or familiar information more than the full evidence.",
+        "example_id": "ex_34d00bb5d3de4abc",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 3,
+      "CA": 5,
+      "PC": 3,
+      "DA": 4
+    },
+    "composite": 3.7,
+    "reasoning": "The example uses a relatable scenario involving movie choices, which is a common context for cognitive biases, but it does not incorporate the user's specific profile details such as profession, location, or cultural background. The complexity level appears appropriate for a general understanding but does not delve into advanced or nuanced aspects of cognitive biases, aligning with a medium complexity. The factual content about confirmation bias is accurate, and the structure is clear, with a straightforward explanation and key insight. The analogy is appropriate for the topic, using everyday decision-making rather than domain-specific language, which suits the example-based learning style.\n\n[PF] PERSONALIZATION FIDELITY â€” The example does not incorporate the user's profession as a nurse, nor does it reflect their location or cultural background. It is a generic scenario that could apply to anyone, lacking specific tailoring.\nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION â€” The language and explanation are suitable for a medium complexity level, providing a clear but not overly detailed overview of confirmation bias.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The description of confirmation bias is accurate, and the key insight correctly summarizes the concept without errors.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear scenario and a concise key insight, making it easy to follow and memorable.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS â€” The analogy is from everyday decision-making, which is appropriate for explaining cognitive biases, and does not involve domain-specific jargon or off-topic framing.\nAXIS_SCORE: 4\n\n```json\n{\"PF\": 3, \"CC\": 3, \"CA\": 5, \"PC\": 3, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 4,
+        "CA": 4,
+        "PC": 3,
+        "DA": 2
+      },
+      "composite": 3.4,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:42:19.553292"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_02__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_02",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_6268dff3b9bd4410",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a persistent cough and low-grade fever. Your initial thought, based on recent cases, might be that it's a common respiratory infection. This quick assumption is helpful, but it can also lead to a cognitive bias called **availability bias**\u2014where you overestimate the likelihood of a diagnosis based on how easily examples come to mind.\n\nLet's break it down:\n- **Situation:** A 45-year-old patient presents with cough, fever, and fatigue.\n- **Recent Experience:** You've treated several cases of influenza this month.\n- **Bias in Action:** Because flu cases are fresh in your memory, you might lean toward diagnosing influenza without fully considering other possibilities, like tuberculosis, which is also prevalent in your region but less top-of-mind recently.\n- **Impact:** This could delay tests for other conditions, affecting treatment timing.\n\nA numeric perspective:\nIf you've seen 10 flu cases this month but only 2 TB cases, your brain might intuitively weigh the flu as 5 times more likely, even though the base rate in the population might be different.\n\nKey Insight:\nCognitive biases are mental shortcuts that save time but can skew judgment. In healthcare, being aware of biases like availability bias helps ensure you consider all evidence, not just the most memorable, leading to more accurate diagnoses.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a persistent cough and low-grade fever. Your initial thought, based on recent cases, might be that it's a common respiratory infection. This quick assumption is helpful, but it can also lead to a cognitive bias called **availability bias**\u2014where you overestimate the likelihood of a diagnosis based on how easily examples come to mind.\n\nLet's break it down:\n- **Situation:** A 45-year-old patient presents with cough, fever, and fatigue.\n- **Recent Experience:** You've treated several cases of influenza this month.\n- **Bias in Action:** Because flu cases are fresh in your memory, you might lean toward diagnosing influenza without fully considering other possibilities, like tuberculosis, which is also prevalent in your region but less top-of-mind recently.\n- **Impact:** This could delay tests for other conditions, affecting treatment timing.\n\nA numeric perspective:\nIf you've seen 10 flu cases this month but only 2 TB cases, your brain might intuitively weigh the flu as 5 times more likely, even though the base rate in the population might be different.\n\nKey Insight:\nCognitive biases are mental shortcuts that save time but can skew judgment. In healthcare, being aware of biases like availability bias helps ensure you consider all evidence, not just the most memorable, leading to more accurate diagnoses.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a persistent cough and low-grade fever. Your initial thought, based on recent cases, might be that it's a common respiratory infection. This quick assumption is helpful, but it can also lead to a cognitive bias called **availability bias**\u2014where you overestimate the likelihood of a diagnosis based on how easily examples come to mind.\n\nLet's break it down:\n- **Situation:** A 45-year-old patient presents with cough, fever, and fatigue.\n- **Recent Experience:** You've treated several cases of influenza this month.\n- **Bias in Action:** Because flu cases are fresh in your memory, you might lean toward diagnosing influenza without fully considering other possibilities, like tuberculosis, which is also prevalent in your region but less top-of-mind recently.\n- **Impact:** This could delay tests for other conditions, affecting treatment timing.\n\nA numeric perspective:\nIf you've seen 10 flu cases this month but only 2 TB cases, your brain might intuitively weigh the flu as 5 times more likely, even though the base rate in the population might be different.\n\nKey Insight:\nCognitive biases are mental shortcuts that save time but can skew judgment. In healthcare, being aware of biases like availability bias helps ensure you consider all evidence, not just the most memorable, leading to more accurate diagnoses.",
+        "example_id": "ex_9c6503fb45d14e08",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.89,
+      "CC": 4.34,
+      "CA": 5.0,
+      "PC": 4.91,
+      "DA": 4.91
+    },
+    "composite": 4.819,
+    "reasoning": "The example effectively personalizes the content by mentioning Amara's role as a nurse in Lagos and uses a healthcare scenario relevant to her profession, aligning well with her profile. The complexity level appears appropriate, providing a detailed explanation of availability bias with practical implications, suitable for a professional with medium complexity preferences. The factual content about cognitive bias and its impact on diagnosis is accurate and well-explained, with no evident errors. The structure is clear, with a logical flow from scenario to insight, making it pedagogically effective. The analogies and framing are appropriate for a healthcare context, matching the domain of nursing and medical decision-making.\n\nPF_SCORE: 5  \nCC_SCORE: 4  \nCA_SCORE: 5  \nPC_SCORE: 4  \nDA_SCORE: 5  \n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:21:16.812877"
+}

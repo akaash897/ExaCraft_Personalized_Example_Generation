@@ -190,17 +190,20 @@ def load_learning_patterns(user_id: str) -> dict:
     return {"user_id": user_id, "patterns": []}
 
 
-def append_learning_pattern(user_id: str, pattern_type: str, observation: str, example_id: str = "") -> bool:
+def append_learning_pattern(user_id: str, pattern_type: str, observation: str, example_id: str = "", source: str = "") -> bool:
     """Append a new persistent learning trait."""
     try:
         data = load_learning_patterns(user_id)
-        data["patterns"].append({
+        entry = {
             "pattern_id": f"pat_{uuid.uuid4().hex[:10]}",
             "pattern_type": pattern_type,
             "observation": observation,
             "example_id": example_id,
             "timestamp": datetime.now().isoformat()
-        })
+        }
+        if source:
+            entry["source"] = source
+        data["patterns"].append(entry)
         path = _patterns_path(user_id)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)

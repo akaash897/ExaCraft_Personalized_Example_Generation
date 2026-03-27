@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_02__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "thread_id": "thread_950ecf7b72894445",
+    "initial_example": "**Concept:** Natural Selection\n\n**Example:**\nImagine a population of beetles living in a forest. The beetles vary in color; some are green, and some are brown. The forest floor is covered in brown leaves and dirt.\n\n*   **Variation:** The beetles are born with different colors. This variation is random and inherited from their parents.\n*   **Selection Pressure:** Birds that eat the beetles can easily spot the green beetles against the brown background, but have a harder time seeing the brown ones.\n*   **Differential Survival & Reproduction:** Over time, more green beetles get eaten by birds. More brown beetles survive long enough to reproduce.\n*   **Inheritance:** The surviving brown beetles pass on their \"brown color\" genes to their offspring.\n*   **Result:** Generation after generation, the proportion of brown beetles in the population increases. The population adapts to its environment.\n\n**Key Insight:**\nNatural selection is not random; it is the non-random survival of random variations. The environment \"selects\" which inherited traits are advantageous, causing those traits to become more common in a population over time.",
+    "final_example": "**Concept:** Natural Selection\n\n**Example:**\nImagine a population of beetles living in a forest. The beetles vary in color; some are green, and some are brown. The forest floor is covered in brown leaves and dirt.\n\n*   **Variation:** The beetles are born with different colors. This variation is random and inherited from their parents.\n*   **Selection Pressure:** Birds that eat the beetles can easily spot the green beetles against the brown background, but have a harder time seeing the brown ones.\n*   **Differential Survival & Reproduction:** Over time, more green beetles get eaten by birds. More brown beetles survive long enough to reproduce.\n*   **Inheritance:** The surviving brown beetles pass on their \"brown color\" genes to their offspring.\n*   **Result:** Generation after generation, the proportion of brown beetles in the population increases. The population adapts to its environment.\n\n**Key Insight:**\nNatural selection is not random; it is the non-random survival of random variations. The environment \"selects\" which inherited traits are advantageous, causing those traits to become more common in a population over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Natural Selection\n\n**Example:**\nImagine a population of beetles living in a forest. The beetles vary in color; some are green, and some are brown. The forest floor is covered in brown leaves and dirt.\n\n*   **Variation:** The beetles are born with different colors. This variation is random and inherited from their parents.\n*   **Selection Pressure:** Birds that eat the beetles can easily spot the green beetles against the brown background, but have a harder time seeing the brown ones.\n*   **Differential Survival & Reproduction:** Over time, more green beetles get eaten by birds. More brown beetles survive long enough to reproduce.\n*   **Inheritance:** The surviving brown beetles pass on their \"brown color\" genes to their offspring.\n*   **Result:** Generation after generation, the proportion of brown beetles in the population increases. The population adapts to its environment.\n\n**Key Insight:**\nNatural selection is not random; it is the non-random survival of random variations. The environment \"selects\" which inherited traits are advantageous, causing those traits to become more common in a population over time.",
+        "example_id": "ex_45d0a81a73a34ba7",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.81,
+      "CC": 4.01,
+      "CA": 5.0,
+      "PC": 4.64,
+      "DA": 4.48
+    },
+    "composite": 4.24,
+    "reasoning": "The example effectively personalizes the topic by using a relatable scenario involving natural selection, though it does not explicitly incorporate the user's profession or location. The complexity level appears appropriate for a medium setting, with clear explanations suitable for someone with a professional background but not specialized in biology. The scientific content is accurate, correctly describing the process of natural selection without errors. The structure is logical and pedagogically sound, guiding the learner through variation, selection pressure, survival, inheritance, and outcome, with a memorable key insight. The analogies used (beetles, birds, environment) are appropriate for the biological domain, making the framing suitable for the topic.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example does not explicitly incorporate the user's profession as a nurse or their location in Lagos, Nigeria, nor does it use domain-specific analogies related to healthcare or West African environments. It is generic in that sense.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION \u2014 The explanation strikes a good balance, using accessible language and concepts appropriate for a medium complexity level, without oversimplifying or overcomplicating.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 The scientific content is accurate, correctly describing the key elements of natural selection without errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a logical flow from variation to outcome, and the key insight is clearly highlighted, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogies (beetles, birds, environment) are appropriate for biology and natural selection, fitting the domain well.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:06:02.956344"
+}

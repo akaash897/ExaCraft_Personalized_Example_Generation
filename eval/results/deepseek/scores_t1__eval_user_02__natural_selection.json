@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_02__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "thread_id": "thread_6357b02fa2934141",
+    "initial_example": "**Concept:** Natural Selection\n\n**Example:**\n\nAmara, as a nurse in Lagos, you understand how infections spread and how some patients respond differently to treatment. Think of a bacterial infection in a hospital ward. Some bacteria are naturally resistant to a particular antibiotic, while others are vulnerable.\n\n**Scenario:**\nA patient is treated with an antibiotic. The vulnerable bacteria die quickly. However, a few resistant bacteria survive because they have a genetic trait that protects them.\n\n**Process:**\n1.  **Variation:** Not all bacteria are identical. Some have a random mutation that makes them resistant.\n2.  **Selection:** The antibiotic *selects* which bacteria live (the resistant ones) and which die (the vulnerable ones).\n3.  **Reproduction:** The surviving resistant bacteria multiply, passing their resistance trait to their offspring.\n4.  **Result:** Over time, and after several rounds of treatment, the entire bacterial population in the patient becomes resistant to that antibiotic. The drug no longer works.\n\n**Key Insight:** Natural selection is not random planning; it's a process where existing variations in a population are tested by the environment. Traits that help survival and reproduction become more common over generations.",
+    "final_example": "**Concept:** Natural Selection\n\n**Example:**\n\nAmara, as a nurse in Lagos, you understand how infections spread and how some patients respond differently to treatment. Think of a bacterial infection in a hospital ward. Some bacteria are naturally resistant to a particular antibiotic, while others are vulnerable.\n\n**Scenario:**\nA patient is treated with an antibiotic. The vulnerable bacteria die quickly. However, a few resistant bacteria survive because they have a genetic trait that protects them.\n\n**Process:**\n1.  **Variation:** Not all bacteria are identical. Some have a random mutation that makes them resistant.\n2.  **Selection:** The antibiotic *selects* which bacteria live (the resistant ones) and which die (the vulnerable ones).\n3.  **Reproduction:** The surviving resistant bacteria multiply, passing their resistance trait to their offspring.\n4.  **Result:** Over time, and after several rounds of treatment, the entire bacterial population in the patient becomes resistant to that antibiotic. The drug no longer works.\n\n**Key Insight:** Natural selection is not random planning; it's a process where existing variations in a population are tested by the environment. Traits that help survival and reproduction become more common over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Natural Selection\n\n**Example:**\n\nAmara, as a nurse in Lagos, you understand how infections spread and how some patients respond differently to treatment. Think of a bacterial infection in a hospital ward. Some bacteria are naturally resistant to a particular antibiotic, while others are vulnerable.\n\n**Scenario:**\nA patient is treated with an antibiotic. The vulnerable bacteria die quickly. However, a few resistant bacteria survive because they have a genetic trait that protects them.\n\n**Process:**\n1.  **Variation:** Not all bacteria are identical. Some have a random mutation that makes them resistant.\n2.  **Selection:** The antibiotic *selects* which bacteria live (the resistant ones) and which die (the vulnerable ones).\n3.  **Reproduction:** The surviving resistant bacteria multiply, passing their resistance trait to their offspring.\n4.  **Result:** Over time, and after several rounds of treatment, the entire bacterial population in the patient becomes resistant to that antibiotic. The drug no longer works.\n\n**Key Insight:** Natural selection is not random planning; it's a process where existing variations in a population are tested by the environment. Traits that help survival and reproduction become more common over generations.",
+        "example_id": "ex_8f7049ae3a5649be",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.83,
+      "CC": 4.34,
+      "CA": 5.0,
+      "PC": 4.86,
+      "DA": 5.0
+    },
+    "composite": 4.806,
+    "reasoning": "The example effectively uses a healthcare context relevant to Amara's profession, incorporating her location and role, which enhances personalization. The complexity level appears appropriate, explaining natural selection with sufficient detail suitable for a professional learner. The scientific content is accurate, correctly describing the process of natural selection in bacteria. The structure is clear, with a logical flow from variation to result, making it pedagogically sound. The analogy of bacteria resisting antibiotics is highly domain-appropriate, fitting well within biological and medical contexts.\n\nPF: The example references Amara's role as a nurse and her location, and uses a medical scenario, aligning well with her profile. The analogy is domain-specific, making it highly personalized.\nAXIS_SCORE: 5\n\nCC: The explanation covers the core concepts of natural selection with appropriate depth, matching a medium complexity level. It avoids oversimplification or excessive detail.\nAXIS_SCORE: 4\n\nCA: The scientific facts about variation, selection, reproduction, and resistance are accurate and well-explained, with no errors or misconceptions.\nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from the scenario to the key insight, facilitating understanding and retention.\nAXIS_SCORE: 5\n\nDA: The analogy of bacteria and antibiotics is perfectly suited to the biological domain, making the framing highly appropriate for the topic.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:20:01.782509"
+}

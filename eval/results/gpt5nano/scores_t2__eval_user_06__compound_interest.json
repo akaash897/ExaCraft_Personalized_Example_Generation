@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__compound_interest",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Compound Interest",
+    "thread_id": "thread_31ab7ad2bd4c409b",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nScenario:\nAmara is a nurse in Lagos who wants to save ₦50,000 to upgrade her clinic. She chooses to place the lump sum in a savings account that compounds monthly at 8% per year for 3 years.\n\nInputs (worksheet):\n- Principal P = ₦50,000\n- Annual rate r = 8% = 0.08\n- Compounding frequency n = 12 per year\n- Time t = 3 years\n\nFormula:\nA = P(1 + r/n)^{nt}\n\nCalculations:\n- Periodic rate i = r/n = 0.08 / 12 = 0.0066667\n- Total periods m = nt = 12 × 3 = 36\n- Accumulation factor = (1 + i)^m = (1.0066667)^36 ≈ 1.271\n- Future value A = P × factor = ₦50,000 × 1.271 ≈ ₦63,550\n- Interest earned = A − P ≈ ₦13,550\n\nOutputs:\n- Future value A ≈ ₦63,550\n- Interest earned ≈ ₦13,550\n\nReflection:\nIn three years, Amara’s ₦50,000 grows enough to cover part of a clinic upgrade (roughly ₦13.5k in interest). This illustrates how regular saving with compounding supports practical budget items for her practice.\n\nKey Insight:\nCompound interest earns interest on interest, so given time and regular compounding, the total grows faster than simple interest alone.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nScenario:\nAmara is a nurse in Lagos who wants to save ₦50,000 to upgrade her clinic. She chooses to place the lump sum in a savings account that compounds monthly at 8% per year for 3 years.\n\nInputs (worksheet):\n- Principal P = ₦50,000\n- Annual rate r = 8% = 0.08\n- Compounding frequency n = 12 per year\n- Time t = 3 years\n\nFormula:\nA = P(1 + r/n)^{nt}\n\nCalculations:\n- Periodic rate i = r/n = 0.08 / 12 = 0.0066667\n- Total periods m = nt = 12 × 3 = 36\n- Accumulation factor = (1 + i)^m = (1.0066667)^36 ≈ 1.271\n- Future value A = P × factor = ₦50,000 × 1.271 ≈ ₦63,550\n- Interest earned = A − P ≈ ₦13,550\n\nOutputs:\n- Future value A ≈ ₦63,550\n- Interest earned ≈ ₦13,550\n\nReflection:\nIn three years, Amara’s ₦50,000 grows enough to cover part of a clinic upgrade (roughly ₦13.5k in interest). This illustrates how regular saving with compounding supports practical budget items for her practice.\n\nKey Insight:\nCompound interest earns interest on interest, so given time and regular compounding, the total grows faster than simple interest alone.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nScenario:\nAmara is a nurse in Lagos who wants to save ₦50,000 to upgrade her clinic. She chooses to place the lump sum in a savings account that compounds monthly at 8% per year for 3 years.\n\nInputs (worksheet):\n- Principal P = ₦50,000\n- Annual rate r = 8% = 0.08\n- Compounding frequency n = 12 per year\n- Time t = 3 years\n\nFormula:\nA = P(1 + r/n)^{nt}\n\nCalculations:\n- Periodic rate i = r/n = 0.08 / 12 = 0.0066667\n- Total periods m = nt = 12 × 3 = 36\n- Accumulation factor = (1 + i)^m = (1.0066667)^36 ≈ 1.271\n- Future value A = P × factor = ₦50,000 × 1.271 ≈ ₦63,550\n- Interest earned = A − P ≈ ₦13,550\n\nOutputs:\n- Future value A ≈ ₦63,550\n- Interest earned ≈ ₦13,550\n\nReflection:\nIn three years, Amara’s ₦50,000 grows enough to cover part of a clinic upgrade (roughly ₦13.5k in interest). This illustrates how regular saving with compounding supports practical budget items for her practice.\n\nKey Insight:\nCompound interest earns interest on interest, so given time and regular compounding, the total grows faster than simple interest alone.",
+        "example_id": "ex_53893cc237a64497",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Craft the next Compound Interest example as a medium-complexity, real-world Lagos, Nigeria scenario featuring Amara, a nurse, to maximize relevance. Use a clear, step-by-step worksheet with labeled inputs and outputs: inputs should include principal P, annual rate r, compounding frequency n, and time t; outputs should show future value A and interest earned. Include the standard formula A = P(1 + r/n)^{nt}, show each intermediate calculation (periodic rate, total periods, then A/interest), and close with a quick reflection tying the saving outcome to a practical budget for Amara's practice.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "composite": 4.5,
+    "reasoning": "The example effectively personalizes the scenario by using Amara's name, profession, and location, and it aligns with her learning style by providing a concrete, relatable example. The complexity level appears appropriate, with clear calculations and practical context suitable for a professional with medium familiarity with financial concepts. The factual content about compound interest and the formula used are correct, and the step-by-step calculation enhances understanding. The structure is logical, with a clear flow from scenario to calculations to insights, making it pedagogically sound. The analogy of saving money for a clinic upgrade is appropriate for a nurse in Lagos, making the financial concept relevant and accessible within her domain.\n\n[PF] PERSONALIZATION FIDELITY — The example is well-tailored, incorporating her name, profession, and location, and it uses a relatable scenario relevant to her context.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation and calculations are at a medium complexity level, suitable for a professional learner, with clear formulas and practical context.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The content correctly explains compound interest, uses the correct formula, and performs accurate calculations, with no factual errors.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from scenario to calculations to insights, making it easy to follow and understand.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing and analogy are appropriate for a financial concept, and the context of saving for a clinic upgrade is relevant for her profession and background.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Craft the next Compound Interest example as a medium-complexity, real-world Lagos, Nigeria scenario featuring Amara, a nurse, to maximize relevance. Use a clear, step-by-step worksheet with labeled inputs and outputs: inputs should include principal P, annual rate r, compounding frequency n, and time t; outputs should show future value A and interest earned. Include the standard formula A = P(1 + r/n)^{nt}, show each intermediate calculation (periodic rate, total periods, then A/interest), and close with a quick reflection tying the saving outcome to a practical budget for Amara's practice.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction explicitly incorporates the user's professional background as a nurse and emphasizes grounding the example in Lagos, Nigeria, aligning with the domain preference. It also specifies a step-by-step worksheet with labeled inputs and outputs, reflecting the preferred complexity and learning style, and ties the example to practical relevance, which demonstrates a concrete synthesis of the stored patterns and insights. Therefore, it effectively translates the stored information into a detailed, actionable generation directive.\n\nSPECIFICITY_SCORE: 5\n\n```json\n{\n  \"SPECIFICITY\": 5\n}\n```",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:23:51.426896"
+}

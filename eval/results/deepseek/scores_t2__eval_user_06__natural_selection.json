@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_3fdd2d15adf846ad",
+    "initial_example": "**Concept:** Natural Selection  \n\n**Example:**  \nAmara, a nurse in Lagos, observes how antibiotic resistance evolves in bacterial infections. This is natural selection in action—a process where organisms best suited to their environment survive and reproduce more than others.  \n\n**Scenario:**  \nA patient arrives with a bacterial infection. Amara administrates a standard antibiotic.  \n\n**Step-by-Step Breakdown:**  \n\n1. **Variation:**  \n   In the bacterial population, some individuals have slight genetic differences. A few bacteria happen to carry a gene that makes them resistant to the antibiotic.  \n\n2. **Selection Pressure:**  \n   The antibiotic acts as an environmental pressure. It kills most of the susceptible bacteria, but the resistant ones survive because the drug doesn’t affect them.  \n\n3. **Reproduction & Inheritance:**  \n   The surviving resistant bacteria reproduce, passing the resistance gene to their offspring. Over time—and especially with repeated or incomplete antibiotic courses—the resistant strain becomes the dominant population in the patient (or in the community).  \n\n4. **Adaptation:**  \n   The bacterial population has now adapted to the antibiotic-rich environment. Future infections caused by this strain will be harder to treat with the same drug.  \n\n**Local Connection:**  \nIn Lagos, diseases like typhoid fever and tuberculosis have shown rising antibiotic resistance. This mirrors natural selection: overuse of antibiotics in hospitals and communities creates a strong selection pressure, favoring resistant strains that spread more easily in a dense urban setting.  \n\n**Key Insight:**  \nNatural selection isn’t random—it’s a filter. The environment (like an antibiotic) determines which traits are advantageous. Those traits become more common in the population over generations, leading to adaptation. In healthcare, this explains why antibiotic stewardship and completing prescribed courses are critical to slow resistance.",
+    "final_example": "**Concept:** Natural Selection  \n\n**Example:**  \nAmara, a nurse in Lagos, observes how antibiotic resistance evolves in bacterial infections. This is natural selection in action—a process where organisms best suited to their environment survive and reproduce more than others.  \n\n**Scenario:**  \nA patient arrives with a bacterial infection. Amara administrates a standard antibiotic.  \n\n**Step-by-Step Breakdown:**  \n\n1. **Variation:**  \n   In the bacterial population, some individuals have slight genetic differences. A few bacteria happen to carry a gene that makes them resistant to the antibiotic.  \n\n2. **Selection Pressure:**  \n   The antibiotic acts as an environmental pressure. It kills most of the susceptible bacteria, but the resistant ones survive because the drug doesn’t affect them.  \n\n3. **Reproduction & Inheritance:**  \n   The surviving resistant bacteria reproduce, passing the resistance gene to their offspring. Over time—and especially with repeated or incomplete antibiotic courses—the resistant strain becomes the dominant population in the patient (or in the community).  \n\n4. **Adaptation:**  \n   The bacterial population has now adapted to the antibiotic-rich environment. Future infections caused by this strain will be harder to treat with the same drug.  \n\n**Local Connection:**  \nIn Lagos, diseases like typhoid fever and tuberculosis have shown rising antibiotic resistance. This mirrors natural selection: overuse of antibiotics in hospitals and communities creates a strong selection pressure, favoring resistant strains that spread more easily in a dense urban setting.  \n\n**Key Insight:**  \nNatural selection isn’t random—it’s a filter. The environment (like an antibiotic) determines which traits are advantageous. Those traits become more common in the population over generations, leading to adaptation. In healthcare, this explains why antibiotic stewardship and completing prescribed courses are critical to slow resistance.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Natural Selection  \n\n**Example:**  \nAmara, a nurse in Lagos, observes how antibiotic resistance evolves in bacterial infections. This is natural selection in action—a process where organisms best suited to their environment survive and reproduce more than others.  \n\n**Scenario:**  \nA patient arrives with a bacterial infection. Amara administrates a standard antibiotic.  \n\n**Step-by-Step Breakdown:**  \n\n1. **Variation:**  \n   In the bacterial population, some individuals have slight genetic differences. A few bacteria happen to carry a gene that makes them resistant to the antibiotic.  \n\n2. **Selection Pressure:**  \n   The antibiotic acts as an environmental pressure. It kills most of the susceptible bacteria, but the resistant ones survive because the drug doesn’t affect them.  \n\n3. **Reproduction & Inheritance:**  \n   The surviving resistant bacteria reproduce, passing the resistance gene to their offspring. Over time—and especially with repeated or incomplete antibiotic courses—the resistant strain becomes the dominant population in the patient (or in the community).  \n\n4. **Adaptation:**  \n   The bacterial population has now adapted to the antibiotic-rich environment. Future infections caused by this strain will be harder to treat with the same drug.  \n\n**Local Connection:**  \nIn Lagos, diseases like typhoid fever and tuberculosis have shown rising antibiotic resistance. This mirrors natural selection: overuse of antibiotics in hospitals and communities creates a strong selection pressure, favoring resistant strains that spread more easily in a dense urban setting.  \n\n**Key Insight:**  \nNatural selection isn’t random—it’s a filter. The environment (like an antibiotic) determines which traits are advantageous. Those traits become more common in the population over generations, leading to adaptation. In healthcare, this explains why antibiotic stewardship and completing prescribed courses are critical to slow resistance.",
+        "example_id": "ex_ea629634e5f849c2",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity example about Natural Selection that connects to healthcare/nursing contexts in Lagos, Nigeria. Use Amara's name and local Nigerian references to ground the scenario. Structure the explanation with clear step-by-step breakdowns showing how natural selection principles apply to real-world medical situations like antibiotic resistance or disease evolution.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.29,
+      "CA": 5.0,
+      "PC": 4.99,
+      "DA": 5.0
+    },
+    "composite": 4.856,
+    "reasoning": "The example effectively personalizes the content by mentioning Amara's role as a nurse in Lagos, Nigeria, and connects the concept of natural selection to antibiotic resistance, a relevant health issue in her context. The scenario is well-structured, with clear steps that align with her learning style, providing a concrete, real-world example. The scientific accuracy appears sound, correctly describing the process of natural selection and antibiotic resistance. The pedagogical structure is logical, guiding the learner through the concept with a relatable scenario and a key insight that reinforces understanding. The analogy and framing are appropriate for the biological topic, using the context of bacterial infections and antibiotics, which is domain-specific and suitable.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Amara's profession, location, and learning style, making it highly tailored to her profile.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances scientific detail with accessibility, matching a medium complexity level suitable for a professional learner.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content about natural selection and antibiotic resistance is accurate, with correct descriptions of genetic variation, selection pressure, and adaptation.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The step-by-step breakdown and clear structure facilitate understanding, with a logical flow from variation to adaptation, making it effective for learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of bacteria and antibiotics is perfectly aligned with the biological domain, using appropriate vocabulary and framing.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity example about Natural Selection that connects to healthcare/nursing contexts in Lagos, Nigeria. Use Amara's name and local Nigerian references to ground the scenario. Structure the explanation with clear step-by-step breakdowns showing how natural selection principles apply to real-world medical situations like antibiotic resistance or disease evolution.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction explicitly incorporates Amara's role as a nurse, her location in Lagos, Nigeria, and her preference for example-based learning, aligning these with the need for concrete, real-world medical scenarios. It also references her medium complexity preference and the importance of step-by-step breakdowns, demonstrating a clear synthesis of her stored patterns and insights into a detailed, actionable directive.\n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-15T20:51:20.841962"
+}

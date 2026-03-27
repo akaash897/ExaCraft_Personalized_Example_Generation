@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 2,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": null,
+        "actual": "regenerate",
+        "excluded": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Cognitive Bias\n\nExample:\nContext: Lagos, Nigeria. Amara is a nurse working in a busy hospital triage area. A patient arrives with fever and headache after a recent dengue outbreak news cycle.\n\nNarrative details:\n- Lagos base rates for febrile illness (simplified):\n  - Malaria: 60%\n  - Dengue: 15%\n  - Other causes: 25%\n- Availability-based judgment (memory-informed): Amara estimates the current patient’s probabilities as Dengue 50%, Malaria 40%, Others 10%, because the recent dengue cases are fresh in memory.\n- Result of the bias: The triage decision leans toward dengue-focused assessment first, potentially delaying appropriate malaria testing or treatment.\n\nPrompt for the student:\n- Identify the bias at work.\n- Explain why this bias arises in probabilistic reasoning, using base-rate information and probability concepts.\n- Propose a concrete debiasing step and perform a quick base-rate check to guide the next decision.\n\nKey steps and numbers for clarity:\n- Base-rate comparison shows malaria is far more common than dengue among febrile Lagos patients (60% vs 15%).\n- The observed estimate (Dengue 50%) deviates from the base rate by 35 percentage points, driven by recent memory rather than the underlying proportions.\n- Debiasing step: recalibrate toward base rates unless new objective evidence shifts probabilities; for immediate action, require at least one objective diagnostic input (e.g., a rapid test) before prioritizing one diagnosis over another.\n\nKey Insight:\nThe availability heuristic can inflate the probability of memorable cases and distort base-rate reasoning; always anchor probability judgments to base rates and seek objective evidence to update them.",
+      "example_id": "ex_44dac0b577c34649",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Cognitive Bias\n\nExample:\nBias identification:\n- Availability heuristic — tendency to overestimate likelihood of things that are vivid or recent in memory.\n\nLagos hospital triage vignette (contextual setup):\n- A nurse in Lagos triage encounters feverish patients. After treating several recent dengue cases, the nurse feels dengue is more likely than the base rates would suggest, potentially neglecting malaria or other causes.\n\nBase rates ( priors ):\n- P(Dengue) = 0.15\n- P(Malaria) = 0.60\n- P(Others) = 0.25\n\nDiagnostic test details:\n- Dengue rapid test sensitivity = 0.90\n- Dengue rapid test specificity = 0.85\n\nBayesian update (step-by-step with numbers):\n- P(Dengue | +) = [0.15 × 0.90] / [0.15 × 0.90 + 0.85 × (1 − 0.85)]\n  = 0.135 / (0.135 + 0.1275)\n  ≈ 0.51 (51%)\n- P(Dengue | −) = [0.15 × (1 − 0.90)] / [0.15 × (1 − 0.90) + 0.85 × 0.85]\n  = 0.015 / (0.015 + 0.7225)\n  ≈ 0.02 (2%)\n\nWhat these posterior probabilities mean in triage:\n- A positive dengue test raises suspicion to about 51%, but dengue is far from guaranteed; malaria or other causes still compete at high base rates.\n- A negative dengue test lowers dengue probability to about 2%, making dengue unlikely but not impossible in the overall picture.\n\nHow availability bias can mislead:\n- If memories of recent dengue patients are vivid, you might give dengue more weight than the base rates and test results justify, ignoring Bayes updating. Bayes’ rule shows how to combine prior odds with test evidence to arrive at a calibrated probability.\n\nPractical guardrails to reduce availability bias in busy Lagos triage:\n- Check priors first: start every case by re-establishing base rates (malaria, dengue, others) before weighing test results.\n- Use objective tests and know their limits (sensitivity and specificity) rather than relying on memory of prior outcomes.\n- Consider alternate diagnoses in a structured way (keep malaria and others in differential).\n- Use a simple checklist to guide reasoning and ensure probabilistic updates are explicit.\n\nNurse-domain equipment analogy:\n- Interpreting a dengue rapid test is like reading a ventilator/readout: one signal is informative but must be interpreted in the context of baseline patient status and test characteristics; avoid over- or under-reacting to a single reading.\n\nKey Insight:\n  Availability bias can tilt judgment away from Bayesian updating; grounding decisions in base rates and test properties yields calibrated triage probabilities.",
+      "example_id": "ex_40b8f30c2fd8473c"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-16T11:50:50.116087"
+}

@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_08__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_08",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_08",
+    "topic": "Natural Selection",
+    "thread_id": "thread_16ee654f140b4d3a",
+    "initial_example": "**Concept:** Natural Selection\n\n**Example:**\n\nKenji, imagine you're debugging a large, complex codebase in Tokyo. The program has a function that randomly generates small variations in its own logic every time it runs (like genetic mutations). Most of these variations cause bugs or crashes, but a very few accidentally make the program slightly faster or more efficient at its specific task—say, processing real-time train schedule data for the Tokyo Metro.\n\n**Step-by-Step Process:**\n\n1.  **Variation:** Within the population of program instances, there is natural, random variation in the code. One instance might have a more efficient loop; another might have a redundant function call.\n2.  **Selection Pressure:** The \"environment\" is the production server with strict performance benchmarks and limited CPU cycles. Programs that run too slowly or error out are \"killed\" (taken offline and replaced).\n3.  **Differential Survival & Reproduction:** The instance with the more efficient loop uses fewer resources, meets the performance benchmark, and is allowed to continue running. It also gets selected as the template for the next deployment cycle (reproduction).\n4.  **Inheritance:** The advantageous code variation (the efficient loop) is passed on to the new generation of deployed programs. Over many deployment cycles, this efficient trait becomes the standard across the entire population.\n\n**Tokyo Context: The Urban Foxes of Yoyogi Park**\nConsider the urban foxes in Yoyogi Park. Generations ago, their ancestors were forest-dwelling.\n*   **Variation:** Some foxes were naturally bolder or more adaptable to noise.\n*   **Selection Pressure:** The forest shrank, and Tokyo expanded. Food in the city (scraps, rodents) became a major resource.\n*   **Adaptation:** Foxes with traits that allowed them to navigate streets, avoid cars, and tolerate humans had a higher chance of surviving and raising pups in the urban environment.\n*   **Result:** Over many generations, the population in Tokyo shifted towards these urban-adapted traits. This is natural selection in action.\n\n**Key Insight:**\nNatural selection is not random—it's a filter. Random mutations provide the raw material (variation), but the non-random environment determines which variations persist. It's an iterative algorithm where successful traits accumulate over generations, leading to adaptation.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nKenji, imagine you're reviewing pull requests in a competitive Tokyo tech startup. Your team maintains a critical API service that must handle thousands of requests per second. Over multiple development cycles, you observe a process of software evolution that mirrors natural selection.\n\nVariation:\nDifferent developers submit code with varying performance characteristics. Some implementations use efficient algorithms (O(n log n) sorts, hash maps for lookups), while others use naive brute-force approaches (O(n²) nested loops). This variation exists naturally in the codebase.\n\nSelection Pressure:\nThe production environment acts as the selection pressure. Code that causes timeouts, crashes under load, or consumes excessive memory gets flagged by monitoring alerts and is quickly reverted or refactored. Efficient, stable code survives deployment and remains in the codebase.\n\nHeredity:\nWhen a developer's efficient solution survives code review and production testing, other developers inherit and reuse those patterns. The efficient algorithm becomes a library function or a design pattern copied into new features—successful traits propagate through the codebase.\n\nAdaptation Over Generations:\nAfter several quarterly release cycles, the codebase shows clear adaptation. The once-common brute-force approaches have been nearly eliminated. The surviving code is optimized, modular, and resilient—traits directly selected for by the production environment's demands. Inefficient variations occasionally appear through new hires or experimental features, but they rarely survive the next performance review cycle.\n\nKey Insight:\nNatural selection in software engineering isn't about survival of the \"best\" code in absolute terms, but survival of the code best suited to the specific environmental pressures—whether that's performance requirements, maintainability standards, or compatibility constraints. Variation provides the raw material, selection pressure determines what succeeds, and heredity ensures successful adaptations persist across future development cycles.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Natural Selection\n\n**Example:**\n\nKenji, imagine you're debugging a large, complex codebase in Tokyo. The program has a function that randomly generates small variations in its own logic every time it runs (like genetic mutations). Most of these variations cause bugs or crashes, but a very few accidentally make the program slightly faster or more efficient at its specific task—say, processing real-time train schedule data for the Tokyo Metro.\n\n**Step-by-Step Process:**\n\n1.  **Variation:** Within the population of program instances, there is natural, random variation in the code. One instance might have a more efficient loop; another might have a redundant function call.\n2.  **Selection Pressure:** The \"environment\" is the production server with strict performance benchmarks and limited CPU cycles. Programs that run too slowly or error out are \"killed\" (taken offline and replaced).\n3.  **Differential Survival & Reproduction:** The instance with the more efficient loop uses fewer resources, meets the performance benchmark, and is allowed to continue running. It also gets selected as the template for the next deployment cycle (reproduction).\n4.  **Inheritance:** The advantageous code variation (the efficient loop) is passed on to the new generation of deployed programs. Over many deployment cycles, this efficient trait becomes the standard across the entire population.\n\n**Tokyo Context: The Urban Foxes of Yoyogi Park**\nConsider the urban foxes in Yoyogi Park. Generations ago, their ancestors were forest-dwelling.\n*   **Variation:** Some foxes were naturally bolder or more adaptable to noise.\n*   **Selection Pressure:** The forest shrank, and Tokyo expanded. Food in the city (scraps, rodents) became a major resource.\n*   **Adaptation:** Foxes with traits that allowed them to navigate streets, avoid cars, and tolerate humans had a higher chance of surviving and raising pups in the urban environment.\n*   **Result:** Over many generations, the population in Tokyo shifted towards these urban-adapted traits. This is natural selection in action.\n\n**Key Insight:**\nNatural selection is not random—it's a filter. Random mutations provide the raw material (variation), but the non-random environment determines which variations persist. It's an iterative algorithm where successful traits accumulate over generations, leading to adaptation.",
+        "example_id": "ex_1a5298108f2d4dac",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, maintains a high-traffic e-commerce platform. The platform’s checkout process involves a complex piece of code that calculates shipping costs. Over time, multiple variations of this code exist in the codebase due to different developers' approaches (Variation).\n\nA major selection pressure occurs when Tokyo’s peak shopping season arrives. The production server environment becomes a harsh, resource-constrained \"ecosystem.\" The server automatically kills any process that uses too much memory or takes too long to respond (Selection Pressure).\n\nDuring this pressure:\n- Code Variation A: Uses a nested loop, is slow and memory-intensive. It times out under load, causing failed transactions.\n- Code Variation B: Uses a pre-calculated lookup table, is fast and efficient. It handles the traffic smoothly.\n\nThe result is differential survival and reproduction:\n- Variation A \"dies\" — it is flagged by monitoring tools and removed from the deployment cycle.\n- Variation B \"survives and reproduces\" — it passes all performance tests and is merged into the main branch. Its efficient algorithm is inherited by all future feature branches that fork from it (Inheritance).\n\nOver several development sprints, this cycle repeats. Only the code variations best suited to the production environment (fast, memory-efficient) persist and spread throughout the codebase.\n\nKey Insight:\nNatural selection in biology acts on heritable variations in a population under environmental pressure. In Kenji's world, the \"environment\" is the production server, the \"variations\" are different code implementations, and \"inheritance\" is the copying of successful code into new features. The fittest code, not the \"best\" code in a vacuum, is the one that survives.",
+        "example_id": "ex_18ffc5e23dff40ec"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, imagine you're reviewing pull requests in a competitive Tokyo tech startup. Your team maintains a critical API service that must handle thousands of requests per second. Over multiple development cycles, you observe a process of software evolution that mirrors natural selection.\n\nVariation:\nDifferent developers submit code with varying performance characteristics. Some implementations use efficient algorithms (O(n log n) sorts, hash maps for lookups), while others use naive brute-force approaches (O(n²) nested loops). This variation exists naturally in the codebase.\n\nSelection Pressure:\nThe production environment acts as the selection pressure. Code that causes timeouts, crashes under load, or consumes excessive memory gets flagged by monitoring alerts and is quickly reverted or refactored. Efficient, stable code survives deployment and remains in the codebase.\n\nHeredity:\nWhen a developer's efficient solution survives code review and production testing, other developers inherit and reuse those patterns. The efficient algorithm becomes a library function or a design pattern copied into new features—successful traits propagate through the codebase.\n\nAdaptation Over Generations:\nAfter several quarterly release cycles, the codebase shows clear adaptation. The once-common brute-force approaches have been nearly eliminated. The surviving code is optimized, modular, and resilient—traits directly selected for by the production environment's demands. Inefficient variations occasionally appear through new hires or experimental features, but they rarely survive the next performance review cycle.\n\nKey Insight:\nNatural selection in software engineering isn't about survival of the \"best\" code in absolute terms, but survival of the code best suited to the specific environmental pressures—whether that's performance requirements, maintainability standards, or compatibility constraints. Variation provides the raw material, selection pressure determines what succeeds, and heredity ensures successful adaptations persist across future development cycles.",
+        "example_id": "ex_ca2a641b1f9641a1"
+      }
+    ],
+    "context_instruction": "For this Natural Selection example, personalize it to Kenji as a software engineer in Tokyo using a relevant analogy from his domain, but keep the biology concepts accurate. Use medium complexity with step-by-step breakdowns, and ground the scenario in Tokyo's real-world context. Avoid making it too abstract or overly simplistic.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.51,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.98
+    },
+    "composite": 4.9,
+    "reasoning": "The example effectively personalizes by referencing Kenji's name, location, and profession, and uses a relatable context (debugging code in Tokyo) that aligns with his background as a software engineer. The complexity level appears appropriate, discussing natural selection with detailed steps and an additional urban fox analogy, which is suitable for an undergraduate learner with a medium complexity preference. The scientific content is accurate, correctly describing the process of natural selection with proper terminology and logical flow. Pedagogically, the example is well-structured, with clear step-by-step explanations and a memorable analogy that bridges abstract concepts to familiar urban wildlife, enhancing understanding. The framing and analogies are appropriate for the biological topic, using urban ecology and programming as domain-relevant metaphors, which are suitable for a scientifically literate audience like Kenji.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Kenji's name, location, and profession, and incorporates his learning style (example-based) with domain-specific analogies, making it highly tailored.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes detailed steps and analogies suitable for an undergraduate level, matching the medium complexity specified.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanation of natural selection and related concepts is accurate, with correct terminology and logical progression.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is clear, with a logical flow from basic concept to analogy, and the step-by-step breakdown aids understanding. The urban fox analogy reinforces the concept effectively.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies (debugging code, urban foxes) are appropriate for a scientific and engineering context, making the framing suitable for the biology topic.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 5.0,
+      "CC": 4.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by directly referencing Kenji, a software engineer in Tokyo, and uses domain-specific analogies related to software development, aligning well with his background and learning style. The complexity level is medium, matching the detailed yet accessible explanation of natural selection through software evolution, without overloading technical details. The scientific content appears accurate, correctly mapping biological concepts to software processes, and the structure is clear, with a logical flow from variation to adaptation and key insight, facilitating understanding. The analogies are appropriate for the biological topic, framing natural selection in terms of software development, which is suitable given Kenji's profession and learning preferences.\n\n[PF] PERSONALIZATION FIDELITY — The example is tailored to Kenji's profile, using his name, location, and profession, and employs an analogy from software engineering, matching his learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical detail with conceptual clarity, fitting a medium complexity level suitable for an undergraduate engineer.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The biological concepts are correctly mapped to software processes, with accurate descriptions of variation, selection, heredity, and adaptation.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from variation to key insight, making the concept accessible and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy from software engineering is highly appropriate for explaining natural selection, with relevant vocabulary and framing.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "Hmm.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "Despite the vague feedback, the regenerated example makes reasonable improvements by simplifying language and adding a clearer narrative structure.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The new example incorporates the requested change by shifting to a step-by-step format that is easier to follow, improving pedagogical clarity.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "For this Natural Selection example, personalize it to Kenji as a software engineer in Tokyo using a relevant analogy from his domain, but keep the biology concepts accurate. Use medium complexity with step-by-step breakdowns, and ground the scenario in Tokyo's real-world context. Avoid making it too abstract or overly simplistic.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.7,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 1,
+    "total": 3,
+    "accuracy": 0.3333333333333333,
+    "details": [
+      {
+        "round": 1,
+        "expected": "accept",
+        "actual": "regenerate",
+        "correct": false
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T22:46:06.708881"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_04__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_df1f9a59854c459b",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, studies a population of bacteria on a nutrient plate. Variation exists in a trait: 20% carry a mutation that makes them resistant to a certain antibiotic; 80% do not. The trait is heritable, so offspring can inherit resistance from their parents.\n\nA selection pressure is applied: the plate is treated with the antibiotic, which kills most susceptible bacteria but spares most resistant ones.\n\nNumbers:\n- Initial counts: 200 resistant, 800 non-resistant (total 1,000)\n- Survival after treatment:\n  - Resistant survive rate: 90% → 180 survivors\n  - Non-resistant survive rate: 10% → 80 survivors\n- Total survivors: 260\n- Resistance frequency among survivors: 180 / 260 ≈ 69%\n\nInterpretation:\nBecause the resistance trait boosted survival, it becomes more common among survivors. If these survivors reproduce and pass the trait to their offspring, the next generation will have a larger fraction of resistant bacteria than the original 20%.\n\nKey Insight:\nNatural selection increases the frequency of traits that improve survival and reproduction under a given environment; persistent selection pressure makes advantageous traits more common over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, studies a population of bacteria on a nutrient plate. Variation exists in a trait: 20% carry a mutation that makes them resistant to a certain antibiotic; 80% do not. The trait is heritable, so offspring can inherit resistance from their parents.\n\nA selection pressure is applied: the plate is treated with the antibiotic, which kills most susceptible bacteria but spares most resistant ones.\n\nNumbers:\n- Initial counts: 200 resistant, 800 non-resistant (total 1,000)\n- Survival after treatment:\n  - Resistant survive rate: 90% → 180 survivors\n  - Non-resistant survive rate: 10% → 80 survivors\n- Total survivors: 260\n- Resistance frequency among survivors: 180 / 260 ≈ 69%\n\nInterpretation:\nBecause the resistance trait boosted survival, it becomes more common among survivors. If these survivors reproduce and pass the trait to their offspring, the next generation will have a larger fraction of resistant bacteria than the original 20%.\n\nKey Insight:\nNatural selection increases the frequency of traits that improve survival and reproduction under a given environment; persistent selection pressure makes advantageous traits more common over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, studies a population of bacteria on a nutrient plate. Variation exists in a trait: 20% carry a mutation that makes them resistant to a certain antibiotic; 80% do not. The trait is heritable, so offspring can inherit resistance from their parents.\n\nA selection pressure is applied: the plate is treated with the antibiotic, which kills most susceptible bacteria but spares most resistant ones.\n\nNumbers:\n- Initial counts: 200 resistant, 800 non-resistant (total 1,000)\n- Survival after treatment:\n  - Resistant survive rate: 90% → 180 survivors\n  - Non-resistant survive rate: 10% → 80 survivors\n- Total survivors: 260\n- Resistance frequency among survivors: 180 / 260 ≈ 69%\n\nInterpretation:\nBecause the resistance trait boosted survival, it becomes more common among survivors. If these survivors reproduce and pass the trait to their offspring, the next generation will have a larger fraction of resistant bacteria than the original 20%.\n\nKey Insight:\nNatural selection increases the frequency of traits that improve survival and reproduction under a given environment; persistent selection pressure makes advantageous traits more common over generations.",
+        "example_id": "ex_432232c5be6f4e50",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "composite": 4.5,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Kenji's profession and location, integrating his background into the context of bacteria, which is a common biological example. The complexity level appears appropriate, with detailed numerical calculations and explanation suitable for an undergraduate learner with a medium complexity preference. The scientific content is accurate, correctly describing natural selection and antibiotic resistance. The structure is clear, with a logical flow from scenario to interpretation and key insight, facilitating understanding. The analogy of bacteria and antibiotic resistance is domain-appropriate, aligning well with biology and natural selection concepts.\n\nPF: The example is well tailored to Kenji's profile, especially by including his name, profession, and location, and uses a biological context that is familiar and relevant.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation, including numerical data and interpretation, matches the medium complexity level expected for an undergraduate engineer, providing sufficient detail without being overly technical.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing the process of natural selection, mutation, and resistance without errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from scenario to data to interpretation and insight, making it pedagogically effective.  \nAXIS_SCORE: 5\n\nDA: The analogy of bacteria and antibiotic resistance is highly domain-appropriate for biology and natural selection, with no off-topic elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:59:31.754424"
+}

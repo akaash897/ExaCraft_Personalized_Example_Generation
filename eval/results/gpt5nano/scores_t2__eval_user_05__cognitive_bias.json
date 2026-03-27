@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_05__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_a9cedcf098ce4323",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nStep 1\nInputs:\n  - Context: Lena, a university student in Berlin, is deciding whether a proposed bike-lane expansion in central districts is a good idea. A short viral video shows a cyclist crash near a busy intersection, and several social posts claim “Berliners hate the bike lanes.” Lena watches the video and reads the posts, then forms a quick impression that “most people in Berlin oppose the bike-lane policy.”\n  - Prompt: Name the bias at play and explain briefly why it tends to skew judgment.\n\nOutputs:\n  - Bias name: Availability bias (availability heuristic)\n  - Why it occurs: People rely on vivid, memorable examples they’ve just seen rather than on representative data or broad surveys.\n\nStep 2\nInputs:\n  - Prompt: Describe at least two consequences of Lena’s availability bias in this Berlin-specific situation (grounded in real-world context).\nOutputs:\n  - Consequence 1: Lena may overestimate the level of public opposition to the policy, leading her to misjudge overall support among Berlin residents.\n  - Consequence 2: Lena may discount nuanced positions (e.g., support for safer bike infrastructure if implemented with proper safeguards) and ignore official data or studies that show mixed or district-specific opinions.\n\nStep 3\nInputs:\n  - Prompt: Propose corrective strategies Lena could use to counter this bias, tailored to Berlin settings. Include concrete actions she could take.\nOutputs:\n  - Strategy 1: Seek representative data from credible sources (e.g., Berlin Senate transport studies, Statistik Berlin-Brandenburg) to gauge overall and district-by-district support.\n  - Strategy 2: Read a range of Berlin-focused outlets (e.g., Tagesspiegel, Berliner Zeitung, Der Spiegel Berlin edition) and compare viewpoints from neighborhoods with different experiences (Mitte, Neukölln, Prenzlauer Berg, Friedrichshain).\n  - Strategy 3: Compare anecdotal cases with base-rate information (what percentage actually supports vs. opposes, not just what one video implied).\n  - Strategy 4: Delay firm conclusions; set a date to review new information and note what evidence would change your mind.\n\nKey Insight:\n  Vivid, memorable examples can skew judgment; counteract by seeking representative data and diverse, credible sources.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nStep 1\nInputs:\n  - Context: Lena, a university student in Berlin, is deciding whether a proposed bike-lane expansion in central districts is a good idea. A short viral video shows a cyclist crash near a busy intersection, and several social posts claim “Berliners hate the bike lanes.” Lena watches the video and reads the posts, then forms a quick impression that “most people in Berlin oppose the bike-lane policy.”\n  - Prompt: Name the bias at play and explain briefly why it tends to skew judgment.\n\nOutputs:\n  - Bias name: Availability bias (availability heuristic)\n  - Why it occurs: People rely on vivid, memorable examples they’ve just seen rather than on representative data or broad surveys.\n\nStep 2\nInputs:\n  - Prompt: Describe at least two consequences of Lena’s availability bias in this Berlin-specific situation (grounded in real-world context).\nOutputs:\n  - Consequence 1: Lena may overestimate the level of public opposition to the policy, leading her to misjudge overall support among Berlin residents.\n  - Consequence 2: Lena may discount nuanced positions (e.g., support for safer bike infrastructure if implemented with proper safeguards) and ignore official data or studies that show mixed or district-specific opinions.\n\nStep 3\nInputs:\n  - Prompt: Propose corrective strategies Lena could use to counter this bias, tailored to Berlin settings. Include concrete actions she could take.\nOutputs:\n  - Strategy 1: Seek representative data from credible sources (e.g., Berlin Senate transport studies, Statistik Berlin-Brandenburg) to gauge overall and district-by-district support.\n  - Strategy 2: Read a range of Berlin-focused outlets (e.g., Tagesspiegel, Berliner Zeitung, Der Spiegel Berlin edition) and compare viewpoints from neighborhoods with different experiences (Mitte, Neukölln, Prenzlauer Berg, Friedrichshain).\n  - Strategy 3: Compare anecdotal cases with base-rate information (what percentage actually supports vs. opposes, not just what one video implied).\n  - Strategy 4: Delay firm conclusions; set a date to review new information and note what evidence would change your mind.\n\nKey Insight:\n  Vivid, memorable examples can skew judgment; counteract by seeking representative data and diverse, credible sources.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nStep 1\nInputs:\n  - Context: Lena, a university student in Berlin, is deciding whether a proposed bike-lane expansion in central districts is a good idea. A short viral video shows a cyclist crash near a busy intersection, and several social posts claim “Berliners hate the bike lanes.” Lena watches the video and reads the posts, then forms a quick impression that “most people in Berlin oppose the bike-lane policy.”\n  - Prompt: Name the bias at play and explain briefly why it tends to skew judgment.\n\nOutputs:\n  - Bias name: Availability bias (availability heuristic)\n  - Why it occurs: People rely on vivid, memorable examples they’ve just seen rather than on representative data or broad surveys.\n\nStep 2\nInputs:\n  - Prompt: Describe at least two consequences of Lena’s availability bias in this Berlin-specific situation (grounded in real-world context).\nOutputs:\n  - Consequence 1: Lena may overestimate the level of public opposition to the policy, leading her to misjudge overall support among Berlin residents.\n  - Consequence 2: Lena may discount nuanced positions (e.g., support for safer bike infrastructure if implemented with proper safeguards) and ignore official data or studies that show mixed or district-specific opinions.\n\nStep 3\nInputs:\n  - Prompt: Propose corrective strategies Lena could use to counter this bias, tailored to Berlin settings. Include concrete actions she could take.\nOutputs:\n  - Strategy 1: Seek representative data from credible sources (e.g., Berlin Senate transport studies, Statistik Berlin-Brandenburg) to gauge overall and district-by-district support.\n  - Strategy 2: Read a range of Berlin-focused outlets (e.g., Tagesspiegel, Berliner Zeitung, Der Spiegel Berlin edition) and compare viewpoints from neighborhoods with different experiences (Mitte, Neukölln, Prenzlauer Berg, Friedrichshain).\n  - Strategy 3: Compare anecdotal cases with base-rate information (what percentage actually supports vs. opposes, not just what one video implied).\n  - Strategy 4: Delay firm conclusions; set a date to review new information and note what evidence would change your mind.\n\nKey Insight:\n  Vivid, memorable examples can skew judgment; counteract by seeking representative data and diverse, credible sources.",
+        "example_id": "ex_7053581f68d447fb",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity cognitive bias exercise set in Berlin, featuring a character named Lena to ground the scenario. Present a clear, step-by-step format with labeled inputs and outputs, guiding the student to diagnose the bias (e.g., confirmation bias or anchoring) and explain why it occurred. Ground the context in real-world Berlin/Germany settings and include prompts that require the student to name the bias, describe its consequences, and propose a corrective strategy.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example demonstrates a personalized scenario involving Lena, a high school student in Berlin, which aligns well with her profile, including her location, role, and learning style. The content is detailed and contextually relevant, integrating her environment into the explanation of cognitive bias. The depth of explanation and the step-by-step structure suggest a medium complexity level, appropriate for her education level. The factual content about availability bias appears accurate, and the example is well-structured pedagogically, with clear steps and a memorable key insight. The analogies and framing are appropriate for the domain of cognitive biases, avoiding off-topic or overly technical language.\n\nPF: The example explicitly mentions Lena, her location, and her role, and uses her context to illustrate the bias, aligning well with her profile. The scenario is realistic and tailored, matching her learning style of example-based instruction.  \nAXIS_SCORE: 5\n\nCC: The complexity level is medium, with explanations suitable for a high school student, including real-world context and straightforward language. It avoids overly technical details, matching her educational level.  \nAXIS_SCORE: 4\n\nCA: The scientific explanation of availability bias is accurate, correctly describing the heuristic and its effects. There are no factual inaccuracies or misleading statements.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from identifying the bias to consequences and strategies, making it easy to follow and memorable. The explicit steps and key insight enhance pedagogical clarity.  \nAXIS_SCORE: 5\n\nDA: The framing uses real-world, domain-appropriate examples related to urban planning and social perception, which are suitable for discussing cognitive biases. The analogies are appropriate and relevant.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity cognitive bias exercise set in Berlin, featuring a character named Lena to ground the scenario. Present a clear, step-by-step format with labeled inputs and outputs, guiding the student to diagnose the bias (e.g., confirmation bias or anchoring) and explain why it occurred. Ground the context in real-world Berlin/Germany settings and include prompts that require the student to name the bias, describe its consequences, and propose a corrective strategy.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The context instruction explicitly incorporates Lena's name and Berlin location, aligning with her preference for personal and real-world grounded examples. It also emphasizes a step-by-step, labeled approach suitable for medium complexity, directly reflecting her learning style and complexity preference, and references her pattern of engaging better with concrete, scenario-based exercises. Therefore, it effectively synthesizes her stored patterns into a concrete directive.\n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:19:39.707448"
+}

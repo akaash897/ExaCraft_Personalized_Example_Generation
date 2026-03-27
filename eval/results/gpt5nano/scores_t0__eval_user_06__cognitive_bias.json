@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_06__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_01a699210a9d4011",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts that can lead to mistakes in judgment. They’re automatic patterns of thinking that skip careful weighing of evidence.\n\nScenario:\nYou’re shopping for a jacket. The first price you see is $120. Later you notice a similar jacket for $80 and another for $170. Because your brain latches onto the first price, you judge the other prices relative to that $120 anchor. The $80 jacket might feel like a great deal, while the $170 one seems overpriced, even if you haven’t compared quality or fit.\n\nKey elements:\n- Anchoring: the first price serves as a reference point.\n- Relative judgment: other prices are evaluated against the anchor rather than on their own merits.\n\nKey Insight:\n  The first number you notice can bias your sense of value; compare features and do independent comparisons to counteract the anchor.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts that can lead to mistakes in judgment. They’re automatic patterns of thinking that skip careful weighing of evidence.\n\nScenario:\nYou’re shopping for a jacket. The first price you see is $120. Later you notice a similar jacket for $80 and another for $170. Because your brain latches onto the first price, you judge the other prices relative to that $120 anchor. The $80 jacket might feel like a great deal, while the $170 one seems overpriced, even if you haven’t compared quality or fit.\n\nKey elements:\n- Anchoring: the first price serves as a reference point.\n- Relative judgment: other prices are evaluated against the anchor rather than on their own merits.\n\nKey Insight:\n  The first number you notice can bias your sense of value; compare features and do independent comparisons to counteract the anchor.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts that can lead to mistakes in judgment. They’re automatic patterns of thinking that skip careful weighing of evidence.\n\nScenario:\nYou’re shopping for a jacket. The first price you see is $120. Later you notice a similar jacket for $80 and another for $170. Because your brain latches onto the first price, you judge the other prices relative to that $120 anchor. The $80 jacket might feel like a great deal, while the $170 one seems overpriced, even if you haven’t compared quality or fit.\n\nKey elements:\n- Anchoring: the first price serves as a reference point.\n- Relative judgment: other prices are evaluated against the anchor rather than on their own merits.\n\nKey Insight:\n  The first number you notice can bias your sense of value; compare features and do independent comparisons to counteract the anchor.",
+        "example_id": "ex_ca71f58d928d4e21",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.2,
+    "reasoning": "The example uses a generic shopping scenario to illustrate the concept of anchoring bias, which is a common cognitive bias. It does not incorporate any specific details from Amara's profile, such as her profession as a nurse or her location in Lagos, Nigeria, nor does it use domain-specific analogies relevant to healthcare. The complexity level is appropriate for a general understanding but does not delve into advanced or nuanced aspects of cognitive biases, which might be expected given her professional background and medium complexity preference. The content is factually accurate and well-structured, with a clear concept-to-example bridge, but the analogy is somewhat generic and not tailored to her learning style or domain.\n\n[PF] PERSONALIZATION FIDELITY — The example does not reflect Amara's profile at all; it is a generic scenario about shopping, with no references to healthcare, Nigeria, or her role as a nurse. It also does not leverage her example-based learning style in a way that makes it more relevant to her profession.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION — The explanation and scenario are straightforward and suitable for a medium complexity level, with clear language and basic concepts. It does not overreach or underwhelm, matching her stated preference.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of anchoring bias and the example are factually correct, accurately illustrating the bias without errors or misconceptions.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from concept to scenario to key insight, making it easy to follow and memorable. It effectively bridges the concept with an illustrative example.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy is from shopping, a common everyday domain, but it is not specific to healthcare or nursing, which would be more appropriate given her profession. The framing is generic and not tailored to her field.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:49:54.124631"
+}

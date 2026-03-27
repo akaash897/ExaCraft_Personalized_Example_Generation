@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_808d884b00c048c2",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nImagine you are trying to decide which brand of headphones to buy.\nYou read one glowing review from a friend and immediately feel convinced that brand is the best, even though you haven't looked at any other reviews or data.\n\nWhat happens:\n- You focus on the single positive story (the 'friend's review') because it is vivid and personal.\n- You ignore the possibility that your friend's experience might be unusual or that other brands could be better.\n- This quick, emotional judgment feels right, but it might lead you to make a poor choice based on incomplete information.\n\nKey Insight:\nA cognitive bias is a mental shortcut that can cause you to jump to conclusions without considering all the evidence. It feels efficient, but it often leads to mistakes.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nImagine you are trying to decide which brand of headphones to buy.\nYou read one glowing review from a friend and immediately feel convinced that brand is the best, even though you haven't looked at any other reviews or data.\n\nWhat happens:\n- You focus on the single positive story (the 'friend's review') because it is vivid and personal.\n- You ignore the possibility that your friend's experience might be unusual or that other brands could be better.\n- This quick, emotional judgment feels right, but it might lead you to make a poor choice based on incomplete information.\n\nKey Insight:\nA cognitive bias is a mental shortcut that can cause you to jump to conclusions without considering all the evidence. It feels efficient, but it often leads to mistakes.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nImagine you are trying to decide which brand of headphones to buy.\nYou read one glowing review from a friend and immediately feel convinced that brand is the best, even though you haven't looked at any other reviews or data.\n\nWhat happens:\n- You focus on the single positive story (the 'friend's review') because it is vivid and personal.\n- You ignore the possibility that your friend's experience might be unusual or that other brands could be better.\n- This quick, emotional judgment feels right, but it might lead you to make a poor choice based on incomplete information.\n\nKey Insight:\nA cognitive bias is a mental shortcut that can cause you to jump to conclusions without considering all the evidence. It feels efficient, but it often leads to mistakes.",
+        "example_id": "ex_aa57a007c7d04697",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.73,
+      "CC": 4.19,
+      "CA": 4.9,
+      "PC": 5.0,
+      "DA": 4.29
+    },
+    "composite": 4.283,
+    "reasoning": "The example uses a relatable scenario involving headphones, which is a common consumer decision, but it does not incorporate any personal details from Lena's profile such as her location, education level, or learning style. The explanation is straightforward and accessible, fitting a high school level, and the structure clearly introduces the concept, the example, and the key insight, which supports pedagogical clarity. The analogy is appropriate for the topic of cognitive bias, and the language is suitable for a high school student. Overall, the example is well-structured but lacks personalization and domain-specific framing beyond the general consumer context.\n\nPF: The example does not incorporate Lena's personal details or specific interests, and the analogy is generic consumer behavior rather than tailored to her profile.  \nAXIS_SCORE: 2\n\nCC: The complexity level is appropriate for a high school student, with clear language and basic explanation of cognitive bias without advanced technical details.  \nAXIS_SCORE: 4\n\nCA: The factual content about cognitive bias and the example provided are accurate and align with psychological principles.  \nAXIS_SCORE: 5\n\nPC: The structure is logical, with a clear flow from scenario to explanation to insight, making it easy to follow and learn from.  \nAXIS_SCORE: 4\n\nDA: The analogy is appropriate for the domain of psychology and decision-making, using everyday consumer behavior, which is suitable for the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:12:49.300825"
+}

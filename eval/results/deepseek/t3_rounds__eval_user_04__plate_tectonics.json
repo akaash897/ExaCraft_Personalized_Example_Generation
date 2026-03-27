@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_04",
+  "topic": "Plate Tectonics",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 3,
+      "composite": 4.2,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "accept",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "accept",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Plate Tectonics\n\nExample:\nThink of Earth's crust as a massive, slow-moving distributed system, like a global network of servers (tectonic plates) that are constantly pushing and pulling data (continents and ocean floor).\n\nImagine you're managing a codebase split across three major repositories (plates) that are slowly drifting apart:\n- The North American Plate and the Eurasian Plate are pulling away from each other at the Mid-Atlantic Ridge (like a feature branch being forked). New oceanic crust forms in the gap, similar to writing new code to fill a dependency void.\n- Meanwhile, the Pacific Plate is colliding with the North American Plate along California's San Andreas Fault (like a merge conflict). Here, plates slide past each other, causing friction that builds up and releases as earthquakes\u2014akin to system latency spikes when data streams clash.\n- In Japan, where Kenji lives, the Pacific Plate dives beneath the Philippine Sea Plate in a process called subduction (like deprecating old code and recycling it beneath newer infrastructure). This creates deep ocean trenches and volcanic island chains\u2014Japan itself is a product of this ongoing \"code migration.\"\n\nKey Insight:\nEarth's surface is not static but a dynamic, version-controlled system where plates (repositories) interact at boundaries (APIs), creating mountains (new features), earthquakes (system errors), and volcanoes (hotfix deployments) through continuous, slow-motion negotiation.",
+      "example_id": "ex_95cd793cf8bb4c47",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Plate Tectonics\n\nExample:\nThink of Earth's crust as a massive, distributed system of moving components\u2014tectonic plates. Each plate is like a microservice in a global architecture, responsible for its own domain (e.g., a continent or ocean floor). They interact through well-defined boundaries, similar to APIs.\n\n**Boundary Types & Software Analogies:**\n\n1.  **Divergent Boundary (Spreading Center):**\n    *   **Geological Process:** Two plates move apart, creating new crust from magma (e.g., Mid-Atlantic Ridge).\n    *   **Software Analogy:** **Forking a Repository.** Two teams split a codebase to develop independently, creating two new, diverging versions from a common origin.\n\n2.  **Convergent Boundary (Subduction/Collision):**\n    *   **Geological Process:** Two plates collide. A denser oceanic plate dives under a lighter continental plate (subduction), or two continental plates crumple upward (collision).\n    *   **Software Analogy:** **Database Sharding & Merging.** Subduction is like migrating data from one shard (the oceanic plate) into another, larger shard (the mantle), causing \"transactions\" (earthquakes). Collision is like a messy, high-conflict merge of two large codebases, creating a new, elevated feature (a mountain range).\n\n3.  **Transform Boundary (Sliding):**\n    *   **Geological Process:** Two plates slide past each other horizontally (e.g., San Andreas Fault).\n    *   **Software Analogy:** **Version Control Branching with Rebasing.** The plates are like two feature branches developing in parallel. The fault line is where they constantly \"rebase\" against each other, causing friction and occasional \"merge conflicts\" (earthquakes) when movement gets stuck and then releases.\n\n**Numeric Snapshot:**\nThe Pacific Plate moves northwest at about 5\u201310 cm/year relative to the North American Plate. In software terms, that's a continuous, background data migration or a slow, steady drift in system architecture over geologic time.\n\nKey Insight:\nTectonic plates are not static infrastructure but dynamic, versioned components in Earth's crustal system. Their interactions\u2014forking, merging, and rebasing\u2014continuously reshape the planet's surface, just as software architecture evolves through similar patterns of divergence, integration, and conflict resolution.",
+      "example_id": "ex_b4e8184e76a240a7"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-15T21:55:03.974353"
+}

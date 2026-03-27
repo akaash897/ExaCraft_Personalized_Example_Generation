@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_01__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_88ab081663234e66",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nLena is studying for her final exams in Berlin. She's reviewing her notes and feels confident about a particular topic because she remembers vividly discussing it in class last week. However, when she takes a practice test, she struggles with questions on that exact topic. This is the **Availability Bias**: our minds judge the likelihood or importance of an event based on how easily examples come to memory, not on actual statistics or evidence.\n\nWhat happened:\n- **Memory Trigger:** The recent, lively class discussion made the topic feel familiar and important.\n- **Judgment:** Lena assumed she knew the material well because it was \"available\" in her mind.\n- **Reality Check:** The practice test revealed gaps in her actual understanding.\n\nA concrete comparison:\n- **Perceived Probability (from memory):** \"I definitely know this; it was a big part of class.\"\n- **Actual Performance (from test):** Score of 65% on that topic section.\n- **The Bias:** The recent memory inflated her confidence, masking her true readiness.\n\nKey Insight:\nCognitive biases like Availability Bias are mental shortcuts that often lead to errors. They cause us to overestimate what's memorable and underestimate what's not, which can impact decisions in studying, investing, or even judging risks in daily life.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nLena is studying for her final exams in Berlin. She's reviewing her notes and feels confident about a particular topic because she remembers vividly discussing it in class last week. However, when she takes a practice test, she struggles with questions on that exact topic. This is the **Availability Bias**: our minds judge the likelihood or importance of an event based on how easily examples come to memory, not on actual statistics or evidence.\n\nWhat happened:\n- **Memory Trigger:** The recent, lively class discussion made the topic feel familiar and important.\n- **Judgment:** Lena assumed she knew the material well because it was \"available\" in her mind.\n- **Reality Check:** The practice test revealed gaps in her actual understanding.\n\nA concrete comparison:\n- **Perceived Probability (from memory):** \"I definitely know this; it was a big part of class.\"\n- **Actual Performance (from test):** Score of 65% on that topic section.\n- **The Bias:** The recent memory inflated her confidence, masking her true readiness.\n\nKey Insight:\nCognitive biases like Availability Bias are mental shortcuts that often lead to errors. They cause us to overestimate what's memorable and underestimate what's not, which can impact decisions in studying, investing, or even judging risks in daily life.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nLena is studying for her final exams in Berlin. She's reviewing her notes and feels confident about a particular topic because she remembers vividly discussing it in class last week. However, when she takes a practice test, she struggles with questions on that exact topic. This is the **Availability Bias**: our minds judge the likelihood or importance of an event based on how easily examples come to memory, not on actual statistics or evidence.\n\nWhat happened:\n- **Memory Trigger:** The recent, lively class discussion made the topic feel familiar and important.\n- **Judgment:** Lena assumed she knew the material well because it was \"available\" in her mind.\n- **Reality Check:** The practice test revealed gaps in her actual understanding.\n\nA concrete comparison:\n- **Perceived Probability (from memory):** \"I definitely know this; it was a big part of class.\"\n- **Actual Performance (from test):** Score of 65% on that topic section.\n- **The Bias:** The recent memory inflated her confidence, masking her true readiness.\n\nKey Insight:\nCognitive biases like Availability Bias are mental shortcuts that often lead to errors. They cause us to overestimate what's memorable and underestimate what's not, which can impact decisions in studying, investing, or even judging risks in daily life.",
+        "example_id": "ex_441acd0da3ca42fe",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.88,
+      "CC": 4.33,
+      "CA": 4.99,
+      "PC": 4.91,
+      "DA": 5.0
+    },
+    "composite": 4.821,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Lena, her location in Berlin, and her context as a student preparing for exams, aligning well with her profile. The complexity level is appropriate for a high school student, with clear explanations of the bias and a concrete example that is accessible without advanced terminology. The factual content about the Availability Bias appears accurate, with a straightforward explanation and relevant example. The structure is logical, with a clear progression from scenario to explanation and insight, making it pedagogically effective. The analogy used (comparing memory vividness to exam confidence) is appropriate for the domain of cognitive biases and relatable for a student. Overall, the example is well-tailored and suitable for the intended audience.\n\nPF_SCORE: 5\n\nThe explanation of the bias is accurate and sufficiently detailed for a high school level, with a good balance of depth and clarity. The core concept is correctly described, and the example supports understanding without oversimplification or overcomplication. There are no factual inaccuracies or significant omissions.\n\nCC_SCORE: 5\n\nThe content matches the medium complexity level expected for a high school student, with clear language and an accessible explanation of the bias. It avoids overly technical jargon and maintains an appropriate depth for the learner's education level.\n\nCA_SCORE: 5\n\nThe scientific content is accurate, correctly describing the Availability Bias and illustrating it with a relevant example. There are no factual errors or misleading statements, and the core concept is well conveyed.\n\nPC_SCORE: 4\n\nThe example is well-structured, with a logical flow from scenario to explanation and insight. It clearly connects the example to the concept, though it could be slightly more explicit in highlighting the \"concept-to-example\" bridge or memorable takeaway for maximum clarity.\n\nDA_SCORE: 5\n\nThe framing and analogies are entirely appropriate for the domain of cognitive psychology. The example uses familiar student experiences and straightforward language, making the analogy relevant and effective for understanding the bias.\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 4,
+        "CA": 3,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.2,
+      "reasoning": "For the axis of PERSONALIZATION FIDELITY (PF), the example is clearly tailored to the user's profile, as it uses Lena's name and location (Berlin), and the scenario of studying for exams matches her role as a student. This level of personalization helps to make the example more relatable and engaging for the learner.\n\nPF_SCORE: 5\n\nFor the axis of COMPLEXITY CALIBRATION (CC), the example seems to match the user's stated complexity level of \"medium\" by providing a clear and understandable explanation of the Availability Bias concept without delving into overly complex details or using overly simplistic language. The use of a concrete scenario and a step-by-step breakdown of what happened also aids in making the concept accessible at the medium complexity level.\n\nCC_SCORE: 5\n\nFor the axis of CONCEPTUAL ACCURACY (CA), the example accurately explains the Availability Bias, a type of cognitive bias, and provides a realistic scenario to illustrate how it works, ensuring that the factual content is correct and the concept is sound. The explanation of the bias and its impact on decision-making is also accurate and free of significant errors.\n\nCA_SCORE: 5\n\nFor the axis of PEDAGOGICAL CLARITY (PC), the example is structured for learning with a clear structure, starting with a relatable scenario, followed by an explanation of the concept, and ending with a key insight that summarizes the importance of understanding cognitive biases. The flow is smooth, and the concept-to-example bridge is explicit, making the insight memorable for the learner.\n\nPC_SCORE: 5\n\nFor the axis of DOMAIN APPROPRIATENESS (DA), the example is perfectly domain-appropriate as it discusses cognitive biases, a topic within psychology, using analogies and framing that match the field. The use of a real-life scenario related to studying and exams to explain a psychological concept is also appropriate and helps in making the topic more engaging and relevant to the learner.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:18:32.828407"
+}

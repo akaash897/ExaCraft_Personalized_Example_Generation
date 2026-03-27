@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_02__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "thread_id": "thread_ce40939c43e24cca",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nAmara is a nurse in Lagos, Nigeria, observing infections in her ward. In a sample of bacteria, some carry a mutation that makes them resistant to a common antibiotic, while others do not.\n\nWhat happens:\n  - Variation exists: not all bacteria are identical; some have the resistance trait.\n  - Selection pressure: the antibiotic kills susceptible bacteria, while resistant ones survive and reproduce.\n  - Outcome: over generations, the resistant trait becomes more common in the bacterial population.\n\nNumeric illustration:\n  - Start with 100 bacteria: 20 resistant, 80 susceptible.\n  - After exposure to the antibiotic that kills 90% of susceptibles:\n    - Susceptibles left: 8\n    - Resistant left: 20\n    - Total survivors: 28\n  - Resistance frequency after exposure: 20/28 ≈ 0.71 (71%)\n\nInterpretation:\n  The antibiotic creates a selection pressure that increases the share of resistant bacteria in the population.\n\nKey terms (defined inline):\n  - Variation: differences in traits among individuals.\n  - Fitness: ability to survive and reproduce.\n  - Selection pressure: an environmental factor that changes which traits help survival.\n  - Adaptation: a trait that increases survival or reproductive success in a given environment.\n\nKey Insight:\n  When an environment favors a trait (like antibiotic resistance), individuals with that trait contribute more offspring, shifting the population toward that trait over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nAmara is a nurse in Lagos, Nigeria, observing infections in her ward. In a sample of bacteria, some carry a mutation that makes them resistant to a common antibiotic, while others do not.\n\nWhat happens:\n  - Variation exists: not all bacteria are identical; some have the resistance trait.\n  - Selection pressure: the antibiotic kills susceptible bacteria, while resistant ones survive and reproduce.\n  - Outcome: over generations, the resistant trait becomes more common in the bacterial population.\n\nNumeric illustration:\n  - Start with 100 bacteria: 20 resistant, 80 susceptible.\n  - After exposure to the antibiotic that kills 90% of susceptibles:\n    - Susceptibles left: 8\n    - Resistant left: 20\n    - Total survivors: 28\n  - Resistance frequency after exposure: 20/28 ≈ 0.71 (71%)\n\nInterpretation:\n  The antibiotic creates a selection pressure that increases the share of resistant bacteria in the population.\n\nKey terms (defined inline):\n  - Variation: differences in traits among individuals.\n  - Fitness: ability to survive and reproduce.\n  - Selection pressure: an environmental factor that changes which traits help survival.\n  - Adaptation: a trait that increases survival or reproductive success in a given environment.\n\nKey Insight:\n  When an environment favors a trait (like antibiotic resistance), individuals with that trait contribute more offspring, shifting the population toward that trait over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nAmara is a nurse in Lagos, Nigeria, observing infections in her ward. In a sample of bacteria, some carry a mutation that makes them resistant to a common antibiotic, while others do not.\n\nWhat happens:\n  - Variation exists: not all bacteria are identical; some have the resistance trait.\n  - Selection pressure: the antibiotic kills susceptible bacteria, while resistant ones survive and reproduce.\n  - Outcome: over generations, the resistant trait becomes more common in the bacterial population.\n\nNumeric illustration:\n  - Start with 100 bacteria: 20 resistant, 80 susceptible.\n  - After exposure to the antibiotic that kills 90% of susceptibles:\n    - Susceptibles left: 8\n    - Resistant left: 20\n    - Total survivors: 28\n  - Resistance frequency after exposure: 20/28 ≈ 0.71 (71%)\n\nInterpretation:\n  The antibiotic creates a selection pressure that increases the share of resistant bacteria in the population.\n\nKey terms (defined inline):\n  - Variation: differences in traits among individuals.\n  - Fitness: ability to survive and reproduce.\n  - Selection pressure: an environmental factor that changes which traits help survival.\n  - Adaptation: a trait that increases survival or reproductive success in a given environment.\n\nKey Insight:\n  When an environment favors a trait (like antibiotic resistance), individuals with that trait contribute more offspring, shifting the population toward that trait over time.",
+        "example_id": "ex_4dcc4cfecd6b45f9",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.4,
+    "reasoning": "The example effectively incorporates the user's profile by mentioning Amara's role as a nurse in Lagos, Nigeria, and uses a relatable scenario involving bacterial resistance, which aligns with her medical background and learning style. The complexity level is medium, with clear step-by-step explanation and numeric illustration, matching her specified learning preference. The scientific content about natural selection appears accurate, with correct definitions and processes. The structure is logical, with a clear flow from concept to example, and the key terms are well integrated, aiding understanding. The analogy of bacteria and antibiotic resistance is appropriate for the biological topic, though it is somewhat generic and could be more tailored to her specific context or profession.\n\n[PF] PERSONALIZATION FIDELITY — The example reflects her role as a nurse and her location, but the analogy is generic microbiology rather than specifically tailored to her environment or profession. It does incorporate her name and location, but the scenario is standard for biological education.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes intermediate-level biological concepts with numeric calculations, matching her medium complexity preference. It avoids overly technical language, fitting her specified level.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanation of natural selection, mutation, and resistance is accurate, with correct definitions and process flow. No factual errors are evident.\nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical progression from concept to numeric example and key terms, making it easy to follow and memorable. The explicit connection between the example and the concept enhances clarity.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The microbiological analogy is appropriate for the biological topic, and the vocabulary used aligns with the domain. It is a standard but suitable framing for natural selection.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:56:09.340300"
+}

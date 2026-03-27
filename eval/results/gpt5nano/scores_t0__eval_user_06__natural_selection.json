@@ -1,0 +1,80 @@
+{
+  "key": "t0__eval_user_06__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_01a1ed9cc25146dd",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nNatural selection is the process by which traits that help individuals survive and reproduce become more common in a population over generations. For selection to work, those traits must be heritable (passed from parents to offspring).\n\nImagine a population of beetles living on a tree bark that comes in two colors: green and brown. The color is inherited, and the environment affects which color blends in better.\n\n- Start with 100 beetles: 60 green, 40 brown.\n- In a season, birds prey more on the green beetles, while brown beetles are better camouflaged on the bark.\n  - Green survivors: 40% → 24 green survive\n  - Brown survivors: 70% → 28 brown survive\n- Next generation size is about 100 again, with offspring distributed roughly in the same proportion as survivors:\n  - Proportions: green 24/52 ≈ 46%, brown 28/52 ≈ 54\n  - Offspring: about 46 green, 54 brown\n\nOver generations, the color that camouflages better becomes more common.\n\nKey Insight:\nNatural selection changes trait frequencies based on which traits help survival and reproduction in a given environment; a change in the environment can shift which traits are favored.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nNatural selection is the process by which traits that help individuals survive and reproduce become more common in a population over generations. For selection to work, those traits must be heritable (passed from parents to offspring).\n\nImagine a population of beetles living on a tree bark that comes in two colors: green and brown. The color is inherited, and the environment affects which color blends in better.\n\n- Start with 100 beetles: 60 green, 40 brown.\n- In a season, birds prey more on the green beetles, while brown beetles are better camouflaged on the bark.\n  - Green survivors: 40% → 24 green survive\n  - Brown survivors: 70% → 28 brown survive\n- Next generation size is about 100 again, with offspring distributed roughly in the same proportion as survivors:\n  - Proportions: green 24/52 ≈ 46%, brown 28/52 ≈ 54\n  - Offspring: about 46 green, 54 brown\n\nOver generations, the color that camouflages better becomes more common.\n\nKey Insight:\nNatural selection changes trait frequencies based on which traits help survival and reproduction in a given environment; a change in the environment can shift which traits are favored.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nNatural selection is the process by which traits that help individuals survive and reproduce become more common in a population over generations. For selection to work, those traits must be heritable (passed from parents to offspring).\n\nImagine a population of beetles living on a tree bark that comes in two colors: green and brown. The color is inherited, and the environment affects which color blends in better.\n\n- Start with 100 beetles: 60 green, 40 brown.\n- In a season, birds prey more on the green beetles, while brown beetles are better camouflaged on the bark.\n  - Green survivors: 40% → 24 green survive\n  - Brown survivors: 70% → 28 brown survive\n- Next generation size is about 100 again, with offspring distributed roughly in the same proportion as survivors:\n  - Proportions: green 24/52 ≈ 46%, brown 28/52 ≈ 54\n  - Offspring: about 46 green, 54 brown\n\nOver generations, the color that camouflages better becomes more common.\n\nKey Insight:\nNatural selection changes trait frequencies based on which traits help survival and reproduction in a given environment; a change in the environment can shift which traits are favored.",
+        "example_id": "ex_9581cb1595134072",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 3,
+      "CA": 4,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 3.5,
+    "reasoning": "The example effectively personalizes the content by using a relatable scenario involving beetles and camouflage, which can be linked to the user's background in healthcare and environmental awareness, though it doesn't explicitly mention her profession or location. The complexity level is appropriate for a medium setting, providing enough detail without overwhelming, and the scientific explanation of natural selection is accurate and clear. The structure is logical, with a step-by-step example that illustrates the concept, and the analogy of beetle camouflage is domain-appropriate, fitting within biological evolution. Overall, the example is well-aligned with the user's profile and learning preferences.\n\nPF (Personalization Fidelity): The example does not explicitly incorporate the user's profession, location, or cultural background, but it uses a generic biological scenario that could be relatable to anyone interested in natural processes. It somewhat matches the learning style (example-based).  \nAXIS_SCORE: 3\n\nCC (Complexity Calibration): The explanation balances simplicity and detail, suitable for a medium complexity level, with clear steps and basic quantitative data, matching the user's stated preference.  \nAXIS_SCORE: 4\n\nCA (Conceptual Accuracy): The scientific content is accurate, correctly describing heritable traits, environmental influence, and the change in trait frequencies over generations.  \nAXIS_SCORE: 5\n\nPC (Pedagogical Clarity): The example is well-structured, with a logical flow from the initial scenario to the key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 4\n\nDA (Domain Appropriateness): The analogy of beetle camouflage and predation is highly appropriate for explaining natural selection, using biological vocabulary and framing consistent with the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 3, \"CA\": 4, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 2,
+        "CC": 2,
+        "CA": 4,
+        "PC": 3,
+        "DA": 5
+      },
+      "composite": 3.1,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example does not reflect the user's actual profile in any significant way, as it does not incorporate the user's name, location, profession, or cultural background into the scenario. The learning style preference for example-based learning is met, but this is the only aspect of personalization that is addressed.\n\nPF_SCORE: 2\n\nFor the axis of Complexity Calibration (CC), the depth of the example seems to match a medium level of complexity, which aligns with the user's stated complexity level, as it involves basic mathematical calculations and a straightforward scenario that is easy to follow without being overly simplistic. The language and concepts used are appropriate for a professional with a medium complexity preference.\n\nCC_SCORE: 5\n\nFor the axis of Conceptual Accuracy (CA), the factual and scientific content of the example is correct, as it accurately describes the process of natural selection, the importance of heritable traits, and how environmental pressures can lead to changes in trait frequencies over generations. The example does not contain any significant errors or inaccuracies regarding the concept of natural selection.\n\nCA_SCORE: 5\n\nFor the axis of Pedagogical Clarity (PC), the example is well-structured and easy to follow, with a clear explanation of the concept of natural selection, a relatable example, and a key insight that summarizes the main point. The example effectively bridges the concept to a tangible scenario, making it memorable and understandable for the learner.\n\nPC_SCORE: 5\n\nFor the axis of Domain Appropriateness (DA), the example is perfectly appropriate for the domain of biology and natural selection, using relevant terminology and a scenario that is directly related to the topic, without introducing elements from unrelated domains. The use of beetles and their coloration as an example is a classic and fitting illustration of natural selection.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:49:25.551710"
+}

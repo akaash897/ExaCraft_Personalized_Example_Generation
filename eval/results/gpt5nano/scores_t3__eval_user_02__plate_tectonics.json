@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_02__plate_tectonics",
+  "tier": "t3",
+  "user_id": "eval_user_02",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_1d1b4e0d8a684d08",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, can picture the Earth’s outer shell as a set of large slabs—tectonic plates—sitting on a very hot, soft layer beneath. The driving force is mantle convection: heat from deep inside the Earth creates circular currents in the mantle, and these currents slowly push and drag the plates along.\n\nBoundaries you can see in the real world:\n- Divergent boundaries: plates move apart, and new crust forms as magma rises to fill the gap. Real-world examples include the Mid-Atlantic Ridge in the ocean and rift valleys like the East African Rift on land.\n- Convergent boundaries: plates collide. When an oceanic plate sinks under a continental plate (subduction), deep trenches and volcanic mountains form. Example: the Andes in South America.\n- Transform boundaries: plates slide horizontally past each other, often causing earthquakes. Example: the San Andreas Fault in California.\n\nMovement in numbers (simple example):\nIf two plates diverge at about 5 centimeters per year, they would be roughly 50 kilometers farther apart after 1 million years. That’s a long time—enough to reshape coastlines over geological scales, even if it’s barely noticeable in a single human lifetime.\n\nEmphasis on the driving force:\nMantle convection creates rising and sinking currents in the mantle. These currents act like a slow conveyor belt, tugging and guiding the lithospheric plates as they move, interact at boundaries, and produce mountains, trenches, and earthquakes over long periods.\n\nTwo-question check:\n1) Which boundary type forms new crust as plates move apart?\n   A) Divergent\n   B) Convergent\n   C) Transform\n2) What primarily drives plate movement?\n   A) Mantle convection\n   B) Moon gravity\n   C) Tides\n\nKey Insight:\n  Plate movements are driven by slow convection in the mantle, which produces divergent, convergent, and transform boundaries that shape Earth’s surface over geologic time.",
+    "final_example": "Concept: Plate Tectonics (nursing-domain analogies)\n\nExample:\nScenario:\nA clinical triage briefing where Amara, a nurse in Lagos, uses medical equipment metaphors to explain plate tectonics to a care team. She maps divergent, convergent, and transform boundaries to hospital workflows and devices, and uses infusion pumps, ultrasound, MRI, defibrillators, ECG, and sutures to illustrate the processes.\n\nDivergent boundary\n- Analogy: New crust forms as magma rises between two plates; it’s like an infusion pump continuously pushing fluid into two branching IV lines that move apart, creating space for new flow.\n- Driving forces: Ridge push is the outward push from the elevated ridge, akin to gravity-assisted infusion pressure that separates the lines; mantle convection provides the broad flow driving the opening.\n- Imaging/monitoring: Ultrasound visualizes near-surface changes; MRI reveals deeper upwelling pathways and the new-crust channel forming between the lines.\n\nConvergent boundary\n- Analogy: Subduction is like one line slipping beneath another, with energy released during the process—similar to a defibrillator delivering a shock to reset rhythm.\n- Driving forces: Slab pull (gravity acting on the dense sinking slab) drags the plate downward; compression pushes the plates toward each other, building mountains or trenches.\n- Imaging/monitoring: Ultrasound and MRI map the deep subducting slab; seismic energy release is the “alarm” we monitor during care handoffs.\n\nTransform boundary\n- Analogy: Lateral plates slide past one another with friction, like surgical sutures that allow movement but resist abrupt separation.\n- Driving forces: Shear stress accumulates along the fault and is released as earthquakes, with friction acting like the resistance of sutures.\n- Imaging/monitoring: ECG-like tremor monitoring tracks timing of movements; friction events are the boundary’s releases.\n\nDriving forces recap\n- Ridge push: gravity and elevated ridges push plates apart, analogous to the outward push of an infusion pump.\n- Slab pull: gravity on a dense subducting slab pulls the plate downward, analogous to a heavy line being drawn into a sink.\n\nImaging and monitoring recap\n- Ultrasound: near-surface processes and movements.\n- MRI: deeper geometry and subducting slabs.\n\nTask\n- Plate-motion description: Two plate sections slide horizontally past each other with frequent small earthquakes.\n- Identify boundary type and summarize the driving mechanism in 1–2 sentences.\n\nKey Insight:\n  Using medical equipment metaphors helps remember how boundaries move, why energy is released, and what imaging can reveal about Earth’s active crust.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, can picture the Earth’s outer shell as a set of large slabs—tectonic plates—sitting on a very hot, soft layer beneath. The driving force is mantle convection: heat from deep inside the Earth creates circular currents in the mantle, and these currents slowly push and drag the plates along.\n\nBoundaries you can see in the real world:\n- Divergent boundaries: plates move apart, and new crust forms as magma rises to fill the gap. Real-world examples include the Mid-Atlantic Ridge in the ocean and rift valleys like the East African Rift on land.\n- Convergent boundaries: plates collide. When an oceanic plate sinks under a continental plate (subduction), deep trenches and volcanic mountains form. Example: the Andes in South America.\n- Transform boundaries: plates slide horizontally past each other, often causing earthquakes. Example: the San Andreas Fault in California.\n\nMovement in numbers (simple example):\nIf two plates diverge at about 5 centimeters per year, they would be roughly 50 kilometers farther apart after 1 million years. That’s a long time—enough to reshape coastlines over geological scales, even if it’s barely noticeable in a single human lifetime.\n\nEmphasis on the driving force:\nMantle convection creates rising and sinking currents in the mantle. These currents act like a slow conveyor belt, tugging and guiding the lithospheric plates as they move, interact at boundaries, and produce mountains, trenches, and earthquakes over long periods.\n\nTwo-question check:\n1) Which boundary type forms new crust as plates move apart?\n   A) Divergent\n   B) Convergent\n   C) Transform\n2) What primarily drives plate movement?\n   A) Mantle convection\n   B) Moon gravity\n   C) Tides\n\nKey Insight:\n  Plate movements are driven by slow convection in the mantle, which produces divergent, convergent, and transform boundaries that shape Earth’s surface over geologic time.",
+        "example_id": "ex_fca28d7611fd47ab",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Plate Tectonics\n\nExample:\nIn an ER triage bay, think of Earth's lithosphere as several patients resting on hospital beds. Each patient represents a tectonic plate. The bed itself sits atop warming blankets and a circulating system of fluids (mantle convection) that gently move heat and warmth through the area. This heat-driven flow is what slowly nudges the beds to drift in relation to one another.\n\nMapping the key ideas with nursing equipment\n- Mantle convection: Heat-driven blood flow and warming blankets create slow, steady currents that push beds (plates) to migrate over the floor. This is the engine that keeps plates moving, even when patients appear still.\n- Plate boundaries (where beds touch and interact): Monitors and lines (ECG leads, IV lines) illustrate how two beds interact and transmit stress and signals when they come into contact or pull apart.\n- Divergent boundaries: Two beds slowly move apart, creating space between them. In Earth terms, this is where new crust forms as magma wells up to fill the gap—think of two beds widening the space and a new tissue-like area forming between them.\n  Real-world analogy: Mid-Atlantic Ridge where the Atlantic Ocean keeps growing as plates pull away.\n- Convergent boundaries: Two beds are pushed toward each other; during a transfer, one bed can slide under the other (subduction). This mirrors how one plate sinks beneath another into the mantle, often forming pressure lines and sometimes triggering surface upheaval.\n  Real-world analogy: The Andes mountains formed where an oceanic plate subducts beneath a continental plate.\n- Transform boundaries: Beds slide past one another laterally during repositioning, with shear between adjacent beds. This reflects how plates grind against each other without creating or destroying crust.\n  Real-world analogy: The San Andreas Fault system where sideways motion causes earthquakes.\n\nConcise mapping for quick recall\n- Boundary interactions: ECG-like signals show stress transfer when beds contact, move, or slide past one another.\n- Divergent: beds move apart; new space/crust forms.\n- Convergent (subduction): one bed moves under another; surfaces deform, volcanoes may form inland.\n- Transform: beds slide laterally; earthquakes arise from shearing.\n\nTwo-question check\n1) In this ER analogy, which action best represents mantle convection driving plate movement?\n2) How would you describe divergent, convergent, and transform boundaries using bed-transfer repositioning in the ER you manage?\n\nKey Insight:\nMantle convection is the internal heat-driven engine that slowly moves plates; boundary interactions between beds (divergent, convergent, transform) explain how crust forms, recycles, or shifts, much like how careful patient transfers and monitoring explain movement and stress in an ER.",
+        "example_id": "ex_50b2b626d3ae42fb"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Plate Tectonics (nursing-domain analogies)\n\nExample:\nScenario:\nA clinical triage briefing where Amara, a nurse in Lagos, uses medical equipment metaphors to explain plate tectonics to a care team. She maps divergent, convergent, and transform boundaries to hospital workflows and devices, and uses infusion pumps, ultrasound, MRI, defibrillators, ECG, and sutures to illustrate the processes.\n\nDivergent boundary\n- Analogy: New crust forms as magma rises between two plates; it’s like an infusion pump continuously pushing fluid into two branching IV lines that move apart, creating space for new flow.\n- Driving forces: Ridge push is the outward push from the elevated ridge, akin to gravity-assisted infusion pressure that separates the lines; mantle convection provides the broad flow driving the opening.\n- Imaging/monitoring: Ultrasound visualizes near-surface changes; MRI reveals deeper upwelling pathways and the new-crust channel forming between the lines.\n\nConvergent boundary\n- Analogy: Subduction is like one line slipping beneath another, with energy released during the process—similar to a defibrillator delivering a shock to reset rhythm.\n- Driving forces: Slab pull (gravity acting on the dense sinking slab) drags the plate downward; compression pushes the plates toward each other, building mountains or trenches.\n- Imaging/monitoring: Ultrasound and MRI map the deep subducting slab; seismic energy release is the “alarm” we monitor during care handoffs.\n\nTransform boundary\n- Analogy: Lateral plates slide past one another with friction, like surgical sutures that allow movement but resist abrupt separation.\n- Driving forces: Shear stress accumulates along the fault and is released as earthquakes, with friction acting like the resistance of sutures.\n- Imaging/monitoring: ECG-like tremor monitoring tracks timing of movements; friction events are the boundary’s releases.\n\nDriving forces recap\n- Ridge push: gravity and elevated ridges push plates apart, analogous to the outward push of an infusion pump.\n- Slab pull: gravity on a dense subducting slab pulls the plate downward, analogous to a heavy line being drawn into a sink.\n\nImaging and monitoring recap\n- Ultrasound: near-surface processes and movements.\n- MRI: deeper geometry and subducting slabs.\n\nTask\n- Plate-motion description: Two plate sections slide horizontally past each other with frequent small earthquakes.\n- Identify boundary type and summarize the driving mechanism in 1–2 sentences.\n\nKey Insight:\n  Using medical equipment metaphors helps remember how boundaries move, why energy is released, and what imaging can reveal about Earth’s active crust.",
+        "example_id": "ex_42e173ef846143a8"
+      }
+    ],
+    "context_instruction": "Build on the prior Plate Tectonics example by providing a clear explanation of plate boundaries (divergent, convergent, transform) with real-world examples, and emphasize mantle convection as the driving force. Add a short, two-question check to confirm understanding and diagnose misconceptions. Keep the language accessible, and avoid programming or code-like analogies.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the content by addressing Amara directly, incorporating her profession, location, and learning style, which enhances engagement. The complexity level appears appropriate, with clear explanations and real-world examples suitable for a professional learner with a medium complexity preference. The scientific content is accurate, correctly describing mantle convection and boundary types, with correct examples and terminology. The structure is logical, with a clear progression from basic concepts to specific boundary types and a key insight, making it pedagogically sound. The analogies and framing are appropriate for the domain of geology, using familiar Earth features and processes, which align well with the topic of plate tectonics.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Amara's name, profession, and location, and adopts her example-based learning style, making it well-tailored.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical detail with accessible language, matching a medium complexity level for a professional learner.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanations are correct, including mantle convection, boundary types, and examples, with no inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow, clear headings, and a summary key insight, facilitating learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are entirely appropriate for geology and Earth sciences, using familiar Earth features and processes.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the analogy by involving Amara, a nurse in Lagos, and uses medical equipment metaphors aligned with her profession, which matches her learning style. The content is detailed and incorporates domain-specific analogies, making it relevant and engaging for her. The scientific explanations of plate tectonics are accurate, with correct terminology and processes, ensuring conceptual correctness. The structure is clear, with distinct sections for each boundary type and driving forces, facilitating understanding and recall, which supports pedagogical clarity. The analogies are appropriate for the geological topic, using medical equipment and procedures that are familiar to a nurse, thus domain-appropriate.\n\nHowever, the example is quite elaborate and lengthy, which might be slightly overwhelming for medium complexity, but overall, it maintains a good balance. The analogies are well within the domain of the topic, and the framing is suitable for a professional with a scientific background, even if not specialized in geology.\n\n[PF] PERSONALIZATION FIDELITY — The example is highly tailored, integrating the user's profession, location, and learning style effectively, with domain-specific analogies.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation uses technical terms and detailed analogies appropriate for a professional with a medium complexity level, not overly simplified or overly technical.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content is accurate, correctly describing plate boundaries, driving forces, and monitoring methods without errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structured format with clear sections and analogies makes the example easy to follow and memorable, supporting effective learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies from the medical field are highly appropriate for a nurse, aligning well with the topic of Earth science through familiar concepts.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example shifts from a geological context to a hospital/ER setting, attempting to relate plate tectonics to patient beds and medical equipment, which aligns with the user's request to use a domain-specific analogy. However, the analogy remains somewhat forced and less intuitive for understanding tectonic processes, and it introduces complex medical concepts that may distract from the core ideas. Therefore, it partially addresses the critique but does not fully leverage the user's domain expertise in a clear, relevant manner.\n\nCOMPLIANCE_SCORE: 3  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from an ER patient bed analogy to a medical equipment-focused analogy, aligning with the user's preference for medical equipment metaphors to explain abstract ideas. It maintains the core concepts of plate tectonics while integrating familiar medical devices, which directly addresses the critique. Therefore, it effectively resolves the user's concern.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Build on the prior Plate Tectonics example by providing a clear explanation of plate boundaries (divergent, convergent, transform) with real-world examples, and emphasize mantle convection as the driving force. Add a short, two-question check to confirm understanding and diagnose misconceptions. Keep the language accessible, and avoid programming or code-like analogies.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T01:00:29.441879"
+}

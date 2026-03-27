@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_07__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_07",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_07",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_07",
+    "topic": "Natural Selection",
+    "thread_id": "thread_a4061c6b43274509",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, Brazil, studies a wild plant population facing drought. He tracks a drought-tolerance trait T (0–10) and wants to illustrate how natural selection can reshape both the trait distribution and the underlying genetic makeup.\n\nInputs:\n- Population and trait: 100 individuals; T ~ Normal μ0 = 4.5, σ0 = 2.0\n- Environmental pressure: drought reduces seed production; only the top 25% by T survive to reproduce\n- Heritability: h^2 = 0.40\n- Genetic simplification for illustration: single locus with two alleles A and a; additive effect per A allele is a; initial allele frequency p0 = 0.50\n\nStep 1 — Trait distribution and selection differential (S)\n- 75th percentile z ≈ 0.674\n- Threshold for survival: T75 = μ0 + zσ0 ≈ 5.85\n- Mean of the upper quartile (survivors): ≈ μ_upper ≈ 7.05\n- Selection differential: S = μ_upper − μ0 ≈ 7.05 − 4.50 ≈ 2.55\n\nStep 2 — Response to selection (R)\n- R = h^2 × S ≈ 0.40 × 2.55 ≈ 1.02\n\nStep 3 — Generation 1 trait mean (breeding-value-informed)\n- Predicted mean in offspring: μ1 ≈ μ0 + R ≈ 4.50 + 1.02 = 5.52\n\nStep 4 — Allele-frequency shift (illustrative single-locus model)\n- Relationship: ΔḠ = R ≈ 1.02 and ΔḠ = 2 a Δp\n- To illustrate, set Δp = 0.10 (10 percentage points). Then a ≈ ΔḠ / (2 Δp) ≈ 1.02 / 0.20 ≈ 5.10\n- Initial mean breeding value with p0 = 0.50: Ḡ0 = 2 a p0 ≈ 2 × 5.10 × 0.50 ≈ 5.10\n- New allele frequency: p1 = p0 + Δp = 0.60\n- New mean breeding value: Ḡ1 = 2 a p1 ≈ 2 × 5.10 × 0.60 ≈ 6.12\n- Consistency check: ΔḠ = Ḡ1 − Ḡ0 ≈ 1.02, matching R\n\nOutputs (generation-by-generation snapshot)\n- Generation 0: μ0 = 4.50; S ≈ 2.55; R ≈ 1.02; p0 ≈ 0.50; Ḡ0 ≈ 5.10\n- Generation 1: μ1 ≈ 5.52; p1 ≈ 0.60; Ḡ1 ≈ 6.12\n\nInterpretation:\n- Under drought, less-tolerant individuals have lower fitness and are less represented in the next generation. Because drought tolerance has heritable components, the population shifts toward higher tolerance, which is reflected both in the trait distribution and in the modeled allele-frequency change at the contributing locus.\n\nKey Insight:\n- Natural selection on a heritable trait pushes the population toward higher tolerance under stress, and even simple genetic illustrations show how allele frequencies can shift alongside trait means, as captured by Breeder’s and Price-type reasoning.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, Brazil, studies a wild plant population facing drought. He tracks a drought-tolerance trait T (0–10) and wants to illustrate how natural selection can reshape both the trait distribution and the underlying genetic makeup.\n\nInputs:\n- Population and trait: 100 individuals; T ~ Normal μ0 = 4.5, σ0 = 2.0\n- Environmental pressure: drought reduces seed production; only the top 25% by T survive to reproduce\n- Heritability: h^2 = 0.40\n- Genetic simplification for illustration: single locus with two alleles A and a; additive effect per A allele is a; initial allele frequency p0 = 0.50\n\nStep 1 — Trait distribution and selection differential (S)\n- 75th percentile z ≈ 0.674\n- Threshold for survival: T75 = μ0 + zσ0 ≈ 5.85\n- Mean of the upper quartile (survivors): ≈ μ_upper ≈ 7.05\n- Selection differential: S = μ_upper − μ0 ≈ 7.05 − 4.50 ≈ 2.55\n\nStep 2 — Response to selection (R)\n- R = h^2 × S ≈ 0.40 × 2.55 ≈ 1.02\n\nStep 3 — Generation 1 trait mean (breeding-value-informed)\n- Predicted mean in offspring: μ1 ≈ μ0 + R ≈ 4.50 + 1.02 = 5.52\n\nStep 4 — Allele-frequency shift (illustrative single-locus model)\n- Relationship: ΔḠ = R ≈ 1.02 and ΔḠ = 2 a Δp\n- To illustrate, set Δp = 0.10 (10 percentage points). Then a ≈ ΔḠ / (2 Δp) ≈ 1.02 / 0.20 ≈ 5.10\n- Initial mean breeding value with p0 = 0.50: Ḡ0 = 2 a p0 ≈ 2 × 5.10 × 0.50 ≈ 5.10\n- New allele frequency: p1 = p0 + Δp = 0.60\n- New mean breeding value: Ḡ1 = 2 a p1 ≈ 2 × 5.10 × 0.60 ≈ 6.12\n- Consistency check: ΔḠ = Ḡ1 − Ḡ0 ≈ 1.02, matching R\n\nOutputs (generation-by-generation snapshot)\n- Generation 0: μ0 = 4.50; S ≈ 2.55; R ≈ 1.02; p0 ≈ 0.50; Ḡ0 ≈ 5.10\n- Generation 1: μ1 ≈ 5.52; p1 ≈ 0.60; Ḡ1 ≈ 6.12\n\nInterpretation:\n- Under drought, less-tolerant individuals have lower fitness and are less represented in the next generation. Because drought tolerance has heritable components, the population shifts toward higher tolerance, which is reflected both in the trait distribution and in the modeled allele-frequency change at the contributing locus.\n\nKey Insight:\n- Natural selection on a heritable trait pushes the population toward higher tolerance under stress, and even simple genetic illustrations show how allele frequencies can shift alongside trait means, as captured by Breeder’s and Price-type reasoning.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, Brazil, studies a wild plant population facing drought. He tracks a drought-tolerance trait T (0–10) and wants to illustrate how natural selection can reshape both the trait distribution and the underlying genetic makeup.\n\nInputs:\n- Population and trait: 100 individuals; T ~ Normal μ0 = 4.5, σ0 = 2.0\n- Environmental pressure: drought reduces seed production; only the top 25% by T survive to reproduce\n- Heritability: h^2 = 0.40\n- Genetic simplification for illustration: single locus with two alleles A and a; additive effect per A allele is a; initial allele frequency p0 = 0.50\n\nStep 1 — Trait distribution and selection differential (S)\n- 75th percentile z ≈ 0.674\n- Threshold for survival: T75 = μ0 + zσ0 ≈ 5.85\n- Mean of the upper quartile (survivors): ≈ μ_upper ≈ 7.05\n- Selection differential: S = μ_upper − μ0 ≈ 7.05 − 4.50 ≈ 2.55\n\nStep 2 — Response to selection (R)\n- R = h^2 × S ≈ 0.40 × 2.55 ≈ 1.02\n\nStep 3 — Generation 1 trait mean (breeding-value-informed)\n- Predicted mean in offspring: μ1 ≈ μ0 + R ≈ 4.50 + 1.02 = 5.52\n\nStep 4 — Allele-frequency shift (illustrative single-locus model)\n- Relationship: ΔḠ = R ≈ 1.02 and ΔḠ = 2 a Δp\n- To illustrate, set Δp = 0.10 (10 percentage points). Then a ≈ ΔḠ / (2 Δp) ≈ 1.02 / 0.20 ≈ 5.10\n- Initial mean breeding value with p0 = 0.50: Ḡ0 = 2 a p0 ≈ 2 × 5.10 × 0.50 ≈ 5.10\n- New allele frequency: p1 = p0 + Δp = 0.60\n- New mean breeding value: Ḡ1 = 2 a p1 ≈ 2 × 5.10 × 0.60 ≈ 6.12\n- Consistency check: ΔḠ = Ḡ1 − Ḡ0 ≈ 1.02, matching R\n\nOutputs (generation-by-generation snapshot)\n- Generation 0: μ0 = 4.50; S ≈ 2.55; R ≈ 1.02; p0 ≈ 0.50; Ḡ0 ≈ 5.10\n- Generation 1: μ1 ≈ 5.52; p1 ≈ 0.60; Ḡ1 ≈ 6.12\n\nInterpretation:\n- Under drought, less-tolerant individuals have lower fitness and are less represented in the next generation. Because drought tolerance has heritable components, the population shifts toward higher tolerance, which is reflected both in the trait distribution and in the modeled allele-frequency change at the contributing locus.\n\nKey Insight:\n- Natural selection on a heritable trait pushes the population toward higher tolerance under stress, and even simple genetic illustrations show how allele frequencies can shift alongside trait means, as captured by Breeder’s and Price-type reasoning.",
+        "example_id": "ex_740f1b2dfb594c79",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create the next Natural Selection example as a medium-complexity, real-world scenario grounded in São Paulo, Brazil, featuring a named character (Carlos) to boost engagement. Present it with step-by-step, labeled inputs/outputs: start with a trait distribution and environmental pressure (e.g., seed availability after a drought), then show generation-by-generation changes and compute the selection differential and the expected allele-frequency shift (using the Breeder's/Price equation) with concrete numbers. Keep the biology focus, avoid coding analogies, and ensure clear explanations that tie trait variation to fitness.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by explicitly referencing Carlos, a humanities researcher in São Paulo, Brazil, and incorporates his background into the scenario, aligning well with his profile. The complexity level is appropriate, involving detailed quantitative steps and genetic modeling, which matches a medium complexity suitable for a PhD-level learner. The scientific content appears accurate, with correct application of the principles of natural selection, heritability, and allele frequency change, demonstrating good factual correctness. The structure of the example is clear, with step-by-step calculations and logical flow, facilitating understanding and learning. The framing uses biological concepts and terminology, which are domain-appropriate for the topic of natural selection, and the genetic and evolutionary analogies are well-suited to the biological domain.\n\nPF: The example is well-tailored, integrating the user's profile details and context, especially the name and location, and uses domain-specific language and analogies.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation, including quantitative modeling, trait distribution, heritability, and allele frequency shifts, matches a medium complexity level suitable for a PhD-level learner.  \nAXIS_SCORE: 5\n\nCA: The scientific content is accurate, correctly applying principles of quantitative genetics and natural selection, with no evident errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear step-by-step approach that bridges concepts and calculations, making it pedagogically effective.  \nAXIS_SCORE: 5\n\nDA: The framing and analogies are entirely appropriate for a biology/evolution topic, with no off-domain elements or mismatched framing.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create the next Natural Selection example as a medium-complexity, real-world scenario grounded in São Paulo, Brazil, featuring a named character (Carlos) to boost engagement. Present it with step-by-step, labeled inputs/outputs: start with a trait distribution and environmental pressure (e.g., seed availability after a drought), then show generation-by-generation changes and compute the selection differential and the expected allele-frequency shift (using the Breeder's/Price equation) with concrete numbers. Keep the biology focus, avoid coding analogies, and ensure clear explanations that tie trait variation to fitness.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction explicitly incorporates the user's domain preference for humanities research and real-world scenarios grounded in São Paulo, Brazil, by requesting a concrete, localized example involving Carlos. It also emphasizes a step-by-step, labeled approach aligned with the user's preferred complexity level, effectively synthesizing the stored patterns and insights into a detailed, actionable directive. Therefore, it demonstrates a high level of specificity in guiding the example creation.\n\nSPECIFICITY_SCORE: 5\n\n```json\n{\n  \"SPECIFICITY\": 5\n}\n```",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:26:15.984407"
+}

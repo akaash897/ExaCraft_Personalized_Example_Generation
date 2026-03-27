@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_07",
+  "topic": "Plate Tectonics",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Plate Tectonics\n\nExample:\nIn a museum-friendly tour in São Paulo, a guide explains Earth’s surface as a cracked, moving shell. The crust isn’t a single rock but a mosaic of large pieces called lithospheric plates that drift slowly over a softer, warmer layer beneath them—the mantle. This movement happens because heat from deep inside the planet stirs the mantle like slow, bubbling soup (mantle convection). The plates ride on this convection and bump into, pull away from, or slide past one another.\n\nKey ideas at the boundary edges:\n- Divergent boundaries: two plates move apart, creating new crust as magma rises to fill the gap.\n- Convergent boundaries: plates collide; one can dive under another (subduction), forming trenches and often volcanoes.\n- Transform boundaries: plates slide side by side, producing earthquakes along faults.\n\nA vivid real-world example is the Pacific Ring of Fire, a horseshoe-shaped zone around the Pacific Ocean where many plate boundaries meet. Here, subduction and friction ignite frequent earthquakes and active volcanoes, making it a focal point for visitors learning how slow plate motions shape dramatic Earth features.\n\nOne simple way to anchor the idea:\n- The Pacific Plate moves about 7 centimeters per year relative to neighboring plates. In 100 years, that adds up to roughly 7 meters of lateral movement—enough to slowly reshape coastlines and the positions of mountains over long timescales.\n\nVisual activity (quick sketch and label):\n- Draw 5 irregular shapes to represent major plates (e.g., Pacific, North American, South American, Eurasian, African).\n- Label each plate and draw boundary lines: \n  - Divergent boundaries with arrows pointing away from each other.\n  - Convergent boundaries with arrows pointing toward each other (note if one plate is diving beneath another).\n  - Transform boundaries with arrows sliding past one another.\n- Mark the western edge of the diagram to hint at the Pacific Ring of Fire with a wavy line or small volcano icons.\n- Add a caption: “Slow, steady motion over millions of years creates coastlines, mountains, and volcanoes.”\n\nKey Terms (inline, simple):\n- Lithospheric plates: the large, rigid pieces of Earth's crust and upper mantle.\n- Mantle convection: the slow stirring in the mantle that drags the plates along.\n- Subduction: when one plate sinks beneath another.\n- Ring of Fire: the busy boundary zone around the Pacific where many earthquakes and volcanoes occur.\n\nKey Insight:\nPlate tectonics explains why Earth’s surface is constantly reshaped by slow, hidden motions. The visible features—coastlines, mountains, earthquakes, and volcanoes—mark the paths of these moving plates, with the Pacific Ring of Fire standing out as a dramatic showcase.",
+      "example_id": "ex_6e5fc0c9693a40c0",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Plate Tectonics\n\nExample:\n- Quick recap of boundary types:\n  - Divergent boundaries: plates move apart, creating new crust.\n  - Convergent boundaries: plates collide; one may dive beneath the other, forming mountains or volcanoes.\n  - Transform boundaries: plates slide past each other, causing earthquakes.\n\n- Movement rate example:\n  If two plates diverge at about 5 cm per year, in 1,000,000 years they would be roughly 50 kilometers apart.\n  Calculation: 5 cm/year × 1,000,000 years = 5,000,000 cm = 50 km.\n\n- Visual activity:\n  Sketch a simple plate diagram with three boundary types:\n  - Divergent: arrows moving apart at a mid-ocean ridge\n  - Convergent: one plate subducting under another, with a volcanic arc\n  - Transform: two plates sliding horizontally past one another\n  Connect the diagram to the Pacific Ring of Fire as an example of many convergent boundaries around the Pacific Ocean.\n  Label features like ridge, trench, mountains, and fault line.\n\n- Takeaway:\n  Plate tectonics explains the surface features and hazards we study in history and culture by showing how lithospheric plates interact.\n\n- São Paulo–focused closing line:\n  In São Paulo, museums and urban history show how ancient plate movements helped shape the local landscape and infrastructure, influencing where streets, neighborhoods, and cultural sites sit today.\n\nKey Insight:\n  The way plates move creates the landforms and hazards that shape human history and culture; understanding their interactions helps us read the stories of places like São Paulo.",
+      "example_id": "ex_0270d21c24fd4669"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always prefer examples that draw on historical or cultural contexts rather than formulas.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-16T12:10:18.881215"
+}

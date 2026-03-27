@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_02__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "thread_id": "thread_e767ec6026e74560",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, thinks about a small population of caterpillars in a clinic garden. The caterpillars come in two colors: pale green and dark green. The pale-green caterpillars blend in with pale leaves, while the dark-green ones stand out and are more often eaten by birds. In this environment, pale green caterpillars have higher survival and reproduction chances.\n\nInitial counts:\n- Pale green: 60\n- Dark green: 40\n\nEnvironment: birds preying more on the color that stands out against the background.\n\nSurvival this generation:\n- Pale green survive at 90% → 60 × 0.90 = 54 survivors\n- Dark green survive at 20% → 40 × 0.20 = 8 survivors\n\nTotal survivors: 54 + 8 = 62\n\nNew trait frequencies (next generation):\n- Pale green: 54/62 ≈ 87%\n- Dark green: 8/62 ≈ 13%\n\nInterpretation:\nThe pale-green variant increased in frequency because it had higher fitness in this environment.\n\nDefinitions inline:\n- Variation: Differences among individuals (here, color).\n- Fitness: How likely a variant is to survive and reproduce in a given environment.\n- Heredity: The trait can be passed to offspring, enabling the next generation to inherit the color.\n\nKey Insight:\nNatural selection favors traits that improve survival and reproduction in a specific environment, so advantageous variants become more common over generations. In this scenario, the pale-green color becomes more frequent because it helps caterpillars avoid predation.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, thinks about a small population of caterpillars in a clinic garden. The caterpillars come in two colors: pale green and dark green. The pale-green caterpillars blend in with pale leaves, while the dark-green ones stand out and are more often eaten by birds. In this environment, pale green caterpillars have higher survival and reproduction chances.\n\nInitial counts:\n- Pale green: 60\n- Dark green: 40\n\nEnvironment: birds preying more on the color that stands out against the background.\n\nSurvival this generation:\n- Pale green survive at 90% → 60 × 0.90 = 54 survivors\n- Dark green survive at 20% → 40 × 0.20 = 8 survivors\n\nTotal survivors: 54 + 8 = 62\n\nNew trait frequencies (next generation):\n- Pale green: 54/62 ≈ 87%\n- Dark green: 8/62 ≈ 13%\n\nInterpretation:\nThe pale-green variant increased in frequency because it had higher fitness in this environment.\n\nDefinitions inline:\n- Variation: Differences among individuals (here, color).\n- Fitness: How likely a variant is to survive and reproduce in a given environment.\n- Heredity: The trait can be passed to offspring, enabling the next generation to inherit the color.\n\nKey Insight:\nNatural selection favors traits that improve survival and reproduction in a specific environment, so advantageous variants become more common over generations. In this scenario, the pale-green color becomes more frequent because it helps caterpillars avoid predation.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, thinks about a small population of caterpillars in a clinic garden. The caterpillars come in two colors: pale green and dark green. The pale-green caterpillars blend in with pale leaves, while the dark-green ones stand out and are more often eaten by birds. In this environment, pale green caterpillars have higher survival and reproduction chances.\n\nInitial counts:\n- Pale green: 60\n- Dark green: 40\n\nEnvironment: birds preying more on the color that stands out against the background.\n\nSurvival this generation:\n- Pale green survive at 90% → 60 × 0.90 = 54 survivors\n- Dark green survive at 20% → 40 × 0.20 = 8 survivors\n\nTotal survivors: 54 + 8 = 62\n\nNew trait frequencies (next generation):\n- Pale green: 54/62 ≈ 87%\n- Dark green: 8/62 ≈ 13%\n\nInterpretation:\nThe pale-green variant increased in frequency because it had higher fitness in this environment.\n\nDefinitions inline:\n- Variation: Differences among individuals (here, color).\n- Fitness: How likely a variant is to survive and reproduce in a given environment.\n- Heredity: The trait can be passed to offspring, enabling the next generation to inherit the color.\n\nKey Insight:\nNatural selection favors traits that improve survival and reproduction in a specific environment, so advantageous variants become more common over generations. In this scenario, the pale-green color becomes more frequent because it helps caterpillars avoid predation.",
+        "example_id": "ex_2bf1348add304d63",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using the user's name, location, and profession, and incorporates a domain-specific analogy involving caterpillars and predation, which aligns with her learning style. The depth of explanation covers key aspects of natural selection at a medium complexity level, with accurate scientific content and clear pedagogical structure, making it suitable for her profile. The analogy is appropriate for biology, a core domain of the topic, and uses vocabulary consistent with her background.\n\nPF: The example directly references Amara, her location, and profession, and uses a biological analogy relevant to her field, demonstrating strong personalization.  \nAXIS_SCORE: 5\n\nCC: The explanation includes detailed numerical calculations and concepts like survival rates, trait frequencies, and fitness, matching a medium complexity level.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing variation, survival, and trait inheritance, with no factual errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear flow from scenario setup through calculations to interpretation, and explicitly connects the example to the core concept of natural selection.  \nAXIS_SCORE: 5\n\nDA: The analogy involving caterpillars and predation is highly appropriate for biology and natural selection, with no domain mismatch.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:13:20.383720"
+}

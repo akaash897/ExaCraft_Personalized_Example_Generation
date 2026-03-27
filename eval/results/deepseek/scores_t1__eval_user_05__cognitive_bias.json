@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_05__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_7a2692bb979c45b4",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're preparing for an important exam. You've studied hard, but you're feeling nervous. The day before the test, you remember a friend who failed a similar exam last semester. Even though you know your preparation is different, you start to believe you'll probably fail too. This is an example of the **availability heuristic**, a type of cognitive bias.\n\nHow it works:\n- Your brain is trying to quickly assess the probability of an event (failing the exam).\n- Instead of analyzing all the data (your study hours, past grades, understanding of the material), it relies on the most immediate, vivid, or emotionally charged example that comes to mind (your friend's failure).\n- This mental shortcut saves time and energy but often leads to an inaccurate judgment.\n\nA more balanced view might consider:\n  - Your consistent study schedule.\n  - Your successful completion of practice tests.\n  - The fact that your friend admitted they didn't study enough.\n\nKey Insight:\nCognitive biases are systematic patterns of deviation from rational thinking, often caused by our brain's reliance on mental shortcuts. They can distort our perception, memory, and decision-making without us even realizing it.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're preparing for an important exam. You've studied hard, but you're feeling nervous. The day before the test, you remember a friend who failed a similar exam last semester. Even though you know your preparation is different, you start to believe you'll probably fail too. This is an example of the **availability heuristic**, a type of cognitive bias.\n\nHow it works:\n- Your brain is trying to quickly assess the probability of an event (failing the exam).\n- Instead of analyzing all the data (your study hours, past grades, understanding of the material), it relies on the most immediate, vivid, or emotionally charged example that comes to mind (your friend's failure).\n- This mental shortcut saves time and energy but often leads to an inaccurate judgment.\n\nA more balanced view might consider:\n  - Your consistent study schedule.\n  - Your successful completion of practice tests.\n  - The fact that your friend admitted they didn't study enough.\n\nKey Insight:\nCognitive biases are systematic patterns of deviation from rational thinking, often caused by our brain's reliance on mental shortcuts. They can distort our perception, memory, and decision-making without us even realizing it.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're preparing for an important exam. You've studied hard, but you're feeling nervous. The day before the test, you remember a friend who failed a similar exam last semester. Even though you know your preparation is different, you start to believe you'll probably fail too. This is an example of the **availability heuristic**, a type of cognitive bias.\n\nHow it works:\n- Your brain is trying to quickly assess the probability of an event (failing the exam).\n- Instead of analyzing all the data (your study hours, past grades, understanding of the material), it relies on the most immediate, vivid, or emotionally charged example that comes to mind (your friend's failure).\n- This mental shortcut saves time and energy but often leads to an inaccurate judgment.\n\nA more balanced view might consider:\n  - Your consistent study schedule.\n  - Your successful completion of practice tests.\n  - The fact that your friend admitted they didn't study enough.\n\nKey Insight:\nCognitive biases are systematic patterns of deviation from rational thinking, often caused by our brain's reliance on mental shortcuts. They can distort our perception, memory, and decision-making without us even realizing it.",
+        "example_id": "ex_0ce970905e134245",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.8,
+      "CC": 4.29,
+      "CA": 5.0,
+      "PC": 4.94,
+      "DA": 4.83
+    },
+    "composite": 4.789,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Lena's name, location, and role as a student, aligning well with her profile. The complexity level appears appropriate for a high school student, providing a clear yet sufficiently detailed explanation of the availability heuristic without overwhelming technical language. The factual content about cognitive biases and the specific example are accurate and well-explained, supporting correct understanding. The structure is logical, with a clear progression from scenario to explanation and insight, making it pedagogically sound. The analogy used (comparing mental shortcuts to quick judgments based on vivid memories) is appropriate for the domain of psychology and cognitive biases, making the framing suitable for the topic.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Lena's name, location, and role, and the learning style (example-based) is reflected in the narrative structure. However, it doesn't incorporate her European background or specific cultural context, which could have enhanced personalization further.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The language and explanation are suitable for a high school student, with enough detail to be informative but not overly technical. The depth matches the medium complexity level specified.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and cognitive biases is accurate, with correct terminology and explanation. There are no factual errors present.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation, and key insight. The flow is logical, and the concept-to-example bridge is explicit, aiding understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing and vocabulary are appropriate for psychology and cognitive biases, with no off-domain elements or analogies. The example aligns well with the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 4,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.4,
+      "reasoning": "For the axis of PERSONALIZATION FIDELITY (PF), the example is clearly tailored to the user's profile, as it uses the user's name (Lena), location (Berlin), and role (student), and matches the learning style (example-based) by providing a relatable scenario. This level of personalization helps to engage the learner and make the concept more accessible.\n\nPF_SCORE: 5\n\nFor the axis of COMPLEXITY CALIBRATION (CC), the depth of the example matches the user's stated complexity level (medium), as it provides a clear explanation of the concept, includes relevant details, and offers a balanced view without overwhelming the learner with too much information. The language and concepts used are appropriate for a high school student.\n\nCC_SCORE: 5\n\nFor the axis of CONCEPTUAL ACCURACY (CA), the factual content regarding cognitive bias, specifically the availability heuristic, is correct and accurately explained. The example provides a clear definition, explains how the bias works, and offers a more balanced view to counteract the bias, demonstrating a thorough understanding of the concept.\n\nCA_SCORE: 5\n\nFor the axis of PEDAGOGICAL CLARITY (PC), the example is well-structured, starting with a relatable scenario, explaining the concept, and then providing a key insight that summarizes the importance of understanding cognitive biases. The flow is smooth, and the concept-to-example bridge is explicit, making it easy for the learner to understand and remember the takeaway.\n\nPC_SCORE: 5\n\nFor the axis of DOMAIN APPROPRIATENESS (DA), the analogies and framing used in the example are perfectly appropriate for the topic of cognitive bias, as they relate to decision-making, perception, and thinking patterns, which are central to the domain of psychology and cognitive science. There are no off-domain elements that could confuse the learner.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:28:08.186169"
+}

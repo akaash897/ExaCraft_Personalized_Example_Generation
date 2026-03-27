@@ -1,0 +1,152 @@
+{
+  "key": "t3__eval_user_06__cognitive_bias",
+  "tier": "t3",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_6db6eca3dcab4e24",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nContext: Lagos, Nigeria. Amara is a nurse working in a busy hospital triage area. A patient arrives with fever and headache after a recent dengue outbreak news cycle.\n\nNarrative details:\n- Lagos base rates for febrile illness (simplified):\n  - Malaria: 60%\n  - Dengue: 15%\n  - Other causes: 25%\n- Availability-based judgment (memory-informed): Amara estimates the current patient’s probabilities as Dengue 50%, Malaria 40%, Others 10%, because the recent dengue cases are fresh in memory.\n- Result of the bias: The triage decision leans toward dengue-focused assessment first, potentially delaying appropriate malaria testing or treatment.\n\nPrompt for the student:\n- Identify the bias at work.\n- Explain why this bias arises in probabilistic reasoning, using base-rate information and probability concepts.\n- Propose a concrete debiasing step and perform a quick base-rate check to guide the next decision.\n\nKey steps and numbers for clarity:\n- Base-rate comparison shows malaria is far more common than dengue among febrile Lagos patients (60% vs 15%).\n- The observed estimate (Dengue 50%) deviates from the base rate by 35 percentage points, driven by recent memory rather than the underlying proportions.\n- Debiasing step: recalibrate toward base rates unless new objective evidence shifts probabilities; for immediate action, require at least one objective diagnostic input (e.g., a rapid test) before prioritizing one diagnosis over another.\n\nKey Insight:\nThe availability heuristic can inflate the probability of memorable cases and distort base-rate reasoning; always anchor probability judgments to base rates and seek objective evidence to update them.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nBias identification:\n- Availability heuristic — tendency to overestimate likelihood of things that are vivid or recent in memory.\n\nLagos hospital triage vignette (contextual setup):\n- A nurse in Lagos triage encounters feverish patients. After treating several recent dengue cases, the nurse feels dengue is more likely than the base rates would suggest, potentially neglecting malaria or other causes.\n\nBase rates ( priors ):\n- P(Dengue) = 0.15\n- P(Malaria) = 0.60\n- P(Others) = 0.25\n\nDiagnostic test details:\n- Dengue rapid test sensitivity = 0.90\n- Dengue rapid test specificity = 0.85\n\nBayesian update (step-by-step with numbers):\n- P(Dengue | +) = [0.15 × 0.90] / [0.15 × 0.90 + 0.85 × (1 − 0.85)]\n  = 0.135 / (0.135 + 0.1275)\n  ≈ 0.51 (51%)\n- P(Dengue | −) = [0.15 × (1 − 0.90)] / [0.15 × (1 − 0.90) + 0.85 × 0.85]\n  = 0.015 / (0.015 + 0.7225)\n  ≈ 0.02 (2%)\n\nWhat these posterior probabilities mean in triage:\n- A positive dengue test raises suspicion to about 51%, but dengue is far from guaranteed; malaria or other causes still compete at high base rates.\n- A negative dengue test lowers dengue probability to about 2%, making dengue unlikely but not impossible in the overall picture.\n\nHow availability bias can mislead:\n- If memories of recent dengue patients are vivid, you might give dengue more weight than the base rates and test results justify, ignoring Bayes updating. Bayes’ rule shows how to combine prior odds with test evidence to arrive at a calibrated probability.\n\nPractical guardrails to reduce availability bias in busy Lagos triage:\n- Check priors first: start every case by re-establishing base rates (malaria, dengue, others) before weighing test results.\n- Use objective tests and know their limits (sensitivity and specificity) rather than relying on memory of prior outcomes.\n- Consider alternate diagnoses in a structured way (keep malaria and others in differential).\n- Use a simple checklist to guide reasoning and ensure probabilistic updates are explicit.\n\nNurse-domain equipment analogy:\n- Interpreting a dengue rapid test is like reading a ventilator/readout: one signal is informative but must be interpreted in the context of baseline patient status and test characteristics; avoid over- or under-reacting to a single reading.\n\nKey Insight:\n  Availability bias can tilt judgment away from Bayesian updating; grounding decisions in base rates and test properties yields calibrated triage probabilities.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nContext: Lagos, Nigeria. Amara is a nurse working in a busy hospital triage area. A patient arrives with fever and headache after a recent dengue outbreak news cycle.\n\nNarrative details:\n- Lagos base rates for febrile illness (simplified):\n  - Malaria: 60%\n  - Dengue: 15%\n  - Other causes: 25%\n- Availability-based judgment (memory-informed): Amara estimates the current patient’s probabilities as Dengue 50%, Malaria 40%, Others 10%, because the recent dengue cases are fresh in memory.\n- Result of the bias: The triage decision leans toward dengue-focused assessment first, potentially delaying appropriate malaria testing or treatment.\n\nPrompt for the student:\n- Identify the bias at work.\n- Explain why this bias arises in probabilistic reasoning, using base-rate information and probability concepts.\n- Propose a concrete debiasing step and perform a quick base-rate check to guide the next decision.\n\nKey steps and numbers for clarity:\n- Base-rate comparison shows malaria is far more common than dengue among febrile Lagos patients (60% vs 15%).\n- The observed estimate (Dengue 50%) deviates from the base rate by 35 percentage points, driven by recent memory rather than the underlying proportions.\n- Debiasing step: recalibrate toward base rates unless new objective evidence shifts probabilities; for immediate action, require at least one objective diagnostic input (e.g., a rapid test) before prioritizing one diagnosis over another.\n\nKey Insight:\nThe availability heuristic can inflate the probability of memorable cases and distort base-rate reasoning; always anchor probability judgments to base rates and seek objective evidence to update them.",
+        "example_id": "ex_44dac0b577c34649",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nBias identification:\n- Availability heuristic — tendency to overestimate likelihood of things that are vivid or recent in memory.\n\nLagos hospital triage vignette (contextual setup):\n- A nurse in Lagos triage encounters feverish patients. After treating several recent dengue cases, the nurse feels dengue is more likely than the base rates would suggest, potentially neglecting malaria or other causes.\n\nBase rates ( priors ):\n- P(Dengue) = 0.15\n- P(Malaria) = 0.60\n- P(Others) = 0.25\n\nDiagnostic test details:\n- Dengue rapid test sensitivity = 0.90\n- Dengue rapid test specificity = 0.85\n\nBayesian update (step-by-step with numbers):\n- P(Dengue | +) = [0.15 × 0.90] / [0.15 × 0.90 + 0.85 × (1 − 0.85)]\n  = 0.135 / (0.135 + 0.1275)\n  ≈ 0.51 (51%)\n- P(Dengue | −) = [0.15 × (1 − 0.90)] / [0.15 × (1 − 0.90) + 0.85 × 0.85]\n  = 0.015 / (0.015 + 0.7225)\n  ≈ 0.02 (2%)\n\nWhat these posterior probabilities mean in triage:\n- A positive dengue test raises suspicion to about 51%, but dengue is far from guaranteed; malaria or other causes still compete at high base rates.\n- A negative dengue test lowers dengue probability to about 2%, making dengue unlikely but not impossible in the overall picture.\n\nHow availability bias can mislead:\n- If memories of recent dengue patients are vivid, you might give dengue more weight than the base rates and test results justify, ignoring Bayes updating. Bayes’ rule shows how to combine prior odds with test evidence to arrive at a calibrated probability.\n\nPractical guardrails to reduce availability bias in busy Lagos triage:\n- Check priors first: start every case by re-establishing base rates (malaria, dengue, others) before weighing test results.\n- Use objective tests and know their limits (sensitivity and specificity) rather than relying on memory of prior outcomes.\n- Consider alternate diagnoses in a structured way (keep malaria and others in differential).\n- Use a simple checklist to guide reasoning and ensure probabilistic updates are explicit.\n\nNurse-domain equipment analogy:\n- Interpreting a dengue rapid test is like reading a ventilator/readout: one signal is informative but must be interpreted in the context of baseline patient status and test characteristics; avoid over- or under-reacting to a single reading.\n\nKey Insight:\n  Availability bias can tilt judgment away from Bayesian updating; grounding decisions in base rates and test properties yields calibrated triage probabilities.",
+        "example_id": "ex_40b8f30c2fd8473c"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ],
+    "context_instruction": "Build on the Lagos triage vignette from the prior cognitive-bias example and foreground a specific bias (e.g., availability heuristic or anchoring) in a probabilistic reasoning context. After presenting the vignette, require the student to identify the bias, explain why it arises with base-rate/probability considerations, and propose a concrete debiasing step with a quick base-rate check. Keep the language concrete and domain-appropriate, and explicitly connect the bias to probability statistics and philosophy of logic as scaffolds.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively incorporates the user's profile by setting the context in Lagos, Nigeria, and involving a nurse, Amara, which aligns well with her profession and location. The scenario uses domain-specific details like malaria and dengue, relevant to her healthcare setting, and employs an example-based learning style with concrete numbers and decision steps, matching her medium complexity preference. The factual content about base rates and cognitive biases appears accurate, and the structure clearly guides the learner through identification, explanation, and debiasing, supporting pedagogical clarity. The analogies and framing are appropriate for a healthcare context, making the example domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example is well tailored, referencing Amara's role, location, and relevant health issues, and uses her learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content involves probabilistic reasoning, base rates, and bias correction, which are suitable for a professional with medium complexity understanding; it balances technical detail with clarity.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The facts about base rates, cognitive biases, and probabilistic reasoning are correct, with no evident inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear narrative, explicit steps, and a memorable key insight, facilitating learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing, vocabulary, and analogies are entirely appropriate for a healthcare setting and the topic of cognitive bias in medical decision-making.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the context by referencing a nurse in Lagos, Nigeria, and uses a domain-specific scenario involving triage, which aligns well with the user's profession and location. The analogies and framing are appropriate for healthcare, making the content relevant and engaging for a nurse learner. The complexity level appears suitable, incorporating Bayesian calculations and diagnostic reasoning that match a medium difficulty. The factual content about cognitive biases, Bayesian updates, and test characteristics is accurate and well-explained, supporting conceptual understanding. The structure is clear, with logical progression from bias identification to practical mitigation, facilitating learning. Overall, the example is well-tailored, accurate, pedagogically sound, and domain-appropriate.\n\nPF_SCORE: 4\n\nThe content demonstrates a detailed, nuanced understanding of Bayesian reasoning and cognitive bias, matching the medium complexity level specified. The calculations and explanations are sufficiently detailed without being overly technical, aligning well with a professional learner's capacity. There are no signs of oversimplification or excessive complexity, making it well-calibrated.\n\nCC_SCORE: 5\n\nThe example is mostly calibrated to the user's medium complexity level, with clear explanations and relevant calculations. However, some parts, like the Bayesian formulas, could be slightly simplified or explained more explicitly for clarity, indicating a minor mismatch in depth.\n\nCA_SCORE: 5\n\nAll factual information about cognitive biases, Bayesian updating, test sensitivity/specificity, and their application in triage is accurate and scientifically sound. There are no inaccuracies or misleading statements.\n\nPC_SCORE: 5\n\nThe example is well-structured, with a logical flow from bias identification to practical strategies and analogies. It clearly connects the concept to real-world application, but could benefit from a more explicit summary or takeaway to enhance memorability and reinforce learning.\n\nDA_SCORE: 5\n\nThe analogies and framing are entirely appropriate for a healthcare setting, using medical testing and triage as domain-specific examples. The language and concepts are consistent with the medical domain, making the framing highly relevant and effective.\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example simplifies the explanation by including clear, step-by-step Bayesian calculations and specific test characteristics, making the technical reasoning more explicit and accessible. It directly addresses the critique by balancing simplicity with depth, especially through quantitative updates and practical guidance, thus effectively resolving the user's concern.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES\n\n```json\n{\n  \"COMPLIANCE_SCORE\": 5,\n  \"COMPLIANT\": \"YES\"\n}\n```",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Build on the Lagos triage vignette from the prior cognitive-bias example and foreground a specific bias (e.g., availability heuristic or anchoring) in a probabilistic reasoning context. After presenting the vignette, require the student to identify the bias, explain why it arises with base-rate/probability considerations, and propose a concrete debiasing step with a quick base-rate check. Keep the language concrete and domain-appropriate, and explicitly connect the bias to probability statistics and philosophy of logic as scaffolds.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 2,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": null,
+        "actual": "regenerate",
+        "excluded": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T11:50:50.116087"
+}

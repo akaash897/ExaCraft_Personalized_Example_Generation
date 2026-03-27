@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_02__compound_interest",
+  "tier": "t1",
+  "user_id": "eval_user_02",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_02",
+    "topic": "Compound Interest",
+    "thread_id": "thread_df096fd8ea844b3a",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you decide to save \u20a650,000 in a savings account to help fund a future nursing certification course. The bank offers an annual interest rate of 10%, compounded annually. This means your money earns interest not just on your initial deposit, but also on the interest it has already earned.\n\nLet's track your savings over 3 years:\n\n- **Year 0 (Initial Deposit):** \u20a650,000\n- **Year 1:** You earn 10% interest on \u20a650,000.\n    * Interest = \u20a650,000 \u00d7 0.10 = \u20a65,000\n    * New Total = \u20a650,000 + \u20a65,000 = \u20a655,000\n- **Year 2:** You now earn 10% interest on the *new total* of \u20a655,000.\n    * Interest = \u20a655,000 \u00d7 0.10 = \u20a65,500\n    * New Total = \u20a655,000 + \u20a65,500 = \u20a660,500\n- **Year 3:** You earn 10% interest on \u20a660,500.\n    * Interest = \u20a660,500 \u00d7 0.10 = \u20a66,050\n    * Final Total = \u20a660,500 + \u20a66,050 = \u20a666,550\n\nNotice how the interest earned increases each year (\u20a65,000, then \u20a65,500, then \u20a66,050). This growth happens because each year's interest is added to the principal, creating a larger base for the next calculation.\n\nKey Insight:\nCompound interest is \"interest on interest.\" Your money grows faster over time because each interest payment itself starts earning interest, creating a snowball effect that simple interest does not have.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you decide to save \u20a650,000 in a savings account to help fund a future nursing certification course. The bank offers an annual interest rate of 10%, compounded annually. This means your money earns interest not just on your initial deposit, but also on the interest it has already earned.\n\nLet's track your savings over 3 years:\n\n- **Year 0 (Initial Deposit):** \u20a650,000\n- **Year 1:** You earn 10% interest on \u20a650,000.\n    * Interest = \u20a650,000 \u00d7 0.10 = \u20a65,000\n    * New Total = \u20a650,000 + \u20a65,000 = \u20a655,000\n- **Year 2:** You now earn 10% interest on the *new total* of \u20a655,000.\n    * Interest = \u20a655,000 \u00d7 0.10 = \u20a65,500\n    * New Total = \u20a655,000 + \u20a65,500 = \u20a660,500\n- **Year 3:** You earn 10% interest on \u20a660,500.\n    * Interest = \u20a660,500 \u00d7 0.10 = \u20a66,050\n    * Final Total = \u20a660,500 + \u20a66,050 = \u20a666,550\n\nNotice how the interest earned increases each year (\u20a65,000, then \u20a65,500, then \u20a66,050). This growth happens because each year's interest is added to the principal, creating a larger base for the next calculation.\n\nKey Insight:\nCompound interest is \"interest on interest.\" Your money grows faster over time because each interest payment itself starts earning interest, creating a snowball effect that simple interest does not have.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you decide to save \u20a650,000 in a savings account to help fund a future nursing certification course. The bank offers an annual interest rate of 10%, compounded annually. This means your money earns interest not just on your initial deposit, but also on the interest it has already earned.\n\nLet's track your savings over 3 years:\n\n- **Year 0 (Initial Deposit):** \u20a650,000\n- **Year 1:** You earn 10% interest on \u20a650,000.\n    * Interest = \u20a650,000 \u00d7 0.10 = \u20a65,000\n    * New Total = \u20a650,000 + \u20a65,000 = \u20a655,000\n- **Year 2:** You now earn 10% interest on the *new total* of \u20a655,000.\n    * Interest = \u20a655,000 \u00d7 0.10 = \u20a65,500\n    * New Total = \u20a655,000 + \u20a65,500 = \u20a660,500\n- **Year 3:** You earn 10% interest on \u20a660,500.\n    * Interest = \u20a660,500 \u00d7 0.10 = \u20a66,050\n    * Final Total = \u20a660,500 + \u20a66,050 = \u20a666,550\n\nNotice how the interest earned increases each year (\u20a65,000, then \u20a65,500, then \u20a66,050). This growth happens because each year's interest is added to the principal, creating a larger base for the next calculation.\n\nKey Insight:\nCompound interest is \"interest on interest.\" Your money grows faster over time because each interest payment itself starts earning interest, creating a snowball effect that simple interest does not have.",
+        "example_id": "ex_4bc80d009bd84d8a",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.82,
+      "CC": 4.36,
+      "CA": 4.94,
+      "PC": 4.87,
+      "DA": 4.83
+    },
+    "composite": 4.775,
+    "reasoning": "The example effectively personalizes the scenario by addressing Amara directly, referencing her location and profession, and using her name, which aligns well with her learning style. The complexity level appears appropriate, providing a clear, step-by-step explanation suitable for a medium level of understanding. The factual content about compound interest and the calculations are accurate and correctly explained, reinforcing core concepts without errors. The structure is logical, with a clear progression from initial deposit to final amount, and the key insight is explicitly highlighted, aiding pedagogical clarity. The analogy and framing are appropriate for the topic, using a banking and savings context that aligns with the concept of compound interest, which is domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example is highly personalized, directly involving Amara, her location, and her profession, and it uses her learning style effectively.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION \u2014 The explanation matches a medium complexity level, with clear calculations and conceptual clarity suitable for someone with a professional background but not necessarily specialized in finance.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 The content correctly explains compound interest, the calculations are accurate, and the core concept is well conveyed without errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a logical flow, explicit steps, and a memorable key insight, making it effective for learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The banking and savings analogy is perfectly suited for explaining compound interest, with appropriate vocabulary and framing.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:21:36.098229"
+}

@@ -1,0 +1,80 @@
+{
+  "key": "t0__eval_user_01__plate_tectonics",
+  "tier": "t0",
+  "user_id": "eval_user_01",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_347d888028494a76",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's surface is like a giant, cracked eggshell floating on a pot of thick, hot soup. These cracked pieces are called tectonic plates. They are constantly moving, but so slowly you can't feel it—about as fast as your fingernails grow.\n\nWhat happens at the edges:\n- **Pulling Apart:** Where two plates move away from each other, hot rock from below rises to fill the gap. This creates new crust and can form long mountain ranges under the ocean, like the Mid-Atlantic Ridge.\n- **Pushing Together:** Where two plates collide, one plate is often forced down under the other and melts back into the Earth. This can create huge mountain ranges on land, like the Himalayas, or deep ocean trenches.\n- **Sliding Past:** Where two plates grind past each other, they get stuck and then suddenly slip, causing earthquakes, like along the San Andreas Fault in California.\n\nKey Insight:\nThe Earth's surface is not a single, solid shell but a dynamic puzzle of moving plates. Their slow but powerful interactions are the reason for most earthquakes, volcanoes, and the creation of the world's major mountain ranges.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's surface is like a giant, cracked eggshell floating on a pot of thick, hot soup. These cracked pieces are called tectonic plates. They are constantly moving, but so slowly you can't feel it—about as fast as your fingernails grow.\n\nWhat happens at the edges:\n- **Pulling Apart:** Where two plates move away from each other, hot rock from below rises to fill the gap. This creates new crust and can form long mountain ranges under the ocean, like the Mid-Atlantic Ridge.\n- **Pushing Together:** Where two plates collide, one plate is often forced down under the other and melts back into the Earth. This can create huge mountain ranges on land, like the Himalayas, or deep ocean trenches.\n- **Sliding Past:** Where two plates grind past each other, they get stuck and then suddenly slip, causing earthquakes, like along the San Andreas Fault in California.\n\nKey Insight:\nThe Earth's surface is not a single, solid shell but a dynamic puzzle of moving plates. Their slow but powerful interactions are the reason for most earthquakes, volcanoes, and the creation of the world's major mountain ranges.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's surface is like a giant, cracked eggshell floating on a pot of thick, hot soup. These cracked pieces are called tectonic plates. They are constantly moving, but so slowly you can't feel it—about as fast as your fingernails grow.\n\nWhat happens at the edges:\n- **Pulling Apart:** Where two plates move away from each other, hot rock from below rises to fill the gap. This creates new crust and can form long mountain ranges under the ocean, like the Mid-Atlantic Ridge.\n- **Pushing Together:** Where two plates collide, one plate is often forced down under the other and melts back into the Earth. This can create huge mountain ranges on land, like the Himalayas, or deep ocean trenches.\n- **Sliding Past:** Where two plates grind past each other, they get stuck and then suddenly slip, causing earthquakes, like along the San Andreas Fault in California.\n\nKey Insight:\nThe Earth's surface is not a single, solid shell but a dynamic puzzle of moving plates. Their slow but powerful interactions are the reason for most earthquakes, volcanoes, and the creation of the world's major mountain ranges.",
+        "example_id": "ex_db3b59e06b3e4ab6",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.66,
+      "CC": 4.1,
+      "CA": 4.87,
+      "PC": 4.67,
+      "DA": 4.51
+    },
+    "composite": 4.198,
+    "reasoning": "The example effectively uses a relatable analogy (cracked eggshell on hot soup) that aligns with the user's example-based learning style and medium complexity level. It covers core concepts of plate tectonics accurately and clearly, with a logical structure that guides the learner from basic ideas to key insights. The analogies and vocabulary are appropriate for a high school student, and the framing is entirely within the domain of geology, making it domain-appropriate.\n\nHowever, while the analogy is engaging, it could be slightly more tailored to the user's European context or explicitly connect to familiar geographic features in Germany or Europe to enhance personalization. The complexity level is well-matched, and the scientific content is accurate, with no errors. The structure is clear, with a good flow from concept to key insight, supporting pedagogical clarity.\n\n[PF] PERSONALIZATION FIDELITY — The example does not incorporate specific profile details such as the user's location (Berlin) or learning preferences beyond example-based, but it does use a clear analogy suitable for a high school student. It is somewhat generic but appropriate for the profile.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The language and depth are appropriate for a high school student, with enough detail to be engaging but not overwhelming. It matches the medium complexity level well.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The scientific facts about plate tectonics, such as the types of plate boundaries and their effects, are correct and well-explained.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from analogy to specific boundary types and a memorable key insight, making it effective for learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely within the domain of geology and plate tectonics, making it highly appropriate for the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 4,
+        "CA": 4,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.1,
+      "reasoning": "For the PERSONALIZATION FIDELITY axis, the example does not reflect the user's actual profile in a significant way, as it does not use the user's name, location, profession, or any other specific detail from the profile. The example is presented in a generic manner, which suggests a lack of personalization. \nPF_SCORE: 1\n\nFor the COMPLEXITY CALIBRATION axis, the example seems to match the user's stated complexity level of \"medium\" by using analogies and explanations that are neither too simple nor too complex, making it accessible to a high school student. The language and depth of the explanation appear to be calibrated to the requested level. \nCC_SCORE: 5\n\nFor the CONCEPTUAL ACCURACY axis, the factual and scientific content of the example is correct, accurately describing the basics of plate tectonics, including the types of plate interactions and their consequences, such as earthquake and mountain formation. The example provides a clear and accurate representation of the concept. \nCA_SCORE: 5\n\nFor the PEDAGOGICAL CLARITY axis, the example is well-structured, starting with an engaging analogy, followed by clear explanations of different plate interactions, and concluding with a key insight that summarizes the main point. The flow is smooth, and the concept-to-example bridge is explicit, making it easy to follow and understand. \nPC_SCORE: 5\n\nFor the DOMAIN APPROPRIATENESS axis, the example uses analogies and framing that are perfectly appropriate for the topic of plate tectonics, such as comparing the Earth's surface to a \"cracked eggshell\" and describing the movement of tectonic plates in a way that is consistent with geological concepts. \nDA_SCORE: 5\n\n```json\n{\"PF\": 1, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:05:30.154401"
+}

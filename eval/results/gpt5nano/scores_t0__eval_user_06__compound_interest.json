@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_06__compound_interest",
+  "tier": "t0",
+  "user_id": "eval_user_06",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_06",
+    "topic": "Compound Interest",
+    "thread_id": "thread_817127920ea342ca",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nImagine you put $100 in a savings account that earns 5% interest each year, and the interest is added to your balance (compounded annually).\n\nYear 1:\n- Interest earned: 5% of 100 = $5\n- New balance: $105\n\nYear 2:\n- Interest earned: 5% of 105 = $5.25\n- New balance: $110.25\n\nFormula (very simple):\nA = P × (1 + r)^t\n- P = 100 (initial amount)\n- r = 0.05 (annual rate)\n- t = 2 years\nA = 100 × (1.05)^2 = 110.25\n\nNote:\nIf interest is added more often (monthly, etc.), the final amount would be a bit higher because you earn interest on interest sooner.\n\nKey Insight:\nCompound interest makes money grow faster by earning interest on previously earned interest; more frequent compounding increases this effect.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nImagine you put $100 in a savings account that earns 5% interest each year, and the interest is added to your balance (compounded annually).\n\nYear 1:\n- Interest earned: 5% of 100 = $5\n- New balance: $105\n\nYear 2:\n- Interest earned: 5% of 105 = $5.25\n- New balance: $110.25\n\nFormula (very simple):\nA = P × (1 + r)^t\n- P = 100 (initial amount)\n- r = 0.05 (annual rate)\n- t = 2 years\nA = 100 × (1.05)^2 = 110.25\n\nNote:\nIf interest is added more often (monthly, etc.), the final amount would be a bit higher because you earn interest on interest sooner.\n\nKey Insight:\nCompound interest makes money grow faster by earning interest on previously earned interest; more frequent compounding increases this effect.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nImagine you put $100 in a savings account that earns 5% interest each year, and the interest is added to your balance (compounded annually).\n\nYear 1:\n- Interest earned: 5% of 100 = $5\n- New balance: $105\n\nYear 2:\n- Interest earned: 5% of 105 = $5.25\n- New balance: $110.25\n\nFormula (very simple):\nA = P × (1 + r)^t\n- P = 100 (initial amount)\n- r = 0.05 (annual rate)\n- t = 2 years\nA = 100 × (1.05)^2 = 110.25\n\nNote:\nIf interest is added more often (monthly, etc.), the final amount would be a bit higher because you earn interest on interest sooner.\n\nKey Insight:\nCompound interest makes money grow faster by earning interest on previously earned interest; more frequent compounding increases this effect.",
+        "example_id": "ex_b7980fbc9d314513",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 3,
+      "CA": 4,
+      "PC": 4,
+      "DA": 3
+    },
+    "composite": 3.3,
+    "reasoning": "The example clearly explains compound interest with a practical, relatable scenario involving a savings account, which aligns well with the user's profile as a nurse who may be interested in personal finance. It uses straightforward language and includes formulas, matching the medium complexity level. The content is factually accurate, correctly describing the concept and formula. The structure is logical, starting with a scenario, then calculations, and ending with a key insight, which supports pedagogical clarity. The analogy of a savings account is appropriate for the domain of finance, which is relevant and familiar.\n\n[PF] PERSONALIZATION FIDELITY — The example does not incorporate any specific elements from Amara's profile such as her profession, location, or cultural background, nor does it tailor the analogy to her context. It is generic in nature.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes formulas and a step-by-step calculation, which aligns with a medium complexity level suitable for a professional learner. It is neither too simple nor overly technical.  \nAXIS_SCORE: 3\n\n[CA] CONCEPTUAL ACCURACY — The content correctly describes compound interest, the formula, and the effect of compounding frequency, with no factual errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to calculation to insight, making it easy to follow and understand. The key insight is explicitly highlighted, aiding learning.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of a savings account is highly appropriate for explaining compound interest, matching the financial domain effectively.  \nAXIS_SCORE: 3\n\n```json\n{\"PF\": 2, \"CC\": 3, \"CA\": 4, \"PC\": 4, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:50:23.139857"
+}

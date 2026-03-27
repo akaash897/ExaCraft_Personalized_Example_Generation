@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__plate_tectonics",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_a53d0e6da5a14b5c",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's crust is not a single solid shell, but is broken into several giant pieces, like a cracked eggshell floating on a warm, soft yolk (the mantle below). These pieces are called tectonic plates.\n\nWhat happens:\n- The plates are constantly moving very slowly, driven by heat from deep inside the Earth.\n- Where two plates meet, their interaction shapes the world's surface.\n  - If they push together (converge), they can crumple up to form massive mountain ranges, like the Himalayas.\n  - If they pull apart (diverge), new crust forms from below, creating features like mid-ocean ridges.\n  - If they slide past each other (transform), the grinding motion can cause earthquakes, like along the San Andreas Fault.\n\nKey Insight:\nThe continents and oceans are not fixed; they are passengers on these slowly moving plates. This ongoing motion explains why we have earthquakes, volcanoes, and mountains.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's crust is not a single solid shell, but is broken into several giant pieces, like a cracked eggshell floating on a warm, soft yolk (the mantle below). These pieces are called tectonic plates.\n\nWhat happens:\n- The plates are constantly moving very slowly, driven by heat from deep inside the Earth.\n- Where two plates meet, their interaction shapes the world's surface.\n  - If they push together (converge), they can crumple up to form massive mountain ranges, like the Himalayas.\n  - If they pull apart (diverge), new crust forms from below, creating features like mid-ocean ridges.\n  - If they slide past each other (transform), the grinding motion can cause earthquakes, like along the San Andreas Fault.\n\nKey Insight:\nThe continents and oceans are not fixed; they are passengers on these slowly moving plates. This ongoing motion explains why we have earthquakes, volcanoes, and mountains.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's crust is not a single solid shell, but is broken into several giant pieces, like a cracked eggshell floating on a warm, soft yolk (the mantle below). These pieces are called tectonic plates.\n\nWhat happens:\n- The plates are constantly moving very slowly, driven by heat from deep inside the Earth.\n- Where two plates meet, their interaction shapes the world's surface.\n  - If they push together (converge), they can crumple up to form massive mountain ranges, like the Himalayas.\n  - If they pull apart (diverge), new crust forms from below, creating features like mid-ocean ridges.\n  - If they slide past each other (transform), the grinding motion can cause earthquakes, like along the San Andreas Fault.\n\nKey Insight:\nThe continents and oceans are not fixed; they are passengers on these slowly moving plates. This ongoing motion explains why we have earthquakes, volcanoes, and mountains.",
+        "example_id": "ex_c644e3304c1149a6",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.62,
+      "CC": 4.05,
+      "CA": 4.75,
+      "PC": 4.75,
+      "DA": 4.32
+    },
+    "composite": 4.141,
+    "reasoning": "The example effectively uses a relatable analogy (cracked eggshell on yolk) that aligns with the Earth's crust, which suits a high school student\u2019s understanding. It covers fundamental concepts like plate movement, interactions, and surface features, matching the medium complexity level. The scientific facts presented are accurate, and the structure clearly guides the learner from basic concepts to key insights, making it pedagogically sound. The analogy is appropriate for the domain of geology, and the language is accessible for a high school student.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example mentions the user's profile details such as being a high school student from Berlin and a visual learner, but it does not incorporate these specifics directly into the analogy or explanation. It is somewhat generic in personalization, focusing on the learning style but not on other profile elements.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION \u2014 The content strikes a good balance, explaining plate tectonics with appropriate depth and terminology for a high school level, without oversimplifying or overcomplicating.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 All scientific facts about plate movements, types of boundaries, and surface features are correct and well-explained.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a clear progression from analogy to specific processes and a memorable key insight, facilitating understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogy and framing are perfectly suited for geology and plate tectonics, using familiar concepts like eggshells and yolk to illustrate complex processes.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:14:08.729937"
+}

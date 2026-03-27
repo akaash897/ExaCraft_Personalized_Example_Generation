@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__compound_interest",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Compound Interest",
+    "thread_id": "thread_9d95b70529a4438a",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nAmara, a nurse in Lagos, decides to start saving for a specialized nursing certification course that costs ₦500,000. She plans to save a lump sum now and let it grow with compound interest, rather than saving from her monthly salary later.\n\nScenario:\nAmara invests ₦200,000 in a fixed deposit account at her local bank. The account offers an annual interest rate of 12%, compounded annually. She will leave the money untouched for 5 years.\n\nStep-by-Step Breakdown:\n\nInputs:\n  - Principal (initial investment): ₦200,000\n  - Annual interest rate: 12% (or 0.12 as a decimal)\n  - Compounding frequency: Once per year\n  - Time: 5 years\n\nFormula:\n  Future Value = Principal × (1 + interest rate)^time\n  A = P(1 + r)^t\n\nCalculation:\n  Year 1: ₦200,000 × 1.12 = ₦224,000\n  Year 2: ₦224,000 × 1.12 = ₦250,880\n  Year 3: ₦250,880 × 1.12 = ₦280,986\n  Year 4: ₦280,986 × 1.12 = ₦314,704\n  Year 5: ₦314,704 × 1.12 = ₦352,469\n\nOutput:\n  After 5 years, Amara's investment grows to approximately ₦352,469.\n  This is more than the ₦500,000 she needs, so she decides to invest a smaller amount, ₦150,000, which will grow to about ₦264,352—enough for the course with some left for materials.\n\nKey Insight:\n  Compound interest earns \"interest on interest,\" making your money grow faster over time. The longer Amara leaves her money invested, the less she needs to save upfront to reach her goal.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nAmara, a nurse in Lagos, decides to start saving for a specialized nursing certification course that costs ₦500,000. She plans to save a lump sum now and let it grow with compound interest, rather than saving from her monthly salary later.\n\nScenario:\nAmara invests ₦200,000 in a fixed deposit account at her local bank. The account offers an annual interest rate of 12%, compounded annually. She will leave the money untouched for 5 years.\n\nStep-by-Step Breakdown:\n\nInputs:\n  - Principal (initial investment): ₦200,000\n  - Annual interest rate: 12% (or 0.12 as a decimal)\n  - Compounding frequency: Once per year\n  - Time: 5 years\n\nFormula:\n  Future Value = Principal × (1 + interest rate)^time\n  A = P(1 + r)^t\n\nCalculation:\n  Year 1: ₦200,000 × 1.12 = ₦224,000\n  Year 2: ₦224,000 × 1.12 = ₦250,880\n  Year 3: ₦250,880 × 1.12 = ₦280,986\n  Year 4: ₦280,986 × 1.12 = ₦314,704\n  Year 5: ₦314,704 × 1.12 = ₦352,469\n\nOutput:\n  After 5 years, Amara's investment grows to approximately ₦352,469.\n  This is more than the ₦500,000 she needs, so she decides to invest a smaller amount, ₦150,000, which will grow to about ₦264,352—enough for the course with some left for materials.\n\nKey Insight:\n  Compound interest earns \"interest on interest,\" making your money grow faster over time. The longer Amara leaves her money invested, the less she needs to save upfront to reach her goal.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nAmara, a nurse in Lagos, decides to start saving for a specialized nursing certification course that costs ₦500,000. She plans to save a lump sum now and let it grow with compound interest, rather than saving from her monthly salary later.\n\nScenario:\nAmara invests ₦200,000 in a fixed deposit account at her local bank. The account offers an annual interest rate of 12%, compounded annually. She will leave the money untouched for 5 years.\n\nStep-by-Step Breakdown:\n\nInputs:\n  - Principal (initial investment): ₦200,000\n  - Annual interest rate: 12% (or 0.12 as a decimal)\n  - Compounding frequency: Once per year\n  - Time: 5 years\n\nFormula:\n  Future Value = Principal × (1 + interest rate)^time\n  A = P(1 + r)^t\n\nCalculation:\n  Year 1: ₦200,000 × 1.12 = ₦224,000\n  Year 2: ₦224,000 × 1.12 = ₦250,880\n  Year 3: ₦250,880 × 1.12 = ₦280,986\n  Year 4: ₦280,986 × 1.12 = ₦314,704\n  Year 5: ₦314,704 × 1.12 = ₦352,469\n\nOutput:\n  After 5 years, Amara's investment grows to approximately ₦352,469.\n  This is more than the ₦500,000 she needs, so she decides to invest a smaller amount, ₦150,000, which will grow to about ₦264,352—enough for the course with some left for materials.\n\nKey Insight:\n  Compound interest earns \"interest on interest,\" making your money grow faster over time. The longer Amara leaves her money invested, the less she needs to save upfront to reach her goal.",
+        "example_id": "ex_9fbdc6bdaf584c0a",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity compound interest example featuring Amara, a nurse in Lagos, Nigeria, making financial decisions related to her healthcare career. Use a step-by-step breakdown with clearly labeled inputs and outputs. Ground the example in a realistic scenario like saving for medical equipment, education, or retirement planning that would be relevant to a healthcare professional in Nigeria.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.43,
+      "CA": 5.0,
+      "PC": 4.96,
+      "DA": 4.91
+    },
+    "composite": 4.869,
+    "reasoning": "The example effectively personalizes the scenario by including Amara's profession, location, and specific financial goal, aligning well with her profile and learning style. The complexity level is appropriate, providing a clear step-by-step calculation that balances detail with accessibility. The factual content about compound interest and the formula used are correct, and the explanation of interest-on-interest is accurate and memorable. The structure is logical, with a clear flow from scenario to calculation to insight, making it pedagogically sound. The analogy of saving for a certification course is relevant and appropriate for a learner with a professional background, making the framing domain-appropriate.\n\nPF_SCORE: 5\nCC_SCORE: 5\nCA_SCORE: 5\nPC_SCORE: 5\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity compound interest example featuring Amara, a nurse in Lagos, Nigeria, making financial decisions related to her healthcare career. Use a step-by-step breakdown with clearly labeled inputs and outputs. Ground the example in a realistic scenario like saving for medical equipment, education, or retirement planning that would be relevant to a healthcare professional in Nigeria.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The context instruction explicitly incorporates Amara's role as a nurse in Lagos, Nigeria, and emphasizes grounding the example in her professional domain with real-world scenarios relevant to her location, aligning with her domain and complexity preferences. It also specifies a step-by-step breakdown with labeled inputs and outputs, directly reflecting her preferred learning style and complexity level, thus synthesizing her stored patterns into a concrete directive.\n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-15T20:53:46.085399"
+}

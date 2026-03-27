@@ -1,0 +1,81 @@
+{
+  "key": "t1__eval_user_02__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_02",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_b463e7d99dcf4479",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nDefinition:\nCognitive biases are mental shortcuts that shape our judgments, sometimes leading us to systematic errors.\n\nFocus bias:\nAvailability bias (availability heuristic) — we estimate how likely something is based on how easily we remember related examples.\n\nScenario (Amara, Nurse in Lagos):\nDuring the rainy season, malaria is common in Lagos. Amara recently treated several malaria cases, so those memories are vivid.\n\nNumeric snapshot:\nLast 7 fever cases this week: 5 malaria, 2 dengue.\n\nWhat happens:\nBecause of the recent run of malaria, Amara tends to think “malaria first” for a new fever case and may order malaria tests or start antimalarial treatment before checking for other possibilities.\n\nKey Insight:\nAvailability bias tilts judgment toward what’s freshest in memory; pairing quick impressions with objective tests/base rates helps avoid misdiagnosis.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nDefinition:\nCognitive biases are mental shortcuts that shape our judgments, sometimes leading us to systematic errors.\n\nFocus bias:\nAvailability bias (availability heuristic) — we estimate how likely something is based on how easily we remember related examples.\n\nScenario (Amara, Nurse in Lagos):\nDuring the rainy season, malaria is common in Lagos. Amara recently treated several malaria cases, so those memories are vivid.\n\nNumeric snapshot:\nLast 7 fever cases this week: 5 malaria, 2 dengue.\n\nWhat happens:\nBecause of the recent run of malaria, Amara tends to think “malaria first” for a new fever case and may order malaria tests or start antimalarial treatment before checking for other possibilities.\n\nKey Insight:\nAvailability bias tilts judgment toward what’s freshest in memory; pairing quick impressions with objective tests/base rates helps avoid misdiagnosis.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nDefinition:\nCognitive biases are mental shortcuts that shape our judgments, sometimes leading us to systematic errors.\n\nFocus bias:\nAvailability bias (availability heuristic) — we estimate how likely something is based on how easily we remember related examples.\n\nScenario (Amara, Nurse in Lagos):\nDuring the rainy season, malaria is common in Lagos. Amara recently treated several malaria cases, so those memories are vivid.\n\nNumeric snapshot:\nLast 7 fever cases this week: 5 malaria, 2 dengue.\n\nWhat happens:\nBecause of the recent run of malaria, Amara tends to think “malaria first” for a new fever case and may order malaria tests or start antimalarial treatment before checking for other possibilities.\n\nKey Insight:\nAvailability bias tilts judgment toward what’s freshest in memory; pairing quick impressions with objective tests/base rates helps avoid misdiagnosis.",
+        "example_id": "ex_14c784523d024249",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, profession, and location, making it relevant to Amara's context. The complexity level appears appropriate for a professional with a medium complexity preference, as it combines basic definitions with a real-world scenario without excessive technical detail. The factual content about availability bias is accurate and well-explained, aligning with core cognitive psychology principles. The structure is clear, with a logical flow from definition to scenario, and the key insight is memorable and explicitly linked to the example. The analogy used (malaria in Lagos) is highly domain-appropriate, connecting cognitive bias to a familiar health context in Nigeria, which enhances understanding.\n\nPF_SCORE: 3  \nCC_SCORE: 5  \nCA_SCORE: 5  \nPC_SCORE: 5  \nDA_SCORE: 5  \n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.6,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:56:33.818317"
+}

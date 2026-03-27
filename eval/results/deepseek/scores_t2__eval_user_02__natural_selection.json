@@ -1,0 +1,80 @@
+{
+  "key": "t2__eval_user_02__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "thread_id": "thread_31b6296c32d448c5",
+    "initial_example": "**Concept:** Natural Selection\n\n**Example:**\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. This is a real-world example of natural selection in action.\n\nImagine a population of bacteria causing an infection in a patient. Within this population, there is natural variation—a few individual bacteria happen to have a genetic mutation that makes them slightly resistant to a common antibiotic.\n\n**Process:**\n1.  **Selection Pressure Applied:** The patient is treated with the antibiotic.\n2.  **Differential Survival:** The antibiotic kills most of the non-resistant bacteria. The few resistant bacteria survive because the drug is ineffective against them.\n3.  **Reproduction & Inheritance:** The surviving resistant bacteria reproduce, passing the resistance gene to their offspring.\n4.  **Population Change:** Over time and with repeated antibiotic use, the bacterial population in the ward shifts from being mostly susceptible to being mostly resistant. The drug no longer works.\n\n**Key Terms:**\n*   **Variation:** Genetic differences (like the resistance mutation) already exist in the population.\n*   **Selection Pressure:** The antibiotic treatment creates an environment where resistance is a huge advantage.\n*   **Adaptation:** The population becomes better suited (adapted) to survive in an antibiotic-filled environment.\n\n**Key Insight:**\nNatural selection isn't about individuals \"trying\" to adapt. It's a process where environmental pressures (like antibiotics) act on existing random variation, causing populations of organisms to change over generations. The \"fittest\" are simply those whose traits best match their current environment.",
+    "final_example": "**Concept:** Natural Selection\n\n**Example:**\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. This is a real-world example of natural selection in action.\n\nImagine a population of bacteria causing an infection in a patient. Within this population, there is natural variation—a few individual bacteria happen to have a genetic mutation that makes them slightly resistant to a common antibiotic.\n\n**Process:**\n1.  **Selection Pressure Applied:** The patient is treated with the antibiotic.\n2.  **Differential Survival:** The antibiotic kills most of the non-resistant bacteria. The few resistant bacteria survive because the drug is ineffective against them.\n3.  **Reproduction & Inheritance:** The surviving resistant bacteria reproduce, passing the resistance gene to their offspring.\n4.  **Population Change:** Over time and with repeated antibiotic use, the bacterial population in the ward shifts from being mostly susceptible to being mostly resistant. The drug no longer works.\n\n**Key Terms:**\n*   **Variation:** Genetic differences (like the resistance mutation) already exist in the population.\n*   **Selection Pressure:** The antibiotic treatment creates an environment where resistance is a huge advantage.\n*   **Adaptation:** The population becomes better suited (adapted) to survive in an antibiotic-filled environment.\n\n**Key Insight:**\nNatural selection isn't about individuals \"trying\" to adapt. It's a process where environmental pressures (like antibiotics) act on existing random variation, causing populations of organisms to change over generations. The \"fittest\" are simply those whose traits best match their current environment.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Natural Selection\n\n**Example:**\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. This is a real-world example of natural selection in action.\n\nImagine a population of bacteria causing an infection in a patient. Within this population, there is natural variation—a few individual bacteria happen to have a genetic mutation that makes them slightly resistant to a common antibiotic.\n\n**Process:**\n1.  **Selection Pressure Applied:** The patient is treated with the antibiotic.\n2.  **Differential Survival:** The antibiotic kills most of the non-resistant bacteria. The few resistant bacteria survive because the drug is ineffective against them.\n3.  **Reproduction & Inheritance:** The surviving resistant bacteria reproduce, passing the resistance gene to their offspring.\n4.  **Population Change:** Over time and with repeated antibiotic use, the bacterial population in the ward shifts from being mostly susceptible to being mostly resistant. The drug no longer works.\n\n**Key Terms:**\n*   **Variation:** Genetic differences (like the resistance mutation) already exist in the population.\n*   **Selection Pressure:** The antibiotic treatment creates an environment where resistance is a huge advantage.\n*   **Adaptation:** The population becomes better suited (adapted) to survive in an antibiotic-filled environment.\n\n**Key Insight:**\nNatural selection isn't about individuals \"trying\" to adapt. It's a process where environmental pressures (like antibiotics) act on existing random variation, causing populations of organisms to change over generations. The \"fittest\" are simply those whose traits best match their current environment.",
+        "example_id": "ex_5fe993b0a05d45a1",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.35,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.98
+    },
+    "composite": 4.868,
+    "reasoning": "The example effectively personalizes the content by directly referencing Amara's role as a nurse in Lagos, Nigeria, and uses a real-world healthcare scenario relevant to her profession, aligning well with her learning style. The complexity level appears appropriate, providing a clear yet detailed explanation suitable for a professional with medium understanding, without oversimplifying or overcomplicating. The scientific accuracy of the description of natural selection and antibiotic resistance is correct, with proper terminology and process flow. The structure is logical, with a step-by-step process and key terms that facilitate understanding, making it pedagogically sound. The analogies and framing are appropriate for the biological topic, using a healthcare setting that aligns with her profession, thus domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example is well tailored, integrating her role, location, and learning style effectively.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation strikes a good balance, detailed enough for a professional but not overly technical.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content is accurate, correctly describing natural selection and antibiotic resistance.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The step-by-step process and key terms are clearly structured, aiding understanding.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The healthcare setting and terminology are appropriate for the biological topic, with relevant framing.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 4,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.8,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example is clearly tailored to the user's profile, using Amara's name and profession as a nurse in Lagos, and matching her example-based learning style by providing a relatable scenario from her field of work. This integration of personal details into the educational content demonstrates a high level of personalization.\n\nPF_SCORE: 5\n\nFor the axis of Complexity Calibration (CC), the example seems to match the medium complexity level requested by the user, as it explains the concept of natural selection in a detailed but not overly complex manner, using a real-world scenario that a professional like Amara can understand. The language and depth of explanation are appropriate for someone with a professional education level.\n\nCC_SCORE: 5\n\nFor the axis of Conceptual Accuracy (CA), the factual and scientific content of the example is correct, accurately describing the process of natural selection through the lens of antibiotic resistance in bacteria, which is a well-documented and scientifically supported phenomenon. The key terms and concepts, such as variation, selection pressure, and adaptation, are accurately defined and applied.\n\nCA_SCORE: 5\n\nFor the axis of Pedagogical Clarity (PC), the example is structured for learning, with a clear and logical flow from introducing the concept, explaining the process through a step-by-step example, defining key terms, and concluding with a key insight that summarizes the main point of natural selection. The use of a relatable scenario makes the concept more accessible and memorable.\n\nPC_SCORE: 5\n\nFor the axis of Domain Appropriateness (DA), the example is perfectly appropriate for the domain of natural selection, using a biological scenario (antibiotic resistance in bacteria) that is directly relevant to the concept being taught, and avoiding any off-domain elements such as coding snippets. The framing and analogies used are suitable for the topic.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:39:58.595492"
+}

@@ -1,0 +1,152 @@
+{
+  "key": "t3__eval_user_04__cognitive_bias",
+  "tier": "t3",
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_d9c5aab65ed14596",
+    "initial_example": "Concept: Cognitive Bias — Confirmation Bias in Software Testing\n\nExample:\nKenji, a Software Engineer in Tokyo, is debugging a flaky login flow. He strongly believes the bug is in the authentication module (Module A) because the failing case matches his initial pattern. He reviews test results with a focus on evidence that supports A and glosses over clues pointing to other modules (e.g., session management or input sanitization). For illustration, consider a simple probabilistic view:\n\n- Prior belief: P(A) = 0.60 (there’s a 60% chance the bug is in authentication)\n- Test data likelihoods: P(data|A) = 0.90, P(data|not A) = 0.30\n- Unbiased Bayes update: P(A|data) = (0.90 × 0.60) / [(0.90 × 0.60) + (0.30 × 0.40)] ≈ 0.818\n- Due to confirmation bias, Kenji might interpret the data as stronger support for A and conclude P(A|data) ≈ 0.92–0.95, effectively discounting plausible alternative causes.\n\nPrompts for you to answer:\n- Name the bias at play in Kenji’s reasoning.\n- Explain how this bias can affect debugging decisions and testing/planning, connecting it to probabilistic thinking.\n- Propose a concrete mitigation that keeps probability estimates honest (one clear, actionable step).\n- Optionally, show a brief probability check illustrating how you would adjust beliefs if you actively consider a rival hypothesis.\n\nKey Insight:\nConfirmation bias distorts probability updates by overweighting evidence that confirms an initial guess; explicit consideration of alternative hypotheses and probabilistic checks helps keep debugging plans balanced.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\n- Bias name: Confirmation Bias in bug triage\n- Scenario: You’re debugging a flaky login bug in a web app. The team focuses on authentication Module A as the root cause, while evidence pointing to session management or input sanitization is given less weight. You’re asked to name the bias, explain its impact on debugging/planning, and propose a concrete mitigation, using probabilistic thinking.\n\n- How it shows up in debugging/planning:\n  - Evidence from logs and unit tests is interpreted to confirm that Module A is failing.\n  - Data from session management, token handling, or input sanitization is downplayed or ignored.\n  - The triage plan prioritizes fixes in Module A first, potentially delaying or missing root causes in other subsystems.\n  - Domain terms: unit tests, mocks, logs, CI/CD pipelines used to push a fix in Module A without fully testing cross-module interactions.\n\n- Bayesian-style update (domain-specific numbers):\n  - Prior belief: P(A) = 0.60 (probability the authentication module is the root cause)\n  - Data point D1: login logs show “Invalid credentials” during the flaky login\n    - P(D1|A) = 0.80\n    - P(D1|not A) = 0.40\n    - P(A|D1) = [0.80 × 0.60] / [0.80 × 0.60 + 0.40 × 0.40] = 0.48 / 0.64 = 0.75\n  - New data point D2: a token expiry event observed in session management logs\n    - P(D2|A) = 0.30\n    - P(D2|not A) = 0.80\n    - P(not A|D1) = 1 − 0.75 = 0.25\n    - P(A|D1, D2) = [0.30 × 0.75] / [0.30 × 0.75 + 0.80 × 0.25] = 0.225 / 0.425 ≈ 0.53\n  - Interpretation: After including D2, the belief that Module A is the root cause drops from 0.75 to about 0.53, showing how new cross-module evidence should update beliefs. If the team ignores D2 due to confirmation bias, they’d keep relying on the higher D1-driven belief.\n\n- Concrete mitigation (medium difficulty, code-domain focus):\n  - Use a cross-module triage checklist: require consideration of at least two subsystems (e.g., authentication, session management, input handling) before committing to a fix in Module A.\n  - Structured evidence log: collect and compare logs from authentication, session management, and input sanitization; annotate each data point with a Bayesian likelihood estimate P(data|A) and P(data|not A).\n  - Use mocks and integration tests: add or run tests that exercise the full login flow across modules in CI/CD, ensuring that issues in one subsystem surface in test reports.\n  - Post-triage review: after every bug, perform a bias check to name dominant biases and confirm that alternative root causes were fairly weighed.\n  - Habitual practice: explicitly pause to re-calculate P(A|data) when new evidence arrives, rather than sticking with the initial anchor.\n\n- Key Insight:\n  - Confirmation bias can inflate belief in Module A’s fault; formal probabilistic updating and cross-subsystem checks help keep debugging honest.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias — Confirmation Bias in Software Testing\n\nExample:\nKenji, a Software Engineer in Tokyo, is debugging a flaky login flow. He strongly believes the bug is in the authentication module (Module A) because the failing case matches his initial pattern. He reviews test results with a focus on evidence that supports A and glosses over clues pointing to other modules (e.g., session management or input sanitization). For illustration, consider a simple probabilistic view:\n\n- Prior belief: P(A) = 0.60 (there’s a 60% chance the bug is in authentication)\n- Test data likelihoods: P(data|A) = 0.90, P(data|not A) = 0.30\n- Unbiased Bayes update: P(A|data) = (0.90 × 0.60) / [(0.90 × 0.60) + (0.30 × 0.40)] ≈ 0.818\n- Due to confirmation bias, Kenji might interpret the data as stronger support for A and conclude P(A|data) ≈ 0.92–0.95, effectively discounting plausible alternative causes.\n\nPrompts for you to answer:\n- Name the bias at play in Kenji’s reasoning.\n- Explain how this bias can affect debugging decisions and testing/planning, connecting it to probabilistic thinking.\n- Propose a concrete mitigation that keeps probability estimates honest (one clear, actionable step).\n- Optionally, show a brief probability check illustrating how you would adjust beliefs if you actively consider a rival hypothesis.\n\nKey Insight:\nConfirmation bias distorts probability updates by overweighting evidence that confirms an initial guess; explicit consideration of alternative hypotheses and probabilistic checks helps keep debugging plans balanced.",
+        "example_id": "ex_b5d513461c814c2f",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\n- Bias name: Confirmation Bias in bug triage\n- Scenario: You’re debugging a flaky login bug in a web app. The team focuses on authentication Module A as the root cause, while evidence pointing to session management or input sanitization is given less weight. You’re asked to name the bias, explain its impact on debugging/planning, and propose a concrete mitigation, using probabilistic thinking.\n\n- How it shows up in debugging/planning:\n  - Evidence from logs and unit tests is interpreted to confirm that Module A is failing.\n  - Data from session management, token handling, or input sanitization is downplayed or ignored.\n  - The triage plan prioritizes fixes in Module A first, potentially delaying or missing root causes in other subsystems.\n  - Domain terms: unit tests, mocks, logs, CI/CD pipelines used to push a fix in Module A without fully testing cross-module interactions.\n\n- Bayesian-style update (domain-specific numbers):\n  - Prior belief: P(A) = 0.60 (probability the authentication module is the root cause)\n  - Data point D1: login logs show “Invalid credentials” during the flaky login\n    - P(D1|A) = 0.80\n    - P(D1|not A) = 0.40\n    - P(A|D1) = [0.80 × 0.60] / [0.80 × 0.60 + 0.40 × 0.40] = 0.48 / 0.64 = 0.75\n  - New data point D2: a token expiry event observed in session management logs\n    - P(D2|A) = 0.30\n    - P(D2|not A) = 0.80\n    - P(not A|D1) = 1 − 0.75 = 0.25\n    - P(A|D1, D2) = [0.30 × 0.75] / [0.30 × 0.75 + 0.80 × 0.25] = 0.225 / 0.425 ≈ 0.53\n  - Interpretation: After including D2, the belief that Module A is the root cause drops from 0.75 to about 0.53, showing how new cross-module evidence should update beliefs. If the team ignores D2 due to confirmation bias, they’d keep relying on the higher D1-driven belief.\n\n- Concrete mitigation (medium difficulty, code-domain focus):\n  - Use a cross-module triage checklist: require consideration of at least two subsystems (e.g., authentication, session management, input handling) before committing to a fix in Module A.\n  - Structured evidence log: collect and compare logs from authentication, session management, and input sanitization; annotate each data point with a Bayesian likelihood estimate P(data|A) and P(data|not A).\n  - Use mocks and integration tests: add or run tests that exercise the full login flow across modules in CI/CD, ensuring that issues in one subsystem surface in test reports.\n  - Post-triage review: after every bug, perform a bias check to name dominant biases and confirm that alternative root causes were fairly weighed.\n  - Habitual practice: explicitly pause to re-calculate P(A|data) when new evidence arrives, rather than sticking with the initial anchor.\n\n- Key Insight:\n  - Confirmation bias can inflate belief in Module A’s fault; formal probabilistic updating and cross-subsystem checks help keep debugging honest.",
+        "example_id": "ex_8e3a19a3bdcc4c17"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ],
+    "context_instruction": "Focus the next example on a single, clearly identifiable cognitive bias in a software-testing context (e.g., anchoring or confirmation bias). Require the student to name the bias, explain its impact on debugging/planning, and propose a concrete mitigation. Keep it concrete, succinct, and tie the bias to probabilistic thinking.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by including Kenji's name, profession, and location, and it aligns with his learning style by providing a concrete, example-based explanation. The depth of the probabilistic reasoning and discussion of confirmation bias appears appropriate for a medium complexity level, with clear, accurate content about Bayesian updates and bias effects. The structure is logical, with a clear explanation of the bias, its impact, and mitigation, making it pedagogically sound. The analogy and framing are within the domain of software testing and debugging, which is suitable for the topic and the user's background.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Kenji's role as a software engineer in Tokyo, and the scenario is specific to debugging, which is relevant to his profession. The probabilistic explanation is domain-specific and matches his learning style.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The probabilistic calculations and discussion of confirmation bias are appropriate for an undergraduate-level engineer, providing enough depth without being overly technical. It matches the medium complexity level specified.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The explanation of confirmation bias, Bayesian updating, and how bias affects reasoning is factually correct and well-articulated. The probabilistic formulas are accurate and relevant.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear narrative, step-by-step explanation, and explicit connection between bias and probabilistic reasoning. It effectively bridges concept and example, making it memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of debugging a software bug and Bayesian reasoning is highly appropriate for the topic of cognitive bias in a software engineering context. The framing and vocabulary are domain-specific and suitable.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.7,
+    "reasoning": "The example demonstrates a clear understanding of cognitive bias, specifically confirmation bias, within a technical debugging context, which aligns well with the user's background as a software engineer. It incorporates domain-specific terminology, probabilistic reasoning, and practical mitigation strategies, reflecting a medium complexity level suitable for an undergraduate learner. The structure is logical, with a well-defined concept, scenario, and solution, making it pedagogically effective. The analogies and framing are appropriate for the domain of software debugging, and the example is sufficiently personalized through the scenario involving bug triage, a common activity for the user profile.\n\nPF: The example uses the user's profession (software engineer) and domain-specific terms like logs, modules, and CI/CD pipelines, making it well-tailored. It also employs a debugging scenario relevant to the user's work.  \nAXIS_SCORE: 5\n\nCC: The complexity matches the user's medium level, involving probabilistic reasoning and practical mitigation steps without being overly technical or simplistic. It balances depth with accessibility.  \nAXIS_SCORE: 4\n\nCA: The factual content about confirmation bias, Bayesian updating, and debugging practices is accurate and well-explained, with no evident errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear flow from concept to scenario to mitigation, and the key insight is memorable. It effectively bridges theory and practice.  \nAXIS_SCORE: 5\n\nDA: The framing is entirely within the software engineering domain, using appropriate terminology and analogies, making it domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example effectively shifts from a generic scenario to a domain-specific context involving bug triage in software debugging, directly addressing the user's critique about relevance. It incorporates technical terms and probabilistic reasoning pertinent to software engineering, making the example more relatable for the user’s field. Therefore, it successfully resolves the core concern.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Focus the next example on a single, clearly identifiable cognitive bias in a software-testing context (e.g., anchoring or confirmation bias). Require the student to name the bias, explain its impact on debugging/planning, and propose a concrete mitigation. Keep it concrete, succinct, and tie the bias to probabilistic thinking.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.7,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T01:19:22.153103"
+}

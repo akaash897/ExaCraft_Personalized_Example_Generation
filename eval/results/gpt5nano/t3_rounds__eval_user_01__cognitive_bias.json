@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Cognitive Bias\n\nExample:\nAvailability heuristic in school-life probability judgments\n\n- Scenario: In Lena's Berlin classroom, the teacher asks: “What is the probability that a randomly chosen student in our year has ever broken a bone since starting secondary school?”\n\n- Anecdotes (concrete count): \n  - Mira says: “My sister broke her wrist last winter after a skateboarding fall.”\n  - Kai adds: “My cousin broke a leg playing football last year.”\n\n- Initial judgment (medium-depth, one numeric example): \n  Lena estimates about 6 of the 20 students have broken a bone, i.e., 30%.\n\n- Base-rate information (one numeric example): \n  School records show that in the past year, 1 out of 20 students had a broken bone, i.e., 5%.\n\n- Follow-up task (your prompt to the student): \n  Re-estimate the probability using the base-rate information (5% or 1 in 20). Compare this to your initial 30% and explain how the vivid anecdotes influenced your guess.\n\nKey Insight:\nThe availability heuristic makes vivid examples feel more common than they are; base-rate data helps correct that intuition.",
+      "example_id": "ex_a615951a61f64613",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Availability Heuristic (a cognitive bias where people judge how likely something is based on how easily examples come to mind)\n\nExample:\n- Scenario:\n  In Lena's six-student health class in Berlin, we guess how likely it is that someone will injure a bone during gym this week.\n\n- Anecdotes:\n  • Ana says: Mira broke her arm in PE last month.\n  • Jon says: Lukas sprained his ankle last week.\n\n- Initial judgment:\n  My guess right now: 20% (about 1 in 5).\n\n- Base-rate information (tiny) and quick math:\n  Base-rate: in the past year, there was 1 bone injury in our class of 6.\n  Tiny math: 1 injury / (6 students × 52 weeks) ≈ 0.32% per student per week; for the whole class, about 1.9% per week.\n\n- Re-estimation prompt:\n  Using this base-rate, re-estimate the chance this week. Is your new estimate higher or lower than 20%, and by roughly how much? Write your new percentage.\n\nKey Insight:\n  Availability bias makes vivid stories feel more common than they are. Checking the base-rate lowers overconfident estimates and ties them to actual frequency.",
+      "example_id": "ex_4a735ecf84ad4151"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Availability Heuristic\n\nExample:\nLena is in a Berlin classroom. Her teacher asks students to estimate the likelihood of a pop quiz in math this week. Lena relies on what she can recall easily: the most recent quiz experiences.\n\nWhat Lena remembers (small data set):\n- Last 3 math classes: quizzes in 2 of them (2/3 ≈ 66%)\n- Prior 4 classes: no quizzes\n\nBase-rate check (contextual baseline):\n- Historically, quizzes happen about once every 3 weeks. In a typical 15-week term, that’s about 5 quizzes total, so the base rate for any given week is roughly 5/15 ≈ 33%.\n\nLena’s estimate:\n- Because the recent quizzes are vividly remembered, Lena guesses there’s about a 60% chance of a quiz this week.\n\nWhat this shows:\n- Recent, memorable events are shaping her probability judgment more than the long-run base rate.\n\nKey Insight:\n  Availability heuristic: vivid, recent examples bias probability judgments away from the actual base rate. Quick prompt: name the bias and suggest one corrective approach.",
+      "example_id": "ex_5e090150c40741f3"
+    }
+  ],
+  "timestamp": "2026-03-16T00:39:44.423695"
+}

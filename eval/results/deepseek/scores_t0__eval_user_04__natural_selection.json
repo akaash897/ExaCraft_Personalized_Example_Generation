@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_04__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_6eb7e9e305c645ac",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in fur color\u2014some are brown, some are gray, and a few are white.\n\nEnvironment and Pressure:\n- The field is mostly brown dirt and green grass.\n- A new predator, like a hawk, moves into the area. The hawk hunts by sight.\n\nSelection Process:\n1. **Variation:** Rabbits are born with different fur colors due to random genetic differences.\n2. **Competition:** All rabbits compete to survive and reproduce, but the hawk eats some.\n3. **Selection:** Brown rabbits blend in with the dirt and grass, making them harder for the hawk to spot. White rabbits stand out clearly and are caught more often.\n4. **Reproduction:** More brown rabbits survive to adulthood and have babies. Many of these babies inherit brown fur from their parents.\n\nOver several generations:\n- The number of brown rabbits increases.\n- The number of white rabbits decreases.\n- The overall population becomes better camouflaged in its environment.\n\nKey Insight:\nNatural selection is not random\u2014it filters existing variations based on survival and reproduction in a specific environment. Traits that help individuals survive and reproduce become more common over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in fur color\u2014some are brown, some are gray, and a few are white.\n\nEnvironment and Pressure:\n- The field is mostly brown dirt and green grass.\n- A new predator, like a hawk, moves into the area. The hawk hunts by sight.\n\nSelection Process:\n1. **Variation:** Rabbits are born with different fur colors due to random genetic differences.\n2. **Competition:** All rabbits compete to survive and reproduce, but the hawk eats some.\n3. **Selection:** Brown rabbits blend in with the dirt and grass, making them harder for the hawk to spot. White rabbits stand out clearly and are caught more often.\n4. **Reproduction:** More brown rabbits survive to adulthood and have babies. Many of these babies inherit brown fur from their parents.\n\nOver several generations:\n- The number of brown rabbits increases.\n- The number of white rabbits decreases.\n- The overall population becomes better camouflaged in its environment.\n\nKey Insight:\nNatural selection is not random\u2014it filters existing variations based on survival and reproduction in a specific environment. Traits that help individuals survive and reproduce become more common over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in fur color\u2014some are brown, some are gray, and a few are white.\n\nEnvironment and Pressure:\n- The field is mostly brown dirt and green grass.\n- A new predator, like a hawk, moves into the area. The hawk hunts by sight.\n\nSelection Process:\n1. **Variation:** Rabbits are born with different fur colors due to random genetic differences.\n2. **Competition:** All rabbits compete to survive and reproduce, but the hawk eats some.\n3. **Selection:** Brown rabbits blend in with the dirt and grass, making them harder for the hawk to spot. White rabbits stand out clearly and are caught more often.\n4. **Reproduction:** More brown rabbits survive to adulthood and have babies. Many of these babies inherit brown fur from their parents.\n\nOver several generations:\n- The number of brown rabbits increases.\n- The number of white rabbits decreases.\n- The overall population becomes better camouflaged in its environment.\n\nKey Insight:\nNatural selection is not random\u2014it filters existing variations based on survival and reproduction in a specific environment. Traits that help individuals survive and reproduce become more common over time.",
+        "example_id": "ex_03b633f0220648d6",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.73,
+      "CC": 4.2,
+      "CA": 5.0,
+      "PC": 4.66,
+      "DA": 4.67
+    },
+    "composite": 4.285,
+    "reasoning": "The example effectively personalizes the concept by using a familiar animal (rabbit) and environmental context, which can resonate with an engineer's analytical mindset, though it doesn't explicitly incorporate the user's specific profile details like location or profession. The complexity level appears appropriate for an undergraduate, with clear steps and a straightforward explanation of natural selection, avoiding overly technical language. The scientific content is accurate, correctly describing the process of natural selection without errors. The structure is logical, with a clear progression from variation to population change, and the key insight is explicitly highlighted, aiding learning. The analogy of camouflage and predator-prey dynamics is appropriate for the biological topic, aligning well with domain expectations.\n\n[PF] The example uses a generic animal and environment but does not incorporate specific profile details like location or profession, and the analogy is standard for biology. It is somewhat personalized but not strongly tailored.  \nAXIS_SCORE: 4\n\n[CC] The depth of explanation matches a medium complexity level, with clear steps and accessible language suitable for an undergraduate learner. Slightly more technical details could be added for higher complexity, but overall it is well-calibrated.  \nAXIS_SCORE: 4\n\n[CA] The scientific content is accurate, correctly describing variation, selection, and population change without errors. The core principles of natural selection are well presented.  \nAXIS_SCORE: 5\n\n[PC] The example is well-structured, with a logical flow from initial variation to population change, and the key insight is explicitly stated, making it pedagogically effective.  \nAXIS_SCORE: 5\n\n[DA] The analogy of camouflage and predator-prey interactions is highly appropriate for the biological topic, aligning well with the domain and providing a concrete framing for the concept.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:10:19.903473"
+}

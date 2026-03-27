@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_06",
+  "topic": "Plate Tectonics",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 2,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": null,
+        "actual": "regenerate",
+        "excluded": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Plate Tectonics\n\nExample:\nInputs:\n  - Boundary type: Divergent boundary (plates move apart)\n  - Rate of motion: 2 cm/year apart\nContext for Amara: Amara, a nurse in Lagos, Nigeria, reads about a hypothetical coastal region near her city where crust is slowly pulling apart. This example uses that scenario to show how plate motion shapes land and drives earthquakes, volcanism, and mountain-building processes.\n\nStep 1 — What the boundary is doing:\n  - The lithospheric slabs are like moving puzzle pieces sliding away from each other.\n  - Mantle material wells up to fill the gap, causing magma to rise toward the surface.\n\nStep 2 — Deformation features you’d expect:\n  - Rift valley forms along the boundary as the crust thins and drops locally (a long, low valley).\n  - Normal faults develop on either side of the rift, creating step-like blocks.\n  - If magma reaches the surface, fissure eruptions or small volcanoes can create volcanic bars or cones along the rift.\n  - Over long timescales, the rift can widen into a new ocean basin if spreading continues.\n\nStep 3 — Hazards that could arise:\n  - Earthquakes along the growing normal faults (often moderate in size, but can be felt over wide areas).\n  - Volcanic activity along the boundary (lava flows, ash plumes, and related hazards).\n  - Ground deformation and creation of new lakes or basins in the rift valley.\n  - If part of the boundary propagates offshore, local tsunami risk could emerge near coastal areas.\n\nKey features linked to plate motion:\n  - Lithospheric puzzle pieces moving apart create space for magma to rise and form landforms.\n  - Surface features (rift valleys, fault blocks, volcanoes) and hazards (earthquakes, eruptions) directly reflect the direction and rate of plate movement.\n\nKey Insight:\n  How fast and in what direction plates move determines where landforms rise or sink and which hazards (quakes, volcanoes) a region might face as the crust continually reshapes itself.",
+      "example_id": "ex_c91b097a3adf4e90",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Plate Tectonics\n\nExample:\nInputs:\n  - Boundary type: Divergent\n  - Rate of motion: 2 cm/year\n\nStep 1 — Boundary motion explained with a hospital-equipment analogy\n  - Think of the lithospheric plates as surgical clamps or sterile drapes in a Lagos hospital. The clamps pull apart gently but steadily, creating space between pieces of rock just as they would separate two surfaces during a procedure.\n  - Mantle upwelling is like an infusion delivering contrast or magma toward the surface, gradually pushing the crust apart from below.\n  - With a Divergent boundary at 2 cm/year, the gap between the plates widens over time, similar to how a controlled traction keeps two edges moving apart during a repair.\n  - Numeric reminder: at 2 cm/year, over 100,000 years the separation adds up to about 2 kilometers of new crust.\n\nStep 2 — Deformation features and hazards (technical, tied to the hospital analogy)\n  - Rift Valley forms as the crust thins and stretches; normal faults accommodate the extension as the edges slide downward relative to the center.\n  - Magma ascent via dikes injecting basaltic material creates intrusions that may partly solidify into volcanic or monogenetic vents along the rift.\n  - Seismicity and volcanism arise along the boundary because the rock is being fractured and magma moves through it, similar to imaging revealing fractures and misalignments in a patient’s imaging study.\n  - Mantle convection acts as the deep engine: hot mantle upwelling pushes rock upward and outward, while slab pull from farther-out, cooler regions adds gravity-driven force that helps keep the plates moving apart.\n  - Lagos hospital analogy tie-in: imaging (X-ray/CT) reveals fractures and misalignments; implants (temporary or permanent) guide alignment—here, faults and magma pathways guide surface features and volcanic episodes.\n  - Numeric example: at 2 cm/year divergence, after 100,000 years the offset would be about 2 kilometers, illustrating how slow, steady motion builds substantial surface change over long timescales.\n\nKey Insight:\n  Divergent plate motion slowly stretches crust and opens pathways for magma; this creates Rift Valleys, normal faults, and potential volcanic activity, with deep mantle processes acting as the engine behind the slow, steady widening.",
+      "example_id": "ex_85bf4f6af1e348c7"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-16T11:57:09.058129"
+}

@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_08",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.5,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "accept",
+        "actual": "regenerate",
+        "correct": false
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Cognitive Bias\n\nExample:\nInputs:\n  - Kenji, Software Engineer in Tokyo, Japan.\n  - Context: optimizing a user-profile API’s caching to balance latency and data freshness.\n  - Initial setup: cache TTL (time-to-live) is 300 seconds (5 minutes) since launch.\n  - Observed change: user profiles update on average every 20 seconds; during peak hours, freshness is increasingly important.\n  - Objective: keep latency low while ensuring data stays reasonably fresh.\n\nBias Cue:\n  - Anchoring bias: sticking to the initial TTL of 300 seconds despite evidence that data changes rapidly.\n\nReasoning:\n  - Step 1 — Identify the anchor: 300 seconds is the default TTL carried forward from the launch baseline.\n  - Step 2 — Compare outcomes with an alternative TTL:\n    - Test TTL 300s (anchored): about 20% of responses return stale data during peak times; average latency remains around 90 ms due to caching; origin calls occur on about 10% of requests.\n    - Test TTL 60s (unanchored): stale reads drop to ~5%, but origin calls rise and average latency increases to ~140 ms; cache misses climb to ~35%.\n  - Step 3 — Interpret: the anchored 300s TTL reduces latency but sacrifices freshness; the data suggests that a fixed TTL is no longer optimal given frequent updates.\n\nOutput:\n  - Practical takeaway: adopt a dynamic caching strategy that adapts TTL to current data-change rates (e.g., shorter TTL during heavy update periods, longer TTL when data is more stable), and consider techniques like stale-while-revalidate to blend freshness with latency.\n  - Actionable plan: run a controlled A/B test comparing dynamic TTL settings against the anchored baseline; monitor freshness (stale read rate) and latency trade-offs to find a balanced policy.\n\nReflection question:\n  - Kenji, which part of your TTL decision was most influenced by the 300-second anchor, and how could you design a quick experiment to test a freshness-focused TTL in your Tokyo deployment?\n\nKey Insight:\n  Anchoring to an initial value can blind you to changing conditions; in caching, aligning TTL with actual data-change rates helps balance freshness and latency.",
+      "example_id": "ex_1d57becf843f4be9",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "Hmm.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Cognitive Bias\n\nExample:\nInputs:\n  - Kenji, Software Engineer in Tokyo, Japan\n  - Domain: caching a user-profile API\n  - Initial TTL anchor: 300 seconds (5 minutes)\n  - TTL candidates to test: 60, 300, 600 seconds\n  - Traffic split for the test: ~1/3 each\n  - Latency tolerance: around 100–150 ms for cache hits\n  - Staleness tolerance: up to a few seconds for profile updates\n  - Goal: balance fresh data with fast responses in a real Tokyo-scale app\n\nBias Cue:\n  - Anchoring bias: the team defaults to 300 seconds because it’s the familiar “standard” TTL from recent sprints, and all adjustments are interpreted relative to that anchor rather than exploring the full range objectively.\n\nReasoning:\n  - Anchoring can narrow the exploration of alternatives, making the team interpret metrics in light of the anchor rather than the data alone.\n  - By forcing a small-A/B/C test across 60, 300, and 600 seconds, we can reveal whether the anchor leads to suboptimal latency, hit rate, or staleness, and whether a different TTL yields a better overall balance.\n\nOutput:\n  A) Test plan and decision logic\n  - A/B/C testing plan:\n    - Cohort A: TTL = 60 seconds\n    - Cohort B: TTL = 300 seconds (anchor)\n    - Cohort C: TTL = 600 seconds\n    - Run for a representative period (e.g., 24–48 hours) with consistent traffic distribution\n    - Collect metrics: latency (ms), cache hit rate (%), and average staleness (s)\n  - Decision approach:\n    - Compare metrics across cohorts to identify the TTL with best trade-off for Kenji’s Tokyo workload (data freshness vs. latency).\n\n  B) Minimal code-like snippet (TTL decision logic)\n     INITIAL_TTL = 300\n     CANDIDATES = [60, 300, 600]\n\n     def ttl_decision(latency_ms, staleness_s):\n         # Anchoring bias awareness: start from the anchor, but allow data to override\n         ttl = INITIAL_TTL\n         if latency_ms > 150 or staleness_s > 5:\n             if latency_ms > 250:\n                 ttl = 60\n             else:\n                 ttl = 600\n         return ttl\n\n  C) Results snapshot (synthetic example)\n     TTL (s) | Latency (ms) | Cache Hit Rate (%) | Avg Staleness (s)\n     ---------------------------------------------------------------\n     60       | 75            | 78                 | 12\n     300      | 92            | 82                 | 6\n     600      | 108           | 85                 | 3\n\n  D) Key Insight:\n     Anchoring to the initial 300s TTL can mask better-performing options; in this scenario, shorter TTLs reduce staleness but raise latency modestly, while longer TTLs improve hit rate and reduce staleness but increase latency. A balanced exploration across TTLs reveals where the real trade-offs lie for Kenji’s Tokyo-based workload.\n\n  E) Reflection Question:\n     What specific steps would you take in a real deployment to prevent anchoring bias from distorting TTL evaluation for a Tokyo-scale user-profile cache (e.g., blinding, preregistered hypotheses, or blind metric analysis), and how would you decide the final TTL?",
+      "example_id": "ex_b1ab0d8936fd4cae"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-16T12:17:23.566268"
+}

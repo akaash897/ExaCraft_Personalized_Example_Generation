@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_06__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_337c8bece758448f",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. Bacteria are constantly exposed to antibiotics, but some have random genetic variations that make them slightly more resistant.\n\nImagine a patient with a bacterial infection is treated with a common antibiotic. Most bacteria die, but a few have a mutation that allows them to survive the drug. These survivors reproduce, passing the resistance trait to their offspring. Over time, the resistant bacteria become the dominant population in the patient, making the infection harder to treat.\n\nKey Terms:\n- Variation: Random differences in bacteria (e.g., some have thicker cell walls).\n- Selection Pressure: The antibiotic kills non-resistant bacteria.\n- Reproduction: Surviving bacteria multiply, spreading the resistance trait.\n\nKey Insight:\nNatural selection isn't a guided process; it's the result of random variations being tested by environmental pressures. The traits that help survival and reproduction become more common over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. Bacteria are constantly exposed to antibiotics, but some have random genetic variations that make them slightly more resistant.\n\nImagine a patient with a bacterial infection is treated with a common antibiotic. Most bacteria die, but a few have a mutation that allows them to survive the drug. These survivors reproduce, passing the resistance trait to their offspring. Over time, the resistant bacteria become the dominant population in the patient, making the infection harder to treat.\n\nKey Terms:\n- Variation: Random differences in bacteria (e.g., some have thicker cell walls).\n- Selection Pressure: The antibiotic kills non-resistant bacteria.\n- Reproduction: Surviving bacteria multiply, spreading the resistance trait.\n\nKey Insight:\nNatural selection isn't a guided process; it's the result of random variations being tested by environmental pressures. The traits that help survival and reproduction become more common over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. Bacteria are constantly exposed to antibiotics, but some have random genetic variations that make them slightly more resistant.\n\nImagine a patient with a bacterial infection is treated with a common antibiotic. Most bacteria die, but a few have a mutation that allows them to survive the drug. These survivors reproduce, passing the resistance trait to their offspring. Over time, the resistant bacteria become the dominant population in the patient, making the infection harder to treat.\n\nKey Terms:\n- Variation: Random differences in bacteria (e.g., some have thicker cell walls).\n- Selection Pressure: The antibiotic kills non-resistant bacteria.\n- Reproduction: Surviving bacteria multiply, spreading the resistance trait.\n\nKey Insight:\nNatural selection isn't a guided process; it's the result of random variations being tested by environmental pressures. The traits that help survival and reproduction become more common over generations.",
+        "example_id": "ex_ddf9f9e073b14752",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.76,
+      "CC": 4.46,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.98
+    },
+    "composite": 4.842,
+    "reasoning": "The example effectively personalizes the content by addressing Amara's role as a nurse in Lagos, Nigeria, and uses a healthcare-related scenario relevant to her profession, aligning well with her learning style. The complexity level appears appropriate, explaining key concepts with sufficient detail suitable for a professional learner. The scientific accuracy of the explanation is sound, correctly describing the process of natural selection in bacteria. The structure is clear, with a logical flow from scenario to key terms and insight, facilitating understanding. The analogy of bacteria developing resistance in a hospital setting is highly domain-appropriate, using familiar medical concepts to illustrate natural selection.\n\nPF_SCORE: 5\nThe example is highly personalized, integrating Amara's profession, location, and learning style effectively.  \nCC_SCORE: 4\nThe depth and language are suitable for a professional with medium complexity, though it could be slightly more detailed for maximum calibration.  \nCA_SCORE: 5\nThe scientific content is accurate and correctly describes the process of natural selection in bacteria.  \nPC_SCORE: 5\nThe example is well-structured, with a clear progression from scenario to key terms and insight, making it pedagogically effective.  \nDA_SCORE: 5\nThe analogy is perfectly domain-appropriate, using a healthcare setting to explain biological evolution.\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:29:29.294815"
+}

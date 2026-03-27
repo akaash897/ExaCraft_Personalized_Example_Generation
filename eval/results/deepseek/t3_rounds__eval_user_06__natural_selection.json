@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 1,
+    "total": 2,
+    "accuracy": 0.5,
+    "details": [
+      {
+        "round": 1,
+        "expected": null,
+        "actual": "regenerate",
+        "excluded": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Natural Selection\n\nExample:\nAmara, as a nurse in Lagos, you see how antibiotic resistance develops in a hospital. Imagine a population of bacteria causing an infection. Within that population, there is natural genetic variation\u2014some bacteria are slightly more resistant to a particular antibiotic than others.\n\nWhen a patient is treated with that antibiotic:\n- The antibiotic kills the majority of the bacteria, which are susceptible.\n- The few bacteria with higher resistance survive because the antibiotic dose isn't strong enough to kill them.\n- These survivors reproduce, passing their resistance genes to the next generation.\n- Over time and with repeated antibiotic exposure, the resistant bacteria become the dominant strain in the population.\n\nThis is natural selection in action: the environment (presence of the antibiotic) selects for the trait (resistance) that increases survival and reproduction in that specific context.\n\nKey Insight:\nNatural selection is not random; it's the non-random survival and reproduction of individuals with traits better suited to their current environment, leading to evolutionary change in populations over generations.",
+      "example_id": "ex_8e96ee97da984e5f",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nAmara, as a nurse in Lagos, you've likely seen patients who don't respond to common antibiotics like amoxicillin. This is a perfect, real-time example of natural selection in action. Let's break it down simply, then look at the biology behind it.\n\nSimple Overview: The Bacteria vs. Antibiotic Story\nImagine a patient in your ward has a bacterial infection. You administer an antibiotic. In the initial population of bacteria, most are susceptible and die. However, by random chance, a few bacteria are naturally resistant. These survivors reproduce. The next time this antibiotic is used, the bacterial population is mostly made of these resistant descendants. The drug no longer works. The antibiotic didn't *create* the resistance; it *selected for* the bacteria that already had it.\n\nTechnical Details: The Biological Mechanisms\n1.  **Genetic Variation:** In any bacterial colony, small differences exist in their DNA due to random **mutations** (copying errors during cell division). One mutation might slightly alter the shape of a protein on the bacterial cell wall.\n2.  **Selection Pressure:** The antibiotic is the **selection pressure**. It creates an environment where the standard bacterial form (with the normal protein) is at a severe disadvantage\u2014it dies. The variant form (with the altered protein that the drug cannot bind to) has a survival advantage.\n3.  **Inheritance:** Resistance is **heritable**. The surviving resistant bacterium passes the mutated gene for the altered protein to all its offspring when it divides. This is inheritance at the molecular level\u2014the DNA sequence is copied.\n4.  **Differential Reproduction:** Over several infection cycles and antibiotic courses, the resistant bacteria reproduce more successfully than susceptible ones. They become the common type in the population.\n\nReal-World Implications for Nursing Practice in Lagos\nThis process explains the rise of \"superbugs\" like MRSA. In a clinical setting, it underscores why protocols are critical:\n*   **Completing Courses:** Stopping antibiotics early kills only the weakest bacteria, leaving the stronger, partially resistant ones to multiply.\n*   **Preventing Spread:** Strict hygiene prevents transmitting these selected resistant strains to other vulnerable patients.\n*   **Antibiotic Stewardship:** Using the right antibiotic for the confirmed infection avoids applying unnecessary selection pressure that could breed resistance to broader drugs.\n\nKey Insight:\nNatural selection is not a random process; it is the *non-random* survival of random variations. The antibiotic provides the test; the genetic variation in the bacteria provides the answers. The ones with the right answer (resistance) pass it on, fundamentally changing the population.",
+      "example_id": "ex_45d129880e144660"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nConsider the evolution of blood pressure monitors in Lagos hospitals. These devices have undergone significant changes over decades, driven by the same principles that govern biological evolution: variation, selection pressure, and differential survival of features.\n\nVariation:\nInitially, manual sphygmomanometers (with mercury columns) were common. Over time, different designs emerged:\n- Digital monitors with automatic readings\n- Portable wrist monitors\n- Integrated devices with multiple vital sign measurements\n\nSelection Pressure:\nIn Lagos hospital environments, several pressures favored certain designs:\n- Accuracy and reliability under high patient volume\n- Durability in tropical climates with humidity and dust\n- Ease of use for nurses during rapid assessments\n- Cost-effectiveness for resource-limited settings\n\nDifferential Survival and Reproduction:\nFeatures that performed better under these pressures became more prevalent:\n- Digital monitors replaced mercury ones because they were faster, safer (no mercury risk), and easier to read\n- Portable designs proliferated for mobile clinics and emergency situations\n- Integrated devices survived in ICU settings where multi-parameter monitoring was critical\n\nStep-by-step Evolution:\n1. Manual monitors (initial population) \u2192 variation introduced through new technologies\n2. Hospital needs (selection pressure) \u2192 tested each design's fitness\n3. Successful features (digital accuracy, portability) \u2192 reproduced through manufacturing\n4. Less successful features (bulky designs, high maintenance) \u2192 phased out\n\nKey Insight:\nNatural selection in medical equipment mirrors biological evolution: designs that best meet environmental pressures survive and become dominant, while ineffective designs disappear, leading to continuous improvement over generations of devices.",
+      "example_id": "ex_64ae82c480eb4308"
+    }
+  ],
+  "timestamp": "2026-03-15T22:18:10.929198"
+}

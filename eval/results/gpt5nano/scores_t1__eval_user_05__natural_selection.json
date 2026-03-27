@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_05__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_3037c9f64c4e4e80",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nLena, a student in Berlin, visits a city park and studies a population of beetles living on tree bark. The beetles come in two color forms: light-green and dark-green. Overnight, the bark on the trees becomes darker due to rain and moss, making camouflage for the dark-green beetles better.\n\nInitial setup:\n- Population size: 100 beetles\n- Light-green: 70\n- Dark-green: 30\n\nSurvival (fitness) during this period:\n- Light-green survival rate: 0.20\n- Dark-green survival rate: 0.60\n\nSurvivors:\n- Light-green survivors: 70 × 0.20 = 14\n- Dark-green survivors: 30 × 0.60 = 18\n- Total survivors: 32\n\nNext generation (assuming each survivor produces roughly the same number of offspring, so the next generation reflects the survivors’ mix):\n- Light-green share: 14/32 ≈ 0.4375\n- Dark-green share: 18/32 ≈ 0.5625\n\nInterpretation:\nThe proportion of dark-green beetles rises from 30% to about 56% in the next generation, illustrating natural selection favoring the trait that improves camouflage under the darker bark.\n\nKey Insight:\nNatural selection shifts trait frequencies toward individuals with higher survival in the current environment; when camouflage improves for a color form, that form becomes more common over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nLena, a student in Berlin, visits a city park and studies a population of beetles living on tree bark. The beetles come in two color forms: light-green and dark-green. Overnight, the bark on the trees becomes darker due to rain and moss, making camouflage for the dark-green beetles better.\n\nInitial setup:\n- Population size: 100 beetles\n- Light-green: 70\n- Dark-green: 30\n\nSurvival (fitness) during this period:\n- Light-green survival rate: 0.20\n- Dark-green survival rate: 0.60\n\nSurvivors:\n- Light-green survivors: 70 × 0.20 = 14\n- Dark-green survivors: 30 × 0.60 = 18\n- Total survivors: 32\n\nNext generation (assuming each survivor produces roughly the same number of offspring, so the next generation reflects the survivors’ mix):\n- Light-green share: 14/32 ≈ 0.4375\n- Dark-green share: 18/32 ≈ 0.5625\n\nInterpretation:\nThe proportion of dark-green beetles rises from 30% to about 56% in the next generation, illustrating natural selection favoring the trait that improves camouflage under the darker bark.\n\nKey Insight:\nNatural selection shifts trait frequencies toward individuals with higher survival in the current environment; when camouflage improves for a color form, that form becomes more common over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nLena, a student in Berlin, visits a city park and studies a population of beetles living on tree bark. The beetles come in two color forms: light-green and dark-green. Overnight, the bark on the trees becomes darker due to rain and moss, making camouflage for the dark-green beetles better.\n\nInitial setup:\n- Population size: 100 beetles\n- Light-green: 70\n- Dark-green: 30\n\nSurvival (fitness) during this period:\n- Light-green survival rate: 0.20\n- Dark-green survival rate: 0.60\n\nSurvivors:\n- Light-green survivors: 70 × 0.20 = 14\n- Dark-green survivors: 30 × 0.60 = 18\n- Total survivors: 32\n\nNext generation (assuming each survivor produces roughly the same number of offspring, so the next generation reflects the survivors’ mix):\n- Light-green share: 14/32 ≈ 0.4375\n- Dark-green share: 18/32 ≈ 0.5625\n\nInterpretation:\nThe proportion of dark-green beetles rises from 30% to about 56% in the next generation, illustrating natural selection favoring the trait that improves camouflage under the darker bark.\n\nKey Insight:\nNatural selection shifts trait frequencies toward individuals with higher survival in the current environment; when camouflage improves for a color form, that form becomes more common over generations.",
+        "example_id": "ex_b217bffc9a93468e",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.2,
+    "reasoning": "The example effectively personalizes the scenario by including Lena's name and location, and it aligns with her learning style by using a concrete, real-world example involving a park in Berlin. The complexity level is appropriate for high school students, with clear explanations and basic calculations, but it avoids overly technical language or advanced formulas. The scientific content is accurate, correctly describing how natural selection operates through differential survival and trait frequency changes. The structure is logical, starting from the setup, through survival rates, to the interpretation, making it easy to follow and understand. The analogy of beetle camouflage on tree bark is well-suited to the biological domain, using familiar concepts and imagery.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Lena's name and location, and the scenario is relatable and concrete, matching her profile and learning style.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes basic population genetics concepts, survival rates, and proportional calculations appropriate for a high school level, with no overly complex math or jargon.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The core principles of natural selection, survival, and trait frequency change are correctly described, with no factual errors.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear setup, step-by-step calculations, and an explicit interpretation, facilitating understanding. The key insight is highlighted effectively.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of beetle camouflage on tree bark is highly appropriate for biology, and the framing aligns well with the topic of natural selection.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 4,
+        "CA": 5,
+        "PC": 3,
+        "DA": 5
+      },
+      "composite": 4.0,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example demonstrates a clear attempt to personalize the content by incorporating the user's name (\"Lena\") and location (\"Berlin\"), which aligns with the user's profile. However, it does not fully integrate other aspects of the user's profile, such as their profession or cultural background, into the example, thus it doesn't achieve the highest level of personalization.\n\nPF_SCORE: 4\n\nRegarding Complexity Calibration (CC), the example seems to match the medium complexity level requested by the user, as it involves basic mathematical calculations and a straightforward scenario that is easy to follow, making it suitable for a high school student. The language and depth of the explanation are also appropriate for the user's education level.\n\nCC_SCORE: 5\n\nFor Conceptual Accuracy (CA), the example accurately illustrates the concept of natural selection, correctly applying the principles of survival rates and trait frequencies over generations. The mathematical calculations provided are also correct and support the interpretation of how natural selection favors certain traits.\n\nCA_SCORE: 5\n\nIn terms of Pedagogical Clarity (PC), the example is well-structured, starting with a clear setup, followed by the application of natural selection principles, and ending with an interpretation and key insight that explicitly bridges the concept to the example. The flow is smooth, and the takeaway is memorable, making it an effective teaching example.\n\nPC_SCORE: 5\n\nConsidering Domain Appropriateness (DA), the example is perfectly suited for the topic of natural selection, using an analogy (beetles and tree bark) that is commonly used in biology to illustrate evolutionary principles. The vocabulary and framing are entirely appropriate for the field of biology.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:01:25.545973"
+}

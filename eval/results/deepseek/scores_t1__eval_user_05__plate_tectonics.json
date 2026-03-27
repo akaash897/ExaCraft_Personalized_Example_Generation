@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_05__plate_tectonics",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_40bffbc1da7840fe",
+    "initial_example": "**Concept:** Plate Tectonics\n\n**Example:**\nLena, imagine the Earth's surface is not a single, solid shell, but is broken into giant, moving pieces, like a cracked eggshell floating on a simmering pot of thick soup. These pieces are called tectonic plates.\n\nThe city of Berlin sits on the Eurasian Plate. Far away, the boundary where the Eurasian Plate meets the African Plate runs through the Mediterranean Sea. At this boundary, the plates are slowly colliding.\n\n**The Process:**\n1.  **Convection Currents:** Deep in the Earth's mantle, heat from the core causes the hot, semi-solid rock to rise, cool, and sink in a circular motion. These convection currents act like a slow conveyor belt, dragging the plates above them.\n2.  **Plate Boundaries:** Where plates meet, three main things can happen:\n    *   **Divergent:** Plates pull apart (e.g., at the Mid-Atlantic Ridge). Magma rises, creating new crust.\n    *   **Convergent:** Plates collide (e.g., the Himalayas). One plate may be forced under another (subduction), or they crumple upwards.\n    *   **Transform:** Plates slide past each other horizontally (e.g., the San Andreas Fault).\n\n**A Numeric Scale:**\nThese movements are slow but powerful. The plates move at speeds comparable to the rate your fingernails grow—about 2 to 5 centimeters per year. Over millions of years, this movement has shaped the continents, built mountain ranges, and causes earthquakes and volcanic activity at the boundaries.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains why continents drift, where mountains and oceans form, and why earthquakes and volcanoes are concentrated in specific belts around the globe. The ground beneath our feet is in constant, imperceptibly slow motion.",
+    "final_example": "**Concept:** Plate Tectonics\n\n**Example:**\nLena, imagine the Earth's surface is not a single, solid shell, but is broken into giant, moving pieces, like a cracked eggshell floating on a simmering pot of thick soup. These pieces are called tectonic plates.\n\nThe city of Berlin sits on the Eurasian Plate. Far away, the boundary where the Eurasian Plate meets the African Plate runs through the Mediterranean Sea. At this boundary, the plates are slowly colliding.\n\n**The Process:**\n1.  **Convection Currents:** Deep in the Earth's mantle, heat from the core causes the hot, semi-solid rock to rise, cool, and sink in a circular motion. These convection currents act like a slow conveyor belt, dragging the plates above them.\n2.  **Plate Boundaries:** Where plates meet, three main things can happen:\n    *   **Divergent:** Plates pull apart (e.g., at the Mid-Atlantic Ridge). Magma rises, creating new crust.\n    *   **Convergent:** Plates collide (e.g., the Himalayas). One plate may be forced under another (subduction), or they crumple upwards.\n    *   **Transform:** Plates slide past each other horizontally (e.g., the San Andreas Fault).\n\n**A Numeric Scale:**\nThese movements are slow but powerful. The plates move at speeds comparable to the rate your fingernails grow—about 2 to 5 centimeters per year. Over millions of years, this movement has shaped the continents, built mountain ranges, and causes earthquakes and volcanic activity at the boundaries.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains why continents drift, where mountains and oceans form, and why earthquakes and volcanoes are concentrated in specific belts around the globe. The ground beneath our feet is in constant, imperceptibly slow motion.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Plate Tectonics\n\n**Example:**\nLena, imagine the Earth's surface is not a single, solid shell, but is broken into giant, moving pieces, like a cracked eggshell floating on a simmering pot of thick soup. These pieces are called tectonic plates.\n\nThe city of Berlin sits on the Eurasian Plate. Far away, the boundary where the Eurasian Plate meets the African Plate runs through the Mediterranean Sea. At this boundary, the plates are slowly colliding.\n\n**The Process:**\n1.  **Convection Currents:** Deep in the Earth's mantle, heat from the core causes the hot, semi-solid rock to rise, cool, and sink in a circular motion. These convection currents act like a slow conveyor belt, dragging the plates above them.\n2.  **Plate Boundaries:** Where plates meet, three main things can happen:\n    *   **Divergent:** Plates pull apart (e.g., at the Mid-Atlantic Ridge). Magma rises, creating new crust.\n    *   **Convergent:** Plates collide (e.g., the Himalayas). One plate may be forced under another (subduction), or they crumple upwards.\n    *   **Transform:** Plates slide past each other horizontally (e.g., the San Andreas Fault).\n\n**A Numeric Scale:**\nThese movements are slow but powerful. The plates move at speeds comparable to the rate your fingernails grow—about 2 to 5 centimeters per year. Over millions of years, this movement has shaped the continents, built mountain ranges, and causes earthquakes and volcanic activity at the boundaries.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains why continents drift, where mountains and oceans form, and why earthquakes and volcanoes are concentrated in specific belts around the globe. The ground beneath our feet is in constant, imperceptibly slow motion.",
+        "example_id": "ex_a91aa5c524a64f8b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.76,
+      "CC": 4.34,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.88
+    },
+    "composite": 4.808,
+    "reasoning": "The example effectively incorporates the user's name and location, making it personalized, and uses an example-based learning style with relatable analogies. The complexity level appears appropriate for high school students, with clear explanations of processes and boundaries. The scientific content is accurate, covering key concepts of plate tectonics, convection currents, and boundary types, with correct terminology and examples. The structure is logical, starting from a conceptual analogy, moving through processes, and ending with key insights, which supports pedagogical clarity. The analogies, such as the eggshell and simmering soup, are appropriate for the domain, helping to visualize geological processes without straying into unrelated fields.\n\n**PERSONALIZATION FIDELITY:** The example mentions Lena by name and her location in Berlin, aligning well with her profile, and uses an example-based approach suited to her learning style.  \nAXIS_SCORE: 5\n\n**COMPLEXITY CALIBRATION:** The explanation balances scientific detail with accessible language, suitable for a high school student with medium complexity needs, avoiding overly technical jargon.  \nAXIS_SCORE: 4\n\n**CONCEPTUAL ACCURACY:** All scientific facts, such as plate boundaries, convection currents, and plate movements, are correct and well-explained.  \nAXIS_SCORE: 5\n\n**PEDAGOGICAL CLARITY:** The example is well-structured, with a clear flow from analogy to process description to key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n**DOMAIN APPROPRIATENESS:** The analogies and framing are entirely appropriate for geology and earth science, effectively illustrating the concepts without domain mismatch.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 4,
+        "CA": 3,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.2,
+      "reasoning": "For the axis of PERSONALIZATION FIDELITY (PF), the example demonstrates a clear attempt to personalize the content by addressing the user, Lena, and referencing her location, Berlin, in the context of plate tectonics. However, it does not fully integrate other aspects of her profile, such as her role as a student or her learning style, beyond the basic inclusion of her name and location. \nPF_SCORE: 4\n\nFor COMPLEXITY CALIBRATION (CC), the example seems to match the medium complexity level requested by providing a detailed explanation of plate tectonics, including convection currents, types of plate boundaries, and the consequences of these processes, without overwhelming the reader with overly technical or advanced concepts. The use of analogies, such as the cracked eggshell and the simmering pot of soup, helps to make the concepts more accessible. \nCC_SCORE: 5\n\nRegarding CONCEPTUAL ACCURACY (CA), the example accurately describes the fundamental concepts of plate tectonics, including the movement of tectonic plates, the processes at plate boundaries, and the resulting geological phenomena like earthquakes and volcanic activity. The explanation of convection currents and the formation of new crust or mountain building processes is also correct. \nCA_SCORE: 5\n\nFor PEDAGOGICAL CLARITY (PC), the example is well-structured, starting with an engaging introduction, followed by a clear explanation of the process, and concluding with a key insight that ties the concepts together. The use of numbered steps, bullet points, and analogies enhances the clarity and makes the content more digestible for a learner. \nPC_SCORE: 5\n\nConsidering DOMAIN APPROPRIATENESS (DA), the example is perfectly suited for the topic of plate tectonics, using relevant analogies and vocabulary that are specific to the field of geology. The explanations and concepts presented are directly related to the domain, making the example highly appropriate for teaching and learning about plate tectonics. \nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:29:17.000563"
+}

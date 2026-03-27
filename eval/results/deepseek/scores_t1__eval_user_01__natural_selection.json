@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_01__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_dba77c8911f74f78",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine Lena is observing a population of sparrows in Berlin. Over several generations, she notices that the average beak size of the sparrows has changed.\n\nInitial Condition:\n- Sparrows eat seeds from local plants.\n- A harsh winter kills many plants, leaving only larger, tougher seeds available.\n\nProcess:\n1. Variation: Some sparrows naturally have slightly larger, stronger beaks.\n2. Selection: Sparrows with larger beaks can crack and eat the tough seeds. Sparrows with smaller beaks struggle and often starve.\n3. Reproduction: The surviving sparrows (with larger beaks) have more offspring.\n4. Inheritance: Their offspring tend to also have larger beaks.\n\nResult:\nAfter a few generations, the average beak size in the sparrow population increases because the trait (larger beak) that was advantageous in the changed environment became more common.\n\nKey Insight:\nNatural selection is not random; it filters existing variations based on survival and reproduction in a specific environment, causing populations to adapt over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine Lena is observing a population of sparrows in Berlin. Over several generations, she notices that the average beak size of the sparrows has changed.\n\nInitial Condition:\n- Sparrows eat seeds from local plants.\n- A harsh winter kills many plants, leaving only larger, tougher seeds available.\n\nProcess:\n1. Variation: Some sparrows naturally have slightly larger, stronger beaks.\n2. Selection: Sparrows with larger beaks can crack and eat the tough seeds. Sparrows with smaller beaks struggle and often starve.\n3. Reproduction: The surviving sparrows (with larger beaks) have more offspring.\n4. Inheritance: Their offspring tend to also have larger beaks.\n\nResult:\nAfter a few generations, the average beak size in the sparrow population increases because the trait (larger beak) that was advantageous in the changed environment became more common.\n\nKey Insight:\nNatural selection is not random; it filters existing variations based on survival and reproduction in a specific environment, causing populations to adapt over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine Lena is observing a population of sparrows in Berlin. Over several generations, she notices that the average beak size of the sparrows has changed.\n\nInitial Condition:\n- Sparrows eat seeds from local plants.\n- A harsh winter kills many plants, leaving only larger, tougher seeds available.\n\nProcess:\n1. Variation: Some sparrows naturally have slightly larger, stronger beaks.\n2. Selection: Sparrows with larger beaks can crack and eat the tough seeds. Sparrows with smaller beaks struggle and often starve.\n3. Reproduction: The surviving sparrows (with larger beaks) have more offspring.\n4. Inheritance: Their offspring tend to also have larger beaks.\n\nResult:\nAfter a few generations, the average beak size in the sparrow population increases because the trait (larger beak) that was advantageous in the changed environment became more common.\n\nKey Insight:\nNatural selection is not random; it filters existing variations based on survival and reproduction in a specific environment, causing populations to adapt over time.",
+        "example_id": "ex_743a3022dc224385",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.31,
+      "CA": 4.96,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.85,
+    "reasoning": "The example effectively personalizes the scenario by including Lena's name and location, making it more engaging for the user. The complexity level appears appropriate for a high school student, with clear steps and straightforward language. The scientific content about natural selection is accurate and well-explained, covering key concepts without errors. The structure is logical, with a clear progression from initial conditions to the key insight, facilitating understanding. The analogy of sparrows and beak size is appropriate for biology and aligns well with the domain, using familiar concepts to illustrate natural selection.\n\nPF: The example uses Lena's name and location, and the analogy of sparrows in Berlin is relevant and personalized, matching the user's profile and learning style.  \nAXIS_SCORE: 5\n\nCC: The explanation is at a medium complexity level, suitable for a high school student, with clear steps and accessible language. It balances detail without being overly technical.  \nAXIS_SCORE: 4\n\nCA: The scientific facts about natural selection are correct, including variation, selection, reproduction, inheritance, and adaptation. There are no inaccuracies.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from initial conditions to the key insight, making it easy to follow and understand. The explicit bridge between concept and example enhances pedagogical clarity.  \nAXIS_SCORE: 5\n\nDA: The analogy of sparrows and beak size is appropriate for biology, and the framing is entirely within the domain of natural selection, making it domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:16:56.138113"
+}

@@ -1,0 +1,87 @@
+{
+  "provider": "deepseek",
+  "ablation": {
+    "t0": {
+      "PF": 2.73,
+      "CC": 4.13,
+      "CA": 4.94,
+      "PC": 4.82,
+      "DA": 4.39,
+      "composite": 4.257,
+      "n": 32
+    },
+    "t1": {
+      "PF": 4.8,
+      "CC": 4.35,
+      "CA": 4.99,
+      "PC": 4.93,
+      "DA": 4.95,
+      "composite": 4.809,
+      "n": 32
+    },
+    "t2": {
+      "PF": 4.93,
+      "CC": 4.43,
+      "CA": 5.0,
+      "PC": 4.95,
+      "DA": 4.99,
+      "composite": 4.859,
+      "n": 32
+    },
+    "t3": {
+      "PF": 4.99,
+      "CC": 4.47,
+      "CA": 5.0,
+      "PC": 4.99,
+      "DA": 5.0,
+      "composite": 4.888,
+      "n": 32
+    }
+  },
+  "fcr": {
+    "easy": {
+      "n": 28,
+      "fcr_3": 1.0,
+      "fcr_4": 1.0,
+      "mean": 4.536
+    },
+    "adversarial": {
+      "n": 13,
+      "fcr_3": 1.0,
+      "fcr_4": 0.692,
+      "mean": 3.923
+    },
+    "overall": {
+      "n": 41,
+      "fcr_3": 1.0,
+      "fcr_4": 0.902,
+      "mean": 4.341
+    }
+  },
+  "lur": {
+    "easy": {
+      "n": 16,
+      "triggered": 16,
+      "lur": 1.0
+    },
+    "adversarial": {
+      "n": 16,
+      "triggered": 14,
+      "lur": 0.875
+    },
+    "overall": {
+      "n": 32,
+      "triggered": 30,
+      "lur": 0.938
+    }
+  },
+  "ppu": {
+    "n_warm_t3": 16,
+    "n_warm_t1": 16,
+    "n_cold_t3": 16,
+    "warm_t3_pf": 5.0,
+    "warm_t1_pf": 4.688,
+    "cold_t3_pf": 4.979,
+    "delta_pf": 0.312
+  }
+}

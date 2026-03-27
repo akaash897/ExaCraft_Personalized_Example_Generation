@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_02__cognitive_bias",
+  "tier": "t3",
+  "user_id": "eval_user_02",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_5e86c422bb7c4704",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nConcept in nursing practice:\nAmara, a nurse in Lagos, Nigeria, faces a feverish patient in triage. In a bustling clinic, malaria is a common culprit, so Amara feels a strong pull to label the case as malaria quickly.\n\nVignette:\n- Patient: 28-year-old with fever 38.6°C, heart rate 112 bpm, respiratory rate 22/min, BP 105/68 mmHg, O2 saturation 96% on room air.\n- Context: Lives in Lagos; recently spent time outdoors. Malaria is a familiar diagnosis in this region.\n- Initial judgment (anchoring): Malaria with mild dehydration.\n- Tests ordered upfront: malaria rapid diagnostic test (RDT), basic bloodwork, and dehydration assessment.\n\nStudent prompts and reasoning task:\n- Identify the bias at work in Amara’s quick labeling of the case.\n- List evidence that supports the initial malaria judgment.\n- List evidence that argues against the malaria-only explanation.\n- Outline a concrete debiasing step (e.g., a decision checklist or a plan to seek a second opinion) to reduce premature narrowing of the diagnosis.\n\nEvidence for the initial judgment:\n- Fever is present in both malaria and other febrile illnesses common in the area.\n- Malaria is a prevalent illness in the region, making it a plausible first guess.\n- Patient is moderately tachycardic, which can occur with fever and dehydration.\n\nEvidence against the initial judgment:\n- Blood pressure is stable (not hypotensive), and oxygenation is good, which makes severe sepsis less likely at this moment.\n- Malaria rapid test is not yet result-confirmed; other causes of fever (bacterial infection, dengue, typhoid) are plausible.\n- WBC count mildly elevated and lactate level not markedly high; these data do not uniquely confirm malaria and could fit other febrile syndromes.\n- No focal signs yet described (e.g., chest findings, abdominal tenderness) that would point to a single definitive cause.\n\nDebiasing step (concrete plan):\n- Step 1: Pause and generate at least two alternate hypotheses beyond malaria (e.g., bacterial sepsis, viral febrile illness, dengue, typhoid).\n- Step 2: Use a brief diagnostic checklist for febrile illness in this setting (red flags, dehydration status, organ perfusion, and danger signs).\n- Step 3: Seek a second opinion or quick nurse-led “case review” with a senior colleague before initiating targeted therapy.\n- Step 4: Gather key data before concluding (complete malaria test result, CBC, CRP/ procalcitonin if available, lactate, blood cultures, chest X-ray if indicated).\n- Step 5: Document reasoning and revise the plan promptly if new data contradicts the initial label.\n\nKey Insight:\nAnchoring on a familiar diagnosis can narrow thinking too soon; structured checks and a second opinion help ensure multiple plausible explanations are considered before acting.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nSetting\nIn a busy ED triage bay in Lagos, Amara, a frontline triage nurse, reviews a feverish patient.\n\nVignette\n- Patient: 24-year-old man with fever 38.6 C, vomiting, and mild diffuse abdominal pain for about half a day.\n- Vitals: Temperature 38.6 C, HR 112 bpm, BP 110/70 mmHg, RR 18/min, SpO2 97% on room air.\n- History: No recent travel; no known chronic illnesses; consumes street-food occasionally; exam limited due to distress.\n- Initial impression (anchoring bias): Gastroenteritis suspected based on current symptoms and recent dietary exposure.\n\nBias to name\n- Anchoring bias.\n\nAlternative diagnoses to consider (differential-first reasoning)\n- Acute appendicitis or evolving intra-abdominal process\n- Early sepsis from another source (e.g., urinary tract infection)\n- Dengue or other viral hemorrhagic fevers (regional considerations)\n- Typhoid fever or other enteric infections\n- Viral gastroenteritis with dehydration\n\nMitigation steps (how to counter the bias)\n- Differential-first reasoning: explicitly list at least 3 alternative diagnoses before closing the decision.\n- Checklists and red flags: dehydration signs, persistent fever >38.5 C, progressive abdominal tenderness, inability to tolerate fluids, altered mental status.\n- Second-look confirmation: re-assess vitals and abdominal exam after 15–30 minutes; review any initial lab data and update the differential accordingly.\n\nEquipment analogies to illustrate thinking and data quality\n- Thermometer as data quality check: re-check the fever with a second reading or thermometer to confirm fever is real and not an equipment error.\n- Pulse oximeter as bias detector: confirm oxygenation and perfusion; if readings are normal but the patient looks unwell, broaden the assessment rather than anchor on a single value.\n- ECG monitor as bias detector: monitor heart rate patterns for signals that could reveal pain, fever-related tachycardia, or an occult cardiac issue that would shift the concern beyond a GI focus.\n- IV drip as pace of data gathering: use IV access to administer fluids if dehydration worsens and to obtain timely labs; avoid rushing to a single conclusion—gather data at a steady, methodical pace.\n\nRisk of misdiagnosis due to bias\n- If Amara fixes on gastroenteritis too early, she may miss early appendicitis, early sepsis from another source, or a tropical illness with atypical presentation. Delayed recognition can lead to progression to peritonitis or septic deterioration.\n\nLearning point\n- Cognitive bias can lock in an initial diagnosis; counter it with a broad differential, explicit checklists, and deliberate re-evaluation using objective data (the thermometer, pulse oximeter, ECG, and IV-access-enabled labs and monitoring).\n\nKey Insight:\n  Start broad, verify with data, and re-check early impressions against new information to prevent misdiagnosis from bias.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nConcept in nursing practice:\nAmara, a nurse in Lagos, Nigeria, faces a feverish patient in triage. In a bustling clinic, malaria is a common culprit, so Amara feels a strong pull to label the case as malaria quickly.\n\nVignette:\n- Patient: 28-year-old with fever 38.6°C, heart rate 112 bpm, respiratory rate 22/min, BP 105/68 mmHg, O2 saturation 96% on room air.\n- Context: Lives in Lagos; recently spent time outdoors. Malaria is a familiar diagnosis in this region.\n- Initial judgment (anchoring): Malaria with mild dehydration.\n- Tests ordered upfront: malaria rapid diagnostic test (RDT), basic bloodwork, and dehydration assessment.\n\nStudent prompts and reasoning task:\n- Identify the bias at work in Amara’s quick labeling of the case.\n- List evidence that supports the initial malaria judgment.\n- List evidence that argues against the malaria-only explanation.\n- Outline a concrete debiasing step (e.g., a decision checklist or a plan to seek a second opinion) to reduce premature narrowing of the diagnosis.\n\nEvidence for the initial judgment:\n- Fever is present in both malaria and other febrile illnesses common in the area.\n- Malaria is a prevalent illness in the region, making it a plausible first guess.\n- Patient is moderately tachycardic, which can occur with fever and dehydration.\n\nEvidence against the initial judgment:\n- Blood pressure is stable (not hypotensive), and oxygenation is good, which makes severe sepsis less likely at this moment.\n- Malaria rapid test is not yet result-confirmed; other causes of fever (bacterial infection, dengue, typhoid) are plausible.\n- WBC count mildly elevated and lactate level not markedly high; these data do not uniquely confirm malaria and could fit other febrile syndromes.\n- No focal signs yet described (e.g., chest findings, abdominal tenderness) that would point to a single definitive cause.\n\nDebiasing step (concrete plan):\n- Step 1: Pause and generate at least two alternate hypotheses beyond malaria (e.g., bacterial sepsis, viral febrile illness, dengue, typhoid).\n- Step 2: Use a brief diagnostic checklist for febrile illness in this setting (red flags, dehydration status, organ perfusion, and danger signs).\n- Step 3: Seek a second opinion or quick nurse-led “case review” with a senior colleague before initiating targeted therapy.\n- Step 4: Gather key data before concluding (complete malaria test result, CBC, CRP/ procalcitonin if available, lactate, blood cultures, chest X-ray if indicated).\n- Step 5: Document reasoning and revise the plan promptly if new data contradicts the initial label.\n\nKey Insight:\nAnchoring on a familiar diagnosis can narrow thinking too soon; structured checks and a second opinion help ensure multiple plausible explanations are considered before acting.",
+        "example_id": "ex_2889ea4738f14e32",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive bias in nursing triage and diagnostic reasoning\n\nExample:\nVignette with Patient:\n- Amara is a nurse in the emergency department of a hospital in Lagos. A 45-year-old man arrives with sudden, non-specific abdominal pain and nausea, accompanied by light sweating. He has a history of gastritis. He reports no fever and denies chest pain. Vital signs on arrival: BP 130/85, HR 88, RR 18, Temp 37.0°C. Abdominal exam shows mild epigastric tenderness without rigidity or guarding.\n\nContext:\n- The ED is busy and decisions are made quickly. Amara’s previous experiences with gastritis make her lean toward an abdominal cause, illustrating anchoring bias: she locks onto a familiar diagnosis before all data are evaluated.\n\nInitial judgment (anchoring):\n- “This looks like gastritis with a possible viral gastroenteritis. Manage with fluids, an antacid if tolerated, and observe for evolving symptoms.”\n\nTests/assessments ordered upfront:\n- ECG to assess for cardiac causes\n- Cardiac troponin (POC) if available\n- CBC\n- CMP\n- Amylase/Lipase\n- Urinalysis\n- Continuous vital signs monitoring and re-check of abdominal exam as data come in\n\nStudent prompts and reasoning task:\n- Identify the bias evident in Amara’s reasoning\n- List evidence that would support the initial gastritis/gastroenteritis diagnosis\n- List evidence that would refute the initial diagnosis and suggest other possibilities (e.g., pancreatitis, perforation, peptic ulcer, myocardial ischemia with atypical presentation)\n- Outline a concrete debiasing step Amara could use (e.g., a brief diagnostic checklist, documenting a cosigned differential diagnosis, or prompting a second clinician’s quick review)\n\nKey Insight:\n  Early labeling based on a familiar pattern can obscure other serious causes; deliberately keeping a broader differential and verifying with data prevents missed diagnoses.",
+        "example_id": "ex_efce61489c114dee"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Cognitive Bias\n\nExample:\nSetting\nIn a busy ED triage bay in Lagos, Amara, a frontline triage nurse, reviews a feverish patient.\n\nVignette\n- Patient: 24-year-old man with fever 38.6 C, vomiting, and mild diffuse abdominal pain for about half a day.\n- Vitals: Temperature 38.6 C, HR 112 bpm, BP 110/70 mmHg, RR 18/min, SpO2 97% on room air.\n- History: No recent travel; no known chronic illnesses; consumes street-food occasionally; exam limited due to distress.\n- Initial impression (anchoring bias): Gastroenteritis suspected based on current symptoms and recent dietary exposure.\n\nBias to name\n- Anchoring bias.\n\nAlternative diagnoses to consider (differential-first reasoning)\n- Acute appendicitis or evolving intra-abdominal process\n- Early sepsis from another source (e.g., urinary tract infection)\n- Dengue or other viral hemorrhagic fevers (regional considerations)\n- Typhoid fever or other enteric infections\n- Viral gastroenteritis with dehydration\n\nMitigation steps (how to counter the bias)\n- Differential-first reasoning: explicitly list at least 3 alternative diagnoses before closing the decision.\n- Checklists and red flags: dehydration signs, persistent fever >38.5 C, progressive abdominal tenderness, inability to tolerate fluids, altered mental status.\n- Second-look confirmation: re-assess vitals and abdominal exam after 15–30 minutes; review any initial lab data and update the differential accordingly.\n\nEquipment analogies to illustrate thinking and data quality\n- Thermometer as data quality check: re-check the fever with a second reading or thermometer to confirm fever is real and not an equipment error.\n- Pulse oximeter as bias detector: confirm oxygenation and perfusion; if readings are normal but the patient looks unwell, broaden the assessment rather than anchor on a single value.\n- ECG monitor as bias detector: monitor heart rate patterns for signals that could reveal pain, fever-related tachycardia, or an occult cardiac issue that would shift the concern beyond a GI focus.\n- IV drip as pace of data gathering: use IV access to administer fluids if dehydration worsens and to obtain timely labs; avoid rushing to a single conclusion—gather data at a steady, methodical pace.\n\nRisk of misdiagnosis due to bias\n- If Amara fixes on gastroenteritis too early, she may miss early appendicitis, early sepsis from another source, or a tropical illness with atypical presentation. Delayed recognition can lead to progression to peritonitis or septic deterioration.\n\nLearning point\n- Cognitive bias can lock in an initial diagnosis; counter it with a broad differential, explicit checklists, and deliberate re-evaluation using objective data (the thermometer, pulse oximeter, ECG, and IV-access-enabled labs and monitoring).\n\nKey Insight:\n  Start broad, verify with data, and re-check early impressions against new information to prevent misdiagnosis from bias.",
+        "example_id": "ex_9e90ae61778241a0"
+      }
+    ],
+    "context_instruction": "Tailor the next example to extend the nursing-context vignette from ex_64e950e8b83f431f by foregrounding a specific cognitive bias (e.g., anchoring or confirmation bias) in a diagnostic/triage decision. Prompt the student to identify the bias, list evidence for and against the initial judgment, and outline a concrete debiasing step (like a decision checklist or seeking a second opinion). Keep the tone and reasoning style aligned with philosophy_logic and general_concept, emphasizing justification and consequences of bias in reasoning.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by including Amara's name, location, and profession, and it uses a context relevant to her role as a nurse in Lagos, Nigeria. The learning style (example-based) is well incorporated through detailed clinical vignettes and step-by-step reasoning, aligning with her medium complexity level. The content appears factually accurate regarding clinical reasoning and common biases in diagnosis. The structure is clear, with a logical flow from scenario to evidence to debiasing steps, facilitating learning. The analogies and framing are appropriate for a healthcare setting, specifically nursing practice, making the example domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Amara's role, location, and profession, integrating her profile into the scenario, which enhances relevance and engagement.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The clinical scenario and reasoning steps are detailed but not overly technical, matching a medium complexity level suitable for a professional nurse.\nThe language and depth are appropriate, with enough detail to challenge without overwhelming.\nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The content correctly discusses cognitive bias (anchoring), clinical reasoning, and diagnostic process, with accurate medical details and appropriate diagnostic considerations.\nThere are no factual inaccuracies or misleading statements.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to evidence to debiasing steps, making it easy to follow and memorable.\nThe explicit mention of the bias and structured steps aid learning.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing, vocabulary, and analogies are entirely appropriate for a healthcare and nursing context, with no off-domain elements.\nThe example uses clinical reasoning, which is suitable for the topic.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Amara's role, location, and learning preferences, integrating her profile into the clinical vignette. The depth of the content aligns well with a medium complexity level, discussing specific cognitive biases and mitigation strategies relevant to clinical decision-making. The factual content about cognitive biases, differential diagnoses, and mitigation steps appears accurate and grounded in medical reasoning. The structure is clear, with a logical flow from setting to vignette, bias identification, mitigation, and learning points, facilitating understanding. The analogies used (thermometer, pulse oximeter, ECG, IV drip) are appropriate for illustrating data quality and bias detection in a medical context, matching the domain well.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Amara's role, location, and learning style, making it tailored to her profile, though it could include more specific cultural or regional nuances.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The content discusses clinical reasoning, differential diagnoses, and bias mitigation at a medium level, matching her complexity preference. It avoids overly technical language or overly simplistic explanations.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The medical concepts, such as cognitive bias, differential diagnosis, and mitigation strategies, are accurate and consistent with clinical reasoning. No factual errors are evident.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from setting to key learning points, making it accessible and memorable for learners. The explicit mention of strategies enhances clarity.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies (thermometer, pulse oximeter, ECG, IV drip) are highly appropriate for illustrating clinical decision-making and data quality in medicine, fitting the domain perfectly.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a general medical context to a nursing triage scenario, which is relevant to the user's domain. It maintains the focus on cognitive bias, specifically anchoring bias, and provides a detailed vignette, prompts, and debiasing strategies appropriate for nursing practice. Therefore, it effectively addresses the user's critique by making the example more pertinent to their field.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES\n\n```json\n{\n  \"COMPLIANCE_SCORE\": 5,\n  \"COMPLIANT\": \"YES\"\n}\n```",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 3,
+        "reasoning": "The regenerated example shifts from a medical context to a general ED scenario, using analogies like thermometers and IVs to illustrate bias mitigation, which aligns with the user's preference for medical equipment analogies. However, it still maintains a broad, non-specific approach rather than explicitly integrating the analogies into the explanation of cognitive bias and its mitigation, which could be improved. Overall, it partially addresses the critique by incorporating medical equipment analogies but does not fully embed them into the core explanation.\n\nCOMPLIANCE_SCORE: 3\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Tailor the next example to extend the nursing-context vignette from ex_64e950e8b83f431f by foregrounding a specific cognitive bias (e.g., anchoring or confirmation bias) in a diagnostic/triage decision. Prompt the student to identify the bias, list evidence for and against the initial judgment, and outline a concrete debiasing step (like a decision checklist or seeking a second opinion). Keep the tone and reasoning style aligned with philosophy_logic and general_concept, emphasizing justification and consequences of bias in reasoning.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:52:43.549704"
+}

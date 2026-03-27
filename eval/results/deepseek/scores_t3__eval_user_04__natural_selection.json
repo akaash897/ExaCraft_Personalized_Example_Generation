@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_04__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_3f64b27ab36c4294",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nKenji, as a software engineer in Tokyo, you can think of natural selection as a continuous, real-world debugging and optimization process. Imagine a population of insects living in a park near your office. Most are green, blending with the leaves, but a few are born with a random mutation that makes them brown.\n\nScenario:\n- **Environment:** The park's foliage is primarily green.\n- **Selection Pressure:** Birds that prey on the insects spot them more easily if they don't match their surroundings.\n- **Variation:** The green insects are well-camouflaged. The brown insects stand out.\n- **Reproductive Success:** The green insects are eaten less often, survive longer, and produce more offspring. The brown insects are more likely to be eaten before reproducing.\n- **Outcome Over Generations:** The \"green\" trait becomes more common in the insect population. The frequency of the \"brown\" trait decreases.\n\nKey Insight:\nNatural selection isn't random—it's the non-random survival of random variations. Traits that improve an organism's chances of surviving and reproducing in a specific environment become more common over time, effectively \"debugging\" the population for that environment.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nThink of a large, actively maintained software project like a web framework. The codebase is under constant pressure to adapt to new browser standards, security threats, and developer expectations. This is analogous to an environment applying selective pressure.\n\nIn this system:\n- **Genetic Variation (Code Changes):** Developers submit pull requests (PRs) with new features, bug fixes, or refactors. These are like random mutations or new genetic combinations. For instance, one PR might add a new, faster API for fetching data, while another might introduce a complex caching layer that is buggy.\n- **Selection Pressure (Code Review & Production):** The project's CI/CD pipeline and production metrics act as the environment. A PR that makes the framework faster, more secure, or easier to use (increasing \"fitness\") is likely to be approved, merged to `main`, and deployed. The buggy caching PR would fail tests, cause errors in staging, and be rejected—it is \"selected against.\"\n- **Inheritance (Merging to Main):** The successful, merged features become part of the stable codebase. They are inherited by all future versions and forks of the project. The deprecated, unsuccessful code paths are eventually removed, akin to an organism dying without reproducing.\n- **Time & Iteration (Release Cycles):** Over many release cycles (generations), the framework evolves. Features that consistently provide value, like a robust reactivity system, become core and refined. Features that become obsolete, like support for an old browser, are phased out as technical debt.\n\nKey Insight:\nNatural selection in biology operates like a continuous, automated code review for life. Traits (code) that improve an organism's ability to survive and reproduce (pass tests and succeed in production) get \"merged\" into the population's gene pool (the main branch). Ineffective traits (buggy features) are rejected and removed from the population over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, as a software engineer in Tokyo, you can think of natural selection as a continuous, real-world debugging and optimization process. Imagine a population of insects living in a park near your office. Most are green, blending with the leaves, but a few are born with a random mutation that makes them brown.\n\nScenario:\n- **Environment:** The park's foliage is primarily green.\n- **Selection Pressure:** Birds that prey on the insects spot them more easily if they don't match their surroundings.\n- **Variation:** The green insects are well-camouflaged. The brown insects stand out.\n- **Reproductive Success:** The green insects are eaten less often, survive longer, and produce more offspring. The brown insects are more likely to be eaten before reproducing.\n- **Outcome Over Generations:** The \"green\" trait becomes more common in the insect population. The frequency of the \"brown\" trait decreases.\n\nKey Insight:\nNatural selection isn't random—it's the non-random survival of random variations. Traits that improve an organism's chances of surviving and reproducing in a specific environment become more common over time, effectively \"debugging\" the population for that environment.",
+        "example_id": "ex_9ff9151d8a814a1c",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, as a software engineer in Tokyo, you can think of natural selection like a continuous A/B testing framework for code in a production system. Imagine you're optimizing an API endpoint for your company's e-commerce platform. Different development teams submit slightly different implementations (variations). These variations are deployed to a subset of users.\n\nSelection pressure comes from the system's performance requirements and user behavior. The implementation with the fastest response time and fewest errors (higher fitness) handles more requests successfully. Over time, the monitoring system automatically scales up the successful variant and phases out the slower, buggier ones. The 'successful' code reproduces by becoming the template for future features, while less effective solutions are removed from the codebase.\n\nKey Insight: Natural selection in software is the automated process where the best-performing code variations under real-world conditions are retained and propagated, while underperforming versions are removed, leading to a continuously optimized system.",
+        "example_id": "ex_b4e05fad51b34bd9"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nThink of a large, actively maintained software project like a web framework. The codebase is under constant pressure to adapt to new browser standards, security threats, and developer expectations. This is analogous to an environment applying selective pressure.\n\nIn this system:\n- **Genetic Variation (Code Changes):** Developers submit pull requests (PRs) with new features, bug fixes, or refactors. These are like random mutations or new genetic combinations. For instance, one PR might add a new, faster API for fetching data, while another might introduce a complex caching layer that is buggy.\n- **Selection Pressure (Code Review & Production):** The project's CI/CD pipeline and production metrics act as the environment. A PR that makes the framework faster, more secure, or easier to use (increasing \"fitness\") is likely to be approved, merged to `main`, and deployed. The buggy caching PR would fail tests, cause errors in staging, and be rejected—it is \"selected against.\"\n- **Inheritance (Merging to Main):** The successful, merged features become part of the stable codebase. They are inherited by all future versions and forks of the project. The deprecated, unsuccessful code paths are eventually removed, akin to an organism dying without reproducing.\n- **Time & Iteration (Release Cycles):** Over many release cycles (generations), the framework evolves. Features that consistently provide value, like a robust reactivity system, become core and refined. Features that become obsolete, like support for an old browser, are phased out as technical debt.\n\nKey Insight:\nNatural selection in biology operates like a continuous, automated code review for life. Traits (code) that improve an organism's ability to survive and reproduce (pass tests and succeed in production) get \"merged\" into the population's gene pool (the main branch). Ineffective traits (buggy features) are rejected and removed from the population over time.",
+        "example_id": "ex_1f5e9c2d791743ae"
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.99,
+      "CC": 4.54,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.906,
+    "reasoning": "The example effectively personalizes the analogy by directly addressing Kenji's background as a software engineer in Tokyo, making the scenario more relatable. The complexity level appears appropriate, using biological concepts with clear, accessible language suitable for an undergraduate learner. The factual content about natural selection is accurate, with correct descriptions of variation, selection pressure, and outcomes. The structure is logical, with a clear scenario and key insight that connects the analogy to the core concept, aiding pedagogical clarity. The analogy of debugging and optimization aligns well with the domain of software engineering, making the framing appropriate for the topic.\n\nPF: The example incorporates Kenji's profession, location, and learning style, using a domain-specific analogy that enhances personalization.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation matches a medium complexity level, covering key aspects of natural selection without oversimplification or excessive detail.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing the process of natural selection and its outcomes without errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from scenario to key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\nDA: The analogy of debugging and optimization is highly appropriate for a software engineer and aligns well with the biological concept, making the framing domain-appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 5.0,
+      "CC": 4.0,
+      "PC": 4.0,
+      "DA": 5.0
+    },
+    "composite": 4.6,
+    "reasoning": "The example effectively personalizes the analogy by framing it around software development, which aligns with the user's background as a software engineer. It uses domain-specific vocabulary and concepts, making the analogy highly relevant. The complexity level appears appropriate, discussing multiple aspects of natural selection with sufficient depth for an undergraduate learner, without becoming overly technical. The factual content accurately reflects biological principles, correctly mapping them onto software development processes. The structure is clear, with a logical flow from variation to inheritance, and the key insight neatly summarizes the analogy, aiding understanding. The framing is entirely within the domain of software engineering, making the analogy appropriate and effective for the topic of natural selection.\n\nPF_SCORE: 5\n\nThe example demonstrates a deep understanding of the biological concept and translates it into a familiar, domain-specific context, matching the user's learning style and background. It avoids generic language and makes good use of relevant terminology.\n\nCC_SCORE: 4\n\nThe complexity is well-matched, covering multiple steps of natural selection with sufficient detail, but it could include slightly more technical depth or biological specifics to reach a perfect score. Still, it remains accessible and appropriate for an undergraduate level.\n\nCA_SCORE: 5\n\nAll factual claims about natural selection and the analogy are correct. The mapping between biological concepts and software development processes is accurate and does not contain errors.\n\nPC_SCORE: 4\n\nThe example is well-structured, with a clear progression from variation to inheritance, and the key insight is memorable. However, the explicit bridge between the biological concept and the analogy could be slightly more emphasized to enhance pedagogical clarity.\n\nDA_SCORE: 5\n\nThe framing is perfectly domain-appropriate, using software development as an analogy for natural selection, which is suitable given the user's background. The vocabulary and framing are consistent with the biological topic.\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The system responds by restructuring the example with accessible language and a familiar context, aligning with the user's stated preference.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The new example incorporates the requested change by shifting to a step-by-step format that is easier to follow, improving pedagogical clarity.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.6,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T21:44:00.668036"
+}

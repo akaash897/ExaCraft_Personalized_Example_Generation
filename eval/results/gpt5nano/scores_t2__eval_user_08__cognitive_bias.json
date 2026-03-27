@@ -1,0 +1,85 @@
+{
+  "key": "t2__eval_user_08__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_08",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_08",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_0075b1a944284b02",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nInput:\n- Kenji, a software engineer in Tokyo, works at a fintech startup in Shibuya. The team must reduce API latency for a real-time order-feature before the next release. They’re choosing between two caching strategies: (A) aggressive caching with Redis, TTLs, and cache-aside; (B) minimal caching with on-demand computation. Stakeholders expect a clear, fast-win.\n\nAnalysis:\n- He reviews dashboards showing current latency and 95th percentile, plus a pilot that suggested caching could cut latency significantly.\n- He emphasizes cache-hit improvements and the ease of delivering a fast win, while downplaying risks like cache stampede, stale reads, and memory pressure.\n- He highlights data that supports faster responses, but discounts contradictory signals such as occasional stale data during real-time updates and the effort needed for invalidation.\n- He gravitates toward option A, guided by the belief that “more caching equals faster responses.”\n\nBias Identification:\n- Cognitive Bias: Confirmation Bias — he seeks evidence that supports caching as the best choice and minimizes or ignores evidence that argues against it.\n\nOutput/Decision:\n- Kenji approves Implementation Plan A with safeguards (conservative TTLs, rate-limited cache writes, and a monitored staged rollout) but foregoes a formal A/B test due to schedule pressure. He documents caveats and commits to a post-rollout review to re-evaluate the decision with broader data.\n\nKey Insight:\n  Confirmation bias can push a software decision toward what you expect to prove; actively seeking disconfirming evidence and planning controlled validation helps prevent premature choices.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nInput:\n- Kenji, a software engineer in Tokyo, works at a fintech startup in Shibuya. The team must reduce API latency for a real-time order-feature before the next release. They’re choosing between two caching strategies: (A) aggressive caching with Redis, TTLs, and cache-aside; (B) minimal caching with on-demand computation. Stakeholders expect a clear, fast-win.\n\nAnalysis:\n- He reviews dashboards showing current latency and 95th percentile, plus a pilot that suggested caching could cut latency significantly.\n- He emphasizes cache-hit improvements and the ease of delivering a fast win, while downplaying risks like cache stampede, stale reads, and memory pressure.\n- He highlights data that supports faster responses, but discounts contradictory signals such as occasional stale data during real-time updates and the effort needed for invalidation.\n- He gravitates toward option A, guided by the belief that “more caching equals faster responses.”\n\nBias Identification:\n- Cognitive Bias: Confirmation Bias — he seeks evidence that supports caching as the best choice and minimizes or ignores evidence that argues against it.\n\nOutput/Decision:\n- Kenji approves Implementation Plan A with safeguards (conservative TTLs, rate-limited cache writes, and a monitored staged rollout) but foregoes a formal A/B test due to schedule pressure. He documents caveats and commits to a post-rollout review to re-evaluate the decision with broader data.\n\nKey Insight:\n  Confirmation bias can push a software decision toward what you expect to prove; actively seeking disconfirming evidence and planning controlled validation helps prevent premature choices.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nInput:\n- Kenji, a software engineer in Tokyo, works at a fintech startup in Shibuya. The team must reduce API latency for a real-time order-feature before the next release. They’re choosing between two caching strategies: (A) aggressive caching with Redis, TTLs, and cache-aside; (B) minimal caching with on-demand computation. Stakeholders expect a clear, fast-win.\n\nAnalysis:\n- He reviews dashboards showing current latency and 95th percentile, plus a pilot that suggested caching could cut latency significantly.\n- He emphasizes cache-hit improvements and the ease of delivering a fast win, while downplaying risks like cache stampede, stale reads, and memory pressure.\n- He highlights data that supports faster responses, but discounts contradictory signals such as occasional stale data during real-time updates and the effort needed for invalidation.\n- He gravitates toward option A, guided by the belief that “more caching equals faster responses.”\n\nBias Identification:\n- Cognitive Bias: Confirmation Bias — he seeks evidence that supports caching as the best choice and minimizes or ignores evidence that argues against it.\n\nOutput/Decision:\n- Kenji approves Implementation Plan A with safeguards (conservative TTLs, rate-limited cache writes, and a monitored staged rollout) but foregoes a formal A/B test due to schedule pressure. He documents caveats and commits to a post-rollout review to re-evaluate the decision with broader data.\n\nKey Insight:\n  Confirmation bias can push a software decision toward what you expect to prove; actively seeking disconfirming evidence and planning controlled validation helps prevent premature choices.",
+        "example_id": "ex_f2c97b3cc2f34b79",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity cognitive-bias scenario for a software engineer in Tokyo, featuring a protagonist named Kenji. Present a step-by-step breakdown with clearly labeled sections for Input, Analysis, Bias Identification, and Output/Decision, grounding the situation in a realistic Tokyo context and illustrating a concrete bias (e.g., confirmation bias) in a software-related decision. Keep the tone practical and domain-appropriate for software engineering to match the learner's preference for medium complexity and real-world relevance.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively incorporates the user's profile by mentioning Kenji's role, location, and profession, and it uses a domain-specific scenario involving API caching strategies, which aligns with his background as a software engineer. The complexity level appears appropriate, discussing technical concepts like cache invalidation and latency analysis at a medium depth suitable for an undergraduate engineer. The factual content about caching strategies and biases is accurate and well-explained, with no evident errors. The structure is clear, with a logical flow from scenario to bias identification and decision, making it pedagogically sound. The analogy and framing are entirely within the software engineering domain, matching the topic of cognitive bias in technical decision-making.\n\n[PF] PERSONALIZATION FIDELITY — The example is tailored to Kenji's profile, referencing his profession, location, and learning style, and it uses a domain-specific scenario relevant to his field.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The technical discussion matches a medium complexity level, appropriate for an undergraduate software engineer, with sufficient detail without being overly advanced.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The content about cognitive bias, confirmation bias, and caching strategies is factually correct and well-explained, with no inaccuracies detected.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to bias analysis and key insight, facilitating learning. The concept-to-example bridge is explicit and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely within the software engineering domain, matching the topic of cognitive bias in technical decision-making, making it highly appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 5.0,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity cognitive-bias scenario for a software engineer in Tokyo, featuring a protagonist named Kenji. Present a step-by-step breakdown with clearly labeled sections for Input, Analysis, Bias Identification, and Output/Decision, grounding the situation in a realistic Tokyo context and illustrating a concrete bias (e.g., confirmation bias) in a software-related decision. Keep the tone practical and domain-appropriate for software engineering to match the learner's preference for medium complexity and real-world relevance.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 4,
+    "reasoning": "The instruction explicitly incorporates the user's domain preference for software engineering and real-world Tokyo scenarios, aligning with the stored pattern. It also emphasizes a medium complexity, step-by-step breakdown, which matches the user's learning style and complexity preference, making the guidance concrete and tailored. Therefore, it effectively synthesizes the stored patterns into a specific, actionable directive.\n\nSPECIFICITY_SCORE: 4",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:30:38.152291"
+}

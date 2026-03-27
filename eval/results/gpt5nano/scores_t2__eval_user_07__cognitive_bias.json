@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_07__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_07",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_07",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_07",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_43bb550e69c24ca1",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, explores how urban redevelopment narratives take shape in a local neighborhood. He wants to show how biases can color interpretation of community attitudes.\n\nInputs:\n- Context: Medium-depth study of memories and opinions about a redevelopment project in a São Paulo neighborhood.\n- Current data: 4 interview quotes from residents who attended a single public meeting last week.\n- Initial question: Do residents broadly support or oppose the redevelopment?\n- Potential pitfall to watch for: Relying on memorable quotes from a small, emotionally engaged group to represent the whole community.\n\nOutputs:\n- Bias type: Availability heuristic (overweighting easily recalled, vivid examples when forming a general conclusion).\n- Why it matters here: A few striking quotes can feel representative even if the sample is not.\n- Mitigation suggestion:\n  1) Expand data collection to 10–15 interviews from varied ages and areas within the neighborhood.\n  2) Triangulate with other sources: city planning documents, local newspaper coverage, and a short survey of about 300 residents.\n  3) Explicitly document how sources were chosen and what was excluded.\n- Example of improved reasoning after mitigation: With broader interviews and documents, the conclusion becomes nuanced, reflecting a mix of supportive, neutral, and critical views rather than a single dominant stance.\n\nKey Insight:\n  Memorable examples can mislead about how common a view is; broad, diverse evidence helps ground interpretation in representative reality.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, explores how urban redevelopment narratives take shape in a local neighborhood. He wants to show how biases can color interpretation of community attitudes.\n\nInputs:\n- Context: Medium-depth study of memories and opinions about a redevelopment project in a São Paulo neighborhood.\n- Current data: 4 interview quotes from residents who attended a single public meeting last week.\n- Initial question: Do residents broadly support or oppose the redevelopment?\n- Potential pitfall to watch for: Relying on memorable quotes from a small, emotionally engaged group to represent the whole community.\n\nOutputs:\n- Bias type: Availability heuristic (overweighting easily recalled, vivid examples when forming a general conclusion).\n- Why it matters here: A few striking quotes can feel representative even if the sample is not.\n- Mitigation suggestion:\n  1) Expand data collection to 10–15 interviews from varied ages and areas within the neighborhood.\n  2) Triangulate with other sources: city planning documents, local newspaper coverage, and a short survey of about 300 residents.\n  3) Explicitly document how sources were chosen and what was excluded.\n- Example of improved reasoning after mitigation: With broader interviews and documents, the conclusion becomes nuanced, reflecting a mix of supportive, neutral, and critical views rather than a single dominant stance.\n\nKey Insight:\n  Memorable examples can mislead about how common a view is; broad, diverse evidence helps ground interpretation in representative reality.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, explores how urban redevelopment narratives take shape in a local neighborhood. He wants to show how biases can color interpretation of community attitudes.\n\nInputs:\n- Context: Medium-depth study of memories and opinions about a redevelopment project in a São Paulo neighborhood.\n- Current data: 4 interview quotes from residents who attended a single public meeting last week.\n- Initial question: Do residents broadly support or oppose the redevelopment?\n- Potential pitfall to watch for: Relying on memorable quotes from a small, emotionally engaged group to represent the whole community.\n\nOutputs:\n- Bias type: Availability heuristic (overweighting easily recalled, vivid examples when forming a general conclusion).\n- Why it matters here: A few striking quotes can feel representative even if the sample is not.\n- Mitigation suggestion:\n  1) Expand data collection to 10–15 interviews from varied ages and areas within the neighborhood.\n  2) Triangulate with other sources: city planning documents, local newspaper coverage, and a short survey of about 300 residents.\n  3) Explicitly document how sources were chosen and what was excluded.\n- Example of improved reasoning after mitigation: With broader interviews and documents, the conclusion becomes nuanced, reflecting a mix of supportive, neutral, and critical views rather than a single dominant stance.\n\nKey Insight:\n  Memorable examples can mislead about how common a view is; broad, diverse evidence helps ground interpretation in representative reality.",
+        "example_id": "ex_d7e82824d26c4c94",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Design the next Cognitive Bias example as a medium-complexity humanities scenario set in São Paulo, featuring a humanities researcher named Carlos. Ground the task in a real-world context and present it with a clear step-by-step structure: include labeled inputs and outputs, with the identified bias type and a brief mitigation suggestion. Use Carlos's name and a concrete São Paulo setting to keep the example personal, grounded, and accessible.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and it uses a context relevant to a humanities researcher, aligning well with the user's profile. The complexity appears appropriate for a PhD-level researcher, with nuanced discussion of biases and mitigation strategies, indicating a good match to the medium complexity level. The factual content about cognitive biases, specifically the availability heuristic, is accurate and well-explained, supporting strong conceptual accuracy. The structure of the example is clear, with a logical flow from scenario to bias, to mitigation, and key insight, making it pedagogically effective. The analogies and framing are appropriate for the topic of cognitive biases, which are well-suited to social science and humanities contexts, avoiding domain mismatches.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates the user's name, location, and profession, and the context is tailored to a humanities researcher, which is highly appropriate. The learning style (example-based) is also reflected in the detailed scenario.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The discussion involves nuanced understanding of cognitive biases, mitigation strategies, and research methodology, matching a medium to high complexity suitable for a PhD-level researcher.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The explanation of the availability heuristic and related mitigation strategies are factually correct and align with established psychological concepts.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to bias, to mitigation, and key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The framing, vocabulary, and analogies are appropriate for social science and humanities research, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Design the next Cognitive Bias example as a medium-complexity humanities scenario set in São Paulo, featuring a humanities researcher named Carlos. Ground the task in a real-world context and present it with a clear step-by-step structure: include labeled inputs and outputs, with the identified bias type and a brief mitigation suggestion. Use Carlos's name and a concrete São Paulo setting to keep the example personal, grounded, and accessible.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction effectively incorporates the user's domain preference for humanities research, the importance of grounding examples in São Paulo, and the medium complexity level, translating these into a clear, concrete directive for example generation. It explicitly mentions the need for a step-by-step structure, personal grounding, and real-world context, aligning well with the stored insights. Therefore, it demonstrates a high level of synthesis and specificity.\n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:26:57.151129"
+}

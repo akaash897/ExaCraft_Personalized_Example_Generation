@@ -1,0 +1,564 @@
+
+============================================================
+ExaCraft Ablation Evaluation
+Tiers: ['t0', 't1', 't2', 't3'] | Users: 8 | Topics: 4 [gpt5nano]
+Generator: openai | Judge: gpt-4.1-nano
+Results dir: D:\MTP\eval\results\gpt5nano
+Total cells: 128 | Already completed: 0
+Dry run: False
+============================================================
+
+[1/128] Running t0__eval_user_01__natural_selection ...
+  Initial composite: 4.4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_01__natural_selection.json
+[2/128] Running t0__eval_user_01__cognitive_bias ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_01__cognitive_bias.json
+[3/128] Running t0__eval_user_01__compound_interest ...
+  Initial composite: 4.4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_01__compound_interest.json
+[4/128] Running t0__eval_user_01__plate_tectonics ...
+  Initial composite: 4.4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_01__plate_tectonics.json
+[5/128] Running t0__eval_user_02__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_02__natural_selection.json
+[6/128] Running t0__eval_user_02__cognitive_bias ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_02__cognitive_bias.json
+[7/128] Running t0__eval_user_02__compound_interest ...
+  Initial composite: 4.1
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_02__compound_interest.json
+[8/128] Running t0__eval_user_02__plate_tectonics ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_02__plate_tectonics.json
+[9/128] Running t0__eval_user_03__natural_selection ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_03__natural_selection.json
+[10/128] Running t0__eval_user_03__cognitive_bias ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_03__cognitive_bias.json
+[11/128] Running t0__eval_user_03__compound_interest ...
+  Initial composite: 4.1
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_03__compound_interest.json
+[12/128] Running t0__eval_user_03__plate_tectonics ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_03__plate_tectonics.json
+[13/128] Running t0__eval_user_04__natural_selection ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_04__natural_selection.json
+[14/128] Running t0__eval_user_04__cognitive_bias ...
+  Initial composite: 3.8000000000000003
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_04__cognitive_bias.json
+[15/128] Running t0__eval_user_04__compound_interest ...
+  Initial composite: 4.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_04__compound_interest.json
+[16/128] Running t0__eval_user_04__plate_tectonics ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_04__plate_tectonics.json
+[17/128] Running t0__eval_user_05__natural_selection ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_05__natural_selection.json
+[18/128] Running t0__eval_user_05__cognitive_bias ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_05__cognitive_bias.json
+[19/128] Running t0__eval_user_05__compound_interest ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_05__compound_interest.json
+[20/128] Running t0__eval_user_05__plate_tectonics ...
+  Initial composite: 4.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_05__plate_tectonics.json
+[21/128] Running t0__eval_user_06__natural_selection ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_06__natural_selection.json
+[22/128] Running t0__eval_user_06__cognitive_bias ...
+  Initial composite: 4.1
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_06__cognitive_bias.json
+[23/128] Running t0__eval_user_06__compound_interest ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_06__compound_interest.json
+[24/128] Running t0__eval_user_06__plate_tectonics ...
+  Initial composite: 4.4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_06__plate_tectonics.json
+[25/128] Running t0__eval_user_07__natural_selection ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_07__natural_selection.json
+[26/128] Running t0__eval_user_07__cognitive_bias ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_07__cognitive_bias.json
+[27/128] Running t0__eval_user_07__compound_interest ...
+  Initial composite: 4.1
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_07__compound_interest.json
+[28/128] Running t0__eval_user_07__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_07__plate_tectonics.json
+[29/128] Running t0__eval_user_08__natural_selection ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_08__natural_selection.json
+[30/128] Running t0__eval_user_08__cognitive_bias ...
+  Initial composite: 4.2
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_08__cognitive_bias.json
+[31/128] Running t0__eval_user_08__compound_interest ...
+  Initial composite: 4.1
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_08__compound_interest.json
+[32/128] Running t0__eval_user_08__plate_tectonics ...
+  Initial composite: 4.4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t0__eval_user_08__plate_tectonics.json
+[33/128] Running t1__eval_user_01__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_01__natural_selection.json
+[34/128] Running t1__eval_user_01__cognitive_bias ...
+  Initial composite: 4.4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_01__cognitive_bias.json
+[35/128] Running t1__eval_user_01__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_01__compound_interest.json
+[36/128] Running t1__eval_user_01__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_01__plate_tectonics.json
+[37/128] Running t1__eval_user_02__natural_selection ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_02__natural_selection.json
+[38/128] Running t1__eval_user_02__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_02__cognitive_bias.json
+[39/128] Running t1__eval_user_02__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_02__compound_interest.json
+[40/128] Running t1__eval_user_02__plate_tectonics ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_02__plate_tectonics.json
+[41/128] Running t1__eval_user_03__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_03__natural_selection.json
+[42/128] Running t1__eval_user_03__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_03__cognitive_bias.json
+[43/128] Running t1__eval_user_03__compound_interest ...
+  Initial composite: 4.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_03__compound_interest.json
+[44/128] Running t1__eval_user_03__plate_tectonics ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_03__plate_tectonics.json
+[45/128] Running t1__eval_user_04__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_04__natural_selection.json
+[46/128] Running t1__eval_user_04__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_04__cognitive_bias.json
+[47/128] Running t1__eval_user_04__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_04__compound_interest.json
+[48/128] Running t1__eval_user_04__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_04__plate_tectonics.json
+[49/128] Running t1__eval_user_05__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_05__natural_selection.json
+[50/128] Running t1__eval_user_05__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_05__cognitive_bias.json
+[51/128] Running t1__eval_user_05__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_05__compound_interest.json
+[52/128] Running t1__eval_user_05__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_05__plate_tectonics.json
+[53/128] Running t1__eval_user_06__natural_selection ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_06__natural_selection.json
+[54/128] Running t1__eval_user_06__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_06__cognitive_bias.json
+[55/128] Running t1__eval_user_06__compound_interest ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_06__compound_interest.json
+[56/128] Running t1__eval_user_06__plate_tectonics ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_06__plate_tectonics.json
+[57/128] Running t1__eval_user_07__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_07__natural_selection.json
+[58/128] Running t1__eval_user_07__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_07__cognitive_bias.json
+[59/128] Running t1__eval_user_07__compound_interest ...
+  Initial composite: 4.6
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_07__compound_interest.json
+[60/128] Running t1__eval_user_07__plate_tectonics ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_07__plate_tectonics.json
+[61/128] Running t1__eval_user_08__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_08__natural_selection.json
+[62/128] Running t1__eval_user_08__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_08__cognitive_bias.json
+[63/128] Running t1__eval_user_08__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_08__compound_interest.json
+[64/128] Running t1__eval_user_08__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t1__eval_user_08__plate_tectonics.json
+[65/128] Running t2__eval_user_01__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_01__natural_selection.json
+[66/128] Running t2__eval_user_01__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_01__cognitive_bias.json
+[67/128] Running t2__eval_user_01__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_01__compound_interest.json
+[68/128] Running t2__eval_user_01__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_01__plate_tectonics.json
+[69/128] Running t2__eval_user_02__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_02__natural_selection.json
+[70/128] Running t2__eval_user_02__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_02__cognitive_bias.json
+[71/128] Running t2__eval_user_02__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_02__compound_interest.json
+[72/128] Running t2__eval_user_02__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_02__plate_tectonics.json
+[73/128] Running t2__eval_user_03__natural_selection ...
+  Initial composite: 4.9
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_03__natural_selection.json
+[74/128] Running t2__eval_user_03__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_03__cognitive_bias.json
+[75/128] Running t2__eval_user_03__compound_interest ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_03__compound_interest.json
+[76/128] Running t2__eval_user_03__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_03__plate_tectonics.json
+[77/128] Running t2__eval_user_04__natural_selection ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_04__natural_selection.json
+[78/128] Running t2__eval_user_04__cognitive_bias ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_04__cognitive_bias.json
+[79/128] Running t2__eval_user_04__compound_interest ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_04__compound_interest.json
+[80/128] Running t2__eval_user_04__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_04__plate_tectonics.json
+[81/128] Running t2__eval_user_05__natural_selection ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_05__natural_selection.json
+[82/128] Running t2__eval_user_05__cognitive_bias ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_05__cognitive_bias.json
+[83/128] Running t2__eval_user_05__compound_interest ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_05__compound_interest.json
+[84/128] Running t2__eval_user_05__plate_tectonics ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_05__plate_tectonics.json
+[85/128] Running t2__eval_user_06__natural_selection ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_06__natural_selection.json
+[86/128] Running t2__eval_user_06__cognitive_bias ...
+  Initial composite: 4.8
+  Instruction specificity: 4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_06__cognitive_bias.json
+[87/128] Running t2__eval_user_06__compound_interest ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_06__compound_interest.json
+[88/128] Running t2__eval_user_06__plate_tectonics ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_06__plate_tectonics.json
+[89/128] Running t2__eval_user_07__natural_selection ...
+  Initial composite: 5.0
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_07__natural_selection.json
+[90/128] Running t2__eval_user_07__cognitive_bias ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_07__cognitive_bias.json
+[91/128] Running t2__eval_user_07__compound_interest ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_07__compound_interest.json
+[92/128] Running t2__eval_user_07__plate_tectonics ...
+  Initial composite: 5.0
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_07__plate_tectonics.json
+[93/128] Running t2__eval_user_08__natural_selection ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_08__natural_selection.json
+[94/128] Running t2__eval_user_08__cognitive_bias ...
+  Initial composite: 4.8
+  Instruction specificity: 4
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_08__cognitive_bias.json
+[95/128] Running t2__eval_user_08__compound_interest ...
+  Initial composite: 4.8
+  Instruction specificity: 5
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_08__compound_interest.json
+[96/128] Running t2__eval_user_08__plate_tectonics ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t2__eval_user_08__plate_tectonics.json
+[97/128] Running t3__eval_user_01__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   5.0 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_01__natural_selection.json
+[98/128] Running t3__eval_user_01__cognitive_bias ...
+  Initial composite: 5.0
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_01__cognitive_bias.json
+[99/128] Running t3__eval_user_01__compound_interest ...
+  Initial composite: 5.0
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_01__compound_interest.json
+[100/128] Running t3__eval_user_01__plate_tectonics ...
+  Initial composite: 4.8
+  Final composite:   4.4 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_01__plate_tectonics.json
+[101/128] Running t3__eval_user_02__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   4.4 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_02__natural_selection.json
+[102/128] Running t3__eval_user_02__cognitive_bias ...
+  Initial composite: 4.8
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_02__cognitive_bias.json
+[103/128] Running t3__eval_user_02__compound_interest ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_02__compound_interest.json
+[104/128] Running t3__eval_user_02__plate_tectonics ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_02__plate_tectonics.json
+[105/128] Running t3__eval_user_03__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_03__natural_selection.json
+[106/128] Running t3__eval_user_03__cognitive_bias ...
+  Initial composite: 4.5
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_03__cognitive_bias.json
+[107/128] Running t3__eval_user_03__compound_interest ...
+  Initial composite: 4.8
+  Final composite:   5.0 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_03__compound_interest.json
+[108/128] Running t3__eval_user_03__plate_tectonics ...
+  Initial composite: 5.0
+  Final composite:   4.8 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_03__plate_tectonics.json
+[109/128] Running t3__eval_user_04__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   4.7 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_04__natural_selection.json
+[110/128] Running t3__eval_user_04__cognitive_bias ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_04__cognitive_bias.json
+[111/128] Running t3__eval_user_04__compound_interest ...
+  Initial composite: 4.8
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_04__compound_interest.json
+[112/128] Running t3__eval_user_04__plate_tectonics ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_04__plate_tectonics.json
+[113/128] Running t3__eval_user_05__natural_selection ...
+
+============================================================
+ExaCraft Ablation Evaluation
+Tiers: ['t0', 't1', 't2', 't3'] | Users: 8 | Topics: 4 [gpt5nano]
+Generator: openai | Judge: gpt-4.1-nano
+Results dir: D:\MTP\eval\results\gpt5nano
+Total cells: 128 | Already completed: 112
+Dry run: False
+============================================================
+
+[1/128] SKIP (cached) t0__eval_user_01__natural_selection
+[2/128] SKIP (cached) t0__eval_user_01__cognitive_bias
+[3/128] SKIP (cached) t0__eval_user_01__compound_interest
+[4/128] SKIP (cached) t0__eval_user_01__plate_tectonics
+[5/128] SKIP (cached) t0__eval_user_02__natural_selection
+[6/128] SKIP (cached) t0__eval_user_02__cognitive_bias
+[7/128] SKIP (cached) t0__eval_user_02__compound_interest
+[8/128] SKIP (cached) t0__eval_user_02__plate_tectonics
+[9/128] SKIP (cached) t0__eval_user_03__natural_selection
+[10/128] SKIP (cached) t0__eval_user_03__cognitive_bias
+[11/128] SKIP (cached) t0__eval_user_03__compound_interest
+[12/128] SKIP (cached) t0__eval_user_03__plate_tectonics
+[13/128] SKIP (cached) t0__eval_user_04__natural_selection
+[14/128] SKIP (cached) t0__eval_user_04__cognitive_bias
+[15/128] SKIP (cached) t0__eval_user_04__compound_interest
+[16/128] SKIP (cached) t0__eval_user_04__plate_tectonics
+[17/128] SKIP (cached) t0__eval_user_05__natural_selection
+[18/128] SKIP (cached) t0__eval_user_05__cognitive_bias
+[19/128] SKIP (cached) t0__eval_user_05__compound_interest
+[20/128] SKIP (cached) t0__eval_user_05__plate_tectonics
+[21/128] SKIP (cached) t0__eval_user_06__natural_selection
+[22/128] SKIP (cached) t0__eval_user_06__cognitive_bias
+[23/128] SKIP (cached) t0__eval_user_06__compound_interest
+[24/128] SKIP (cached) t0__eval_user_06__plate_tectonics
+[25/128] SKIP (cached) t0__eval_user_07__natural_selection
+[26/128] SKIP (cached) t0__eval_user_07__cognitive_bias
+[27/128] SKIP (cached) t0__eval_user_07__compound_interest
+[28/128] SKIP (cached) t0__eval_user_07__plate_tectonics
+[29/128] SKIP (cached) t0__eval_user_08__natural_selection
+[30/128] SKIP (cached) t0__eval_user_08__cognitive_bias
+[31/128] SKIP (cached) t0__eval_user_08__compound_interest
+[32/128] SKIP (cached) t0__eval_user_08__plate_tectonics
+[33/128] SKIP (cached) t1__eval_user_01__natural_selection
+[34/128] SKIP (cached) t1__eval_user_01__cognitive_bias
+[35/128] SKIP (cached) t1__eval_user_01__compound_interest
+[36/128] SKIP (cached) t1__eval_user_01__plate_tectonics
+[37/128] SKIP (cached) t1__eval_user_02__natural_selection
+[38/128] SKIP (cached) t1__eval_user_02__cognitive_bias
+[39/128] SKIP (cached) t1__eval_user_02__compound_interest
+[40/128] SKIP (cached) t1__eval_user_02__plate_tectonics
+[41/128] SKIP (cached) t1__eval_user_03__natural_selection
+[42/128] SKIP (cached) t1__eval_user_03__cognitive_bias
+[43/128] SKIP (cached) t1__eval_user_03__compound_interest
+[44/128] SKIP (cached) t1__eval_user_03__plate_tectonics
+[45/128] SKIP (cached) t1__eval_user_04__natural_selection
+[46/128] SKIP (cached) t1__eval_user_04__cognitive_bias
+[47/128] SKIP (cached) t1__eval_user_04__compound_interest
+[48/128] SKIP (cached) t1__eval_user_04__plate_tectonics
+[49/128] SKIP (cached) t1__eval_user_05__natural_selection
+[50/128] SKIP (cached) t1__eval_user_05__cognitive_bias
+[51/128] SKIP (cached) t1__eval_user_05__compound_interest
+[52/128] SKIP (cached) t1__eval_user_05__plate_tectonics
+[53/128] SKIP (cached) t1__eval_user_06__natural_selection
+[54/128] SKIP (cached) t1__eval_user_06__cognitive_bias
+[55/128] SKIP (cached) t1__eval_user_06__compound_interest
+[56/128] SKIP (cached) t1__eval_user_06__plate_tectonics
+[57/128] SKIP (cached) t1__eval_user_07__natural_selection
+[58/128] SKIP (cached) t1__eval_user_07__cognitive_bias
+[59/128] SKIP (cached) t1__eval_user_07__compound_interest
+[60/128] SKIP (cached) t1__eval_user_07__plate_tectonics
+[61/128] SKIP (cached) t1__eval_user_08__natural_selection
+[62/128] SKIP (cached) t1__eval_user_08__cognitive_bias
+[63/128] SKIP (cached) t1__eval_user_08__compound_interest
+[64/128] SKIP (cached) t1__eval_user_08__plate_tectonics
+[65/128] SKIP (cached) t2__eval_user_01__natural_selection
+[66/128] SKIP (cached) t2__eval_user_01__cognitive_bias
+[67/128] SKIP (cached) t2__eval_user_01__compound_interest
+[68/128] SKIP (cached) t2__eval_user_01__plate_tectonics
+[69/128] SKIP (cached) t2__eval_user_02__natural_selection
+[70/128] SKIP (cached) t2__eval_user_02__cognitive_bias
+[71/128] SKIP (cached) t2__eval_user_02__compound_interest
+[72/128] SKIP (cached) t2__eval_user_02__plate_tectonics
+[73/128] SKIP (cached) t2__eval_user_03__natural_selection
+[74/128] SKIP (cached) t2__eval_user_03__cognitive_bias
+[75/128] SKIP (cached) t2__eval_user_03__compound_interest
+[76/128] SKIP (cached) t2__eval_user_03__plate_tectonics
+[77/128] SKIP (cached) t2__eval_user_04__natural_selection
+[78/128] SKIP (cached) t2__eval_user_04__cognitive_bias
+[79/128] SKIP (cached) t2__eval_user_04__compound_interest
+[80/128] SKIP (cached) t2__eval_user_04__plate_tectonics
+[81/128] SKIP (cached) t2__eval_user_05__natural_selection
+[82/128] SKIP (cached) t2__eval_user_05__cognitive_bias
+[83/128] SKIP (cached) t2__eval_user_05__compound_interest
+[84/128] SKIP (cached) t2__eval_user_05__plate_tectonics
+[85/128] SKIP (cached) t2__eval_user_06__natural_selection
+[86/128] SKIP (cached) t2__eval_user_06__cognitive_bias
+[87/128] SKIP (cached) t2__eval_user_06__compound_interest
+[88/128] SKIP (cached) t2__eval_user_06__plate_tectonics
+[89/128] SKIP (cached) t2__eval_user_07__natural_selection
+[90/128] SKIP (cached) t2__eval_user_07__cognitive_bias
+[91/128] SKIP (cached) t2__eval_user_07__compound_interest
+[92/128] SKIP (cached) t2__eval_user_07__plate_tectonics
+[93/128] SKIP (cached) t2__eval_user_08__natural_selection
+[94/128] SKIP (cached) t2__eval_user_08__cognitive_bias
+[95/128] SKIP (cached) t2__eval_user_08__compound_interest
+[96/128] SKIP (cached) t2__eval_user_08__plate_tectonics
+[97/128] SKIP (cached) t3__eval_user_01__natural_selection
+[98/128] SKIP (cached) t3__eval_user_01__cognitive_bias
+[99/128] SKIP (cached) t3__eval_user_01__compound_interest
+[100/128] SKIP (cached) t3__eval_user_01__plate_tectonics
+[101/128] SKIP (cached) t3__eval_user_02__natural_selection
+[102/128] SKIP (cached) t3__eval_user_02__cognitive_bias
+[103/128] SKIP (cached) t3__eval_user_02__compound_interest
+[104/128] SKIP (cached) t3__eval_user_02__plate_tectonics
+[105/128] SKIP (cached) t3__eval_user_03__natural_selection
+[106/128] SKIP (cached) t3__eval_user_03__cognitive_bias
+[107/128] SKIP (cached) t3__eval_user_03__compound_interest
+[108/128] SKIP (cached) t3__eval_user_03__plate_tectonics
+[109/128] SKIP (cached) t3__eval_user_04__natural_selection
+[110/128] SKIP (cached) t3__eval_user_04__cognitive_bias
+[111/128] SKIP (cached) t3__eval_user_04__compound_interest
+[112/128] SKIP (cached) t3__eval_user_04__plate_tectonics
+[113/128] Running t3__eval_user_05__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_05__natural_selection.json
+[114/128] Running t3__eval_user_05__cognitive_bias ...
+  Initial composite: 5.0
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_05__cognitive_bias.json
+[115/128] Running t3__eval_user_05__compound_interest ...
+  Initial composite: 4.6
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_05__compound_interest.json
+[116/128] Running t3__eval_user_05__plate_tectonics ...
+  Initial composite: 4.8
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_05__plate_tectonics.json
+[117/128] Running t3__eval_user_06__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_06__natural_selection.json
+[118/128] Running t3__eval_user_06__cognitive_bias ...
+  Initial composite: 4.8
+  Final composite:   4.6 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_06__cognitive_bias.json
+[119/128] Running t3__eval_user_06__compound_interest ...
+  Initial composite: 4.6
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_06__compound_interest.json
+[120/128] Running t3__eval_user_06__plate_tectonics ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_06__plate_tectonics.json
+[121/128] Running t3__eval_user_07__natural_selection ...
+  Initial composite: 5.0
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_07__natural_selection.json
+[122/128] Running t3__eval_user_07__cognitive_bias ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_07__cognitive_bias.json
+[123/128] Running t3__eval_user_07__compound_interest ...
+  Initial composite: 5.0
+  Final composite:   4.6 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_07__compound_interest.json
+[124/128] Running t3__eval_user_07__plate_tectonics ...
+  Initial composite: 5.0
+  Final composite:   5.0 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_07__plate_tectonics.json
+[125/128] Running t3__eval_user_08__natural_selection ...
+  Initial composite: 4.8
+  Final composite:   4.5 (reused from round 3)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_08__natural_selection.json
+[126/128] Running t3__eval_user_08__cognitive_bias ...
+  Initial composite: 4.8
+  Final composite:   4.8 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_08__cognitive_bias.json
+[127/128] Running t3__eval_user_08__compound_interest ...
+  Initial composite: 4.8
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_08__compound_interest.json
+[128/128] Running t3__eval_user_08__plate_tectonics ...
+  Initial composite: 5.0
+  Final composite:   4.8 (reused from round 1)
+  Saved: D:\MTP\eval\results\gpt5nano\scores_t3__eval_user_08__plate_tectonics.json
+
+Evaluation complete. 128 cells in checkpoint.

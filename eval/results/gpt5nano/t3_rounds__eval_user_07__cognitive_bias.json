@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_07",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.9,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.9,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Cognitive Bias\n\nExample:\nContext\nCarlos, a humanities researcher based in São Paulo, is studying how urban redevelopment narratives shape public opinion in the historic neighborhood of Bixiga. He reads two local pieces about a plan to replace some low-rise commercial spaces with new housing and cultural facilities.\n\nNarrative\n- Data in both pieces: the city plans to add 200 housing units, 40 of which are earmarked as affordable; the project includes new shops and renovation of public spaces.\n- Framing A (newspaper headline: “Bixiga Revival: Housing for Everyone and Cultural Preservation”): emphasizes revitalization, community benefits, and preserving heritage. The language is positive and future-facing.\n- Framing B (local blog: “Gentrification in Disguise: Displacing Long-Standing Residents”): emphasizes risk to current residents, rising rents, and loss of neighborhood character. The language is cautionary and value-laden.\n- Observation: The same data is presented, but the frame alters how readers interpret the project. Readers exposed to Framing A tend to view the plan as beneficial and necessary; readers exposed to Framing B tend to view it as a threat to the community.\n\nKey terms embedded\n- Framing effect: a cognitive bias where people react differently to information based on how it is presented, not just on the facts themselves.\n- Neutral framing vs value-loaded framing: the difference between describing outcomes in descriptive terms versus judging them as good or bad.\n\nImpact in the local setting\n- Framing influences which stakeholders feel heard, how residents vote in consultations, and how policymakers justify compromises (e.g., affordable units vs displacement safeguards).\n- It can mask or exaggerate trade-offs, making objective assessment harder for community members who primarily consume one frame.\n\nMitigation ideas (for future analysis or reporting)\n- Present multiple frames side by side and label them clearly.\n- Include raw data (numbers, maps, timelines) beyond the framing narrative.\n- Gather and present voices from diverse groups on equal footing (long-time residents, new residents, business owners, cultural groups).\n- Use neutral, descriptive language for headlines and summaries; avoid value-laden terms that predetermine judgment.\n\nPrompt:\n- Identify the bias at play in Carlos’s case and point to the framing cues in Framing A and Framing B.\n- Discuss how framing could affect public perception and policy outcomes in Bixiga’s redevelopment debate.\n- Suggest concrete steps a journalist or analyst could take to mitigate framing bias in future reporting or analysis.\n\nKey Insight:\nFraming shapes how people interpret the same facts; the presentation can steer attitudes as much as the data itself.",
+      "example_id": "ex_aa708a42e13c4954",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, examines how a redevelopment plan for the Bixiga neighborhood is being presented. The plan lists 200 housing units, of which 40 are designated as affordable. Two widely circulated frames shape how readers interpret the proposal.\n\nFrame A (Opportunity frame): Describes the project as inclusive renewal that will inject investment, create new jobs, and improve housing quality for residents, emphasizing progress and city vitality.\n\nFrame B (Risk frame): Emphasizes potential displacement, erosion of historic character, and rising rents that could push long-time residents out, stressing loss and social tension.\n\nBoth frames use the same data (200 units total, 40 affordable) but tell different stories about what the numbers mean.\n\nPrompt:\nIdentify the cognitive bias demonstrated by the framing in Frames A and B. How might these frames shape public understanding in the Bixiga redevelopment debate? Discuss the impact this framing could have on future analysis or reporting, and suggest concrete ways to mitigate it in real-world presentations.\n\nMitigation ideas:\n- Present data side-by-side in a neutral, tabular format without loaded language.\n- Include multiple stakeholder voices (residents, developers, historians) and their framing in separate, clearly labeled sections.\n- Add context about affordability over time and potential displacement risks with transparent caveats.\n- Precede frames with a neutral definition of what the numbers mean (e.g., what 200 units and 40 affordable imply for different resident groups).\n- Encourage readers to compare frames explicitly and note where language, not data, drives interpretation.\n\nKey Insight:\nTakeaway: Framing can bias interpretation of the same facts; the way information is presented shapes public perception more than the data itself.",
+      "example_id": "ex_c01111fc97a4452e"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always prefer examples that draw on historical or cultural contexts rather than formulas.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Cognitive Bias\n\nExample:\nConcise scenario:\nIn Bixiga, a historian leads a redevelopment discussion framed around cultural heritage and social memory. The presentation highlights mainly favorable data—restoration of iconic façades, presumed boosts to tourism, and a renewed neighborhood identity—and the historian mainly listens to voices that support change, sidelining long-time residents who fear displacement. This sets up a conversation that feels celebratory and decisive, even if multiple viewpoints are not equally represented.\n\nInputs:\n  - Context: Redevelopment planning session in Bixiga, a culturally rich neighborhood in São Paulo.\n  - Protagonist: A historian/cultural analyst guiding the discussion.\n  - Data shown: Mostly positive projections (heritage restoration success stories, tourism gains, community pride); limited attention to potential negatives or dissenting voices.\n  - Participants: Local residents, small business owners, neighborhood associations, and project advocates; dissenting voices are underrepresented.\n\nOutputs:\n  - Step 1 — Identify biases at work:\n    - Confirmation bias: The historian favors evidence that supports redevelopment and gives more weight to favorable data while downplaying or ignoring counter-evidence (e.g., risks of displacement, small merchants' concerns).\n    - Framing effect: The plan is presented primarily as “cultural heritage stewardship” and “social memory preservation,” which shapes responses to be more positive and less critical.\n  - Step 2 — Guided task: propose concrete mitigation strategies\n    - Diversify data and voices: actively solicit counterpoints from long-time residents, street vendors, and tenants; present balanced data including potential costs and risks.\n    - Use multiple frames: present the project as both “heritage preservation” and “inclusive growth,” and include worst-case scenarios to test resilience.\n    - Structured deliberation: implement equal speaking time for all groups; rotate moderators; offer anonymous input channels.\n    - Transparent impact assessment: publish methodology, data sources, and both positive and negative projections; invite external review.\n    - Narrative balance: integrate counter-narratives (e.g., memories of community spaces, past displacement stories) alongside heritage-focused framing to broaden the discussion.\n  - Optional follow-up task: draft a short, balanced briefing paragraph that foregrounds both benefits and risks, ensuring all major stakeholder voices are acknowledged.\n\nKey Insight:\n bias can creep in when how we frame a plan and which voices we elevate shape perceptions more than the underlying facts; deliberate, inclusive framing and balanced evidence help ground conversations in reality.",
+      "example_id": "ex_facc85e7ae714019"
+    }
+  ],
+  "timestamp": "2026-03-16T12:04:00.149109"
+}

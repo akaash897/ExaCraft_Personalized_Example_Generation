@@ -47,15 +47,16 @@ API_DEBUG = DEBUG
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'DEBUG' if DEBUG else 'INFO')
 
 # LLM Configuration - Multi-Provider Support
-DEFAULT_LLM_PROVIDER = os.getenv('DEFAULT_LLM_PROVIDER', 'gemini')
+DEFAULT_LLM_PROVIDER = os.getenv('DEFAULT_LLM_PROVIDER', 'openai')
 
 # Provider-specific API Keys
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')          # DeepSeek generator
+OPENROUTER_JUDGE_API_KEY = os.getenv('OPENROUTER_JUDGE_API_KEY')  # Llama 3.3 70B secondary judge
 
 # Provider-specific Models
-GEMINI_DEFAULT_MODEL = os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')
 OPENAI_DEFAULT_MODEL = os.getenv('OPENAI_MODEL', 'gpt-4o-mini')
+OPENROUTER_DEFAULT_MODEL = os.getenv('OPENROUTER_MODEL', 'deepseek/deepseek-v3.2')
 
 # Shared LLM Settings
 LLM_TEMPERATURE = float(os.getenv('LLM_TEMPERATURE', '0.3'))
@@ -63,8 +64,8 @@ LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS', '2048'))
 
 # Provider API Key Mapping
 LLM_API_KEYS = {
-    'gemini': GEMINI_API_KEY,
-    'openai': OPENAI_API_KEY
+    'openai':      OPENAI_API_KEY,
+    'openrouter':  OPENROUTER_API_KEY,
 }
 
 # File Storage

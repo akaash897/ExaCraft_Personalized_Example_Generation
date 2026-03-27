@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_04__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_e388d94218fb4a45",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nIn a forest, a population of beetles comes in two colors: light brown and dark brown. Birds hunt by sight, so beetles that blend in with the tree bark are less likely to be eaten.\n\nWhat happens:\n- Variation exists: some beetles are light, some are dark.\n- Heredity: color is inherited by offspring from their parents.\n- Selection pressure: on dark bark, dark beetles are harder to spot; on light bark, light beetles hide better.\n- Reproduction: beetles that survive longer tend to have more babies, passing on their color.\n- Result: over many generations, the beetle population shifts to the color that camouflages best in that environment.\n\nKey Insight:\nNatural selection favors traits that help individuals survive and reproduce in a given environment, so the population’s traits can change over time without anyone trying to make them change.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nIn a forest, a population of beetles comes in two colors: light brown and dark brown. Birds hunt by sight, so beetles that blend in with the tree bark are less likely to be eaten.\n\nWhat happens:\n- Variation exists: some beetles are light, some are dark.\n- Heredity: color is inherited by offspring from their parents.\n- Selection pressure: on dark bark, dark beetles are harder to spot; on light bark, light beetles hide better.\n- Reproduction: beetles that survive longer tend to have more babies, passing on their color.\n- Result: over many generations, the beetle population shifts to the color that camouflages best in that environment.\n\nKey Insight:\nNatural selection favors traits that help individuals survive and reproduce in a given environment, so the population’s traits can change over time without anyone trying to make them change.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nIn a forest, a population of beetles comes in two colors: light brown and dark brown. Birds hunt by sight, so beetles that blend in with the tree bark are less likely to be eaten.\n\nWhat happens:\n- Variation exists: some beetles are light, some are dark.\n- Heredity: color is inherited by offspring from their parents.\n- Selection pressure: on dark bark, dark beetles are harder to spot; on light bark, light beetles hide better.\n- Reproduction: beetles that survive longer tend to have more babies, passing on their color.\n- Result: over many generations, the beetle population shifts to the color that camouflages best in that environment.\n\nKey Insight:\nNatural selection favors traits that help individuals survive and reproduce in a given environment, so the population’s traits can change over time without anyone trying to make them change.",
+        "example_id": "ex_77ff80edfea74105",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 3,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "composite": 3.9,
+    "reasoning": "The example effectively uses a biological scenario involving beetles and birds, which is appropriate for explaining natural selection. It covers the core concepts clearly and logically, with a straightforward structure that supports learning. However, it does not incorporate the user's specific profile details such as being an engineer or their learning style, and the complexity level is somewhat basic but still suitable for an undergraduate. The analogies are appropriate for biology, and the explanation is factually accurate.\n\n[PF] PERSONALIZATION FIDELITY — The example is generic and does not incorporate any of the user's profile details like profession, location, or learning style, which limits personalization.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION — The explanation covers the fundamental aspects of natural selection at a medium complexity level, suitable for an undergraduate, with clear steps and no overly technical language.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The core principles of natural selection are correctly described, including variation, heredity, selection pressure, and reproductive success, with no factual errors.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from variation to outcome, and the key insight is explicitly highlighted, making it easy to follow and memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of beetles and birds in a forest is highly appropriate for biology and natural selection, with no domain mismatch.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 2, \"CC\": 3, \"CA\": 5, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:44:58.722916"
+}

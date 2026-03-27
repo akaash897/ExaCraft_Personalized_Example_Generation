@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__plate_tectonics",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_7c1aaac7e3284ec9",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, leads a medium-complexity exercise on plate tectonics and how it could affect hospital readiness in a coastal city.\n\nTask:\nUsing the inputs, assess how plate tectonics could influence Lagos hospital infrastructure over the next decade and outline practical readiness steps.\n\nInputs:\n- Plate movement rate: 2 cm per year (approximate)\n- Time horizon: 10 years\n- Nearest fault distance to the hospital site: 40 km\n- Local ground conditions at the site: coastal soft clay with a high water table\n- Building type: 3-story reinforced concrete structure with some retrofitting done in the last 5 years\n- Emergency readiness: generator backup 24 hours; water storage capacity 2 weeks\n- Daily patient load: 500 patients\n\nSteps:\n1) Interpret the concept: plate tectonics means large pieces of the Earth's crust move slowly relative to each other, and this movement can cause earthquakes and ground shaking.\n2) Compute crustal displacement over the horizon: 2 cm/year × 10 years = 20 cm of relative movement.\n3) Connect to Lagos hospital risks: soft coastal soils amplify shaking; a distant earthquake could still produce meaningful ground motion at 40 km distance, potentially stressing foundations and utilities.\n4) Translate to actionable readiness: identify which hospital systems are most at risk and plan concrete steps to strengthen them.\n\nOutputs:\n- Crustal displacement over 10 years: 20 cm\n- Estimated ground shaking risk category (qualitative): Moderate (more risk than solid bedrock sites, heightened by soft clay and coastal setting)\n- Infrastructure risk factors to monitor: foundation stress, potential settlement, liquefaction risk in soft soils, vulnerability of heavy equipment and storage areas, reliability of water and power lines\n- Readiness actions to implement:\n  - Inspect and, if needed, retrofit foundations and structural connections for the 3-story building\n  - Secure heavy equipment, shelving, and tall medical storage to prevent toppling during shaking\n  - Verify generator operation, fuel supply, and water storage capacity; implement surge protection for critical systems\n  - Review and practice the disaster plan; ensure clear, accessible emergency egress routes\n  - Coordinate with local authorities for hazard maps and early-warning communications\n  - Educate staff on evacuation procedures and emergency patient triage during and after shaking events\n\nKey Insight:\nEven slow plate movement can accumulate over years and, combined with coastal soils, elevate earthquake risk for hospital infrastructure; proactive readiness focuses on building stability and robust, well-practiced emergency systems.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, leads a medium-complexity exercise on plate tectonics and how it could affect hospital readiness in a coastal city.\n\nTask:\nUsing the inputs, assess how plate tectonics could influence Lagos hospital infrastructure over the next decade and outline practical readiness steps.\n\nInputs:\n- Plate movement rate: 2 cm per year (approximate)\n- Time horizon: 10 years\n- Nearest fault distance to the hospital site: 40 km\n- Local ground conditions at the site: coastal soft clay with a high water table\n- Building type: 3-story reinforced concrete structure with some retrofitting done in the last 5 years\n- Emergency readiness: generator backup 24 hours; water storage capacity 2 weeks\n- Daily patient load: 500 patients\n\nSteps:\n1) Interpret the concept: plate tectonics means large pieces of the Earth's crust move slowly relative to each other, and this movement can cause earthquakes and ground shaking.\n2) Compute crustal displacement over the horizon: 2 cm/year × 10 years = 20 cm of relative movement.\n3) Connect to Lagos hospital risks: soft coastal soils amplify shaking; a distant earthquake could still produce meaningful ground motion at 40 km distance, potentially stressing foundations and utilities.\n4) Translate to actionable readiness: identify which hospital systems are most at risk and plan concrete steps to strengthen them.\n\nOutputs:\n- Crustal displacement over 10 years: 20 cm\n- Estimated ground shaking risk category (qualitative): Moderate (more risk than solid bedrock sites, heightened by soft clay and coastal setting)\n- Infrastructure risk factors to monitor: foundation stress, potential settlement, liquefaction risk in soft soils, vulnerability of heavy equipment and storage areas, reliability of water and power lines\n- Readiness actions to implement:\n  - Inspect and, if needed, retrofit foundations and structural connections for the 3-story building\n  - Secure heavy equipment, shelving, and tall medical storage to prevent toppling during shaking\n  - Verify generator operation, fuel supply, and water storage capacity; implement surge protection for critical systems\n  - Review and practice the disaster plan; ensure clear, accessible emergency egress routes\n  - Coordinate with local authorities for hazard maps and early-warning communications\n  - Educate staff on evacuation procedures and emergency patient triage during and after shaking events\n\nKey Insight:\nEven slow plate movement can accumulate over years and, combined with coastal soils, elevate earthquake risk for hospital infrastructure; proactive readiness focuses on building stability and robust, well-practiced emergency systems.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, leads a medium-complexity exercise on plate tectonics and how it could affect hospital readiness in a coastal city.\n\nTask:\nUsing the inputs, assess how plate tectonics could influence Lagos hospital infrastructure over the next decade and outline practical readiness steps.\n\nInputs:\n- Plate movement rate: 2 cm per year (approximate)\n- Time horizon: 10 years\n- Nearest fault distance to the hospital site: 40 km\n- Local ground conditions at the site: coastal soft clay with a high water table\n- Building type: 3-story reinforced concrete structure with some retrofitting done in the last 5 years\n- Emergency readiness: generator backup 24 hours; water storage capacity 2 weeks\n- Daily patient load: 500 patients\n\nSteps:\n1) Interpret the concept: plate tectonics means large pieces of the Earth's crust move slowly relative to each other, and this movement can cause earthquakes and ground shaking.\n2) Compute crustal displacement over the horizon: 2 cm/year × 10 years = 20 cm of relative movement.\n3) Connect to Lagos hospital risks: soft coastal soils amplify shaking; a distant earthquake could still produce meaningful ground motion at 40 km distance, potentially stressing foundations and utilities.\n4) Translate to actionable readiness: identify which hospital systems are most at risk and plan concrete steps to strengthen them.\n\nOutputs:\n- Crustal displacement over 10 years: 20 cm\n- Estimated ground shaking risk category (qualitative): Moderate (more risk than solid bedrock sites, heightened by soft clay and coastal setting)\n- Infrastructure risk factors to monitor: foundation stress, potential settlement, liquefaction risk in soft soils, vulnerability of heavy equipment and storage areas, reliability of water and power lines\n- Readiness actions to implement:\n  - Inspect and, if needed, retrofit foundations and structural connections for the 3-story building\n  - Secure heavy equipment, shelving, and tall medical storage to prevent toppling during shaking\n  - Verify generator operation, fuel supply, and water storage capacity; implement surge protection for critical systems\n  - Review and practice the disaster plan; ensure clear, accessible emergency egress routes\n  - Coordinate with local authorities for hazard maps and early-warning communications\n  - Educate staff on evacuation procedures and emergency patient triage during and after shaking events\n\nKey Insight:\nEven slow plate movement can accumulate over years and, combined with coastal soils, elevate earthquake risk for hospital infrastructure; proactive readiness focuses on building stability and robust, well-practiced emergency systems.",
+        "example_id": "ex_941e5510df364cbd",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity Plate Tectonics exercise set in Lagos, Nigeria featuring Amara, a nurse, as the scenario lead. Ground the content in real-world health-context implications (e.g., how tectonic plate movement could affect hospital infrastructure and emergency response in a Lagos setting) and present a short, step-by-step task with clearly labeled inputs and outputs to scaffold reasoning. Use plain language suitable for a nurse learner; avoid coding analogies; incorporate concrete, locally grounded details rather than abstract abstractions.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.5,
+    "reasoning": "The example demonstrates a good level of personalization by including the user's name, profession, location, and learning style, and it tailors the scenario to Lagos' coastal setting, which aligns with the user's background. The complexity appears appropriate, as it involves calculations, risk assessment, and practical planning, fitting a medium level. The scientific content about plate tectonics and earthquake risk is accurate and well-explained, with relevant details about ground conditions and infrastructure. The structure is clear, with step-by-step reasoning and actionable recommendations, making it pedagogically effective. The analogies and framing are domain-appropriate, focusing on hospital infrastructure and disaster preparedness, which suits the context of a nurse in Lagos dealing with natural hazards.\n\nPF: The example effectively personalizes the scenario with the user's profile details and context, integrating them naturally into the discussion.  \nAXIS_SCORE: 5\n\nCC: The complexity matches the user's medium level, involving calculations, risk analysis, and practical steps without overcomplicating or oversimplifying.  \nAXIS_SCORE: 4\n\nCA: The scientific facts about plate tectonics, ground shaking, and liquefaction are accurate and correctly applied to the scenario.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from concept interpretation to calculations, risk connection, and actionable steps, facilitating learning.  \nAXIS_SCORE: 5\n\nDA: The framing is entirely appropriate for the domain of natural hazards and infrastructure, with relevant analogies and vocabulary.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity Plate Tectonics exercise set in Lagos, Nigeria featuring Amara, a nurse, as the scenario lead. Ground the content in real-world health-context implications (e.g., how tectonic plate movement could affect hospital infrastructure and emergency response in a Lagos setting) and present a short, step-by-step task with clearly labeled inputs and outputs to scaffold reasoning. Use plain language suitable for a nurse learner; avoid coding analogies; incorporate concrete, locally grounded details rather than abstract abstractions.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction explicitly incorporates the user's preference for real-world, locally grounded examples involving Lagos, Nigeria, and emphasizes a health-related context relevant to a nurse, aligning with the stored pattern of domain preference. It also specifies a step-by-step, labeled approach suitable for medium complexity, directly reflecting the user's successful learning pattern. Therefore, it effectively synthesizes the stored patterns into a concrete, actionable directive.\n\nSPECIFICITY_SCORE: 5\n\n```json\n{\n  \"SPECIFICITY\": 5\n}\n```",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:24:48.129843"
+}

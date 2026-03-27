@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_06__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_98e9b171323f4563",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, treats a patient with a gut bacterial infection. The gut bacteria carry two alleles for a gene related to antibiotic X resistance: R (resistant) and S (susceptible). Antibiotic treatment applies selective pressure during therapy, which can shift how common each allele is in the surviving population.\n\nInputs:\n- Population size considered for calculation: 100 bacteria\n- Initial allele frequencies: p(R) = 0.20, p(S) = 0.80\n- Survival after antibiotic exposure (viability under treatment):\n  - w_R (resistant) = 0.90\n  - w_S (susceptible) = 0.10\n\nYour task (predict outcomes):\n- Predict the post-treatment frequency of R among survivors\n- Indicate which allele is favored by antibiotic X\n\nPrediction (your answer):\n- Post-treatment p(R) = ______\n- Favored allele = ______\n\nSolution:\n- Step 1: Initial counts from frequencies (N = 100)\n  - R: 0.20 × 100 = 20\n  - S: 0.80 × 100 = 80\n- Step 2: Apply survival (fitness)\n  - Survivors_R = 20 × 0.90 = 18\n  - Survivors_S = 80 × 0.10 = 8\n- Step 3: Total survivors\n  - Total = 18 + 8 = 26\n- Step 4: Post-treatment allele frequencies\n  - p'(R) = 18 / 26 ≈ 0.692\n  - p'(S) = 8 / 26 ≈ 0.308\n- Step 5: Interpretation\n  - The resistance allele frequency rises from 0.20 to about 0.69 after treatment\n  - The resistant allele is favored by this antibiotic pressure\n\nKey Insight:\n  Under selective antibiotic pressure, alleles that confer survival advantages increase in frequency among survivors; resistance can quickly become more common when treatment differentially eliminates susceptible bacteria.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, explains natural selection using hospital-ward equipment metaphors. In a patient’s gut, two bacterial “devices” compete for survival when antibiotic X is given through an infusion. The resistant devices (R) keep running under the infusion, while the susceptible devices (S) tend to shut down. We track how many devices of each type are present before and after the infusion to see how the population’s makeup shifts.\n\nInputs:\n  - NR0 = 60 (number of resistant bacteria at start) \n  - NS0 = 40 (number of susceptible bacteria at start)\n  - fR = 0.90 (survival fraction of resistant bacteria under antibiotic X)\n  - fS = 0.10 (survival fraction of susceptible bacteria under antibiotic X)\n\nStep 1 — Pre-selection device mix (baseline allele frequency):\n  - p0 = NR0 / (NR0 + NS0) = 60 / (60 + 40) = 0.60\n  - q0 = NS0 / (NR0 + NS0) = 40 / (60 + 40) = 0.40\n  - Interpretation: initially, 60% of the gut bacteria carry the resistance allele, 40% do not.\n\nStep 2 — Post-selection device counts (after infusion):\n  - NR = NR0 × fR = 60 × 0.90 = 54\n  - NS = NS0 × fS = 40 × 0.10 = 4\n\nStep 3 — Post-selection allele frequencies:\n  - p1 = NR / (NR + NS) = 54 / (54 + 4) = 54 / 58 ≈ 0.931\n  - q1 = 1 − p1 ≈ 0.069\n\nOutput:\n  - Post-selection resistant frequency p1 ≈ 0.931\n  - Post-selection susceptible frequency q1 ≈ 0.069\n  - Survivors: NR = 54 resistant bacteria, NS = 4 susceptible bacteria (total survivors = 58)\n\nInterpretation:\n  The antibiotic infusion acts like a selective pressure that favors the resistant devices. The frequency of the resistance allele rises from 0.60 to about 0.93 among survivors, showing how a strong selection pressure shifts the population toward resistance.\n\nKey Insight:\n  When a strong selective pressure acts (like an antibiotic), the surviving population becomes richer in the advantageous allele, shifting allele frequencies toward the resistant type.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, treats a patient with a gut bacterial infection. The gut bacteria carry two alleles for a gene related to antibiotic X resistance: R (resistant) and S (susceptible). Antibiotic treatment applies selective pressure during therapy, which can shift how common each allele is in the surviving population.\n\nInputs:\n- Population size considered for calculation: 100 bacteria\n- Initial allele frequencies: p(R) = 0.20, p(S) = 0.80\n- Survival after antibiotic exposure (viability under treatment):\n  - w_R (resistant) = 0.90\n  - w_S (susceptible) = 0.10\n\nYour task (predict outcomes):\n- Predict the post-treatment frequency of R among survivors\n- Indicate which allele is favored by antibiotic X\n\nPrediction (your answer):\n- Post-treatment p(R) = ______\n- Favored allele = ______\n\nSolution:\n- Step 1: Initial counts from frequencies (N = 100)\n  - R: 0.20 × 100 = 20\n  - S: 0.80 × 100 = 80\n- Step 2: Apply survival (fitness)\n  - Survivors_R = 20 × 0.90 = 18\n  - Survivors_S = 80 × 0.10 = 8\n- Step 3: Total survivors\n  - Total = 18 + 8 = 26\n- Step 4: Post-treatment allele frequencies\n  - p'(R) = 18 / 26 ≈ 0.692\n  - p'(S) = 8 / 26 ≈ 0.308\n- Step 5: Interpretation\n  - The resistance allele frequency rises from 0.20 to about 0.69 after treatment\n  - The resistant allele is favored by this antibiotic pressure\n\nKey Insight:\n  Under selective antibiotic pressure, alleles that confer survival advantages increase in frequency among survivors; resistance can quickly become more common when treatment differentially eliminates susceptible bacteria.",
+        "example_id": "ex_ed8326c62d9944eb",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nAmara is a nurse in Lagos, Nigeria, treating patients and studying how gut bacteria in treated patients shift their allele frequencies under antibiotic X. The scenario focuses on two alleles in a gut bacterium: R (resistant) and S (susceptible) to antibiotic X. She records initial frequencies, the fitness of each allele under treatment, and the patient population size to illustrate viability selection.\n\nInputs (clinical data):\n- Initial allele frequencies: p = 0.20 for R, q = 0.80 for S\n- Fitness under treatment: w_R = 0.90 (R survives better), w_S = 0.10 (S survives poorly)\n- Population size considered for calculation: N = 100\n- Type of selection: viability selection on survivors during antibiotic treatment\n\nLearner task:\nBased on these inputs, predict which bacteria allele increases after treatment and show the steps to arrive at the post-treatment frequencies.\n\nSolution (step-by-step calculations and outputs):\n1) Mean fitness\n   w_bar = p*w_R + q*w_S\n          = 0.20*0.90 + 0.80*0.10\n          = 0.18 + 0.08\n          = 0.26\n\n2) Post-selection allele frequency for R\n   p_R' = (p*w_R) / w_bar\n        = (0.20*0.90) / 0.26\n        = 0.18 / 0.26\n        ≈ 0.6923\n\n3) Post-selection allele frequency for S\n   p_S' ≈ 1 - p_R' ≈ 0.3077\n\n4) Survivors and check (N = 100 baseline)\n   R survivors = p*w_R*N = 0.20*0.90*100 = 18\n   S survivors = q*w_S*N = 0.80*0.10*100 = 8\n   Total survivors = 18 + 8 = 26\n   Post-selection p_R' calculated from survivors = 18/26 ≈ 0.6923 (consistent with step 2)\n\nFinal answers:\n- Post-treatment p(R) ≈ 0.692\n- Which allele is favored? R\n\nAssumptions and practical nuances:\n- Random mating is not required here; this is viability selection acting on survivors during treatment.\n- In small populations, sampling error or genetic drift can shift observed frequencies away from these expectations.\n\nKey Insight:\nUnder the antibiotic treatment, the allele with higher survival (R) increases in frequency, illustrating natural selection via differential viability.",
+        "example_id": "ex_f74beb329c5242e7"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nAmara, a nurse in Lagos, explains natural selection using hospital-ward equipment metaphors. In a patient’s gut, two bacterial “devices” compete for survival when antibiotic X is given through an infusion. The resistant devices (R) keep running under the infusion, while the susceptible devices (S) tend to shut down. We track how many devices of each type are present before and after the infusion to see how the population’s makeup shifts.\n\nInputs:\n  - NR0 = 60 (number of resistant bacteria at start) \n  - NS0 = 40 (number of susceptible bacteria at start)\n  - fR = 0.90 (survival fraction of resistant bacteria under antibiotic X)\n  - fS = 0.10 (survival fraction of susceptible bacteria under antibiotic X)\n\nStep 1 — Pre-selection device mix (baseline allele frequency):\n  - p0 = NR0 / (NR0 + NS0) = 60 / (60 + 40) = 0.60\n  - q0 = NS0 / (NR0 + NS0) = 40 / (60 + 40) = 0.40\n  - Interpretation: initially, 60% of the gut bacteria carry the resistance allele, 40% do not.\n\nStep 2 — Post-selection device counts (after infusion):\n  - NR = NR0 × fR = 60 × 0.90 = 54\n  - NS = NS0 × fS = 40 × 0.10 = 4\n\nStep 3 — Post-selection allele frequencies:\n  - p1 = NR / (NR + NS) = 54 / (54 + 4) = 54 / 58 ≈ 0.931\n  - q1 = 1 − p1 ≈ 0.069\n\nOutput:\n  - Post-selection resistant frequency p1 ≈ 0.931\n  - Post-selection susceptible frequency q1 ≈ 0.069\n  - Survivors: NR = 54 resistant bacteria, NS = 4 susceptible bacteria (total survivors = 58)\n\nInterpretation:\n  The antibiotic infusion acts like a selective pressure that favors the resistant devices. The frequency of the resistance allele rises from 0.60 to about 0.93 among survivors, showing how a strong selection pressure shifts the population toward resistance.\n\nKey Insight:\n  When a strong selective pressure acts (like an antibiotic), the surviving population becomes richer in the advantageous allele, shifting allele frequencies toward the resistant type.",
+        "example_id": "ex_1b4b256fb27b4c1a"
+      }
+    ],
+    "context_instruction": "Create the next Natural Selection example as a medium-complexity, Lagos-Nigeria nurse scenario featuring a named clinician (e.g., Amara) and antibiotic resistance in gut bacteria under treatment. Provide a step-by-step breakdown with clearly labeled inputs and outputs: present the clinical data as inputs, ask the learner to predict outcomes (e.g., which bacteria alleles increase), then present the solution with explicit rationale showing how allele frequencies shift due to differential survival. Keep it tightly grounded in real-world practice and avoid abstract analogies.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the context by mentioning Amara, a nurse in Lagos, Nigeria, and uses her profession and location to frame the scenario, aligning well with her profile. The complexity involves applying basic population genetics calculations, which is appropriate for a medium level and example-based learning style. The scientific content accurately describes the process of natural selection in bacteria under antibiotic pressure, with correct calculations and interpretation, demonstrating good conceptual accuracy. The structure is clear, with step-by-step calculations and a key insight that ties the example to the core concept, facilitating understanding. The analogy of bacteria surviving antibiotic treatment is domain-appropriate, directly relating to biological evolution and natural selection.\n\nPERSONALIZATION FIDELITY: The example is well tailored, integrating the user's profession, location, and learning style effectively.  \nAXIS_SCORE: 5\n\nCOMPLEXITY CALIBRATION: The calculations and explanation are at a medium complexity level, suitable for someone with a professional background but not specialized in genetics, matching the user's profile.  \nAXIS_SCORE: 4\n\nCONCEPTUAL ACCURACY: The scientific explanation and calculations are correct, accurately illustrating how natural selection operates in bacterial populations under antibiotic pressure.  \nAXIS_SCORE: 5\n\nPEDAGOGICAL CLARITY: The example is well-structured with clear steps, making the concept accessible and memorable, especially with the explicit key insight.  \nAXIS_SCORE: 5\n\nDOMAIN APPROPRIATENESS: The analogy of bacteria and antibiotic resistance is highly appropriate for explaining natural selection in a biological context, aligning perfectly with the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by using the user's name, profession, and location, and incorporates a domain-specific analogy related to healthcare, which aligns with her background as a nurse. The complexity appears appropriate, involving detailed calculations and explanations suitable for a medium level, matching her learning style of example-based learning. The scientific content is accurate, correctly describing natural selection and antibiotic resistance mechanisms. The structure is clear, with step-by-step calculations and a key insight that reinforces understanding. The analogy of hospital-ward equipment and bacteria in the gut is appropriate for the biological topic, making the example domain-relevant and engaging.\n\nPF_SCORE: 4\nCC_SCORE: 5\nCA_SCORE: 5\nPC_SCORE: 5\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example simplifies the explanation by clearly outlining the step-by-step calculations and explicitly states the predicted increase in the resistant allele, aligning with the request for simplicity and technical depth. It also maintains the focus on viability selection and provides detailed calculations, addressing the critique effectively.\n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example effectively replaces the abstract biological scenario with a medical equipment analogy, aligning with the user's preference for more natural, concrete comparisons. It clearly illustrates the concept of natural selection through hospital equipment metaphors, making the abstract idea more tangible and relevant to medical contexts. Therefore, it directly addresses the user's critique by incorporating a medical analogy.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Create the next Natural Selection example as a medium-complexity, Lagos-Nigeria nurse scenario featuring a named clinician (e.g., Amara) and antibiotic resistance in gut bacteria under treatment. Provide a step-by-step breakdown with clearly labeled inputs and outputs: present the clinical data as inputs, ask the learner to predict outcomes (e.g., which bacteria alleles increase), then present the solution with explicit rationale showing how allele frequencies shift due to differential survival. Keep it tightly grounded in real-world practice and avoid abstract analogies.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 4,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 1,
+    "total": 2,
+    "accuracy": 0.5,
+    "details": [
+      {
+        "round": 1,
+        "expected": null,
+        "actual": "regenerate",
+        "excluded": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T11:47:20.294530"
+}

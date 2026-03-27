@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 4,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.4,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 4,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're deciding whether to buy a new laptop. You see a review online from a tech blogger who says, \"This model is the best I've ever used.\" You remember this glowing review vividly, but you don't recall the three other reviews you skimmed that mentioned the laptop's battery life issues.\n\nThis is the **Availability Heuristic**: a cognitive bias where you judge the likelihood or importance of something based on how easily examples come to mind. The memorable, positive review is more \"available\" in your memory than the less vivid, critical ones.\n\nDecision Impact:\n- Based primarily on the one positive review, you decide to buy the laptop.\n- After purchase, you experience the battery problems the other reviews mentioned.\n- Your initial judgment was skewed because the most easily recalled information wasn't the most representative.\n\nKey Insight:\nCognitive biases like the Availability Heuristic shortcut our thinking, often using emotional salience over statistical reality, leading to predictable errors in judgment similar to how an animal might overreact to a rare but memorable threat.",
+      "example_id": "ex_ab5b82a3d90b4700",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Availability Heuristic\n\nExample:\nLena is deciding whether to bring her umbrella to university in Berlin. She remembers that yesterday it rained heavily, and she got soaked walking to class. She also recalls a recent news story about a sudden downpour in the city.\n\nWhat happens:\n- Her decision is heavily influenced by these vivid, recent memories.\n- She ignores the actual weather forecast for today, which predicts sunshine.\n- She grabs her umbrella, even though it's unnecessary.\n\nKey Insight:\nThe Availability Heuristic makes us judge the likelihood of an event based on how easily we can recall examples of it. Recent or dramatic memories feel more \"available\" and can lead us to overestimate how common something really is.",
+      "example_id": "ex_ebac2746416c4a5d"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Confirmation Bias\n\nExample:\nLena, a student in Berlin, is preparing for a history exam on the causes of World War I. She believes that economic factors were the primary driver, based on a few articles she read early in her study. As she researches further, she unconsciously focuses on sources that support this view.\n\nWhat happens:\n- She spends extra time reading books and websites that emphasize trade disputes and colonial competition.\n- She quickly skims or dismisses articles that argue political alliances or nationalism were more important, mentally noting they seem \"less convincing.\"\n- When discussing with classmates, she mainly brings up the economic evidence she has collected, reinforcing her initial belief.\n\nThe result:\nHer final essay strongly argues the economic thesis, but it overlooks key counter-evidence, potentially costing her marks for a lack of balanced analysis.\n\nKey Insight:\nConfirmation bias is the tendency to search for, interpret, and remember information in a way that confirms our pre-existing beliefs, while ignoring or undervaluing contradictory evidence. In academic work, this can lead to incomplete understanding and weaker arguments.",
+      "example_id": "ex_202770c95a3f4e1e"
+    }
+  ],
+  "timestamp": "2026-03-15T21:10:09.922537"
+}

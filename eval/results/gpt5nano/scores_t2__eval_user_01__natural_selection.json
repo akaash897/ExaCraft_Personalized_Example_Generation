@@ -1,0 +1,80 @@
+{
+  "key": "t2__eval_user_01__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_c78ec982e17749e2",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nSetting:\n- In a university park near Berlin, Lena notices a small beetle population on tree bark. The population comes in two color morphs: brown and green.\n\nWhat varies and why it matters:\n- Variation: Some beetles are brown, others green. This difference in color is heritable.\n- Environment and selection pressure: The tree bark is predominantly brown, and birds hunt by sight. Brown beetles are harder to spot than green ones, so they tend to survive longer and reproduce more.\n\nNumbers (one-generation illustration):\n- Initial population: 70 brown beetles, 30 green beetles (total 100)\n- Survival probabilities due to predation: brown survive at 90% (0.9), green survive at 50% (0.5)\n- After predation:\n  - Brown survivors: 0.9 × 70 = 63\n  - Green survivors: 0.5 × 30 = 15\n  - Total survivors: 78\n- Reproduction (assume each survivor leaves 2 offspring for the next generation):\n  - Brown offspring: 2 × 63 = 126\n  - Green offspring: 2 × 15 = 30\n- Next generation composition:\n  - Brown: 126, Green: 30 (total 156)\n  - Brown frequency ≈ 126/156 ≈ 0.81; Green ≈ 0.19\n\nResult:\n- The brown trait becomes more common in the population across generations because it provided a survival advantage in this environment.\n\nKey Insight:\n- Natural selection favors traits that improve survival and reproduction in a given environment, so the proportion of those traits tends to increase over generations. Here, the brown color became more frequent because it helped beetles avoid predation on brown bark.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nSetting:\n- In a university park near Berlin, Lena notices a small beetle population on tree bark. The population comes in two color morphs: brown and green.\n\nWhat varies and why it matters:\n- Variation: Some beetles are brown, others green. This difference in color is heritable.\n- Environment and selection pressure: The tree bark is predominantly brown, and birds hunt by sight. Brown beetles are harder to spot than green ones, so they tend to survive longer and reproduce more.\n\nNumbers (one-generation illustration):\n- Initial population: 70 brown beetles, 30 green beetles (total 100)\n- Survival probabilities due to predation: brown survive at 90% (0.9), green survive at 50% (0.5)\n- After predation:\n  - Brown survivors: 0.9 × 70 = 63\n  - Green survivors: 0.5 × 30 = 15\n  - Total survivors: 78\n- Reproduction (assume each survivor leaves 2 offspring for the next generation):\n  - Brown offspring: 2 × 63 = 126\n  - Green offspring: 2 × 15 = 30\n- Next generation composition:\n  - Brown: 126, Green: 30 (total 156)\n  - Brown frequency ≈ 126/156 ≈ 0.81; Green ≈ 0.19\n\nResult:\n- The brown trait becomes more common in the population across generations because it provided a survival advantage in this environment.\n\nKey Insight:\n- Natural selection favors traits that improve survival and reproduction in a given environment, so the proportion of those traits tends to increase over generations. Here, the brown color became more frequent because it helped beetles avoid predation on brown bark.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nSetting:\n- In a university park near Berlin, Lena notices a small beetle population on tree bark. The population comes in two color morphs: brown and green.\n\nWhat varies and why it matters:\n- Variation: Some beetles are brown, others green. This difference in color is heritable.\n- Environment and selection pressure: The tree bark is predominantly brown, and birds hunt by sight. Brown beetles are harder to spot than green ones, so they tend to survive longer and reproduce more.\n\nNumbers (one-generation illustration):\n- Initial population: 70 brown beetles, 30 green beetles (total 100)\n- Survival probabilities due to predation: brown survive at 90% (0.9), green survive at 50% (0.5)\n- After predation:\n  - Brown survivors: 0.9 × 70 = 63\n  - Green survivors: 0.5 × 30 = 15\n  - Total survivors: 78\n- Reproduction (assume each survivor leaves 2 offspring for the next generation):\n  - Brown offspring: 2 × 63 = 126\n  - Green offspring: 2 × 15 = 30\n- Next generation composition:\n  - Brown: 126, Green: 30 (total 156)\n  - Brown frequency ≈ 126/156 ≈ 0.81; Green ≈ 0.19\n\nResult:\n- The brown trait becomes more common in the population across generations because it provided a survival advantage in this environment.\n\nKey Insight:\n- Natural selection favors traits that improve survival and reproduction in a given environment, so the proportion of those traits tends to increase over generations. Here, the brown color became more frequent because it helped beetles avoid predation on brown bark.",
+        "example_id": "ex_48746c7028484872",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by setting it in Berlin and involving Lena, a high school student, which aligns with her profile. The complexity level is medium, and the explanation uses straightforward biological concepts without excessive technical detail, suitable for a high school learner. The scientific content appears accurate, correctly describing natural selection and the process of differential survival and reproduction. The structure is clear, with a logical flow from setting to key insight, making it pedagogically effective. The analogies used, such as beetle color and predation, are appropriate for biology and match the domain well.\n\nPF: The example directly incorporates Lena's name and location, and the scenario is tailored to her learning style (example-based), making it highly personalized.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation matches a medium complexity level, with clear numerical illustration and biological principles suitable for a high school student.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing heritable variation, environmental pressures, and the resulting change in trait frequency. No errors are evident.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, starting from setting, explaining variation, environmental pressure, numerical illustration, and concluding with the key insight, facilitating learning.  \nAXIS_SCORE: 5\n\nDA: The framing and analogies (beetle color, predation, environment) are perfectly appropriate for a biology topic, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 4,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.8,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example is tailored to the user's profile by mentioning the user's name, \"Lena,\" and location, \"Berlin,\" which directly relates to the user's background, thus showing a clear attempt to personalize the learning experience. The example also matches the user's learning style by providing a concrete, example-based scenario, which aligns with the specified \"example-based\" learning preference.\n\nPF_SCORE: 5\n\nFor Complexity Calibration (CC), the example seems to match the medium complexity level requested by the user, as it involves a straightforward scenario with basic mathematical calculations that are not overly complex but still require some thought, making it suitable for a high school student. The depth of the explanation and the use of simple probabilities and genetics concepts align well with what would be expected for a medium complexity level.\n\nCC_SCORE: 5\n\nRegarding Conceptual Accuracy (CA), the example accurately represents the concept of natural selection, correctly explaining how traits that offer a survival advantage in a specific environment become more common over generations. The use of a simple, realistic scenario with beetles and predation pressure effectively illustrates the core principles of natural selection without introducing any significant errors or inaccuracies.\n\nCA_SCORE: 5\n\nIn terms of Pedagogical Clarity (PC), the example is well-structured, starting with a clear setting, explaining the variation and selection pressure, and then walking through a simple numerical example to illustrate how natural selection acts on the population over a generation. The key insight at the end succinctly summarizes the main point of the example, making it easy for the learner to understand and remember the concept.\n\nPC_SCORE: 5\n\nFor Domain Appropriateness (DA), the example is perfectly suited to the domain of biology and natural selection, using relevant terminology and a realistic biological scenario (beetles, predation, reproduction) that directly pertains to the topic. There are no elements from other domains (like coding) that might confuse the learner or detract from the biological focus.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:11:30.879226"
+}

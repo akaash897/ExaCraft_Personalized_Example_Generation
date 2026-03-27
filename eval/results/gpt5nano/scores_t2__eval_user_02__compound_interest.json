@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_02__compound_interest",
+  "tier": "t2",
+  "user_id": "eval_user_02",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_02",
+    "topic": "Compound Interest",
+    "thread_id": "thread_f2524bc5464e49f5",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nAmara is a nurse in Lagos who wants her savings to grow with minimal effort. She deposits money into a savings account that earns interest, and the earned interest also earns interest.\n\nScenario:\n- Principal (P): 50,000 Naira\n- Annual interest rate (r): 6% → 0.06\n- Compounded monthly (n): 12 times per year\n- Time (t): 2 years\n\nFormula:\nA = P × (1 + r/n)^(n × t)\n\nCalculation:\n- 1 + r/n = 1 + 0.06/12 = 1.005\n- n × t = 24\n- A = 50,000 × (1.005)^24 ≈ 50,000 × 1.127 ≈ 56,360 Naira\n\nWhat it means:\n- Interest earned ≈ 6,360 Naira over 2 years.\n- The balance grows faster than simple interest because interest itself earns interest each period.\n\nKey Insight:\nCompound interest helps money grow more over time, especially when interest is added frequently. The more often it compounds and the longer it remains invested, the bigger the growth.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nAmara is a nurse in Lagos who wants her savings to grow with minimal effort. She deposits money into a savings account that earns interest, and the earned interest also earns interest.\n\nScenario:\n- Principal (P): 50,000 Naira\n- Annual interest rate (r): 6% → 0.06\n- Compounded monthly (n): 12 times per year\n- Time (t): 2 years\n\nFormula:\nA = P × (1 + r/n)^(n × t)\n\nCalculation:\n- 1 + r/n = 1 + 0.06/12 = 1.005\n- n × t = 24\n- A = 50,000 × (1.005)^24 ≈ 50,000 × 1.127 ≈ 56,360 Naira\n\nWhat it means:\n- Interest earned ≈ 6,360 Naira over 2 years.\n- The balance grows faster than simple interest because interest itself earns interest each period.\n\nKey Insight:\nCompound interest helps money grow more over time, especially when interest is added frequently. The more often it compounds and the longer it remains invested, the bigger the growth.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nAmara is a nurse in Lagos who wants her savings to grow with minimal effort. She deposits money into a savings account that earns interest, and the earned interest also earns interest.\n\nScenario:\n- Principal (P): 50,000 Naira\n- Annual interest rate (r): 6% → 0.06\n- Compounded monthly (n): 12 times per year\n- Time (t): 2 years\n\nFormula:\nA = P × (1 + r/n)^(n × t)\n\nCalculation:\n- 1 + r/n = 1 + 0.06/12 = 1.005\n- n × t = 24\n- A = 50,000 × (1.005)^24 ≈ 50,000 × 1.127 ≈ 56,360 Naira\n\nWhat it means:\n- Interest earned ≈ 6,360 Naira over 2 years.\n- The balance grows faster than simple interest because interest itself earns interest each period.\n\nKey Insight:\nCompound interest helps money grow more over time, especially when interest is added frequently. The more often it compounds and the longer it remains invested, the bigger the growth.",
+        "example_id": "ex_f8885fdb52234a86",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 4,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.5,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Amara's profession, location, and learning style, integrating her profile into the context. The complexity level appears appropriate, with clear explanations and calculations suitable for a medium level of understanding. The factual content about compound interest, formulas, and calculations is accurate and aligns with standard financial principles. The structure is logical, starting from the scenario to the formula, calculation, and key insight, which facilitates learning. The analogy of money growing in a savings account is domain-appropriate, using familiar financial concepts relevant to the topic.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Amara's name, profession, and location, and frames the scenario around her interest in savings, which is relevant and personalized. The learning style is mentioned but not explicitly reflected in the example, though the example-based approach is evident. Overall, it is well-tailored to her profile.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes formulas, calculations, and insights suitable for a medium complexity level, neither too simplistic nor overly technical. It strikes a good balance for a professional learner with some familiarity with basic concepts.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The content correctly explains compound interest, provides the right formula, and performs accurate calculations. The key insight about interest earning interest is correct and well-articulated.\nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from scenario to formula, calculation, and insight. The step-by-step approach aids understanding, and the key takeaway is memorable.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of money growing in a savings account is perfectly appropriate for the topic of compound interest, using familiar financial terminology and framing.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 4, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:14:14.747064"
+}

@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Natural Selection\n\nExample:\nAmara, imagine you're a nurse in Lagos treating patients during a malaria outbreak. The mosquitoes that carry malaria are evolving resistance to common insecticides, much like how bacteria can become resistant to antibiotics.\n\nScenario:\n- Initial mosquito population: Mostly susceptible to insecticide.\n- Insecticide applied: Kills most susceptible mosquitoes.\n- Surviving mosquitoes: A few have a genetic trait that makes them resistant.\n- Reproduction: Resistant mosquitoes breed, passing the resistance trait to offspring.\n- Next generation: A higher proportion of mosquitoes are resistant.\n- Result: The insecticide becomes less effective over time.\n\nKey Terms:\n- Variation: Differences in traits (like resistance) exist naturally in a population.\n- Selection Pressure: The insecticide creates an environment where resistant individuals survive better.\n- Inheritance: Surviving mosquitoes pass their advantageous traits to their children.\n- Adaptation: Over generations, the population becomes better suited to its environment (surviving insecticide).\n\nKey Insight:\nNatural selection isn't random\u2014it's the non-random survival of random variations. Traits that help individuals survive and reproduce become more common in the population over time, leading to adaptation.",
+      "example_id": "ex_ddc6c9fa4b8d4eca",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection in a Clinical Context\n\nExample:\nAmara, as a nurse in Lagos, you witness natural selection firsthand through antibiotic resistance in hospital settings. When a patient receives antibiotics, most susceptible bacteria die, but a few with random genetic mutations survive because they're resistant.\n\nClinical Scenario:\nA patient with a bacterial infection receives a standard antibiotic course. The drug kills 99.9% of bacteria, but the 0.1% with resistance genes survive and reproduce. Within days, the infection rebounds\u2014now dominated by resistant bacteria that the same antibiotic cannot treat.\n\nKey Terms in Nursing Practice:\n- Selective Pressure: The antibiotic creates an environment where only resistant bacteria thrive\n- Fitness Advantage: Resistant bacteria outcompete susceptible ones in medicated patients\n- Genetic Variation: Random mutations in bacterial DNA create resistance traits\n\nNumeric Example:\nInitial infection: 1,000,000 bacteria (999,900 susceptible, 100 resistant)\nAfter antibiotic: 100 resistant bacteria remain\n24 hours later: 100 \u2192 200 \u2192 400 \u2192 800 (doubling every few hours)\nWithin 3 days: Over 50,000 resistant bacteria requiring different treatment\n\nNursing Implications:\n1. Antibiotic stewardship: Using the right drug at the right dose for the right duration\n2. Infection control: Preventing spread of resistant strains between patients\n3. Patient education: Explaining why completing antibiotic courses matters\n4. Surveillance: Monitoring for resistant infections in hospital units\n\nKey Insight:\nNatural selection isn't just a biological theory\u2014it's a daily reality in nursing where our medical interventions directly shape which bacteria survive and thrive, making antibiotic resistance one of the most urgent evolutionary processes affecting patient care today.",
+      "example_id": "ex_2770e0c710c04667"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nThink of natural selection in a hospital setting as the process that determines which medical equipment gets used most frequently based on its effectiveness in different clinical situations.\n\nConsider three different types of blood pressure monitors on a Lagos hospital ward:\n- **Traditional manual cuff and stethoscope** \u2192 Reliable but requires training and time\n- **Automated digital monitor** \u2192 Quick, easy for staff, but can be less accurate with irregular heart rhythms\n- **Continuous invasive arterial line monitor** \u2192 Highly accurate in critical care, but requires specialized setup and carries infection risk\n\n**Selection Pressure:**\nThe \"environment\" (clinical needs, patient acuity, staffing levels, and hospital protocols) favors different equipment at different times. During a mass casualty event with many patients, the automated monitor gets \"selected\" because speed and ease-of-use are critical. In the ICU, the arterial line is \"selected\" because precision under life-threatening conditions is paramount. The manual cuff persists in situations where cost is a constraint or where staff skill is high.\n\n**Reproduction & Inheritance:**\nSuccessful equipment models are \"reproduced\" through hospital purchasing decisions\u2014more units of the effective monitor are ordered. Newer models \"inherit\" traits from successful predecessors (e.g., a new monitor combines the automation of the digital device with algorithms to handle irregular rhythms).\n\n**Key Insight:**\nJust as natural selection favors traits that improve survival and reproduction in a given environment, clinical practice naturally favors the medical equipment whose traits (accuracy, speed, cost, safety) best solve the problems presented by the specific healthcare environment. The \"fittest\" equipment for the job gets used, purchased, and iteratively improved.",
+      "example_id": "ex_31e4dc8e13274d02"
+    }
+  ],
+  "timestamp": "2026-03-15T21:20:37.205544"
+}

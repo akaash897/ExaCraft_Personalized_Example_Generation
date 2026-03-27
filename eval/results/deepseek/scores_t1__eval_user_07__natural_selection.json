@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_07__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_07",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_07",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "S\u00e3o Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_07",
+    "topic": "Natural Selection",
+    "thread_id": "thread_bfd4a4cec0c24d28",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nCarlos, as a humanities researcher in S\u00e3o Paulo, you might think of natural selection as a slow, invisible editor of life. Imagine a population of moths in a local forest near S\u00e3o Paulo. Initially, most moths are light-colored, blending well with the lichen-covered tree bark.\n\nA change occurs: industrial pollution darkens the trees with soot.\n\n- **Variation:** Within the moth population, some individuals are naturally darker due to genetic differences.\n- **Selection Pressure:** The darker trees make light moths highly visible to predatory birds, while dark moths are better camouflaged.\n- **Differential Survival:** Over many generations, more dark moths survive to reproduce and pass on their dark-wing genes.\n- **Outcome:** The population shifts from predominantly light to predominantly dark moths. This is **industrial melanism**.\n\nThe process doesn't create new traits; it simply favors existing variations that confer a survival or reproductive advantage in a given environment.\n\nKey Insight:\nNatural selection is not random\u2014it's the non-random outcome of heritable variation interacting with environmental pressures. The \"fittest\" are simply those whose traits best match the current challenges of their surroundings.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nCarlos, as a humanities researcher in S\u00e3o Paulo, you might think of natural selection as a slow, invisible editor of life. Imagine a population of moths in a local forest near S\u00e3o Paulo. Initially, most moths are light-colored, blending well with the lichen-covered tree bark.\n\nA change occurs: industrial pollution darkens the trees with soot.\n\n- **Variation:** Within the moth population, some individuals are naturally darker due to genetic differences.\n- **Selection Pressure:** The darker trees make light moths highly visible to predatory birds, while dark moths are better camouflaged.\n- **Differential Survival:** Over many generations, more dark moths survive to reproduce and pass on their dark-wing genes.\n- **Outcome:** The population shifts from predominantly light to predominantly dark moths. This is **industrial melanism**.\n\nThe process doesn't create new traits; it simply favors existing variations that confer a survival or reproductive advantage in a given environment.\n\nKey Insight:\nNatural selection is not random\u2014it's the non-random outcome of heritable variation interacting with environmental pressures. The \"fittest\" are simply those whose traits best match the current challenges of their surroundings.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nCarlos, as a humanities researcher in S\u00e3o Paulo, you might think of natural selection as a slow, invisible editor of life. Imagine a population of moths in a local forest near S\u00e3o Paulo. Initially, most moths are light-colored, blending well with the lichen-covered tree bark.\n\nA change occurs: industrial pollution darkens the trees with soot.\n\n- **Variation:** Within the moth population, some individuals are naturally darker due to genetic differences.\n- **Selection Pressure:** The darker trees make light moths highly visible to predatory birds, while dark moths are better camouflaged.\n- **Differential Survival:** Over many generations, more dark moths survive to reproduce and pass on their dark-wing genes.\n- **Outcome:** The population shifts from predominantly light to predominantly dark moths. This is **industrial melanism**.\n\nThe process doesn't create new traits; it simply favors existing variations that confer a survival or reproductive advantage in a given environment.\n\nKey Insight:\nNatural selection is not random\u2014it's the non-random outcome of heritable variation interacting with environmental pressures. The \"fittest\" are simply those whose traits best match the current challenges of their surroundings.",
+        "example_id": "ex_60d21b6dc9e449d1",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.8,
+      "CC": 4.51,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.862,
+    "reasoning": "The example effectively personalizes the content by directly addressing Carlos, including his location and profession, and uses a relatable analogy involving local environmental change, which aligns with his humanities background. The complexity appears appropriate, with clear explanations suitable for a PhD-level learner, emphasizing conceptual understanding without oversimplification. The factual content about natural selection and industrial melanism is accurate and well-explained, reinforcing core principles. The structure is logical, with a clear progression from analogy to key insight, facilitating learning. The analogy is appropriate for the biological topic, using environmental change and adaptation, which are domain-relevant concepts.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example directly mentions Carlos, his location, and profession, and uses an analogy involving local environmental change, which is highly relevant and personalized.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION \u2014 The language and explanation are detailed but accessible, matching a medium complexity level suitable for a PhD in humanities, focusing on conceptual clarity without excessive technical jargon.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 The scientific content about natural selection, variation, and industrial melanism is accurate, with correct descriptions of the process and outcome.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a logical flow from analogy to core principles and a memorable key insight, making it effective for learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogy involving environmental change and adaptation is perfectly suited for biology, and the framing aligns well with the topic of natural selection.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:31:58.946965"
+}

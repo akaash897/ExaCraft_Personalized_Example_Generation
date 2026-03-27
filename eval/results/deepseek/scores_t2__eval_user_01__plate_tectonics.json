@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_01__plate_tectonics",
+  "tier": "t2",
+  "user_id": "eval_user_01",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_01",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_7fd3c53b0a344482",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nLena, imagine you're walking through Berlin's Tiergarten. The ground feels solid, but deep beneath your feet, the Earth's surface is made of giant, slowly moving slabs called tectonic plates. These plates float on a hot, soft layer of the mantle, much like a thick soup.\n\nA key process is subduction, where one plate slides under another. For a numeric example, consider the Nazca Plate diving under the South American Plate off the coast of Chile.\n- Convergence Rate: ~7 cm per year (about the speed your fingernails grow).\n- Over 1 million years: 7 cm/year * 1,000,000 years = 70 km of movement.\nThis ongoing collision crumples the South American Plate, building the Andes Mountains and causing powerful earthquakes.\n\nKey Insight:\nThe Earth's surface is a dynamic puzzle of moving plates. Their interactions—colliding, pulling apart, or sliding past each other—are the primary force behind the creation of mountains, volcanoes, and earthquakes.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nLena, imagine you're walking through Berlin's Tiergarten. The ground feels solid, but deep beneath your feet, the Earth's surface is made of giant, slowly moving slabs called tectonic plates. These plates float on a hot, soft layer of the mantle, much like a thick soup.\n\nA key process is subduction, where one plate slides under another. For a numeric example, consider the Nazca Plate diving under the South American Plate off the coast of Chile.\n- Convergence Rate: ~7 cm per year (about the speed your fingernails grow).\n- Over 1 million years: 7 cm/year * 1,000,000 years = 70 km of movement.\nThis ongoing collision crumples the South American Plate, building the Andes Mountains and causing powerful earthquakes.\n\nKey Insight:\nThe Earth's surface is a dynamic puzzle of moving plates. Their interactions—colliding, pulling apart, or sliding past each other—are the primary force behind the creation of mountains, volcanoes, and earthquakes.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nLena, imagine you're walking through Berlin's Tiergarten. The ground feels solid, but deep beneath your feet, the Earth's surface is made of giant, slowly moving slabs called tectonic plates. These plates float on a hot, soft layer of the mantle, much like a thick soup.\n\nA key process is subduction, where one plate slides under another. For a numeric example, consider the Nazca Plate diving under the South American Plate off the coast of Chile.\n- Convergence Rate: ~7 cm per year (about the speed your fingernails grow).\n- Over 1 million years: 7 cm/year * 1,000,000 years = 70 km of movement.\nThis ongoing collision crumples the South American Plate, building the Andes Mountains and causing powerful earthquakes.\n\nKey Insight:\nThe Earth's surface is a dynamic puzzle of moving plates. Their interactions—colliding, pulling apart, or sliding past each other—are the primary force behind the creation of mountains, volcanoes, and earthquakes.",
+        "example_id": "ex_8b2b37c4f8c0405d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.74,
+      "CC": 4.25,
+      "CA": 5.0,
+      "PC": 4.97,
+      "DA": 4.98
+    },
+    "composite": 4.79,
+    "reasoning": "The example effectively personalizes the content by directly addressing Lena, incorporating her location (Berlin), and using her name, which aligns well with her profile. The complexity level appears appropriate for a high school student, with clear explanations and basic numerical calculations that are accessible. The scientific content about plate tectonics is accurate, correctly describing key processes like subduction and mountain formation, which indicates good factual accuracy. The structure is logical, starting with an analogy, then providing a concrete example, and ending with a key insight, making it pedagogically clear. The analogy of tectonic plates floating on a \"hot, soft layer of the mantle\" and comparing plate movement to walking in Berlin's Tiergarten is domain-appropriate and helps visualize the concept effectively.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Lena's name and location, and the analogy is related to her environment, which enhances personalization. It also matches her learning style (example-based).  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The language and concepts (tectonic plates, subduction, convergence rate, mountain building) are suitable for a high school level, with simple calculations and explanations.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific facts are correct, including the description of tectonic plates, subduction, and mountain formation, with no inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear analogy, a concrete numerical example, and a summarizing insight, facilitating understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of floating plates on a \"hot, soft layer\" and the description of plate interactions are highly appropriate for geology and earth science.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:38:45.202138"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_04__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_4c8abdc7fcdd4ab9",
+    "initial_example": "Concept: Cognitive Bias\nExample:\nKenji, a Software Engineer in Tokyo, is planning testing for a new feature. After debugging three high-severity bugs in recent features, he finds it hard to shake the memory of those incidents and now overestimates the risk for the new feature. He assigns a 60% chance that the new feature will have at least one bug in its first release, because the bugs he just saw were fresh in his mind.\n\nNumbers:\n- Estimated bug probability for the new feature: p_est = 0.60\n- Historical bug probability per feature (based on project data): p_hist = 0.15\n- Absolute error between estimate and data: |p_est − p_hist| = 0.45 (45 percentage points)\n\nImpact:\n- Enables more conservative planning: more test cases and extra QA time than the data alone would justify.\n\nMitigation (brief reminder):\n- Check historical data before sizing risk.\n- Use data-driven estimates (e.g., average bug rate with a small confidence interval).\n\nKey Insight:\n- Availability bias makes memorable incidents loom larger than their real frequency; always ground risk estimates in data.",
+    "final_example": "Concept: Cognitive Bias\nExample:\nKenji, a Software Engineer in Tokyo, is planning testing for a new feature. After debugging three high-severity bugs in recent features, he finds it hard to shake the memory of those incidents and now overestimates the risk for the new feature. He assigns a 60% chance that the new feature will have at least one bug in its first release, because the bugs he just saw were fresh in his mind.\n\nNumbers:\n- Estimated bug probability for the new feature: p_est = 0.60\n- Historical bug probability per feature (based on project data): p_hist = 0.15\n- Absolute error between estimate and data: |p_est − p_hist| = 0.45 (45 percentage points)\n\nImpact:\n- Enables more conservative planning: more test cases and extra QA time than the data alone would justify.\n\nMitigation (brief reminder):\n- Check historical data before sizing risk.\n- Use data-driven estimates (e.g., average bug rate with a small confidence interval).\n\nKey Insight:\n- Availability bias makes memorable incidents loom larger than their real frequency; always ground risk estimates in data.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\nExample:\nKenji, a Software Engineer in Tokyo, is planning testing for a new feature. After debugging three high-severity bugs in recent features, he finds it hard to shake the memory of those incidents and now overestimates the risk for the new feature. He assigns a 60% chance that the new feature will have at least one bug in its first release, because the bugs he just saw were fresh in his mind.\n\nNumbers:\n- Estimated bug probability for the new feature: p_est = 0.60\n- Historical bug probability per feature (based on project data): p_hist = 0.15\n- Absolute error between estimate and data: |p_est − p_hist| = 0.45 (45 percentage points)\n\nImpact:\n- Enables more conservative planning: more test cases and extra QA time than the data alone would justify.\n\nMitigation (brief reminder):\n- Check historical data before sizing risk.\n- Use data-driven estimates (e.g., average bug rate with a small confidence interval).\n\nKey Insight:\n- Availability bias makes memorable incidents loom larger than their real frequency; always ground risk estimates in data.",
+        "example_id": "ex_9ca4f2d35b5f439d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, profession, and location, making it relevant to Kenji's context as a software engineer in Tokyo. The complexity level appears appropriate, discussing risk estimation and cognitive bias with some quantitative detail, suitable for an undergraduate-level learner with a medium complexity preference. The factual content about availability bias and risk estimation is accurate and aligns with established psychological principles. The structure is clear, with a logical flow from scenario to insight, and the analogy of debugging and bug risk is domain-appropriate, using software testing as the framing. Overall, the example is well-tailored and pedagogically sound for the intended audience.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Kenji's role, location, and profession, integrating these elements into the scenario, which enhances relevance. The learning style (example-based) is also addressed through a concrete, relatable scenario.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The discussion involves risk estimation, bias, and some quantitative reasoning, matching a medium complexity level suitable for an undergraduate engineer. It avoids overly technical formulas or overly simplistic explanations.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The explanation of availability bias and its impact on risk estimation is accurate, and the numerical example is consistent with real-world concepts. There are no factual inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, followed by numbers, impact, mitigation, and key insight, facilitating understanding. The flow is logical, and the core lesson is explicit.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of debugging bugs and risk estimation is highly appropriate for software engineering, making the framing relevant and effective for the topic of cognitive bias in a technical context.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:16:59.600750"
+}

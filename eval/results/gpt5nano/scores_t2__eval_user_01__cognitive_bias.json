@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_01__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_fcc0790b88e54249",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nLena is a student in Berlin studying for a psychology module on decision making. She notices she often overestimates how likely recent, vivid information is to appear in her exams. This is an example of availability bias, a type of cognitive bias where memorable information disproportionately influences judgments.\n\nScenario:\n- The course has 8 topics, and questions are roughly evenly distributed across topics (about 12.5% per topic on average).\n- Recently, Lena spent two days deeply studying Topic X and read a dramatic case study about it.\n- Her guess for the exam: 70% of the questions will be about Topic X.\n- Reality (base rate): with 8 questions total and even distribution, the expected number of Topic X questions is 8 × 1/8 = 1.\n\nWhat happened:\n- Her judgment is skewed by how memorable Topic X is right now, not by the base rates of the syllabus.\n\nKey terms:\n- Availability bias: overestimating the likelihood of events that are more memorable or recent.\n- Base rate: the true, overall frequency of something in the whole set.\n\nGoing deeper (optional counterbalance):\n- Quick check: compare your expectation to the base rate (1 question on Topic X on average).\n- To guard against it, note a checklist of topics and distribute your study time and exam expectations according to the official syllabus, not just memory.\n\nKey Insight:\nMemorable or recent information feels more probable, but base rates show the true odds.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nLena is a student in Berlin studying for a psychology module on decision making. She notices she often overestimates how likely recent, vivid information is to appear in her exams. This is an example of availability bias, a type of cognitive bias where memorable information disproportionately influences judgments.\n\nScenario:\n- The course has 8 topics, and questions are roughly evenly distributed across topics (about 12.5% per topic on average).\n- Recently, Lena spent two days deeply studying Topic X and read a dramatic case study about it.\n- Her guess for the exam: 70% of the questions will be about Topic X.\n- Reality (base rate): with 8 questions total and even distribution, the expected number of Topic X questions is 8 × 1/8 = 1.\n\nWhat happened:\n- Her judgment is skewed by how memorable Topic X is right now, not by the base rates of the syllabus.\n\nKey terms:\n- Availability bias: overestimating the likelihood of events that are more memorable or recent.\n- Base rate: the true, overall frequency of something in the whole set.\n\nGoing deeper (optional counterbalance):\n- Quick check: compare your expectation to the base rate (1 question on Topic X on average).\n- To guard against it, note a checklist of topics and distribute your study time and exam expectations according to the official syllabus, not just memory.\n\nKey Insight:\nMemorable or recent information feels more probable, but base rates show the true odds.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nLena is a student in Berlin studying for a psychology module on decision making. She notices she often overestimates how likely recent, vivid information is to appear in her exams. This is an example of availability bias, a type of cognitive bias where memorable information disproportionately influences judgments.\n\nScenario:\n- The course has 8 topics, and questions are roughly evenly distributed across topics (about 12.5% per topic on average).\n- Recently, Lena spent two days deeply studying Topic X and read a dramatic case study about it.\n- Her guess for the exam: 70% of the questions will be about Topic X.\n- Reality (base rate): with 8 questions total and even distribution, the expected number of Topic X questions is 8 × 1/8 = 1.\n\nWhat happened:\n- Her judgment is skewed by how memorable Topic X is right now, not by the base rates of the syllabus.\n\nKey terms:\n- Availability bias: overestimating the likelihood of events that are more memorable or recent.\n- Base rate: the true, overall frequency of something in the whole set.\n\nGoing deeper (optional counterbalance):\n- Quick check: compare your expectation to the base rate (1 question on Topic X on average).\n- To guard against it, note a checklist of topics and distribute your study time and exam expectations according to the official syllabus, not just memory.\n\nKey Insight:\nMemorable or recent information feels more probable, but base rates show the true odds.",
+        "example_id": "ex_49f265fb202b42c7",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by including Lena's name, location, and her role as a student studying psychology, aligning well with her profile. The complexity level is appropriate, providing enough detail about cognitive bias and the example's context without overwhelming a high school student. The factual content about availability bias and base rates appears accurate and well-explained, supporting correct understanding. The structure is clear, with a logical flow from concept to scenario, and the key insight is memorable and explicitly connected to the example. The framing is appropriate for the domain of psychology, using familiar academic and decision-making contexts, and the analogies are suitable for illustrating cognitive bias concepts.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Lena's name, location, and role, and the context is relevant to her studies, demonstrating good personalization.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical terms with accessible language, matching a medium complexity level suitable for a high school student.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The description of availability bias and base rate fallacy is accurate, with correct definitions and application.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from concept to scenario and key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The framing within psychology and decision-making is appropriate, and the analogies used are relevant to the domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:11:59.048789"
+}

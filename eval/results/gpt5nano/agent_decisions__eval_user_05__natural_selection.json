@@ -1,0 +1,56 @@
+{
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds_summary": [
+    {
+      "round": 1,
+      "feedback": "I don't really get it.",
+      "agent_action": "regenerate",
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 2,
+      "feedback": "This is great! The example really helped me understand the c",
+      "agent_action": "accept",
+      "status": "completed"
+    },
+    {
+      "round": 3,
+      "feedback": "I always connect better when examples use everyday scenarios",
+      "agent_action": "regenerate",
+      "status": "awaiting_feedback"
+    }
+  ],
+  "timestamp": "2026-03-16T11:32:56.352268"
+}

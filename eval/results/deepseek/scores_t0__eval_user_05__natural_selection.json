@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_565a431d8e464032",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. Some rabbits have slightly longer legs, while others have shorter legs.\n\nThe environment changes: a new predator, like foxes, moves into the area. Foxes chase and catch rabbits.\n\nThe rabbits with longer legs can run faster and escape the foxes more often. The rabbits with shorter legs are caught more easily.\n\nOver many generations:\n- The rabbits with longer legs survive and have offspring.\n- The rabbits with shorter legs are eaten and have fewer offspring.\n- The offspring of the long-legged rabbits tend to also have longer legs.\n- Gradually, the average leg length in the rabbit population increases.\n\nThis process does not happen because the rabbits \"try\" to change. It happens because the environment \"selects\" which traits are helpful for survival and reproduction.\n\nKey Insight:\nNatural selection is the process where traits that help an organism survive and reproduce in its environment become more common in a population over time. It is a key mechanism of evolution.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. Some rabbits have slightly longer legs, while others have shorter legs.\n\nThe environment changes: a new predator, like foxes, moves into the area. Foxes chase and catch rabbits.\n\nThe rabbits with longer legs can run faster and escape the foxes more often. The rabbits with shorter legs are caught more easily.\n\nOver many generations:\n- The rabbits with longer legs survive and have offspring.\n- The rabbits with shorter legs are eaten and have fewer offspring.\n- The offspring of the long-legged rabbits tend to also have longer legs.\n- Gradually, the average leg length in the rabbit population increases.\n\nThis process does not happen because the rabbits \"try\" to change. It happens because the environment \"selects\" which traits are helpful for survival and reproduction.\n\nKey Insight:\nNatural selection is the process where traits that help an organism survive and reproduce in its environment become more common in a population over time. It is a key mechanism of evolution.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. Some rabbits have slightly longer legs, while others have shorter legs.\n\nThe environment changes: a new predator, like foxes, moves into the area. Foxes chase and catch rabbits.\n\nThe rabbits with longer legs can run faster and escape the foxes more often. The rabbits with shorter legs are caught more easily.\n\nOver many generations:\n- The rabbits with longer legs survive and have offspring.\n- The rabbits with shorter legs are eaten and have fewer offspring.\n- The offspring of the long-legged rabbits tend to also have longer legs.\n- Gradually, the average leg length in the rabbit population increases.\n\nThis process does not happen because the rabbits \"try\" to change. It happens because the environment \"selects\" which traits are helpful for survival and reproduction.\n\nKey Insight:\nNatural selection is the process where traits that help an organism survive and reproduce in its environment become more common in a population over time. It is a key mechanism of evolution.",
+        "example_id": "ex_fadf27981d37468c",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.78,
+      "CC": 4.3,
+      "CA": 4.99,
+      "PC": 4.86,
+      "DA": 4.49
+    },
+    "composite": 4.334,
+    "reasoning": "The example uses a relatable scenario involving rabbits and predators, which aligns well with a high school student's learning style and medium complexity level. It clearly explains the process of natural selection with a logical flow and emphasizes the key insight, aiding pedagogical clarity. The analogies are appropriate for biology and evolution, fitting the domain well. However, it does not incorporate the user's specific profile details like their location or name, and the language, while clear, could be slightly more engaging or detailed to match a medium complexity level more precisely.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example does not incorporate Lena's name, location, or specific interests, and the analogy is generic rather than tailored to her profile.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION \u2014 The explanation strikes a good balance, providing enough detail for a high school student without being overly technical, matching the medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 The scientific content is accurate, correctly describing natural selection and its mechanisms without errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The structure is logical, with a clear progression from scenario to key insight, making it easy to follow and understand.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogy of rabbits and foxes is perfectly suited for explaining natural selection in biology, making the framing highly appropriate.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:12:34.973692"
+}

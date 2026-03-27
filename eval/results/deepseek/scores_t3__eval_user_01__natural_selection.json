@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_01__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_62bc73160f3945d7",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nLena, imagine you're observing a population of peppered moths in a forest near Berlin. These moths come in two main color variations: light gray and dark gray. For many years, the light gray moths were more common because they blended in perfectly with the light-colored, lichen-covered tree bark, making them hard for birds to spot and eat. The dark gray moths stood out and were eaten more often.\n\nA change occurs when industrial pollution from nearby factories darkens the tree bark with soot. Now, the light gray moths are easily seen against the dark background, while the dark gray moths are better camouflaged.\n\nOver several moth generations, you observe a shift:\n- **Initial population:** Mostly light gray moths.\n- **Selective pressure:** Birds (predators) eating the more visible moths.\n- **Reproductive advantage:** Dark gray moths survive longer and produce more offspring, many of which inherit the dark coloration.\n- **Resulting population:** Mostly dark gray moths.\n\nThis shift in the population's traits, driven by environmental change and differential survival, is natural selection in action.\n\nKey Insight:\nNatural selection is not random; it's the process where traits that improve survival and reproduction in a specific environment become more common in a population over generations. The environment \"selects\" for advantageous traits.",
+    "final_example": "**Concept:** Natural Selection  \n\n**Example:**  \nImagine a high school where students can choose between two study strategies for a major exam:  \n\n- **Strategy A:** Cramming the night before.  \n- **Strategy B:** Spreading study sessions over two weeks.  \n\nInitially, most students use Strategy A because it seems quicker. But the exam includes complex questions that require deep understanding—something cramming doesn’t provide.  \n\n**What happens over several exam cycles:**  \n1. Students using Strategy B consistently score higher because they retain information better.  \n2. Higher scores lead to better grades, more scholarship opportunities, and less stress.  \n3. Students observing this success start adopting Strategy B themselves.  \n4. Over time, the proportion of students using Strategy B increases, while cramming becomes less common.  \n\n**Why this mirrors natural selection:**  \n- **Variation:** Different study strategies exist in the student population.  \n- **Selection pressure:** The exam format rewards deep, spaced learning and penalizes shallow cramming.  \n- **Differential survival/reproduction:** Strategy B “survives” (is retained) because it leads to academic success; Strategy A “dies out” (is abandoned) because it fails under pressure.  \n- **Inheritance:** Successful strategies are passed on through observation and imitation, changing the “population” of study habits over generations of students.  \n\n**Key Insight:**  \nNatural selection isn’t just about life and death—it’s about which traits or behaviors succeed under given pressures. In this school scenario, the exam acts as the environment, favoring the study strategy that yields the best outcomes, causing that strategy to become more common over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nLena, imagine you're observing a population of peppered moths in a forest near Berlin. These moths come in two main color variations: light gray and dark gray. For many years, the light gray moths were more common because they blended in perfectly with the light-colored, lichen-covered tree bark, making them hard for birds to spot and eat. The dark gray moths stood out and were eaten more often.\n\nA change occurs when industrial pollution from nearby factories darkens the tree bark with soot. Now, the light gray moths are easily seen against the dark background, while the dark gray moths are better camouflaged.\n\nOver several moth generations, you observe a shift:\n- **Initial population:** Mostly light gray moths.\n- **Selective pressure:** Birds (predators) eating the more visible moths.\n- **Reproductive advantage:** Dark gray moths survive longer and produce more offspring, many of which inherit the dark coloration.\n- **Resulting population:** Mostly dark gray moths.\n\nThis shift in the population's traits, driven by environmental change and differential survival, is natural selection in action.\n\nKey Insight:\nNatural selection is not random; it's the process where traits that improve survival and reproduction in a specific environment become more common in a population over generations. The environment \"selects\" for advantageous traits.",
+        "example_id": "ex_b399c2b9568541c1",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a meadow. The rabbits vary in fur color: some have light brown fur, and some have dark brown fur. For many years, this difference doesn't matter much.\n\nThen, a new predator, like a hawk, moves into the area. The hawk hunts by sight from above. The light brown rabbits are easier to spot against the dark soil of the meadow, while the dark brown rabbits are better camouflaged.\n\nWhat happens over generations:\n- Generation 1: Hawks catch and eat more light brown rabbits. Fewer light brown rabbits survive to have babies.\n- Generation 2: More of the baby rabbits are born to dark brown parents, so there are more dark brown rabbits in the population.\n- Generation 3: The population now has mostly dark brown rabbits. The trait (dark fur) that helped with survival became more common.\n\nKey Insight:\nNatural selection is not random. It's the process where traits that help an organism survive and reproduce in its specific environment become more common in the population over time.",
+        "example_id": "ex_8e25ddf6d60544c4"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**Concept:** Natural Selection  \n\n**Example:**  \nImagine a high school where students can choose between two study strategies for a major exam:  \n\n- **Strategy A:** Cramming the night before.  \n- **Strategy B:** Spreading study sessions over two weeks.  \n\nInitially, most students use Strategy A because it seems quicker. But the exam includes complex questions that require deep understanding—something cramming doesn’t provide.  \n\n**What happens over several exam cycles:**  \n1. Students using Strategy B consistently score higher because they retain information better.  \n2. Higher scores lead to better grades, more scholarship opportunities, and less stress.  \n3. Students observing this success start adopting Strategy B themselves.  \n4. Over time, the proportion of students using Strategy B increases, while cramming becomes less common.  \n\n**Why this mirrors natural selection:**  \n- **Variation:** Different study strategies exist in the student population.  \n- **Selection pressure:** The exam format rewards deep, spaced learning and penalizes shallow cramming.  \n- **Differential survival/reproduction:** Strategy B “survives” (is retained) because it leads to academic success; Strategy A “dies out” (is abandoned) because it fails under pressure.  \n- **Inheritance:** Successful strategies are passed on through observation and imitation, changing the “population” of study habits over generations of students.  \n\n**Key Insight:**  \nNatural selection isn’t just about life and death—it’s about which traits or behaviors succeed under given pressures. In this school scenario, the exam acts as the environment, favoring the study strategy that yields the best outcomes, causing that strategy to become more common over time.",
+        "example_id": "ex_59f789f4ba234513"
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.96,
+      "CC": 4.55,
+      "CA": 5.0,
+      "PC": 4.94,
+      "DA": 5.0
+    },
+    "composite": 4.89,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Lena's name and location in Berlin, which aligns with her profile. It uses a biological example relevant to her high school level, with clear, straightforward language suitable for medium complexity. The factual content about peppered moths and natural selection is accurate and well-explained, making it pedagogically clear with a logical structure that guides the learner through the concept. The analogy of moths on tree bark is appropriate for biology and familiar within the domain, enhancing understanding without introducing off-topic elements.\n\nPF: The example directly addresses Lena, incorporates her location, and uses a biological analogy suitable for her learning style. It is well-tailored to her profile.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation matches a high school level, covering environmental change, survival, and inheritance without oversimplifying or overcomplicating. It aligns well with her medium complexity preference.  \nAXIS_SCORE: 4\n\nCA: The scientific facts about natural selection, moth coloration, and environmental influence are accurate and correctly presented. There are no errors in the core concepts.  \nAXIS_SCORE: 5\n\nPC: The structure is clear, with a logical flow from scenario to key insight, making it easy to follow and memorable. The example effectively bridges the concept and real-world analogy.  \nAXIS_SCORE: 5\n\nDA: The analogy of moths on tree bark is highly appropriate for biology and natural selection, fitting the domain well. The framing is entirely suitable for the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 4.0,
+      "CC": 4.0,
+      "PC": 4.0,
+      "DA": 4.0
+    },
+    "composite": 4.3,
+    "reasoning": "The example effectively personalizes the scenario by referencing a high school student, which aligns with Lena's profile. The complexity level is appropriate, as it uses a relatable analogy and explains the concept without overly technical language. The scientific accuracy is sound, correctly illustrating natural selection principles with accurate terminology. Pedagogically, the structure is clear, with a logical flow from the scenario to the analogy, making the concept accessible and memorable. The framing is appropriate for biology, using a familiar school setting and study strategies as an analogy, which is suitable for the topic.\n\nPF_SCORE: 4  \nThe example is mostly personalized, mentioning the high school context and student behavior, but it does not incorporate Lena's specific location or learning style explicitly.  \nCC_SCORE: 4  \nThe complexity matches a high school level well, with a clear analogy and straightforward explanation, though it could be slightly simplified for medium complexity.  \nCA_SCORE: 5  \nAll scientific content is accurate, correctly describing natural selection principles without errors.  \nPC_SCORE: 4  \nThe structure is clear and logical, with a good flow from scenario to analogy, though the explicit concept-to-example bridge could be slightly more emphasized.  \nDA_SCORE: 4  \nThe analogy of study strategies as traits in natural selection is appropriate and domain-relevant, though it slightly leans on a common educational analogy rather than a more biological framing.\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example simplifies the explanation and uses a more relatable scenario, directly addressing the request. The core concept remains accurate while complexity is reduced appropriately.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The regenerated example simplifies the explanation and uses a more relatable scenario, directly addressing the request. The core concept remains accurate while complexity is reduced appropriately.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 3,
+      "composite": 4.4,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 4,
+      "composite": 4.3,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T21:07:11.710005"
+}

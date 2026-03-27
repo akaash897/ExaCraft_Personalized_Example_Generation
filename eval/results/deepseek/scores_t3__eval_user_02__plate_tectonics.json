@@ -1,0 +1,152 @@
+{
+  "key": "t3__eval_user_02__plate_tectonics",
+  "tier": "t3",
+  "user_id": "eval_user_02",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_6008afb4f97b4ac9",
+    "initial_example": "**Concept:** Plate Tectonics\n\n**Example:**\nAmara, think of the Earth's surface not as one solid shell, but like a cracked eggshell floating on a pot of slowly simmering soup. These giant, broken pieces are called tectonic plates. Lagos sits on the African Plate.\n\nThese plates are constantly, but very slowly, moving—about as fast as your fingernails grow. Where they interact at their edges, we see the most dramatic geological events.\n\n**The Three Main Interactions:**\n1.  **Divergent Boundary (Moving Apart):** Imagine two conveyor belts moving away from each other. This is what happens under the Atlantic Ocean at the Mid-Atlantic Ridge. As the plates separate, magma from below rises to create new crust, pushing the continents further apart over millions of years.\n2.  **Convergent Boundary (Colliding):** Picture two cars slowly crashing into each other. When an oceanic plate (denser) collides with a continental plate (like ours), it dives beneath it in a process called **subduction**. This forces the continental plate to crumple upward, forming mountain ranges (like the Alps or Himalayas) and can trigger powerful earthquakes and volcanoes.\n3.  **Transform Boundary (Sliding Past):** This is like two bricks grinding against each other as you try to slide one forward. The plates move horizontally past one another. This motion isn't smooth; they get stuck, build up stress, and then suddenly slip, causing earthquakes. The San Andreas Fault in California is a famous example.\n\n**A Local Connection:**\nWhile Lagos isn't near a major plate boundary, the entire African Plate is moving. The Great Rift Valley in East Africa is a **divergent boundary on land**, where the plate is slowly splitting apart. This process, over tens of millions of years, could eventually create a new ocean.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains the location of continents, oceans, mountains, volcanoes, and earthquakes. The Earth's landscape is not static; it is the dynamic, visible result of these massive plates moving and interacting on a planetary scale.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's crust as the skin of a patient, and the deeper mantle as the underlying muscle and tissue. The skin is not a single, seamless layer; it is divided into several large, rigid plates that float on the hotter, more fluid material below. These plates are constantly moving, very slowly, driven by heat from the Earth's core, much like the body's circulatory system driven by the heart.\n\nThere are three main types of boundaries where these plates interact, similar to different types of medical procedures or physiological processes:\n\n1.  **Divergent Boundary (Splitting):** Like sutures being removed or skin stretching after healing, plates pull apart. Hot material rises to fill the gap, creating new crust. This happens in places like the mid-ocean ridges, akin to new tissue forming.\n2.  **Convergent Boundary (Colliding):** Like the compression of a fracture or the suturing of a wound, plates push together. One plate is often forced down beneath the other (subduction), melting and causing volcanoes. Or, they crumple upward, forming mountain ranges, similar to scar tissue building up.\n3.  **Transform Boundary (Sliding):** Like the lateral movement of bones in a joint or the sliding of a surgical drape, plates grind past each other horizontally. This friction can build up and release suddenly, causing earthquakes, analogous to a sudden muscle spasm or joint pop.\n\nA Numeric Scale:\nThe movement is slow but measurable. Plates move at speeds comparable to the growth of fingernails: about 2 to 10 centimeters per year. Over a nurse's career of 30 years, a plate might have moved only 60 to 300 cm—enough to be detected by precise instruments (like GPS monitoring), but not noticeable day-to-day.\n\nKey Insight:\nPlate tectonics explains why we have volcanoes, earthquakes, and mountains. The slow, constant motion of these giant \"skin plates\" builds pressure that eventually releases, shaping the landscape and creating the geological phenomena we observe.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Plate Tectonics\n\n**Example:**\nAmara, think of the Earth's surface not as one solid shell, but like a cracked eggshell floating on a pot of slowly simmering soup. These giant, broken pieces are called tectonic plates. Lagos sits on the African Plate.\n\nThese plates are constantly, but very slowly, moving—about as fast as your fingernails grow. Where they interact at their edges, we see the most dramatic geological events.\n\n**The Three Main Interactions:**\n1.  **Divergent Boundary (Moving Apart):** Imagine two conveyor belts moving away from each other. This is what happens under the Atlantic Ocean at the Mid-Atlantic Ridge. As the plates separate, magma from below rises to create new crust, pushing the continents further apart over millions of years.\n2.  **Convergent Boundary (Colliding):** Picture two cars slowly crashing into each other. When an oceanic plate (denser) collides with a continental plate (like ours), it dives beneath it in a process called **subduction**. This forces the continental plate to crumple upward, forming mountain ranges (like the Alps or Himalayas) and can trigger powerful earthquakes and volcanoes.\n3.  **Transform Boundary (Sliding Past):** This is like two bricks grinding against each other as you try to slide one forward. The plates move horizontally past one another. This motion isn't smooth; they get stuck, build up stress, and then suddenly slip, causing earthquakes. The San Andreas Fault in California is a famous example.\n\n**A Local Connection:**\nWhile Lagos isn't near a major plate boundary, the entire African Plate is moving. The Great Rift Valley in East Africa is a **divergent boundary on land**, where the plate is slowly splitting apart. This process, over tens of millions of years, could eventually create a new ocean.\n\n**Key Insight:**\nPlate tectonics is the unifying theory that explains the location of continents, oceans, mountains, volcanoes, and earthquakes. The Earth's landscape is not static; it is the dynamic, visible result of these massive plates moving and interacting on a planetary scale.",
+        "example_id": "ex_1b734149a7904810",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Plate Tectonics\n\nExample:\nImagine the Earth's crust as the skin of a patient, and the deeper mantle as the underlying muscle and tissue. The skin is not a single, seamless layer; it is divided into several large, rigid plates that float on the hotter, more fluid material below. These plates are constantly moving, very slowly, driven by heat from the Earth's core, much like the body's circulatory system driven by the heart.\n\nThere are three main types of boundaries where these plates interact, similar to different types of medical procedures or physiological processes:\n\n1.  **Divergent Boundary (Splitting):** Like sutures being removed or skin stretching after healing, plates pull apart. Hot material rises to fill the gap, creating new crust. This happens in places like the mid-ocean ridges, akin to new tissue forming.\n2.  **Convergent Boundary (Colliding):** Like the compression of a fracture or the suturing of a wound, plates push together. One plate is often forced down beneath the other (subduction), melting and causing volcanoes. Or, they crumple upward, forming mountain ranges, similar to scar tissue building up.\n3.  **Transform Boundary (Sliding):** Like the lateral movement of bones in a joint or the sliding of a surgical drape, plates grind past each other horizontally. This friction can build up and release suddenly, causing earthquakes, analogous to a sudden muscle spasm or joint pop.\n\nA Numeric Scale:\nThe movement is slow but measurable. Plates move at speeds comparable to the growth of fingernails: about 2 to 10 centimeters per year. Over a nurse's career of 30 years, a plate might have moved only 60 to 300 cm—enough to be detected by precise instruments (like GPS monitoring), but not noticeable day-to-day.\n\nKey Insight:\nPlate tectonics explains why we have volcanoes, earthquakes, and mountains. The slow, constant motion of these giant \"skin plates\" builds pressure that eventually releases, shaping the landscape and creating the geological phenomena we observe.",
+        "example_id": "ex_59926a6a454a4454"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      }
+    ],
+    "context_instruction": "For this Plate Tectonics example, focus on making abstract geological concepts concrete and tangible. Since the student is a nurse in Lagos, consider using healthcare-related analogies only if they naturally fit the tectonic concepts (e.g., comparing tectonic plate movement to bodily systems or medical processes). Prioritize real-world, practical examples that connect geological processes to observable phenomena relevant to her environment.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.44,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.888,
+    "reasoning": "The example effectively personalizes the content by addressing Amara directly, using her name and location, and referencing her profession and learning style, which aligns well with her profile. The complexity level is medium, with explanations that are accessible but include some scientific detail, matching her stated learning preference. The scientific content about plate tectonics appears accurate, with correct descriptions of boundary types and processes. The structure is clear, with a logical flow from analogy to specific boundary types, and the local connection makes the content more relatable. The analogies used (eggshell, conveyor belts, cars, bricks) are appropriate for the domain of geology and help clarify the concepts effectively.\n\n[PF] PERSONALIZATION FIDELITY — The example is well-tailored, incorporating her name, location, profession, and learning style, making it highly relevant.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The language and explanations are suitable for a medium complexity level, balancing scientific detail with accessibility.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — All scientific facts about plate boundaries, magma, subduction, and fault lines are correct and well explained.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with clear sections, analogies, and a logical progression that supports learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are entirely appropriate for geology and plate tectonics, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 5.0,
+      "CC": 4.0,
+      "PC": 4.0,
+      "DA": 5.0
+    },
+    "composite": 4.6,
+    "reasoning": "The example effectively personalizes the analogy by comparing Earth's plates to human skin and medical procedures, which aligns with the user's healthcare background and learning style. The depth of explanation covers the main types of plate boundaries with relatable medical analogies, matching a medium complexity level. The scientific content appears accurate, correctly describing plate movements and their geological consequences. The structure is clear, with a logical flow from analogy to specific boundary types and a key insight, facilitating understanding. The analogies are appropriate for the domain, using medical and physiological concepts that resonate with a nurse's experience, making the topic more accessible.\n\nPF_SCORE: 5\nThe example is highly personalized, integrating the user's profession, background, and learning style into the analogy, making it very relevant and engaging.\n\nCC_SCORE: 4\nThe complexity level is well-matched, providing a detailed yet understandable explanation suitable for a professional with a medium complexity preference. It might be slightly more detailed than necessary for some, but overall appropriate.\n\nCA_SCORE: 5\nThe scientific content is accurate, correctly describing the types of plate boundaries, their processes, and geological outcomes without errors.\n\nPC_SCORE: 4\nThe example is well-structured, with a clear progression from analogy to specific boundary types and a concluding insight. It could be slightly more explicit in connecting each analogy back to the core concept for memorability.\n\nDA_SCORE: 5\nThe analogies are entirely domain-appropriate, using medical and physiological concepts that fit well with the topic of Earth's tectonic plates, enhancing understanding without confusion.\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The system responds by restructuring the example with accessible language and a familiar context, aligning with the user's stated preference.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "For this Plate Tectonics example, focus on making abstract geological concepts concrete and tangible. Since the student is a nurse in Lagos, consider using healthcare-related analogies only if they naturally fit the tectonic concepts (e.g., comparing tectonic plate movement to bodily systems or medical processes). Prioritize real-world, practical examples that connect geological processes to observable phenomena relevant to her environment.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.6,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "accept",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "accept",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T21:29:09.970086"
+}

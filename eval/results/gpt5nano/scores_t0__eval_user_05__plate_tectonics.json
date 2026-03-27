@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__plate_tectonics",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_9cbe9f6c700e4b81",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nThink of Earth's outer skin as a cracked eggshell floating on a slow-moving, hot layer of rock. The big cracks are the plates. At a mid-ocean ridge, two plates are slowly moving apart. As they part, magma from deep below rises into the gap, cools, and forms new crust. Over long times, this process quietly widens the ocean floor and slowly reshapes coastlines.\n\nKey Insight:\nThe Earth’s surface is not fixed—plates move, creating new crust where they separate and reshaping the world over millions of years.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nThink of Earth's outer skin as a cracked eggshell floating on a slow-moving, hot layer of rock. The big cracks are the plates. At a mid-ocean ridge, two plates are slowly moving apart. As they part, magma from deep below rises into the gap, cools, and forms new crust. Over long times, this process quietly widens the ocean floor and slowly reshapes coastlines.\n\nKey Insight:\nThe Earth’s surface is not fixed—plates move, creating new crust where they separate and reshaping the world over millions of years.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nThink of Earth's outer skin as a cracked eggshell floating on a slow-moving, hot layer of rock. The big cracks are the plates. At a mid-ocean ridge, two plates are slowly moving apart. As they part, magma from deep below rises into the gap, cools, and forms new crust. Over long times, this process quietly widens the ocean floor and slowly reshapes coastlines.\n\nKey Insight:\nThe Earth’s surface is not fixed—plates move, creating new crust where they separate and reshaping the world over millions of years.",
+        "example_id": "ex_f0bd49686f214abc",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 4,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 3.9,
+    "reasoning": "The example uses a simple analogy of an eggshell to explain plate tectonics, which is accessible and suitable for a high school student with a medium complexity level. It correctly describes key processes like plate movement, magma rising, and crust formation, aligning with factual accuracy. The structure is clear, with a logical flow from analogy to key insight, making it pedagogically effective. However, the analogy is somewhat generic and not specifically tailored to Lena's profile, such as her European background or learning style, and it doesn't incorporate any domain-specific terminology or more detailed concepts that could deepen understanding. The language is appropriate for her level, but the analogy could be more domain-specific to enhance engagement.\n\nPERSONALIZATION FIDELITY: The example does not incorporate Lena's name, location, or cultural background, nor does it leverage her example-based learning style explicitly, making it only somewhat personalized.\nAXIS_SCORE: 2\n\nCOMPLEXITY CALIBRATION: The content matches a medium complexity level, with appropriate terminology and explanation depth for a high school student, without oversimplification or excessive detail.\nAXIS_SCORE: 4\n\nCONCEPTUAL ACCURACY: The scientific content is accurate, correctly describing plate tectonics processes without errors.\nAXIS_SCORE: 5\n\nPEDAGOGICAL CLARITY: The example is well-structured, with a clear analogy leading to the key insight, making it easy to follow and memorable.\nAXIS_SCORE: 4\n\nDOMAIN APPROPRIATENESS: The analogy and framing are appropriate for geology and earth science, using familiar concepts like eggshells and magma, which are suitable for the topic.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 4, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:48:56.070142"
+}

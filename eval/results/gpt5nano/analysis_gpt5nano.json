@@ -1,0 +1,87 @@
+{
+  "provider": "gpt5nano",
+  "ablation": {
+    "t0": {
+      "PF": 2.09,
+      "CC": 3.78,
+      "CA": 4.41,
+      "PC": 4.0,
+      "DA": 4.16,
+      "composite": 3.712,
+      "n": 32
+    },
+    "t1": {
+      "PF": 3.47,
+      "CC": 4.38,
+      "CA": 4.78,
+      "PC": 4.53,
+      "DA": 4.78,
+      "composite": 4.388,
+      "n": 32
+    },
+    "t2": {
+      "PF": 4.34,
+      "CC": 4.84,
+      "CA": 4.97,
+      "PC": 4.88,
+      "DA": 4.88,
+      "composite": 4.791,
+      "n": 32
+    },
+    "t3": {
+      "PF": 4.94,
+      "CC": 5.0,
+      "CA": 5.0,
+      "PC": 4.97,
+      "DA": 5.0,
+      "composite": 4.981,
+      "n": 32
+    }
+  },
+  "fcr": {
+    "easy": {
+      "n": 40,
+      "fcr_3": 0.925,
+      "fcr_4": 0.85,
+      "mean": 4.475
+    },
+    "adversarial": {
+      "n": 15,
+      "fcr_3": 1.0,
+      "fcr_4": 1.0,
+      "mean": 4.8
+    },
+    "overall": {
+      "n": 55,
+      "fcr_3": 0.945,
+      "fcr_4": 0.891,
+      "mean": 4.564
+    }
+  },
+  "lur": {
+    "easy": {
+      "n": 16,
+      "triggered": 16,
+      "lur": 1.0
+    },
+    "adversarial": {
+      "n": 16,
+      "triggered": 15,
+      "lur": 0.938
+    },
+    "overall": {
+      "n": 32,
+      "triggered": 31,
+      "lur": 0.969
+    }
+  },
+  "ppu": {
+    "n_warm_t3": 16,
+    "n_warm_t1": 16,
+    "n_cold_t3": 16,
+    "warm_t3_pf": 5.0,
+    "warm_t1_pf": 3.062,
+    "cold_t3_pf": 4.875,
+    "delta_pf": 1.938
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__plate_tectonics",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_57d9189037944b66",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara, as a nurse in Lagos, you understand that the health of a community is tied to its environment. Plate tectonics is the study of the large, moving plates that make up Earth's outer shell. These movements are slow but powerful, and they directly influence natural hazards that affect public health and safety, even in Nigeria.\n\nThe Process in Three Steps:\n1.  **The Plates:** The Earth's crust and upper mantle are broken into giant, rigid pieces called tectonic plates. Nigeria sits on the African Plate.\n2.  **The Movement:** These plates float on the hotter, softer rock of the mantle below. Heat from Earth's core causes the mantle to slowly churn in currents called convection, which drags the plates along. The boundary where the African Plate meets the Eurasian Plate is far north, near the Mediterranean.\n3.  **The Result:** Where plates interact—pulling apart, colliding, or sliding past each other—they create geological activity. This includes earthquakes, volcanic eruptions, and the formation of mountain ranges.\n\nConnecting to Lagos and Healthcare:\nWhile Lagos is not on a major plate boundary, the entire African Plate is moving. This movement can build up stress in the Earth's crust over vast distances. A major earthquake on a distant boundary, or even along a fault line within the plate itself, could generate tremors felt in West Africa. For a nurse, this links to emergency preparedness. Understanding that tectonic forces are a background risk informs public health planning for disaster response, the need for structurally sound hospitals, and community education on \"Drop, Cover, and Hold On\" procedures.\n\nKey Insight:\nPlate tectonics is the engine behind most of Earth's major geological events. Even areas not on active boundaries are part of the global tectonic system, making a basic understanding of these forces a relevant part of comprehensive public safety and healthcare planning.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nAmara, as a nurse in Lagos, you understand that the health of a community is tied to its environment. Plate tectonics is the study of the large, moving plates that make up Earth's outer shell. These movements are slow but powerful, and they directly influence natural hazards that affect public health and safety, even in Nigeria.\n\nThe Process in Three Steps:\n1.  **The Plates:** The Earth's crust and upper mantle are broken into giant, rigid pieces called tectonic plates. Nigeria sits on the African Plate.\n2.  **The Movement:** These plates float on the hotter, softer rock of the mantle below. Heat from Earth's core causes the mantle to slowly churn in currents called convection, which drags the plates along. The boundary where the African Plate meets the Eurasian Plate is far north, near the Mediterranean.\n3.  **The Result:** Where plates interact—pulling apart, colliding, or sliding past each other—they create geological activity. This includes earthquakes, volcanic eruptions, and the formation of mountain ranges.\n\nConnecting to Lagos and Healthcare:\nWhile Lagos is not on a major plate boundary, the entire African Plate is moving. This movement can build up stress in the Earth's crust over vast distances. A major earthquake on a distant boundary, or even along a fault line within the plate itself, could generate tremors felt in West Africa. For a nurse, this links to emergency preparedness. Understanding that tectonic forces are a background risk informs public health planning for disaster response, the need for structurally sound hospitals, and community education on \"Drop, Cover, and Hold On\" procedures.\n\nKey Insight:\nPlate tectonics is the engine behind most of Earth's major geological events. Even areas not on active boundaries are part of the global tectonic system, making a basic understanding of these forces a relevant part of comprehensive public safety and healthcare planning.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara, as a nurse in Lagos, you understand that the health of a community is tied to its environment. Plate tectonics is the study of the large, moving plates that make up Earth's outer shell. These movements are slow but powerful, and they directly influence natural hazards that affect public health and safety, even in Nigeria.\n\nThe Process in Three Steps:\n1.  **The Plates:** The Earth's crust and upper mantle are broken into giant, rigid pieces called tectonic plates. Nigeria sits on the African Plate.\n2.  **The Movement:** These plates float on the hotter, softer rock of the mantle below. Heat from Earth's core causes the mantle to slowly churn in currents called convection, which drags the plates along. The boundary where the African Plate meets the Eurasian Plate is far north, near the Mediterranean.\n3.  **The Result:** Where plates interact—pulling apart, colliding, or sliding past each other—they create geological activity. This includes earthquakes, volcanic eruptions, and the formation of mountain ranges.\n\nConnecting to Lagos and Healthcare:\nWhile Lagos is not on a major plate boundary, the entire African Plate is moving. This movement can build up stress in the Earth's crust over vast distances. A major earthquake on a distant boundary, or even along a fault line within the plate itself, could generate tremors felt in West Africa. For a nurse, this links to emergency preparedness. Understanding that tectonic forces are a background risk informs public health planning for disaster response, the need for structurally sound hospitals, and community education on \"Drop, Cover, and Hold On\" procedures.\n\nKey Insight:\nPlate tectonics is the engine behind most of Earth's major geological events. Even areas not on active boundaries are part of the global tectonic system, making a basic understanding of these forces a relevant part of comprehensive public safety and healthcare planning.",
+        "example_id": "ex_06f85abca71046bd",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "For the Plate Tectonics topic, create a medium-complexity example grounded in Amara's professional context as a nurse in Lagos, Nigeria. Use a real-world scenario that connects geological concepts to healthcare or public safety concerns relevant to her location. Structure the explanation with clear, labeled steps showing how plate tectonic processes work, avoiding both oversimplification and excessive abstraction.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.95,
+      "CC": 4.47,
+      "CA": 5.0,
+      "PC": 4.97,
+      "DA": 5.0
+    },
+    "composite": 4.878,
+    "reasoning": "The example effectively personalizes the content by addressing Amara directly, referencing Lagos, Nigeria, and connecting plate tectonics to healthcare and emergency preparedness, which aligns well with her profile. The complexity level is appropriate, explaining basic geological processes with some detail suitable for a professional learner, but not overly technical. The scientific accuracy appears sound, correctly describing tectonic plates, convection currents, and geological hazards. The structure is clear, with a logical progression from basic concepts to real-world application, and the analogy of Earth's crust as a \"system\" is appropriate for the domain, emphasizing the interconnectedness of Earth's processes.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Amara's name, location, and profession, and ties the topic to her context in Lagos and healthcare, demonstrating strong personalization.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances scientific detail with accessibility, matching a medium complexity level suitable for a professional but non-specialist learner.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content is accurate, correctly describing plate tectonics, convection currents, and geological hazards without errors.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear step-by-step process and a connecting real-world application, making it easy to follow and memorable.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of Earth's crust as a system of moving plates is appropriate for geology, and the framing aligns well with the scientific topic.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "For the Plate Tectonics topic, create a medium-complexity example grounded in Amara's professional context as a nurse in Lagos, Nigeria. Use a real-world scenario that connects geological concepts to healthcare or public safety concerns relevant to her location. Structure the explanation with clear, labeled steps showing how plate tectonic processes work, avoiding both oversimplification and excessive abstraction.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The context instruction explicitly incorporates Amara's professional background as a nurse and her location in Lagos, Nigeria, aligning with her domain preference for real-world, location-specific examples. It also emphasizes a medium complexity level and a step-by-step structure, reflecting her learning style and complexity preference, which demonstrates a concrete synthesis of her stored patterns and insights. Therefore, it effectively translates these into a detailed, actionable directive.\n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-15T20:54:47.429381"
+}

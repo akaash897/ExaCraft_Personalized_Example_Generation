@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Natural Selection\n\nExample:\nConceptual setup\nIn Tiergarten, Berlin, Lena is studying a tiny moth population with two color morphs. The moths differ by a single color trait: light (L) and dark (D). The light phenotype can be produced by genotypes AA or Aa, while the dark phenotype is produced by genotype aa. The environment (tree bark color and predation by birds) creates different survival chances for the two morphs.\n\nInputs (initial state)\n- Population size (N): 50 moths\n- Allele frequencies (at a single gene with two alleles A and a): p = frequency of A = 0.60; q = frequency of a = 0.40\n- Genotype frequencies under Hardy–Weinberg (based on p and q):\n  - AA: 18 individuals\n  - Aa: 24 individuals\n  - aa: 8 individuals\n- Phenotype counts (before selection):\n  - Light (AA + Aa): 42\n  - Dark (aa): 8\n- Predation-based fitness (survival to reproduction, relative):\n  - Light morph: w_light = 0.50\n  - Dark morph: w_dark = 0.90\n\nStep 1 — One generation of selection and survivors\n- Light survivors: 42 × 0.50 = 21\n  - Distribution among light genotypes (proportional to their starting numbers):\n    - AA survivors: 21 × (18/42) = 9\n    - Aa survivors: 21 × (24/42) = 12\n- Dark survivors: 8 × 0.90 = 7.2\n  - aa survivors: 7.2\n- Total survivors (parents for next generation): 9 + 12 + 7.2 = 28.2\n\nStep 2 — Allele frequencies in the survivors (gamete pool for the next generation)\n- A alleles from AA survivors: 9 × 2 = 18\n- A alleles from Aa survivors: 12 × 1 = 12\n- a alleles from Aa survivors: 12 × 1 = 12\n- a alleles from aa survivors: 7.2 × 2 = 14.4 (but these contribute no A)\n- Total A alleles among survivors: 18 + 12 = 30\n- Total alleles among survivors: 2 × 28.2 = 56.4\n- New allele frequency: p' = 30 / 56.4 ≈ 0.532\n- New non-A allele frequency: q' = 1 − p' ≈ 0.468\n\nStep 3 — Expected phenotype frequencies in the next generation (assuming random mating, before any new selection)\n- Next-generation light phenotype frequency: p'² + 2p'q' ≈ (0.532)² + 2×0.532×0.468 ≈ 0.283 + 0.498 ≈ 0.781\n- Next-generation dark phenotype frequency: q'² ≈ (0.468)² ≈ 0.219\n- Genotype frequencies among offspring (if random mating):\n  - AA ≈ p'² ≈ 0.283\n  - Aa ≈ 2p'q' ≈ 0.498\n  - aa ≈ q'² ≈ 0.219\n\nGuided questions (compute-and-think)\n- Q1: What is the allele frequency shift (Δp) after this generation?\n  - Δp = p' − p = 0.532 − 0.60 ≈ −0.068 (a decrease of about 6.8 percentage points)\n- Q2: How did the light/dark phenotype frequencies change from start to after one generation?\n  - Light: from 0.84 to ≈ 0.781 (decrease of about 0.059)\n  - Dark: from 0.16 to ≈ 0.219 (increase of about 0.059)\n- Q3: Which genotype proportions changed most among survivors, and why?\n  - Dark aa survivors, while a smaller initial count, contributed a larger share among survivors due to higher w_dark, increasing the aa contribution to the next gamete pool.\n- Q4: Why did the dark morph become more common in the next generation, even though light was initially more frequent?\n  - Because the dark morph had higher relative survival (fitness) in this environment, more dark alleles were passed to the next generation, shifting allele frequencies toward a.\n- Q5: In one sentence, what does this example illustrate about fitness and allele frequencies?\n  - Higher fitness in a given environment changes which alleles are transmitted more to the next generation, shifting both allele and phenotype frequencies over time.\n\nReflection\nThis Berlin-Tiergarten example shows natural selection in action: an environment favoring the dark morph increases the frequency of the a allele and the dark phenotype across generations, illustrating how fitness differences drive evolutionary change.\n\nKey Insight: Natural selection changes which individuals leave offspring, reshaping allele and phenotype frequencies in the population based on who survives and reproduces in a given environment.",
+      "example_id": "ex_7016a010b84c4398",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "I don't really get it.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nIn Tiergarten, Berlin, Lena observes a small moth population with two color morphs (light and dark). She records initial genetics and tracks survival to illustrate how selection can shift allele frequencies in one generation.\n\nStep 1 — Pre-selection setup (Hardy–Weinberg)\n- Population size: N = 100\n- Light allele frequency: p = 0.60\n- Dark allele frequency: q = 0.40 (note p + q = 1)\n- Genotype frequencies (Hardy–Weinberg):\n  - LL = p^2 = 0.36\n  - Ld = 2pq = 0.48\n  - dd = q^2 = 0.16\n- Genotype counts:\n  - LL = 36\n  - Ld = 48\n  - dd = 16\n\nStep 2 — Pre-selection phenotypes\n- Light phenotype (LL + Ld) = 36 + 48 = 84\n- Dark phenotype (dd) = 16\n\nStep 3 — Survival after selection\n- Survival rates: s_light = 0.50, s_dark = 0.75\n- Light survivors total: 84 × 0.50 = 42\n- Within light survivors (to split back into genotypes):\n  - LL' = (36/84) × 42 = 18\n  - Ld' = (48/84) × 42 = 24\n- Dark survivors total: 16 × 0.75 = 12\n- Post-selection genotype counts:\n  - LL' = 18\n  - Ld' = 24\n  - dd' = 12\n\nStep 4 — Post-selection allele frequencies\n- Total survivors: 18 + 24 + 12 = 54\n- L alleles among survivors: 2×LL' + Ld' = 2×18 + 24 = 60\n- Total alleles: 2×54 = 108\n- Post-selection allele frequencies:\n  - p' = 60 / 108 ≈ 0.556\n  - q' = 1 − p' ≈ 0.444\n- Post-selection phenotypes among survivors:\n  - Light phenotype: LL' + Ld' = 42\n  - Dark phenotype: dd' = 12\n  - Light phenotype frequency post-selection = 42 / 54 ≈ 0.778\n  - Dark phenotype frequency post-selection = 12 / 54 ≈ 0.222\n\nStep 5 — Brief interpretation\n- Selection favored the darker morph (higher survival rate), which reduced the light allele frequency from 0.60 to about 0.556.\n- Among survivors, the dark phenotype remains less common than the light phenotype, but the genetic makeup has shifted toward the dark allele due to differential survival.\n\nKey Insight:\n- Natural selection changes allele and phenotype frequencies by differential survival in a given environment; here higher survival of dark moths shifts the population’s genetic composition across one generation.",
+      "example_id": "ex_2cb06621aa6a4c3d"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nContext\nLena, a student in Berlin, uses a simple school-life model to illustrate natural selection. A heritable trait with two morphs, A and a, influences how well students cope with a tough exam. Before selection (the exam), the allele frequencies follow Hardy-Weinberg proportions with p = 0.60 and q = 0.40.\n\nStarting setup (Hardy-Weinberg pre-selection)\n- p = frequency of allele A = 0.60\n- q = frequency of allele a = 0.40\n- Genotype frequencies (pre-selection):\n  - AA = p^2 = 0.36\n  - Aa = 2pq = 0.48\n  - aa = q^2 = 0.16\n- Fitness (survival to final grade) for each genotype:\n  - w_AA = 0.90\n  - w_Aa = 1.00\n  - w_aa = 0.60\n\nStep-by-step calculations\n1) Survivors by genotype (pre-selection frequency × fitness)\n   - AA survivors = 0.36 × 0.90 = 0.324\n   - Aa survivors = 0.48 × 1.00 = 0.480\n   - aa survivors = 0.16 × 0.60 = 0.096\n\n2) Total survivors\n   - N_total = 0.324 + 0.480 + 0.096 = 0.900\n\n3) Post-selection genotype frequencies (survivors divided by total)\n   - f'_AA = 0.324 / 0.900 = 0.360\n   - f'_Aa = 0.480 / 0.900 = 0.533\n   - f'_aa = 0.096 / 0.900 = 0.107\n\n4) Post-selection allele frequencies\n   - p' = f'_AA + 0.5 × f'_Aa = 0.360 + 0.5 × 0.533 ≈ 0.360 + 0.267 ≈ 0.627\n   - q' = 1 − p' ≈ 0.373\n   (Cross-check: q' = f'_aa + 0.5 × f'_Aa = 0.107 + 0.5 × 0.533 ≈ 0.107 + 0.267 ≈ 0.374)\n\n5) Interpretation\n   - The A allele frequency increased from p = 0.60 to p' ≈ 0.627, meaning selection during the exam favored genotypes carrying the A allele (especially the Aa heterozygote with highest survival) and reduced the aa genotype.\n\nCheck for understanding (quick question)\n- Which genotype is most common after selection, and did the A allele frequency rise or fall compared to p = 0.60?\n\nKey Insight:\n- Differential survival among genotypes shifts allele frequencies within a generation; here heterozygotes having the highest fitness can drive the A allele upward even when starting from p = 0.60.",
+      "example_id": "ex_1cac87a7670a4d00"
+    }
+  ],
+  "timestamp": "2026-03-16T11:32:56.352268"
+}

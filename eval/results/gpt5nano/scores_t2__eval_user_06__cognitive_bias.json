@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_1ad217bec4bd4e92",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nInput:\nAmara, a nurse in Lagos, Nigeria, is triaging in the emergency department. A 28-year-old male arrives with 2 days of fever, frontal headache, nausea, and mild abdominal discomfort. Vitals: temp 38.7°C, HR 112 bpm, BP 92/60 mmHg, RR 20/min, SpO2 95% on room air. He reports mosquito exposure; no cough; no urinary symptoms. Exam: pale, dry mucous membranes, mild abdominal tenderness. In Lagos, malaria is common; Amara's initial impression leans toward malaria as the likely cause, a framing that may bias her toward a malaria test and IV fluids while potentially under-testing for other causes such as dengue, typhoid, or bacterial sepsis. Plan noted: malaria test ordered; supportive care started; limited consideration of other etiologies.\n\nAnalysis:\n- Bias identified: Anchoring to malaria due to local prevalence (and availability bias for the most common illness).\n- Why it matters: Could overlook dengue, bacterial sepsis, or other serious infections with similar vitals.\n- What additional information would help: CBC with differential and platelets; malaria smear or rapid diagnostic test; dengue NS1/IgM; blood cultures; CRP or procalcitonin; CMP; lactate; urine analysis; chest X-ray if indicated.\n- Diagnostic approach to mitigate bias: use a short differential checklist (malaria, dengue, typhoid, bacterial sepsis, other febrile illnesses); apply severity scores (e.g., qSOFA/NEWS) to monitor changes; re-evaluate in 2–4 hours; involve a senior clinician if uncertainty remains.\n\nDecision:\n- Bias-mitigated plan:\n  - Order malaria test (rapid test or smear), CBC with differential and platelets, CMP, CRP/procalcitonin if available, dengue NS1/IgM, blood cultures, and urine analysis.\n  - Initiate cautious IV fluids aligned with hemodynamics; monitor vitals closely; adjust fluid plan based on response and test results.\n  - Reassess within 2 hours; if SBP ≤100 mmHg or mental status changes or rising lactate, escalate to sepsis protocol and consider admission; maintain explicit documentation of differential and bias concern.\n  - Communicate with patient and family about diagnostic steps and rationale; obtain consent for tests; involve senior staff as needed.\n\nReflection:\n- In Lagos hospitals, crowded EDs and high patient volume can amplify cognitive biases, especially for malaria-prone settings. A structured differential, timely re-evaluation, and prompt testing help ensure non-malarial febrile illnesses are not missed, aligning with safe, patient-centered care for Amara’s context.\n\nKey Insight:\n  Anchoring on the most common local disease can lead to missed alternatives; a structured differential and planned re-evaluation helps mitigate this bias in busy hospital settings.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nInput:\nAmara, a nurse in Lagos, Nigeria, is triaging in the emergency department. A 28-year-old male arrives with 2 days of fever, frontal headache, nausea, and mild abdominal discomfort. Vitals: temp 38.7°C, HR 112 bpm, BP 92/60 mmHg, RR 20/min, SpO2 95% on room air. He reports mosquito exposure; no cough; no urinary symptoms. Exam: pale, dry mucous membranes, mild abdominal tenderness. In Lagos, malaria is common; Amara's initial impression leans toward malaria as the likely cause, a framing that may bias her toward a malaria test and IV fluids while potentially under-testing for other causes such as dengue, typhoid, or bacterial sepsis. Plan noted: malaria test ordered; supportive care started; limited consideration of other etiologies.\n\nAnalysis:\n- Bias identified: Anchoring to malaria due to local prevalence (and availability bias for the most common illness).\n- Why it matters: Could overlook dengue, bacterial sepsis, or other serious infections with similar vitals.\n- What additional information would help: CBC with differential and platelets; malaria smear or rapid diagnostic test; dengue NS1/IgM; blood cultures; CRP or procalcitonin; CMP; lactate; urine analysis; chest X-ray if indicated.\n- Diagnostic approach to mitigate bias: use a short differential checklist (malaria, dengue, typhoid, bacterial sepsis, other febrile illnesses); apply severity scores (e.g., qSOFA/NEWS) to monitor changes; re-evaluate in 2–4 hours; involve a senior clinician if uncertainty remains.\n\nDecision:\n- Bias-mitigated plan:\n  - Order malaria test (rapid test or smear), CBC with differential and platelets, CMP, CRP/procalcitonin if available, dengue NS1/IgM, blood cultures, and urine analysis.\n  - Initiate cautious IV fluids aligned with hemodynamics; monitor vitals closely; adjust fluid plan based on response and test results.\n  - Reassess within 2 hours; if SBP ≤100 mmHg or mental status changes or rising lactate, escalate to sepsis protocol and consider admission; maintain explicit documentation of differential and bias concern.\n  - Communicate with patient and family about diagnostic steps and rationale; obtain consent for tests; involve senior staff as needed.\n\nReflection:\n- In Lagos hospitals, crowded EDs and high patient volume can amplify cognitive biases, especially for malaria-prone settings. A structured differential, timely re-evaluation, and prompt testing help ensure non-malarial febrile illnesses are not missed, aligning with safe, patient-centered care for Amara’s context.\n\nKey Insight:\n  Anchoring on the most common local disease can lead to missed alternatives; a structured differential and planned re-evaluation helps mitigate this bias in busy hospital settings.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nInput:\nAmara, a nurse in Lagos, Nigeria, is triaging in the emergency department. A 28-year-old male arrives with 2 days of fever, frontal headache, nausea, and mild abdominal discomfort. Vitals: temp 38.7°C, HR 112 bpm, BP 92/60 mmHg, RR 20/min, SpO2 95% on room air. He reports mosquito exposure; no cough; no urinary symptoms. Exam: pale, dry mucous membranes, mild abdominal tenderness. In Lagos, malaria is common; Amara's initial impression leans toward malaria as the likely cause, a framing that may bias her toward a malaria test and IV fluids while potentially under-testing for other causes such as dengue, typhoid, or bacterial sepsis. Plan noted: malaria test ordered; supportive care started; limited consideration of other etiologies.\n\nAnalysis:\n- Bias identified: Anchoring to malaria due to local prevalence (and availability bias for the most common illness).\n- Why it matters: Could overlook dengue, bacterial sepsis, or other serious infections with similar vitals.\n- What additional information would help: CBC with differential and platelets; malaria smear or rapid diagnostic test; dengue NS1/IgM; blood cultures; CRP or procalcitonin; CMP; lactate; urine analysis; chest X-ray if indicated.\n- Diagnostic approach to mitigate bias: use a short differential checklist (malaria, dengue, typhoid, bacterial sepsis, other febrile illnesses); apply severity scores (e.g., qSOFA/NEWS) to monitor changes; re-evaluate in 2–4 hours; involve a senior clinician if uncertainty remains.\n\nDecision:\n- Bias-mitigated plan:\n  - Order malaria test (rapid test or smear), CBC with differential and platelets, CMP, CRP/procalcitonin if available, dengue NS1/IgM, blood cultures, and urine analysis.\n  - Initiate cautious IV fluids aligned with hemodynamics; monitor vitals closely; adjust fluid plan based on response and test results.\n  - Reassess within 2 hours; if SBP ≤100 mmHg or mental status changes or rising lactate, escalate to sepsis protocol and consider admission; maintain explicit documentation of differential and bias concern.\n  - Communicate with patient and family about diagnostic steps and rationale; obtain consent for tests; involve senior staff as needed.\n\nReflection:\n- In Lagos hospitals, crowded EDs and high patient volume can amplify cognitive biases, especially for malaria-prone settings. A structured differential, timely re-evaluation, and prompt testing help ensure non-malarial febrile illnesses are not missed, aligning with safe, patient-centered care for Amara’s context.\n\nKey Insight:\n  Anchoring on the most common local disease can lead to missed alternatives; a structured differential and planned re-evaluation helps mitigate this bias in busy hospital settings.",
+        "example_id": "ex_b0b1ce862cb145de",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Tailor the next Cognitive Bias example for a Lagos, Nigeria nursing context featuring Amara as the nurse. Present a medium-complexity case where a bias (e.g., anchoring or availability) could influence triage or interpretation of vitals; structure the prompt with clearly labeled sections: Input, Analysis, Decision, and Reflection, and require the learner to identify the bias, propose a bias-mitigating alternative, and briefly reflect on applicability to real Lagos hospital settings.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example effectively personalizes the scenario by including Amara's name, profession, and location, and it uses a context relevant to her role as a nurse in Lagos, Nigeria. The complexity level appears appropriate, with detailed clinical reasoning and diagnostic considerations that match a medium complexity. The factual content about malaria, differential diagnoses, and mitigation strategies is accurate and aligns with clinical practice. The structure of the example is clear, with a logical flow from case presentation to analysis, decision, and reflection, facilitating learning. The analogies and framing are appropriate for the medical domain, focusing on clinical decision-making and cognitive biases in healthcare.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Amara's profile details and context, making it highly tailored to her background and learning preferences.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The content depth and clinical reasoning are suitable for a professional nurse with medium complexity, including diagnostic considerations and bias mitigation strategies.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The medical facts about malaria, differential diagnoses, and bias mitigation are correct and reflect current clinical understanding.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from case presentation to analysis and reflection, making it easy to follow and learn from.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing, vocabulary, and analogies are appropriate for a clinical, healthcare setting, matching the topic of cognitive bias in medicine.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Tailor the next Cognitive Bias example for a Lagos, Nigeria nursing context featuring Amara as the nurse. Present a medium-complexity case where a bias (e.g., anchoring or availability) could influence triage or interpretation of vitals; structure the prompt with clearly labeled sections: Input, Analysis, Decision, and Reflection, and require the learner to identify the bias, propose a bias-mitigating alternative, and briefly reflect on applicability to real Lagos hospital settings.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 4,
+    "reasoning": "The instruction explicitly incorporates the user's professional background as a nurse in Lagos, Nigeria, and emphasizes the importance of real-world, domain-specific scenarios, aligning with the stored pattern preferences. It also specifies the complexity level and the structure of the task, which reflects the insights about preferred example-based, medium-complexity content. Therefore, it effectively synthesizes the stored patterns into a concrete, actionable directive.\n\nSPECIFICITY_SCORE: 4",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:23:10.033675"
+}

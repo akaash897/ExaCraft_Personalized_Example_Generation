@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_03__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_03",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_03",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_03",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_4df4dfed40f04283",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, is drafting a literature review on a debated historical interpretation. He believes Interpretation X is the most convincing and finds several quotes that support it. He notices, though, that he tends to skim past sources that argue against X and gives those opposing views less weight. This tendency is a cognitive bias called confirmation bias.\n\nNumeric illustration:\n- He reads 10 sources total.\n  - Supportive of X: 7\n  - Contradictory to X: 3\n- If he treats all sources as equally informative, the strength of the claim X would be (7 positive signals − 3 negative signals) / 10 = +0.4.\n- If he focuses mainly on the supportive sources and discounts the contradictory ones, his perceived strength becomes +0.7.\n- The gap shows how bias can inflate his confidence in X from +0.4 to +0.7.\n\nGoing deeper: to counter this bias, he could deliberately include the 3 challenging sources in his notes and re-calculate, or set a rule to weigh evidence by methodological quality rather than by alignment with his initial view.\n\nKey Insight:\nCognitive bias can tilt how much weight we give supporting vs. opposing evidence; recognizing it helps us aim for a fairer, more robust conclusion.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, is drafting a literature review on a debated historical interpretation. He believes Interpretation X is the most convincing and finds several quotes that support it. He notices, though, that he tends to skim past sources that argue against X and gives those opposing views less weight. This tendency is a cognitive bias called confirmation bias.\n\nNumeric illustration:\n- He reads 10 sources total.\n  - Supportive of X: 7\n  - Contradictory to X: 3\n- If he treats all sources as equally informative, the strength of the claim X would be (7 positive signals − 3 negative signals) / 10 = +0.4.\n- If he focuses mainly on the supportive sources and discounts the contradictory ones, his perceived strength becomes +0.7.\n- The gap shows how bias can inflate his confidence in X from +0.4 to +0.7.\n\nGoing deeper: to counter this bias, he could deliberately include the 3 challenging sources in his notes and re-calculate, or set a rule to weigh evidence by methodological quality rather than by alignment with his initial view.\n\nKey Insight:\nCognitive bias can tilt how much weight we give supporting vs. opposing evidence; recognizing it helps us aim for a fairer, more robust conclusion.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nCarlos, a humanities researcher in São Paulo, is drafting a literature review on a debated historical interpretation. He believes Interpretation X is the most convincing and finds several quotes that support it. He notices, though, that he tends to skim past sources that argue against X and gives those opposing views less weight. This tendency is a cognitive bias called confirmation bias.\n\nNumeric illustration:\n- He reads 10 sources total.\n  - Supportive of X: 7\n  - Contradictory to X: 3\n- If he treats all sources as equally informative, the strength of the claim X would be (7 positive signals − 3 negative signals) / 10 = +0.4.\n- If he focuses mainly on the supportive sources and discounts the contradictory ones, his perceived strength becomes +0.7.\n- The gap shows how bias can inflate his confidence in X from +0.4 to +0.7.\n\nGoing deeper: to counter this bias, he could deliberately include the 3 challenging sources in his notes and re-calculate, or set a rule to weigh evidence by methodological quality rather than by alignment with his initial view.\n\nKey Insight:\nCognitive bias can tilt how much weight we give supporting vs. opposing evidence; recognizing it helps us aim for a fairer, more robust conclusion.",
+        "example_id": "ex_918f761664264f0d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and it uses a humanities research context, aligning well with Carlos's background. The complexity level appears appropriate, involving a nuanced explanation of confirmation bias with a numeric illustration and a suggested countermeasure, which matches a medium complexity for a PhD-level learner. The factual content about confirmation bias and the example's explanation are accurate and well-grounded in psychological principles. The structure is clear, with a logical flow from scenario to illustration to insight, making it pedagogically effective. The framing uses a humanities research context, which is domain-appropriate, avoiding any off-topic analogies or framing issues.\n\n[PF] PERSONALIZATION FIDELITY — The example is highly tailored, integrating the user's name, location, profession, and learning style, and it uses a humanities research scenario, which is appropriate.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation involves a detailed numeric illustration and a nuanced discussion of bias, suitable for a PhD-level learner with medium complexity. It balances depth without being overly technical.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The description of confirmation bias and the example provided are factually correct, with no inaccuracies or misleading elements.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to illustration to insight, making it easy to follow and memorable. It explicitly connects the example to the key concept.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The framing and vocabulary are appropriate for the topic of cognitive bias, especially within a humanities research context, with no off-domain analogies.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:15:26.017628"
+}

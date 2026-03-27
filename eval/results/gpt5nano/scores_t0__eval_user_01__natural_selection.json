@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_01__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_685a53dc7698400d",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nThink of a population of beetles living on a tree trunk. The beetles vary in color: some are light, some are dark. In this environment, birds tend to spot the light-colored beetles against the dark bark, so light beetles are more likely to be eaten. If the bark is dark, dark beetles blend in better and are more likely to survive and have babies.\n\nStarting numbers this season:\n- 40 light beetles\n- 60 dark beetles\n\nPredation and survival:\n- Light beetles survive at 20% â†’ 8 survive\n- Dark beetles survive at 60% â†’ 36 survive\n\nResult:\nIf each surviving beetle has the same chance to reproduce, the next generation would have about 8 light offspring and 36 dark offspring, so dark-colored beetles become more common over time.\n\nKey Insight:\nNatural selection favors traits that help individuals survive and reproduce in a given environment; over generations, those traits become more common in the population.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nThink of a population of beetles living on a tree trunk. The beetles vary in color: some are light, some are dark. In this environment, birds tend to spot the light-colored beetles against the dark bark, so light beetles are more likely to be eaten. If the bark is dark, dark beetles blend in better and are more likely to survive and have babies.\n\nStarting numbers this season:\n- 40 light beetles\n- 60 dark beetles\n\nPredation and survival:\n- Light beetles survive at 20% â†’ 8 survive\n- Dark beetles survive at 60% â†’ 36 survive\n\nResult:\nIf each surviving beetle has the same chance to reproduce, the next generation would have about 8 light offspring and 36 dark offspring, so dark-colored beetles become more common over time.\n\nKey Insight:\nNatural selection favors traits that help individuals survive and reproduce in a given environment; over generations, those traits become more common in the population.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nThink of a population of beetles living on a tree trunk. The beetles vary in color: some are light, some are dark. In this environment, birds tend to spot the light-colored beetles against the dark bark, so light beetles are more likely to be eaten. If the bark is dark, dark beetles blend in better and are more likely to survive and have babies.\n\nStarting numbers this season:\n- 40 light beetles\n- 60 dark beetles\n\nPredation and survival:\n- Light beetles survive at 20% â†’ 8 survive\n- Dark beetles survive at 60% â†’ 36 survive\n\nResult:\nIf each surviving beetle has the same chance to reproduce, the next generation would have about 8 light offspring and 36 dark offspring, so dark-colored beetles become more common over time.\n\nKey Insight:\nNatural selection favors traits that help individuals survive and reproduce in a given environment; over generations, those traits become more common in the population.",
+        "example_id": "ex_13376dc5e86e4eb7",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 4,
+      "CA": 4,
+      "PC": 3,
+      "DA": 3
+    },
+    "composite": 3.3,
+    "reasoning": "The example uses a clear, relatable scenario involving beetles and predation, which aligns well with high school-level understanding and the user's learning style of example-based learning. It accurately describes the process of natural selection with correct terminology and logical progression, making it suitable for the user's complexity level. The analogy is appropriate for biology and does not introduce any domain mismatch. The structure is straightforward, with a logical flow from the scenario to the key insight, aiding pedagogical clarity.\n\n[PF] PERSONALIZATION FIDELITY â€” The example does not incorporate the user's name, location, or profession, nor does it tailor the analogy specifically to a European or Berlin context, nor does it explicitly match the medium complexity with advanced or simplified language. It is a generic biology example.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION â€” The explanation is at a high school level, with basic probability and population concepts, matching the user's medium complexity preference. It avoids overly technical language or advanced formulas.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The scientific content is correct, accurately describing natural selection, variation, survival, and reproduction, with no errors.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear scenario, step-by-step explanation, and a memorable key insight, making it effective for learning.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS â€” The analogy of beetles and predation is a classic, appropriate framing for natural selection, with suitable vocabulary and context.  \nAXIS_SCORE: 3\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 4, \"PC\": 3, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:40:40.423124"
+}

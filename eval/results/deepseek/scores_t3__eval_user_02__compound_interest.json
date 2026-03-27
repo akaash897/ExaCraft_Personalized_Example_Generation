@@ -1,0 +1,152 @@
+{
+  "key": "t3__eval_user_02__compound_interest",
+  "tier": "t3",
+  "user_id": "eval_user_02",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_02",
+    "topic": "Compound Interest",
+    "thread_id": "thread_e27db69263834cd0",
+    "initial_example": "**Concept:** Compound Interest\n\n**Example:**\nAmara, imagine you are managing a small fund for new medical equipment at your hospital in Lagos. The hospital invests ₦100,000 in a secure account that earns 10% interest per year, compounded annually.\n\n**Year-by-Year Growth:**\n- **Year 0 (Initial Investment):** ₦100,000\n- **Year 1:** The account earns 10% interest on the principal.\n  *Interest:* ₦100,000 × 0.10 = ₦10,000\n  *New Total:* ₦100,000 + ₦10,000 = **₦110,000**\n- **Year 2:** Interest is now calculated on the *new total* from Year 1.\n  *Interest:* ₦110,000 × 0.10 = ₦11,000\n  *New Total:* ₦110,000 + ₦11,000 = **₦121,000**\n\n**The \"Compounding\" Effect:**\nNotice that in Year 2, you earned ₦11,000 in interest—₦1,000 more than in Year 1. This extra ₦1,000 is the \"interest on the interest\" from Year 1. Each year, the base amount that earns interest grows, leading to accelerating growth over time.\n\n**Formula (for clarity):**\nThe future value can be calculated directly:\n`A = P(1 + r)^t`\nWhere:\n*   **A** = Future amount\n*   **P** = Principal (₦100,000)\n*   **r** = Annual interest rate (0.10)\n*   **t** = Time in years (2)\n\nFor our 2-year example:\n`A = 100,000 × (1 + 0.10)^2 = 100,000 × 1.21 = ₦121,000`\n\n**Medical Analogy - Treatment Adherence:**\nThink of a patient on a long-term medication regimen. Taking the medication consistently (the principal investment) manages the condition (earns interest). The improved health (the interest) then makes the patient more resilient, leading to even better health outcomes in the next period (compounding). Missing doses is like withdrawing the principal—it interrupts the compounding process and the long-term benefit.\n\n**Key Insight:**\nCompound interest is growth on growth. The critical factor is time—leaving the investment (or consistent treatment) untouched allows the returns from each period to themselves generate returns in the next, leading to much larger results than simple, linear growth.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you manage a small fund for your ward's portable vital signs monitors. The hospital provides ₦100,000 seed money. Instead of spending the interest each year, you reinvest it to grow the fund faster, just like a medication's effect can compound over a treatment course.\n\nScenario: Ward Equipment Fund\n- Initial Principal: ₦100,000\n- Annual Interest Rate: 10% (compounded yearly)\n- Term: 2 years\n\n**Year 1:**\n- Starting Balance: ₦100,000\n- Interest Earned: 10% of ₦100,000 = ₦10,000\n- **Year-End Balance:** ₦110,000\n*(This is like a patient showing improvement after the first week of a consistent treatment regimen.)*\n\n**Year 2:**\n- Starting Balance: ₦110,000 (includes last year's interest)\n- Interest Earned: 10% of ₦110,000 = ₦11,000\n- **Year-End Balance:** ₦121,000\n\n**The Compound Effect:**\nIn the second year, you earned ₦11,000 in interest—₦1,000 more than the first year. This extra ₦1,000 is \"interest on the interest\" from Year 1. If this were *simple* interest, you would have earned only ₦10,000 each year, for a total of ₦120,000.\n\nKey Insight:\nCompound interest accelerates growth because you earn returns on your initial investment *and* on the accumulated returns, much like a successful treatment protocol builds on each week's progress. The key is consistent reinvestment, not withdrawing the gains early.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Compound Interest\n\n**Example:**\nAmara, imagine you are managing a small fund for new medical equipment at your hospital in Lagos. The hospital invests ₦100,000 in a secure account that earns 10% interest per year, compounded annually.\n\n**Year-by-Year Growth:**\n- **Year 0 (Initial Investment):** ₦100,000\n- **Year 1:** The account earns 10% interest on the principal.\n  *Interest:* ₦100,000 × 0.10 = ₦10,000\n  *New Total:* ₦100,000 + ₦10,000 = **₦110,000**\n- **Year 2:** Interest is now calculated on the *new total* from Year 1.\n  *Interest:* ₦110,000 × 0.10 = ₦11,000\n  *New Total:* ₦110,000 + ₦11,000 = **₦121,000**\n\n**The \"Compounding\" Effect:**\nNotice that in Year 2, you earned ₦11,000 in interest—₦1,000 more than in Year 1. This extra ₦1,000 is the \"interest on the interest\" from Year 1. Each year, the base amount that earns interest grows, leading to accelerating growth over time.\n\n**Formula (for clarity):**\nThe future value can be calculated directly:\n`A = P(1 + r)^t`\nWhere:\n*   **A** = Future amount\n*   **P** = Principal (₦100,000)\n*   **r** = Annual interest rate (0.10)\n*   **t** = Time in years (2)\n\nFor our 2-year example:\n`A = 100,000 × (1 + 0.10)^2 = 100,000 × 1.21 = ₦121,000`\n\n**Medical Analogy - Treatment Adherence:**\nThink of a patient on a long-term medication regimen. Taking the medication consistently (the principal investment) manages the condition (earns interest). The improved health (the interest) then makes the patient more resilient, leading to even better health outcomes in the next period (compounding). Missing doses is like withdrawing the principal—it interrupts the compounding process and the long-term benefit.\n\n**Key Insight:**\nCompound interest is growth on growth. The critical factor is time—leaving the investment (or consistent treatment) untouched allows the returns from each period to themselves generate returns in the next, leading to much larger results than simple, linear growth.",
+        "example_id": "ex_f2129df9dbf5499d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you manage a small fund for your ward's portable vital signs monitors. The hospital provides ₦100,000 seed money. Instead of spending the interest each year, you reinvest it to grow the fund faster, just like a medication's effect can compound over a treatment course.\n\nScenario: Ward Equipment Fund\n- Initial Principal: ₦100,000\n- Annual Interest Rate: 10% (compounded yearly)\n- Term: 2 years\n\n**Year 1:**\n- Starting Balance: ₦100,000\n- Interest Earned: 10% of ₦100,000 = ₦10,000\n- **Year-End Balance:** ₦110,000\n*(This is like a patient showing improvement after the first week of a consistent treatment regimen.)*\n\n**Year 2:**\n- Starting Balance: ₦110,000 (includes last year's interest)\n- Interest Earned: 10% of ₦110,000 = ₦11,000\n- **Year-End Balance:** ₦121,000\n\n**The Compound Effect:**\nIn the second year, you earned ₦11,000 in interest—₦1,000 more than the first year. This extra ₦1,000 is \"interest on the interest\" from Year 1. If this were *simple* interest, you would have earned only ₦10,000 each year, for a total of ₦120,000.\n\nKey Insight:\nCompound interest accelerates growth because you earn returns on your initial investment *and* on the accumulated returns, much like a successful treatment protocol builds on each week's progress. The key is consistent reinvestment, not withdrawing the gains early.",
+        "example_id": "ex_29e261c0e4fb4bc0"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      }
+    ],
+    "context_instruction": "Continue using the healthcare/medical context that resonates with this student. Frame Compound Interest through medical analogies or nursing scenarios, such as medication compounding effects, patient treatment outcomes over time, or medical equipment investment returns. Connect the financial concept directly to her professional experience as a nurse to make it concrete and relevant.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.58,
+      "CA": 5.0,
+      "PC": 4.99,
+      "DA": 5.0
+    },
+    "composite": 4.914,
+    "reasoning": "The example is personalized by addressing Amara directly, referencing her location in Lagos and her profession as a nurse, which makes the scenario more relatable. The analogy involving treatment adherence is domain-specific and appropriate, connecting financial growth to health management, which aligns with her medical background and learning style. The complexity level appears suitable, with clear step-by-step calculations and an accessible formula, matching a medium complexity. The factual content about compound interest and the formula is accurate, and the structure is logical, guiding the learner from basic concepts to an analogy and key insight. The framing and vocabulary are appropriate for the topic, with no off-domain elements present.\n\n[PF] PERSONALIZATION FIDELITY — The example effectively incorporates the user's name, location, and profession, and uses a medical analogy that aligns with her background, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes detailed calculations, formulas, and an analogy suitable for a medium complexity level, balancing depth and accessibility.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The content correctly explains compound interest, the formula, and the growth effect, with accurate calculations and a proper analogy.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with clear steps, formulas, and an analogy that bridges the concept to real-world understanding, facilitating learning.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy relating compound interest to treatment adherence in healthcare is highly appropriate, leveraging her medical background and making the topic relevant.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 5.0,
+      "CC": 4.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the content by referencing Amara's role as a nurse in Lagos and uses a healthcare-related analogy (\"medication's effect\" and \"treatment regimen\") that aligns with her profession. The scenario is tailored to her context, making the example more relatable. The complexity level appears appropriate, with clear explanations and basic formulas suitable for a medium level of understanding. The factual content about compound interest and its calculation is accurate, and the analogy helps clarify the concept without distorting it. The structure is logical, with a step-by-step breakdown and a key insight that reinforces learning, making it pedagogically sound. The analogy is domain-appropriate, linking finance to healthcare, which is relevant to her profession and background.\n\nPERSONALIZATION FIDELITY: The example is well-tailored, integrating her profession, location, and learning style effectively.\nAXIS_SCORE: 5\n\nCOMPLEXITY CALIBRATION: The explanation balances simplicity and detail, matching a medium complexity level suitable for a professional learner.\nAXIS_SCORE: 4\n\nCONCEPTUAL ACCURACY: The content correctly explains compound interest, formulas, and the comparison with simple interest, with no factual errors.\nAXIS_SCORE: 5\n\nPEDAGOGICAL CLARITY: The example is well-structured, with clear steps, a memorable analogy, and a logical flow that facilitates understanding.\nAXIS_SCORE: 5\n\nDOMAIN APPROPRIATENESS: The analogy uses healthcare and finance, both relevant to her background, making it appropriate and effective.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The system responds by restructuring the example with accessible language and a familiar context, aligning with the user's stated preference.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Continue using the healthcare/medical context that resonates with this student. Frame Compound Interest through medical analogies or nursing scenarios, such as medication compounding effects, patient treatment outcomes over time, or medical equipment investment returns. Connect the financial concept directly to her professional experience as a nurse to make it concrete and relevant.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "accept",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "accept",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T21:26:35.485579"
+}

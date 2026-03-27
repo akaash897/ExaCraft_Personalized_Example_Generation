@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_01__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_f964f390283647b4",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're preparing for an important exam. You've been studying a particular topic for weeks, and you feel confident about it. However, during the exam, you encounter a question that seems tricky. You immediately recall a similar question from your study sessions and assume the answer must be the same, even though the wording is slightly different. This is an example of the **Confirmation Bias**.\n\nWhat happened:\n- You had a pre-existing belief: \"I know this topic well.\"\n- You encountered ambiguous evidence: a tricky exam question.\n- You interpreted the evidence to confirm your belief: you assumed it was the same as a question you'd practiced.\n- You ignored contradictory clues: the different wording that might indicate a different answer.\n\nResult:\nYou answered incorrectly because you favored information that supported your existing confidence, rather than critically evaluating the new question.\n\nKey Insight:\nA cognitive bias is a systematic pattern of deviation from rational judgment, often caused by our brain's shortcuts for processing information. Confirmation Bias specifically leads us to seek, interpret, and remember information that confirms our existing beliefs, while overlooking evidence that contradicts them.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're preparing for an important exam. You've been studying a particular topic for weeks, and you feel confident about it. However, during the exam, you encounter a question that seems tricky. You immediately recall a similar question from your study sessions and assume the answer must be the same, even though the wording is slightly different. This is an example of the **Confirmation Bias**.\n\nWhat happened:\n- You had a pre-existing belief: \"I know this topic well.\"\n- You encountered ambiguous evidence: a tricky exam question.\n- You interpreted the evidence to confirm your belief: you assumed it was the same as a question you'd practiced.\n- You ignored contradictory clues: the different wording that might indicate a different answer.\n\nResult:\nYou answered incorrectly because you favored information that supported your existing confidence, rather than critically evaluating the new question.\n\nKey Insight:\nA cognitive bias is a systematic pattern of deviation from rational judgment, often caused by our brain's shortcuts for processing information. Confirmation Bias specifically leads us to seek, interpret, and remember information that confirms our existing beliefs, while overlooking evidence that contradicts them.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nLena, as a student in Berlin, you're preparing for an important exam. You've been studying a particular topic for weeks, and you feel confident about it. However, during the exam, you encounter a question that seems tricky. You immediately recall a similar question from your study sessions and assume the answer must be the same, even though the wording is slightly different. This is an example of the **Confirmation Bias**.\n\nWhat happened:\n- You had a pre-existing belief: \"I know this topic well.\"\n- You encountered ambiguous evidence: a tricky exam question.\n- You interpreted the evidence to confirm your belief: you assumed it was the same as a question you'd practiced.\n- You ignored contradictory clues: the different wording that might indicate a different answer.\n\nResult:\nYou answered incorrectly because you favored information that supported your existing confidence, rather than critically evaluating the new question.\n\nKey Insight:\nA cognitive bias is a systematic pattern of deviation from rational judgment, often caused by our brain's shortcuts for processing information. Confirmation Bias specifically leads us to seek, interpret, and remember information that confirms our existing beliefs, while overlooking evidence that contradicts them.",
+        "example_id": "ex_ed4ca1fe0eb04ddc",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.93,
+      "CC": 4.58,
+      "CA": 5.0,
+      "PC": 4.94,
+      "DA": 4.98
+    },
+    "composite": 4.888,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Lena's name, location, and role as a student, aligning well with her profile. The complexity appears appropriate for a high school student, focusing on a clear, relatable example of confirmation bias without overly technical language. The factual content about confirmation bias is accurate and well-explained, with no evident errors. The structure is logical, with a clear progression from scenario to insight, making it pedagogically effective. The analogy used—relating exam questions to cognitive bias—is appropriate for the domain of psychology and cognitive science, and it maintains relevance to the topic.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Lena's profile, including her name, location, and student role, and uses her learning style (example-based) effectively.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The language and explanation are suitable for a high school student, avoiding overly technical terms while conveying the core concept clearly.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of confirmation bias is accurate, and the steps outlined reflect well-established psychological understanding.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation, and key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing uses a familiar academic context (exam questions) and psychological terminology, which is appropriate for the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:38:06.625005"
+}

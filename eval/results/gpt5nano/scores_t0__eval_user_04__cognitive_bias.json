@@ -1,0 +1,80 @@
+{
+  "key": "t0__eval_user_04__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_984a7145fc054956",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nCognitive bias is a mental shortcut that helps us think quickly, but it can lead to mistakes.\n\nScenario:\nYou already think a new office policy will be unfair. After hearing a few negative comments, you focus on those and remember them, while you overlook any positive or neutral feedback. This is confirmation bias in action: you notice information that supports your belief and ignore information that contradicts it.\n\nKey Insight:\nConfirmation bias makes us notice what confirms our beliefs and ignore what disagrees, so our view can feel stronger than the actual evidence warrants. Take a moment to look for balanced evidence.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nCognitive bias is a mental shortcut that helps us think quickly, but it can lead to mistakes.\n\nScenario:\nYou already think a new office policy will be unfair. After hearing a few negative comments, you focus on those and remember them, while you overlook any positive or neutral feedback. This is confirmation bias in action: you notice information that supports your belief and ignore information that contradicts it.\n\nKey Insight:\nConfirmation bias makes us notice what confirms our beliefs and ignore what disagrees, so our view can feel stronger than the actual evidence warrants. Take a moment to look for balanced evidence.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nCognitive bias is a mental shortcut that helps us think quickly, but it can lead to mistakes.\n\nScenario:\nYou already think a new office policy will be unfair. After hearing a few negative comments, you focus on those and remember them, while you overlook any positive or neutral feedback. This is confirmation bias in action: you notice information that supports your belief and ignore information that contradicts it.\n\nKey Insight:\nConfirmation bias makes us notice what confirms our beliefs and ignore what disagrees, so our view can feel stronger than the actual evidence warrants. Take a moment to look for balanced evidence.",
+        "example_id": "ex_498f40b1e1c84d5b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 1,
+      "CC": 5,
+      "CA": 4,
+      "PC": 5,
+      "DA": 3
+    },
+    "composite": 3.7,
+    "reasoning": "The example provides a clear explanation of confirmation bias with a relatable scenario, but it does not incorporate any elements from the user's profile such as their name, location, or profession, nor does it use domain-specific analogies related to engineering or software. The complexity level is appropriate for an undergraduate, and the structure is straightforward, but it lacks explicit pedagogical features like a clear concept-to-example bridge. The framing is generally appropriate for the topic, with no off-domain analogies. Overall, it is a generic but accurate and pedagogically decent example.\n\n[PF] PERSONALIZATION FIDELITY â€” The example does not include any personalized details from the user's profile, making it quite generic. It could be used for any learner without modification.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION â€” The language and explanation are suitable for an undergraduate level, with a straightforward description of confirmation bias and a simple scenario. It matches the user's medium complexity preference well.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The content correctly describes confirmation bias and its effects, with no factual errors. The core concept is accurately presented.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear scenario and a key insight that summarizes the concept. However, it could benefit from a more explicit concept-example bridge or a memorable takeaway.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS â€” The framing and vocabulary are appropriate for psychology and cognitive biases, but it does not incorporate engineering or software-specific analogies, which could have enhanced domain relevance for the user.  \nAXIS_SCORE: 3\n\n```json\n{\"PF\": 1, \"CC\": 5, \"CA\": 4, \"PC\": 5, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 1,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 3
+      },
+      "composite": 4.0,
+      "reasoning": "For the axis of PERSONALIZATION FIDELITY (PF), the example does not reflect the user's actual profile in a significant way, as it does not incorporate the user's name, location, profession, or any specific details from their background, education level, or learning style. The scenario provided is generic and could apply to anyone, not specifically tailored to Kenji's profile as an engineer with an example-based learning style.\n\nPF_SCORE: 1\n\nFor COMPLEXITY CALIBRATION (CC), the example seems to match a medium level of complexity, as it introduces a concept (cognitive bias) and provides a relatable scenario without delving into overly complex psychological theories or requiring advanced prior knowledge. However, the depth of explanation might be considered slightly simplistic for an undergraduate student, especially one with a background in a field like software engineering, which often requires dealing with complex systems and nuanced decision-making.\n\nCC_SCORE: 4\n\nRegarding CONCEPTUAL ACCURACY (CA), the example accurately describes confirmation bias, a well-documented cognitive bias where individuals give more weight to information that supports their existing beliefs and less weight to information that contradicts these beliefs. The key insight provided is also correct in stating that this bias can lead to an unbalanced view of evidence.\n\nCA_SCORE: 5\n\nFor PEDAGOGICAL CLARITY (PC), the example is structured in a clear and educational manner, starting with a definition, moving to a scenario that illustrates the concept, and ending with a key insight that summarizes the importance of recognizing and mitigating this bias. The flow is logical, and the use of a relatable scenario helps to make the concept more accessible and memorable.\n\nPC_SCORE: 5\n\nConsidering DOMAIN APPROPRIATENESS (DA), the example is perfectly appropriate for the topic of cognitive bias, as it uses a scenario that could occur in any domain (including personal and professional settings) to illustrate the concept. The framing and vocabulary used are also suitable for the topic, making it relevant and understandable for learners across different disciplines.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 1, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:46:18.746694"
+}

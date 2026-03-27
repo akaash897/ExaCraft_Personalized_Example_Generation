@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__compound_interest",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Compound Interest",
+    "thread_id": "thread_da9c72a8fd734333",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nThink of your money as a growing snowball. You don’t just earn interest on the original amount each year—you also earn interest on the interest already added. That’s compound interest.\n\nScenario:\n- Deposit (P): $1,000\n- Annual interest rate (r): 5% (0.05)\n- Compounded annually for (t): 3 years\n\nFormula (relevant):\nA = P × (1 + r)^t\n\nCalculation:\nA = 1000 × (1.05)^3 ≈ 1157.63\n\nYear-by-year view (optional breakdown):\n- End of Year 1: 1000 × 1.05 = 1050\n- End of Year 2: 1050 × 1.05 = 1102.50\n- End of Year 3: 1102.50 × 1.05 = 1157.63\n\nResult:\nApproximately $1,157.63 after 3 years.\n\nKey Insight:\nInterest earns interest over time, so the longer the money stays invested (and the more often it compounds), the faster it grows.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nThink of your money as a growing snowball. You don’t just earn interest on the original amount each year—you also earn interest on the interest already added. That’s compound interest.\n\nScenario:\n- Deposit (P): $1,000\n- Annual interest rate (r): 5% (0.05)\n- Compounded annually for (t): 3 years\n\nFormula (relevant):\nA = P × (1 + r)^t\n\nCalculation:\nA = 1000 × (1.05)^3 ≈ 1157.63\n\nYear-by-year view (optional breakdown):\n- End of Year 1: 1000 × 1.05 = 1050\n- End of Year 2: 1050 × 1.05 = 1102.50\n- End of Year 3: 1102.50 × 1.05 = 1157.63\n\nResult:\nApproximately $1,157.63 after 3 years.\n\nKey Insight:\nInterest earns interest over time, so the longer the money stays invested (and the more often it compounds), the faster it grows.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nThink of your money as a growing snowball. You don’t just earn interest on the original amount each year—you also earn interest on the interest already added. That’s compound interest.\n\nScenario:\n- Deposit (P): $1,000\n- Annual interest rate (r): 5% (0.05)\n- Compounded annually for (t): 3 years\n\nFormula (relevant):\nA = P × (1 + r)^t\n\nCalculation:\nA = 1000 × (1.05)^3 ≈ 1157.63\n\nYear-by-year view (optional breakdown):\n- End of Year 1: 1000 × 1.05 = 1050\n- End of Year 2: 1050 × 1.05 = 1102.50\n- End of Year 3: 1102.50 × 1.05 = 1157.63\n\nResult:\nApproximately $1,157.63 after 3 years.\n\nKey Insight:\nInterest earns interest over time, so the longer the money stays invested (and the more often it compounds), the faster it grows.",
+        "example_id": "ex_a25daf82b31749a5",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 4,
+      "CA": 4,
+      "PC": 3,
+      "DA": 4
+    },
+    "composite": 3.4,
+    "reasoning": "The example uses a generic scenario with a common analogy (snowball) that is accessible and relevant for a high school student, but it does not incorporate specific profile details like Lena's location or learning style. The explanation is clear and well-structured, matching medium complexity, and the formulas and concepts are accurate and appropriate for her level. The analogy and framing are appropriate for the domain of finance and mathematics, making it suitable for a high school audience.\n\n[PF] PERSONALIZATION FIDELITY — The example does not incorporate Lena's name, location, or specific interests, and the analogy is generic rather than tailored. It is somewhat personalized through the scenario style but lacks direct profile integration.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes formulas, step-by-step calculations, and a clear breakdown, matching a medium complexity level suitable for high school students.  \nAXIS_SCORE: 3\n\n[CA] CONCEPTUAL ACCURACY — The content correctly explains compound interest, the formula is accurate, and the calculations are correct, with no factual errors.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from analogy to formula to calculation, and the key insight is explicitly highlighted, making it easy to follow and memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The snowball analogy and financial framing are perfectly appropriate for the topic of compound interest, aligning well with the domain of finance and mathematics.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 4, \"PC\": 3, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:48:29.927151"
+}

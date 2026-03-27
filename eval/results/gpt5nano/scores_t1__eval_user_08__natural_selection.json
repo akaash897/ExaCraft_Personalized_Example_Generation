@@ -1,0 +1,81 @@
+{
+  "key": "t1__eval_user_08__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_08",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_08",
+    "topic": "Natural Selection",
+    "thread_id": "thread_92d9d1fa65bd4c40",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, likes observing nature near his commute. Imagine a population of moths living on tree trunks in a city park. There are two color morphs: Light (L) and Dark (D). The park has dark bark, so dark moths are harder for predators to spot.\n\nInitial counts:\n- Light: 60\n- Dark: 40\n\nEnvironment and fitness (survival probability during one generation):\n- Light: 0.20\n- Dark: 0.90\n\nSurvivors:\n- Light: 60 × 0.20 = 12\n- Dark: 40 × 0.90 = 36\n- Total survivors: 48\n\nFrequencies after one generation:\n- Light: 12/48 = 0.25\n- Dark: 36/48 = 0.75\n\nAlternative compact formula (for quick check):\nLet p_D be initial dark frequency = 0.40, w_D = 0.90, w_L = 0.20.\np'_D = p_D × w_D / (p_D × w_D + (1 − p_D) × w_L) = 0.36 / 0.48 = 0.75.\n\nResult:\nThe darker morph’s advantage under these conditions increases its share from 40% to 75% in the next generation.\n\nKey Insight:\nNatural selection shifts trait frequencies toward those that boost survival in a given environment; here, darker moths become more common because they’re better camouflaged on dark bark.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, likes observing nature near his commute. Imagine a population of moths living on tree trunks in a city park. There are two color morphs: Light (L) and Dark (D). The park has dark bark, so dark moths are harder for predators to spot.\n\nInitial counts:\n- Light: 60\n- Dark: 40\n\nEnvironment and fitness (survival probability during one generation):\n- Light: 0.20\n- Dark: 0.90\n\nSurvivors:\n- Light: 60 × 0.20 = 12\n- Dark: 40 × 0.90 = 36\n- Total survivors: 48\n\nFrequencies after one generation:\n- Light: 12/48 = 0.25\n- Dark: 36/48 = 0.75\n\nAlternative compact formula (for quick check):\nLet p_D be initial dark frequency = 0.40, w_D = 0.90, w_L = 0.20.\np'_D = p_D × w_D / (p_D × w_D + (1 − p_D) × w_L) = 0.36 / 0.48 = 0.75.\n\nResult:\nThe darker morph’s advantage under these conditions increases its share from 40% to 75% in the next generation.\n\nKey Insight:\nNatural selection shifts trait frequencies toward those that boost survival in a given environment; here, darker moths become more common because they’re better camouflaged on dark bark.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, likes observing nature near his commute. Imagine a population of moths living on tree trunks in a city park. There are two color morphs: Light (L) and Dark (D). The park has dark bark, so dark moths are harder for predators to spot.\n\nInitial counts:\n- Light: 60\n- Dark: 40\n\nEnvironment and fitness (survival probability during one generation):\n- Light: 0.20\n- Dark: 0.90\n\nSurvivors:\n- Light: 60 × 0.20 = 12\n- Dark: 40 × 0.90 = 36\n- Total survivors: 48\n\nFrequencies after one generation:\n- Light: 12/48 = 0.25\n- Dark: 36/48 = 0.75\n\nAlternative compact formula (for quick check):\nLet p_D be initial dark frequency = 0.40, w_D = 0.90, w_L = 0.20.\np'_D = p_D × w_D / (p_D × w_D + (1 − p_D) × w_L) = 0.36 / 0.48 = 0.75.\n\nResult:\nThe darker morph’s advantage under these conditions increases its share from 40% to 75% in the next generation.\n\nKey Insight:\nNatural selection shifts trait frequencies toward those that boost survival in a given environment; here, darker moths become more common because they’re better camouflaged on dark bark.",
+        "example_id": "ex_d2e21edb7a6744bf",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.1,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Kenji's profession, location, and interest in nature, aligning well with his profile. The complexity level is appropriate, providing a detailed quantitative explanation suitable for an undergraduate learner with a medium complexity preference. The scientific content is accurate, correctly illustrating natural selection with proper formulas and concepts. The structure is clear, with a logical flow from scenario setup to key insight, facilitating understanding. The analogies used—moths on tree bark—are directly relevant to biology and natural selection, making the framing domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY — The example incorporates Kenji's name, profession, and location, and uses an analogy involving nature, which aligns with his interest and background. The scenario is tailored and domain-specific, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes quantitative data, formulas, and a step-by-step calculation, matching the medium complexity level expected for an undergraduate software engineer with an example-based learning style.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanation and formulas for natural selection are correct, accurately illustrating how trait frequencies change over generations based on survival probabilities.\nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from scenario to calculation to insight, making it easy to follow and memorable for learners.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of moths on tree bark is a classic and appropriate framing for natural selection, effectively matching the biological domain.\nAXIS_SCORE: 4\n\n```json\n{\"PF\": 2, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 2,
+        "CC": 5,
+        "CA": 5,
+        "PC": 3,
+        "DA": 5
+      },
+      "composite": 4.0,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:08:52.679887"
+}

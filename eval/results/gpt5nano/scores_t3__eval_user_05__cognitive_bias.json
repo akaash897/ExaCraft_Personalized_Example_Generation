@@ -1,0 +1,181 @@
+{
+  "key": "t3__eval_user_05__cognitive_bias",
+  "tier": "t3",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_760820e480344f80",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nContext: A Berlin classroom, where Lena, a student, is learning about ecosystems and natural selection. The teacher asks the class to think about how often dramatic climate-related events occur.\n\nInputs:\n  - Bias identified: Availability Bias (Availability Heuristic)\n  - Scenario: After seeing several striking headlines about floods and heatwaves, Lena believes such disasters are happening far more often than long-term data would suggest.\n\nEvidence (Supporting evidence):\n  - Lena can summon 4 vivid headlines from the past month; these stand out more than routine weather notes.\n  - In a quick in-class poll, Lena estimates a high annual frequency of major climate disasters.\n  - The discussion neighbors reference to recent events in Germany, shaping Lena’s impression more than any dataset.\n\nDebiasing rule (step-by-step):\n  - Step 1: Seek base-rate data instead of memorable events (look for overall frequency over many years).\n  - Step 2: Use a representative sample (aggregate long-term records rather than single incidents).\n  - Step 3: Convert impressions into probabilities using the data (p = occurrences / years).\n\nNumeric example (illustrative, to ground the idea):\n  - Lena’s initial intuitive estimate: 15% per year for a major climate disaster.\n  - Base-rate data (illustrative): 6 years with a major flood in a 50-year window → p_base = 6/50 = 12% per year.\n  - Debiased estimate: 12% per year.\n  - Difference shown: 15% (initial) vs. 12% (data-driven).\n\nOutputs (Bias-free conclusion with justification):\n  - Conclusion: The likelihood of a major climate disaster in a given year is about 12%, based on base-rate data, not the higher 15% Lena first thought.\n  - Justification: Availability bias makes memorable events feel more frequent; consulting representative, long-term data yields a more accurate probability.\n\nKey Insight:\n  Availability bias makes vivid events feel more common; grounding judgments in base-rate data provides a clearer picture.",
+    "final_example": "Concept: Availability Bias\n\nExample:\nContext:\nLena, a student in a Berlin classroom, asks you to explore Availability Bias in a real-school setting. The class discusses how memory of recent events can skew judgments about how often homework deadlines are missed.\n\nInputs:\n- Class size (N): 40 students\n- Recalled stories from past month (K): 6\n- Base-rate miss rate from school data (P_base): 0.10 (10% of students miss a deadline in a month)\n\nCalculations:\n- Availability estimate (P_avail):\n  P_avail = K / N = 6 / 40 = 0.15 (15%)\n\n- Expected number by memory (E_avail):\n  E_avail = N × P_avail = 40 × 0.15 = 6 students\n\n- Base-rate correction (E_base):\n  E_base = N × P_base = 40 × 0.10 = 4 students\n\nOutputs (side by side):\n- Availability-based estimate: 6 students\n- Base-rate-corrected estimate: 4 students\n\nInterpretation:\nThe memory-based view (6 students) is higher than what the base rate would suggest (4 students). This shows how recalling a few vivid stories about missed deadlines can inflate our sense of how common it is, compared with the typical monthly rate.\n\nPrompt for the student:\n- Identify the bias at work in this example.\n- Using the base rate (P_base = 0.10), perform the adjustment and compare with the availability-based result.\n- In your own words, explain why memory availability can distort frequency judgments in a Berlin classroom context.\n\nKey Insight:\nAvailability bias makes memorable or recent events feel more common than they actually are; always compare memory-based estimates to a known base rate to avoid overestimating frequency.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nContext: A Berlin classroom, where Lena, a student, is learning about ecosystems and natural selection. The teacher asks the class to think about how often dramatic climate-related events occur.\n\nInputs:\n  - Bias identified: Availability Bias (Availability Heuristic)\n  - Scenario: After seeing several striking headlines about floods and heatwaves, Lena believes such disasters are happening far more often than long-term data would suggest.\n\nEvidence (Supporting evidence):\n  - Lena can summon 4 vivid headlines from the past month; these stand out more than routine weather notes.\n  - In a quick in-class poll, Lena estimates a high annual frequency of major climate disasters.\n  - The discussion neighbors reference to recent events in Germany, shaping Lena’s impression more than any dataset.\n\nDebiasing rule (step-by-step):\n  - Step 1: Seek base-rate data instead of memorable events (look for overall frequency over many years).\n  - Step 2: Use a representative sample (aggregate long-term records rather than single incidents).\n  - Step 3: Convert impressions into probabilities using the data (p = occurrences / years).\n\nNumeric example (illustrative, to ground the idea):\n  - Lena’s initial intuitive estimate: 15% per year for a major climate disaster.\n  - Base-rate data (illustrative): 6 years with a major flood in a 50-year window → p_base = 6/50 = 12% per year.\n  - Debiased estimate: 12% per year.\n  - Difference shown: 15% (initial) vs. 12% (data-driven).\n\nOutputs (Bias-free conclusion with justification):\n  - Conclusion: The likelihood of a major climate disaster in a given year is about 12%, based on base-rate data, not the higher 15% Lena first thought.\n  - Justification: Availability bias makes memorable events feel more frequent; consulting representative, long-term data yields a more accurate probability.\n\nKey Insight:\n  Availability bias makes vivid events feel more common; grounding judgments in base-rate data provides a clearer picture.",
+        "example_id": "ex_47993ae158114389",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Availability Bias\n\nExample:\nConcept focus: A Berlin classroom walk-through to understand how Availability Bias can distort judgments about how often something happens. Lena is a student in Berlin; the teacher guides a data-driven mini-lesson on climate-disaster headlines vs long-term data.\n\nStep 1 — Identify the bias\n- Bias at issue: Availability Bias\n- Prompt for Lena: Which bias makes vivid or recent information feel more common than it really is?\n\nStep 2 — List supporting evidence (data you collect)\n- Data set (Inputs):\n  - Headlines observed in a 14-day window: 50 climate-disaster headlines from a major news site.\n  - Time window: 14 days.\n  - Base-rate for comparison (long-term): about 400 climate-disaster events per year globally (from EM-DAT-style long-term data).\n- Output you’ll compute:\n  - Headline count: 50\n  - Daily headline rate: 50 ÷ 14 = 3.57 headlines/day\n  - Annualized headline rate: 3.57 × 365 ≈ 1304 headlines/year\n- Prompts for Lena:\n  - “Count how many headlines you included.”\n  - “Note the window length and the base-rate you’ll compare to.”\n\nStep 3 — Run the numbers (math you’ll perform)\n- Calculations:\n  - Daily rate: 50 / 14 = 3.57\n  - Annualized rate from headlines: 3.57 × 365 ≈ 1,304 per year\n  - Compare to base-rate: 1,304 (observed) vs 400 (base-rate)\n  - Magnitude of difference: 1,304 ÷ 400 ≈ 3.26x higher\n- Output you’ll observe:\n  - The observed rate from headlines is about 3.26 times higher than the long-term base-rate.\n- Prompts for Lena:\n  - “Compute the daily rate from your 14-day count.”\n  - “Convert that to an annualized rate.”\n  - “Compare your result to the base-rate and note the ratio.”\n\nStep 4 — Interpret the result\n- Interpretation:\n  - The headline-and-memory data suggests climate disasters occur far more often than the long-term record indicates.\n  - This discrepancy illustrates Availability Bias: striking headlines bias our sense of frequency.\n- Output you’ll articulate:\n  - Acknowledgement that the 1,304 per year figure is likely inflated because headlines are more memorable and attention-grabbing than routine events.\n- Prompts for Lena:\n  - “What does the comparison say about our intuition vs the long-term data?”\n  - “Why might headlines push us to overestimate frequency?”\n\nStep 5 — Apply a debiasing rule and reach a bias-free conclusion\n- Debiasing rule (counter-bias strategy):\n  - Anchor estimates to a base-rate from long-term data.\n  - Extend the data window or combine multiple sources (e.g., multiple news outlets plus official disaster databases).\n- Bias-free conclusion (with justification):\n  - When using both long-term base-rate data and a broader data set, the estimated annual frequency solidly centers around ~400–450 events per year, not 1,300.\n  - Justification: base-rate data provides a more stable frequency estimate; the short, vivid 14-day headline window exaggerates frequency due to Availability Bias.\n- Outputs you’ll present:\n  - Debiasing action taken: anchored to base-rate; plan to check additional sources and longer windows.\n  - Final conclusion: Actual frequency is best estimated by base-rate data (roughly 400–450/year); the initial headline count misled us.\n- Prompts for Lena:\n  - “What base-rate can you rely on for a more stable estimate?”\n  - “What changes would you make to your data collection to reduce bias (longer window, more sources)?”\n  - “State the bias-free conclusion and justify it with both the long-term data and your broader data approach.”\n\nKey Insight:\nAvailability Bias makes vivid, memorable information feel more frequent than it actually is; grounding judgments in base-rate data and multiple sources helps correct the overestimation.",
+        "example_id": "ex_25680f1e27e04c46"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Availability Bias\n\nExample:\nContext:\nLena, a student in a Berlin classroom, asks you to explore Availability Bias in a real-school setting. The class discusses how memory of recent events can skew judgments about how often homework deadlines are missed.\n\nInputs:\n- Class size (N): 40 students\n- Recalled stories from past month (K): 6\n- Base-rate miss rate from school data (P_base): 0.10 (10% of students miss a deadline in a month)\n\nCalculations:\n- Availability estimate (P_avail):\n  P_avail = K / N = 6 / 40 = 0.15 (15%)\n\n- Expected number by memory (E_avail):\n  E_avail = N × P_avail = 40 × 0.15 = 6 students\n\n- Base-rate correction (E_base):\n  E_base = N × P_base = 40 × 0.10 = 4 students\n\nOutputs (side by side):\n- Availability-based estimate: 6 students\n- Base-rate-corrected estimate: 4 students\n\nInterpretation:\nThe memory-based view (6 students) is higher than what the base rate would suggest (4 students). This shows how recalling a few vivid stories about missed deadlines can inflate our sense of how common it is, compared with the typical monthly rate.\n\nPrompt for the student:\n- Identify the bias at work in this example.\n- Using the base rate (P_base = 0.10), perform the adjustment and compare with the availability-based result.\n- In your own words, explain why memory availability can distort frequency judgments in a Berlin classroom context.\n\nKey Insight:\nAvailability bias makes memorable or recent events feel more common than they actually are; always compare memory-based estimates to a known base rate to avoid overestimating frequency.",
+        "example_id": "ex_2d9cbf92f73841c3"
+      }
+    ],
+    "context_instruction": "Craft the next Cognitive Bias example around Lena in a Berlin classroom context, using a real-world school scenario to maximize engagement. Deliver a clear, step-by-step walkthrough with labeled inputs and outputs: identify the bias, list supporting evidence, apply a debiasing rule, and present a bias-free conclusion with justification, at medium complexity. Favor a concrete bias (e.g., availability or anchoring) and base-rate considerations, while preserving the Berlin-based, student-focused tone used in prior signals.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example is highly personalized, referencing Lena's name, location, and classroom setting, and it incorporates her role as a student with a learning style that favors examples, which aligns well with her profile. The complexity level appears appropriate, providing a detailed scenario with step-by-step debiasing rules and numeric examples, suitable for a high school student. The factual content about cognitive bias, specifically availability bias, is accurate and well-explained, with correct references to concepts like base-rate data and probability. The structure is clear, with a logical flow from context to evidence, rules, and conclusion, making it pedagogically effective. The analogies and framing are appropriate for the topic of cognitive biases, using a classroom and climate scenario that is relevant and understandable for a European high school student.\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 5.0,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the context by including Lena's name, location, and classroom setting, aligning well with her profile. The complexity level appears appropriate for a high school student, involving basic calculations and conceptual understanding without excessive technical detail. The factual content about availability bias and the calculations are correct and clearly explained, supporting accurate learning. The structure is logical, with a clear context, calculations, interpretation, and prompts, facilitating comprehension and engagement. The analogy of classroom memory and frequency judgments is appropriate for the domain of cognitive biases, making the framing relevant and accessible for a student.\n\nPF_SCORE: 5\nThe example is highly personalized, integrating Lena's profile details and a familiar classroom setting, with domain-specific framing.\n\nCC_SCORE: 5\nThe complexity matches a high school level, involving basic calculations and conceptual explanations, with only minor room for deeper elaboration.\n\nCA_SCORE: 5\nAll factual content, including the explanation of availability bias and the calculations, are correct and scientifically sound.\n\nPC_SCORE: 4\nThe example is well-structured with a clear flow, but the connection between the calculations and the core concept could be slightly more explicit to enhance memorability.\n\nDA_SCORE: 5\nThe analogy of classroom memory and frequency judgments is perfectly appropriate for the topic of cognitive bias, maintaining domain relevance.\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "I don't really get it.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The user's critique was that they didn't understand the original example, likely due to its complexity and verbosity. The regenerated example simplifies the explanation, clarifies the steps, and directly connects the example to the concept of Availability Bias, making it more accessible and easier to follow. Therefore, it effectively addresses the critique by improving clarity and comprehension.\n\nCOMPLIANCE_SCORE: 4  \nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example uses a school-related scenario involving homework deadlines, which aligns with the user's preference for everyday school life examples. It clearly demonstrates how memory can inflate perceived frequency compared to a base rate, directly addressing the critique. Therefore, it effectively resolves the user's concern about relatable, school-based scenarios. \n\nCOMPLIANCE_SCORE: 5  \nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "Craft the next Cognitive Bias example around Lena in a Berlin classroom context, using a real-world school scenario to maximize engagement. Deliver a clear, step-by-step walkthrough with labeled inputs and outputs: identify the bias, list supporting evidence, apply a debiasing rule, and present a bias-free conclusion with justification, at medium complexity. Favor a concrete bias (e.g., availability or anchoring) and base-rate considerations, while preserving the Berlin-based, student-focused tone used in prior signals.",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T11:36:41.651228"
+}

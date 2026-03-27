@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_06__plate_tectonics",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_d1c577923bb64227",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara, as a nurse in Lagos, you understand how the body's systems interact to create health or illness. The Earth's surface operates similarly, with massive, moving sections called tectonic plates that interact to shape continents, cause earthquakes, and build mountains.\n\nImagine the Earth's crust is like a patient's skin, but it's broken into a few enormous, rigid pieces that float on a hotter, softer layer beneath. These pieces are the tectonic plates. They move very slowly, about as fast as your fingernails grow.\n\nWhat happens when they interact:\n- When two plates pull apart from each other (like at a divergent boundary), new crust forms from molten material rising up. This is like a wound slowly healing and creating new tissue. This process is happening in the middle of the Atlantic Ocean.\n- When two plates collide (like at a convergent boundary), one plate might be forced under the other, or they might crumple up. This is like two bodies pressing against each other—one might yield, or both might deform. This collision builds mountain ranges, like the Himalayas, and can cause powerful earthquakes.\n- When two plates slide past each other (like at a transform boundary), they grind against each other. This is like two surfaces rubbing together, creating friction and sudden, sharp movements. This is what happens along the San Andreas Fault in California, causing frequent earthquakes.\n\nKey Insight:\nThe Earth's surface is dynamic and alive with movement. The slow, constant motion of tectonic plates is the fundamental force behind the creation of landscapes, volcanoes, and seismic events.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nAmara, as a nurse in Lagos, you understand how the body's systems interact to create health or illness. The Earth's surface operates similarly, with massive, moving sections called tectonic plates that interact to shape continents, cause earthquakes, and build mountains.\n\nImagine the Earth's crust is like a patient's skin, but it's broken into a few enormous, rigid pieces that float on a hotter, softer layer beneath. These pieces are the tectonic plates. They move very slowly, about as fast as your fingernails grow.\n\nWhat happens when they interact:\n- When two plates pull apart from each other (like at a divergent boundary), new crust forms from molten material rising up. This is like a wound slowly healing and creating new tissue. This process is happening in the middle of the Atlantic Ocean.\n- When two plates collide (like at a convergent boundary), one plate might be forced under the other, or they might crumple up. This is like two bodies pressing against each other—one might yield, or both might deform. This collision builds mountain ranges, like the Himalayas, and can cause powerful earthquakes.\n- When two plates slide past each other (like at a transform boundary), they grind against each other. This is like two surfaces rubbing together, creating friction and sudden, sharp movements. This is what happens along the San Andreas Fault in California, causing frequent earthquakes.\n\nKey Insight:\nThe Earth's surface is dynamic and alive with movement. The slow, constant motion of tectonic plates is the fundamental force behind the creation of landscapes, volcanoes, and seismic events.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara, as a nurse in Lagos, you understand how the body's systems interact to create health or illness. The Earth's surface operates similarly, with massive, moving sections called tectonic plates that interact to shape continents, cause earthquakes, and build mountains.\n\nImagine the Earth's crust is like a patient's skin, but it's broken into a few enormous, rigid pieces that float on a hotter, softer layer beneath. These pieces are the tectonic plates. They move very slowly, about as fast as your fingernails grow.\n\nWhat happens when they interact:\n- When two plates pull apart from each other (like at a divergent boundary), new crust forms from molten material rising up. This is like a wound slowly healing and creating new tissue. This process is happening in the middle of the Atlantic Ocean.\n- When two plates collide (like at a convergent boundary), one plate might be forced under the other, or they might crumple up. This is like two bodies pressing against each other—one might yield, or both might deform. This collision builds mountain ranges, like the Himalayas, and can cause powerful earthquakes.\n- When two plates slide past each other (like at a transform boundary), they grind against each other. This is like two surfaces rubbing together, creating friction and sudden, sharp movements. This is what happens along the San Andreas Fault in California, causing frequent earthquakes.\n\nKey Insight:\nThe Earth's surface is dynamic and alive with movement. The slow, constant motion of tectonic plates is the fundamental force behind the creation of landscapes, volcanoes, and seismic events.",
+        "example_id": "ex_cc1b5d434ab24303",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.59,
+      "CC": 4.41,
+      "CA": 5.0,
+      "PC": 4.87,
+      "DA": 5.0
+    },
+    "composite": 4.774,
+    "reasoning": "The example effectively personalizes the content by addressing Amara directly, referencing her profession, location, and learning style, which enhances engagement. The complexity level appears appropriate, using analogies and explanations suitable for a professional with a medium understanding, without oversimplifying or overcomplicating. The scientific accuracy is high, correctly describing plate boundaries and geological processes, with no evident errors. The pedagogical structure is clear, with a logical flow from analogy to specific boundary types and a key insight that consolidates understanding, making it memorable. The analogies used—comparing tectonic plates to skin, wounds, and body interactions—are appropriate for the geological domain, effectively framing the concepts in familiar terms.\n\nPF: The example is well-tailored to Amara's profile, integrating her profession, location, and learning style with domain-specific analogies.  \nAXIS_SCORE: 5\n\nCC: The depth and language match a medium complexity level, providing sufficient detail without overwhelming.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing plate interactions, boundary types, and geological features.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from analogy to specific processes and a memorable key insight, facilitating learning.  \nAXIS_SCORE: 5\n\nDA: The analogies are entirely appropriate for geology and plate tectonics, using familiar biological and physical concepts to explain complex processes.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:31:14.634459"
+}

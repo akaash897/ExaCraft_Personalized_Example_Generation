@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_02__plate_tectonics",
+  "tier": "t2",
+  "user_id": "eval_user_02",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_cc382821cdbf4218",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, thinks of the Earth's crust as a cracked eggshell made of big pieces called tectonic plates that float on a softer layer beneath. The outer shell part, the lithosphere, moves slowly because heat in the mantle drives convection currents. Where these plates meet are boundaries, and their interactions explain earthquakes, mountains, and volcanoes.\n\nKey terms explained inline:\n- Divergent boundary: plates pull apart and create new crust between them.\n- Convergent boundary: plates push together; one may dive beneath the other (subduction) or they crumple to form mountains.\n- Transform boundary: plates slide past one another, producing earthquakes.\n\nWhy this matters for Amara: understanding that shaking comes from energy released when rocks along faults slip helps explain why hospitals plan for earthquakes and how emergency drills are framed around these ideas.\n\nNumeric example:\nPlates move only a few centimeters per year. For illustration, if two areas on a fault move toward each other at about 2 cm/year for 50 years, that adds up to roughly 1 meter of relative movement. When the friction at the fault finally gives way, that stored energy is released as ground shaking.\n\nKey Insight:\nPlate motion is slow and accumulates over time; earthquakes are the sudden release of that stored energy along faults.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, thinks of the Earth's crust as a cracked eggshell made of big pieces called tectonic plates that float on a softer layer beneath. The outer shell part, the lithosphere, moves slowly because heat in the mantle drives convection currents. Where these plates meet are boundaries, and their interactions explain earthquakes, mountains, and volcanoes.\n\nKey terms explained inline:\n- Divergent boundary: plates pull apart and create new crust between them.\n- Convergent boundary: plates push together; one may dive beneath the other (subduction) or they crumple to form mountains.\n- Transform boundary: plates slide past one another, producing earthquakes.\n\nWhy this matters for Amara: understanding that shaking comes from energy released when rocks along faults slip helps explain why hospitals plan for earthquakes and how emergency drills are framed around these ideas.\n\nNumeric example:\nPlates move only a few centimeters per year. For illustration, if two areas on a fault move toward each other at about 2 cm/year for 50 years, that adds up to roughly 1 meter of relative movement. When the friction at the fault finally gives way, that stored energy is released as ground shaking.\n\nKey Insight:\nPlate motion is slow and accumulates over time; earthquakes are the sudden release of that stored energy along faults.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, thinks of the Earth's crust as a cracked eggshell made of big pieces called tectonic plates that float on a softer layer beneath. The outer shell part, the lithosphere, moves slowly because heat in the mantle drives convection currents. Where these plates meet are boundaries, and their interactions explain earthquakes, mountains, and volcanoes.\n\nKey terms explained inline:\n- Divergent boundary: plates pull apart and create new crust between them.\n- Convergent boundary: plates push together; one may dive beneath the other (subduction) or they crumple to form mountains.\n- Transform boundary: plates slide past one another, producing earthquakes.\n\nWhy this matters for Amara: understanding that shaking comes from energy released when rocks along faults slip helps explain why hospitals plan for earthquakes and how emergency drills are framed around these ideas.\n\nNumeric example:\nPlates move only a few centimeters per year. For illustration, if two areas on a fault move toward each other at about 2 cm/year for 50 years, that adds up to roughly 1 meter of relative movement. When the friction at the fault finally gives way, that stored energy is released as ground shaking.\n\nKey Insight:\nPlate motion is slow and accumulates over time; earthquakes are the sudden release of that stored energy along faults.",
+        "example_id": "ex_5292985d53d648b8",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the content by addressing Amara directly, referencing her profession, location, and learning style, which enhances engagement. The complexity level appears appropriate, providing both basic concepts and a numerical example that aligns with a medium difficulty, suitable for a professional learner. The scientific accuracy is high, with correct descriptions of plate boundaries, mechanisms, and terminology, and the inclusion of key terms supports factual correctness. The pedagogical structure is clear, with a logical flow from analogy to key terms, to real-world relevance, and a memorable insight, facilitating learning. The analogies used, such as the eggshell and convection currents, are well-suited to the domain of geology and help make abstract concepts tangible for a learner with an example-based style. Overall, the example is well-crafted across all axes.\n\nPF_SCORE: 5  \nCC_SCORE: 5  \nCA_SCORE: 5  \nPC_SCORE: 5  \nDA_SCORE: 5  \n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:14:40.499674"
+}

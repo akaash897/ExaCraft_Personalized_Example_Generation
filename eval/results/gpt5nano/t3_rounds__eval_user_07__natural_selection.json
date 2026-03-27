@@ -1,0 +1,92 @@
+{
+  "user_id": "eval_user_07",
+  "topic": "Natural Selection",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.4,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 4,
+      "composite": 4.4,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, Brazil, studies how a drought-tolerance trait (T) spreads in a local plant population. He sets up a medium-complexity, step-by-step example to illustrate how differential survival can drive evolution in a drought-prone environment.\n\nStep 1 — Context\nA drought persists near São Paulo. Trait T is drought tolerance; the population size is 1000 plants. The trait is present in 30% of the population.\n\nStep 2 — Inputs\n- trait T presence frequency (p): 0.30\n- population size (N): 1000\n- environmental drought intensity (D): 70 (high)\n\nStep 3 — Outputs (survival and genetic changes)\n- Survival rates:\n  - Carriers of T: S_T = 0.65\n  - Non-carriers: S_not = 0.40\n- Calculations:\n  - Number with trait: N_T = p × N = 0.30 × 1000 = 300\n  - Number without trait: N_not = (1 − p) × N = 700\n  - Survivors with trait: N_T_surv = N_T × S_T = 300 × 0.65 = 195\n  - Survivors without trait: N_not_surv = N_not × S_not = 700 × 0.40 = 280\n  - Total survivors: N_surv = 195 + 280 = 475\n  - Post-selection allele frequency for trait: p' = N_T_surv / N_surv = 195 / 475 ≈ 0.411\n  - Allele frequency change: Δp = p' − p = 0.411 − 0.30 ≈ 0.111\n  - Mean fitness: w_bar = N_surv / N = 475 / 1000 = 0.475\n\nStep 4 — Interpretation\nDifferential survival favors plants with trait T: more carriers survive to reproduce, increasing the trait’s frequency from 0.30 to about 0.411 in the surviving cohort. If trait T is heritable, its frequency is expected to rise in the next generation, illustrating evolution by natural selection.\n\nStep 5 — Reflective question\nWhat would happen to these dynamics if drought intensity varied year to year or if carrying trait T carried a cost when rainfall is ample?\n\nKey Insight:\nWhen individuals with a beneficial trait survive at higher rates, their genes become more common in the next generation, leading to evolution toward greater drought tolerance.",
+      "example_id": "ex_a13d34058834473f",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "I liked the example overall, but the main point wasn't really clear to me at the end.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, Brazil, studies a drought-prone plant population near the city. He focuses on a drought-tolerance trait T and how it changes when drought is common.\n\nStep 1 — Inputs:\n- trait T: drought-tolerance allele\n- population size N: 1000\n- environmental drought intensity: moderate drought\n- initial allele frequency p0: 0.30\n\nStep 2 — Outputs:\n- Survival rates under the drought\n  - S_T (drought-tolerant individuals) = 0.65\n  - S_not (non-tolerant individuals) = 0.40\n- Mean fitness after selection (wbar) using p0 = 0.30\n  - wbar = p0*S_T + (1 - p0)*S_not = 0.30*0.65 + 0.70*0.40 = 0.475\n\nStep 3 — Post-selection outcomes:\n- Post-selection allele frequency p' ≈ 0.411\n- Allele frequency change Δp = p' - p0 ≈ 0.111\n- Explanation: Because drought-tolerant individuals survive at a higher rate, a larger share of the survivors carries the drought-tolerance allele. When these survivors reproduce, the next generation receives more copies of T, shifting the population toward higher drought tolerance.\n\nTake-home point:\nTake-home point: differential survival under drought leads to an increase in the drought-tolerance trait T in the population.\n\nPost-selection p' value:\np' ≈ 0.411\n\nKey Insight:\nUnder environmental pressure, natural selection favors traits that boost survival, so allele frequencies shift toward those advantageous traits across generations.",
+      "example_id": "ex_21f944898f764fbd"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always prefer examples that draw on historical or cultural contexts rather than formulas.",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Natural Selection\n\nExample:\nCarlos, a humanities researcher in São Paulo, visits an urban reserve on the outskirts of the city where a drought-prone plant population lives. He sits with local residents and park rangers, hearing how municipal droughts, ongoing urban expansion, and traditional gardening practices shape which plants endure dry years and which fade away.\n\nInputs:\n- Population: a diverse, drought-prone plant population in an urban reserve near São Paulo.\n- Trait: drought-tolerance described qualitatively (some plants stay greener longer and use water more efficiently; others wilt earlier in dry spells).\n- Historical/cultural context: municipal droughts (notably the 2014–2015 crisis), urban expansion reducing natural habitat, and local practices such as rainwater harvesting, drought-tresisting landscaping, and community restoration efforts.\n- Observable signals: which plants survive dry periods, how much seed is produced, and how the plant community profile changes over time.\n\nStep-by-step walkthrough:\nStep 1 — The drought arrives: Carlos records that during dry years, the survivors are more of the drought-tolerant individuals, while more brittle plants thin out. Community efforts to limit water use and to protect the reserve create a patchwork of microhabitats that favor those tougher plants.\n\nStep 2 — Generations and human influence: in subsequent years, seeds from the survivors germinate in places where people have helped the habitat—mulching, shade, and small rainwater catchments—so drought-tolerant plants establish themselves more reliably. Local gardeners exchange seeds of the tougher natives, reinforcing the presence of these traits in the population.\n\nStep 3 — The landscape shifts: over time, the reserve’s plant community looks tougher and more resilient to dry spells. The drought-tolerant plants persist through dry years, while the more vulnerable ones become rarer. Human actions—habitat restoration, water-management practices, and cultural pride in the urban green space—help steer which plants dominate.\n\nOutputs:\n- Post-generation distribution: a noticeable rise in the prevalence of drought-tolerant individuals and a more resilient plant community within the reserve during dry years.\n- Ecological and cultural outcome: the landscape holds green cover longer in droughts, and the community narratives around resilience and urban nature become stronger, illustrating how culture and ecology intertwine.\n\nKey Insight:\nNatural selection favors traits that help organisms endure dry years, and human modifications to the environment can amplify or redirect that evolutionary trajectory through policy, restoration, and everyday practices.",
+      "example_id": "ex_9d2f281c642e49d6"
+    }
+  ],
+  "timestamp": "2026-03-16T12:00:59.263436"
+}

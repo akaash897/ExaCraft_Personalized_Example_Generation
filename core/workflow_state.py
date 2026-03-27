@@ -13,7 +13,7 @@ class PersonalizedGenerationState(TypedDict, total=False):
     user_id: str
     topic: str
     thread_id: str
-    provider: Optional[str]           # "gemini" | "openai" — flows through all LLM calls
+    provider: Optional[str]           # "openai" | "openrouter" — flows through all LLM calls
 
     # Profile
     user_profile: Optional[Dict[str, Any]]
@@ -41,6 +41,7 @@ class PersonalizedGenerationState(TypedDict, total=False):
     # Adaptive Response Agent decisions
     regeneration_requested: Optional[bool]
     regeneration_instruction: Optional[str]   # cleared after use in node_generate
+    last_agent_action: Optional[str]          # "regenerate" | "accept" | "flag_pattern" | "skipped" — set by node_process_feedback
 
     # Loop guard — max 3 regeneration cycles per thread
     loop_count: Optional[int]
@@ -55,4 +56,12 @@ class PersonalizedGenerationState(TypedDict, total=False):
     # Timestamps
     workflow_started_at: Optional[str]
     workflow_completed_at: Optional[str]
+
+    # Evaluation mode — disables capability layers for ablation study
+    # None | "t0" | "t1" | "t2" | "t3"
+    # t0: no profile, no context, no feedback processing
+    # t1: profile only (no context manager, no feedback processing)
+    # t2: profile + context manager (no feedback processing)
+    # t3: full system (default)
+    eval_mode: Optional[str]
 

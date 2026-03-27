@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_02",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you are assessing a patient who presents with a fever and a cough. You have seen several cases of malaria this week, which is common in your region.\n\nScenario:\nYour initial thought is that this is likely another case of malaria. You focus on the symptoms that match malaria (fever) and might overlook other possibilities, like a respiratory infection, because the recent malaria cases are fresh in your mind.\n\nThis illustrates two cognitive biases:\n1. **Availability Heuristic**: You judge the likelihood of malaria based on how easily recent examples come to mind, rather than on all the statistical data.\n2. **Confirmation Bias**: As you gather information, you might pay more attention to signs supporting the malaria hypothesis (like the patient mentioning they were outdoors) and less to signs suggesting something else (like a productive cough or chest pain).\n\nA more balanced approach would be to systematically consider all common causes of fever in your area\u2014malaria, typhoid, respiratory infections\u2014using a checklist or protocol, rather than letting recent experience dominate your judgment.\n\nKey Insight:\nCognitive biases are shortcuts in thinking that can lead to errors in clinical judgment; actively using structured protocols helps counteract them and leads to more accurate diagnoses.",
+      "example_id": "ex_9fc4f1272da947d5",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Cognitive Bias in Clinical Decision-Making\n\nExample:\nAmara, as a nurse in Lagos, is assessing a patient who presents with fever and body aches. She immediately recalls a recent outbreak of malaria in her ward. This makes her more likely to suspect malaria, even though the patient's travel history and other symptoms might point toward a different cause, like typhoid fever. This is an example of the **availability heuristic**\u2014relying on information that comes to mind most easily.\n\nLater, after forming an initial suspicion of malaria, Amara focuses on gathering information that confirms this hypothesis. She notes the fever pattern but might initially downplay the patient's report of abdominal pain and constipation, which are more characteristic of typhoid. This illustrates **confirmation bias**\u2014seeking or interpreting evidence in ways that support a pre-existing belief.\n\nClinical Impact:\n- **Availability Heuristic:** Recent, vivid, or emotionally charged cases (like a severe malaria outbreak) can disproportionately influence diagnostic thinking, potentially overlooking less common but equally serious conditions.\n- **Confirmation Bias:** Once a tentative diagnosis is formed, there is a risk of selectively attending to confirming evidence while discounting contradictory signs, which can delay correct treatment.\n\nKey Insight:\nCognitive biases are systematic mental shortcuts that can streamline decisions but also introduce predictable errors. In nursing, being aware of biases like the availability heuristic and confirmation bias is crucial for comprehensive patient assessment and avoiding diagnostic pitfalls.",
+      "example_id": "ex_94bb2a57a9864b72"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "I find medical equipment analogies much more natural for understanding abstract ideas.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-15T21:23:21.983479"
+}

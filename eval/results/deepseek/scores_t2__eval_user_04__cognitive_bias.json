@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_04__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_1a67a9d6ae4e4473",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nKenji, as a software engineer in Tokyo, you're reviewing a colleague's pull request for a new feature. You've worked with this colleague before and found their code to be very reliable. As you scan the changes, you notice a complex function. Because you trust the author, you might quickly approve it, thinking, \"Their work is usually solid.\" This is the **Halo Effect**—a cognitive bias where your overall positive impression of a person (their past reliable code) influences your judgment of a specific attribute (the quality of this new, untested function).\n\nA more objective review might reveal a subtle bug or an inefficient algorithm that you overlooked because of your prior good experience.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to systematic errors in judgment. The Halo Effect shows how one strong positive trait can unfairly color our perception of other, unrelated traits, potentially leading to oversight.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nKenji, as a software engineer in Tokyo, you're reviewing a colleague's pull request for a new feature. You've worked with this colleague before and found their code to be very reliable. As you scan the changes, you notice a complex function. Because you trust the author, you might quickly approve it, thinking, \"Their work is usually solid.\" This is the **Halo Effect**—a cognitive bias where your overall positive impression of a person (their past reliable code) influences your judgment of a specific attribute (the quality of this new, untested function).\n\nA more objective review might reveal a subtle bug or an inefficient algorithm that you overlooked because of your prior good experience.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to systematic errors in judgment. The Halo Effect shows how one strong positive trait can unfairly color our perception of other, unrelated traits, potentially leading to oversight.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nKenji, as a software engineer in Tokyo, you're reviewing a colleague's pull request for a new feature. You've worked with this colleague before and found their code to be very reliable. As you scan the changes, you notice a complex function. Because you trust the author, you might quickly approve it, thinking, \"Their work is usually solid.\" This is the **Halo Effect**—a cognitive bias where your overall positive impression of a person (their past reliable code) influences your judgment of a specific attribute (the quality of this new, untested function).\n\nA more objective review might reveal a subtle bug or an inefficient algorithm that you overlooked because of your prior good experience.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to systematic errors in judgment. The Halo Effect shows how one strong positive trait can unfairly color our perception of other, unrelated traits, potentially leading to oversight.",
+        "example_id": "ex_58c739c98cc4424b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.58,
+      "CA": 5.0,
+      "PC": 4.89,
+      "DA": 4.91
+    },
+    "composite": 4.885,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, location, and profession, and it uses a domain-specific context related to software engineering, aligning well with the user's profile. The complexity level appears appropriate, discussing a nuanced cognitive bias with sufficient depth for an undergraduate engineer, and the explanation of the Halo Effect is factually accurate and clear. The structure is logical, with a real-world scenario leading into the conceptual insight, making it pedagogically effective. The analogy and framing are appropriate for the domain of software engineering, avoiding any off-topic or overly abstract comparisons.\n\nPF: The example directly incorporates the user's profile details and uses a domain-specific scenario, demonstrating strong personalization.  \nAXIS_SCORE: 5\n\nCC: The content discusses the Halo Effect with appropriate depth, illustrating how trust influences judgment, which matches a medium complexity level suitable for an undergraduate engineer.  \nAXIS_SCORE: 4\n\nCA: The explanation of the Halo Effect is factually correct, accurately describing the bias without errors or misconceptions.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, starting with a relatable scenario, explaining the bias, and concluding with a key insight that reinforces learning. The flow is smooth and pedagogically sound.  \nAXIS_SCORE: 5\n\nDA: The framing uses a software engineering context, which is highly appropriate for the topic of cognitive bias in a professional setting, with relevant vocabulary and analogy.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:43:27.290085"
+}

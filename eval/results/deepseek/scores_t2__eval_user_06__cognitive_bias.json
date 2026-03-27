@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_06__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_361ed9b9aefa47d4",
+    "initial_example": "Concept: Cognitive Bias in Clinical Decision-Making\n\nExample:\nAmara, a nurse in a busy Lagos hospital, is assessing a patient presenting with fever and body aches during the rainy season. Her initial thought is malaria, a common diagnosis in her region.\n\n**Scenario: The Patient Assessment**\nPatient: A 45-year-old man with fever (38.5°C), headache, and fatigue.\nAmara's Initial Hypothesis: Malaria.\n\n**Step-by-Step Breakdown of Bias Influence:**\n\n1.  **Availability Heuristic in Action:**\n    *   **Mental Shortcut:** Because Amara has seen dozens of malaria cases this month, it feels like the most likely and immediate explanation.\n    *   **Effect:** She prioritizes tests and questions related to malaria (e.g., \"Have you been bitten by mosquitoes?\") over exploring other possibilities.\n\n2.  **Confirmation Bias Takes Hold:**\n    *   **Selective Focus:** When the rapid malaria test comes back positive, Amara feels her initial hunch is confirmed.\n    *   **Effect:** She might downplay or not fully investigate the patient's mention of a recent cough and mild chest pain, attributing them to the \"malaria.\"\n\n3.  **Potential Impact on Patient Care:**\n    *   **Missed Diagnosis:** The patient's symptoms could also be consistent with early-stage pneumonia or even typhoid fever, which also peak during the rainy season.\n    *   **Consequence:** Focusing solely on malaria could delay appropriate treatment for a co-infection or alternative illness, potentially worsening the patient's outcome.\n\n**Mitigation Strategy for Amara:**\n*   **Use a Differential Diagnosis:** Consciously list 2-3 other possible causes (e.g., typhoid, pneumonia) for the symptoms.\n*   **Seek Disconfirming Evidence:** Actively look for signs that *don't* fit the malaria hypothesis.\n*   **Consult a Colleague:** A second opinion can help break the cycle of a single, biased initial impression.\n\nKey Insight:\nCognitive biases like availability and confirmation are mental shortcuts that can streamline decisions but also create blind spots. In nursing, recognizing these biases is crucial to avoid diagnostic errors and ensure comprehensive patient care.",
+    "final_example": "Concept: Cognitive Bias in Clinical Decision-Making\n\nExample:\nAmara, a nurse in a busy Lagos hospital, is assessing a patient presenting with fever and body aches during the rainy season. Her initial thought is malaria, a common diagnosis in her region.\n\n**Scenario: The Patient Assessment**\nPatient: A 45-year-old man with fever (38.5°C), headache, and fatigue.\nAmara's Initial Hypothesis: Malaria.\n\n**Step-by-Step Breakdown of Bias Influence:**\n\n1.  **Availability Heuristic in Action:**\n    *   **Mental Shortcut:** Because Amara has seen dozens of malaria cases this month, it feels like the most likely and immediate explanation.\n    *   **Effect:** She prioritizes tests and questions related to malaria (e.g., \"Have you been bitten by mosquitoes?\") over exploring other possibilities.\n\n2.  **Confirmation Bias Takes Hold:**\n    *   **Selective Focus:** When the rapid malaria test comes back positive, Amara feels her initial hunch is confirmed.\n    *   **Effect:** She might downplay or not fully investigate the patient's mention of a recent cough and mild chest pain, attributing them to the \"malaria.\"\n\n3.  **Potential Impact on Patient Care:**\n    *   **Missed Diagnosis:** The patient's symptoms could also be consistent with early-stage pneumonia or even typhoid fever, which also peak during the rainy season.\n    *   **Consequence:** Focusing solely on malaria could delay appropriate treatment for a co-infection or alternative illness, potentially worsening the patient's outcome.\n\n**Mitigation Strategy for Amara:**\n*   **Use a Differential Diagnosis:** Consciously list 2-3 other possible causes (e.g., typhoid, pneumonia) for the symptoms.\n*   **Seek Disconfirming Evidence:** Actively look for signs that *don't* fit the malaria hypothesis.\n*   **Consult a Colleague:** A second opinion can help break the cycle of a single, biased initial impression.\n\nKey Insight:\nCognitive biases like availability and confirmation are mental shortcuts that can streamline decisions but also create blind spots. In nursing, recognizing these biases is crucial to avoid diagnostic errors and ensure comprehensive patient care.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias in Clinical Decision-Making\n\nExample:\nAmara, a nurse in a busy Lagos hospital, is assessing a patient presenting with fever and body aches during the rainy season. Her initial thought is malaria, a common diagnosis in her region.\n\n**Scenario: The Patient Assessment**\nPatient: A 45-year-old man with fever (38.5°C), headache, and fatigue.\nAmara's Initial Hypothesis: Malaria.\n\n**Step-by-Step Breakdown of Bias Influence:**\n\n1.  **Availability Heuristic in Action:**\n    *   **Mental Shortcut:** Because Amara has seen dozens of malaria cases this month, it feels like the most likely and immediate explanation.\n    *   **Effect:** She prioritizes tests and questions related to malaria (e.g., \"Have you been bitten by mosquitoes?\") over exploring other possibilities.\n\n2.  **Confirmation Bias Takes Hold:**\n    *   **Selective Focus:** When the rapid malaria test comes back positive, Amara feels her initial hunch is confirmed.\n    *   **Effect:** She might downplay or not fully investigate the patient's mention of a recent cough and mild chest pain, attributing them to the \"malaria.\"\n\n3.  **Potential Impact on Patient Care:**\n    *   **Missed Diagnosis:** The patient's symptoms could also be consistent with early-stage pneumonia or even typhoid fever, which also peak during the rainy season.\n    *   **Consequence:** Focusing solely on malaria could delay appropriate treatment for a co-infection or alternative illness, potentially worsening the patient's outcome.\n\n**Mitigation Strategy for Amara:**\n*   **Use a Differential Diagnosis:** Consciously list 2-3 other possible causes (e.g., typhoid, pneumonia) for the symptoms.\n*   **Seek Disconfirming Evidence:** Actively look for signs that *don't* fit the malaria hypothesis.\n*   **Consult a Colleague:** A second opinion can help break the cycle of a single, biased initial impression.\n\nKey Insight:\nCognitive biases like availability and confirmation are mental shortcuts that can streamline decisions but also create blind spots. In nursing, recognizing these biases is crucial to avoid diagnostic errors and ensure comprehensive patient care.",
+        "example_id": "ex_2272d84dc62b4ef3",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity example of cognitive bias grounded in the nursing profession in Lagos, Nigeria. Use a real-world healthcare scenario involving a nurse named Amara, with step-by-step breakdown showing how cognitive biases might affect clinical decision-making. Focus on biases relevant to medical contexts like confirmation bias or availability heuristic, and explain their impact on patient care.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.29,
+      "CA": 5.0,
+      "PC": 4.98,
+      "DA": 4.99
+    },
+    "composite": 4.853,
+    "reasoning": "The example effectively incorporates the user's profile by mentioning Amara's role as a nurse in Lagos, Nigeria, and uses a clinical scenario relevant to her profession and location. The language and depth of explanation are appropriate for a professional with medium complexity preferences, providing a clear, structured breakdown of cognitive biases with practical mitigation strategies. The analogies and framing are domain-specific, focusing on clinical decision-making, which aligns well with the topic of cognitive bias in healthcare. Overall, the example is well-tailored, accurate, pedagogically clear, and domain-appropriate.\n\nPF: The example explicitly mentions Amara's role as a nurse in Lagos, Nigeria, and uses a clinical scenario relevant to her environment, demonstrating strong personalization. It also aligns with her learning style by providing a detailed, example-based explanation.  \nAXIS_SCORE: 5\n\nCC: The complexity level matches a professional nurse's understanding, with detailed step-by-step explanations of biases and their impact, suitable for medium complexity. The language and concepts are neither too simple nor overly technical.  \nAXIS_SCORE: 4\n\nCA: The content accurately describes common cognitive biases like availability and confirmation bias, and their influence on clinical decision-making. There are no factual inaccuracies present.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear scenario, step-by-step breakdown, and explicit mitigation strategies, making it easy to follow and memorable. It effectively bridges the concept and the example.  \nAXIS_SCORE: 5\n\nDA: The framing and analogies are entirely appropriate for the healthcare domain, using clinical decision-making scenarios that are familiar and relevant to nurses.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity example of cognitive bias grounded in the nursing profession in Lagos, Nigeria. Use a real-world healthcare scenario involving a nurse named Amara, with step-by-step breakdown showing how cognitive biases might affect clinical decision-making. Focus on biases relevant to medical contexts like confirmation bias or availability heuristic, and explain their impact on patient care.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The context instruction explicitly incorporates the user's professional role, location, and learning preferences, such as grounding examples in Lagos and using step-by-step breakdowns, which aligns with the stored patterns and insights. It provides concrete guidance to generate a scenario that is both relevant and tailored to the user's learning style and background, demonstrating a high level of synthesis.\n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-15T20:52:46.829268"
+}

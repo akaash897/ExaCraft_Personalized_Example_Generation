@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_06__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_31ce845ef5454bb5",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nAmara is a nurse in Lagos, Nigeria. Cognitive bias means our thinking can lean toward systematic errors or shortcuts instead of pure logic. A common one is availability bias: we judge how likely something is based on how easily examples come to mind, often from what we’ve seen most recently.\n\nGoing into a busy night shift, 10 patients present with fever. In this setting, malaria is a common cause and has a base rate of about 60% for fevers (0.60). Because Amara recently treated several malaria cases, she starts with a biased intuition that fever equals malaria for many patients. She estimates the probability of malaria for each fever case as 0.70 (P_hat(malaria) = 0.70).\n\nCalculation:\n- Expected number flagged as malaria under bias: 10 × 0.70 = 7 patients\n- Actual malaria cases among the 10: 6 patients\n\nWhat happens:\n- Due to the bias, one patient without malaria is treated for malaria unnecessarily (7 flagged minus 6 true malaria = 1 unnecessary treatment).\n- All true malaria cases are covered within the biased group, so none are missed because of this bias (in this simplified view).\n\nIf the team uses a standard differential checklist and confirms with appropriate tests, the results would align more closely with the true rates: about 6 malaria and 4 other causes, reducing unnecessary treatment.\n\nKey Insight:\nAvailability bias can push quick judgments toward memorable recent cases, risking unnecessary treatments or missed alternative causes. Use checklists and confirmatory testing to keep decisions aligned with actual evidence.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nAmara is a nurse in Lagos, Nigeria. Cognitive bias means our thinking can lean toward systematic errors or shortcuts instead of pure logic. A common one is availability bias: we judge how likely something is based on how easily examples come to mind, often from what we’ve seen most recently.\n\nGoing into a busy night shift, 10 patients present with fever. In this setting, malaria is a common cause and has a base rate of about 60% for fevers (0.60). Because Amara recently treated several malaria cases, she starts with a biased intuition that fever equals malaria for many patients. She estimates the probability of malaria for each fever case as 0.70 (P_hat(malaria) = 0.70).\n\nCalculation:\n- Expected number flagged as malaria under bias: 10 × 0.70 = 7 patients\n- Actual malaria cases among the 10: 6 patients\n\nWhat happens:\n- Due to the bias, one patient without malaria is treated for malaria unnecessarily (7 flagged minus 6 true malaria = 1 unnecessary treatment).\n- All true malaria cases are covered within the biased group, so none are missed because of this bias (in this simplified view).\n\nIf the team uses a standard differential checklist and confirms with appropriate tests, the results would align more closely with the true rates: about 6 malaria and 4 other causes, reducing unnecessary treatment.\n\nKey Insight:\nAvailability bias can push quick judgments toward memorable recent cases, risking unnecessary treatments or missed alternative causes. Use checklists and confirmatory testing to keep decisions aligned with actual evidence.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nAmara is a nurse in Lagos, Nigeria. Cognitive bias means our thinking can lean toward systematic errors or shortcuts instead of pure logic. A common one is availability bias: we judge how likely something is based on how easily examples come to mind, often from what we’ve seen most recently.\n\nGoing into a busy night shift, 10 patients present with fever. In this setting, malaria is a common cause and has a base rate of about 60% for fevers (0.60). Because Amara recently treated several malaria cases, she starts with a biased intuition that fever equals malaria for many patients. She estimates the probability of malaria for each fever case as 0.70 (P_hat(malaria) = 0.70).\n\nCalculation:\n- Expected number flagged as malaria under bias: 10 × 0.70 = 7 patients\n- Actual malaria cases among the 10: 6 patients\n\nWhat happens:\n- Due to the bias, one patient without malaria is treated for malaria unnecessarily (7 flagged minus 6 true malaria = 1 unnecessary treatment).\n- All true malaria cases are covered within the biased group, so none are missed because of this bias (in this simplified view).\n\nIf the team uses a standard differential checklist and confirms with appropriate tests, the results would align more closely with the true rates: about 6 malaria and 4 other causes, reducing unnecessary treatment.\n\nKey Insight:\nAvailability bias can push quick judgments toward memorable recent cases, risking unnecessary treatments or missed alternative causes. Use checklists and confirmatory testing to keep decisions aligned with actual evidence.",
+        "example_id": "ex_90b4819f1e3840ab",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.4,
+    "reasoning": "The example effectively personalizes the scenario by including Amara's name, profession, and location, and it also incorporates her learning style by using a practical, example-based explanation. The complexity level appears appropriate for a professional nurse, with clear, straightforward language and relevant clinical context. The factual content about cognitive bias, specifically availability bias, is accurate and well-explained, with appropriate use of probability and clinical decision-making. The structure is logical, starting with a definition, a clinical example, a calculation, and a key insight, which supports pedagogical clarity. The analogy and framing are appropriate for the medical/clinical domain, making the example relevant and accessible for a nurse.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Amara's name, location, and profession, and it aligns with her learning style by being example-based. It is well-tailored to her profile.\nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The content involves clinical reasoning, probability, and decision-making, which are suitable for a professional nurse with medium complexity. It balances technical detail with clarity.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of availability bias, the clinical scenario, and the calculations are factually correct and consistent with medical understanding.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear flow from definition to example, calculation, and insight. It effectively bridges concept and example, making it memorable.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for a clinical, medical context, with relevant terminology and scenario.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 4,
+        "CA": 5,
+        "PC": 4,
+        "DA": 5
+      },
+      "composite": 4.2,
+      "reasoning": "For the axis of PERSONALIZATION FIDELITY (PF), the example is clearly tailored to the user's profile, using their name, location, and profession, and matching their learning style by providing an example-based explanation. The scenario is also domain-specific, making it highly personalized.\n\nPF_SCORE: 5\n\nFor the axis of COMPLEXITY CALIBRATION (CC), the depth of the example matches the user's stated complexity level of \"medium\" by providing a balanced explanation that includes some numerical calculations but does not overwhelm with overly complex formulas or depth. The language used is also appropriate for a professional with a medium complexity preference.\n\nCC_SCORE: 5\n\nFor the axis of CONCEPTUAL ACCURACY (CA), the factual and scientific content regarding cognitive bias, specifically availability bias, is correct and accurately explained with a relevant example from the nursing profession. The calculations provided to illustrate the bias are also correct and help to reinforce the concept.\n\nCA_SCORE: 5\n\nFor the axis of PEDAGOGICAL CLARITY (PC), the example is structured for learning with a clear introduction to the concept, a smooth flow into a practical example, and an explicit bridge between the concept and the example. The key insight provided at the end is memorable and clearly summarizes the importance of avoiding availability bias in decision-making.\n\nPC_SCORE: 5\n\nFor the axis of DOMAIN APPROPRIATENESS (DA), the analogies and framing used in the example are perfectly appropriate for the topic of cognitive bias in the context of nursing, using relevant medical scenarios and terminology. The example does not introduce elements from inappropriate domains, making it highly domain-appropriate.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:05:25.981736"
+}

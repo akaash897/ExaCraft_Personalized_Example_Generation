@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_05__compound_interest",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Compound Interest",
+    "thread_id": "thread_60011a7788ce4e4e",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nLena, imagine you're saving for a semester abroad in Berlin. You put \u20ac1,000 into a savings account that earns 5% interest per year, and you leave the interest in the account to grow.\n\n**Year 1:**\n- Starting amount: \u20ac1,000\n- Interest earned (5%): \u20ac1,000 \u00d7 0.05 = \u20ac50\n- **Year-end total: \u20ac1,050**\n\n**Year 2:**\n- Starting amount: \u20ac1,050 (last year's total)\n- Interest earned (5%): \u20ac1,050 \u00d7 0.05 = \u20ac52.50\n- **Year-end total: \u20ac1,102.50**\n\nNotice that in Year 2, you earned interest on your original \u20ac1,000 *and* on the \u20ac50 interest from Year 1. This is \"interest on interest\"\u2014the core of compounding.\n\n**Formula:**\nThe general formula to calculate the future value is:\n`A = P (1 + r)^t`\nWhere:\n- A = Final amount\n- P = Principal (initial deposit, \u20ac1,000)\n- r = Annual interest rate (0.05)\n- t = Number of years (2)\n\nFor your example:\nA = 1000 \u00d7 (1 + 0.05)\u00b2 = 1000 \u00d7 1.1025 = \u20ac1,102.50\n\nKey Insight:\nCompound interest accelerates growth because each interest payment gets added to the balance, so future interest is calculated on a larger amount. Time is your greatest ally; the longer you let it compound, the more dramatic the growth becomes.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nLena, imagine you're saving for a semester abroad in Berlin. You put \u20ac1,000 into a savings account that earns 5% interest per year, and you leave the interest in the account to grow.\n\n**Year 1:**\n- Starting amount: \u20ac1,000\n- Interest earned (5%): \u20ac1,000 \u00d7 0.05 = \u20ac50\n- **Year-end total: \u20ac1,050**\n\n**Year 2:**\n- Starting amount: \u20ac1,050 (last year's total)\n- Interest earned (5%): \u20ac1,050 \u00d7 0.05 = \u20ac52.50\n- **Year-end total: \u20ac1,102.50**\n\nNotice that in Year 2, you earned interest on your original \u20ac1,000 *and* on the \u20ac50 interest from Year 1. This is \"interest on interest\"\u2014the core of compounding.\n\n**Formula:**\nThe general formula to calculate the future value is:\n`A = P (1 + r)^t`\nWhere:\n- A = Final amount\n- P = Principal (initial deposit, \u20ac1,000)\n- r = Annual interest rate (0.05)\n- t = Number of years (2)\n\nFor your example:\nA = 1000 \u00d7 (1 + 0.05)\u00b2 = 1000 \u00d7 1.1025 = \u20ac1,102.50\n\nKey Insight:\nCompound interest accelerates growth because each interest payment gets added to the balance, so future interest is calculated on a larger amount. Time is your greatest ally; the longer you let it compound, the more dramatic the growth becomes.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nLena, imagine you're saving for a semester abroad in Berlin. You put \u20ac1,000 into a savings account that earns 5% interest per year, and you leave the interest in the account to grow.\n\n**Year 1:**\n- Starting amount: \u20ac1,000\n- Interest earned (5%): \u20ac1,000 \u00d7 0.05 = \u20ac50\n- **Year-end total: \u20ac1,050**\n\n**Year 2:**\n- Starting amount: \u20ac1,050 (last year's total)\n- Interest earned (5%): \u20ac1,050 \u00d7 0.05 = \u20ac52.50\n- **Year-end total: \u20ac1,102.50**\n\nNotice that in Year 2, you earned interest on your original \u20ac1,000 *and* on the \u20ac50 interest from Year 1. This is \"interest on interest\"\u2014the core of compounding.\n\n**Formula:**\nThe general formula to calculate the future value is:\n`A = P (1 + r)^t`\nWhere:\n- A = Final amount\n- P = Principal (initial deposit, \u20ac1,000)\n- r = Annual interest rate (0.05)\n- t = Number of years (2)\n\nFor your example:\nA = 1000 \u00d7 (1 + 0.05)\u00b2 = 1000 \u00d7 1.1025 = \u20ac1,102.50\n\nKey Insight:\nCompound interest accelerates growth because each interest payment gets added to the balance, so future interest is calculated on a larger amount. Time is your greatest ally; the longer you let it compound, the more dramatic the growth becomes.",
+        "example_id": "ex_6e869c9da9bf49a1",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.57,
+      "CC": 4.52,
+      "CA": 5.0,
+      "PC": 4.91,
+      "DA": 5.0
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using Lena's name and location, and it aligns with her learning style by providing a concrete, example-based explanation. The depth of the content matches a high school level, with clear step-by-step calculations and a straightforward formula, indicating appropriate complexity. The factual content about compound interest and the formula is accurate and well-explained, supporting conceptual understanding. The structure is logical, starting from a real-world scenario, moving through calculations, and ending with an insight, which enhances pedagogical clarity. The analogy of saving for a semester abroad in Berlin is appropriate for the domain of personal finance and makes the abstract concept tangible.\n\nPERSONALIZATION FIDELITY: 5\nCOMPLEXITY CALIBRATION: 4\nCONCEPTUAL ACCURACY: 5\nPEDAGOGICAL CLARITY: 5\nDOMAIN APPROPRIATENESS: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:28:25.618812"
+}

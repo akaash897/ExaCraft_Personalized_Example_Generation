@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_04__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_8dd0ba8ed56744b5",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nKenji, imagine you're debugging a large, complex software system. The codebase has many different functions performing similar tasks, but some are more efficient and less prone to errors than others.\n\nOver time, as you run the system and fix bugs, you naturally favor and reuse the more reliable, efficient functions. You might refactor other parts of the code to use them, or you might deprecate and remove the buggy, slow functions entirely. The \"environment\" here is the runtime performance, memory constraints, and user requirements. Functions that perform well under these conditions are \"selected\" to survive and propagate through the codebase.\n\nA numeric analogy:\nLet's say you have three sorting algorithms in your library:\n- Algorithm A: Fast but crashes on large datasets (low fitness).\n- Algorithm B: Moderately fast and stable (medium fitness).\n- Algorithm C: Very slow but never crashes (low fitness).\n\nAfter a year of deployment and performance reviews, you find:\n- Usage of Algorithm A has dropped to 5% (it's being phased out).\n- Usage of Algorithm B has grown to 70% (it's the new standard).\n- Usage of Algorithm C remains at 25% for legacy, safety-critical systems.\n\nThe \"selection pressure\" is the need for both speed and stability. Algorithm B had the best combination, so its prevalence increased.\n\nKey Insight:\nNatural selection is not a random process; it's the non-random outcome of differential survival and reproduction of variants based on their fitness in a specific environment. In your codebase, the better functions aren't chosen randomly\u2014they succeed because they work better under the pressures of the real-world system.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nKenji, imagine you're debugging a large, complex software system. The codebase has many different functions performing similar tasks, but some are more efficient and less prone to errors than others.\n\nOver time, as you run the system and fix bugs, you naturally favor and reuse the more reliable, efficient functions. You might refactor other parts of the code to use them, or you might deprecate and remove the buggy, slow functions entirely. The \"environment\" here is the runtime performance, memory constraints, and user requirements. Functions that perform well under these conditions are \"selected\" to survive and propagate through the codebase.\n\nA numeric analogy:\nLet's say you have three sorting algorithms in your library:\n- Algorithm A: Fast but crashes on large datasets (low fitness).\n- Algorithm B: Moderately fast and stable (medium fitness).\n- Algorithm C: Very slow but never crashes (low fitness).\n\nAfter a year of deployment and performance reviews, you find:\n- Usage of Algorithm A has dropped to 5% (it's being phased out).\n- Usage of Algorithm B has grown to 70% (it's the new standard).\n- Usage of Algorithm C remains at 25% for legacy, safety-critical systems.\n\nThe \"selection pressure\" is the need for both speed and stability. Algorithm B had the best combination, so its prevalence increased.\n\nKey Insight:\nNatural selection is not a random process; it's the non-random outcome of differential survival and reproduction of variants based on their fitness in a specific environment. In your codebase, the better functions aren't chosen randomly\u2014they succeed because they work better under the pressures of the real-world system.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, imagine you're debugging a large, complex software system. The codebase has many different functions performing similar tasks, but some are more efficient and less prone to errors than others.\n\nOver time, as you run the system and fix bugs, you naturally favor and reuse the more reliable, efficient functions. You might refactor other parts of the code to use them, or you might deprecate and remove the buggy, slow functions entirely. The \"environment\" here is the runtime performance, memory constraints, and user requirements. Functions that perform well under these conditions are \"selected\" to survive and propagate through the codebase.\n\nA numeric analogy:\nLet's say you have three sorting algorithms in your library:\n- Algorithm A: Fast but crashes on large datasets (low fitness).\n- Algorithm B: Moderately fast and stable (medium fitness).\n- Algorithm C: Very slow but never crashes (low fitness).\n\nAfter a year of deployment and performance reviews, you find:\n- Usage of Algorithm A has dropped to 5% (it's being phased out).\n- Usage of Algorithm B has grown to 70% (it's the new standard).\n- Usage of Algorithm C remains at 25% for legacy, safety-critical systems.\n\nThe \"selection pressure\" is the need for both speed and stability. Algorithm B had the best combination, so its prevalence increased.\n\nKey Insight:\nNatural selection is not a random process; it's the non-random outcome of differential survival and reproduction of variants based on their fitness in a specific environment. In your codebase, the better functions aren't chosen randomly\u2014they succeed because they work better under the pressures of the real-world system.",
+        "example_id": "ex_a8e9df37ac814708",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.98,
+      "CC": 4.36,
+      "CA": 5.0,
+      "PC": 4.94,
+      "DA": 5.0
+    },
+    "composite": 4.856,
+    "reasoning": "The example effectively personalizes the analogy by directly referencing Kenji's role as a software engineer and uses familiar concepts like debugging and code efficiency, aligning well with his background. The complexity level is appropriate, discussing concepts like selection pressure and fitness in a way that matches a medium understanding, without oversimplifying or overcomplicating. The factual content about natural selection and the analogy with algorithms is accurate and scientifically sound. The structure is clear, with a logical flow from analogy to key insight, making it pedagogically effective. The framing is entirely within the domain of software engineering, making the analogy highly appropriate for the topic of natural selection.\n\nPF_SCORE: 5\nCC_SCORE: 4\nCA_SCORE: 5\nPC_SCORE: 4\nDA_SCORE: 5",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:43:12.370250"
+}

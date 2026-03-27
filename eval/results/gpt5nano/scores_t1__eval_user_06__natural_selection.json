@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_06__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_42b413d9de604714",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nScenario:\nA nurse in Lagos notices a population of bacteria in a wound that vary in their resistance to a common antibiotic. In the presence of the antibiotic, the environment places pressure on the bacteria: some carry a mutation that helps them survive, while others do not.\n\nWhat changes:\n- Variation: not all bacteria are identical; some are more resistant than others.\n- Heredity: resistance traits can be passed to offspring.\n- Selection pressure: the antibiotic makes susceptible bacteria die more, while resistant ones survive and reproduce.\n\nNumeric illustration:\n- Start population: 100 bacteria\n  - Resistant (R): 20\n  - Susceptible (S): 80\n- After exposure:\n  - S survivors: 8 (10% of 80)\n  - R survivors: 20 (100% of 20)\n- Survivors total: 28\n- Frequency of resistance after treatment: 20/28 ≈ 0.71\n\nResult:\nIn one generation, the proportion of resistant bacteria rises from 20% to about 71%.\n\nKey insight:\nNatural selection changes how common traits are based on the environment—when an antibiotic applies pressure, resistance can become more prevalent over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nScenario:\nA nurse in Lagos notices a population of bacteria in a wound that vary in their resistance to a common antibiotic. In the presence of the antibiotic, the environment places pressure on the bacteria: some carry a mutation that helps them survive, while others do not.\n\nWhat changes:\n- Variation: not all bacteria are identical; some are more resistant than others.\n- Heredity: resistance traits can be passed to offspring.\n- Selection pressure: the antibiotic makes susceptible bacteria die more, while resistant ones survive and reproduce.\n\nNumeric illustration:\n- Start population: 100 bacteria\n  - Resistant (R): 20\n  - Susceptible (S): 80\n- After exposure:\n  - S survivors: 8 (10% of 80)\n  - R survivors: 20 (100% of 20)\n- Survivors total: 28\n- Frequency of resistance after treatment: 20/28 ≈ 0.71\n\nResult:\nIn one generation, the proportion of resistant bacteria rises from 20% to about 71%.\n\nKey insight:\nNatural selection changes how common traits are based on the environment—when an antibiotic applies pressure, resistance can become more prevalent over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nScenario:\nA nurse in Lagos notices a population of bacteria in a wound that vary in their resistance to a common antibiotic. In the presence of the antibiotic, the environment places pressure on the bacteria: some carry a mutation that helps them survive, while others do not.\n\nWhat changes:\n- Variation: not all bacteria are identical; some are more resistant than others.\n- Heredity: resistance traits can be passed to offspring.\n- Selection pressure: the antibiotic makes susceptible bacteria die more, while resistant ones survive and reproduce.\n\nNumeric illustration:\n- Start population: 100 bacteria\n  - Resistant (R): 20\n  - Susceptible (S): 80\n- After exposure:\n  - S survivors: 8 (10% of 80)\n  - R survivors: 20 (100% of 20)\n- Survivors total: 28\n- Frequency of resistance after treatment: 20/28 ≈ 0.71\n\nResult:\nIn one generation, the proportion of resistant bacteria rises from 20% to about 71%.\n\nKey insight:\nNatural selection changes how common traits are based on the environment—when an antibiotic applies pressure, resistance can become more prevalent over generations.",
+        "example_id": "ex_c4c73ac3c6fe49b7",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.4,
+    "reasoning": "The example effectively personalizes the context by involving a nurse in Lagos, aligning with the user's profession, location, and learning style, which enhances relevance and engagement. The complexity level appears appropriate, providing a detailed numeric illustration that balances biological concepts with practical application, suitable for a professional learner. The scientific content accurately describes natural selection, including key elements like variation, heredity, and selection pressure, with correct calculations and logical flow. Pedagogically, the example is well-structured, starting from scenario, explanation, numeric illustration, and concluding with a key insight, facilitating understanding. The framing and analogies are appropriate for the biological topic, using a real-world health scenario that fits the domain well.\n\n[PF_SCORE: 4]\n[CC_SCORE: 4]\n[CA_SCORE: 5]\n[PC_SCORE: 4]\n[DA_SCORE: 5]\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 3,
+        "CA": 5,
+        "PC": 4,
+        "DA": 5
+      },
+      "composite": 4.4,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example reflects the user's profile by mentioning a nurse in Lagos, which aligns with Amara's profession and location, and it uses an example-based approach to explain natural selection, matching her learning style. However, it does not fully integrate other aspects of her profile, such as her education level or cultural background, into the scenario.\n\nPF_SCORE: 4\n\nFor Complexity Calibration (CC), the example seems to match the medium complexity level requested by providing a clear, step-by-step explanation of natural selection using a relatable scenario for a nurse, without delving into overly complex scientific jargon or formulas that might be beyond a medium level. The use of a numeric illustration also helps to clarify the concept without making it too simplistic.\n\nCC_SCORE: 5\n\nRegarding Conceptual Accuracy (CA), the example accurately describes the process of natural selection, including variation, heredity, and selection pressure, and correctly illustrates how these factors can lead to an increase in the prevalence of a trait (in this case, antibiotic resistance) over generations. The scientific content is correct and aligns with the principles of natural selection.\n\nCA_SCORE: 5\n\nFor Pedagogical Clarity (PC), the example is well-structured, starting with a scenario, breaking down the key components of natural selection, and then illustrating the concept with a numeric example, making it easy to follow and understand. The key insight at the end summarizes the main point of the example, providing a clear and memorable takeaway for the learner.\n\nPC_SCORE: 5\n\nConsidering Domain Appropriateness (DA), the example is perfectly suited for the topic of natural selection, using a relevant analogy (antibiotic resistance in bacteria) that is commonly used in the field of biology to explain this concept. The vocabulary and framing are also appropriate for the domain, making the example highly effective for teaching natural selection.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:04:44.843360"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_08__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_08",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_08",
+    "topic": "Natural Selection",
+    "thread_id": "thread_471647ff6136423b",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nKenji, as a software engineer in Tokyo, you might think of natural selection as nature's version of A/B testing over millions of years. It's the process where traits that help an organism survive and reproduce become more common in a population over generations.\n\nImagine a population of beetles living in a forest. Most are green, but a few are brown due to a random genetic variation.\n\n**Initial State:**\n*   Population: 100 beetles (95 green, 5 brown)\n*   Environment: Green forest floor\n\n**Selective Pressure:**\nBirds hunt the beetles, spotting them by color against the background.\n\n**Outcome:**\n*   **Green beetles:** Camouflaged well. Many survive to reproduce.\n*   **Brown beetles:** Stand out clearly. Most are eaten before reproducing.\n\n**Next Generation:**\nThe surviving green beetles pass their \"green\" genes to their offspring. The brown beetles, having been eaten, pass on few or no \"brown\" genes.\n\n**Resulting Population:** 100 new beetles (99 green, 1 brown)\n\nThe trait (green color) that conferred a survival advantage became more common. The population adapted to its environment through differential survival and reproduction—not because the beetles *tried* to change, but because the environment \"selected\" for the advantageous trait.\n\nKey Insight:\nNatural selection is not random; the variations (mutations) are random, but the selection of which variations succeed is driven by the non-random pressures of the environment. It's a filter, not a guiding hand.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nKenji, as a software engineer in Tokyo, you might think of natural selection as nature's version of A/B testing over millions of years. It's the process where traits that help an organism survive and reproduce become more common in a population over generations.\n\nImagine a population of beetles living in a forest. Most are green, but a few are brown due to a random genetic variation.\n\n**Initial State:**\n*   Population: 100 beetles (95 green, 5 brown)\n*   Environment: Green forest floor\n\n**Selective Pressure:**\nBirds hunt the beetles, spotting them by color against the background.\n\n**Outcome:**\n*   **Green beetles:** Camouflaged well. Many survive to reproduce.\n*   **Brown beetles:** Stand out clearly. Most are eaten before reproducing.\n\n**Next Generation:**\nThe surviving green beetles pass their \"green\" genes to their offspring. The brown beetles, having been eaten, pass on few or no \"brown\" genes.\n\n**Resulting Population:** 100 new beetles (99 green, 1 brown)\n\nThe trait (green color) that conferred a survival advantage became more common. The population adapted to its environment through differential survival and reproduction—not because the beetles *tried* to change, but because the environment \"selected\" for the advantageous trait.\n\nKey Insight:\nNatural selection is not random; the variations (mutations) are random, but the selection of which variations succeed is driven by the non-random pressures of the environment. It's a filter, not a guiding hand.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, as a software engineer in Tokyo, you might think of natural selection as nature's version of A/B testing over millions of years. It's the process where traits that help an organism survive and reproduce become more common in a population over generations.\n\nImagine a population of beetles living in a forest. Most are green, but a few are brown due to a random genetic variation.\n\n**Initial State:**\n*   Population: 100 beetles (95 green, 5 brown)\n*   Environment: Green forest floor\n\n**Selective Pressure:**\nBirds hunt the beetles, spotting them by color against the background.\n\n**Outcome:**\n*   **Green beetles:** Camouflaged well. Many survive to reproduce.\n*   **Brown beetles:** Stand out clearly. Most are eaten before reproducing.\n\n**Next Generation:**\nThe surviving green beetles pass their \"green\" genes to their offspring. The brown beetles, having been eaten, pass on few or no \"brown\" genes.\n\n**Resulting Population:** 100 new beetles (99 green, 1 brown)\n\nThe trait (green color) that conferred a survival advantage became more common. The population adapted to its environment through differential survival and reproduction—not because the beetles *tried* to change, but because the environment \"selected\" for the advantageous trait.\n\nKey Insight:\nNatural selection is not random; the variations (mutations) are random, but the selection of which variations succeed is driven by the non-random pressures of the environment. It's a filter, not a guiding hand.",
+        "example_id": "ex_27966524b06b443a",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.95,
+      "CC": 4.33,
+      "CA": 5.0,
+      "PC": 4.89,
+      "DA": 5.0
+    },
+    "composite": 4.834,
+    "reasoning": "The example effectively personalizes the analogy by referencing Kenji's profession, location, and learning style, making the content more engaging for him. The complexity level appears appropriate, using a biological example with clear steps and minimal jargon, suitable for an undergraduate learner with medium difficulty preference. The scientific content is accurate, correctly describing natural selection and the process of differential survival without errors. The structure is logical, with a clear progression from initial state to outcome, and the key insight is explicitly highlighted, aiding understanding. The analogy of A/B testing and beetles in a forest is well-suited to the biological domain, maintaining domain relevance throughout.\n\nPF_SCORE: 5  \nCC_SCORE: 4  \nCA_SCORE: 5  \nPC_SCORE: 5  \nDA_SCORE: 5  \n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T21:00:36.164316"
+}

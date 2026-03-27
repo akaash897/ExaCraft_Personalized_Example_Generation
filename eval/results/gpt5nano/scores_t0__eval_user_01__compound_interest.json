@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_01__compound_interest",
+  "tier": "t0",
+  "user_id": "eval_user_01",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_01",
+    "topic": "Compound Interest",
+    "thread_id": "thread_c384113fa5c5436f",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nThink of your money as a small plant in a garden. You start with $100 in a savings account that earns 5% each year, and the interest is added to the balance. Because the interest is added, next year you earn 5% not just on $100, but on a bigger amount.\n\nYear 1:\n- Start with $100\n- 5% of $100 = $5\n- End of year balance: $105\n\nYear 2:\n- 5% of $105 = $5.25\n- End of year balance: $110.25\n\nIf the interest were simple (5% of the original $100 each year), after 2 years youâ€™d have $110. So compounding makes a little more money because the interest itself earns interest.\n\nKey Insight:\nCompound interest grows money faster because each periodâ€™s interest is earned on all money accumulated so far, not just the original amount. The sooner you start, the more you gain from compounding over time.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nThink of your money as a small plant in a garden. You start with $100 in a savings account that earns 5% each year, and the interest is added to the balance. Because the interest is added, next year you earn 5% not just on $100, but on a bigger amount.\n\nYear 1:\n- Start with $100\n- 5% of $100 = $5\n- End of year balance: $105\n\nYear 2:\n- 5% of $105 = $5.25\n- End of year balance: $110.25\n\nIf the interest were simple (5% of the original $100 each year), after 2 years youâ€™d have $110. So compounding makes a little more money because the interest itself earns interest.\n\nKey Insight:\nCompound interest grows money faster because each periodâ€™s interest is earned on all money accumulated so far, not just the original amount. The sooner you start, the more you gain from compounding over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nThink of your money as a small plant in a garden. You start with $100 in a savings account that earns 5% each year, and the interest is added to the balance. Because the interest is added, next year you earn 5% not just on $100, but on a bigger amount.\n\nYear 1:\n- Start with $100\n- 5% of $100 = $5\n- End of year balance: $105\n\nYear 2:\n- 5% of $105 = $5.25\n- End of year balance: $110.25\n\nIf the interest were simple (5% of the original $100 each year), after 2 years youâ€™d have $110. So compounding makes a little more money because the interest itself earns interest.\n\nKey Insight:\nCompound interest grows money faster because each periodâ€™s interest is earned on all money accumulated so far, not just the original amount. The sooner you start, the more you gain from compounding over time.",
+        "example_id": "ex_19a9e5d47d5e4e51",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 3,
+      "CA": 5,
+      "PC": 3,
+      "DA": 4
+    },
+    "composite": 3.7,
+    "reasoning": "The example uses a relatable analogy of a plant to explain compound interest, which aligns well with the user's example-based learning style and high school level. It covers the core concept clearly and includes a simple numerical illustration, but it does not incorporate specific personal details like Lena's location or background, nor does it tailor the complexity beyond basic calculations. The content is factually accurate and well-structured, making it pedagogically effective. The analogy is appropriate for the domain of finance and mathematics, and the explanation is accessible for a high school student.\n\nPF: The example does not incorporate Lena's personal details such as her location or background, and the analogy is generic rather than tailored to her European context or student role. It does, however, match her learning style and education level.  \nAXIS_SCORE: 3\n\nCC: The depth of explanation matches a high school level, with basic formulas and concepts of compound interest, appropriate for medium complexity. It does not delve into advanced formulas or derivatives, which is suitable.  \nAXIS_SCORE: 4\n\nCA: The factual content about compound interest, including the calculation and the difference from simple interest, is accurate and correctly presented.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a clear progression from concept to numerical example and key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\nDA: The analogy of a plant in a garden is appropriate and domain-relevant for explaining growth and interest accumulation, fitting well within the financial domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 3, \"CA\": 5, \"PC\": 3, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:41:21.424858"
+}

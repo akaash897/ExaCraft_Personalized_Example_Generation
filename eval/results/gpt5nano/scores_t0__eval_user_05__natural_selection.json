@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_4377e3bcf77e4b67",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of moths living in a forest. The moths come in two colors: light and dark. The color is inherited, so offspring tend to resemble their parents. When the forest bark is darkened by pollution, dark moths blend in better with the trees, while light moths stand out to predators. Dark moths survive longer and have more babies. Over many generations, the population becomes mostly dark because those traits helped individuals survive and reproduce.\n\nKey Insight:\nNatural selection favors traits that improve survival and reproduction in a given environment, so those traits become more common over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of moths living in a forest. The moths come in two colors: light and dark. The color is inherited, so offspring tend to resemble their parents. When the forest bark is darkened by pollution, dark moths blend in better with the trees, while light moths stand out to predators. Dark moths survive longer and have more babies. Over many generations, the population becomes mostly dark because those traits helped individuals survive and reproduce.\n\nKey Insight:\nNatural selection favors traits that improve survival and reproduction in a given environment, so those traits become more common over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of moths living in a forest. The moths come in two colors: light and dark. The color is inherited, so offspring tend to resemble their parents. When the forest bark is darkened by pollution, dark moths blend in better with the trees, while light moths stand out to predators. Dark moths survive longer and have more babies. Over many generations, the population becomes mostly dark because those traits helped individuals survive and reproduce.\n\nKey Insight:\nNatural selection favors traits that improve survival and reproduction in a given environment, so those traits become more common over time.",
+        "example_id": "ex_8dd66c8c12694a77",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 4,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 3.8,
+    "reasoning": "The example effectively uses a classic biological scenario involving moths, which is appropriate for the topic of natural selection. It explains inheritance, environmental influence, and survival advantage clearly, aligning well with a high school level. The language is straightforward and accessible, matching the medium complexity level. The analogy of moth coloration and pollution is domain-appropriate and familiar within biology. However, it does not explicitly incorporate the user's profile details such as their name, location, or learning style, which limits personalization. The structure is clear and pedagogically sound, with a logical flow from scenario to key insight.\n\n[PF] PERSONALIZATION FIDELITY — The example does not incorporate any personal details like the user's name, location, or specific interests, making it generic despite the topic relevance. It is a standard biology example without personalization.\nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION — The explanation uses basic biological concepts suitable for a high school student, with no advanced terminology or complex formulas, fitting the medium complexity level well.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The core concepts of natural selection, inheritance, and environmental influence are correctly presented, with accurate descriptions of survival and reproduction advantages.\nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario leading to a key insight, making it easy to follow and memorable for learners.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of moth coloration and pollution is highly appropriate for biology, effectively illustrating natural selection without domain mismatch.\nAXIS_SCORE: 4\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 4, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:47:28.864833"
+}

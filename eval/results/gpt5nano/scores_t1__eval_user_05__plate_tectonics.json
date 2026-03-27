@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_05__plate_tectonics",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_e21bf86045154b27",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nLena, a student in Berlin, builds a simple, hands-on model to understand how the Earth's outer shell moves. She pictures the crust as a set of large, cracked plates that float on a hotter, softer layer beneath (the mantle). Heat in the mantle causes a slow, circular flow that pushes and pulls these plates.\n\nKey terms explained inline:\n- Lithosphere: the rigid outer layer of the Earth, made of the crust plus the uppermost mantle.\n- Mantle convection: slow movement inside the mantle that drags the plates along.\n- Plate boundary: where two plates meet; at a divergent boundary, plates move apart and new crust forms.\n\nScenario: Divergent boundary along a ridge\nTwo plates drift away from each other along a mid-ocean ridge. As they pull apart, mantle rock rises to fill the gap, cools, and hardens into new crust. Over time the ocean basin between the plates grows wider.\n\nNumeric example:\nIf the plates move apart at 2 cm per year, after 1,000,000 years they would have separated by:\n2 cm/year × 1,000,000 years = 2,000,000 cm = 20,000 m = 20 km.\nThat means about 20 km of new crust could form in that time (ignoring other processes).\n\nKey Insight:\nPlate tectonics works through slow, steady movement of large pieces of the Earth's crust; even small speeds add up to big changes in the surface over millions of years.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nLena, a student in Berlin, builds a simple, hands-on model to understand how the Earth's outer shell moves. She pictures the crust as a set of large, cracked plates that float on a hotter, softer layer beneath (the mantle). Heat in the mantle causes a slow, circular flow that pushes and pulls these plates.\n\nKey terms explained inline:\n- Lithosphere: the rigid outer layer of the Earth, made of the crust plus the uppermost mantle.\n- Mantle convection: slow movement inside the mantle that drags the plates along.\n- Plate boundary: where two plates meet; at a divergent boundary, plates move apart and new crust forms.\n\nScenario: Divergent boundary along a ridge\nTwo plates drift away from each other along a mid-ocean ridge. As they pull apart, mantle rock rises to fill the gap, cools, and hardens into new crust. Over time the ocean basin between the plates grows wider.\n\nNumeric example:\nIf the plates move apart at 2 cm per year, after 1,000,000 years they would have separated by:\n2 cm/year × 1,000,000 years = 2,000,000 cm = 20,000 m = 20 km.\nThat means about 20 km of new crust could form in that time (ignoring other processes).\n\nKey Insight:\nPlate tectonics works through slow, steady movement of large pieces of the Earth's crust; even small speeds add up to big changes in the surface over millions of years.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nLena, a student in Berlin, builds a simple, hands-on model to understand how the Earth's outer shell moves. She pictures the crust as a set of large, cracked plates that float on a hotter, softer layer beneath (the mantle). Heat in the mantle causes a slow, circular flow that pushes and pulls these plates.\n\nKey terms explained inline:\n- Lithosphere: the rigid outer layer of the Earth, made of the crust plus the uppermost mantle.\n- Mantle convection: slow movement inside the mantle that drags the plates along.\n- Plate boundary: where two plates meet; at a divergent boundary, plates move apart and new crust forms.\n\nScenario: Divergent boundary along a ridge\nTwo plates drift away from each other along a mid-ocean ridge. As they pull apart, mantle rock rises to fill the gap, cools, and hardens into new crust. Over time the ocean basin between the plates grows wider.\n\nNumeric example:\nIf the plates move apart at 2 cm per year, after 1,000,000 years they would have separated by:\n2 cm/year × 1,000,000 years = 2,000,000 cm = 20,000 m = 20 km.\nThat means about 20 km of new crust could form in that time (ignoring other processes).\n\nKey Insight:\nPlate tectonics works through slow, steady movement of large pieces of the Earth's crust; even small speeds add up to big changes in the surface over millions of years.",
+        "example_id": "ex_eeaa9a14a6c246a0",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.4,
+    "reasoning": "The example effectively personalizes the content by mentioning Lena's name and location, and it aligns with her learning style by using an example-based, hands-on approach. The complexity level is medium, with clear explanations and a straightforward numeric example suitable for a high school student. The scientific content appears accurate, correctly describing key concepts like mantle convection and plate boundaries, with appropriate terminology. The structure is logical, starting from basic concepts, moving to a specific scenario, and ending with an insight, which supports pedagogical clarity. The analogies and framing are appropriate for the domain of geology and plate tectonics, using familiar concepts like floating plates and mantle flow.\n\n[PF] PERSONALIZATION FIDELITY — The example mentions Lena's name and location, and uses her learning style, making it well tailored to her profile.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The language and concepts are suitable for a high school student, with some technical terms explained clearly, matching the medium complexity level.  \nAXIS_SCORE: 3\n\n[CA] CONCEPTUAL ACCURACY — The scientific explanations are correct, including mantle convection, plate boundaries, and the formation of new crust, with no evident errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from concepts to scenario to numerical example, and a clear insight that reinforces understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies and framing are entirely appropriate for geology and plate tectonics, using domain-specific vocabulary and concepts.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:02:53.355853"
+}

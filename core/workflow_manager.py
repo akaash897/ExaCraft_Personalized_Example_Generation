@@ -31,6 +31,7 @@ class WorkflowManager:
         topic: str,
         mode: str = "adaptive",
         provider: str = None,
+        eval_mode: str = None,
     ) -> Dict[str, Any]:
         """
         Start a new feedback generation workflow.
@@ -48,7 +49,8 @@ class WorkflowManager:
             "loop_count": 0,
             "feedback_processed": False,
             "error_occurred": False,
-            "workflow_started_at": datetime.now().isoformat()
+            "workflow_started_at": datetime.now().isoformat(),
+            "eval_mode": eval_mode,
         }
 
         config = {"configurable": {"thread_id": thread_id}}
@@ -75,6 +77,7 @@ class WorkflowManager:
                 "example_id": current_state.get("example_id"),
                 "formatted_example": current_state.get("formatted_example"),
                 "display_metadata": current_state.get("display_metadata"),
+                "context_instruction": current_state.get("context_instruction"),
                 "status": "awaiting_feedback",
                 "error_occurred": error_occurred,
                 "error_message": current_state.get("error_message"),
@@ -131,6 +134,7 @@ class WorkflowManager:
                     "display_metadata": completed_state.get("display_metadata"),
                     "loop_count": completed_state.get("loop_count", 0),
                     "thread_id": thread_id,
+                    "last_agent_action": completed_state.get("last_agent_action"),
                     "message": "Example regenerated based on your feedback.",
                     "timestamp": datetime.now().isoformat()
                 }
@@ -147,6 +151,7 @@ class WorkflowManager:
                     "workflow_completed_at": completed_state.get("workflow_completed_at"),
                     "error_occurred": error_occurred,
                     "error_message": completed_state.get("error_message"),
+                    "last_agent_action": completed_state.get("last_agent_action"),
                     "message": "Feedback recorded. Thanks!",
                     "timestamp": datetime.now().isoformat()
                 }

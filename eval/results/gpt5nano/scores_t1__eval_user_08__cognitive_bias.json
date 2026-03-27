@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_08__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_08",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_08",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_cd70c3d17e9b4f18",
+    "initial_example": "Concept: Anchoring bias\n\nExample:\nScenario:\n  Kenji, a software engineer in Tokyo, is planning a new feature for the app.\n  The product manager says, \"We expect this to take about 8 days.\" That number becomes the anchor.\n\nWhat happens next:\n  - The team uses that anchor as the baseline for all later estimates.\n  - As new complexities appear (e.g., integration with a new API, additional tests), the estimates tend to stay around the 8-day mark.\n\nNumeric illustration:\n  - Anchor = 8 days\n  - New information adds 4 days of work\n  - Estimated effort kept near anchor → 12 days\n  - Actual effort = 12 days\n  - Overrun relative to anchor = (12 - 8) / 8 × 100% = 50%\n\nKey Insight:\n  The first number you hear can disproportionately shape your planning; re-evaluate with fresh data and multiple perspectives to counter anchoring.",
+    "final_example": "Concept: Anchoring bias\n\nExample:\nScenario:\n  Kenji, a software engineer in Tokyo, is planning a new feature for the app.\n  The product manager says, \"We expect this to take about 8 days.\" That number becomes the anchor.\n\nWhat happens next:\n  - The team uses that anchor as the baseline for all later estimates.\n  - As new complexities appear (e.g., integration with a new API, additional tests), the estimates tend to stay around the 8-day mark.\n\nNumeric illustration:\n  - Anchor = 8 days\n  - New information adds 4 days of work\n  - Estimated effort kept near anchor → 12 days\n  - Actual effort = 12 days\n  - Overrun relative to anchor = (12 - 8) / 8 × 100% = 50%\n\nKey Insight:\n  The first number you hear can disproportionately shape your planning; re-evaluate with fresh data and multiple perspectives to counter anchoring.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Anchoring bias\n\nExample:\nScenario:\n  Kenji, a software engineer in Tokyo, is planning a new feature for the app.\n  The product manager says, \"We expect this to take about 8 days.\" That number becomes the anchor.\n\nWhat happens next:\n  - The team uses that anchor as the baseline for all later estimates.\n  - As new complexities appear (e.g., integration with a new API, additional tests), the estimates tend to stay around the 8-day mark.\n\nNumeric illustration:\n  - Anchor = 8 days\n  - New information adds 4 days of work\n  - Estimated effort kept near anchor → 12 days\n  - Actual effort = 12 days\n  - Overrun relative to anchor = (12 - 8) / 8 × 100% = 50%\n\nKey Insight:\n  The first number you hear can disproportionately shape your planning; re-evaluate with fresh data and multiple perspectives to counter anchoring.",
+        "example_id": "ex_986f338e27b1472b",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.2,
+    "reasoning": "The example effectively personalizes the scenario by including Kenji's name, profession, and location, aligning well with the user's profile. The complexity level appears appropriate, with a clear explanation of anchoring bias and a numerical illustration that balances detail and accessibility. The factual content about anchoring bias is accurate, and the structure is logical, guiding the learner from scenario to insight smoothly. The analogy is domain-specific, relating to project estimation in software engineering, which is suitable for the topic of cognitive bias in a professional context.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Kenji's name, profession, and location, making it quite tailored. The scenario is relevant to his role as a software engineer, and the learning style (example-based) is well addressed through a concrete, relatable example.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes a detailed scenario, a numerical example, and an insightful key takeaway, matching a medium complexity level suitable for an undergraduate engineer. It avoids overly technical jargon or overly simplistic language.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of anchoring bias, the example, and the calculation are factually correct and align with established psychological understanding. There are no inaccuracies.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The structure is clear, with a logical flow from scenario to illustration to insight. The example effectively bridges the concept and its real-world application, making it memorable.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for the topic of cognitive bias in a professional, software engineering context. The vocabulary and scenario are relevant and realistic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:09:13.282759"
+}

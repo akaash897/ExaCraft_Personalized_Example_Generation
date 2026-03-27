@@ -1,0 +1,85 @@
+{
+  "key": "t2__eval_user_05__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_f96cbacd890348a5",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nA walk through Tiergarten, Berlin helps Lena see how natural selection works in a real urban setting. In this scenario, a local moth population shows two color morphs: light and dark. The tree trunks in parts of the park are darker from city soot, while other trunks stay lighter with patches of lichen. Birds like magpies and small songbirds hunt moths resting on tree bark.\n\nStep-by-step breakdown\n\nInputs:\n- Lena is studying in Berlin; setting: Tiergarten park, with park paths flanked by plane trees.\n- Population: two color morphs of a local moth population (light and dark).\n- Initial counts: Light 60 moths, Dark 40 moths.\n- Environment: trunk backgrounds include darkened (soot) patches and lighter, lichened patches.\n- Predators: urban birds that prey on resting moths.\n- Time frame: one generation (one cycle of reproduction).\n\nVariation:\n- Genetic variation causes two color morphs: light and dark. This variation results in different camouflage effectiveness on different trunk backgrounds.\n\nSelection (survival under urban pressure):\n- On darker trunks, dark moths blend in better and experience higher survival; light moths stand out and are more likely to be eaten.\n- On lighter trunks, light moths have the advantage; dark moths stand out and are eaten more often.\n- In this example, assume a single generation where darker camouflage is favored on the dark trunks.\n\nOutputs (numbers after one generation, assuming equal mating success among survivors and one generation per cycle):\n- Survivors: Light moths = 18, Dark moths = 24.\n- Total survivors = 42.\n- New frequencies: Light = 18/42 ≈ 0.43, Dark ≈ 0.57.\n- Interpretation: The darker morph becomes more common in this generation due to better camouflage on the prevalent dark trunks.\n\nKey Insight:\nUrban environments can change which backgrounds predators see as most camouflaged; the color morph with better camouflage on the surrounding tree trunks becomes more common over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nA walk through Tiergarten, Berlin helps Lena see how natural selection works in a real urban setting. In this scenario, a local moth population shows two color morphs: light and dark. The tree trunks in parts of the park are darker from city soot, while other trunks stay lighter with patches of lichen. Birds like magpies and small songbirds hunt moths resting on tree bark.\n\nStep-by-step breakdown\n\nInputs:\n- Lena is studying in Berlin; setting: Tiergarten park, with park paths flanked by plane trees.\n- Population: two color morphs of a local moth population (light and dark).\n- Initial counts: Light 60 moths, Dark 40 moths.\n- Environment: trunk backgrounds include darkened (soot) patches and lighter, lichened patches.\n- Predators: urban birds that prey on resting moths.\n- Time frame: one generation (one cycle of reproduction).\n\nVariation:\n- Genetic variation causes two color morphs: light and dark. This variation results in different camouflage effectiveness on different trunk backgrounds.\n\nSelection (survival under urban pressure):\n- On darker trunks, dark moths blend in better and experience higher survival; light moths stand out and are more likely to be eaten.\n- On lighter trunks, light moths have the advantage; dark moths stand out and are eaten more often.\n- In this example, assume a single generation where darker camouflage is favored on the dark trunks.\n\nOutputs (numbers after one generation, assuming equal mating success among survivors and one generation per cycle):\n- Survivors: Light moths = 18, Dark moths = 24.\n- Total survivors = 42.\n- New frequencies: Light = 18/42 ≈ 0.43, Dark ≈ 0.57.\n- Interpretation: The darker morph becomes more common in this generation due to better camouflage on the prevalent dark trunks.\n\nKey Insight:\nUrban environments can change which backgrounds predators see as most camouflaged; the color morph with better camouflage on the surrounding tree trunks becomes more common over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nA walk through Tiergarten, Berlin helps Lena see how natural selection works in a real urban setting. In this scenario, a local moth population shows two color morphs: light and dark. The tree trunks in parts of the park are darker from city soot, while other trunks stay lighter with patches of lichen. Birds like magpies and small songbirds hunt moths resting on tree bark.\n\nStep-by-step breakdown\n\nInputs:\n- Lena is studying in Berlin; setting: Tiergarten park, with park paths flanked by plane trees.\n- Population: two color morphs of a local moth population (light and dark).\n- Initial counts: Light 60 moths, Dark 40 moths.\n- Environment: trunk backgrounds include darkened (soot) patches and lighter, lichened patches.\n- Predators: urban birds that prey on resting moths.\n- Time frame: one generation (one cycle of reproduction).\n\nVariation:\n- Genetic variation causes two color morphs: light and dark. This variation results in different camouflage effectiveness on different trunk backgrounds.\n\nSelection (survival under urban pressure):\n- On darker trunks, dark moths blend in better and experience higher survival; light moths stand out and are more likely to be eaten.\n- On lighter trunks, light moths have the advantage; dark moths stand out and are eaten more often.\n- In this example, assume a single generation where darker camouflage is favored on the dark trunks.\n\nOutputs (numbers after one generation, assuming equal mating success among survivors and one generation per cycle):\n- Survivors: Light moths = 18, Dark moths = 24.\n- Total survivors = 42.\n- New frequencies: Light = 18/42 ≈ 0.43, Dark ≈ 0.57.\n- Interpretation: The darker morph becomes more common in this generation due to better camouflage on the prevalent dark trunks.\n\nKey Insight:\nUrban environments can change which backgrounds predators see as most camouflaged; the color morph with better camouflage on the surrounding tree trunks becomes more common over generations.",
+        "example_id": "ex_e23c2285788d4136",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Tailor the next Natural Selection example to a medium-complexity Berlin-based scenario featuring Lena; this aligns with the student’s engagement signals that Lena and Berlin grounding improve engagement. Include a step-by-step breakdown with clearly labeled inputs and outputs, and center on variation, differential survival, and adaptation under an urban pressure (e.g., color variation in a local moth or beak-reliant for food) in a real Berlin setting (parks, street trees). Avoid code or unrelated analogies; keep the content domain-appropriate and focused on core natural-selection concepts.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by situating Lena in Berlin's Tiergarten park, directly connecting her environment to the example. It also incorporates her learning style by using a real-world, visual setting, which aligns well with an example-based approach. The scenario is specific and tailored to her profile, fulfilling the personalization criteria well.\n\nRegarding complexity, the explanation balances biological concepts with environmental context, suitable for a high school student with medium complexity. It avoids overly technical language or advanced genetics, making it accessible yet informative.\n\nThe scientific content accurately describes natural selection, including variation, differential survival, and changes in allele frequency, with correct terminology and logical progression. There are no factual inaccuracies present.\n\nStructurally, the example is well-organized, with a clear step-by-step breakdown that guides the learner through the process, from initial conditions to the outcome, with a key insight that reinforces understanding. The flow is logical and pedagogically sound.\n\nThe framing uses an urban environment and a local moth population, which are appropriate for illustrating natural selection in a real-world context. The analogy of moth camouflage on tree trunks is domain-appropriate and enhances understanding without introducing off-topic elements.\n\nOverall, the example is well-crafted, personalized, accurate, and pedagogically effective.\n\nPF_SCORE: 4\nCC_SCORE: 5\nCA_SCORE: 5\nPC_SCORE: 5\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 4,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.8,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Tailor the next Natural Selection example to a medium-complexity Berlin-based scenario featuring Lena; this aligns with the student’s engagement signals that Lena and Berlin grounding improve engagement. Include a step-by-step breakdown with clearly labeled inputs and outputs, and center on variation, differential survival, and adaptation under an urban pressure (e.g., color variation in a local moth or beak-reliant for food) in a real Berlin setting (parks, street trees). Avoid code or unrelated analogies; keep the content domain-appropriate and focused on core natural-selection concepts.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction effectively incorporates multiple stored patterns and insights, such as grounding the example in Berlin, using Lena's name to personalize the scenario, and focusing on medium complexity with step-by-step breakdowns. It explicitly directs the scenario to involve local urban pressures and natural selection concepts, aligning well with the student's preferences and previous feedback. Therefore, it demonstrates a high level of synthesis and concreteness.\n\nSPECIFICITY_SCORE: 5\n\n```json\n{\n  \"SPECIFICITY_SCORE\": 5\n}\n```",
+    "error": null
+  },
+  "timestamp": "2026-03-16T00:18:44.107645"
+}

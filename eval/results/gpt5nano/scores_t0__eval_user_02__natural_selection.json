@@ -1,0 +1,81 @@
+{
+  "key": "t0__eval_user_02__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_02",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_02",
+    "topic": "Natural Selection",
+    "thread_id": "thread_0399ba9367974fab",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nIn a population of beetles, some are green and some are brown. The color is inherited, so babies tend to look like their parents. Predators hunt by sight, so beetles that blend in with their surroundings are less likely to be eaten and more likely to have babies. When the forest has mostly green leaves, green beetles survive longer and leave more offspring; brown beetles suffer more, so their numbers stay small. If the environment changes and the bark becomes darker, brown beetles are now harder to spot, while green beetles stand out, so brown beetles again have more surviving offspring. Over many generations, the beetle population shifts to have more individuals with the trait that helps them blend in.\n\nKey Insight:\nNatural selection increases the frequency of traits that boost survival and reproduction in a given environment, leading populations to adapt over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nIn a population of beetles, some are green and some are brown. The color is inherited, so babies tend to look like their parents. Predators hunt by sight, so beetles that blend in with their surroundings are less likely to be eaten and more likely to have babies. When the forest has mostly green leaves, green beetles survive longer and leave more offspring; brown beetles suffer more, so their numbers stay small. If the environment changes and the bark becomes darker, brown beetles are now harder to spot, while green beetles stand out, so brown beetles again have more surviving offspring. Over many generations, the beetle population shifts to have more individuals with the trait that helps them blend in.\n\nKey Insight:\nNatural selection increases the frequency of traits that boost survival and reproduction in a given environment, leading populations to adapt over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nIn a population of beetles, some are green and some are brown. The color is inherited, so babies tend to look like their parents. Predators hunt by sight, so beetles that blend in with their surroundings are less likely to be eaten and more likely to have babies. When the forest has mostly green leaves, green beetles survive longer and leave more offspring; brown beetles suffer more, so their numbers stay small. If the environment changes and the bark becomes darker, brown beetles are now harder to spot, while green beetles stand out, so brown beetles again have more surviving offspring. Over many generations, the beetle population shifts to have more individuals with the trait that helps them blend in.\n\nKey Insight:\nNatural selection increases the frequency of traits that boost survival and reproduction in a given environment, leading populations to adapt over generations.",
+        "example_id": "ex_3166e5e95a0a4bde",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 1,
+      "CC": 5,
+      "CA": 4,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 3.7,
+    "reasoning": "The example uses a clear, familiar scenario involving beetles and their environment, which aligns well with the user's learning style of example-based instruction. The content accurately describes natural selection principles without errors, and the structure is straightforward, making it accessible for a medium complexity level. The analogy is appropriate for biology, matching the domain, and the explanation is concise yet informative, facilitating understanding.\n\nPF: The example directly reflects the user's profile by using a biological scenario, which is suitable for a nurse with a professional background and a medium complexity level. The language and context are domain-specific and relevant.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation covers the core concepts of natural selection, inheritance, environmental influence, and population change, matching a medium complexity level. It balances detail with clarity.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing inheritance, predator-prey interactions, and environmental effects on trait frequency. There are no factual inaccuracies.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, starting with a scenario, explaining the process, and concluding with a key insight that summarizes the concept. It provides a clear concept-to-example bridge.  \nAXIS_SCORE: 5\n\nDA: The analogy of beetles and their environment is perfectly appropriate for biology and natural selection, with relevant vocabulary and framing.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 1, \"CC\": 5, \"CA\": 4, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 1,
+        "CC": 5,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.2,
+      "reasoning": null,
+      "error": null
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:42:00.923758"
+}

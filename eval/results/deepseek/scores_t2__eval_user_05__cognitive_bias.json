@@ -1,0 +1,73 @@
+{
+  "key": "t2__eval_user_05__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_b505131199974286",
+    "initial_example": "**Concept:** Cognitive Bias\n\n**Example:**\nLena, a student in Berlin, is deciding whether to buy a discounted semester ticket for public transport. She's leaning towards buying it because her friend, Max, just bought one and said it was a \"no-brainer.\" Let's break down how a few cognitive biases might be influencing her decision.\n\n**Scenario:** The \"Deutschlandticket\" for \u20ac49/month is on sale for \u20ac45 if purchased before the semester starts.\n\n**Biases at Play:**\n\n1.  **Confirmation Bias (Seeking supporting evidence):**\n    *   **Process:** Lena remembers articles praising the ticket's value and ignores recent news about planned service disruptions on her line.\n    *   **Effect:** She gathers information that supports buying the ticket and dismisses contradictory information.\n\n2.  **Anchoring (Relying too heavily on the first piece of information):**\n    *   **Process:** The original price of \u20ac49 is the \"anchor.\" The discounted \u20ac45 feels like a great deal in comparison, even if she hasn't fully budgeted for the monthly expense.\n    *   **Effect:** Her perception of value is skewed by the initial, higher price point.\n\n3.  **Bandwagon Effect (Following the crowd):**\n    *   **Process:** Seeing Max and several other classmates purchase the ticket creates social proof. She thinks, \"Everyone is doing it, so it must be the right choice.\"\n    *   **Effect:** The popularity of the decision reduces her perceived risk and critical evaluation.\n\n**A More Balanced Decision Path:**\nTo counteract these biases, Lena could:\n*   **For Confirmation Bias:** Actively search for two critical reviews of the ticket's limitations.\n*   **For Anchoring:** Calculate her total transport cost for the semester based on her actual travel patterns (e.g., using occasional tickets vs. the monthly flat rate).\n*   **For Bandwagon Effect:** Ask one friend who *didn't* buy the ticket for their reasoning.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that often lead us to quick, but sometimes flawed, decisions. By recognizing common biases like confirmation, anchoring, and bandwagon effects, you can pause and deliberately seek a more balanced view, leading to choices that better align with your actual needs and evidence.",
+    "final_example": "**Concept:** Cognitive Bias\n\n**Example:**\nLena, a student in Berlin, is deciding whether to buy a discounted semester ticket for public transport. She's leaning towards buying it because her friend, Max, just bought one and said it was a \"no-brainer.\" Let's break down how a few cognitive biases might be influencing her decision.\n\n**Scenario:** The \"Deutschlandticket\" for \u20ac49/month is on sale for \u20ac45 if purchased before the semester starts.\n\n**Biases at Play:**\n\n1.  **Confirmation Bias (Seeking supporting evidence):**\n    *   **Process:** Lena remembers articles praising the ticket's value and ignores recent news about planned service disruptions on her line.\n    *   **Effect:** She gathers information that supports buying the ticket and dismisses contradictory information.\n\n2.  **Anchoring (Relying too heavily on the first piece of information):**\n    *   **Process:** The original price of \u20ac49 is the \"anchor.\" The discounted \u20ac45 feels like a great deal in comparison, even if she hasn't fully budgeted for the monthly expense.\n    *   **Effect:** Her perception of value is skewed by the initial, higher price point.\n\n3.  **Bandwagon Effect (Following the crowd):**\n    *   **Process:** Seeing Max and several other classmates purchase the ticket creates social proof. She thinks, \"Everyone is doing it, so it must be the right choice.\"\n    *   **Effect:** The popularity of the decision reduces her perceived risk and critical evaluation.\n\n**A More Balanced Decision Path:**\nTo counteract these biases, Lena could:\n*   **For Confirmation Bias:** Actively search for two critical reviews of the ticket's limitations.\n*   **For Anchoring:** Calculate her total transport cost for the semester based on her actual travel patterns (e.g., using occasional tickets vs. the monthly flat rate).\n*   **For Bandwagon Effect:** Ask one friend who *didn't* buy the ticket for their reasoning.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that often lead us to quick, but sometimes flawed, decisions. By recognizing common biases like confirmation, anchoring, and bandwagon effects, you can pause and deliberately seek a more balanced view, leading to choices that better align with your actual needs and evidence.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Cognitive Bias\n\n**Example:**\nLena, a student in Berlin, is deciding whether to buy a discounted semester ticket for public transport. She's leaning towards buying it because her friend, Max, just bought one and said it was a \"no-brainer.\" Let's break down how a few cognitive biases might be influencing her decision.\n\n**Scenario:** The \"Deutschlandticket\" for \u20ac49/month is on sale for \u20ac45 if purchased before the semester starts.\n\n**Biases at Play:**\n\n1.  **Confirmation Bias (Seeking supporting evidence):**\n    *   **Process:** Lena remembers articles praising the ticket's value and ignores recent news about planned service disruptions on her line.\n    *   **Effect:** She gathers information that supports buying the ticket and dismisses contradictory information.\n\n2.  **Anchoring (Relying too heavily on the first piece of information):**\n    *   **Process:** The original price of \u20ac49 is the \"anchor.\" The discounted \u20ac45 feels like a great deal in comparison, even if she hasn't fully budgeted for the monthly expense.\n    *   **Effect:** Her perception of value is skewed by the initial, higher price point.\n\n3.  **Bandwagon Effect (Following the crowd):**\n    *   **Process:** Seeing Max and several other classmates purchase the ticket creates social proof. She thinks, \"Everyone is doing it, so it must be the right choice.\"\n    *   **Effect:** The popularity of the decision reduces her perceived risk and critical evaluation.\n\n**A More Balanced Decision Path:**\nTo counteract these biases, Lena could:\n*   **For Confirmation Bias:** Actively search for two critical reviews of the ticket's limitations.\n*   **For Anchoring:** Calculate her total transport cost for the semester based on her actual travel patterns (e.g., using occasional tickets vs. the monthly flat rate).\n*   **For Bandwagon Effect:** Ask one friend who *didn't* buy the ticket for their reasoning.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that often lead us to quick, but sometimes flawed, decisions. By recognizing common biases like confirmation, anchoring, and bandwagon effects, you can pause and deliberately seek a more balanced view, leading to choices that better align with your actual needs and evidence.",
+        "example_id": "ex_331b661064ea4514",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity example about Cognitive Bias that is grounded in a real-world scenario from Berlin, Germany, featuring the student Lena. Use a step-by-step breakdown with clear labeled components to explain how cognitive biases work in everyday decision-making. Focus on making the example personally relevant to Lena's experiences as a student in Berlin.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.84,
+      "CC": 4.36,
+      "CA": 5.0,
+      "PC": 4.99,
+      "DA": 4.98
+    },
+    "composite": 4.836,
+    "reasoning": "The example effectively personalizes Lena by including her name, location, and context, making the scenario relatable to her profile. The complexity level is appropriate for a high school student, with clear explanations of cognitive biases without overly technical language. The factual content about biases appears accurate, with correct descriptions of confirmation bias, anchoring, and bandwagon effect. The structure is logical, starting with the scenario, then biases, and concluding with a decision-making tip, which supports pedagogical clarity. The analogies used (e.g., social proof, price anchoring) are appropriate for the domain of psychology and decision-making, making the content domain-appropriate.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example uses Lena's name, location, and context, but the biases are described in a general way without deeply integrating her specific profile beyond that. It matches her learning style (example-based) well.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION \u2014 The language and concepts are suitable for a high school student, with clear explanations and no advanced technical jargon, aligning well with medium complexity.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY \u2014 The descriptions of cognitive biases are accurate and align with psychological literature; no errors are evident.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a clear scenario, explanation of biases, and a summary, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The framing and analogies are appropriate for psychology and decision-making, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity example about Cognitive Bias that is grounded in a real-world scenario from Berlin, Germany, featuring the student Lena. Use a step-by-step breakdown with clear labeled components to explain how cognitive biases work in everyday decision-making. Focus on making the example personally relevant to Lena's experiences as a student in Berlin.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 5,
+    "reasoning": "The instruction explicitly incorporates Lena's role as a student in Berlin, Germany, and emphasizes using real-world, personal, and location-specific scenarios, aligning with her domain preference and engagement insights. It also specifies a step-by-step breakdown with labeled components, reflecting her preferred learning style and complexity level, thus effectively synthesizing her stored patterns into a concrete directive. \n\nSPECIFICITY_SCORE: 5",
+    "error": null
+  },
+  "timestamp": "2026-03-15T20:47:19.989098"
+}

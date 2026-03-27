@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_06__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_c03f5a23f5a14d53",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a high fever and body aches. Your initial thought, based on many recent cases, could be malaria. This is an example of the **availability heuristic** — a cognitive bias where we judge the likelihood of an event based on how easily examples come to mind.\n\nIn this scenario:\n- **Bias:** Availability Heuristic\n- **Trigger:** The recent high prevalence of malaria cases in your memory.\n- **Effect:** You might quickly diagnose malaria without immediately considering other possibilities like typhoid fever or dengue, which also present with similar symptoms in the region.\n- **Mitigation:** Consciously slowing down and reviewing the full set of symptoms, patient history, and running appropriate tests before confirming a diagnosis.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to efficient but sometimes inaccurate judgments. Being aware of them, like the availability heuristic, allows you to pause and apply more systematic, clinical reasoning to ensure the best patient care.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a high fever and body aches. Your initial thought, based on many recent cases, could be malaria. This is an example of the **availability heuristic** — a cognitive bias where we judge the likelihood of an event based on how easily examples come to mind.\n\nIn this scenario:\n- **Bias:** Availability Heuristic\n- **Trigger:** The recent high prevalence of malaria cases in your memory.\n- **Effect:** You might quickly diagnose malaria without immediately considering other possibilities like typhoid fever or dengue, which also present with similar symptoms in the region.\n- **Mitigation:** Consciously slowing down and reviewing the full set of symptoms, patient history, and running appropriate tests before confirming a diagnosis.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to efficient but sometimes inaccurate judgments. Being aware of them, like the availability heuristic, allows you to pause and apply more systematic, clinical reasoning to ensure the best patient care.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a high fever and body aches. Your initial thought, based on many recent cases, could be malaria. This is an example of the **availability heuristic** — a cognitive bias where we judge the likelihood of an event based on how easily examples come to mind.\n\nIn this scenario:\n- **Bias:** Availability Heuristic\n- **Trigger:** The recent high prevalence of malaria cases in your memory.\n- **Effect:** You might quickly diagnose malaria without immediately considering other possibilities like typhoid fever or dengue, which also present with similar symptoms in the region.\n- **Mitigation:** Consciously slowing down and reviewing the full set of symptoms, patient history, and running appropriate tests before confirming a diagnosis.\n\nKey Insight:\nCognitive biases are mental shortcuts that can lead to efficient but sometimes inaccurate judgments. Being aware of them, like the availability heuristic, allows you to pause and apply more systematic, clinical reasoning to ensure the best patient care.",
+        "example_id": "ex_0b0563ecb17147d3",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.8,
+      "CC": 4.42,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.844,
+    "reasoning": "The example effectively personalizes the content by mentioning Amara's role as a nurse in Lagos, Nigeria, and incorporates relevant regional health issues, aligning well with her profile. The complexity level appears appropriate, discussing a common cognitive bias with sufficient depth for a professional learner, without overcomplicating. The factual content about the availability heuristic is accurate and well-explained, providing a clear understanding of the bias. The structure is logical, starting with a scenario, explaining the bias, and concluding with a key insight, which supports pedagogical clarity. The analogy used is appropriate for the medical domain, referencing clinical decision-making, which is relevant for a nurse.\n\n[PF] PERSONALIZATION FIDELITY — The example uses the user's name, location, and profession, and frames the scenario within a healthcare context relevant to her role, demonstrating strong personalization.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances technical terminology with accessible language, suitable for a professional with medium complexity preferences, matching her learning style.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and its effects is factually correct, with no inaccuracies or misleading statements.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation, and key insight, making it easy to follow and memorable for learning.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for the medical and clinical decision-making domain, with no off-topic elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:29:44.345654"
+}

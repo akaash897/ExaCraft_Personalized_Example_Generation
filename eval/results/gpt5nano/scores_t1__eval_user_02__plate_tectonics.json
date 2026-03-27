@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_02__plate_tectonics",
+  "tier": "t1",
+  "user_id": "eval_user_02",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_25c586b1e26a4992",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara works as a nurse in Lagos and uses a simple, real-world picture to understand how the Earth moves. Imagine the Earth’s outer shell as big rigid tiles (plates) floating on a thick, slow‑moving “syrup” (the mantle). Heat from deep inside the Earth makes currents in the mantle, and these currents push and pull the tiles so they drift very slowly over time.\n\nKey ideas in plain language:\n- Plates: the large chunks of the Earth's crust and upper mantle.\n- Mantle convection: heat-driven currents that slowly move the mantle and push the plates.\n- Plate boundaries: places where plates interact. There are three main kinds:\n  - Divergent: plates pull apart and new crust can form.\n  - Convergent: plates collide; one may go underneath another, building mountains or triggering volcanoes.\n  - Transform: plates slide past each other laterally, which can cause earthquakes.\n\nContext for Lagos:\nNigeria sits away from the fastest-moving boundaries, so big earthquakes are less common here than in regions like the Pacific Ring of Fire.\n\nNumerical example (one simple formula):\nMovement rate of a plate ≈ a few centimeters per year. Take 2 cm/year as a representative rate.\nTime span: 100 years\nDistance moved ≈ rate × time = 2 cm/year × 100 years = 200 cm = 2 meters\n\nThis shows how tiny yearly shifts add up over decades to change coastlines and landscapes over long times.\n\nKey Insight:\nThe Earth's crust is always drifting, but the pace is slow—over many years it reshapes continents and triggers geological events at plate boundaries.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nAmara works as a nurse in Lagos and uses a simple, real-world picture to understand how the Earth moves. Imagine the Earth’s outer shell as big rigid tiles (plates) floating on a thick, slow‑moving “syrup” (the mantle). Heat from deep inside the Earth makes currents in the mantle, and these currents push and pull the tiles so they drift very slowly over time.\n\nKey ideas in plain language:\n- Plates: the large chunks of the Earth's crust and upper mantle.\n- Mantle convection: heat-driven currents that slowly move the mantle and push the plates.\n- Plate boundaries: places where plates interact. There are three main kinds:\n  - Divergent: plates pull apart and new crust can form.\n  - Convergent: plates collide; one may go underneath another, building mountains or triggering volcanoes.\n  - Transform: plates slide past each other laterally, which can cause earthquakes.\n\nContext for Lagos:\nNigeria sits away from the fastest-moving boundaries, so big earthquakes are less common here than in regions like the Pacific Ring of Fire.\n\nNumerical example (one simple formula):\nMovement rate of a plate ≈ a few centimeters per year. Take 2 cm/year as a representative rate.\nTime span: 100 years\nDistance moved ≈ rate × time = 2 cm/year × 100 years = 200 cm = 2 meters\n\nThis shows how tiny yearly shifts add up over decades to change coastlines and landscapes over long times.\n\nKey Insight:\nThe Earth's crust is always drifting, but the pace is slow—over many years it reshapes continents and triggers geological events at plate boundaries.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara works as a nurse in Lagos and uses a simple, real-world picture to understand how the Earth moves. Imagine the Earth’s outer shell as big rigid tiles (plates) floating on a thick, slow‑moving “syrup” (the mantle). Heat from deep inside the Earth makes currents in the mantle, and these currents push and pull the tiles so they drift very slowly over time.\n\nKey ideas in plain language:\n- Plates: the large chunks of the Earth's crust and upper mantle.\n- Mantle convection: heat-driven currents that slowly move the mantle and push the plates.\n- Plate boundaries: places where plates interact. There are three main kinds:\n  - Divergent: plates pull apart and new crust can form.\n  - Convergent: plates collide; one may go underneath another, building mountains or triggering volcanoes.\n  - Transform: plates slide past each other laterally, which can cause earthquakes.\n\nContext for Lagos:\nNigeria sits away from the fastest-moving boundaries, so big earthquakes are less common here than in regions like the Pacific Ring of Fire.\n\nNumerical example (one simple formula):\nMovement rate of a plate ≈ a few centimeters per year. Take 2 cm/year as a representative rate.\nTime span: 100 years\nDistance moved ≈ rate × time = 2 cm/year × 100 years = 200 cm = 2 meters\n\nThis shows how tiny yearly shifts add up over decades to change coastlines and landscapes over long times.\n\nKey Insight:\nThe Earth's crust is always drifting, but the pace is slow—over many years it reshapes continents and triggers geological events at plate boundaries.",
+        "example_id": "ex_48d9b0303ecf49e2",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the content by mentioning Amara's profession and location, and uses a relatable analogy (tiles on syrup) that aligns with her learning style. The depth of explanation covers key concepts of plate tectonics at a medium complexity level, appropriate for a professional learner. The scientific facts presented are accurate, including the description of plate boundaries and mantle convection, with a simple numerical example illustrating movement over time. The structure is clear, with a logical flow from analogy to key ideas, and the example bridges the concept to real-world implications, making it pedagogically sound. The analogy and framing are appropriate for the domain of geology, using familiar physical metaphors.\n\nPF_SCORE: 5  \nCC_SCORE: 5 — The explanation is mostly accurate, but the phrase \"heat from deep inside the Earth makes currents in the mantle\" simplifies mantle convection, which is driven by complex heat transfer processes; however, this is acceptable at a medium complexity level.  \nCA_SCORE: 5 — The scientific content is correct, with accurate descriptions of plate types, movement, and geological processes.  \nPC_SCORE: 5 — The structure is clear and logical, but the example could be slightly more explicit in connecting the analogy to the core concept for memorability.  \nDA_SCORE: 5 — The analogy is perfectly domain-appropriate, using physical metaphors relevant to geology and Earth's processes.\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:57:25.886088"
+}

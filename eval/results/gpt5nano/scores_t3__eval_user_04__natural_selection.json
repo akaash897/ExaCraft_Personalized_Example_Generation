@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_04__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_ee35497b79a3458e",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nContext:\n- Kenji is studying in Tokyo. In a small park nearby, a population of beetles comes in two colors: brown and green. The tree bark is mostly brown, so brown beetles are better camouflaged from birds that prey on them.\n\nKey traits and variation:\n- Color trait is heritable: offspring often resemble their parents in color.\n\nEnvironmental pressure:\n- Predation acts more strongly on beetles that stand out against the bark. Camouflage affects survival.\n\nPopulation snapshot (initial):\n- Brown: 60% of the population\n- Green: 40% of the population\n\nFitness values (survival to reproduction):\n- Brown beetles: 0.70 (70% survive to reproduce)\n- Green beetles: 0.40 (40% survive to reproduce)\n\nCalculation (one generation):\n- Brown survivors = 0.60 × 0.70 = 0.42\n- Green survivors = 0.40 × 0.40 = 0.16\n- Total survivors = 0.42 + 0.16 = 0.58\n\nFrequencies among survivors:\n- Brown: 0.42 / 0.58 ≈ 0.724 (72.4%)\n- Green: 0.16 / 0.58 ≈ 0.276 (27.6%)\n\nResult and interpretation:\n- After one generation, brown beetles are more common among survivors, showing natural selection favoring the brown color in this environment.\n\nKey Insight:\n- Natural selection shifts trait frequencies by favoring variants that improve survival and reproduction in a given environment; the environment determines which traits are favored.",
+    "final_example": "Concept: Natural Selection\n\nExample:\n- Setup\n  - Two feature variants in an app: BlueUI and RedUI\n  - Starting counts: BlueUI 40, RedUI 60\n  - Environment: testers/users adopting features (survival to adulthood = passing automated tests / user adoption)\n  - Survival rates: BlueUI 0.60, RedUI 0.30\n  - Reproduction: surviving features carried into the next sprint equally\n\n- Calculations\n  - BlueUI survivors = 40 × 0.60 = 24\n  - RedUI survivors = 60 × 0.30 = 18\n  - Next-generation breeders: 24 BlueUI, 18 RedUI\n  - Total breeders = 42\n  - BlueUI frequency ≈ 24/42 ≈ 0.571\n  - RedUI frequency ≈ 18/42 ≈ 0.429\n\n- Answer\n  - Which variant is more common in the next generation, and why?\n  - BlueUI is more common because it has a higher survival rate, producing more copies for the next sprint.\n\n- Follow-up\n  - If the interface theme shifts to a darker UI, how would you expect the frequencies to change and why?\n  - Assumption: darker UI benefits BlueUI more; new survival rates: BlueUI 0.75, RedUI 0.30\n  - Recompute:\n    - BlueUI survivors = 40 × 0.75 = 30\n    - RedUI survivors = 60 × 0.30 = 18\n    - Total breeders = 48\n    - BlueUI frequency = 30/48 = 0.625\n    - RedUI frequency = 18/48 = 0.375\n  - Conclusion: In a darker UI environment, BlueUI becomes more common in the next generation because its survival advantage increases.\n\n- Programmer-friendly wrap-up\n  - Think of it like a feature variant competing to pass tests and be carried into the next sprint; the variant with the higher “test pass rate” grows more common.\n\nKey Insight:\n  Natural selection shifts which variants dominate by environmental pressure that changes survival and reproduction; a change in the environment can flip which variant becomes more common.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nContext:\n- Kenji is studying in Tokyo. In a small park nearby, a population of beetles comes in two colors: brown and green. The tree bark is mostly brown, so brown beetles are better camouflaged from birds that prey on them.\n\nKey traits and variation:\n- Color trait is heritable: offspring often resemble their parents in color.\n\nEnvironmental pressure:\n- Predation acts more strongly on beetles that stand out against the bark. Camouflage affects survival.\n\nPopulation snapshot (initial):\n- Brown: 60% of the population\n- Green: 40% of the population\n\nFitness values (survival to reproduction):\n- Brown beetles: 0.70 (70% survive to reproduce)\n- Green beetles: 0.40 (40% survive to reproduce)\n\nCalculation (one generation):\n- Brown survivors = 0.60 × 0.70 = 0.42\n- Green survivors = 0.40 × 0.40 = 0.16\n- Total survivors = 0.42 + 0.16 = 0.58\n\nFrequencies among survivors:\n- Brown: 0.42 / 0.58 ≈ 0.724 (72.4%)\n- Green: 0.16 / 0.58 ≈ 0.276 (27.6%)\n\nResult and interpretation:\n- After one generation, brown beetles are more common among survivors, showing natural selection favoring the brown color in this environment.\n\nKey Insight:\n- Natural selection shifts trait frequencies by favoring variants that improve survival and reproduction in a given environment; the environment determines which traits are favored.",
+        "example_id": "ex_6d8a788ceb004ca6",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nContext:\nKenji, a software engineer in Tokyo, is evaluating two sorting implementations in a data-processing service. The service processes batches of 1,000,000 integers, running single-threaded with a 512 MB memory limit.\n\nKey traits and variation:\nTwo competing sorting implementations:\n- Variant A: QuickSort (in-place, average-case O(n log n))\n- Variant B: MergeSort (stable, uses O(n) extra memory)\nVariation: Each variant is run several times to capture runtime variability under the same workload.\n\nEnvironmental pressure:\nSingle-core CPU, memory cap of 512 MB, dataset size N = 1,000,000, data distribution = random.\n\nPopulation snapshot:\n- Individual 1: Variant A (QuickSort), time 0.240 s\n- Individual 2: Variant A, time 0.260 s\n- Individual 3: Variant A, time 0.245 s\n- Individual 4: Variant B (MergeSort), time 0.420 s\n- Individual 5: Variant B, time 0.410 s\n- Individual 6: Variant B, time 0.425 s\n\nFitness values:\nCompute speed = N / time (elements per second):\n- I1 QS: 4,166,667 rps\n- I2 QS: 3,846,154 rps\n- I3 QS: 4,081,633 rps\n- I4 MS: 2,380,952 rps\n- I5 MS: 2,439,024 rps\n- I6 MS: 2,352,941 rps\n\nCalculation:\nFitness f = N / t, with N = 1,000,000 and t in seconds. Higher f is better. Normalized by the best observed f (4,166,667 rps):\n- I1: 1.00\n- I2: 0.92\n- I3: 0.98\n- I4: 0.57\n- I5: 0.59\n- I6: 0.56\n\nKey Insight:\nUnder a CPU-bound workload with limited memory, the in-place QuickSort variants achieve higher fitness than the stable, memory-heavy MergeSort variants, illustrating natural selection favoring algorithms with lower memory churn and smaller constants in tight resources. If memory or stability constraints become critical, the relative fitness could shift.",
+        "example_id": "ex_5d159abc5dbb4bb6"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\n- Setup\n  - Two feature variants in an app: BlueUI and RedUI\n  - Starting counts: BlueUI 40, RedUI 60\n  - Environment: testers/users adopting features (survival to adulthood = passing automated tests / user adoption)\n  - Survival rates: BlueUI 0.60, RedUI 0.30\n  - Reproduction: surviving features carried into the next sprint equally\n\n- Calculations\n  - BlueUI survivors = 40 × 0.60 = 24\n  - RedUI survivors = 60 × 0.30 = 18\n  - Next-generation breeders: 24 BlueUI, 18 RedUI\n  - Total breeders = 42\n  - BlueUI frequency ≈ 24/42 ≈ 0.571\n  - RedUI frequency ≈ 18/42 ≈ 0.429\n\n- Answer\n  - Which variant is more common in the next generation, and why?\n  - BlueUI is more common because it has a higher survival rate, producing more copies for the next sprint.\n\n- Follow-up\n  - If the interface theme shifts to a darker UI, how would you expect the frequencies to change and why?\n  - Assumption: darker UI benefits BlueUI more; new survival rates: BlueUI 0.75, RedUI 0.30\n  - Recompute:\n    - BlueUI survivors = 40 × 0.75 = 30\n    - RedUI survivors = 60 × 0.30 = 18\n    - Total breeders = 48\n    - BlueUI frequency = 30/48 = 0.625\n    - RedUI frequency = 18/48 = 0.375\n  - Conclusion: In a darker UI environment, BlueUI becomes more common in the next generation because its survival advantage increases.\n\n- Programmer-friendly wrap-up\n  - Think of it like a feature variant competing to pass tests and be carried into the next sprint; the variant with the higher “test pass rate” grows more common.\n\nKey Insight:\n  Natural selection shifts which variants dominate by environmental pressure that changes survival and reproduction; a change in the environment can flip which variant becomes more common.",
+        "example_id": "ex_38a03492bc524835"
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the context by referencing Kenji's location in Tokyo and uses a relatable scenario involving beetles and camouflage, which aligns with his learning style. The depth of explanation covers key aspects of natural selection, including heritable traits, environmental pressures, and population changes, matching a medium complexity level. The scientific content appears accurate, with correct calculations and concepts, and the structure clearly guides the learner through the process, making the example pedagogically sound. The analogy of beetle camouflage is appropriate for biology and natural selection, fitting the domain well.\n\nPF: The example incorporates Kenji's name, location, and profession, and uses a biological analogy suitable for his learning style, making it well-tailored.  \nAXIS_SCORE: 5\n\nCC: The explanation balances detail and complexity, providing a clear, medium-level depth suitable for an undergraduate engineer with an example-based learning preference.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing heritability, environmental pressure, and population change, with proper calculations.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from context to key traits, environmental pressure, calculations, and interpretation, facilitating understanding.  \nAXIS_SCORE: 5\n\nDA: The analogy of beetle camouflage on tree bark is highly appropriate for the biological topic, effectively illustrating natural selection.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the context by framing natural selection in terms of app features and user adoption, which aligns with the user's background as a software engineer and their learning style. The complexity level is medium, with calculations and environmental shifts explained clearly, matching the user's stated proficiency. The scientific content appears accurate, correctly illustrating the principles of natural selection through a relatable analogy. The structure is logical, with a clear setup, calculations, and follow-up questions that reinforce understanding, making it pedagogically sound. The analogy of feature variants competing in an app environment is appropriate for the biology topic, using familiar concepts from software development, which suits the user's profile and domain.\n\n[PF] PERSONALIZATION FIDELITY — The example uses the user's profession and familiarity with software concepts to create a relevant analogy, making it well-tailored to the user profile.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation includes calculations and environmental shifts, which are appropriate for a medium complexity level, neither too simple nor overly technical.\nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The core principles of natural selection are correctly represented, including survival rates, reproduction, and environmental influence, with no factual errors.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured with a logical flow, and the analogy helps bridge the concept to familiar territory, aiding understanding.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of app features and user adoption is a creative but appropriate framing for explaining natural selection, aligning well with the biological topic.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a biological context to a computer science scenario involving sorting algorithms, which is more relevant to Kenji's domain as a software engineer. It effectively replaces the ecological setting with a technical one, directly addressing the user's critique about relevance. Therefore, it successfully resolves the core concern.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The user's critique emphasizes a preference for code-adjacent analogies over abstract descriptions, and the regenerated example uses a feature adoption scenario with survival rates, which is more relatable and concrete than the original abstract algorithm example. This aligns well with the feedback, making the analogy more tangible and programmer-friendly. Therefore, the example effectively addresses the critique.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T01:16:25.525013"
+}

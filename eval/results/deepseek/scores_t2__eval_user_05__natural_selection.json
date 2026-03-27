@@ -1,0 +1,84 @@
+{
+  "key": "t2__eval_user_05__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_fdafc40101da461c",
+    "initial_example": "**Concept:** Natural Selection\n\n**Example:**\n\nImagine Lena is observing the pigeons in Berlin's Tiergarten park. Over several years, she notices a change in the pigeon population. Let's break down how natural selection might be driving this change.\n\n**Scenario:** A new, stricter city ordinance is enacted in Berlin, targeting the pigeon population. It fines property owners for any damage caused by pigeons, leading to a widespread effort to deter them. The primary method used is installing slippery, metal-coated surfaces on popular roosting spots like building ledges and statues.\n\n**Step-by-Step Breakdown:**\n\n1.  **Initial Variation (Input):** Within the pigeon population, there is natural variation. Some pigeons have slightly wider, more grippy feet with rougher pads. Others have more slender, smooth feet.\n\n2.  **Environmental Pressure (Selector):** The new slippery surfaces become a common feature in the urban landscape. Pigeons need to land and roost on these surfaces to access food and shelter near human activity.\n\n3.  **Selection Process (Output):**\n    *   **Advantage:** Pigeons with the wider, grippier feet have a better chance of landing securely on the slippery metal. They are less likely to fall, injure themselves, or be denied access to a roosting spot.\n    *   **Disadvantage:** Pigeons with the smoother, slender feet struggle to grip the surfaces. They are more prone to falls (injury or death) and are often forced to roost in less desirable, less food-rich locations.\n    *   **Result:** The grippy-footed pigeons are more successful. They survive more often (higher survival rate) and secure better roosting spots, which likely leads to them having more opportunities to reproduce (higher reproductive success).\n\n4.  **Heritability & Change Over Time:** The trait for grippier feet is heritable (passed from parents to offspring). Over many generations, as the grippy-footed pigeons reproduce more, the proportion of pigeons with this advantageous trait in the Berlin population increases. The population adapts to the changed environment.\n\n**Key Insight:** Natural selection is not a random process; it acts on existing random variation. The environment \"selects\" which traits are advantageous for survival and reproduction in a specific context, causing those traits to become more common in the population over time.",
+    "final_example": "**Concept:** Natural Selection\n\n**Example:**\n\nImagine Lena is observing the pigeons in Berlin's Tiergarten park. Over several years, she notices a change in the pigeon population. Let's break down how natural selection might be driving this change.\n\n**Scenario:** A new, stricter city ordinance is enacted in Berlin, targeting the pigeon population. It fines property owners for any damage caused by pigeons, leading to a widespread effort to deter them. The primary method used is installing slippery, metal-coated surfaces on popular roosting spots like building ledges and statues.\n\n**Step-by-Step Breakdown:**\n\n1.  **Initial Variation (Input):** Within the pigeon population, there is natural variation. Some pigeons have slightly wider, more grippy feet with rougher pads. Others have more slender, smooth feet.\n\n2.  **Environmental Pressure (Selector):** The new slippery surfaces become a common feature in the urban landscape. Pigeons need to land and roost on these surfaces to access food and shelter near human activity.\n\n3.  **Selection Process (Output):**\n    *   **Advantage:** Pigeons with the wider, grippier feet have a better chance of landing securely on the slippery metal. They are less likely to fall, injure themselves, or be denied access to a roosting spot.\n    *   **Disadvantage:** Pigeons with the smoother, slender feet struggle to grip the surfaces. They are more prone to falls (injury or death) and are often forced to roost in less desirable, less food-rich locations.\n    *   **Result:** The grippy-footed pigeons are more successful. They survive more often (higher survival rate) and secure better roosting spots, which likely leads to them having more opportunities to reproduce (higher reproductive success).\n\n4.  **Heritability & Change Over Time:** The trait for grippier feet is heritable (passed from parents to offspring). Over many generations, as the grippy-footed pigeons reproduce more, the proportion of pigeons with this advantageous trait in the Berlin population increases. The population adapts to the changed environment.\n\n**Key Insight:** Natural selection is not a random process; it acts on existing random variation. The environment \"selects\" which traits are advantageous for survival and reproduction in a specific context, causing those traits to become more common in the population over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Natural Selection\n\n**Example:**\n\nImagine Lena is observing the pigeons in Berlin's Tiergarten park. Over several years, she notices a change in the pigeon population. Let's break down how natural selection might be driving this change.\n\n**Scenario:** A new, stricter city ordinance is enacted in Berlin, targeting the pigeon population. It fines property owners for any damage caused by pigeons, leading to a widespread effort to deter them. The primary method used is installing slippery, metal-coated surfaces on popular roosting spots like building ledges and statues.\n\n**Step-by-Step Breakdown:**\n\n1.  **Initial Variation (Input):** Within the pigeon population, there is natural variation. Some pigeons have slightly wider, more grippy feet with rougher pads. Others have more slender, smooth feet.\n\n2.  **Environmental Pressure (Selector):** The new slippery surfaces become a common feature in the urban landscape. Pigeons need to land and roost on these surfaces to access food and shelter near human activity.\n\n3.  **Selection Process (Output):**\n    *   **Advantage:** Pigeons with the wider, grippier feet have a better chance of landing securely on the slippery metal. They are less likely to fall, injure themselves, or be denied access to a roosting spot.\n    *   **Disadvantage:** Pigeons with the smoother, slender feet struggle to grip the surfaces. They are more prone to falls (injury or death) and are often forced to roost in less desirable, less food-rich locations.\n    *   **Result:** The grippy-footed pigeons are more successful. They survive more often (higher survival rate) and secure better roosting spots, which likely leads to them having more opportunities to reproduce (higher reproductive success).\n\n4.  **Heritability & Change Over Time:** The trait for grippier feet is heritable (passed from parents to offspring). Over many generations, as the grippy-footed pigeons reproduce more, the proportion of pigeons with this advantageous trait in the Berlin population increases. The population adapts to the changed environment.\n\n**Key Insight:** Natural selection is not a random process; it acts on existing random variation. The environment \"selects\" which traits are advantageous for survival and reproduction in a specific context, causing those traits to become more common in the population over time.",
+        "example_id": "ex_5532782e7f5d47dd",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "Create a medium-complexity natural selection example set in Berlin, Germany with a real-world scenario. Use a step-by-step breakdown with clear inputs and outputs. Focus on biological concepts appropriate to the topic while making it personally relevant by mentioning local Berlin contexts. Avoid being too abstract or too simplistic.",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.97,
+      "CC": 4.32,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.858,
+    "reasoning": "The example effectively personalizes the scenario by including Lena's name and location, Berlin, which aligns with her profile. It uses an example-based learning style, providing a concrete, real-world urban setting that is relatable and engaging for a high school student. The complexity level appears appropriate, with clear steps and explanations that match a medium level of understanding. The scientific content about natural selection is accurate, correctly describing variation, environmental pressure, differential survival, heritability, and population change. The structure is logical, with a clear progression from scenario to explanation, making it pedagogically effective. The analogy of pigeons and urban environmental change is appropriate for biology, fitting well within the domain of natural selection.\n\nPERSONALIZATION FIDELITY: The example is well-tailored, incorporating Lena's name, location, and learning style, making it highly relevant.  \nAXIS_SCORE: 5\n\nCOMPLEXITY CALIBRATION: The explanation balances detail and clarity suitable for a high school student, matching the medium complexity level.  \nAXIS_SCORE: 4\n\nCONCEPTUAL ACCURACY: The scientific principles are correctly described, with no factual errors or misconceptions.  \nAXIS_SCORE: 5\n\nPEDAGOGICAL CLARITY: The step-by-step breakdown and explicit connection between environment and trait selection make the example clear and memorable.  \nAXIS_SCORE: 5\n\nDOMAIN APPROPRIATENESS: The urban bird scenario and analogy are appropriate for biology and natural selection, with no off-topic elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 5,
+        "CC": 4,
+        "CA": 5,
+        "PC": 5,
+        "DA": 5
+      },
+      "composite": 4.8,
+      "reasoning": "For the axis of Personalization Fidelity (PF), the example demonstrates a clear attempt to tailor the content to the user's profile by using the user's name, \"Lena,\" and location, \"Berlin,\" within the scenario, making it more relatable and engaging for the learner. However, it does not explicitly address other aspects of the user's profile such as profession or cultural background, which could further enhance personalization.\n\nPF_SCORE: 4\n\nFor Complexity Calibration (CC), the example seems to match the medium complexity level requested by the user, as it provides a detailed, step-by-step explanation of natural selection using a relatable scenario, without delving into overly complex scientific jargon or formulas that might confuse a high school student. The language and concepts are presented in a way that is accessible to someone with a medium level of prior knowledge on the subject.\n\nCC_SCORE: 5\n\nRegarding Conceptual Accuracy (CA), the example accurately describes the process of natural selection, including variation, environmental pressure, selection, and heritability, which are all key components of the concept. The scenario provided is fictional but based on realistic principles of how natural selection could operate in a specific context, making it a useful teaching tool without introducing factual inaccuracies.\n\nCA_SCORE: 5\n\nIn terms of Pedagogical Clarity (PC), the example is well-structured, starting with a clear introduction to the concept, followed by a step-by-step breakdown that includes specific examples and explanations of each stage of the natural selection process. The use of headings and bullet points enhances readability, and the key insight at the end summarizes the main point of the example, making it easy for the learner to understand and remember the concept.\n\nPC_SCORE: 5\n\nFor Domain Appropriateness (DA), the example is perfectly suited to the topic of natural selection, using analogies and framing that are directly relevant to the field of biology and evolutionary science. The scenario involving pigeons adapting to environmental changes in Berlin is a fitting illustration of how natural selection can occur in urban wildlife, making the example highly appropriate for teaching this concept.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "Create a medium-complexity natural selection example set in Berlin, Germany with a real-world scenario. Use a step-by-step breakdown with clear inputs and outputs. Focus on biological concepts appropriate to the topic while making it personally relevant by mentioning local Berlin contexts. Avoid being too abstract or too simplistic.",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {
+    "specificity_score": 4,
+    "reasoning": "The instruction effectively incorporates the user's preference for real-world, Berlin-specific examples and emphasizes a step-by-step breakdown suitable for a medium complexity level. It explicitly asks for a biological concept grounded in the user's context, demonstrating a concrete synthesis of the stored patterns and insights. Therefore, it goes beyond general guidance and provides a clear, actionable directive tailored to the user's profile.\n\nSPECIFICITY_SCORE: 4",
+    "error": null
+  },
+  "timestamp": "2026-03-15T20:45:56.881592"
+}

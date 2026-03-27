@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_03__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_03",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_03",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "SÃ£o Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_03",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_0f6cb1e0ec8440f5",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nDefinition:\n  A cognitive bias is a predictable pattern in thinking that makes people misjudge reality.\n\nOne common bias:\n  Availability heuristic â€” judging how likely something is based on how easily we can recall a vivid example.\n\nScenario:\n  After hearing dramatic headlines about data breaches, a reader concludes that online shopping is far more dangerous than it actually is. The vivid stories stay fresh, so they overestimate the risk even though statistics show the overall risk is relatively low.\n\nKey Insight:\n  Biases are mental shortcuts that save effort but can distort how we judge frequency and risk.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nDefinition:\n  A cognitive bias is a predictable pattern in thinking that makes people misjudge reality.\n\nOne common bias:\n  Availability heuristic â€” judging how likely something is based on how easily we can recall a vivid example.\n\nScenario:\n  After hearing dramatic headlines about data breaches, a reader concludes that online shopping is far more dangerous than it actually is. The vivid stories stay fresh, so they overestimate the risk even though statistics show the overall risk is relatively low.\n\nKey Insight:\n  Biases are mental shortcuts that save effort but can distort how we judge frequency and risk.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nDefinition:\n  A cognitive bias is a predictable pattern in thinking that makes people misjudge reality.\n\nOne common bias:\n  Availability heuristic â€” judging how likely something is based on how easily we can recall a vivid example.\n\nScenario:\n  After hearing dramatic headlines about data breaches, a reader concludes that online shopping is far more dangerous than it actually is. The vivid stories stay fresh, so they overestimate the risk even though statistics show the overall risk is relatively low.\n\nKey Insight:\n  Biases are mental shortcuts that save effort but can distort how we judge frequency and risk.",
+        "example_id": "ex_5bf63e97a6bc404e",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 4.2,
+    "reasoning": "The example provides a clear and accurate definition of cognitive bias, specifically illustrating the availability heuristic with a relevant scenario involving data breaches, which is a common real-world example. It maintains a straightforward structure suitable for medium complexity, and the framing is appropriate for the topic, using familiar language and concepts. However, it does not incorporate any specific elements from Carlos's profile, such as his background in humanities or Latin American context, nor does it use domain-specific analogies that could deepen engagement for a humanities researcher. The example is well-structured pedagogically, with a logical flow from definition to scenario to insight, making it accessible and memorable.\n\n[PF] PERSONALIZATION FIDELITY â€” The example is generic and does not incorporate any of Carlos's profile details, such as his profession, location, or learning style. It could be used for any learner without modification.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION â€” The language and content are appropriate for a PhD-level humanities researcher, with clear, concise explanations and a realistic scenario, matching a medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The content accurately describes cognitive bias and the availability heuristic, with no factual errors.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear progression from definition to scenario to insight, making it easy to follow and learn from.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS â€” The framing and vocabulary are appropriate for psychology and cognitive science, but it does not specifically leverage humanities or Latin American contexts, which could have enhanced domain relevance for Carlos.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:43:55.196509"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_02__cognitive_bias",
+  "tier": "t2",
+  "user_id": "eval_user_02",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_02",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_8d7f4de80d764067",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a fever and rash. You've seen several cases of malaria recently, so your initial thought might be to suspect malaria again. This is an example of the **availability heuristic**, a cognitive bias where we judge the likelihood of an event based on how easily examples come to mind.\n\nA more recent, vivid, or frequent memory feels more probable.\n\nScenario:\n- Recent Memory: You treated three patients with malaria this week.\n- Current Case: A new patient presents with fever and rash.\n- Bias Effect: You might initially overlook other potential causes, like a viral infection or measles, because malaria is \"available\" in your mind.\n\nTo counteract this bias, you consciously follow your clinical protocol, which requires a differential diagnosis. You list all possible causes (malaria, measles, typhoid) and order tests for each, rather than jumping to the most recent conclusion.\n\nKey Insight:\nCognitive biases are shortcuts our brains use that can lead to errors. By recognizing them, like the availability heuristic, you can implement deliberate practices, like a checklist, to ensure more accurate and balanced decisions.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a fever and rash. You've seen several cases of malaria recently, so your initial thought might be to suspect malaria again. This is an example of the **availability heuristic**, a cognitive bias where we judge the likelihood of an event based on how easily examples come to mind.\n\nA more recent, vivid, or frequent memory feels more probable.\n\nScenario:\n- Recent Memory: You treated three patients with malaria this week.\n- Current Case: A new patient presents with fever and rash.\n- Bias Effect: You might initially overlook other potential causes, like a viral infection or measles, because malaria is \"available\" in your mind.\n\nTo counteract this bias, you consciously follow your clinical protocol, which requires a differential diagnosis. You list all possible causes (malaria, measles, typhoid) and order tests for each, rather than jumping to the most recent conclusion.\n\nKey Insight:\nCognitive biases are shortcuts our brains use that can lead to errors. By recognizing them, like the availability heuristic, you can implement deliberate practices, like a checklist, to ensure more accurate and balanced decisions.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nAmara, as a nurse in Lagos, you might encounter a patient with a fever and rash. You've seen several cases of malaria recently, so your initial thought might be to suspect malaria again. This is an example of the **availability heuristic**, a cognitive bias where we judge the likelihood of an event based on how easily examples come to mind.\n\nA more recent, vivid, or frequent memory feels more probable.\n\nScenario:\n- Recent Memory: You treated three patients with malaria this week.\n- Current Case: A new patient presents with fever and rash.\n- Bias Effect: You might initially overlook other potential causes, like a viral infection or measles, because malaria is \"available\" in your mind.\n\nTo counteract this bias, you consciously follow your clinical protocol, which requires a differential diagnosis. You list all possible causes (malaria, measles, typhoid) and order tests for each, rather than jumping to the most recent conclusion.\n\nKey Insight:\nCognitive biases are shortcuts our brains use that can lead to errors. By recognizing them, like the availability heuristic, you can implement deliberate practices, like a checklist, to ensure more accurate and balanced decisions.",
+        "example_id": "ex_0b524a430e6a4e2d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.9,
+      "CC": 4.49,
+      "CA": 5.0,
+      "PC": 4.9,
+      "DA": 5.0
+    },
+    "composite": 4.858,
+    "reasoning": "The example effectively personalizes the scenario by mentioning Amara's profession, location, and learning style, making it relevant to her context. The complexity level appears appropriate for a professional with medium understanding, providing a clear explanation without overly technical language. The factual content about the availability heuristic is accurate and well-explained, with a good example that links theory to clinical practice. The structure is logical, with a scenario, explanation, and key insight that facilitate learning, though it could be slightly more explicit in connecting the concept to the example. The analogies and framing are appropriate for a healthcare setting, using clinical decision-making as the domain context.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references Amara's role as a nurse in Lagos, Nigeria, and her learning style, making it highly tailored. It uses a clinical scenario relevant to her profession, which enhances engagement.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The language and explanation are suitable for a professional with medium complexity understanding, avoiding overly technical jargon while providing enough detail to be meaningful.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The description of the availability heuristic and its application in clinical diagnosis is accurate, with correct terminology and a proper example.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation, and key insight. It effectively bridges the concept to practical application, making it memorable.\nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The framing within clinical decision-making and healthcare is appropriate, with relevant vocabulary and analogies fitting the medical context.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:40:21.116155"
+}

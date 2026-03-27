@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_04__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_04",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_b3f062d78cc54f49",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nKenji, a software engineer in Tokyo, is evaluating a caching change to reduce API latency. Cognitive bias is a predictable pattern of thinking that can lead to mistakes in judgment. In this scenario, Anchoring shows up: the first benchmark result sticks in Kenji’s mind and colors how he weighs later data.\n\nNumbers:\n- Baseline latency per request: 120 ms\n- Quick benchmark after the change: 110 ms (an 8.3% improvement)\n\nAnchored expectation:\n- He recalls a similar optimization from a past project that yielded about 20% improvement, so he expects roughly 24 ms more improvement and targets 96 ms.\n\nReality:\n- The 110 ms result is better than baseline but far from the anchored target, and follow-up tests vary (108–125 ms). Still, Kenji focuses on the 110 ms figure and treats it as the definitive win.\n\nImpact:\n- He’s inclined to roll out the change before conducting broader testing, because the first number felt convincing.\n\nKey Insight:\n  Anchoring can bias judgment by fixating on the first number you see; confirm with broader data and consider variability before acting.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nKenji, a software engineer in Tokyo, is evaluating a caching change to reduce API latency. Cognitive bias is a predictable pattern of thinking that can lead to mistakes in judgment. In this scenario, Anchoring shows up: the first benchmark result sticks in Kenji’s mind and colors how he weighs later data.\n\nNumbers:\n- Baseline latency per request: 120 ms\n- Quick benchmark after the change: 110 ms (an 8.3% improvement)\n\nAnchored expectation:\n- He recalls a similar optimization from a past project that yielded about 20% improvement, so he expects roughly 24 ms more improvement and targets 96 ms.\n\nReality:\n- The 110 ms result is better than baseline but far from the anchored target, and follow-up tests vary (108–125 ms). Still, Kenji focuses on the 110 ms figure and treats it as the definitive win.\n\nImpact:\n- He’s inclined to roll out the change before conducting broader testing, because the first number felt convincing.\n\nKey Insight:\n  Anchoring can bias judgment by fixating on the first number you see; confirm with broader data and consider variability before acting.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nKenji, a software engineer in Tokyo, is evaluating a caching change to reduce API latency. Cognitive bias is a predictable pattern of thinking that can lead to mistakes in judgment. In this scenario, Anchoring shows up: the first benchmark result sticks in Kenji’s mind and colors how he weighs later data.\n\nNumbers:\n- Baseline latency per request: 120 ms\n- Quick benchmark after the change: 110 ms (an 8.3% improvement)\n\nAnchored expectation:\n- He recalls a similar optimization from a past project that yielded about 20% improvement, so he expects roughly 24 ms more improvement and targets 96 ms.\n\nReality:\n- The 110 ms result is better than baseline but far from the anchored target, and follow-up tests vary (108–125 ms). Still, Kenji focuses on the 110 ms figure and treats it as the definitive win.\n\nImpact:\n- He’s inclined to roll out the change before conducting broader testing, because the first number felt convincing.\n\nKey Insight:\n  Anchoring can bias judgment by fixating on the first number you see; confirm with broader data and consider variability before acting.",
+        "example_id": "ex_567ba8af09c54aff",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the scenario by including Kenji's name, profession, and location, and it uses a domain-specific context related to software engineering, aligning well with his profile. The complexity level appears appropriate, involving concepts of cognitive bias and data interpretation, which are suitable for an undergraduate-level engineer. The factual content about anchoring bias is accurate and well-explained, with a clear demonstration of how bias influences decision-making. The structure is logical, with a step-by-step example that clearly illustrates the concept, making it pedagogically effective. The framing and analogies are appropriate for the domain of software engineering and data analysis, avoiding any off-topic or inappropriate comparisons.\n\n[PF] PERSONALIZATION FIDELITY — The example is tailored with Kenji's name, profession, and location, and it uses a technical scenario relevant to his work, matching his learning style and background well.  \nAXIS_SCORE: 4\n\n[CC] COMPLEXITY CALIBRATION — The content involves data interpretation and bias concepts at a medium complexity level, suitable for an undergraduate engineer, with enough detail to be engaging but not overwhelming.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of anchoring bias and the example provided are factually correct and align with established psychological principles.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear narrative flow from scenario to insight, making the concept memorable and easy to follow.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely appropriate for a software engineering context, with no off-domain elements present.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:59:58.326811"
+}

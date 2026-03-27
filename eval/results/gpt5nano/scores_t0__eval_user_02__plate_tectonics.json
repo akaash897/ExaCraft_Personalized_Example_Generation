@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_02__plate_tectonics",
+  "tier": "t0",
+  "user_id": "eval_user_02",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_02",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_90069bf873f44233",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nPlate tectonics is the idea that Earth's outer shell is made of giant pieces called plates that float on a hotter, softer layer beneath. These plates drift very slowlyâ€”only a few centimeters each year.\n\nOne clear scenario:\nThe Himalayas form where the Indian Plate moves north and collides with the Eurasian Plate. Because both are made of light continental crust, they donâ€™t sink easily; instead, their edges crumple and push upward, creating the tall mountain range over a long time. This ongoing collision keeps the region seismically active and gradually raises the mountains further.\n\nKey Insight:\nSmall, slow movements of huge plates can build massive mountains and reshape continents over millions of years.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nPlate tectonics is the idea that Earth's outer shell is made of giant pieces called plates that float on a hotter, softer layer beneath. These plates drift very slowlyâ€”only a few centimeters each year.\n\nOne clear scenario:\nThe Himalayas form where the Indian Plate moves north and collides with the Eurasian Plate. Because both are made of light continental crust, they donâ€™t sink easily; instead, their edges crumple and push upward, creating the tall mountain range over a long time. This ongoing collision keeps the region seismically active and gradually raises the mountains further.\n\nKey Insight:\nSmall, slow movements of huge plates can build massive mountains and reshape continents over millions of years.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nPlate tectonics is the idea that Earth's outer shell is made of giant pieces called plates that float on a hotter, softer layer beneath. These plates drift very slowlyâ€”only a few centimeters each year.\n\nOne clear scenario:\nThe Himalayas form where the Indian Plate moves north and collides with the Eurasian Plate. Because both are made of light continental crust, they donâ€™t sink easily; instead, their edges crumple and push upward, creating the tall mountain range over a long time. This ongoing collision keeps the region seismically active and gradually raises the mountains further.\n\nKey Insight:\nSmall, slow movements of huge plates can build massive mountains and reshape continents over millions of years.",
+        "example_id": "ex_a065fa8300654302",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 3,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.2,
+    "reasoning": "The example effectively incorporates the concept of plate tectonics with a clear, structured explanation and a relevant real-world example involving the Himalayas, which is a well-known geological feature. However, it does not explicitly personalize the content to Amara's profile, such as referencing her profession, location, or learning style, nor does it use analogies tailored to her background. The complexity level appears appropriate for a medium understanding, and the scientific facts presented are accurate. The structure is logical, with a good flow from basic concept to specific example and insight, and the framing remains within the domain of geology, making the analogies appropriate.\n\n[PF] PERSONALIZATION FIDELITY â€” The example is generic and does not incorporate any elements from Amara's profile, such as her profession as a nurse or her location in Lagos, Nigeria. It also does not leverage her example-based learning style with domain-specific analogies.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION â€” The language and depth are suitable for a medium complexity level, providing enough detail without being overly technical or simplistic.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY â€” The scientific content about plate tectonics, the Himalayas, and plate movement is accurate and aligns with established geology principles.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY â€” The example is well-structured, with a clear progression from concept to specific example and insight, making it easy to follow and memorable.  \nAXIS_SCORE: 3\n\n[DA] DOMAIN APPROPRIATENESS â€” The analogies and framing are appropriate for geology and earth sciences, with no off-domain elements.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 3, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:43:03.995358"
+}

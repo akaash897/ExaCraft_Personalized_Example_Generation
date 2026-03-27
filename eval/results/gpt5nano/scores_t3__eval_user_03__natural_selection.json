@@ -1,0 +1,169 @@
+{
+  "key": "t3__eval_user_03__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_03",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_03",
+    "name": "Carlos",
+    "role": "humanities_researcher",
+    "education_level": "phd",
+    "profession": "Humanities Researcher",
+    "location": "São Paulo, Brazil",
+    "cultural_background": "Latin American",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_03",
+    "topic": "Natural Selection",
+    "thread_id": "thread_7bb985b2a25b4561",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nCarlos studies a beetle population living in a forest near São Paulo. The beetles vary in beak size, and this trait is heritable—offspring tend to resemble their parents in beak size.\n\nEnvironment and pressure:\nDuring a dry season, the forest seeds favored by large-beaked beetles are the only seeds that survive, so beetles with larger beaks have a higher chance of eating and surviving to reproduce.\n\nNumeric illustration:\n- Initial population: 100 beetles, with 40 large-beak (L) and 60 small-beak (S).\n- Survival to reproduction: 70% of L survive; 30% of S survive.\n  - L survivors: 28\n  - S survivors: 18\n- Offspring per survivor (assumed): 10 on average\n  - L offspring: 28 × 10 = 280\n  - S offspring: 18 × 10 = 180\n- Next generation beak-size frequencies:\n  - Total offspring: 460\n  - Large-beak share: 280/460 ≈ 0.61\n  - Small-beak share: 180/460 ≈ 0.39\n\nInterpretation:\nThe proportion of large-beak beetles rose from 40% to about 61% in one generation, showing how natural selection shifts trait frequencies when the environment favors a particular trait.\n\nKey Insight:\nNatural selection changes which traits are more common by rewarding individuals with advantageous traits for survival and reproduction in a given environment; over generations, populations become more adapted to their surroundings.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nEnvironment\n  In 19th-century England, forests near industrial towns became coated with soot from coal fires. The darkened tree bark changed the backdrop against which moths were seen by predators, so camouflage mattered for survival.\n\nPopulation and trait\n  A small forest moth population consists of two color phenotypes: Light (L) and Dark (D). The color trait is heritable (offspring tend to resemble their parents in color, with occasional variation).\n\nInitial counts\n  Light: 70\n  Dark: 30\n\nSurvival differences (camouflage-driven predation)\n  Light moths on dark bark are more easily spotted by birds → lower survival\n  Dark moths on dark bark blend in better → higher survival\n\nSurvival rates (one generation)\n  Light: 20% survive\n  Dark: 60% survive\n\nSurvivors\n  Light survivors: 14\n  Dark survivors: 18\n  Total survivors: 32\n  Proportion among survivors: Light ≈ 44%, Dark ≈ 56%\n\nOne-generation takeaway (mechanism in action)\n  The environment creates a differential survival advantage for the two traits. Since the color is heritable, the traits carried by the survivors are more likely to appear in the next generation. With more dark moths surviving, future offspring are likely to show more dark-colored individuals than the original generation.\n\nYour turn (explain and estimate)\n  - In your own words, describe the mechanism by which natural selection led to the shift in phenotype frequencies after one generation.\n  - Estimate how the color-trait frequencies might shift in the next generation, given the survivor counts above. Be explicit about which phenotype you expect to become more common and why.\n  - Note any limitations or alternative explanations that could affect this outcome (e.g., changes in mating, migration, or other selective pressures).\n\nLimitations and alternative explanations\n  - Assumes equal reproductive output among survivors and random mating.\n  - Other selective pressures (e.g., weather, predator behavior changes) could alter outcomes.\n  - Gene flow from neighboring populations could introduce new color variants.\n  - The simple two-phenotype model glosses over more complex inheritance or multiple color forms.\n\nKey Insight\n  Natural selection shifts trait frequencies when environmental pressures differentially affect survival of heritable traits; in this case, a smoky, soot-darkened environment favors dark-colored moths, increasing their share in the next generation.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nCarlos studies a beetle population living in a forest near São Paulo. The beetles vary in beak size, and this trait is heritable—offspring tend to resemble their parents in beak size.\n\nEnvironment and pressure:\nDuring a dry season, the forest seeds favored by large-beaked beetles are the only seeds that survive, so beetles with larger beaks have a higher chance of eating and surviving to reproduce.\n\nNumeric illustration:\n- Initial population: 100 beetles, with 40 large-beak (L) and 60 small-beak (S).\n- Survival to reproduction: 70% of L survive; 30% of S survive.\n  - L survivors: 28\n  - S survivors: 18\n- Offspring per survivor (assumed): 10 on average\n  - L offspring: 28 × 10 = 280\n  - S offspring: 18 × 10 = 180\n- Next generation beak-size frequencies:\n  - Total offspring: 460\n  - Large-beak share: 280/460 ≈ 0.61\n  - Small-beak share: 180/460 ≈ 0.39\n\nInterpretation:\nThe proportion of large-beak beetles rose from 40% to about 61% in one generation, showing how natural selection shifts trait frequencies when the environment favors a particular trait.\n\nKey Insight:\nNatural selection changes which traits are more common by rewarding individuals with advantageous traits for survival and reproduction in a given environment; over generations, populations become more adapted to their surroundings.",
+        "example_id": "ex_a1e7d674fbac45fc",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nIn a snowy region, a small population of animals varies in fur color: white or brown.\n\nInitial state:\n  - Population: 8 animals\n  - Fur color: 4 white, 4 brown\n\nWinter survival:\n  - White animals survive: 4\n  - Brown animals survive: 1\n\nReproduction:\n  - Each surviving animal has 2 offspring\n  - White offspring produced: 8\n  - Brown offspring produced: 2\n\nNext generation:\n  - 8 white, 2 brown\n\nWhy this happened (plain words):\n  The snowy environment hides white fur, so white animals are less likely to be seen by predators. This favoritism lets white animals leave more offspring.\n\nKey Insight:\n  Environment shapes which traits help survival. When white fur helps in snow, white animals tend to become more common over generations.",
+        "example_id": "ex_77b1c43a2a3e4bd8"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always prefer examples that draw on historical or cultural contexts rather than formulas.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "Concept: Natural Selection\n\nExample:\nEnvironment\n  In 19th-century England, forests near industrial towns became coated with soot from coal fires. The darkened tree bark changed the backdrop against which moths were seen by predators, so camouflage mattered for survival.\n\nPopulation and trait\n  A small forest moth population consists of two color phenotypes: Light (L) and Dark (D). The color trait is heritable (offspring tend to resemble their parents in color, with occasional variation).\n\nInitial counts\n  Light: 70\n  Dark: 30\n\nSurvival differences (camouflage-driven predation)\n  Light moths on dark bark are more easily spotted by birds → lower survival\n  Dark moths on dark bark blend in better → higher survival\n\nSurvival rates (one generation)\n  Light: 20% survive\n  Dark: 60% survive\n\nSurvivors\n  Light survivors: 14\n  Dark survivors: 18\n  Total survivors: 32\n  Proportion among survivors: Light ≈ 44%, Dark ≈ 56%\n\nOne-generation takeaway (mechanism in action)\n  The environment creates a differential survival advantage for the two traits. Since the color is heritable, the traits carried by the survivors are more likely to appear in the next generation. With more dark moths surviving, future offspring are likely to show more dark-colored individuals than the original generation.\n\nYour turn (explain and estimate)\n  - In your own words, describe the mechanism by which natural selection led to the shift in phenotype frequencies after one generation.\n  - Estimate how the color-trait frequencies might shift in the next generation, given the survivor counts above. Be explicit about which phenotype you expect to become more common and why.\n  - Note any limitations or alternative explanations that could affect this outcome (e.g., changes in mating, migration, or other selective pressures).\n\nLimitations and alternative explanations\n  - Assumes equal reproductive output among survivors and random mating.\n  - Other selective pressures (e.g., weather, predator behavior changes) could alter outcomes.\n  - Gene flow from neighboring populations could introduce new color variants.\n  - The simple two-phenotype model glosses over more complex inheritance or multiple color forms.\n\nKey Insight\n  Natural selection shifts trait frequencies when environmental pressures differentially affect survival of heritable traits; in this case, a smoky, soot-darkened environment favors dark-colored moths, increasing their share in the next generation.",
+        "example_id": "ex_93e7c500ea504db7"
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 5.0,
+    "reasoning": "The example effectively personalizes the content by mentioning Carlos, a specific individual from São Paulo, Brazil, and incorporates his background and location, aligning well with the profile. The complexity level appears appropriate for a PhD-level humanities researcher, with detailed numerical illustration and environmental context, indicating a high level of depth. The scientific content about natural selection is accurate, with correct terminology and logical progression, ensuring factual correctness. The structure is clear, with a logical flow from concept to example, and the key insight is explicitly highlighted, making it pedagogically effective. The framing uses biological concepts and terminology, which are domain-appropriate for the topic of natural selection, with no off-topic analogies or framing.\n\n[PF] PERSONALIZATION FIDELITY — The example uses Carlos's name, location, and profession, and the context is set in a forest near São Paulo, which is consistent with his profile. The example-based learning style is reflected in the detailed scenario and numerical illustration.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The example includes detailed numerical data, environmental context, and a step-by-step calculation, which matches a medium to high complexity suitable for a PhD-level learner. It is neither too simplistic nor overly technical.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The explanation of natural selection, heritability, and environmental pressure is scientifically correct, with accurate use of terms and logical reasoning.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from concept to numerical illustration and interpretation, making it easy to follow and memorable. The key insight is explicitly stated, aiding understanding.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The framing and analogies are entirely within the biological domain, using appropriate vocabulary and context for natural selection, making it highly suitable for the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 4,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.5,
+    "reasoning": "The example effectively personalizes the content by referencing a specific environment (19th-century England) and a relatable scenario involving moths and predation, which aligns with the user's background in humanities and interest in examples. It also uses clear, accessible language suitable for a medium complexity level, avoiding overly technical jargon. The factual content about natural selection, heritability, and survival rates appears accurate and consistent with scientific understanding. The structure of the example is logical, progressing from environmental context to population traits, survival, and implications, which supports pedagogical clarity. The analogies used—such as moth camouflage and predation—are appropriate for biology and natural selection, fitting well within the domain.\n\n[PF] PERSONALIZATION FIDELITY — The example is tailored with a specific historical and environmental context, making it quite relevant to the user's profile, though it doesn't explicitly incorporate the user's name or location beyond the setting. It matches the example-based learning style and medium complexity.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation balances detail with clarity, providing enough depth to match a medium complexity level without becoming overly technical or simplified. It covers key concepts like heritability, survival rates, and environmental influence appropriately.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The scientific principles of natural selection, differential survival, and heritability are correctly presented, with no evident inaccuracies or misconceptions.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from environmental context to population traits and outcomes, and it concludes with a key insight that reinforces understanding. The explicit prompts for the learner to explain and estimate support active engagement.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogies (moth camouflage, predation) and vocabulary are perfectly aligned with biology and natural selection, making the framing highly appropriate for the topic.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 4, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example simplifies the scenario by reducing the number of animals, using straightforward survival and reproduction steps, and clearly explaining the environmental advantage of white fur in snow. This directly addresses the user's critique of complexity by making the example more accessible and easier to understand. \n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    },
+    {
+      "round": 3,
+      "feedback_given": "I always prefer examples that draw on historical or cultural contexts rather than formulas.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 5,
+        "reasoning": "The regenerated example shifts from a simple, environment-based scenario to a historical and cultural context involving 19th-century England and industrial soot, aligning with the user's preference for historical or cultural examples. It also maintains a clear explanation of natural selection mechanisms, addressing the critique effectively. Therefore, it fully resolves the user's concern about the example's context.\n\nCOMPLIANCE_SCORE: 5\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 5.0,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 4,
+      "composite": 4.5,
+      "agent_action": "regenerate"
+    },
+    {
+      "round": 3,
+      "pf_score": 4,
+      "composite": 4.5,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 3,
+    "accuracy": 0.6666666666666666,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "regenerate",
+        "correct": false
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "regenerate",
+    "flag_on_fp_round": false,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T01:04:30.283263"
+}

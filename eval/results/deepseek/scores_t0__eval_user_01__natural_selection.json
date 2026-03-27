@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_01__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_5160ba830bd747d3",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in fur color: some are light brown, some are dark brown, and a few are white.\n\nEnvironment and Pressure:\n- The field is mostly brown dirt and green grass.\n- A new predator, like a hawk, moves into the area. The hawk hunts by sight.\n\nProcess Over Generations:\n1. **Variation:** The rabbits are born with different fur colors due to random genetic differences.\n2. **Selection:** The hawk can easily spot the white rabbits against the brown and green background. The dark brown rabbits are also somewhat visible, but the light brown rabbits blend in best.\n3. **Reproduction:** The light brown rabbits that survive are more likely to live long enough to have baby rabbits. These babies often inherit the light brown fur.\n4. **Outcome:** Over many rabbit generations, the number of light brown rabbits increases. The number of white rabbits decreases dramatically, and dark brown rabbits become less common. The population's average fur color has shifted to better match the environment.\n\nKey Insight:\nNatural selection is not random; it is the consistent survival and reproduction of individuals with traits best suited to their current environment. The population changes over time because helpful traits become more common.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in fur color: some are light brown, some are dark brown, and a few are white.\n\nEnvironment and Pressure:\n- The field is mostly brown dirt and green grass.\n- A new predator, like a hawk, moves into the area. The hawk hunts by sight.\n\nProcess Over Generations:\n1. **Variation:** The rabbits are born with different fur colors due to random genetic differences.\n2. **Selection:** The hawk can easily spot the white rabbits against the brown and green background. The dark brown rabbits are also somewhat visible, but the light brown rabbits blend in best.\n3. **Reproduction:** The light brown rabbits that survive are more likely to live long enough to have baby rabbits. These babies often inherit the light brown fur.\n4. **Outcome:** Over many rabbit generations, the number of light brown rabbits increases. The number of white rabbits decreases dramatically, and dark brown rabbits become less common. The population's average fur color has shifted to better match the environment.\n\nKey Insight:\nNatural selection is not random; it is the consistent survival and reproduction of individuals with traits best suited to their current environment. The population changes over time because helpful traits become more common.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in fur color: some are light brown, some are dark brown, and a few are white.\n\nEnvironment and Pressure:\n- The field is mostly brown dirt and green grass.\n- A new predator, like a hawk, moves into the area. The hawk hunts by sight.\n\nProcess Over Generations:\n1. **Variation:** The rabbits are born with different fur colors due to random genetic differences.\n2. **Selection:** The hawk can easily spot the white rabbits against the brown and green background. The dark brown rabbits are also somewhat visible, but the light brown rabbits blend in best.\n3. **Reproduction:** The light brown rabbits that survive are more likely to live long enough to have baby rabbits. These babies often inherit the light brown fur.\n4. **Outcome:** Over many rabbit generations, the number of light brown rabbits increases. The number of white rabbits decreases dramatically, and dark brown rabbits become less common. The population's average fur color has shifted to better match the environment.\n\nKey Insight:\nNatural selection is not random; it is the consistent survival and reproduction of individuals with traits best suited to their current environment. The population changes over time because helpful traits become more common.",
+        "example_id": "ex_57fa361b0ea448ad",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.81,
+      "CC": 4.14,
+      "CA": 4.99,
+      "PC": 4.77,
+      "DA": 4.23
+    },
+    "composite": 4.264,
+    "reasoning": "The example effectively personalizes the content by using a relatable scenario involving rabbits, which are common in educational contexts, but it does not incorporate specific profile elements like Lena's name, location, or learning style. The complexity level appears appropriate for high school students, with clear explanations and a straightforward process. The scientific content is accurate, correctly describing the process of natural selection without errors. The structure is logical, with a clear progression from variation to outcome, and the key insight is explicitly highlighted, aiding learning. The analogies used (rabbits, hawks, environment) are appropriate for biology and match the domain well.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example uses a generic animal scenario without referencing Lena's profile details, and the analogy is standard for biology education, not tailored to her European background or learning style.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION \u2014 The explanation is at a medium complexity level suitable for high school students, with clear language and no advanced formulas, matching Lena's stated complexity.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 The description accurately reflects the principles of natural selection, with correct steps and no factual errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a logical flow from variation to outcome, and the key insight is explicitly stated, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogies and framing are entirely appropriate for a biology topic, using familiar concepts like predators and camouflage, aligning well with the domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:03:06.022443"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_05__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_32130a29f1bd4881",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a meadow near Berlin. The rabbits vary in fur color: some have light brown fur, others have dark brown fur. The meadow is mostly light-colored grass and soil.\n\n**Initial Population:**  \n- 50% light brown rabbits  \n- 50% dark brown rabbits  \n\n**Environmental Pressure:**  \nA new predator, like a fox, moves into the area. Against the light-colored background, the dark brown rabbits are much easier for the fox to spot and catch.\n\n**Over Several Generations:**  \n- Dark brown rabbits are caught more often, so fewer survive to reproduce.  \n- Light brown rabbits are better camouflaged, survive more frequently, and have more offspring.  \n- These offspring inherit the genes for light brown fur.\n\n**Resulting Population:**  \n- 80% light brown rabbits  \n- 20% dark brown rabbits  \n\nThe trait (light fur color) that conferred a survival advantage in this specific environment became more common in the population over time. This is natural selection in action.\n\nKey Insight:\nNatural selection is not a random process; it's the non-random survival of random variations. The environment \"selects\" which inherited traits are advantageous, causing those traits to become more common in future generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a meadow near Berlin. The rabbits vary in fur color: some have light brown fur, others have dark brown fur. The meadow is mostly light-colored grass and soil.\n\n**Initial Population:**  \n- 50% light brown rabbits  \n- 50% dark brown rabbits  \n\n**Environmental Pressure:**  \nA new predator, like a fox, moves into the area. Against the light-colored background, the dark brown rabbits are much easier for the fox to spot and catch.\n\n**Over Several Generations:**  \n- Dark brown rabbits are caught more often, so fewer survive to reproduce.  \n- Light brown rabbits are better camouflaged, survive more frequently, and have more offspring.  \n- These offspring inherit the genes for light brown fur.\n\n**Resulting Population:**  \n- 80% light brown rabbits  \n- 20% dark brown rabbits  \n\nThe trait (light fur color) that conferred a survival advantage in this specific environment became more common in the population over time. This is natural selection in action.\n\nKey Insight:\nNatural selection is not a random process; it's the non-random survival of random variations. The environment \"selects\" which inherited traits are advantageous, causing those traits to become more common in future generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a meadow near Berlin. The rabbits vary in fur color: some have light brown fur, others have dark brown fur. The meadow is mostly light-colored grass and soil.\n\n**Initial Population:**  \n- 50% light brown rabbits  \n- 50% dark brown rabbits  \n\n**Environmental Pressure:**  \nA new predator, like a fox, moves into the area. Against the light-colored background, the dark brown rabbits are much easier for the fox to spot and catch.\n\n**Over Several Generations:**  \n- Dark brown rabbits are caught more often, so fewer survive to reproduce.  \n- Light brown rabbits are better camouflaged, survive more frequently, and have more offspring.  \n- These offspring inherit the genes for light brown fur.\n\n**Resulting Population:**  \n- 80% light brown rabbits  \n- 20% dark brown rabbits  \n\nThe trait (light fur color) that conferred a survival advantage in this specific environment became more common in the population over time. This is natural selection in action.\n\nKey Insight:\nNatural selection is not a random process; it's the non-random survival of random variations. The environment \"selects\" which inherited traits are advantageous, causing those traits to become more common in future generations.",
+        "example_id": "ex_2b5b029eb6be4e8a",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.76,
+      "CC": 4.45,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 4.94
+    },
+    "composite": 4.836,
+    "reasoning": "The example effectively personalizes the content by mentioning a specific location, Berlin, which aligns with the user's profile. It uses a straightforward, example-based approach suitable for a high school student, with clear steps illustrating natural selection, matching the medium complexity level. The scientific content is accurate, correctly describing the process of natural selection with appropriate terminology and no errors. The structure is logical and pedagogically sound, guiding the learner through the scenario with a clear flow and a memorable key insight. The analogy of rabbits and predators is appropriate for biology and familiar enough to be engaging, fitting well within the domain of natural selection.\n\n[PF] The example incorporates the user's location and profession, and the example-based style is evident, making it well personalized.  \nAXIS_SCORE: 5\n\n[CC] The depth of explanation matches a high school level, with sufficient detail to understand natural selection without being overly complex.  \nAXIS_SCORE: 4\n\n[CA] The scientific content is accurate, correctly describing the process without errors or misconceptions.  \nAXIS_SCORE: 5\n\n[PC] The example is well-structured, with a logical progression from initial population to outcome, and the key insight is clearly highlighted, aiding learning.  \nAXIS_SCORE: 5\n\n[DA] The analogy of rabbits and predators is appropriate and domain-specific, effectively illustrating natural selection without straying into unrelated domains.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:27:38.926966"
+}

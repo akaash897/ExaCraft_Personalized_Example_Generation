@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_08__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_08",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_08",
+    "topic": "Natural Selection",
+    "thread_id": "thread_a95099b66d1f4749",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. Some rabbits have slightly longer legs, while others have shorter legs.\n\nWhen a fox comes to hunt, the rabbits with longer legs can run faster and escape more easily. The rabbits with shorter legs are slower and are more likely to be caught and eaten by the fox.\n\nOver many generations, the rabbits that survive and have babies are mostly the ones with longer legs. Their babies tend to also have longer legs. Gradually, the average leg length in the rabbit population increases because the trait that helped survival (long legs) is passed on more often.\n\nKey Insight:\nNatural selection is not random; it is the process where traits that help an organism survive and reproduce in its environment become more common over time.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. Some rabbits have slightly longer legs, while others have shorter legs.\n\nWhen a fox comes to hunt, the rabbits with longer legs can run faster and escape more easily. The rabbits with shorter legs are slower and are more likely to be caught and eaten by the fox.\n\nOver many generations, the rabbits that survive and have babies are mostly the ones with longer legs. Their babies tend to also have longer legs. Gradually, the average leg length in the rabbit population increases because the trait that helped survival (long legs) is passed on more often.\n\nKey Insight:\nNatural selection is not random; it is the process where traits that help an organism survive and reproduce in its environment become more common over time.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. Some rabbits have slightly longer legs, while others have shorter legs.\n\nWhen a fox comes to hunt, the rabbits with longer legs can run faster and escape more easily. The rabbits with shorter legs are slower and are more likely to be caught and eaten by the fox.\n\nOver many generations, the rabbits that survive and have babies are mostly the ones with longer legs. Their babies tend to also have longer legs. Gradually, the average leg length in the rabbit population increases because the trait that helped survival (long legs) is passed on more often.\n\nKey Insight:\nNatural selection is not random; it is the process where traits that help an organism survive and reproduce in its environment become more common over time.",
+        "example_id": "ex_de59cd46d34348ce",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.81,
+      "CC": 4.01,
+      "CA": 5.0,
+      "PC": 4.97,
+      "DA": 4.46
+    },
+    "composite": 4.304,
+    "reasoning": "The example uses a simple, relatable scenario involving rabbits and a predator, which aligns well with the user's medium complexity level and example-based learning style. It correctly explains the core concept of natural selection without inaccuracies, and the structure is clear, guiding the learner through the process logically. The analogy is appropriate for biology, fitting the domain well, and the language is accessible for an undergraduate engineer. Overall, it effectively balances personalization, clarity, accuracy, and domain relevance.\n\nPF: The example mentions rabbits, a common biological example, but does not incorporate the user's profile details like name or location, nor does it use engineering analogies. It is somewhat generic but still relevant.  \nAXIS_SCORE: 3\n\nCC: The depth of explanation covers the basic mechanism of natural selection suitable for a medium complexity level, with clear steps and a straightforward analogy. It matches the user's specified complexity well.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing how traits are passed on and how natural selection operates over generations. There are no factual errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, starting with a scenario, explaining the process, and concluding with a key insight. It provides a clear learning flow that facilitates understanding.  \nAXIS_SCORE: 5\n\nDA: The analogy of rabbits and foxes is perfectly appropriate for the biological domain, with no off-topic elements or domain mismatches.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:16:03.336018"
+}

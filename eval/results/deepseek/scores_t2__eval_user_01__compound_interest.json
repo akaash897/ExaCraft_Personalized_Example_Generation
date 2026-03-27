@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_01__compound_interest",
+  "tier": "t2",
+  "user_id": "eval_user_01",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_01",
+    "topic": "Compound Interest",
+    "thread_id": "thread_be70d6e3532e47ed",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nLena, imagine you're a student in Berlin saving for a semester abroad. You put €1,000 into a savings account that earns 5% interest per year.\n\nHow it grows:\n- Year 1: You earn 5% on your initial €1,000 → €50 interest. New total: €1,050.\n- Year 2: You earn 5% on the new total of €1,050 → €52.50 interest. New total: €1,102.50.\n- Year 3: You earn 5% on €1,102.50 → €55.13 interest. New total: €1,157.63.\n\nThe key difference from simple interest is that each year, you earn interest not just on your original deposit, but also on the interest you've already accumulated. This causes your savings to grow faster over time, like a snowball rolling downhill and picking up more snow.\n\nKey Insight:\nCompound interest means earning \"interest on interest.\" The longer your money stays invested, the more dramatically it can grow, because each cycle of growth builds upon the last.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nLena, imagine you're a student in Berlin saving for a semester abroad. You put €1,000 into a savings account that earns 5% interest per year.\n\nHow it grows:\n- Year 1: You earn 5% on your initial €1,000 → €50 interest. New total: €1,050.\n- Year 2: You earn 5% on the new total of €1,050 → €52.50 interest. New total: €1,102.50.\n- Year 3: You earn 5% on €1,102.50 → €55.13 interest. New total: €1,157.63.\n\nThe key difference from simple interest is that each year, you earn interest not just on your original deposit, but also on the interest you've already accumulated. This causes your savings to grow faster over time, like a snowball rolling downhill and picking up more snow.\n\nKey Insight:\nCompound interest means earning \"interest on interest.\" The longer your money stays invested, the more dramatically it can grow, because each cycle of growth builds upon the last.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nLena, imagine you're a student in Berlin saving for a semester abroad. You put €1,000 into a savings account that earns 5% interest per year.\n\nHow it grows:\n- Year 1: You earn 5% on your initial €1,000 → €50 interest. New total: €1,050.\n- Year 2: You earn 5% on the new total of €1,050 → €52.50 interest. New total: €1,102.50.\n- Year 3: You earn 5% on €1,102.50 → €55.13 interest. New total: €1,157.63.\n\nThe key difference from simple interest is that each year, you earn interest not just on your original deposit, but also on the interest you've already accumulated. This causes your savings to grow faster over time, like a snowball rolling downhill and picking up more snow.\n\nKey Insight:\nCompound interest means earning \"interest on interest.\" The longer your money stays invested, the more dramatically it can grow, because each cycle of growth builds upon the last.",
+        "example_id": "ex_5f3a1aa627e740d1",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.88,
+      "CC": 4.38,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.852,
+    "reasoning": "The example personalizes the scenario by mentioning Lena, a student in Berlin, which aligns well with her profile. It uses a relatable context (saving for a semester abroad) that fits her educational stage and location, and the example-based learning style is supported by step-by-step calculations. The complexity appears appropriate for high school students, with clear explanations and simple formulas. The content is factually accurate, correctly describing compound interest and its growth pattern. The analogy of a snowball rolling downhill is appropriate for illustrating exponential growth, making the concept memorable and engaging for the domain.\n\nPF: The example effectively incorporates Lena's profile, including her name, location, and student role, and uses a relatable, real-world scenario that matches her learning style.  \nAXIS_SCORE: 5\n\nCC: The explanation uses straightforward language and basic formulas suitable for a high school level, with no overly complex mathematics or concepts.  \nAXIS_SCORE: 5\n\nCA: The factual content about compound interest, including the calculation process and the key insight, is accurate and correctly presented.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, starting with a scenario, then showing step-by-step growth, and concluding with a key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\nDA: The analogy of a snowball is a classic and appropriate metaphor for exponential growth, fitting well within the domain of finance and mathematics.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:38:27.973499"
+}

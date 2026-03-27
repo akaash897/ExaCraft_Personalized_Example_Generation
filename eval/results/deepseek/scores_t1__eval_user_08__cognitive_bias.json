@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_08__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_08",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_08",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_2c65064f1b074641",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nKenji, as a software engineer in Tokyo, you're reviewing a new feature's code. You've worked with the developer before and found their code to be very clean. This time, you quickly skim the pull request and give it an approval. Later, a critical bug is discovered in that very code—a simple null-check you missed because you assumed, based on past experience, that the developer's work would be error-free.\n\nThis is an example of the **Halo Effect**, a type of cognitive bias. Your positive impression of the developer's past performance (the \"halo\") influenced your judgment of their current, unrelated work (the code review), leading you to overlook a defect.\n\nA more systematic review, treating each piece of work as independent, would involve:\n1.  **Checklist:** Using a standard code review checklist for every PR, regardless of author.\n2.  **Blind Review:** If possible, reviewing the code without seeing the author's name initially.\n3.  **Slowing Down:** Consciously decoupling your general opinion of the person from the specific task at hand.\n\nKey Insight:\nCognitive biases are mental shortcuts that often lead to systematic errors in judgment. The Halo Effect shows how one strong trait (like past code quality) can unfairly color our perception of other, unrelated traits (like the presence of a bug in new code).",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nKenji, as a software engineer in Tokyo, you're reviewing a new feature's code. You've worked with the developer before and found their code to be very clean. This time, you quickly skim the pull request and give it an approval. Later, a critical bug is discovered in that very code—a simple null-check you missed because you assumed, based on past experience, that the developer's work would be error-free.\n\nThis is an example of the **Halo Effect**, a type of cognitive bias. Your positive impression of the developer's past performance (the \"halo\") influenced your judgment of their current, unrelated work (the code review), leading you to overlook a defect.\n\nA more systematic review, treating each piece of work as independent, would involve:\n1.  **Checklist:** Using a standard code review checklist for every PR, regardless of author.\n2.  **Blind Review:** If possible, reviewing the code without seeing the author's name initially.\n3.  **Slowing Down:** Consciously decoupling your general opinion of the person from the specific task at hand.\n\nKey Insight:\nCognitive biases are mental shortcuts that often lead to systematic errors in judgment. The Halo Effect shows how one strong trait (like past code quality) can unfairly color our perception of other, unrelated traits (like the presence of a bug in new code).",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nKenji, as a software engineer in Tokyo, you're reviewing a new feature's code. You've worked with the developer before and found their code to be very clean. This time, you quickly skim the pull request and give it an approval. Later, a critical bug is discovered in that very code—a simple null-check you missed because you assumed, based on past experience, that the developer's work would be error-free.\n\nThis is an example of the **Halo Effect**, a type of cognitive bias. Your positive impression of the developer's past performance (the \"halo\") influenced your judgment of their current, unrelated work (the code review), leading you to overlook a defect.\n\nA more systematic review, treating each piece of work as independent, would involve:\n1.  **Checklist:** Using a standard code review checklist for every PR, regardless of author.\n2.  **Blind Review:** If possible, reviewing the code without seeing the author's name initially.\n3.  **Slowing Down:** Consciously decoupling your general opinion of the person from the specific task at hand.\n\nKey Insight:\nCognitive biases are mental shortcuts that often lead to systematic errors in judgment. The Halo Effect shows how one strong trait (like past code quality) can unfairly color our perception of other, unrelated traits (like the presence of a bug in new code).",
+        "example_id": "ex_6abd1ad22afb46f5",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.71,
+      "CC": 4.26,
+      "CA": 5.0,
+      "PC": 4.89,
+      "DA": 5.0
+    },
+    "composite": 4.772,
+    "reasoning": "The example is well-tailored to the user's profile, explicitly mentioning their role as a software engineer in Tokyo, and it uses domain-specific language related to code review and bugs, aligning with their profession. The complexity level appears appropriate, discussing cognitive biases with practical, systematic review strategies suitable for an undergraduate-level learner with medium complexity preferences. The factual content about the Halo Effect and cognitive biases is accurate and well-explained, with no errors. The structure is clear, with a logical flow from scenario to insight, making it pedagogically effective. The analogies and framing are entirely within the domain of software engineering, which is appropriate for the topic of cognitive bias in a professional context.\n\n[PF] PERSONALIZATION FIDELITY — The example directly references the user's profession, location, and learning style, integrating these elements into a realistic scenario that matches their background. It also uses domain-specific terminology, making it highly personalized.\nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The discussion of cognitive biases, systematic review methods, and the example scenario are suitable for an undergraduate with medium complexity, balancing technical detail with accessibility.\nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The explanation of the Halo Effect and cognitive biases is accurate, and the suggested review strategies are valid and relevant, with no factual errors.\nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear scenario, explanation, and key insight, facilitating understanding and retention. The flow is logical and easy to follow.\nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy and framing are entirely within the software engineering domain, matching the topic of cognitive bias in a professional context.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:35:26.151011"
+}

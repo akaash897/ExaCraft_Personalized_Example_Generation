@@ -1,0 +1,85 @@
+{
+  "user_id": "eval_user_04",
+  "topic": "Cognitive Bias",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "example": "**Concept:** Cognitive Bias\n\n**Example:**\nKenji, as a software engineer in Tokyo, you're reviewing a bug report. The issue description strongly suggests a problem in the new authentication module you just built. You immediately start looking for flaws in your own code.\n\nThis is the **Anchoring Bias** in action. The initial piece of information (the bug report's description) \"anchors\" your thinking, making you focus your investigation there, even though the root cause could be elsewhere\u2014like in a database update or a third-party API change.\n\n**How it works:**\n1.  **Anchor:** The bug report points to \"Module X.\"\n2.  **Interpretation:** Your mind gives disproportionate weight to this initial clue.\n3.  **Decision:** You spend an hour debugging your module.\n4.  **Reality Check:** A teammate finds the bug was actually in a shared utility function used by a different team.\n\n**Mitigation Strategy (for a developer):**\nBefore diving deep, consciously ask: \"What are three other possible places this bug could originate?\" This simple question forces you to adjust away from the initial anchor and consider a broader search space.\n\n**Key Insight:**\nCognitive biases are mental shortcuts that often lead us to make systematic errors in judgment. Anchoring bias causes us to rely too heavily on the first piece of information we receive, which can waste time and lead us to incorrect conclusions, even in technical problem-solving.",
+      "example_id": "ex_1786789e7bf64896",
+      "feedback_given": null,
+      "loop_count": 0,
+      "status": "awaiting_feedback"
+    },
+    {
+      "round": 1,
+      "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+      "status": "awaiting_feedback",
+      "loop_count": 1,
+      "agent_action": "regenerate",
+      "example": "Concept: Anchoring Bias\n\nExample:\nKenji, a software engineer in Tokyo, is debugging a performance issue in a legacy microservice. The initial log analysis suggests a memory leak in a specific Java class, which becomes the \"anchor\" for his investigation.\n\nScenario:\n- **Initial Anchor:** The first error trace points to `OldDataProcessor.java`.\n- **Focus:** Kenji spends hours profiling that class, adding memory monitors, and refactoring its cache logic.\n- **Reality:** The actual bottleneck is in a newly integrated third-party API client that inefficiently serializes data, causing GC pressure across the service.\n\nWhy Anchoring Persists:\n- The initial clue feels like a solid starting point, so subsequent data is interpreted in its light.\n- Even when new logs show high activity in the API module, Kenji dismisses them as \"secondary effects\" of the presumed memory leak.\n- This bias costs time and leads to a partial fix that doesn't resolve the root cause.\n\nKey Insight:\nAnchoring bias in software engineering occurs when the first piece of evidence (an error, a metric, a colleague's suggestion) disproportionately shapes the entire investigation, causing you to underweight contradictory data later. To counter it, deliberately reset your hypothesis after collecting new evidence.",
+      "example_id": "ex_2bd077ecdbdd4170"
+    },
+    {
+      "round": 2,
+      "feedback_given": "This is great! The example really helped me understand the concept.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "accept",
+      "feedback_processed": true
+    },
+    {
+      "round": 3,
+      "feedback_given": "Code-adjacent analogies always click better for me than abstract descriptions.",
+      "status": "completed",
+      "loop_count": 0,
+      "agent_action": "flag_pattern",
+      "feedback_processed": true
+    }
+  ],
+  "timestamp": "2026-03-15T21:47:21.359072"
+}

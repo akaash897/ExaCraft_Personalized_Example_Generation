@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_04__natural_selection",
+  "tier": "t2",
+  "user_id": "eval_user_04",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_04",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_04",
+    "topic": "Natural Selection",
+    "thread_id": "thread_5fea29ea4ec4406d",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, imagines a tiny beetle population living on dark leaf litter in a city park. The beetles come in two color morphs: green and brown.\n\n- Setup:\n  - Initial counts: 60 green, 40 brown (total 100).\n  - Trait: color is heritable, affecting camouflage.\n\n- Selection pressure (fitness):\n  - Green beetles are easier for predators to spot on dark litter: survival probability = 0.25.\n  - Brown beetles blend in better: survival probability = 0.75.\n  - Relative fitness values (per generation): w_green = 0.25, w_brown = 0.75.\n  - Average fitness: w_bar = (60 × 0.25 + 40 × 0.75) / 100 = 0.45.\n\n- After one generation (survivors):\n  - Green survivors: 60 × 0.25 = 15\n  - Brown survivors: 40 × 0.75 = 30\n  - Total survivors: 45\n  - Frequencies among survivors: green 15/45 = 0.333, brown 30/45 = 0.667\n\n- Interpretation:\n  - The brown morph, which has higher survival, becomes more common in the next generation.\n\nKey Insight:\n  Differential survival and reproduction shift trait frequencies over generations; advantageous, heritable traits become more common in the population.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, imagines a tiny beetle population living on dark leaf litter in a city park. The beetles come in two color morphs: green and brown.\n\n- Setup:\n  - Initial counts: 60 green, 40 brown (total 100).\n  - Trait: color is heritable, affecting camouflage.\n\n- Selection pressure (fitness):\n  - Green beetles are easier for predators to spot on dark litter: survival probability = 0.25.\n  - Brown beetles blend in better: survival probability = 0.75.\n  - Relative fitness values (per generation): w_green = 0.25, w_brown = 0.75.\n  - Average fitness: w_bar = (60 × 0.25 + 40 × 0.75) / 100 = 0.45.\n\n- After one generation (survivors):\n  - Green survivors: 60 × 0.25 = 15\n  - Brown survivors: 40 × 0.75 = 30\n  - Total survivors: 45\n  - Frequencies among survivors: green 15/45 = 0.333, brown 30/45 = 0.667\n\n- Interpretation:\n  - The brown morph, which has higher survival, becomes more common in the next generation.\n\nKey Insight:\n  Differential survival and reproduction shift trait frequencies over generations; advantageous, heritable traits become more common in the population.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nKenji, a software engineer in Tokyo, imagines a tiny beetle population living on dark leaf litter in a city park. The beetles come in two color morphs: green and brown.\n\n- Setup:\n  - Initial counts: 60 green, 40 brown (total 100).\n  - Trait: color is heritable, affecting camouflage.\n\n- Selection pressure (fitness):\n  - Green beetles are easier for predators to spot on dark litter: survival probability = 0.25.\n  - Brown beetles blend in better: survival probability = 0.75.\n  - Relative fitness values (per generation): w_green = 0.25, w_brown = 0.75.\n  - Average fitness: w_bar = (60 × 0.25 + 40 × 0.75) / 100 = 0.45.\n\n- After one generation (survivors):\n  - Green survivors: 60 × 0.25 = 15\n  - Brown survivors: 40 × 0.75 = 30\n  - Total survivors: 45\n  - Frequencies among survivors: green 15/45 = 0.333, brown 30/45 = 0.667\n\n- Interpretation:\n  - The brown morph, which has higher survival, becomes more common in the next generation.\n\nKey Insight:\n  Differential survival and reproduction shift trait frequencies over generations; advantageous, heritable traits become more common in the population.",
+        "example_id": "ex_f226a983a6204997",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 5,
+      "PC": 5,
+      "DA": 4
+    },
+    "composite": 4.7,
+    "reasoning": "The example effectively personalizes the scenario by including the user's name, profession, and location, and uses a biological context relevant to the topic of natural selection, which aligns well with the user's learning style. The depth of the explanation covers key aspects of natural selection, including heritable traits, differential survival, and frequency shifts, matching a medium complexity level. The scientific content appears accurate, with correct calculations and concepts, and the structure is clear, guiding the learner through the setup, calculations, and interpretation. The analogy of beetles on leaf litter is appropriate for the biological domain, making the framing domain-appropriate.\n\n[PF] The example directly incorporates the user's name, profession, and location, and uses a biological scenario that fits the topic, aligning well with the user's profile and learning style.  \nAXIS_SCORE: 5\n\n[CC] The explanation maintains a medium complexity, including calculations and concepts suitable for an undergraduate engineer, with no overly technical or overly simplified content.  \nAXIS_SCORE: 5\n\n[CA] The scientific content is accurate, correctly describing heritability, survival probabilities, and the concept of changing trait frequencies, with no errors detected.  \nAXIS_SCORE: 5\n\n[PC] The example is well-structured, with a clear setup, step-by-step calculations, and an interpretation that ties back to the core concept, facilitating learning.  \nAXIS_SCORE: 4\n\n[DA] The framing uses a biological example involving beetles, which is entirely appropriate for the topic of natural selection, with no off-domain elements.  \nAXIS_SCORE: 4\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:16:37.488314"
+}

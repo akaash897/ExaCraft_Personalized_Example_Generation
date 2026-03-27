@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_05__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_05",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_05",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_562b88afa34f43e2",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nA person reads a few online stories about a rare disease and then overestimates how common it is in the population. Later, when evaluating doctors or health risks, they give undue weight to that memorable information and ignore broader statistics. This demonstrates the availability heuristic: what’s easy to recall feels more likely than it actually is.\n\nKey Insight:\nCognitive biases skew our judgments by giving disproportionate weight to memorable or recent information, not to objective data.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nA person reads a few online stories about a rare disease and then overestimates how common it is in the population. Later, when evaluating doctors or health risks, they give undue weight to that memorable information and ignore broader statistics. This demonstrates the availability heuristic: what’s easy to recall feels more likely than it actually is.\n\nKey Insight:\nCognitive biases skew our judgments by giving disproportionate weight to memorable or recent information, not to objective data.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nA person reads a few online stories about a rare disease and then overestimates how common it is in the population. Later, when evaluating doctors or health risks, they give undue weight to that memorable information and ignore broader statistics. This demonstrates the availability heuristic: what’s easy to recall feels more likely than it actually is.\n\nKey Insight:\nCognitive biases skew our judgments by giving disproportionate weight to memorable or recent information, not to objective data.",
+        "example_id": "ex_cc486b8c844b43f9",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 4,
+      "CA": 5,
+      "PC": 4,
+      "DA": 3
+    },
+    "composite": 3.8,
+    "reasoning": "The example effectively illustrates the availability heuristic with a relatable scenario involving health information, which aligns well with the user's high school level and example-based learning style. It avoids overly technical language, maintaining appropriate complexity. The content is factually accurate, correctly describing the cognitive bias. The structure is clear, with a straightforward example and a concise key insight, facilitating understanding. The framing is appropriate for the domain of psychology and cognitive biases, using everyday language and scenarios.\n\n[PF] The example personalizes the concept by referencing a common health-related scenario that a high school student like Lena can relate to, and it explicitly mentions the cognitive bias being demonstrated. It does not, however, incorporate her name or location directly, but the scenario is still relevant and accessible.  \nAXIS_SCORE: 2\n\n[CC] The complexity matches Lena's high school level, with a clear explanation of the availability heuristic without advanced technical details. It strikes a good balance in depth and accessibility.  \nAXIS_SCORE: 4\n\n[CA] The factual content about the availability heuristic and how it influences judgment is accurate and well-explained. There are no inaccuracies or misleading statements.  \nAXIS_SCORE: 4\n\n[PC] The example is well-structured, starting with a scenario, then explaining the bias, and concluding with a key insight. The flow is logical, and the core concept is clearly connected to the example, making it pedagogically effective.  \nAXIS_SCORE: 4\n\n[DA] The framing uses everyday health-related scenarios, which are appropriate for the psychology topic. The analogy of recalling stories about a disease is domain-appropriate and relatable for the topic of cognitive biases.  \nAXIS_SCORE: 3\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 5, \"PC\": 4, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:48:04.338462"
+}

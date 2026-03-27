@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_06__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_06",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_06",
+    "topic": "Natural Selection",
+    "thread_id": "thread_ce38f5f11e8b485f",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in color: some are light brown, some are dark brown, and a few are nearly black.\n\nThe environment changes: a new predator, like a fox, moves into the area. The fox hunts by sight, and it can spot the light brown rabbits against the dark grass more easily than the dark brown or black rabbits.\n\nWhat happens over generations:\n- The light brown rabbits are caught and eaten more often, so fewer of them survive to reproduce.\n- The dark brown and black rabbits are harder to see, so they survive more often and have more offspring.\n- Over many rabbit generations, the population starts to have more dark-colored rabbits and fewer light-colored ones.\n\nThe key mechanism is that the trait (dark fur color) that helps survival in the current environment becomes more common in the population because the individuals with that trait are more likely to live and pass it on to their children. The trait itself doesn't change; the *frequency* of the trait in the population changes.\n\nKey Insight:\nNatural selection is not random; it filters existing variations based on survival and reproduction. The environment determines which traits are advantageous, and over time, those advantageous traits become more common.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in color: some are light brown, some are dark brown, and a few are nearly black.\n\nThe environment changes: a new predator, like a fox, moves into the area. The fox hunts by sight, and it can spot the light brown rabbits against the dark grass more easily than the dark brown or black rabbits.\n\nWhat happens over generations:\n- The light brown rabbits are caught and eaten more often, so fewer of them survive to reproduce.\n- The dark brown and black rabbits are harder to see, so they survive more often and have more offspring.\n- Over many rabbit generations, the population starts to have more dark-colored rabbits and fewer light-colored ones.\n\nThe key mechanism is that the trait (dark fur color) that helps survival in the current environment becomes more common in the population because the individuals with that trait are more likely to live and pass it on to their children. The trait itself doesn't change; the *frequency* of the trait in the population changes.\n\nKey Insight:\nNatural selection is not random; it filters existing variations based on survival and reproduction. The environment determines which traits are advantageous, and over time, those advantageous traits become more common.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of rabbits living in a grassy field. The rabbits vary in color: some are light brown, some are dark brown, and a few are nearly black.\n\nThe environment changes: a new predator, like a fox, moves into the area. The fox hunts by sight, and it can spot the light brown rabbits against the dark grass more easily than the dark brown or black rabbits.\n\nWhat happens over generations:\n- The light brown rabbits are caught and eaten more often, so fewer of them survive to reproduce.\n- The dark brown and black rabbits are harder to see, so they survive more often and have more offspring.\n- Over many rabbit generations, the population starts to have more dark-colored rabbits and fewer light-colored ones.\n\nThe key mechanism is that the trait (dark fur color) that helps survival in the current environment becomes more common in the population because the individuals with that trait are more likely to live and pass it on to their children. The trait itself doesn't change; the *frequency* of the trait in the population changes.\n\nKey Insight:\nNatural selection is not random; it filters existing variations based on survival and reproduction. The environment determines which traits are advantageous, and over time, those advantageous traits become more common.",
+        "example_id": "ex_d49cc2edd0c3460d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.77,
+      "CC": 4.12,
+      "CA": 4.75,
+      "PC": 4.8,
+      "DA": 4.25
+    },
+    "composite": 4.188,
+    "reasoning": "The example effectively personalizes the content by using a relatable animal (rabbit) and environmental context, but it does not incorporate the user's specific profile details such as location, profession, or learning style explicitly. The complexity level appears appropriate for a medium understanding, with clear explanations suitable for someone with a professional background but not necessarily specialized in biology. The factual content about natural selection is accurate, with correct descriptions of the process and mechanisms. The structure is logical, starting from a scenario, explaining the process, and ending with a key insight, which supports pedagogical clarity. The analogy of rabbits and predators is appropriate for the biological domain, making the concept accessible and relevant.\n\n[PF] PERSONALIZATION FIDELITY \u2014 The example does not incorporate specific profile elements like the user's profession as a nurse, location in Lagos, or West African background, nor does it reflect the learning style explicitly, though it uses a relatable animal scenario.  \nAXIS_SCORE: 3\n\n[CC] COMPLEXITY CALIBRATION \u2014 The explanation strikes a good balance, providing enough detail to understand the mechanism without being overly technical, matching a medium complexity level.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY \u2014 The scientific explanation of natural selection is correct, covering key points like variation, differential survival, and change in trait frequency.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY \u2014 The example is well-structured, with a clear scenario, step-by-step explanation, and a concluding insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS \u2014 The analogy of rabbits and predators is highly appropriate for illustrating natural selection, using familiar biological concepts and vocabulary.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:14:23.545727"
+}

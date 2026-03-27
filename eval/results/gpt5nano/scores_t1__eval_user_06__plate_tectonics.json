@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_06__plate_tectonics",
+  "tier": "t1",
+  "user_id": "eval_user_06",
+  "topic": "Plate Tectonics",
+  "domain": "earth_sciences",
+  "profile": {
+    "user_id": "eval_user_06",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_06",
+    "topic": "Plate Tectonics",
+    "thread_id": "thread_81c1a0588e364919",
+    "initial_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, Nigeria, explains plate tectonics using everyday imagery.\n\n- What it is: The Earth's outer shell is made of large puzzle pieces called tectonic plates that float on hot, soft rock beneath (the mantle). These plates move very slowly, a few centimeters each year, due to currents in the mantle.\n\n- How they interact: \n  - Divergent boundaries: plates move apart and new crust forms.\n  - Convergent boundaries: plates collide and can make mountains or cause earthquakes.\n  - Transform boundaries: plates slide past one another and can trigger earthquakes.\n\n- Simple numbers to picture the idea:\n  - Typical movement rate: about 2–5 cm per year.\n  - Example calculation: If a boundary moves apart at 3 cm/year, how far apart after 50 years?\n    3 cm/year × 50 years = 150 cm = 1.5 meters.\n\n- Why it matters: Over long times, these slow motions reshape coastlines, create mountains, and can trigger earthquakes when plates interact.\n\nKey Insight:\nSmall, slow plate movements add up over time to create the big features and events we observe in the Earth's crust.",
+    "final_example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, Nigeria, explains plate tectonics using everyday imagery.\n\n- What it is: The Earth's outer shell is made of large puzzle pieces called tectonic plates that float on hot, soft rock beneath (the mantle). These plates move very slowly, a few centimeters each year, due to currents in the mantle.\n\n- How they interact: \n  - Divergent boundaries: plates move apart and new crust forms.\n  - Convergent boundaries: plates collide and can make mountains or cause earthquakes.\n  - Transform boundaries: plates slide past one another and can trigger earthquakes.\n\n- Simple numbers to picture the idea:\n  - Typical movement rate: about 2–5 cm per year.\n  - Example calculation: If a boundary moves apart at 3 cm/year, how far apart after 50 years?\n    3 cm/year × 50 years = 150 cm = 1.5 meters.\n\n- Why it matters: Over long times, these slow motions reshape coastlines, create mountains, and can trigger earthquakes when plates interact.\n\nKey Insight:\nSmall, slow plate movements add up over time to create the big features and events we observe in the Earth's crust.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Plate Tectonics\n\nExample:\nAmara, a nurse in Lagos, Nigeria, explains plate tectonics using everyday imagery.\n\n- What it is: The Earth's outer shell is made of large puzzle pieces called tectonic plates that float on hot, soft rock beneath (the mantle). These plates move very slowly, a few centimeters each year, due to currents in the mantle.\n\n- How they interact: \n  - Divergent boundaries: plates move apart and new crust forms.\n  - Convergent boundaries: plates collide and can make mountains or cause earthquakes.\n  - Transform boundaries: plates slide past one another and can trigger earthquakes.\n\n- Simple numbers to picture the idea:\n  - Typical movement rate: about 2–5 cm per year.\n  - Example calculation: If a boundary moves apart at 3 cm/year, how far apart after 50 years?\n    3 cm/year × 50 years = 150 cm = 1.5 meters.\n\n- Why it matters: Over long times, these slow motions reshape coastlines, create mountains, and can trigger earthquakes when plates interact.\n\nKey Insight:\nSmall, slow plate movements add up over time to create the big features and events we observe in the Earth's crust.",
+        "example_id": "ex_50024427237a4cca",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Can you make it simpler, but also go into more depth on the technical side?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4,
+      "CC": 5,
+      "CA": 4,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.2,
+    "reasoning": "The example effectively personalizes the explanation by addressing Amara directly, mentioning her profession, location, and learning style, which aligns well with the profile. The complexity level appears appropriate, providing basic concepts with some numerical calculations suitable for a medium level. The scientific content about plate tectonics is accurate, covering key boundary types and their effects, with correct terminology and calculations. The structure is clear, with logical progression from basic concepts to significance, and the key insight is memorable and well-articulated. The analogies and framing are appropriate for the domain, using everyday imagery and relatable examples to explain geological processes.\n\nPF_SCORE: 4\nThe example is highly personalized, integrating the user's profile elements naturally and using domain-specific analogies.\n\nCC_SCORE: 5\nThe content matches the medium complexity level well, with some numerical detail and clear explanations, though it could include slightly more technical depth for a perfect score.\n\nCA_SCORE: 4\nAll scientific facts about plate tectonics are correct, including boundary types, movement rates, and geological effects.\n\nPC_SCORE: 4\nThe structure is logical and pedagogically sound, with a clear flow and memorable insight, though it could be slightly more explicit in connecting each part to the core concept.\n\nDA_SCORE: 4\nThe analogies and framing are entirely appropriate for geology and earth sciences, effectively using everyday imagery to explain complex processes.\n\n```json\n{\"PF\": 4, \"CC\": 5, \"CA\": 4, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-16T00:06:21.465475"
+}

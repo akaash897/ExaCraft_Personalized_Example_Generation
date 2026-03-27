@@ -46,7 +46,10 @@ def resolve_topic_tags(topic: str, provider: str, api_key: str) -> List[str]:
             f"Respond with ONLY a comma-separated list of tag names. No explanation."
         )
         result = llm.invoke([HumanMessage(prompt)])
-        raw = result.content.strip().lower()
+        rc = result.content
+        if isinstance(rc, list):
+            rc = "".join(b.get("text", "") if isinstance(b, dict) else str(b) for b in rc)
+        raw = rc.strip().lower()
         tags = [t.strip().replace(" ", "_") for t in raw.split(",")]
         valid = [t for t in tags if t in tag_metadata]
         return valid if valid else ["general_concept"]
@@ -72,6 +75,13 @@ def _make_context_tools(user_id: str, result_holder: dict) -> list:
         """
         history = ExampleHistory(user_id=user_id)
         matches = history.get_examples_by_tag(tag)
+        # Filter out examples generated without a profile (eval T0/T1 runs) —
+        # an empty profile_snapshot means the example carries no personalization
+        # signal and would mislead the context instruction.
+        matches = [
+            ex for ex in matches
+            if ex.get("profile_snapshot")  # non-empty dict = has profile
+        ]
         summary = [
             {
                 "example_id": ex["example_id"],
@@ -218,14 +228,21 @@ IMPORTANT: Always end with exactly one call to emit_instruction.
                 break
 
             for tc in response.tool_calls:
-                tool_name = tc.get("name", "")
-                tool_args = tc.get("args", {})
-                if tool_name in tool_map:
+                if not tc:
+                    continue
+                tool_name = tc.get("name") or ""
+                tool_args = tc.get("args") or {}
+                tool_call_id = tc.get("id") or tool_name
+                if tool_name not in tool_map:
+                    continue
+                try:
                     tool_result = tool_map[tool_name].invoke(tool_args)
-                    messages.append(ToolMessage(
-                        content=str(tool_result),
-                        tool_call_id=tc.get("id", tool_name)
-                    ))
+                except Exception as tool_e:
+                    tool_result = json.dumps({"error": str(tool_e)})
+                messages.append(ToolMessage(
+                    content=str(tool_result),
+                    tool_call_id=tool_call_id,
+                ))
 
             # Stop as soon as emit_instruction has been called
             if result_holder.get("_emit_called"):

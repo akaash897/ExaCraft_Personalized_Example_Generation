@@ -1,0 +1,80 @@
+{
+  "key": "t0__eval_user_08__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_08",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_08",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_6bcbbff1859643dd",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts our brains use to think quickly. They help us decide fast, but they can also lead to mistakes.\n\nScenario: Anchoring while shopping\nYou’re comparing two laptops. The first one you see is priced at $1,200. A second, similar model appears at $900. Because the first price stuck in your mind, the $900 laptop now feels like a good deal—even if you haven’t checked features or reliability yet. That initial price acted as an anchor, guiding your judgment of value.\n\nKey Insight:\nThe first information we encounter often anchors our later judgments, biasing us away from purely objective evaluation.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts our brains use to think quickly. They help us decide fast, but they can also lead to mistakes.\n\nScenario: Anchoring while shopping\nYou’re comparing two laptops. The first one you see is priced at $1,200. A second, similar model appears at $900. Because the first price stuck in your mind, the $900 laptop now feels like a good deal—even if you haven’t checked features or reliability yet. That initial price acted as an anchor, guiding your judgment of value.\n\nKey Insight:\nThe first information we encounter often anchors our later judgments, biasing us away from purely objective evaluation.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nCognitive biases are mental shortcuts our brains use to think quickly. They help us decide fast, but they can also lead to mistakes.\n\nScenario: Anchoring while shopping\nYou’re comparing two laptops. The first one you see is priced at $1,200. A second, similar model appears at $900. Because the first price stuck in your mind, the $900 laptop now feels like a good deal—even if you haven’t checked features or reliability yet. That initial price acted as an anchor, guiding your judgment of value.\n\nKey Insight:\nThe first information we encounter often anchors our later judgments, biasing us away from purely objective evaluation.",
+        "example_id": "ex_68c0323e5d6b437d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 4,
+      "CA": 4,
+      "PC": 4,
+      "DA": 5
+    },
+    "composite": 3.7,
+    "reasoning": "The example is tailored to the user's profile by including a relatable scenario involving shopping, which is common and accessible, but it does not explicitly incorporate the user's profession, location, or learning style. The complexity level is medium, and the example explains the concept clearly without overly technical language, aligning well with the user's learning preferences. The factual content about anchoring bias is accurate, and the structure is logical, with a clear scenario and key insight, making it pedagogically effective. The analogy used is appropriate for the cognitive bias topic, though it is somewhat generic and could be more domain-specific to psychology or decision-making.\n\nPF: The example mentions the user's role indirectly through a shopping scenario, but it doesn't explicitly incorporate their profession, location, or learning style. It is somewhat personalized but not deeply tailored.  \nAXIS_SCORE: 3\n\nCC: The complexity is appropriate for an undergraduate-level software engineer, with a clear explanation of the bias and scenario without excessive technical detail.  \nAXIS_SCORE: 4\n\nCA: The factual content about anchoring bias is correct and well-explained, with no inaccuracies.  \nAXIS_SCORE: 5\n\nPC: The example has a clear structure: concept introduction, scenario, and key insight, which facilitates learning. The flow is logical and memorable.  \nAXIS_SCORE: 4\n\nDA: The analogy of shopping and pricing is appropriate for discussing cognitive biases, which are about decision-making and judgment, fitting the domain well.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 2, \"CC\": 4, \"CA\": 4, \"PC\": 4, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 2,
+        "CC": 5,
+        "CA": 4,
+        "PC": 4,
+        "DA": 5
+      },
+      "composite": 3.9,
+      "reasoning": "For the PERSONALIZATION FIDELITY (PF) axis, the example does not reflect the user's profile in a meaningful way, as it does not incorporate the user's name, location, profession, or cultural background into the scenario. The example is generic and could be applied to any user, regardless of their background or profession. \nPF_SCORE: 1\n\nFor the COMPLEXITY CALIBRATION (CC) axis, the example seems to match the medium complexity level requested by the user, as it provides a clear and concise explanation of the concept of cognitive bias and anchoring, without delving into overly complex details or using overly simplistic language. The depth of the explanation appears to be suitable for an undergraduate student with a medium complexity preference. \nCC_SCORE: 4\n\nFor the CONCEPTUAL ACCURACY (CA) axis, the example accurately describes the concept of cognitive bias and anchoring, providing a correct and relevant scenario to illustrate how the bias works in real-life situations. The key insight provided is also factually correct and aligns with the definition of anchoring bias. \nCA_SCORE: 5\n\nFor the PEDAGOGICAL CLARITY (PC) axis, the example is well-structured and easy to follow, with a clear introduction to the concept, a relevant scenario, and a key insight that summarizes the main point. The example effectively bridges the concept to a practical application, making it memorable and understandable for the learner. \nPC_SCORE: 5\n\nFor the DOMAIN APPROPRIATENESS (DA) axis, the example is perfectly appropriate for the topic of cognitive bias, using a relevant and common scenario (comparing prices of laptops) to illustrate the concept of anchoring. The framing and vocabulary used are also suitable for the topic, making it a domain-appropriate example. \nDA_SCORE: 5\n\n```json\n{\"PF\": 1, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:52:52.524378"
+}

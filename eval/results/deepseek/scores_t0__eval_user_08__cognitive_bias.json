@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_08__cognitive_bias",
+  "tier": "t0",
+  "user_id": "eval_user_08",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_08",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_e006e9b0b7a54e6f",
+    "initial_example": "**Concept:** Cognitive Bias\n\n**Example:**  \nImagine you are reading online reviews for a new restaurant. You see one glowing review and two negative ones. You decide to try the restaurant based on the positive review, dismissing the negative ones as \"probably from people who just don't appreciate good food.\"\n\nThis is an example of a cognitive bias called **confirmation bias**. It is the tendency to search for, interpret, favor, and recall information that confirms or supports one's existing beliefs or choices. In this scenario, your initial positive impression (perhaps from a friend's recommendation) led you to focus on the single review that agreed with you and to discount the conflicting evidence.\n\n**Key Insight:**  \nCognitive biases are systematic patterns of deviation from rational judgment, often caused by our brain's shortcuts for processing information. They can lead us to make decisions based on incomplete or skewed evidence, without us even realizing it.",
+    "final_example": "**Concept:** Cognitive Bias\n\n**Example:**  \nImagine you are reading online reviews for a new restaurant. You see one glowing review and two negative ones. You decide to try the restaurant based on the positive review, dismissing the negative ones as \"probably from people who just don't appreciate good food.\"\n\nThis is an example of a cognitive bias called **confirmation bias**. It is the tendency to search for, interpret, favor, and recall information that confirms or supports one's existing beliefs or choices. In this scenario, your initial positive impression (perhaps from a friend's recommendation) led you to focus on the single review that agreed with you and to discount the conflicting evidence.\n\n**Key Insight:**  \nCognitive biases are systematic patterns of deviation from rational judgment, often caused by our brain's shortcuts for processing information. They can lead us to make decisions based on incomplete or skewed evidence, without us even realizing it.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "**Concept:** Cognitive Bias\n\n**Example:**  \nImagine you are reading online reviews for a new restaurant. You see one glowing review and two negative ones. You decide to try the restaurant based on the positive review, dismissing the negative ones as \"probably from people who just don't appreciate good food.\"\n\nThis is an example of a cognitive bias called **confirmation bias**. It is the tendency to search for, interpret, favor, and recall information that confirms or supports one's existing beliefs or choices. In this scenario, your initial positive impression (perhaps from a friend's recommendation) led you to focus on the single review that agreed with you and to discount the conflicting evidence.\n\n**Key Insight:**  \nCognitive biases are systematic patterns of deviation from rational judgment, often caused by our brain's shortcuts for processing information. They can lead us to make decisions based on incomplete or skewed evidence, without us even realizing it.",
+        "example_id": "ex_3458883111d6442d",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2.75,
+      "CC": 4.37,
+      "CA": 5.0,
+      "PC": 4.77,
+      "DA": 4.55
+    },
+    "composite": 4.333,
+    "reasoning": "The example uses a relatable scenario involving online reviews, which is accessible and easy to understand, but it does not incorporate specific details from Kenji's profile such as his profession, location, or learning style. The complexity level appears appropriate for an undergraduate engineer, with clear explanations of confirmation bias and its implications. The factual content about cognitive bias is accurate, and the structure is logical, with a clear example and key insight. The analogy is somewhat generic but still relevant to the topic of decision-making biases, though it doesn't explicitly connect to the domain of engineering or technology, which could have enhanced domain appropriateness.\n\n**PERSONALIZATION FIDELITY:** The example is quite generic and does not incorporate Kenji's background, profession, or cultural context, which limits its personalization.  \n**Score:** 3\n\n**COMPLEXITY CALIBRATION:** The explanation is straightforward, suitable for an undergraduate level, with no overly technical language or advanced concepts, aligning well with medium complexity.  \n**Score:** 4\n\n**CONCEPTUAL ACCURACY:** The description of confirmation bias is correct, and the explanation aligns with established psychological understanding.  \n**Score:** 5\n\n**PEDAGOGICAL CLARITY:** The example is well-structured, with a clear scenario, explanation, and key insight, making it easy to follow and memorable.  \n**Score:** 5\n\n**DOMAIN APPROPRIATENESS:** The analogy involving online reviews is appropriate for a general understanding of cognitive bias but is somewhat outside the engineering domain, which could have been better tailored.  \n**Score:** 3\n\n```json\n{\"PF\": 3, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:16:18.466044"
+}

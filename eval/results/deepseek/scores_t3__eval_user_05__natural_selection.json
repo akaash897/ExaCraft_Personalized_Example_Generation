@@ -1,0 +1,152 @@
+{
+  "key": "t3__eval_user_05__natural_selection",
+  "tier": "t3",
+  "user_id": "eval_user_05",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_05",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t3",
+    "user_id": "eval_user_05",
+    "topic": "Natural Selection",
+    "thread_id": "thread_d8507cdb67ca4d9a",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nLena, imagine you're walking through the Tiergarten in Berlin and you see two types of birds at a feeder: some with thick, strong beaks and others with thinner, more delicate beaks. The feeder has recently been stocked with a new type of seed that has a very hard shell.\n\nInitial Population Variation:\n- Some finches have inherited genes for thick, powerful beaks.\n- Other finches have inherited genes for thinner, weaker beaks.\n\nSelective Pressure (The \"Test\"):\n- The only available food is the hard-shelled seed.\n- A finch with a thick beak can easily crack the shell to get the nutritious seed inside.\n- A finch with a thin beak struggles, wastes energy, and often fails to get enough food.\n\nDifferential Survival and Reproduction:\n- The thick-beaked finches eat well, stay healthy, and survive through the winter.\n- The thin-beaked finches are more likely to become weak, get sick, or starve.\n- In the spring, the surviving thick-beaked finches mate and pass their \"thick-beak\" genes to their offspring.\n\nResult Over Generations:\n- The next year, a larger percentage of the finch population in the Tiergarten has thick beaks.\n- If the hard-shelled seeds remain the main food source, this trend will continue. The population adapts to its environment through this filtering process.\n\nKey Insight:\nNatural selection is not random; it's the non-random survival of random variations. The environment (like the hard seeds) acts as a filter, allowing individuals with beneficial traits to survive and reproduce, gradually changing the population over time.",
+    "final_example": "**Concept:** Natural Selection\n\n**Example:**\n\nLena, imagine you and your fellow university students in Berlin all rely on the same popular study app to organize your lecture notes and deadlines. The app is great, but it has one quirk: it only sends reminder notifications in bright, flashing colors.\n\n**Initial Variation:**\nWithin the student population, there is natural variation in how people perceive these colors. Some students, due to their individual biology, find the bright flashes mildly annoying but manageable. Others have a genetic predisposition that makes them highly sensitive to intense visual stimuli—the flashing causes them real headaches and distraction.\n\n**Selective Pressure:**\nThe pressure is the university's demanding schedule. To succeed, students *must* consistently meet deadlines. The app's flashing system is the primary, unforgiving reminder tool. There is no option to turn the flashes off or change their intensity within the app.\n\n**Differential Survival & Reproduction:**\n*   The students who are sensitive to the flashes are at a disadvantage. The headaches impair their focus, leading to more missed deadlines, lower grades, and higher stress. They are less \"fit\" in this academic environment. They might drop the class or even change their course of study to avoid the constant pressure.\n*   The students who are not bothered by the flashes use the app effectively. They meet their deadlines, perform well, and advance in their degrees. They are more \"fit.\"\n\n**Reproduction of the Advantageous Trait:**\nThis isn't about literal reproduction, but about the propagation of the successful strategy. The successful students recommend the app to incoming first-years. The struggling students seek out and switch to a new, less flashy note-taking app that is just emerging on the market. Over several academic years, the population of students using the original flashing app becomes dominated by those who aren't sensitive to the flashes. The trait of \"non-sensitivity to intense visual notifications\" has been selected for.\n\n**Key Insight:**\nNatural selection is not random. It is the logical outcome of a consistent environmental pressure (here, a rigid academic system with a specific tool) acting on pre-existing variation in a population. The individuals whose traits are best suited to that pressure survive and propagate their strategies more effectively than others.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nLena, imagine you're walking through the Tiergarten in Berlin and you see two types of birds at a feeder: some with thick, strong beaks and others with thinner, more delicate beaks. The feeder has recently been stocked with a new type of seed that has a very hard shell.\n\nInitial Population Variation:\n- Some finches have inherited genes for thick, powerful beaks.\n- Other finches have inherited genes for thinner, weaker beaks.\n\nSelective Pressure (The \"Test\"):\n- The only available food is the hard-shelled seed.\n- A finch with a thick beak can easily crack the shell to get the nutritious seed inside.\n- A finch with a thin beak struggles, wastes energy, and often fails to get enough food.\n\nDifferential Survival and Reproduction:\n- The thick-beaked finches eat well, stay healthy, and survive through the winter.\n- The thin-beaked finches are more likely to become weak, get sick, or starve.\n- In the spring, the surviving thick-beaked finches mate and pass their \"thick-beak\" genes to their offspring.\n\nResult Over Generations:\n- The next year, a larger percentage of the finch population in the Tiergarten has thick beaks.\n- If the hard-shelled seeds remain the main food source, this trend will continue. The population adapts to its environment through this filtering process.\n\nKey Insight:\nNatural selection is not random; it's the non-random survival of random variations. The environment (like the hard seeds) acts as a filter, allowing individuals with beneficial traits to survive and reproduce, gradually changing the population over time.",
+        "example_id": "ex_d82183771ab44dbb",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "I don't really get it.",
+        "status": "awaiting_feedback",
+        "loop_count": 1,
+        "agent_action": "regenerate",
+        "example": "**Concept:** Natural Selection\n\n**Example:**\n\nLena, imagine you and your fellow university students in Berlin all rely on the same popular study app to organize your lecture notes and deadlines. The app is great, but it has one quirk: it only sends reminder notifications in bright, flashing colors.\n\n**Initial Variation:**\nWithin the student population, there is natural variation in how people perceive these colors. Some students, due to their individual biology, find the bright flashes mildly annoying but manageable. Others have a genetic predisposition that makes them highly sensitive to intense visual stimuli—the flashing causes them real headaches and distraction.\n\n**Selective Pressure:**\nThe pressure is the university's demanding schedule. To succeed, students *must* consistently meet deadlines. The app's flashing system is the primary, unforgiving reminder tool. There is no option to turn the flashes off or change their intensity within the app.\n\n**Differential Survival & Reproduction:**\n*   The students who are sensitive to the flashes are at a disadvantage. The headaches impair their focus, leading to more missed deadlines, lower grades, and higher stress. They are less \"fit\" in this academic environment. They might drop the class or even change their course of study to avoid the constant pressure.\n*   The students who are not bothered by the flashes use the app effectively. They meet their deadlines, perform well, and advance in their degrees. They are more \"fit.\"\n\n**Reproduction of the Advantageous Trait:**\nThis isn't about literal reproduction, but about the propagation of the successful strategy. The successful students recommend the app to incoming first-years. The struggling students seek out and switch to a new, less flashy note-taking app that is just emerging on the market. Over several academic years, the population of students using the original flashing app becomes dominated by those who aren't sensitive to the flashes. The trait of \"non-sensitivity to intense visual notifications\" has been selected for.\n\n**Key Insight:**\nNatural selection is not random. It is the logical outcome of a consistent environmental pressure (here, a rigid academic system with a specific tool) acting on pre-existing variation in a population. The individuals whose traits are best suited to that pressure survive and propagate their strategies more effectively than others.",
+        "example_id": "ex_2942830e11644738"
+      },
+      {
+        "round": 2,
+        "feedback_given": "This is great! The example really helped me understand the concept.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "accept",
+        "feedback_processed": true
+      },
+      {
+        "round": 3,
+        "feedback_given": "I always connect better when examples use everyday scenarios from school life, like assignments or exams.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "flag_pattern",
+        "feedback_processed": true
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5.0,
+      "CC": 4.45,
+      "CA": 5.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.89,
+    "reasoning": "The example effectively personalizes the scenario by using Lena's name and location, integrating her profile details into the context, which enhances engagement for her as a high school student in Berlin. The complexity level appears appropriate, with clear explanations suitable for a high school audience, avoiding overly technical language or advanced concepts. The scientific content is accurate, correctly describing natural selection with appropriate terminology and processes. The structure is logical and pedagogically sound, guiding the learner through the process from variation to adaptation, with a clear key insight that reinforces understanding. The analogies used, such as birds at a feeder and seed types, are well-suited to biology and familiar to a high school student, making the topic accessible and relevant.\n\nPF: Since the example uses Lena's name and location, and the analogy is biology-specific, it reflects her profile well.  \nAXIS_SCORE: 5\n\nCC: The explanation matches the medium complexity level, with appropriate detail and terminology for a high school student.  \nAXIS_SCORE: 4\n\nCA: The scientific content is accurate, correctly describing the process of natural selection without errors.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from variation to outcome, and the key insight is clearly highlighted, aiding learning.  \nAXIS_SCORE: 5\n\nDA: The analogy of birds and seeds is perfectly domain-appropriate, using familiar biological concepts to illustrate natural selection.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {
+    "scores": {
+      "CA": 5.0,
+      "PF": 5.0,
+      "CC": 4.0,
+      "PC": 5.0,
+      "DA": 5.0
+    },
+    "composite": 4.8,
+    "reasoning": "The example effectively personalizes the scenario by using the user's name, location, and context (student in Berlin), and it aligns with her learning style by providing a relatable, example-based explanation. The depth of the analogy is appropriate for a high school student, illustrating natural selection through a familiar context without overly complex terminology. The factual content about natural selection is accurate, correctly describing variation, selective pressure, differential success, and propagation of traits. The structure is clear, with a logical flow from initial variation to key insight, making it pedagogically effective. The analogy of app notifications is appropriate for the biology topic, using a modern, relatable scenario that fits the domain well.\n\n[PF] PERSONALIZATION FIDELITY — The example directly incorporates the user's profile details, especially her name, location, and learning style, making it highly personalized.  \nAXIS_SCORE: 5\n\n[CC] COMPLEXITY CALIBRATION — The explanation is detailed enough to match a medium complexity level, avoiding overly technical language but still conveying core concepts clearly.  \nAXIS_SCORE: 4\n\n[CA] CONCEPTUAL ACCURACY — The scientific content accurately describes natural selection, including variation, selective pressure, differential success, and trait propagation, with no errors.  \nAXIS_SCORE: 5\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a clear progression from variation to key insight, making it easy to follow and memorable.  \nAXIS_SCORE: 5\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of app notifications and visual stimuli is appropriate for illustrating natural selection in a biological context, especially for a high school student.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 4, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "fcr_results": [
+    {
+      "round": 1,
+      "feedback_given": "I don't really get it.",
+      "compliance": {
+        "compliant": true,
+        "compliance_score": 4,
+        "reasoning": "The system interprets the ambiguous feedback as a general request for improvement, producing a more streamlined example with better scaffolding.\n\nCOMPLIANCE_SCORE: 4\nCOMPLIANT: YES",
+        "error": null
+      }
+    }
+  ],
+  "context_instruction": "",
+  "round_pf_scores": [
+    {
+      "round": 0,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": null
+    },
+    {
+      "round": 1,
+      "pf_score": 5,
+      "composite": 4.8,
+      "agent_action": "regenerate"
+    }
+  ],
+  "decision_accuracy": {
+    "correct": 3,
+    "total": 3,
+    "accuracy": 1.0,
+    "details": [
+      {
+        "round": 1,
+        "expected": "regenerate",
+        "actual": "regenerate",
+        "correct": true
+      },
+      {
+        "round": 2,
+        "expected": "accept",
+        "actual": "accept",
+        "correct": true
+      },
+      {
+        "round": 3,
+        "expected": "flag_pattern",
+        "actual": "flag_pattern",
+        "correct": true
+      }
+    ]
+  },
+  "pattern_selectivity": {
+    "round2_action": "accept",
+    "round3_action": "flag_pattern",
+    "flag_on_fp_round": true,
+    "flag_on_f3_round": false
+  },
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T21:59:04.196693"
+}

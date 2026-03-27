@@ -1,0 +1,69 @@
+{
+  "key": "t0__eval_user_08__natural_selection",
+  "tier": "t0",
+  "user_id": "eval_user_08",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_08",
+    "name": "Kenji",
+    "role": "engineer",
+    "education_level": "undergraduate",
+    "profession": "Software Engineer",
+    "location": "Tokyo, Japan",
+    "cultural_background": "East Asian",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "warm"
+  },
+  "run": {
+    "tier": "t0",
+    "user_id": "eval_user_08",
+    "topic": "Natural Selection",
+    "thread_id": "thread_87a097d301b7451c",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nImagine a population of beetles living in a forest. Beetles come in two colors: green and brown. The color trait is inherited from parents. A bird predator hunts by sight, so beetles that blend into their surroundings are less likely to be eaten.\n\nIn spring, the trees have green leaves, so green beetles are harder for birds to spot than brown beetles. More green beetles survive long enough to reproduce, passing the green color on to their offspring. Over generations, the population becomes mostly green.\n\nIf the forest later darkens or the leaves fall and the background becomes brown, brown beetles might gain the advantage again, and the population could shift back.\n\nKey Insight:\nNatural selection favors heritable traits that improve survival and reproduction in a given environment; over time, those favored traits become more common in the population.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nImagine a population of beetles living in a forest. Beetles come in two colors: green and brown. The color trait is inherited from parents. A bird predator hunts by sight, so beetles that blend into their surroundings are less likely to be eaten.\n\nIn spring, the trees have green leaves, so green beetles are harder for birds to spot than brown beetles. More green beetles survive long enough to reproduce, passing the green color on to their offspring. Over generations, the population becomes mostly green.\n\nIf the forest later darkens or the leaves fall and the background becomes brown, brown beetles might gain the advantage again, and the population could shift back.\n\nKey Insight:\nNatural selection favors heritable traits that improve survival and reproduction in a given environment; over time, those favored traits become more common in the population.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nImagine a population of beetles living in a forest. Beetles come in two colors: green and brown. The color trait is inherited from parents. A bird predator hunts by sight, so beetles that blend into their surroundings are less likely to be eaten.\n\nIn spring, the trees have green leaves, so green beetles are harder for birds to spot than brown beetles. More green beetles survive long enough to reproduce, passing the green color on to their offspring. Over generations, the population becomes mostly green.\n\nIf the forest later darkens or the leaves fall and the background becomes brown, brown beetles might gain the advantage again, and the population could shift back.\n\nKey Insight:\nNatural selection favors heritable traits that improve survival and reproduction in a given environment; over time, those favored traits become more common in the population.",
+        "example_id": "ex_37c65ce392a84743",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "Hmm.",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 2,
+      "CC": 5,
+      "CA": 4,
+      "PC": 4,
+      "DA": 3
+    },
+    "composite": 3.7,
+    "reasoning": "The example uses a classic beetle scenario that is relevant to biology and natural selection, but it does not incorporate any elements from the user's profile such as their name, location, or profession, nor does it tailor the analogy to software engineering or East Asian context. The complexity level appears appropriate for an undergraduate, with clear explanations and a straightforward example. The factual content about natural selection is accurate, and the structure is logical, with a clear concept-to-example flow. The analogy of beetle coloration and predation is appropriate for the biological domain, with no off-topic elements.\n\n[PF] PERSONALIZATION FIDELITY — The example is generic and does not reflect Kenji's profile, missing personalization elements like his name, location, or profession, and does not adapt the analogy to his background or learning style.  \nAXIS_SCORE: 2\n\n[CC] COMPLEXITY CALIBRATION — The explanation is at a medium level, suitable for an undergraduate, with enough detail to be informative but not overly complex or simplistic.  \nAXIS_SCORE: 5\n\n[CA] CONCEPTUAL ACCURACY — The scientific content is correct, accurately describing natural selection, inheritance, and environmental influence on traits.  \nAXIS_SCORE: 4\n\n[PC] PEDAGOGICAL CLARITY — The example is well-structured, with a logical flow from scenario to key insight, making it easy to follow and understand.  \nAXIS_SCORE: 4\n\n[DA] DOMAIN APPROPRIATENESS — The analogy of beetle coloration and predation is perfectly appropriate for explaining natural selection in biology, with no off-domain elements.  \nAXIS_SCORE: 3\n\n```json\n{\"PF\": 2, \"CC\": 5, \"CA\": 4, \"PC\": 4, \"DA\": 3}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:52:26.728392"
+}

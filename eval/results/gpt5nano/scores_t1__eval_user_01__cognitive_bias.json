@@ -1,0 +1,69 @@
+{
+  "key": "t1__eval_user_01__cognitive_bias",
+  "tier": "t1",
+  "user_id": "eval_user_01",
+  "topic": "Cognitive Bias",
+  "domain": "psychology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_01",
+    "topic": "Cognitive Bias",
+    "thread_id": "thread_efe74dce22754c02",
+    "initial_example": "Concept: Cognitive Bias\n\nExample:\nLena, a student in Berlin, is preparing for an important exam. She notices she often leans on confirmation bias: she tends to look for information that supports what she already believes about studying, and tends to ignore sources that contradict it. She believes that “active recall is the best study method.” So she quickly reads 10 short articles and focuses on the 7 that say active recall helps most students, while skipping the 3 that say the benefit varies by person and context. Because she only considered the supportive evidence, she overestimates how universally effective active recall is for everyone.\n\nNumeric example:\n- Among 10 studies: 7 show a positive effect of active recall, 3 show no strong effect.\n- If Lena examines only the 7 positive studies, she might infer a 100% probability of benefit from this subset.\n- If she includes all 10 studies, the observed rate is 7/10 = 70%.\nThis contrast illustrates how confirmation bias can distort perceived evidence.\n\nKey terms:\n- Cognitive bias: a systematic pattern of deviation from rational judgment.\n- Confirmation bias: the tendency to seek, interpret, and remember information that supports one’s preconceptions.\n\nKey Insight:\nBe wary of first impressions of evidence—seek the full set of findings and weigh conflicting sources to avoid bias guiding your conclusions.",
+    "final_example": "Concept: Cognitive Bias\n\nExample:\nLena, a student in Berlin, is preparing for an important exam. She notices she often leans on confirmation bias: she tends to look for information that supports what she already believes about studying, and tends to ignore sources that contradict it. She believes that “active recall is the best study method.” So she quickly reads 10 short articles and focuses on the 7 that say active recall helps most students, while skipping the 3 that say the benefit varies by person and context. Because she only considered the supportive evidence, she overestimates how universally effective active recall is for everyone.\n\nNumeric example:\n- Among 10 studies: 7 show a positive effect of active recall, 3 show no strong effect.\n- If Lena examines only the 7 positive studies, she might infer a 100% probability of benefit from this subset.\n- If she includes all 10 studies, the observed rate is 7/10 = 70%.\nThis contrast illustrates how confirmation bias can distort perceived evidence.\n\nKey terms:\n- Cognitive bias: a systematic pattern of deviation from rational judgment.\n- Confirmation bias: the tendency to seek, interpret, and remember information that supports one’s preconceptions.\n\nKey Insight:\nBe wary of first impressions of evidence—seek the full set of findings and weigh conflicting sources to avoid bias guiding your conclusions.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Cognitive Bias\n\nExample:\nLena, a student in Berlin, is preparing for an important exam. She notices she often leans on confirmation bias: she tends to look for information that supports what she already believes about studying, and tends to ignore sources that contradict it. She believes that “active recall is the best study method.” So she quickly reads 10 short articles and focuses on the 7 that say active recall helps most students, while skipping the 3 that say the benefit varies by person and context. Because she only considered the supportive evidence, she overestimates how universally effective active recall is for everyone.\n\nNumeric example:\n- Among 10 studies: 7 show a positive effect of active recall, 3 show no strong effect.\n- If Lena examines only the 7 positive studies, she might infer a 100% probability of benefit from this subset.\n- If she includes all 10 studies, the observed rate is 7/10 = 70%.\nThis contrast illustrates how confirmation bias can distort perceived evidence.\n\nKey terms:\n- Cognitive bias: a systematic pattern of deviation from rational judgment.\n- Confirmation bias: the tendency to seek, interpret, and remember information that supports one’s preconceptions.\n\nKey Insight:\nBe wary of first impressions of evidence—seek the full set of findings and weigh conflicting sources to avoid bias guiding your conclusions.",
+        "example_id": "ex_f89348c067384468",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 5,
+      "CC": 3,
+      "CA": 5,
+      "PC": 5,
+      "DA": 5
+    },
+    "composite": 4.6,
+    "reasoning": "The example effectively personalizes the scenario by including Lena's name, location, and role, aligning well with her profile. The complexity level appears appropriate for a high school student, with clear explanations and practical numeric examples that are accessible yet insightful. The factual content about confirmation bias and active recall is accurate and well-explained, supporting correct understanding. The structure is logical, with a clear progression from scenario to key terms and insight, making it pedagogically sound. The analogies and framing are appropriate for the cognitive bias topic, avoiding domain mismatches and maintaining relevance.\n\nPF: The example uses Lena's name, location, and role, and the scenario is tailored to her learning style and context, demonstrating good personalization.  \nAXIS_SCORE: 4\n\nCC: The complexity matches a high school level, with straightforward language and concrete numeric examples that are neither too simple nor overly technical.  \nAXIS_SCORE: 4\n\nCA: The content about confirmation bias and active recall is factually correct, with no inaccuracies or misleading statements.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from scenario to key terms and insight, making it easy to follow and learn from.  \nAXIS_SCORE: 4\n\nDA: The framing and analogies are appropriate for the psychology topic, using familiar concepts like studies and evidence, which are suitable for the domain.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 3, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:54:52.135782"
+}

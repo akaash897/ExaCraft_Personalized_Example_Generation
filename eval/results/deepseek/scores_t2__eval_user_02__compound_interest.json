@@ -1,0 +1,69 @@
+{
+  "key": "t2__eval_user_02__compound_interest",
+  "tier": "t2",
+  "user_id": "eval_user_02",
+  "topic": "Compound Interest",
+  "domain": "mathematics_finance",
+  "profile": {
+    "user_id": "eval_user_02",
+    "name": "Amara",
+    "role": "nurse",
+    "education_level": "professional",
+    "profession": "Nurse",
+    "location": "Lagos, Nigeria",
+    "cultural_background": "West African",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t2",
+    "user_id": "eval_user_02",
+    "topic": "Compound Interest",
+    "thread_id": "thread_660d93738ed34283",
+    "initial_example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you decide to save \u20a650,000 in a savings account to help fund future training. The account offers a 10% annual interest rate, compounded yearly.\n\nYear-by-Year Growth:\n- **Year 0 (Deposit):** \u20a650,000\n- **Year 1:** Interest = 10% of \u20a650,000 = \u20a65,000. New total = \u20a655,000.\n- **Year 2:** Interest is now calculated on \u20a655,000. Interest = 10% of \u20a655,000 = \u20a65,500. New total = \u20a660,500.\n- **Year 3:** Interest on \u20a660,500 = \u20a66,050. New total = \u20a666,550.\n\nThe Formula:\nThe general formula to calculate this is:\n**A = P (1 + r)^t**\nWhere:\nA = Final amount\nP = Principal (initial deposit, e.g., \u20a650,000)\nr = Interest rate (10%, or 0.10)\nt = Time in years (e.g., 3 years)\n\nFor your 3-year example:\nA = 50000 * (1 + 0.10)^3 = 50000 * (1.10)^3 = 50000 * 1.331 = \u20a666,550\n\nKey Insight:\nCompound interest earns you \"interest on interest.\" Unlike simple interest, which only grows your initial deposit, compounding causes your savings to grow faster over time because each year's interest is added to the base for the next calculation.",
+    "final_example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you decide to save \u20a650,000 in a savings account to help fund future training. The account offers a 10% annual interest rate, compounded yearly.\n\nYear-by-Year Growth:\n- **Year 0 (Deposit):** \u20a650,000\n- **Year 1:** Interest = 10% of \u20a650,000 = \u20a65,000. New total = \u20a655,000.\n- **Year 2:** Interest is now calculated on \u20a655,000. Interest = 10% of \u20a655,000 = \u20a65,500. New total = \u20a660,500.\n- **Year 3:** Interest on \u20a660,500 = \u20a66,050. New total = \u20a666,550.\n\nThe Formula:\nThe general formula to calculate this is:\n**A = P (1 + r)^t**\nWhere:\nA = Final amount\nP = Principal (initial deposit, e.g., \u20a650,000)\nr = Interest rate (10%, or 0.10)\nt = Time in years (e.g., 3 years)\n\nFor your 3-year example:\nA = 50000 * (1 + 0.10)^3 = 50000 * (1.10)^3 = 50000 * 1.331 = \u20a666,550\n\nKey Insight:\nCompound interest earns you \"interest on interest.\" Unlike simple interest, which only grows your initial deposit, compounding causes your savings to grow faster over time because each year's interest is added to the base for the next calculation.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Compound Interest\n\nExample:\nAmara, as a nurse in Lagos, you decide to save \u20a650,000 in a savings account to help fund future training. The account offers a 10% annual interest rate, compounded yearly.\n\nYear-by-Year Growth:\n- **Year 0 (Deposit):** \u20a650,000\n- **Year 1:** Interest = 10% of \u20a650,000 = \u20a65,000. New total = \u20a655,000.\n- **Year 2:** Interest is now calculated on \u20a655,000. Interest = 10% of \u20a655,000 = \u20a65,500. New total = \u20a660,500.\n- **Year 3:** Interest on \u20a660,500 = \u20a66,050. New total = \u20a666,550.\n\nThe Formula:\nThe general formula to calculate this is:\n**A = P (1 + r)^t**\nWhere:\nA = Final amount\nP = Principal (initial deposit, e.g., \u20a650,000)\nr = Interest rate (10%, or 0.10)\nt = Time in years (e.g., 3 years)\n\nFor your 3-year example:\nA = 50000 * (1 + 0.10)^3 = 50000 * (1.10)^3 = 50000 * 1.331 = \u20a666,550\n\nKey Insight:\nCompound interest earns you \"interest on interest.\" Unlike simple interest, which only grows your initial deposit, compounding causes your savings to grow faster over time because each year's interest is added to the base for the next calculation.",
+        "example_id": "ex_8cb246989c064223",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This example doesn't feel relevant to my field. Can you use something from my domain instead?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 4.96,
+      "CC": 4.51,
+      "CA": 5.0,
+      "PC": 4.95,
+      "DA": 4.93
+    },
+    "composite": 4.877,
+    "reasoning": "The example effectively personalizes the scenario by addressing Amara directly, referencing her profession, location, and learning style, which enhances engagement. The complexity level is appropriate, providing both a simple explanation and a detailed formula, suitable for a professional learner with medium complexity needs. The factual content about compound interest and the formula is accurate and well-explained, reinforcing core concepts correctly. The structure is clear, with a logical flow from real-world example to formula and insight, making it pedagogically sound. The analogy of saving money in a bank account is domain-appropriate, aligning well with financial concepts relevant to the topic.\n\nPERSONALIZATION FIDELITY: The example is highly tailored, integrating the user's profile details and context effectively.\nAXIS_SCORE: 5\n\nCOMPLEXITY CALIBRATION: The explanation balances simplicity with enough detail to match a medium complexity level, including formulas and step-by-step calculations.\nAXIS_SCORE: 4\n\nCONCEPTUAL ACCURACY: The content is factually correct, with correct formulas and explanations about compound interest.\nAXIS_SCORE: 5\n\nPEDAGOGICAL CLARITY: The example is well-structured, with clear steps, formulas, and insights, making it easy to follow and learn from.\nAXIS_SCORE: 5\n\nDOMAIN APPROPRIATENESS: The analogy of saving money in a bank account is perfectly appropriate for explaining compound interest, fitting the financial domain.\nAXIS_SCORE: 5\n\n```json\n{\"PF\": 5, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": null
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T20:40:52.252407"
+}

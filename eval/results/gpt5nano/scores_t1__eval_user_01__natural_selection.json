@@ -1,0 +1,80 @@
+{
+  "key": "t1__eval_user_01__natural_selection",
+  "tier": "t1",
+  "user_id": "eval_user_01",
+  "topic": "Natural Selection",
+  "domain": "evolutionary_biology",
+  "profile": {
+    "user_id": "eval_user_01",
+    "name": "Lena",
+    "role": "student",
+    "education_level": "high_school",
+    "profession": "Student",
+    "location": "Berlin, Germany",
+    "cultural_background": "European",
+    "learning_style": "example-based",
+    "complexity": "medium",
+    "start_mode": "cold"
+  },
+  "run": {
+    "tier": "t1",
+    "user_id": "eval_user_01",
+    "topic": "Natural Selection",
+    "thread_id": "thread_b952a8d37eed4d60",
+    "initial_example": "Concept: Natural Selection\n\nExample:\nIn a park near Berlin, a population of moths shows two color forms: light and dark. The color difference is heritable, so offspring tend to resemble their parents.\n\nStarting population:\n  - Light moths: 50\n  - Dark moths: 50\n\nSelection pressure:\n  - Songbirds prey more on moths that stand out against the tree bark, so camouflage affects survival.\n\nSurvival after predation:\n  - Light moths survive at 20% → 10 individuals\n  - Dark moths survive at 60% → 30 individuals\n\nNext generation (assuming survivors reproduce to restore roughly 100 individuals, with offspring proportional to survivors):\n  - Light offspring: 10\n  - Dark offspring: 30\n  - Predicted next-generation mix: Light 25%, Dark 75%\n\nKey terms (inline):\n  - Variation: differences in color within the population.\n  - Heritable: the color trait can be passed to offspring.\n  - Fitness: how good an individual is at surviving and reproducing.\n  - Selection pressure: the environmental factor (camouflage) that changes which traits are favored.\n\nKey Insight:\n  Natural selection changes trait frequencies by favoring individuals with better camouflage, so the trait that helps survival becomes more common over generations.",
+    "final_example": "Concept: Natural Selection\n\nExample:\nIn a park near Berlin, a population of moths shows two color forms: light and dark. The color difference is heritable, so offspring tend to resemble their parents.\n\nStarting population:\n  - Light moths: 50\n  - Dark moths: 50\n\nSelection pressure:\n  - Songbirds prey more on moths that stand out against the tree bark, so camouflage affects survival.\n\nSurvival after predation:\n  - Light moths survive at 20% → 10 individuals\n  - Dark moths survive at 60% → 30 individuals\n\nNext generation (assuming survivors reproduce to restore roughly 100 individuals, with offspring proportional to survivors):\n  - Light offspring: 10\n  - Dark offspring: 30\n  - Predicted next-generation mix: Light 25%, Dark 75%\n\nKey terms (inline):\n  - Variation: differences in color within the population.\n  - Heritable: the color trait can be passed to offspring.\n  - Fitness: how good an individual is at surviving and reproducing.\n  - Selection pressure: the environmental factor (camouflage) that changes which traits are favored.\n\nKey Insight:\n  Natural selection changes trait frequencies by favoring individuals with better camouflage, so the trait that helps survival becomes more common over generations.",
+    "rounds": [
+      {
+        "round": 0,
+        "example": "Concept: Natural Selection\n\nExample:\nIn a park near Berlin, a population of moths shows two color forms: light and dark. The color difference is heritable, so offspring tend to resemble their parents.\n\nStarting population:\n  - Light moths: 50\n  - Dark moths: 50\n\nSelection pressure:\n  - Songbirds prey more on moths that stand out against the tree bark, so camouflage affects survival.\n\nSurvival after predation:\n  - Light moths survive at 20% → 10 individuals\n  - Dark moths survive at 60% → 30 individuals\n\nNext generation (assuming survivors reproduce to restore roughly 100 individuals, with offspring proportional to survivors):\n  - Light offspring: 10\n  - Dark offspring: 30\n  - Predicted next-generation mix: Light 25%, Dark 75%\n\nKey terms (inline):\n  - Variation: differences in color within the population.\n  - Heritable: the color trait can be passed to offspring.\n  - Fitness: how good an individual is at surviving and reproducing.\n  - Selection pressure: the environmental factor (camouflage) that changes which traits are favored.\n\nKey Insight:\n  Natural selection changes trait frequencies by favoring individuals with better camouflage, so the trait that helps survival becomes more common over generations.",
+        "example_id": "ex_4d64c2745d2e4477",
+        "feedback_given": null,
+        "loop_count": 0,
+        "status": "awaiting_feedback"
+      },
+      {
+        "round": 1,
+        "feedback_given": "This is too complicated for me. Can you simplify it with a more basic example?",
+        "status": "completed",
+        "loop_count": 0,
+        "agent_action": "skipped",
+        "feedback_processed": false
+      }
+    ],
+    "context_instruction": "",
+    "error": null
+  },
+  "initial_judgment": {
+    "scores": {
+      "PF": 3,
+      "CC": 5,
+      "CA": 5,
+      "PC": 4,
+      "DA": 4
+    },
+    "composite": 4.3,
+    "reasoning": "The example effectively incorporates the user's profile by using a Berlin park setting, which aligns with the location, and employs an example-based learning style through a concrete scenario involving moths and predation. The complexity appears appropriate for a high school student, with clear explanations and basic terminology. The scientific content is accurate, correctly describing natural selection principles without errors. The structure is logical, with a clear progression from population to selection pressure, survival, and key concepts, facilitating understanding. The analogies used, such as camouflage and predation, are well-suited to biology and match the domain.\n\nPF: The example personalizes the context with a Berlin park and uses familiar concepts, matching the user's profile well. It also employs an example-based approach suitable for a high school learner.  \nAXIS_SCORE: 5\n\nCC: The depth of explanation covers the core principles of natural selection at a medium complexity level, including population dynamics, heritability, and selection pressure, which are appropriate for the user's education level.  \nAXIS_SCORE: 4\n\nCA: The scientific facts are accurate, correctly describing heritability, variation, fitness, and selection pressure without errors. The explanation aligns with established biological understanding.  \nAXIS_SCORE: 5\n\nPC: The example is well-structured, with a logical flow from initial population to the outcome, and key terms are integrated smoothly. The \"Key Insight\" effectively summarizes the concept, aiding learning.  \nAXIS_SCORE: 5\n\nDA: The framing with a natural environment scenario and terminology like \"camouflage\" and \"predation\" is perfectly aligned with the biology domain, making the analogy appropriate and effective.  \nAXIS_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 4, \"DA\": 4}\n```",
+    "model": "gpt-4.1-nano",
+    "error": null,
+    "secondary": {
+      "model": "openrouter:meta-llama/llama-3.3-70b-instruct",
+      "scores": {
+        "PF": 3,
+        "CC": 5,
+        "CA": 5,
+        "PC": 4,
+        "DA": 4
+      },
+      "composite": 4.3,
+      "reasoning": "For the axis of PERSONALIZATION FIDELITY (PF), the example mentions the location \"near Berlin,\" which aligns with the user's location in their profile, but it does not incorporate the user's name, profession, or learning style explicitly. This indicates a weak level of personalization, as it only includes a token location insertion without fully tailoring the example to the user's profile.\n\nPF_SCORE: 3\n\nFor the axis of COMPLEXITY CALIBRATION (CC), the example presents a medium level of complexity by introducing key terms like \"variation,\" \"heritable,\" \"fitness,\" and \"selection pressure\" in a straightforward manner, which matches the user's stated complexity level of \"medium.\" The depth of the explanation and the use of simple numerical examples to illustrate the concept of natural selection also align well with the medium complexity requirement.\n\nCC_SCORE: 5\n\nFor the axis of CONCEPTUAL ACCURACY (CA), the example accurately describes the process of natural selection, including the concepts of heritable traits, selection pressure, and how these factors influence the frequency of traits in a population over generations. The key terms are defined correctly and used appropriately within the context of the example.\n\nCA_SCORE: 5\n\nFor the axis of PEDAGOGICAL CLARITY (PC), the example is well-structured, starting with a clear scenario, introducing relevant concepts, and then applying these concepts to illustrate how natural selection works. The example-to-concept bridge is explicit, and the insight provided at the end summarizes the key takeaway from the example, making it easy for a learner to follow and understand.\n\nPC_SCORE: 5\n\nFor the axis of DOMAIN APPROPRIATENESS (DA), the example is perfectly appropriate for the domain of natural selection, using relevant terminology and a scenario (moth population and predation) that is commonly used in biology to illustrate the concept of natural selection. The framing and analogies used are directly related to the biological topic, with no elements from inappropriate domains.\n\nDA_SCORE: 5\n\n```json\n{\"PF\": 3, \"CC\": 5, \"CA\": 5, \"PC\": 5, \"DA\": 5}\n```"
+    }
+  },
+  "final_judgment": {},
+  "fcr_results": [],
+  "context_instruction": "",
+  "round_pf_scores": [],
+  "decision_accuracy": {},
+  "pattern_selectivity": {},
+  "instruction_specificity": {},
+  "timestamp": "2026-03-15T23:54:23.816223"
+}
