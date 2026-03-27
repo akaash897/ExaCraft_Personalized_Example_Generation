@@ -232,16 +232,6 @@ def _run_pairwise_pass(
     print(f"\nPairwise pass complete.")
 
 
-def _t3_rounds_path(user_id: str, topic: str) -> str:
-    slug = re.sub(r"[^a-z0-9]+", "_", topic.lower()).strip("_")
-    return os.path.join(RESULTS_DIR, f"t3_rounds__{user_id}__{slug}.json")
-
-
-def _agent_decisions_path(user_id: str, topic: str) -> str:
-    slug = re.sub(r"[^a-z0-9]+", "_", topic.lower()).strip("_")
-    return os.path.join(RESULTS_DIR, f"agent_decisions__{user_id}__{slug}.json")
-
-
 def _instruction_specificity_path(tier: str, user_id: str, topic: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "_", topic.lower()).strip("_")
     return os.path.join(RESULTS_DIR, f"instruction_specificity__{tier}__{user_id}__{slug}.json")
@@ -320,7 +310,7 @@ def run_evaluation(
     done = 0
 
     print(f"\n{'='*60}")
-    print(f"ExaCraft Ablation Evaluation")
+    print(f"AdaCraft Ablation Evaluation")
     tag_label = f" [{run_tag}]" if run_tag else ""
     print(f"Tiers: {tiers} | Users: {len(profiles)} | Topics: {len(topics)}{tag_label}")
     print(f"Generator: {provider} | Judge: {judge_model}")
@@ -512,33 +502,6 @@ def run_evaluation(
                 completed.add(key)
                 _save_checkpoint(completed)
 
-                if tier == "t3":
-                    # Save round-level data
-                    rounds_record = {
-                        "user_id": user_id, "topic": topic,
-                        "round_pf_scores": round_pf_scores,
-                        "decision_accuracy": decision_accuracy,
-                        "pattern_selectivity": pattern_selectivity,
-                        "rounds": run_result.get("rounds", []),
-                        "timestamp": datetime.now().isoformat(),
-                    }
-                    with open(_t3_rounds_path(user_id, topic), "w") as f:
-                        json.dump(rounds_record, f, indent=2)
-                    # Save agent decisions log
-                    decisions_record = {
-                        "user_id": user_id, "topic": topic,
-                        "decision_accuracy": decision_accuracy,
-                        "pattern_selectivity": pattern_selectivity,
-                        "rounds_summary": [
-                            {"round": r.get("round"), "feedback": r.get("feedback_given", "")[:60],
-                             "agent_action": r.get("agent_action"), "status": r.get("status")}
-                            for r in run_result.get("rounds", []) if r.get("round", 0) > 0
-                        ],
-                        "timestamp": datetime.now().isoformat(),
-                    }
-                    with open(_agent_decisions_path(user_id, topic), "w") as f:
-                        json.dump(decisions_record, f, indent=2)
-
                 print(f"  Saved: {_result_path(tier, user_id, topic)}")
                 time.sleep(delay)
 
@@ -559,7 +522,7 @@ def run_evaluation(
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def _parse_args():
-    parser = argparse.ArgumentParser(description="ExaCraft Ablation Evaluation Runner")
+    parser = argparse.ArgumentParser(description="AdaCraft Ablation Evaluation Runner")
     parser.add_argument("--tiers", nargs="+", default=["t0", "t1", "t2", "t3"],
                         choices=["t0", "t1", "t2", "t3"])
     parser.add_argument("--users", default="0-7",

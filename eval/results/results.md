@@ -1,4 +1,4 @@
-# ExaCraft Evaluation Results
+# AdaCraft Evaluation Results
 
 **Design:** 8 synthetic users (4 profiles x 2 start modes) x 4 topics = 32 cells per tier.
 **Tiers:** T0 (generic), T1 (+profile), T2 (+context instruction), T3 (full feedback loop).
