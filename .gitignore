@@ -25,7 +25,7 @@ data/accept_insights/
 data/learning_patterns/
 user_profiles/*.json
 learning_contexts/*.json
-Research_Paper/
+
 
 
 # IDE / tools

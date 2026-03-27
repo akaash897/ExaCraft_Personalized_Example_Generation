@@ -1,15 +1,15 @@
-# ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples
+# AdaCraft: Iterative Adaptive Personalization of Educational Examples via Agentic Feedback Loops
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.1.1-green.svg)
-![LangChain](https://img.shields.io/badge/LangChain-Latest-orange.svg)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Latest-purple.svg)
+![LangChain](https://img.shields.io/badge/LangChain-Latest-orange.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-yellow.svg)
 ![License](https://img.shields.io/badge/License-MIT-red.svg)
 
-**An AI-powered educational system that generates culturally relevant, personalized examples by adapting to learners' dynamic context in real-time.**
+**An agentic system that generates personalized educational examples and continuously refines them based on natural-language feedback — without explicit rating prompts.**
 
 [🎥 Video Demo](https://youtu.be/w1P3n8qEOdg) • [🚀 Quick Start](#quick-start)
 
@@ -21,11 +21,12 @@
 
 - [Overview](#overview)
 - [System Architecture](#system-architecture)
-- [Personalization Layers](#personalization-layers)
-- [LangGraph Workflow](#langgraph-workflow)
+- [Capability Layers](#capability-layers)
+- [Agentic Workflow](#agentic-workflow)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
 - [API Reference](#api-reference)
+- [Evaluation](#evaluation)
 - [Project Structure](#project-structure)
 - [Publication](#publication)
 - [License](#license)
@@ -36,13 +37,13 @@
 
 ## Overview
 
-ExaCraft is an educational AI system that generates personalized examples by combining three personalization layers:
+AdaCraft is an agentic system that generates contextually grounded educational examples on demand via a Chrome Extension. It addresses a fundamental gap in personalized educational AI: most systems treat personalization as a static, one-shot operation — reading a profile once, generating a response, and stopping. AdaCraft closes this gap through three capability layers:
 
-1. **Static User Profile** — location, education, profession, cultural background, learning style, complexity preference
-2. **Dynamic Learning Context** — real-time behavioral signals (struggle, mastery, recent topics) tracked per-session
-3. **Collaborative Filtering** — effective examples from similar users inform generation for new requests
+1. **Static User Profile** — demographic, professional, and complexity preferences configured once via the extension
+2. **Context Manager Agent** — retrieves and synthesizes cross-session learning patterns into a targeted personalization instruction before each generation
+3. **Adaptive Response Agent** — interprets free-form natural-language feedback and autonomously decides whether to regenerate the example with targeted modifications, record a session insight, or persist a new long-term learning pattern
 
-The system runs as a **Flask REST API** backend and integrates with a **Chrome Extension** (Manifest V3) that lets users highlight text on any webpage and instantly receive a personalized example.
+The system runs as a **Flask REST API** (v5.0.0) backend with a **Chrome Extension** (Manifest V3) frontend. Users interact entirely in natural language — no rating sliders or structured forms required.
 
 ---
 
@@ -50,42 +51,41 @@ The system runs as a **Flask REST API** backend and integrates with a **Chrome E
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        EXACRAFT SYSTEM                          │
+│                         ADACRAFT SYSTEM                         │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │  ┌───────────────────┐        ┌──────────────────────────┐     │
 │  │  Chrome Extension │◄──────►│  Flask API Server        │     │
 │  │  (Manifest V3)    │        │  (localhost:8000)         │     │
 │  │                   │        └────────────┬─────────────┘     │
-│  │  • Text selection │                     │                    │
+│  │  • Concept select │                     │                    │
 │  │  • Profile config │                     ▼                    │
-│  │  • Result overlay │        ┌──────────────────────────┐     │
-│  └───────────────────┘        │  LangGraph Workflow       │     │
-│                               │                          │     │
-│                               │  find_similar_users      │     │
+│  │  • Inline overlay │        ┌──────────────────────────┐     │
+│  │  • NL feedback    │        │  LangGraph Workflow       │     │
+│  └───────────────────┘        │                          │     │
+│                               │  node_load_profile       │     │
 │                               │       ↓                  │     │
-│                               │  generate_example (LLM)  │     │
+│                               │  node_build_context      │     │
+│                               │  (Context Mgr Agent)     │     │
 │                               │       ↓                  │     │
-│                               │  prepare_display         │     │
+│                               │  node_generate (LLM)     │     │
 │                               │       ↓                  │     │
-│                               │  ⏸ interrupt             │     │
-│                               │       ↓ (feedback)       │     │
-│                               │  record_feedback         │     │
+│                               │  node_format_and_save    │     │
 │                               │       ↓                  │     │
-│                               │  record_history          │     │
-│                               │       ↓                  │     │
-│                               │  update_indicators       │     │
-│                               │       ↓                  │     │
-│                               │  calc_thresholds → END   │     │
+│                               │  ⏸ node_user_review      │     │
+│                               │       ↓ (NL feedback)    │     │
+│                               │  node_process_feedback   │     │
+│                               │  (Adaptive Resp. Agent)  │     │
+│                               │  [loop ≤3 cycles / END]  │     │
 │                               └────────────┬─────────────┘     │
 │                                            │                    │
 │                               ┌────────────▼─────────────┐     │
-│                               │  Gemini 2.5 Flash (LLM)  │     │
+│                               │  Gemini / OpenAI (LLM)   │     │
 │                               │  via LangChain LCEL       │     │
 │                               └──────────────────────────┘     │
 │                                                                 │
 │  ┌──────────────────────────────────────────────────────────┐  │
-│  │                   Persistent Storage                      │  │
+│  │                   Persistent Storage (JSON)               │  │
 │  │  user_profiles/     learning_contexts/    data/           │  │
 │  │  {user_id}.json     {user_id}.json        feedback/       │  │
 │  │                                           example_history/ │  │
@@ -95,9 +95,9 @@ The system runs as a **Flask REST API** backend and integrates with a **Chrome E
 
 ---
 
-## Personalization Layers
+## Capability Layers
 
-### 1. Static User Profile
+### Layer 1 — Static User Profile
 
 Configured once via the extension popup and synced to `user_profiles/{user_id}.json`.
 
@@ -112,92 +112,85 @@ Configured once via the extension popup and synced to `user_profiles/{user_id}.j
 | Complexity preference | `simple` / `medium` / `advanced` |
 | Learning style | `theoretical` / `practical` / `visual` |
 
-### 2. Dynamic Learning Context
+### Layer 2 — Context Manager Agent
 
-Tracked in `learning_contexts/{user_id}.json`. Updates automatically on every interaction.
+For returning users, the Context Manager Agent runs before generation. It:
 
-**Struggle detection** (simplifies output):
-- Same topic requested ≥ 3 times, OR
-- ≥ 2 regeneration requests on the same topic within a session
+1. Resolves 1–3 canonical subject tags for the current topic (e.g., `"Newton's Second Law"` → `{physics, mechanics, forces}`)
+2. Queries the user's history via four tools:
 
-**Mastery detection** (increases complexity):
-- ≥ 3 unique topics in the last 5 interactions
+| Tool | Action |
+|---|---|
+| `Get Example By Tag` | Returns recent stored examples filtered by each resolved tag |
+| `Get Linked Feedback` | Drills into a specific example to retrieve linked patterns and insights |
+| `Get Global Signals` | Fallback — returns recent global patterns when no tag-matched history exists |
+| `Emit Instruction` | Terminal action — writes a 2–3 sentence directive into the workflow state |
 
-**Data retention**: last 20 topics, last 10 sessions, entries older than 7 days are auto-purged.
+3. Emits a targeted instruction (e.g., *"Use medical equipment analogies. This user struggles with abstract formulas; ground all quantities in clinical measurements."*) passed to the generation node
 
-### 3. Collaborative Filtering
+A **domain-bleed guard** suppresses patterns whose subject tags share no overlap with the current topic, preventing unrelated prior sessions from contaminating the instruction.
 
-On each generation request, the system:
-1. Finds up to 5 similar users (minimum 30% similarity) using a weighted profile comparison across 8 dimensions:
+First-time users bypass this step entirely — the cold-start path goes directly to generation.
 
-   | Dimension | Weight |
-   |---|---|
-   | Education level | 20% |
-   | Profession | 15% |
-   | Complexity preference | 15% |
-   | Learning style | 15% |
-   | Cultural background | 10% |
-   | Location | 10% |
-   | Age range | 10% |
-   | Interests | 5% |
+### Layer 3 — Adaptive Response Agent
 
-2. Retrieves up to 3 effective examples (≥ 50% effectiveness score) those users received for the same topic
-3. Injects them into the LLM prompt as inspiration — patterns are adapted, not copied
+After the user submits natural-language feedback, the Adaptive Response Agent selects from three tools:
 
-Effectiveness scores are computed from user feedback collected via the LangGraph workflow interrupt.
+| Tool | Action |
+|---|---|
+| `Regenerate Example` | Triggers regeneration with a targeted rewrite directive; routes back to generation (up to 3 cycles) |
+| `Accept Example` | Logs positive/neutral feedback as a session insight for future context retrieval |
+| `Flag Pattern` | Persists a new long-term learning trait that influences all future sessions |
 
-### Personalization Hierarchy
+The agent can call multiple tools per turn. For example, *"too abstract, I'm a nurse"* triggers both `Regenerate Example` (with a clinical framing instruction) and `Flag Pattern` (records the professional domain preference).
 
-The LLM applies factors in this strict order:
+### Prompt Assembly Order
 
 ```
-1. Dynamic learning context  (struggle / mastery / recent topics)
-2. Collaborative insights     (effective patterns from similar users)
-3. Cultural personalization   (location, background)
-4. Professional relevance
+1. Profile summary           (from node_load_profile)
+2. Context Manager instruction (from node_build_context, if returning user)
+3. Regeneration instruction  (from prior Adaptive Response Agent call, if looping)
 ```
 
 ---
 
-## LangGraph Workflow
+## Agentic Workflow
 
-The full feedback-loop pipeline runs as a **stateful LangGraph graph** with an interrupt for human-in-the-loop feedback collection.
+AdaCraft's core is a six-node LangGraph graph with a human-in-the-loop interrupt.
 
 ```
 START
   │
   ▼
-node_00_find_similar_users       Find top-5 similar users; fetch their effective
-  │                              examples for the topic (collaborative filtering)
+node_load_profile        Load profile from user_profiles/{user_id}.json →
+  │                      produce profile_summary.
+  │                      eval_mode=t0: skips profile (generic baseline).
   ▼
-node_01_generate_example         LLM call with profile + learning context +
-  │                              CF examples (if any). Tracks feedback_influence.
+node_build_context       Resolve topic tags → invoke Context Manager Agent →
+  │                      produce context_instruction.
+  │                      First-time users: red branch → skip directly to generate.
+  │                      Returning users: green branch → agent runs.
+  │                      eval_mode t0/t1: skipped entirely.
   ▼
-node_02_prepare_display          Format example and build display metadata
-  │
+node_generate            LLM call: profile_summary + context_instruction +
+  │                      regeneration_instruction (if looping, cleared after use).
   ▼
-node_03_interrupt_for_feedback   ⏸ PAUSE — returns example to caller with
-  │                              thread_id. Awaits difficulty/clarity/usefulness
-  │                              ratings (1–5) via /workflows/<thread_id>/resume
-  ▼  (resumed with ratings)
-node_04_record_feedback          Write ratings to FeedbackManager
-  │
+node_format_and_save     Save example to ExampleHistory with subject tags,
+  │                      profile snapshot, and session metadata.
   ▼
-node_04b_record_example_history  Save example + effectiveness to ExampleHistory
-  │                              (feeds future collaborative filtering)
-  ▼
-node_05_update_indicators        If difficulty ≥ 4, record struggle signal on
-  │                              LearningContext
-  ▼
-node_06_calc_thresholds          Recalculate adaptive struggle/mastery thresholds
-  │                              from full feedback history
-  ▼
-node_07_store_thresholds         Mark workflow complete
+node_user_review         ⏸ PAUSE — return example + thread_id to caller.
+  │                      Await natural-language feedback via
+  │                      POST /workflows/<thread_id>/resume
+  ▼  (resumed with user_feedback_text)
+node_process_feedback    No feedback / acceptance → END (green branch).
+  │                      Feedback present → invoke Adaptive Response Agent (red branch).
+  │                      regenerate=True: loop back to node_generate (max 3×)
+  │                      accept/flag_pattern: write to feedback_store → END
   │
  END
 ```
 
-**Thread management**: each workflow run gets a unique `thread_id`. State is checkpointed via `MemorySaver` by default (configurable to Postgres or SQLite via `CHECKPOINT_TYPE` env var).
+**State persistence**: in-session state is checkpointed by LangGraph's `MemorySaver`, keyed by `thread_id`. Cross-session data is stored in three per-user JSON structures: feedback history, learning patterns (persistent traits), and accepted insights (capped at 50 entries to prevent context overflow).
 
 ---
 
@@ -207,20 +200,25 @@ node_07_store_thresholds         Mark workflow complete
 
 - Python 3.8+
 - Google Chrome
-- Gemini API key — [Get one here](https://ai.google.dev/)
+- At least one LLM API key:
+  - Gemini: [ai.google.dev](https://ai.google.dev/)
+  - OpenAI: [platform.openai.com](https://platform.openai.com/)
 
 ### Setup
 
 ```bash
 # 1. Clone
-git clone https://github.com/yourusername/ExaCraft.git
-cd ExaCraft
+git clone https://github.com/yourusername/AdaCraft.git
+cd AdaCraft
 
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Configure API key
-echo "GEMINI_API_KEY=your_key_here" > .env
+# 3. Configure environment
+# Create a .env file:
+GEMINI_API_KEY=your_gemini_key_here
+OPENAI_API_KEY=your_openai_key_here    # optional
+DEFAULT_LLM_PROVIDER=gemini            # gemini | openai
 
 # 4. Start the server
 python api_server.py
@@ -232,9 +230,9 @@ python api_server.py
 1. Go to `chrome://extensions/`
 2. Enable **Developer mode**
 3. Click **Load unpacked**
-4. Select the `D:\MTP` repository root directory
+4. Select the repository root directory
 
-> **Note**: The extension files (`manifest.json`, `background.js`, `content.js`, `popup.html`, `popup.js`) must be in the directory you load. Do not load a subdirectory.
+> **Note**: `manifest.json`, `background.js`, `content.js`, `popup.html`, and `popup.js` must all be in the loaded directory root.
 
 ---
 
@@ -244,11 +242,11 @@ All settings are in `config/settings.py` and overridable via environment variabl
 
 | Env Variable | Default | Description |
 |---|---|---|
-| `GEMINI_API_KEY` | — | Required. Gemini API key |
-| `OPENAI_API_KEY` | — | Optional. Enables OpenAI provider |
+| `GEMINI_API_KEY` | — | Required if using Gemini provider |
+| `OPENAI_API_KEY` | — | Required if using OpenAI provider |
 | `DEFAULT_LLM_PROVIDER` | `gemini` | `gemini` or `openai` |
 | `GEMINI_MODEL` | `gemini-2.5-flash` | Gemini model name |
-| `OPENAI_MODEL` | `gpt-4o-mini` | OpenAI model name |
+| `OPENAI_MODEL` | `gpt-5-nano` | OpenAI model name |
 | `LLM_TEMPERATURE` | `0.3` | Generation temperature |
 | `LLM_MAX_TOKENS` | `2048` | Max output tokens |
 | `API_PORT` | `8000` | Flask server port |
@@ -263,204 +261,229 @@ All settings are in `config/settings.py` and overridable via environment variabl
 
 All endpoints return JSON. Success: `{"success": true, ...}`. Error: `{"success": false, "error": "..."}`.
 
-### Generation
-
-#### `POST /generate-adaptive-example`
-Generate with dynamic learning context (static personalization + behavior signals).
-```json
-{
-  "topic": "recursion",
-  "user_id": "john_doe",
-  "user_profile": { "name": "...", "location": "...", "education": "...", "profession": "...", "complexity": "medium" }
-}
-```
-
-#### `POST /generate-example`
-Generate with static profile only (no learning context).
-```json
-{
-  "topic": "recursion",
-  "user_profile": { ... }
-}
-```
-
-#### `POST /generate-collaborative-example`
-Full generation with collaborative filtering + learning context.
-```json
-{
-  "topic": "recursion",
-  "user_id": "john_doe",
-  "user_profile": { ... },
-  "use_collaborative_filtering": true
-}
-```
-
 ---
 
-### LangGraph Workflow (Feedback Loop)
+### Workflow (Feedback Loop)
 
 #### `POST /workflows/feedback/start`
-Start the full feedback-loop workflow. Returns example + `thread_id`.
+
+Start a new generation workflow. Returns the example and a `thread_id` for follow-up.
+
 ```json
 {
   "user_id": "john_doe",
-  "topic": "recursion",
-  "mode": "adaptive",
-  "use_collaborative_filtering": true
+  "topic": "Newton's Second Law",
+  "provider": "openai"
 }
 ```
-Response includes `thread_id`, `generated_example`, `feedback_influence`, `similar_users`, `collaborative_metadata`.
 
-#### `POST /workflows/<thread_id>/resume`
-Resume a paused workflow with user feedback ratings.
+Response:
 ```json
 {
-  "difficulty_rating": 3,
-  "clarity_rating": 4,
-  "usefulness_rating": 5
+  "success": true,
+  "thread_id": "abc-123",
+  "generated_example": "...",
+  "status": "awaiting_feedback"
+}
+```
+
+#### `POST /workflows/<thread_id>/resume`
+
+Resume a paused workflow with natural-language feedback. Pass an empty string to accept and complete.
+
+```json
+{
+  "user_feedback_text": "Too abstract — can you use a cooking analogy?"
+}
+```
+
+Response when regenerating:
+```json
+{
+  "status": "awaiting_feedback",
+  "regeneration_requested": true,
+  "generated_example": "...",
+  "thread_id": "abc-123"
+}
+```
+
+Response when complete:
+```json
+{
+  "status": "completed",
+  "feedback_processed": true
 }
 ```
 
 #### `GET /workflows/<thread_id>/state`
+
 Get current state of a workflow thread.
 
 #### `DELETE /workflows/<thread_id>`
-Delete/cancel a workflow thread.
+
+Cancel and delete a workflow thread.
 
 #### `GET /workflows`
+
 List all active workflow threads.
-
----
-
-### Learning Context
-
-#### `GET /get-learning-context?user_id=john_doe`
-Get full learning context (recent topics, struggle/mastery indicators, session history).
-
-#### `POST /start-learning-session`
-```json
-{ "user_id": "john_doe" }
-```
-
-#### `POST /end-learning-session`
-```json
-{ "user_id": "john_doe" }
-```
-
-#### `GET /get-session-status?user_id=john_doe`
-
-#### `POST /record-struggle-signal`
-```json
-{ "user_id": "john_doe", "topic": "recursion", "signal_type": "regeneration_requested" }
-```
-
----
-
-### Collaborative Filtering
-
-#### `POST /find-similar-users`
-```json
-{ "user_id": "john_doe", "top_k": 5, "min_similarity": 0.3 }
-```
-
-#### `GET /example-history/effective-examples?user_id=john_doe&topic=recursion`
-
-#### `POST /example-history/record-feedback`
-```json
-{ "user_id": "john_doe", "example_id": "ex_abc123", "accepted": true, "regeneration_requested": false }
-```
-
-#### `GET /example-history/statistics?user_id=john_doe`
 
 ---
 
 ### Profile & Utilities
 
 #### `POST /sync-profile`
-Sync extension profile (flat format) to server filesystem.
+
+Sync an extension profile (flat key format) to the server filesystem.
+
 ```json
-{ "profile": { "name": "...", "user_id": "...", ... } }
+{
+  "profile": {
+    "name": "Priya Sharma",
+    "user_id": "priya_sharma",
+    "location": "Chennai",
+    "education": "professional",
+    "profession": "Nurse",
+    "cultural_background": "South Indian",
+    "learning_style": "practical",
+    "complexity": "simple"
+  }
+}
 ```
 
 #### `POST /validate-profile`
-```json
-{ "profile": { ... } }
-```
+
+Validate a profile object without saving it.
 
 #### `GET /health`
-Server health check and endpoint listing.
+
+Server health check with endpoint listing and workflow manager status.
 
 #### `GET /api-info`
-Provider info, model config, enabled phases.
 
-#### `GET /test-example`
-Quick test generation (GET, no body required).
+Provider info, model config, and full Adaptive Response Agent documentation.
+
+---
+
+## Evaluation
+
+AdaCraft is evaluated via a **four-tier ablation protocol** that isolates each capability layer's independent contribution, paired with **three feedback-loop convergence metrics** that characterize how the system improves across a session.
+
+### Ablation Tiers
+
+| Tier | Profile | Context Mgr | Feedback & Patterns |
+|---|---|---|---|
+| T0: Generic LLM | — | — | — |
+| T1: T0 + Profile | ✓ | — | — |
+| T2: T1 + Context Manager | ✓ | ✓ | — |
+| T3: Full AdaCraft | ✓ | ✓ | ✓ |
+
+### Five-Axis Rubric
+
+Each example is scored 1–5 on five axes by an LLM judge (G-Eval chain-of-thought + Prometheus 2 rubric injection):
+
+| Axis | Weight | Description |
+|---|---|---|
+| Personalization Fidelity (PF) | 0.20 | Reflects cultural background, occupation, and domain |
+| Complexity Calibration (CC) | 0.20 | Depth and vocabulary match requested complexity |
+| Conceptual Accuracy (CA) | 0.30 | Factually and logically correct |
+| Pedagogical Clarity (PC) | 0.20 | Clear, structured, and learner-friendly |
+| Domain Appropriateness (DA) | 0.10 | Stays within user's domain without cross-domain bleed |
+
+Composite: `C = 0.20·PF + 0.20·CC + 0.30·CA + 0.20·PC + 0.10·DA`
+
+### Feedback-Loop Convergence Metrics
+
+| Metric | Definition |
+|---|---|
+| **FCR** (Feedback Compliance Rate) | Fraction of regenerations that correctly address the prior critique (reported at @3 and @4 thresholds) |
+| **LUR** (Loop Utilization Rate) | Fraction of T3 sessions where the agent triggered at least one regeneration in response to a complaint |
+| **PPU** (Pattern Persistence Utilization) | Mean PF delta between warm-start T3 and warm-start T1 on the *initial* generation — measures whether stored patterns improve first-generation quality |
+
+### Results Summary
+
+| Run | T0 | T1 | T2 | T3 | T0→T3 Δ |
+|---|---|---|---|---|---|
+| DeepSeek V3.2 | 4.257 | 4.809 | 4.859 | 4.888 | +0.631 |
+| GPT-5-nano | 3.712 | 4.388 | 4.791 | 4.981 | +1.269 |
+
+FCR@4 ≥ 0.891 and LUR ≥ 0.938 across both providers. Inter-judge Cohen's κ ≥ 0.607 (GPT-4.1-nano vs. Llama 3.3 70B on 20% subsample).
+
+Evaluation scripts are in the `eval/` directory. Run:
+
+```bash
+python eval/seed_warm_start.py           # seed warm-start users first
+python eval/run_evaluation.py --run-tag myrun
+python eval/analysis.py --results-dir eval/results/myrun --output-dir eval/figures/myrun
+```
 
 ---
 
 ## Project Structure
 
 ```
-ExaCraft/
+AdaCraft/
 │
-├── api_server.py                  # Flask REST API — all endpoints
+├── api_server.py                  # Flask REST API — all endpoints (v5.0.0)
 ├── manifest.json                  # Chrome extension manifest (V3)
 ├── background.js                  # Extension service worker
-├── content.js                     # Extension content script (result overlay)
+├── content.js                     # Extension content script (inline overlay)
 ├── popup.html / popup.js          # Extension popup (profile configuration)
 │
 ├── core/
-│   ├── example_generator.py       # ExampleGenerator — LLM chain + all generation methods
+│   ├── workflow_graphs.py         # LangGraph graph builder (build_primary_agent_graph)
+│   ├── workflow_nodes.py          # 6 node implementations
+│   ├── workflow_manager.py        # WorkflowManager — thread lifecycle (start / resume)
+│   ├── workflow_state.py          # TypedDict state schema (PersonalizedGenerationState)
+│   ├── adaptive_response_agent.py # Adaptive Response Agent — 3 tools
+│   ├── context_manager_agent.py   # Context Manager Agent — 4 tools
+│   ├── feedback_store.py          # Module-level functions — patterns + accept insights
+│   ├── example_generator.py       # ExampleGenerator + profile validation helpers
 │   ├── user_profile.py            # UserProfile — static profile load/save/summary
-│   ├── learning_context.py        # LearningContext — session tracking, struggle/mastery detection
-│   ├── feedback_manager.py        # FeedbackManager — ratings storage + adaptive thresholds
-│   ├── user_similarity.py         # UserSimilarity — weighted profile similarity for CF
-│   ├── example_history.py         # ExampleHistory — example records + effectiveness scoring
+│   ├── learning_context.py        # LearningContext — session tracking, struggle/mastery
+│   ├── example_history.py         # ExampleHistory — example records + tag indexing
+│   ├── subject_tag_metadata.py    # Canonical subject tag taxonomy
 │   ├── llm_provider.py            # LLMProviderFactory — Gemini / OpenAI abstraction
-│   ├── workflow_graphs.py         # LangGraph graph builders
-│   ├── workflow_nodes.py          # LangGraph node implementations
-│   ├── workflow_manager.py        # WorkflowManager — thread lifecycle, start/resume
-│   ├── workflow_state.py          # TypedDict state schemas
-│   ├── phase2/                    # Reserved for Phase 2 features
-│   ├── phase3/                    # Reserved for Phase 3 features
 │   └── utils/
 │       └── validators.py          # Request validation helpers
+│
+├── eval/
+│   ├── run_evaluation.py          # Main evaluation runner (--run-tag namespaces results)
+│   ├── analysis.py                # Full stats: Friedman, Wilcoxon, FCR/LUR/PPU, Cohen's κ
+│   ├── baseline_runners.py        # T0–T3 tier runners
+│   ├── seed_warm_start.py         # Seeds warm-start users before eval runs
+│   ├── synthetic_profiles.py      # 8 synthetic users × 4 topics
+│   └── llm_judge.py               # LLM-as-judge scoring (GPT-4.1-nano + Llama 3.3 70B)
 │
 ├── config/
 │   └── settings.py                # All configuration + env variable loading
 │
 ├── data/
-│   ├── feedback/                  # Per-user feedback history
-│   ├── example_history/           # Per-user generated example records
-│   └── similarity_cache.json      # Cached similarity scores
+│   ├── feedback/                  # Per-user learning patterns + accept insights
+│   └── example_history/           # Per-user generated example records
 │
 ├── user_profiles/                 # Per-user static profile JSON files
 ├── learning_contexts/             # Per-user dynamic learning context JSON files
-├── logs/                          # Server logs
-│
+├── Research_Paper/                # LaTeX paper source
 ├── requirements.txt               # Python dependencies
 ├── .env                           # API keys (gitignored)
-├── CLAUDE.md                      # Codebase guidance for Claude Code
-└── README.md                      # This file
+└── CLAUDE.md                      # Codebase guidance for Claude Code
 ```
 
 ---
 
 ## Publication
 
-**Title**: ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples
+**Title**: AdaCraft: Iterative Adaptive Personalization of Educational Examples via Agentic Feedback Loops
 
 **Authors**: Akaash Chatterjee, Suman Kundu
 
 **Affiliation**: Indian Institute of Technology Jodhpur
 
-**Conference**: ACM India Joint International Conference on Data Science and Management of Data (CODS-COMAD 2025) — Demo Track
-
 **Video Demo**: [https://youtu.be/w1P3n8qEOdg](https://youtu.be/w1P3n8qEOdg)
 
 ### Abstract
 
-ExaCraft presents a novel approach to generating personalized educational examples through a hybrid personalization framework combining static user profiles with dynamic learning context adaptation and collaborative filtering. The system implements a three-component architecture consisting of a Chrome browser extension, Flask API server, and a stateful LangGraph workflow with human-in-the-loop feedback collection. Real-time behavioral analytics detect struggle indicators and mastery patterns, automatically adjusting example complexity while maintaining cultural and professional relevance. Collaborative filtering leverages example effectiveness data from similar users to further improve generation quality. Cross-session continuity enables long-term learning progression tracking with persistent context retention.
+AdaCraft is an agentic system that generates personalized educational examples through a multi-agent LangGraph workflow and continuously refines them based on natural-language feedback. The system operates through three capability layers: (1) a static user profile capturing demographic and complexity preferences, (2) a Context Manager Agent that retrieves historical learning patterns and synthesizes them into a targeted personalization instruction before each generation, and (3) an Adaptive Response Agent that interprets free-form user feedback and autonomously decides whether to regenerate the example, record a session insight, or persist a new long-term learning pattern. Evaluated via a four-tier ablation protocol (T0: generic baseline, T1: +profile, T2: +context manager, T3: full system) across two generator configurations (DeepSeek V3.2 and GPT-5-nano), the full system improves over the generic baseline by up to +1.269 composite points, with FCR@4 ≥ 0.891 and LUR ≥ 0.938 across both providers.
 
 ---
 
@@ -473,13 +496,10 @@ MIT License — Copyright (c) 2025 Akaash Chatterjee, Suman Kundu
 ## Citation
 
 ```bibtex
-@inproceedings{chatterjee2025exacraft,
-  title={ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples},
+@article{chatterjee2025adacraft,
+  title={AdaCraft: Iterative Adaptive Personalization of Educational Examples via Agentic Feedback Loops},
   author={Chatterjee, Akaash and Kundu, Suman},
-  booktitle={Proceedings of the ACM India Joint International Conference on Data Science and Management of Data (CODS-COMAD)},
-  year={2025},
-  organization={ACM},
-  note={Demo Track}
+  year={2025}
 }
 ```
 
@@ -495,6 +515,6 @@ MIT License — Copyright (c) 2025 Akaash Chatterjee, Suman Kundu
 
 <div align="center">
 
-[⬆ Back to Top](#exacraft-dynamic-learning-context-adaptation-for-personalized-educational-examples)
+[⬆ Back to Top](#adacraft-iterative-adaptive-personalization-of-educational-examples-via-agentic-feedback-loops)
 
 </div>
