@@ -4,25 +4,24 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.1.1-green.svg)
-![LangChain](https://img.shields.io/badge/LangChain-Latest-orange.svg)
+![LangChain](https://img.shields.io/badge/LangChain-integrated-orange.svg)
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-yellow.svg)
 ![License](https://img.shields.io/badge/License-MIT-red.svg)
 
 **An AI-powered educational system that generates culturally relevant, personalized examples by adapting to learners' dynamic context in real-time.**
 
-[🎥 Video Demo](https://youtu.be/w1P3n8qEOdg) • [📄 Research Paper](https://github.com/yourusername/ExaCraft) • [🚀 Quick Start](#quick-start) • [📚 Documentation](#documentation)
+[Video Demo](https://youtu.be/w1P3n8qEOdg) • [Research Paper](https://dl.acm.org/doi/10.1145/3799830.3799858) • [Installation](#installation) • [Documentation](./DOCS)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [Demo](#demo)
 - [System Architecture](#system-architecture)
-- [Quick Start](#quick-start)
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Reference](#api-reference)
@@ -34,44 +33,46 @@
 - [License](#license)
 - [Citation](#citation)
 - [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
 ---
 
-## 🎯 Overview
+## Overview
 
-ExaCraft is an innovative educational AI system that revolutionizes how learners receive personalized examples. Unlike traditional static personalization, ExaCraft implements a **hybrid personalization framework** that combines:
+ExaCraft is an educational AI system that generates personalized examples for learners. Unlike traditional static personalization, ExaCraft implements a **hybrid personalization framework** that combines:
 
 - **Static Profiles**: User-configured preferences (location, education, profession, complexity)
 - **Dynamic Behavioral Adaptation**: Real-time analysis of learning patterns, struggle indicators, and mastery signals
 
-The system seamlessly integrates into web browsing workflows via a Chrome extension, providing zero-disruption example generation while continuously adapting to learning behavior across multiple sessions.
+The system integrates into web browsing workflows via a Chrome extension, providing zero-disruption example generation while continuously adapting to learning behavior across multiple sessions.
 
-## ✨ Key Features
+## Key Features
 
-### 🎓 Hybrid Personalization Framework
-Combines user-configured static profiles with dynamic behavioral adaptation for truly personalized learning experiences.
+### Hybrid Personalization Framework
+Combines user-configured static profiles with dynamic behavioral adaptation for personalized learning experiences.
 
-### 📊 Real-time Learning Analytics
+### Real-time Learning Analytics
 Continuously monitors interaction patterns to detect:
 - **Struggle Indicators**: Topic repetition patterns (≥3x), regeneration requests
 - **Mastery Signals**: Quick progression through diverse topics
 - **Learning Velocity**: Cross-session progression tracking
 
-### 🌍 Cultural & Professional Relevance
-Generates examples tailored to user's:
+### Cultural & Professional Relevance
+Generates examples tailored to the user's:
 - Geographical location and cultural background
 - Educational background and complexity preferences
 - Professional context and domain expertise
 
-### 🔄 Cross-session Continuity
-Maintains personalization patterns across multiple browsing sessions for long-term learning progressions with 7-day context retention.
+### Cross-session Continuity
+Maintains personalization patterns across multiple browsing sessions for long-term learning progressions, with 7-day context retention.
 
-### ⚡ Zero-disruption Workflow
-Seamless Chrome extension integration with right-click context menus and profile management.
+### Zero-disruption Workflow
+Chrome extension integration with right-click context menus and profile management.
 
 ---
 
-## 🎥 Demo
+## Demo
 
 [![ExaCraft Demo](https://img.youtube.com/vi/w1P3n8qEOdg/maxresdefault.jpg)](https://youtu.be/w1P3n8qEOdg)
 
@@ -79,7 +80,7 @@ Seamless Chrome extension integration with right-click context menus and profile
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ExaCraft consists of three integrated components:
 
@@ -115,18 +116,18 @@ ExaCraft consists of three integrated components:
 
 ### Components
 
-1. **🌐 Browser Extension** (Chrome/Manifest V3)
+1. **Browser Extension** (Chrome / Manifest V3)
    - Context menu integration for text selection
    - Profile configuration popup interface
    - Real-time example display overlay
 
-2. **🔧 Flask API Server** (Python)
+2. **Flask API Server** (Python)
    - RESTful backend service
    - Google Gemini AI integration via LangChain
    - Behavioral analytics processing
    - Session and context management
 
-3. **🧠 Learning Context Engine**
+3. **Learning Context Engine**
    - Dynamic behavior tracking
    - Struggle/mastery pattern detection
    - Cross-session continuity
@@ -134,48 +135,22 @@ ExaCraft consists of three integrated components:
 
 ---
 
-## 🚀 Quick Start
+## Installation
 
 ### Prerequisites
 
 - Python 3.8 or higher
 - Google Chrome browser
-- Google Gemini API key ([Get one here](https://ai.google.dev/))
+- Google Gemini API key ([get one here](https://ai.google.dev/))
 
-### Installation in 3 Steps
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/ExaCraft.git
-   cd ExaCraft
-   ```
-
-2. **Install dependencies & configure**
-   ```bash
-   pip install -r requirements.txt
-
-   # Create .env file with your API key
-   echo "GEMINI_API_KEY=your_api_key_here" > .env
-   ```
-
-3. **Start the server**
-   ```bash
-   python api_server.py
-   ```
-   Server will start on `http://localhost:8000`
-
----
-
-## 📦 Installation
-
-### Step 1: Clone the Repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/ExaCraft.git
+git clone https://github.com/akaash897/ExaCraft.git
 cd ExaCraft
 ```
 
-### Step 2: Install Python Dependencies
+### 2. Install Python dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -186,46 +161,39 @@ pip install -r requirements.txt
 - `langchain-google-genai` - Google Gemini integration
 - `python-dotenv` - Environment variable management
 - `flask` - Web framework
-- `flask-cors` - CORS support for extension
+- `flask-cors` - CORS support for the extension
 
-### Step 3: Configure Environment Variables
+### 3. Configure environment variables
 
 Create a `.env` file in the root directory:
 
 ```bash
-GEMINI_API_KEY=your_gemini_api_key_here
+echo "GEMINI_API_KEY=your_api_key_here" > .env
 ```
 
-**Getting your API key:**
-1. Visit [Google AI Studio](https://ai.google.dev/)
-2. Sign in with your Google account
-3. Generate an API key
-4. Copy and paste into `.env` file
+To get an API key: visit [Google AI Studio](https://ai.google.dev/), sign in with your Google account, generate a key, and paste it into the `.env` file.
 
-### Step 4: Install Chrome Extension
+### 4. Start the API server
 
-1. Start the API server:
-   ```bash
-   python api_server.py
-   ```
+```bash
+python api_server.py
+```
 
-2. Open Chrome and navigate to `chrome://extensions/`
+The server starts on `http://localhost:8000`. It must be running for both the extension and the CLI to work.
 
-3. Enable **Developer mode** (toggle in top-right corner)
+### 5. Install the Chrome extension
 
-4. Click **"Load unpacked"**
-
-5. Select the ExaCraft repository directory
-
-6. The extension icon should appear in your Chrome toolbar
+1. Open Chrome and navigate to `chrome://extensions/`
+2. Enable **Developer mode** (toggle in the top-right corner)
+3. Click **Load unpacked**
+4. Select the ExaCraft repository directory
+5. The extension icon should appear in your Chrome toolbar
 
 ---
 
-## 💻 Usage
+## Usage
 
-### 🖥️ API Server
-
-Start the Flask backend server:
+### API Server
 
 ```bash
 python api_server.py
@@ -233,14 +201,12 @@ python api_server.py
 
 **Output:**
 ```
-🚀 Starting AI Example Generator API Server...
-📡 Server will run on http://localhost:8000
-✅ Example Generator initialized successfully
+Starting AI Example Generator API Server...
+Server will run on http://localhost:8000
+Example Generator initialized successfully
 ```
 
-The server must be running for both the extension and CLI to function.
-
-### 🔧 CLI Application
+### CLI Application
 
 Run the interactive command-line interface:
 
@@ -264,42 +230,34 @@ Education level: graduate
 Profession: Software Engineer
 Preferred example complexity: advanced
 
-📝 Enter topic: machine learning
-🤖 Generating personalized example for: machine learning
+Enter topic: machine learning
+Generating personalized example for: machine learning
 ============================================================
 [Personalized example appears here...]
 ============================================================
 ```
 
-### 🌐 Browser Extension
+### Browser Extension
 
-1. **Configure Your Profile**
+1. **Configure your profile**
    - Click the ExaCraft extension icon
-   - Fill in your profile information:
-     - Name
-     - Location
-     - Education level
-     - Profession
-     - Preferred complexity
+   - Fill in your profile information: name, location, education level, profession, preferred complexity
    - Click "Save Profile"
 
-2. **Generate Examples**
+2. **Generate examples**
    - Highlight any text on a webpage
-   - Right-click → Select "Generate Example with AI"
+   - Right-click and select "Generate Example with AI"
    - A personalized example appears in an overlay
    - Click "Regenerate" for alternative examples
    - Examples adapt based on your interaction patterns
 
-3. **Track Learning Progress**
-   - The system automatically tracks:
-     - Topics you explore
-     - Areas where you struggle (repeated requests)
-     - Topics you master quickly
+3. **Track learning progress**
+   - The system automatically tracks topics you explore, areas where you struggle (repeated requests), and topics you master quickly
    - Complexity adjusts automatically based on behavior
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 ### Base URL
 ```
@@ -406,11 +364,11 @@ Content-Type: application/json
   "profile": { ... }
 }
 ```
-Syncs extension profile to file system for CLI access.
+Syncs the extension profile to the file system for CLI access.
 
 ### Response Format
 
-All endpoints return JSON with standard structure:
+All endpoints return JSON with a standard structure:
 
 ```json
 {
@@ -431,28 +389,28 @@ Error responses:
 
 ---
 
-## 🧠 Dynamic Learning Context
+## Dynamic Learning Context
 
-ExaCraft's core innovation lies in its ability to adapt to five key aspects of learning context:
+ExaCraft's core idea is adapting to five key aspects of learning context.
 
-### 1. 📉 Indicators of Struggle
+### 1. Indicators of Struggle
 
 **Detection:**
-- Topic repetition patterns (≥3 requests for same topic)
+- Topic repetition patterns (≥3 requests for the same topic)
 - "Regenerate" button clicks
-- Prolonged session on single concept
+- Prolonged session on a single concept
 
 **Adaptation:**
 - Reduces example complexity
 - Uses more concrete, visual analogies
-- Builds confidence with encouraging tone
+- Builds confidence with an encouraging tone
 - Connects to previously mastered topics
 - Breaks concepts into smaller steps
 
-### 2. 📈 Mastery Patterns
+### 2. Mastery Patterns
 
 **Detection:**
-- Quick progression through diverse topics (≥3 different topics in 5 interactions)
+- Quick progression through diverse topics (≥3 different topics)
 - Short session duration per topic
 - Minimal regeneration requests
 
@@ -462,7 +420,7 @@ ExaCraft's core innovation lies in its ability to adapt to five key aspects of l
 - Makes connections between multiple topics
 - Challenges appropriately with edge cases
 
-### 3. 📚 Topic Progression History
+### 3. Topic Progression History
 
 **Tracking:**
 - Timestamped interaction sequences
@@ -472,9 +430,9 @@ ExaCraft's core innovation lies in its ability to adapt to five key aspects of l
 **Usage:**
 - Builds directly on recent topics
 - Makes explicit connections to prior learning
-- Uses learning journey as foundation
+- Uses the learning journey as a foundation
 
-### 4. ⏱️ Session Boundaries
+### 4. Session Boundaries
 
 **Management:**
 - Tracks session start/end times
@@ -482,10 +440,10 @@ ExaCraft's core innovation lies in its ability to adapt to five key aspects of l
 - Calculates duration and topic count
 - Persists across sessions (7-day retention)
 
-### 5. 🎯 Learning Progression Signals
+### 5. Learning Progression Signals
 
-**Multi-signal Analysis:**
-- Combines struggle + mastery indicators
+**Multi-signal analysis:**
+- Combines struggle and mastery indicators
 - Analyzes session patterns
 - Adjusts in real-time
 - Preserves cultural relevance throughout
@@ -506,40 +464,39 @@ This ensures behavioral adaptation takes precedence over static preferences.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ExaCraft/
-├── 📂 core/
+├── core/
 │   ├── __init__.py
 │   └── example_generator.py      # Core business logic
 │       ├── ExampleGenerator       # AI generation class
 │       ├── UserProfile            # Profile management
 │       └── LearningContext        # Behavior tracking
 │
-├── 📂 learning_contexts/          # Dynamic behavior storage
+├── learning_contexts/             # Dynamic behavior storage
 │   └── {user_id}.json             # Per-user context files
 │
-├── 📂 user_profiles/              # Static profile storage
+├── user_profiles/                 # Static profile storage
 │   └── {user_id}.json             # Per-user profile files
 │
-├── 📂 DOCS/                       # Documentation files
+├── DOCS/                          # Documentation files
 │
-├── 🐍 api_server.py               # Flask REST API
-├── 🐍 cli_app.py                  # Command-line interface
-├── 🐍 setup.py                    # Package setup
+├── api_server.py                  # Flask REST API
+├── cli_app.py                     # Command-line interface
+├── setup.py                       # Package setup
 │
-├── 🔧 manifest.json               # Chrome extension manifest
-├── 📜 background.js               # Extension service worker
-├── 📜 content.js                  # Extension content script
-├── 🎨 popup.html                  # Extension popup UI
-├── 📜 popup.js                    # Popup logic
+├── manifest.json                  # Chrome extension manifest
+├── background.js                  # Extension service worker
+├── content.js                     # Extension content script
+├── popup.html                     # Extension popup UI
+├── popup.js                       # Popup logic
 │
-├── 📋 requirements.txt            # Python dependencies
-├── 🔒 .env                        # Environment variables (gitignored)
-├── 📖 README.md                   # This file
-├── 📖 CLAUDE.md                   # Claude Code guidance
-└── 📄 LICENSE                     # MIT License
+├── requirements.txt               # Python dependencies
+├── .env                           # Environment variables (gitignored)
+├── README.md                      # This file
+└── LICENSE                        # MIT License
 ```
 
 ### Key Files
@@ -547,40 +504,40 @@ ExaCraft/
 | File | Purpose |
 |------|---------|
 | `core/example_generator.py` | Main business logic with ExampleGenerator, UserProfile, and LearningContext classes |
-| `api_server.py` | Flask REST API with 11 endpoints for generation and tracking |
+| `api_server.py` | Flask REST API with 10 endpoints for generation and tracking |
 | `cli_app.py` | Interactive CLI with profile setup wizard |
 | `background.js` | Extension service worker handling context menu and API calls |
 | `content.js` | Content script for displaying results on webpages |
-| `popup.html/js` | Extension popup for profile configuration |
+| `popup.html` / `popup.js` | Extension popup for profile configuration |
 
 ---
 
-## 🔬 Research Contributions
+## Research Contributions
 
-ExaCraft makes the following key contributions to educational AI research and practice:
+ExaCraft makes the following contributions to educational AI research and practice:
 
 ### 1. Hybrid Personalization Framework
-First system to combine user-configured static profiles with dynamic behavioral adaptation in a unified framework, demonstrating superior personalization over static-only approaches.
+A framework that combines user-configured static profiles with dynamic behavioral adaptation in a unified system.
 
 ### 2. Seamless Workflow Integration
-Novel browser extension architecture providing zero-disruption example generation integrated directly into natural web browsing workflows with cross-session context persistence.
+A browser extension architecture providing zero-disruption example generation integrated directly into natural web browsing workflows, with cross-session context persistence.
 
 ### 3. Cross-session Personalization Continuity
-Maintains both static preferences and dynamic adaptation patterns across multiple browsing sessions with 7-day context retention and automatic data expiration.
+Maintains both static preferences and dynamic adaptation patterns across multiple browsing sessions, with 7-day context retention and automatic data expiration.
 
 ### 4. Behavioral Analytics Model
-Multi-signal analysis system detecting struggle and mastery patterns, dynamically adjusting example complexity while preserving cultural and professional relevance through hierarchical personalization.
+A multi-signal analysis system that detects struggle and mastery patterns and dynamically adjusts example complexity while preserving cultural and professional relevance through hierarchical personalization.
 
 ### Research Impact
 
 - **Domain**: Educational AI, Personalized Learning, Human-Computer Interaction
-- **Novel Approach**: Real-time behavioral adaptation combined with static personalization
-- **Practical Application**: Production-ready Chrome extension with API backend
-- **Evaluation**: Demonstrated at CODS-2025 Demo Track
+- **Approach**: Real-time behavioral adaptation combined with static personalization
+- **Status**: Working prototype (Chrome extension with API backend)
+- **Evaluation**: Demonstrated at the CODS 2025 Demo Track
 
 ---
 
-## 📄 Publication
+## Publication
 
 ### Conference Presentation
 
@@ -590,24 +547,25 @@ Multi-signal analysis system detecting struggle and mastery patterns, dynamicall
 
 **Affiliation**: Indian Institute of Technology Jodhpur
 
-**Conference**: ACM India Joint International Conference on Data Science and Management of Data (CODS-COMAD 2025) - Demo Track
+**Conference**: ACM India Joint International Conference on Data Science (CODS 2025), Demo Track
+
+**Paper**: [https://dl.acm.org/doi/10.1145/3799830.3799858](https://dl.acm.org/doi/10.1145/3799830.3799858)
 
 **Video Demo**: [https://youtu.be/w1P3n8qEOdg](https://youtu.be/w1P3n8qEOdg)
 
 ### Abstract
 
-ExaCraft presents a novel approach to generating personalized educational examples through hybrid personalization that combines static user profiles with dynamic learning context adaptation. The system implements a three-component architecture consisting of a Chrome browser extension, Flask API server, and learning context engine. Real-time behavioral analytics detect struggle indicators and mastery patterns, automatically adjusting example complexity while maintaining cultural and professional relevance. Cross-session continuity enables long-term learning progression tracking with persistent context retention. The system demonstrates zero-disruption integration into natural web browsing workflows, making personalized learning accessible without workflow interruption.
+ExaCraft presents an approach to generating personalized educational examples through hybrid personalization that combines static user profiles with dynamic learning context adaptation. The system implements a three-component architecture consisting of a Chrome browser extension, a Flask API server, and a learning context engine. Real-time behavioral analytics detect struggle indicators and mastery patterns, automatically adjusting example complexity while maintaining cultural and professional relevance. Cross-session continuity enables long-term learning progression tracking with persistent context retention. The system demonstrates zero-disruption integration into natural web browsing workflows, making personalized learning accessible without workflow interruption.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions to ExaCraft! Here's how you can help:
+Contributions to ExaCraft are welcome.
 
 ### Reporting Issues
 
-Found a bug or have a feature request? Please open an issue on GitHub:
-- Use the issue templates provided
+Found a bug or have a feature request? Open an issue on [GitHub](https://github.com/akaash897/ExaCraft/issues):
 - Include detailed reproduction steps for bugs
 - Provide context for feature requests
 
@@ -615,7 +573,7 @@ Found a bug or have a feature request? Please open an issue on GitHub:
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/yourusername/ExaCraft.git
+   git clone https://github.com/akaash897/ExaCraft.git
    cd ExaCraft
    ```
 
@@ -625,7 +583,7 @@ Found a bug or have a feature request? Please open an issue on GitHub:
    ```
 
 3. **Make your changes**
-   - Follow existing code style
+   - Follow the existing code style
    - Add tests if applicable
    - Update documentation
 
@@ -633,7 +591,7 @@ Found a bug or have a feature request? Please open an issue on GitHub:
    ```bash
    python api_server.py  # Test API server
    python cli_app.py     # Test CLI
-   # Test extension manually in Chrome
+   # Test the extension manually in Chrome
    ```
 
 5. **Commit and push**
@@ -644,116 +602,91 @@ Found a bug or have a feature request? Please open an issue on GitHub:
    ```
 
 6. **Open a Pull Request**
-   - Provide clear description of changes
+   - Provide a clear description of changes
    - Reference any related issues
-   - Wait for review
 
 ### Areas for Contribution
 
-- 🌐 **Browser Support**: Firefox, Safari extension ports
-- 🧪 **Testing**: Unit tests, integration tests
-- 📚 **Documentation**: Tutorials, API docs, use cases
-- 🎨 **UI/UX**: Extension popup improvements, overlay design
-- 🤖 **AI Models**: Support for additional LLM providers
-- 🌍 **Internationalization**: Multi-language support
-- 🔒 **Security**: Authentication, API key management
-- 📊 **Analytics**: Advanced learning metrics, visualizations
+- **Browser Support**: Firefox and Safari extension ports
+- **Testing**: Unit and integration tests
+- **Documentation**: Tutorials, API docs, use cases
+- **UI/UX**: Extension popup and overlay design
+- **AI Models**: Support for additional LLM providers
+- **Internationalization**: Multi-language support
+- **Security**: Authentication, API key management
+- **Analytics**: Advanced learning metrics and visualizations
 
 ---
 
-## 📜 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 Akaash Chatterjee, Suman Kundu
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📖 Citation
+## Citation
 
 If you use ExaCraft in your research, please cite:
 
 ```bibtex
 @inproceedings{chatterjee2025exacraft,
-  title={ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples},
-  author={Chatterjee, Akaash and Kundu, Suman},
-  booktitle={Proceedings of the ACM India Joint International Conference on Data Science and Management of Data (CODS-COMAD)},
-  year={2025},
-  organization={ACM},
-  note={Demo Track}
+  title     = {ExaCraft: Dynamic Learning Context Adaptation for Personalized Educational Examples},
+  author    = {Chatterjee, Akaash and Kundu, Suman},
+  booktitle = {Proceedings of the ACM India Joint International Conference on Data Science (CODS 2025)},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3799830.3799858},
+  url       = {https://doi.org/10.1145/3799830.3799858},
+  note      = {Demo Track}
 }
 ```
 
 ---
 
-## 👥 Authors
+## Authors
 
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/yourusername">
-        <img src="https://github.com/yourusername.png" width="100px;" alt="Akaash Chatterjee"/><br />
+      <a href="https://github.com/akaash897">
+        <img src="https://github.com/akaash897.png" width="100px;" alt="Akaash Chatterjee"/><br />
         <sub><b>Akaash Chatterjee</b></sub>
       </a><br />
       <sub>Indian Institute of Technology Jodhpur</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/collaborator">
-        <img src="https://github.com/collaborator.png" width="100px;" alt="Suman Kundu"/><br />
+      <a href="https://orcid.org/0000-0002-7856-4768">
         <sub><b>Suman Kundu</b></sub>
       </a><br />
-      <sub>Indian Institute of Technology Jodhpur</sub>
+      <sub>Indian Institute of Technology Jodhpur</sub><br />
+      <sub>ORCID: 0000-0002-7856-4768</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- **Google Gemini AI**: For providing the powerful language model API
-- **LangChain**: For the excellent LLM framework
-- **CODS-COMAD 2025**: For accepting our demo submission
+- **Google Gemini AI**: For providing the language model API
+- **LangChain**: For the LLM framework
+- **CODS 2025**: For accepting our demo submission
 - **IIT Jodhpur**: For institutional support
 
 ---
 
-## 📞 Contact
+## Contact
 
-- **Email**: akaash.chatterjee@example.com
-- **GitHub Issues**: [Report a bug or request a feature](https://github.com/yourusername/ExaCraft/issues)
-- **Research Lab**: [IIT Jodhpur CS Department](https://www.iitj.ac.in)
-
----
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/ExaCraft&type=Date)](https://star-history.com/#yourusername/ExaCraft&Date)
+- **Email**: m24cse002@iitj.ac.in
+- **GitHub Issues**: [Report a bug or request a feature](https://github.com/akaash897/ExaCraft/issues)
+- **Institution**: [Indian Institute of Technology Jodhpur](https://www.iitj.ac.in)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for personalized learning**
+**Made for personalized learning**
 
-[⬆ Back to Top](#exacraft-dynamic-learning-context-adaptation-for-personalized-educational-examples)
+[Back to Top](#exacraft-dynamic-learning-context-adaptation-for-personalized-educational-examples)
 
 </div>
