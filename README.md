@@ -10,7 +10,7 @@
 
 **An AI-powered educational system that generates culturally relevant, personalized examples by adapting to learners' dynamic context in real-time.**
 
-[Video Demo](youtube.com/watch?v=jWy6uN9DoZw&feature=youtu.be) • [Research Paper](https://dl.acm.org/doi/10.1145/3799830.3799858) • [Installation](#installation) • [Documentation](./DOCS)
+[Video Demo](youtube.com/watch?v=jWy6uN9DoZw&feature=youtu.be) • [Research Paper](https://dl.acm.org/doi/10.1145/3799830.3799858) • [Installation](#installation)
 
 </div>
 
@@ -562,7 +562,7 @@ Contributions to ExaCraft are welcome.
 
 ### Reporting Issues
 
-Found a bug or have a feature request? Open an issue on [GitHub](https://github.com/akaash897/ExaCraft/issues):
+Found a bug or have a feature request? Open an issue on [GitHub](https://github.com/akaash897/ExaCraft_Personalized_Example_Generation/issues):
 - Include detailed reproduction steps for bugs
 - Provide context for feature requests
 
@@ -675,7 +675,7 @@ If you use ExaCraft in your research, please cite:
 ## Contact
 
 - **Email**: m24cse002@iitj.ac.in
-- **GitHub Issues**: [Report a bug or request a feature](https://github.com/akaash897/ExaCraft/issues)
+- **GitHub Issues**: [Report a bug or request a feature](https://github.com/akaash897/ExaCraft_Personalized_Example_Generation/issues)
 - **Institution**: [Indian Institute of Technology Jodhpur](https://www.iitj.ac.in)
 
 ---
