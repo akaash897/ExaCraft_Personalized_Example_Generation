@@ -146,7 +146,7 @@ ExaCraft consists of three integrated components:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/akaash897/ExaCraft.git
+git clone github.com/akaash897/ExaCraft_Personalized_Example_Generation.git
 cd ExaCraft
 ```
 
@@ -398,7 +398,6 @@ ExaCraft's core idea is adapting to five key aspects of learning context.
 **Detection:**
 - Topic repetition patterns (≥3 requests for the same topic)
 - "Regenerate" button clicks
-- Prolonged session on a single concept
 
 **Adaptation:**
 - Reduces example complexity
@@ -411,8 +410,6 @@ ExaCraft's core idea is adapting to five key aspects of learning context.
 
 **Detection:**
 - Quick progression through diverse topics (≥3 different topics)
-- Short session duration per topic
-- Minimal regeneration requests
 
 **Adaptation:**
 - Increases complexity and sophistication
@@ -573,7 +570,7 @@ Found a bug or have a feature request? Open an issue on [GitHub](https://github.
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/akaash897/ExaCraft.git
+   git clone github.com/akaash897/ExaCraft_Personalized_Example_Generation.git
    cd ExaCraft
    ```
 
