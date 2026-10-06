@@ -10,7 +10,7 @@
 
 **An AI-powered educational system that generates culturally relevant, personalized examples by adapting to learners' dynamic context in real-time.**
 
-[Video Demo](https://youtu.be/w1P3n8qEOdg) • [Research Paper](https://dl.acm.org/doi/10.1145/3799830.3799858) • [Installation](#installation) • [Documentation](./DOCS)
+[Video Demo](youtube.com/watch?v=jWy6uN9DoZw&feature=youtu.be) • [Research Paper](https://dl.acm.org/doi/10.1145/3799830.3799858) • [Installation](#installation) • [Documentation](./DOCS)
 
 </div>
 
